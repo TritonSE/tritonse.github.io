@@ -1,5 +1,5 @@
 {
-  "name": "tritonse-source-firebase",
+  "name": "tritonse-source-firestore",
   "version": "1.0.0",
   "description": "Turns data from the TritonSE Firestore into Gatsby nodes",
   "license": "MIT",

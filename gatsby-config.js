@@ -20,7 +20,7 @@ module.exports = {
       },
     },
     {
-      resolve: `tritonse-source-firebase`,
+      resolve: `tritonse-source-firestore`,
       options: {
         types: [
           {

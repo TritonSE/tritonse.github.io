@@ -25,11 +25,11 @@ exports.sourceNodes = (
   const start = Date.now()
 
   types.forEach(
-    ({ query = ref => ref, map = node => node, type, path }) => {
-      console.log(`\n[Firebase] Fetching data for ${type}...`)
+    ({ type, path }) => {
+      console.log(`\n[Firestore] Fetching data for ${type}...`)
 
       db.collection(path).get().then(snapshot => {
-        console.log(`\n[Firebase] Data for ${type} loaded in ${Date.now() - start} ms.`)
+        console.log(`\n[Firestore] Data for ${type} loaded in ${Date.now() - start} ms.`)
 
         snapshot.forEach(doc => {
           const node = Object.assign({}, doc.data());
@@ -40,7 +40,7 @@ exports.sourceNodes = (
               parent: null,
               children: [],
               internal: {
-                type: `FirebaseDocument`,
+                type: `Firestore${type}`,
                 content: JSON.stringify(doc.data()),
                 contentDigest: createContentDigest(node) 
               }

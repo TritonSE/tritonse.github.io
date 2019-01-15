@@ -5,6 +5,12 @@ a {
   text-decoration: none;
 }
 
+/* Image Styling */
+.tse-profile-image {
+  max-width: 100%;
+  height: auto;
+}
+
 /* Home Page Styling */
 
 .tse-alumni-company {
