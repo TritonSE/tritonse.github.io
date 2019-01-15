@@ -5,6 +5,7 @@
   "version": "0.0.1",
   "author": "David Hacker <dmhacker@protonmail.com>",
   "dependencies": {
+    "firebase": "^5.7.3",
     "font-awesome": "^4.7.0",
     "gatsby": "^2.0.76",
     "gatsby-image": "^2.0.25",

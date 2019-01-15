@@ -19,6 +19,21 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    {
+      resolve: `tritonse-source-firebase`,
+      options: {
+        types: [
+          {
+            type: "Applications",
+            path: "applications",
+          },
+          {
+            type: "Members",
+            path: "members"
+          }
+        ]
+      }
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-react-helmet`,
