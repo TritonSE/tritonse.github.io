@@ -1,0 +1,19 @@
+{
+  "name": "tritonse-source-firebase",
+  "version": "1.0.0",
+  "description": "Turns data from the TritonSE Firestore into Gatsby nodes",
+  "license": "MIT",
+  "keywords": [
+    "gatsby",
+    "gatsby-plugin",
+    "firebase"
+  ],
+  "author": "David Hacker <dmhacker@protonmail.com>",
+  "files": [
+    "gatsby-node.js"
+  ],
+  "main": "gatsby-node.js",
+  "dependencies": {
+    "firebase": "^5.7.3"
+  }
+}
