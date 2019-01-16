@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link, graphql } from 'gatsby'
+import { graphql } from 'gatsby'
 import Img from 'gatsby-image'
 
 import Navbar from '../components/navbar.js'
@@ -20,7 +20,7 @@ export default ({data}) => {
           {value.node.name}
         </div>
         <div class="siimple-card-body">
-          <img src={value.node.image} class="tse-profile-image"/>
+          <Img fluid={value.node.local_image.childImageSharp.fluid} className="tse-profile-image"></Img>
         </div>
         <div class="siimple-card-footer">
           {value.node.role} 
@@ -53,6 +53,9 @@ export const query = graphql`
           priority
           role
           image
+          local_image {
+            ...FluidImage
+          }
         }
       }
     }
