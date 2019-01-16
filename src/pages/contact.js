@@ -1,6 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 
+import SEO from '../components/seo.js'
 import Navbar from '../components/navbar.js'
 import Footer from '../components/footer.js'
 
@@ -27,6 +28,7 @@ export default ({data}) => {
   });
 
   return (<div>
+    <SEO title="Contact"/>
     <Navbar></Navbar> 
     <div class="siimple-jumbotron tse-jumbotron-normal siimple-jumbotron--large">
       <div class="siimple-jumbotron-title">Get in Contact</div>

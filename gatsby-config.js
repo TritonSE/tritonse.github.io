@@ -1,4 +1,9 @@
 module.exports = {
+  siteMetadata: {
+    title: "Triton Software Engineering",
+    description: "Student-run org @ UCSD. We partner with non-profits to design and develop mobile and web applications for social good.",
+    author: "David Hacker"
+  },
   plugins: [
     {
       resolve: `gatsby-plugin-google-fonts`,

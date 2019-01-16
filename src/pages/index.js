@@ -2,6 +2,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import Img from 'gatsby-image'
 
+import SEO from '../components/seo.js'
 import Navbar from '../components/navbar.js'
 import Footer from '../components/footer.js'
 
@@ -10,6 +11,7 @@ import '../styles/site.css'
 
 export default ({data}) => (
   <div>
+    <SEO title="Home" keywords={[`ucsd`, `tse`, `software`, `nonprofit`]} />
     <Navbar></Navbar> 
     <div class="siimple-jumbotron tse-jumbotron-main siimple-jumbotron--large">
       <div class="siimple-jumbotron-title">Triton <span class="siimple--color-warning">Software Engineering</span></div>
@@ -90,6 +92,12 @@ export const query = graphql`
     }
     workday: file(relativePath: { eq: "companies/workday.jpg" }) {
       ...FluidImage
+    }
+    site {
+      siteMetadata {
+        title
+        description
+      }
     }
   }
 `
