@@ -1,9 +1,7 @@
-@import url('https://fonts.googleapis.com/css?family=Libre+Franklin');
-
 /* Global Styling */
 
 body {
-  font-family: 'Libre Franklin', sans-serif;
+  font-family: 'IBM Plex Sans', sans-serif;
 }
 
 a {
