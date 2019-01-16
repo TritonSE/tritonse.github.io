@@ -21,7 +21,7 @@ export default ({data}) => (
       <div class="siimple-h5">Effective philanthropy takes a lot of time and creativity. That's where we come in.</div>
       <br/>
       <p class="siimple-p">
-      In spring 2017, we started as a small group of passionate students who saw a huge problem: nonprofits in San Diego and abroad had little to no resources to procure professional web and technical development services. By providing a venue for both student engineers and nonprofits to connect via our organization, we hoped to foster growth in both social good and technical expertise. 
+      In spring 2017, we started as a small group of passionate students at UCSD who saw a huge problem: nonprofits in San Diego and abroad had little to no resources to procure professional web and technical development services. By providing a venue for both student engineers and nonprofits to connect via our organization, we hoped to foster growth in both social good and technical expertise. 
       </p>
       <p class="siimple-p">
       Our group believes that technology should be utilized to better the community. Whether that technology is something as simple as a sleek, updated, and easy-to-use static website or as complicated as a mobile app to track donations, it is undeniable that technology can have huge impact on organizations of any size. Our developers combine industry-standard practices with their effective problem-solving skills in order to tackle any technological problems that a non-profit might have.
