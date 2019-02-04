@@ -15,15 +15,15 @@ export default ({data}) => {
   let members = data.allFirestoreMembers.edges
     .sort((a, b) => (a.node.priority - b.node.priority))
     .map((value) => (
-    <div class="siimple-grid-col siimple-grid-col--3 siimple-grid-col--sm-6">
-      <div class="siimple-card">
-        <div class="siimple-card-header">
+    <div key={`${value.node.name}`} className="siimple-grid-col siimple-grid-col--3 siimple-grid-col--sm-6">
+      <div className="siimple-card">
+        <div className="siimple-card-header">
           {value.node.name}
         </div>
-        <div class="siimple-card-body">
+        <div className="siimple-card-body">
           <Img fluid={value.node.local_image.childImageSharp.fluid} className="tse-profile-image"></Img>
         </div>
-        <div class="siimple-card-footer">
+        <div className="siimple-card-footer">
           {value.node.role} 
         </div>
       </div>
@@ -33,12 +33,12 @@ export default ({data}) => {
   return (<div>
     <SEO title="Members"/>
     <Navbar></Navbar> 
-    <div class="siimple-jumbotron tse-jumbotron-normal siimple-jumbotron--large">
-      <div class="siimple-jumbotron-title">Current Members</div>
-      <div class="siimple-jumbotron-subtitle">Our executive board, project managers, developers, and designers</div>
+    <div className="siimple-jumbotron tse-jumbotron-normal siimple-jumbotron--large">
+      <div className="siimple-jumbotron-title">Current Members</div>
+      <div className="siimple-jumbotron-subtitle">Our executive board, project managers, developers, and designers</div>
     </div>
-    <div class="siimple-content siimple-content--large">
-      <div class="siimple-grid-row" id="tse-members-list">
+    <div className="siimple-content siimple-content--large">
+      <div className="siimple-grid-row" id="tse-members-list">
         {members}
       </div>
     </div>

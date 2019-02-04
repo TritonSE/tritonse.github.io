@@ -5,16 +5,16 @@ import '../../node_modules/font-awesome/css/font-awesome.min.css'
 import '../styles/site.css'
 
 const Footer = () => (
-  <div class="siimple-footer tse-footer" align="center">
-    <div class="siimple-grid-row">
-      <div class="siimple-grid-col siimple-grid-col--6">
-        <div class="siimple-footer-title">Triton Software Engineering</div>
-        <div class="siimple-footer-subtitle">Philanthropy @ <a href="https://ucsd.edu" class="tse-ucsd">UCSD</a></div>
+  <div className="siimple-footer tse-footer" align="center">
+    <div className="siimple-grid-row">
+      <div className="siimple-grid-col siimple-grid-col--6">
+        <div className="siimple-footer-title">Triton Software Engineering</div>
+        <div className="siimple-footer-subtitle">Philanthropy @ <a href="https://ucsd.edu" className="tse-ucsd">UCSD</a></div>
       </div>
-      <div class="siimple-grid-col siimple-grid-col--6">
-        <a href="https://fb.com/tritonse" class="tse-facebook"><i class="fa fa-facebook"></i></a>
-        <a href="https://linkedin.com/company/tritonsoftwareengineering/" class="tse-linkedin"><i class="fa fa-linkedin"></i></a>
-        <a href="https://github.com/tritonse" class="tse-github"><i class="fa fa-github"></i></a>
+      <div className="siimple-grid-col siimple-grid-col--6">
+        <a href="https://fb.com/tritonse" className="tse-facebook"><i className="fa fa-facebook"></i></a>
+        <a href="https://linkedin.com/company/tritonsoftwareengineering/" className="tse-linkedin"><i className="fa fa-linkedin"></i></a>
+        <a href="https://github.com/tritonse" className="tse-github"><i className="fa fa-github"></i></a>
       </div>
     </div>
   </div>

@@ -1,3 +1,5 @@
+let path = require('path');
+
 module.exports = {
   siteMetadata: {
     title: "Triton Software Engineering",
@@ -29,8 +31,8 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images`,
-      },
+        path: path.join(__dirname, `src`, `images`)
+      }
     },
     {
       resolve: `tritonse-source-firestore`,
@@ -43,6 +45,10 @@ module.exports = {
           {
             type: "Members",
             path: "members"
+          },
+          {
+            type: "Projects",
+            path: "projects"
           }
         ]
       }
