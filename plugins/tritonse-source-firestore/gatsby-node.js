@@ -83,7 +83,7 @@ exports.sourceNodes = (
                 parent: null,
                 children: [],
                 internal: {
-                  type: `Tse{type}`,
+                  type: `Tse${type}`,
                   content: JSON.stringify(node_internal),
                   contentDigest: createContentDigest(node_internal) 
                 }
