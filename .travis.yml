@@ -2,6 +2,9 @@ language: node_js
 node_js:
   - '10'
 install: 
+  - npm install --prefix plugins/tritonse-source-firestore
+  - npm install 
+  - npm install -g gatsby-cli
   - npm run-script build
   - true
 deploy:
