@@ -1,8 +1,11 @@
 language: node_js
 node_js:
   - '10'
-install: true
+install: 
+  - npm run-script build
+  - true
 deploy:
+  local-dir: public
   provider: pages
   skip-cleanup: true
   github-token: $GITHUB_TOKEN  
