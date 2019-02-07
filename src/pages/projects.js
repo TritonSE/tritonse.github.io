@@ -9,21 +9,21 @@ import Footer from '../components/footer.js'
 import '../../node_modules/siimple/dist/siimple.min.css'
 import '../styles/site.css'
 
-String.prototype.resize = function (length) {
-  if (this.length > length - 3) {
+function resizeString(text, length) {
+  if (text.length > length - 3) {
     // If the string is too long, trim it and add ellipses at the end
-    return this.substring(0, length) + '...'; 
+    return text.substring(0, length) + '...'; 
   }
-  else if (this.length < length) {
+  else if (text.length < length) {
     // HACKY: If the length of the text is too short, we pad it with invisible non-breaking spaces
     // These spaces ensure that the card is padded vertically to the correct size
     // Chances are descriptions are long enough but this is a fallback measure to keep card heights identical 
     let nbsp = "\xa0".repeat(4);
     let nbsp_scale = 1.7;
-    return this + ` ${nbsp}`.repeat((length - this.length) / nbsp.length * nbsp_scale);
+    return text + ` ${nbsp}`.repeat((length - text.length) / nbsp.length * nbsp_scale);
   }
   else {
-    return this;
+    return text;
   }
 }
 
@@ -39,7 +39,7 @@ export default ({data}) => {
                 <Img fluid={value.node.local_image.childImageSharp.fluid} className="tse-project-image"></Img>
                 <div className="siimple-card-title tse-separation-small">{value.node.name}</div>
                 <div className="siimple-card-subtitle">{value.node.team.join(', ')}</div>
-                <p>{value.node.description.resize(500)}</p>
+                <p>{resizeString(value.node.description, 500)}</p>
             </div>
         </div>
       </div>
