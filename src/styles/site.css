@@ -9,10 +9,31 @@ a {
   text-decoration: none;
 }
 
+.white {
+  color: #ffffff;
+}
+
+/* Separation */
+
+.tse-separation-small {
+  padding-top: 1em;
+}
+
 /* Image Styling */
-.tse-profile-image {
-  max-width: 100%;
-  height: auto;
+
+.tse-project-image {
+  max-height: 10em;
+  width: auto;
+}
+
+.tse-square-image {
+	position: relative;
+	width: 100%;		
+}
+
+.tse-square-image:before {
+	content: "";
+	display: block;
 }
 
 /* Home Page Styling */

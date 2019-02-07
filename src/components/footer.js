@@ -1,8 +1,9 @@
 import React from 'react'
 
+import '../styles/site.css'
+
 import '../../node_modules/siimple/dist/siimple.min.css'
 import '../../node_modules/font-awesome/css/font-awesome.min.css'
-import '../styles/site.css'
 
 const Footer = () => (
   <div className="siimple-footer tse-footer" align="center">

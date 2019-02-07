@@ -21,7 +21,9 @@ export default ({data}) => {
           {value.node.name}
         </div>
         <div className="siimple-card-body">
-          <Img fluid={value.node.local_image.childImageSharp.fluid} className="tse-profile-image"></Img>
+          <div class="tse-square-image">
+            <Img fluid={value.node.local_image.childImageSharp.fluid}></Img>
+          </div>
         </div>
         <div className="siimple-card-footer">
           {value.node.role} 
