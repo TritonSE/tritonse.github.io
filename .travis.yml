@@ -5,7 +5,6 @@ install:
   - npm install --prefix plugins/tritonse-source-firestore
   - npm install 
   - npm run-script build
-  - true
 deploy:
   local-dir: public
   provider: pages
