@@ -9,6 +9,18 @@ import Footer from '../components/footer.js'
 import '../../node_modules/siimple/dist/siimple.min.css'
 import '../styles/site.css'
 
+function gridify(elements, num_columns) {
+  let rows = [];
+  for (let i = 0; i < elements.length; i += num_columns) {
+    rows.push(
+      <div className="siimple-grid-row">
+        {elements.slice(i, i + num_columns)}
+      </div>
+    );
+  }
+  return rows;
+}
+
 export default ({data}) => {
   // Member information is stored in data.allFirestoreMembers
   // This is fetched using a GraphQL query that maps to the tritonse-source-firestore plugin
@@ -40,8 +52,8 @@ export default ({data}) => {
       <div className="siimple-jumbotron-subtitle">Our executive board, project managers, developers, and designers</div>
     </div>
     <div className="siimple-content siimple-content--large">
-      <div className="siimple-grid-row" id="tse-members-list">
-        {members}
+      <div className="siimple-grid">
+        {gridify(members, 4)}
       </div>
     </div>
     <Footer></Footer> 

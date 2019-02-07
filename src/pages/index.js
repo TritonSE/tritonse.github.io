@@ -14,9 +14,11 @@ export default ({data}) => (
     <SEO title="Home" keywords={[`ucsd`, `tse`, `software`, `nonprofit`]} />
     <Navbar></Navbar> 
     <div className="siimple-jumbotron tse-jumbotron-main siimple-jumbotron--large">
-      <div className="siimple-jumbotron-title">Triton <span className="siimple--color-warning">Software Engineering</span></div>
-      <div className="siimple-jumbotron-subtitle">Pro-bono technical and web development services for non-profits</div>
-      <div className="siimple-jumbotron-detail">We partner with non-profits to design and develop mobile and web applications for social good.</div>
+      <div className="tse-jumbotron-main-padding">
+        <div className="siimple-jumbotron-title">Triton <span className="siimple--color-warning">Software Engineering</span></div>
+        <div className="siimple-jumbotron-subtitle">Pro-bono technical and web development services for non-profits</div>
+        <div className="siimple-jumbotron-detail">We partner with non-profits to design and develop mobile and web applications for social good.</div>
+      </div>
     </div>
     <div className="siimple-content siimple-content--large">
       <div className="siimple-h2">About Us</div>
@@ -41,18 +43,20 @@ export default ({data}) => (
       <p className="siimple-p">
       We also take pride in the fact that we have an extremely strong alumni network. Many of our members have worked at some of the most prominent companies in the world including:
       </p>
-      <div className="siimple-grid-row">
-        <div className="siimple-grid-col siimple-grid-col--4 siimple-grid-col--sm-12">
-          <Img fluid={data.google.childImageSharp.fluid} className="tse-alumni-company"></Img>
-          <Img fluid={data.amazon.childImageSharp.fluid} className="tse-alumni-company"></Img>
-        </div>
-        <div className="siimple-grid-col siimple-grid-col--4 siimple-grid-col--sm-12">
-          <Img fluid={data.facebook.childImageSharp.fluid} className="tse-alumni-company"></Img>
-          <Img fluid={data.salesforce.childImageSharp.fluid} className="tse-alumni-company"></Img>
-        </div>
-        <div className="siimple-grid-col siimple-grid-col--4 siimple-grid-col--sm-12">
-          <Img fluid={data.microsoft.childImageSharp.fluid} className="tse-alumni-company"></Img>
-          <Img fluid={data.workday.childImageSharp.fluid} className="tse-alumni-company"></Img>
+      <div className="siimple-grid">
+        <div className="siimple-grid-row">
+          <div className="siimple-grid-col siimple-grid-col--4 siimple-grid-col--sm-12">
+            <Img fluid={data.google.childImageSharp.fluid} className="tse-alumni-company"></Img>
+            <Img fluid={data.amazon.childImageSharp.fluid} className="tse-alumni-company"></Img>
+          </div>
+          <div className="siimple-grid-col siimple-grid-col--4 siimple-grid-col--sm-12">
+            <Img fluid={data.facebook.childImageSharp.fluid} className="tse-alumni-company"></Img>
+            <Img fluid={data.salesforce.childImageSharp.fluid} className="tse-alumni-company"></Img>
+          </div>
+          <div className="siimple-grid-col siimple-grid-col--4 siimple-grid-col--sm-12">
+            <Img fluid={data.microsoft.childImageSharp.fluid} className="tse-alumni-company"></Img>
+            <Img fluid={data.workday.childImageSharp.fluid} className="tse-alumni-company"></Img>
+          </div>
         </div>
       </div>
       <p className="siimple-p">

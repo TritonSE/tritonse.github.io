@@ -9,7 +9,7 @@ import Footer from '../components/footer.js'
 import '../../node_modules/siimple/dist/siimple.min.css'
 import '../styles/site.css'
 
-function resizeString(text, length) {
+function condense(text, length) {
   if (text.length > length - 3) {
     // If the string is too long, trim it and add ellipses at the end
     return text.substring(0, length) + '...'; 
@@ -27,24 +27,41 @@ function resizeString(text, length) {
   }
 }
 
+function gridify(elements, num_columns) {
+  let rows = [];
+  for (let i = 0; i < elements.length; i += num_columns) {
+    rows.push(
+      <div className="siimple-grid-row">
+        {elements.slice(i, i + num_columns)}
+      </div>
+    );
+  }
+  return rows;
+}
+
 export default ({data}) => {
   // Project information is stored in data.allFirestoreProjects
   // This is fetched using a GraphQL query that maps to the tritonse-source-firestore plugin
-  let projects = data.allFirestoreProjects.edges
-    .map((value) => (
-    <div key={`${value.node.name}`}>
-      <div className="siimple-grid-col siimple-grid-col--6 siimple-grid-col--sm-12">
-        <div className="siimple-card">
-            <div className="siimple-card-body">
-                <Img fluid={value.node.local_image.childImageSharp.fluid} className="tse-project-image"></Img>
-                <div className="siimple-card-title tse-separation-small">{value.node.name}</div>
-                <div className="siimple-card-subtitle">{value.node.team.join(', ')}</div>
-                <p>{resizeString(value.node.description, 500)}</p>
-            </div>
+  let projects = data.allFirestoreProjects.edges.map((value) => {
+    let description = condense(value.node.description, 500);
+    let status = value.node.ongoing ? 
+      <span class="siimple-tag siimple-tag--primary">Ongoing</span> : 
+      <span class="siimple-tag siimple-tag--success">Completed</span>;
+    return (
+      <div key={`${value.node.name}`}>
+        <div className="siimple-grid-col siimple-grid-col--6 siimple-grid-col--sm-12">
+          <div className="siimple-card">
+              <div className="siimple-card-body">
+                  <Img fluid={value.node.local_image.childImageSharp.fluid} className="tse-project-image"></Img>
+                  <div className="siimple-card-title tse-separation-small">{value.node.name}</div>
+                  <div className="siimple-card-subtitle">{status}</div>
+                  <p>{description}</p>
+              </div>
+          </div>
         </div>
       </div>
-    </div>
-  ));
+    )}
+  );
   return (<div>
     <SEO title="Projects"/>
     <Navbar></Navbar> 
@@ -53,8 +70,8 @@ export default ({data}) => {
       <div className="siimple-jumbotron-subtitle">Take a look at some of our work with non-profits</div>
     </div>
     <div className="siimple-content siimple-content--large">
-      <div className="siimple-grid-row" id="tse-members-list">
-        {projects}
+      <div className="siimple-grid">
+        {gridify(projects, 2)}
       </div>
     </div>
     <Footer></Footer> 
@@ -68,8 +85,8 @@ export const query = graphql`
         node {
           name
           description
+          ongoing
           image
-          team
           local_image {
             ...FluidImage
           }
