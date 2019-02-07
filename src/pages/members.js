@@ -22,9 +22,9 @@ function gridify(elements, num_columns) {
 }
 
 export default ({data}) => {
-  // Member information is stored in data.allFirestoreMembers
+  // Member information is stored in data.allTseMembers
   // This is fetched using a GraphQL query that maps to the tritonse-source-firestore plugin
-  let members = data.allFirestoreMembers.edges
+  let members = data.allTseMembers.edges
     .sort((a, b) => (a.node.priority - b.node.priority))
     .map((value) => (
     <div key={`${value.node.name}`} className="siimple-grid-col siimple-grid-col--3 siimple-grid-col--sm-6">
@@ -62,7 +62,7 @@ export default ({data}) => {
 
 export const query = graphql`
   query {
-    allFirestoreMembers {
+    allTseMembers {
       edges {
         node {
           name

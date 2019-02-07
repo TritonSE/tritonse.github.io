@@ -40,9 +40,9 @@ function gridify(elements, num_columns) {
 }
 
 export default ({data}) => {
-  // Project information is stored in data.allFirestoreProjects
+  // Project information is stored in data.allTseProjects
   // This is fetched using a GraphQL query that maps to the tritonse-source-firestore plugin
-  let projects = data.allFirestoreProjects.edges.map((value) => {
+  let projects = data.allTseProjects.edges.map((value) => {
     let description = condense(value.node.description, 500);
     let status = value.node.ongoing ? 
       <span class="siimple-tag siimple-tag--primary">Ongoing</span> : 
@@ -80,7 +80,7 @@ export default ({data}) => {
 
 export const query = graphql`
   query {
-    allFirestoreProjects {
+    allTseProjects {
       edges {
         node {
           name

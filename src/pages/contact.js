@@ -11,9 +11,9 @@ import '../styles/site.css'
 export default ({data}) => {
   let applications = {};
 
-  // Application information is stored in data.allFirestoreApplications
+  // Application information is stored in data.allTseApplications
   // This is fetched using a GraphQL query that maps to the tritonse-source-firestore plugin
-  data.allFirestoreApplications.edges.forEach(function (value) {
+  data.allTseApplications.edges.forEach(function (value) {
     let node = value.node;
     if (node.active) {
       applications[node.id] = <span className="siimple--color-success">
@@ -69,7 +69,7 @@ export default ({data}) => {
 
 export const query = graphql`
   query {
-    allFirestoreApplications {
+    allTseApplications {
       edges {
         node {
           id
