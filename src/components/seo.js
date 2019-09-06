@@ -36,6 +36,7 @@ function SEO({ description, lang, meta, keywords, title }) {
               .concat(meta)}
           >
             <link rel="shortcut icon" href={favicon}/>
+            <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans&display=swap" rel="stylesheet"/>
           </Helmet>
         )
       }}

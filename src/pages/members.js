@@ -3,7 +3,6 @@ import { graphql } from 'gatsby'
 import Img from 'gatsby-image'
 
 import SEO from '../components/seo.js'
-import Navbar from '../components/navbar.js'
 import Footer from '../components/footer.js'
 
 import '../../node_modules/materialize-css/dist/css/materialize.min.css'
@@ -46,7 +45,6 @@ export default ({data}) => {
 
   return (<div>
     <SEO title="Members"/>
-    <Navbar></Navbar> 
     <div className="siimple-jumbotron tse-jumbotron-normal siimple-jumbotron--large">
       <div className="siimple-jumbotron-title">Current Members</div>
       <div className="siimple-jumbotron-subtitle">Our executive board, project managers, developers, and designers</div>

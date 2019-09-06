@@ -2,7 +2,6 @@ import React from 'react'
 import { graphql } from 'gatsby'
 
 import SEO from '../components/seo.js'
-import Navbar from '../components/navbar.js'
 import Footer from '../components/footer.js'
 
 import '../../node_modules/materialize-css/dist/css/materialize.min.css'
@@ -29,7 +28,6 @@ export default ({data}) => {
 
   return (<div>
     <SEO title="Contact"/>
-    <Navbar></Navbar> 
     <div className="siimple-jumbotron tse-jumbotron-normal siimple-jumbotron--large">
       <div className="siimple-jumbotron-title">Get in Contact</div>
       <div className="siimple-jumbotron-subtitle">Shoot us a message and we will be in touch with you shortly</div>

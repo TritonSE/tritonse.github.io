@@ -3,18 +3,10 @@ let path = require('path');
 module.exports = {
   siteMetadata: {
     title: "Triton Software Engineering",
-    description: "Student-run org @ UCSD. We partner with non-profits to design and develop mobile and web applications for social good.",
+    description: "Organization at UCSD that partners with nonprofits to develop applications for social good",
     author: "David Hacker"
   },
   plugins: [
-    {
-      resolve: `gatsby-plugin-google-fonts`,
-      options: {
-        fonts: [
-          `ibm plex sans`
-        ]
-      }
-    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

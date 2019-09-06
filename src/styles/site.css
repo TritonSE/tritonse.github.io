@@ -9,10 +9,6 @@ a {
   text-decoration: none;
 }
 
-.white {
-  color: #ffffff;
-}
-
 /* Separation */
 
 .tse-separation-small {
@@ -36,6 +32,14 @@ a {
 	display: block;
 }
 
+/* Button Styling */
+
+.tse-button {
+  font-size: 1.5em;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
 /* Home Page Styling */
 
 .tse-alumni-company {
@@ -48,9 +52,20 @@ a {
 
 /* Navbar Styling */
 
-.tse-navbar {
-  color: #ffffff;
-  background-color: #0d1b2a;
+.tse-navbar-logo {
+  max-width: 7em;
+  height: auto;
+  transform: translateY(25%);
+}
+
+/* Header Styling */
+
+.tse-bheader-background {
+  background: linear-gradient(to bottom, rgba(21, 101, 192, 1), rgba(91, 117, 149, 0.95), rgba(255, 255, 255, 1)), url('../images/geisel-background.jpg');
+  background-size: cover; 
+  width: 100%;
+  padding-top: 16em;
+  padding-bottom: 16em;
 }
 
 /* Footer Styling */
@@ -60,6 +75,7 @@ a {
   overflow: hidden;
   height: 80px;
   transform: rotate(180deg); 
+  width: 100%;
 }
 
 .tse-footer-semicircle::before {
@@ -74,7 +90,7 @@ a {
 }
 
 .tse-footer-logo {
-  max-width: 7.5em;
+  max-width: 7em;
   height: auto;
 }
 
