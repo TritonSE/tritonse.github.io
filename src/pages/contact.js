@@ -5,7 +5,7 @@ import SEO from '../components/seo.js'
 import Navbar from '../components/navbar.js'
 import Footer from '../components/footer.js'
 
-import '../../node_modules/siimple/dist/siimple.min.css'
+import '../../node_modules/materialize-css/dist/css/materialize.min.css'
 import '../styles/site.css'
 
 export default ({data}) => {

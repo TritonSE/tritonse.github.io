@@ -6,7 +6,7 @@ import SEO from '../components/seo.js'
 import Navbar from '../components/navbar.js'
 import Footer from '../components/footer.js'
 
-import '../../node_modules/materialize-css/dist/css/materialize.min.css'
+import '../../node_modules/siimple/dist/siimple.min.css'
 import '../styles/site.css'
 
 export default ({data}) => (
@@ -43,22 +43,22 @@ export default ({data}) => (
       <p className="siimple-p">
       We also take pride in the fact that we have an extremely strong alumni network. Many of our members have worked at some of the most prominent companies in the world including:
       </p>
-      {/* <div className="siimple-grid"> */}
-      {/*   <div className="siimple-grid-row"> */}
-      {/*     <div className="siimple-grid-col siimple-grid-col--4 siimple-grid-col--sm-12"> */}
-      {/*       <Img fluid={data.google.childImageSharp.fluid} className="tse-alumni-company"></Img> */}
-      {/*       <Img fluid={data.amazon.childImageSharp.fluid} className="tse-alumni-company"></Img> */}
-      {/*     </div> */}
-      {/*     <div className="siimple-grid-col siimple-grid-col--4 siimple-grid-col--sm-12"> */}
-      {/*       <Img fluid={data.facebook.childImageSharp.fluid} className="tse-alumni-company"></Img> */}
-      {/*       <Img fluid={data.salesforce.childImageSharp.fluid} className="tse-alumni-company"></Img> */}
-      {/*     </div> */}
-      {/*     <div className="siimple-grid-col siimple-grid-col--4 siimple-grid-col--sm-12"> */}
-      {/*       <Img fluid={data.microsoft.childImageSharp.fluid} className="tse-alumni-company"></Img> */}
-      {/*       <Img fluid={data.workday.childImageSharp.fluid} className="tse-alumni-company"></Img> */}
-      {/*     </div> */}
-      {/*   </div> */}
-      {/* </div> */}
+      <div className="siimple-grid">
+        <div className="siimple-grid-row">
+          <div className="siimple-grid-col siimple-grid-col--4 siimple-grid-col--sm-12">
+            <Img fluid={data.google.childImageSharp.fluid} className="tse-alumni-company"></Img>
+            <Img fluid={data.amazon.childImageSharp.fluid} className="tse-alumni-company"></Img>
+          </div>
+          <div className="siimple-grid-col siimple-grid-col--4 siimple-grid-col--sm-12">
+            <Img fluid={data.facebook.childImageSharp.fluid} className="tse-alumni-company"></Img>
+            <Img fluid={data.salesforce.childImageSharp.fluid} className="tse-alumni-company"></Img>
+          </div>
+          <div className="siimple-grid-col siimple-grid-col--4 siimple-grid-col--sm-12">
+            <Img fluid={data.microsoft.childImageSharp.fluid} className="tse-alumni-company"></Img>
+            <Img fluid={data.workday.childImageSharp.fluid} className="tse-alumni-company"></Img>
+          </div>
+        </div>
+      </div>
       <p className="siimple-p">
       We hope you will consider joining us! Application links will be posted in the contact page during recruiting sessions. 
       </p>
@@ -79,6 +79,24 @@ fragment FluidImage on File {
 
 export const query = graphql`
   query {
+    google: file(relativePath: { eq: "companies/google.jpg" }) {
+      ...FluidImage 
+    }
+    amazon: file(relativePath: { eq: "companies/amazon.png" }) {
+      ...FluidImage
+    }
+    facebook: file(relativePath: { eq: "companies/facebook.jpg" }) {
+      ...FluidImage
+    }
+    salesforce: file(relativePath: { eq: "companies/salesforce.jpg" }) {
+      ...FluidImage
+    }
+    microsoft: file(relativePath: { eq: "companies/microsoft.png" }) {
+      ...FluidImage
+    }
+    workday: file(relativePath: { eq: "companies/workday.jpg" }) {
+      ...FluidImage
+    }
     site {
       siteMetadata {
         title

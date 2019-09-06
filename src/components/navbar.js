@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 
 import '../styles/site.css'
 
-import '../../node_modules/siimple/dist/siimple.min.css'
+import '../../node_modules/materialize-css/dist/css/materialize.min.css'
 
 const Navbar = () => (
   <div className="siimple-navbar tse-navbar siimple-navbar--large">
