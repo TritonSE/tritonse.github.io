@@ -14,8 +14,8 @@
   ],
   "main": "gatsby-node.js",
   "dependencies": {
-    "async": "^2.6.1",
-    "firebase": "^5.7.3",
-    "gatsby-source-filesystem": "^2.0.16"
+    "async": "^2.6.3",
+    "firebase": "^5.11.1",
+    "gatsby-source-filesystem": "^2.1.21"
   }
 }
