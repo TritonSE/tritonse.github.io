@@ -1,0 +1,17 @@
+.tse-divider  {
+  padding-top: 3em;
+  padding-bottom: 3em;
+}
+
+.tse-divider-line {
+  margin-top: 3em;
+  width: 8em;
+}
+
+.tse-divider-line-amber {
+  border: 1px solid #ffc107;
+}
+
+.tse-divider-line-white {
+  border: 1px solid white;
+}

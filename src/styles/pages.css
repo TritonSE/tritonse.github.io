@@ -1,0 +1,51 @@
+/* Global */
+
+body {
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+
+a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* About Page */
+
+.tse-profile-name {
+  margin-top: 0.5em; 
+}
+
+.tse-profile-role {
+  font-size: 0.8em; 
+}
+
+.tse-profile-image {
+  border-radius: 15px;
+}
+
+/* Separation */
+
+.tse-separation-small {
+  padding-top: 1em;
+}
+
+.tse-separation-medium {
+  padding-top: 3em;
+}
+
+/* Images */
+
+.tse-project-image {
+  max-height: 10em;
+  width: auto;
+}
+
+.tse-square-image {
+	position: relative;
+	width: 100%;		
+}
+
+.tse-square-image:before {
+	content: "";
+	display: block;
+}

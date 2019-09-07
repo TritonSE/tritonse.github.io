@@ -5,8 +5,9 @@ import Img from 'gatsby-image'
 import SEO from '../components/seo.js'
 import Footer from '../components/footer.js'
 
+import '../styles/pages.css'
+
 import '../../node_modules/materialize-css/dist/css/materialize.min.css'
-import '../styles/site.css'
 
 function condense(text, length) {
   if (text.length > length - 3) {

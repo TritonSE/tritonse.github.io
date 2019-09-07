@@ -2,7 +2,7 @@ import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 
-import '../styles/site.css'
+import '../styles/footer.css'
 
 import '../../node_modules/materialize-css/dist/css/materialize.min.css'
 import '../../node_modules/font-awesome/css/font-awesome.min.css'

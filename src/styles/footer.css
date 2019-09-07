@@ -1,0 +1,63 @@
+.tse-footer-semicircle {
+  position: relative;
+  overflow: hidden;
+  height: 80px;
+  transform: rotate(180deg); 
+  width: 100%;
+}
+
+.tse-footer-semicircle::before {
+  border-radius: 100%;
+  background: #1565c0;
+  position: absolute;
+  right: -100px;
+  left: -100px;
+  top: -100px;
+  content: '';
+  bottom: 0;
+}
+
+.tse-footer-logo {
+  max-width: 7em;
+  height: auto;
+}
+
+.tse-footer-social {
+  color: #ffffff;
+  font-size: 1.75em;
+}
+
+.tse-footer-social:hover {
+  color: #ffc107;
+  transition:.35s;
+  -o-transition:.35s;
+  -ms-transition:.35s;
+  -moz-transition:.35s;
+  -webkit-transition:.35s;
+}
+
+.tse-footer-social-facebook {
+  padding-right: 0.5em;
+}
+
+.tse-footer-social-linkedin {
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+
+.tse-footer-social-github {
+  padding-left: 0.5em;
+}
+
+.tse-footer-link {
+  color: #eeeeee;
+}
+
+.tse-footer-link:hover {
+  color: #ffc107;
+  transition:.35s;
+  -o-transition:.35s;
+  -ms-transition:.35s;
+  -moz-transition:.35s;
+  -webkit-transition:.35s;
+}

@@ -1,6 +1,6 @@
 import React from 'react'
 
-import '../styles/site.css'
+import '../styles/divider.css'
 
 import '../../node_modules/materialize-css/dist/css/materialize.min.css'
 

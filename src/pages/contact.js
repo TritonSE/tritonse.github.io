@@ -4,8 +4,9 @@ import { graphql } from 'gatsby'
 import SEO from '../components/seo.js'
 import Footer from '../components/footer.js'
 
+import '../styles/pages.css'
+
 import '../../node_modules/materialize-css/dist/css/materialize.min.css'
-import '../styles/site.css'
 
 export default ({data}) => {
   let applications = {};

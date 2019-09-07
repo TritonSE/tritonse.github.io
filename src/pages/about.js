@@ -7,8 +7,9 @@ import Header from '../components/gradient-header.js'
 import Divider from '../components/divider.js'
 import Footer from '../components/footer.js'
 
+import '../styles/pages.css'
+
 import '../../node_modules/materialize-css/dist/css/materialize.min.css'
-import '../styles/site.css'
 
 function gridify(elements) {
   let num_columns = 6;

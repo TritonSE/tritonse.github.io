@@ -1,0 +1,39 @@
+/* Navbar */
+
+.tse-navbar-logo {
+  max-width: 7em;
+  height: auto;
+  margin-top: 0.75em;
+}
+
+/* Header */
+
+.tse-header {
+  width: 100%;
+  padding-top: 10em;
+  padding-bottom: 20em;
+}
+
+.tse-header-gradient {
+  background: linear-gradient(to bottom, rgba(21, 101, 192, 1), rgba(91, 117, 149, 1), rgba(255, 255, 255, 1));
+  background-size: cover;
+}
+
+.tse-header-geisel {
+  background: linear-gradient(to bottom, rgba(21, 101, 192, 1), rgba(91, 117, 149, 0.925), rgba(255, 255, 255, 1)), url('../images/background-geisel.jpg');
+  background-size: cover;
+}
+
+.tse-header-laptop {
+  background: linear-gradient(to bottom, rgba(21, 101, 192, 1), rgba(91, 117, 149, 0.8), rgba(255, 255, 255, 1)), url('../images/background-laptop.jpg');
+  background-size: cover;
+}
+
+.tse-header-buttons {
+  margin-top: 3em;
+}
+
+.tse-header-button {
+  margin-left: 3em;
+  margin-right: 3em;
+}
