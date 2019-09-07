@@ -1,5 +1,5 @@
 import React from 'react'
-import { StaticQuery, graphql } from 'gatsby'
+import { Link, StaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 
 import '../styles/site.css'
@@ -12,21 +12,21 @@ const Header = ({data, title, subtitle, buttons, background}) => (
       <div className="nav-wrapper container">
         <div className="row">
           <div className="col l6 s12">
-            <a href="/" >
+            <Link to="/">
               <Img fluid={data.logo.childImageSharp.fluid} className="tse-navbar-logo" ></Img>
-            </a>
+            </Link>
           </div>
           <div className="col l6 s12 hide-on-med-and-down">
             <ul className="right hide-on-med-and-down">
-              <li><a href="#">About</a></li>
-              <li><a href="#">Projects</a></li>
-              <li><a href="#">Contact</a></li>
+              <li><Link to="/about">About</Link></li>
+              <li><Link to="/projects">Projects</Link></li>
+              <li><Link to="/contact">Contact</Link></li>
             </ul>
           </div>
         </div>
       </div>
     </nav>
-    <div className={`tse-header ${background}`}>
+    <div className={`tse-header ${background ? background : 'tse-header-gradient'}`}>
       <div className="container">
         <div className="row center white-text">
           <div className="col s12">
