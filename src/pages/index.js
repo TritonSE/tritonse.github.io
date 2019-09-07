@@ -3,7 +3,7 @@ import { graphql } from 'gatsby'
 import Img from 'gatsby-image'
 
 import SEO from '../components/seo.js'
-import Header from '../components/blue-header.js'
+import Header from '../components/gradient-header.js'
 import Footer from '../components/footer.js'
 
 import '../../node_modules/materialize-css/dist/css/materialize.min.css'
@@ -12,7 +12,19 @@ import '../styles/site.css'
 export default ({data}) => (
   <div>
     <SEO title="Home" keywords={[`ucsd`, `tse`, `software`, `nonprofit`]} />
-    <Header></Header> 
+    <Header 
+      title={
+        <span><span className="amber-text">T</span>riton <span className="amber-text">S</span>oftware <span className="amber-text">E</span>ngineering</span>
+      }
+      subtitle="We're an organization of engineers, designers, and problem solvers offering pro-bono technical and web development services for nonprofits." 
+      buttons={
+        <span>
+          <a className="waves-effect waves-light btn-large blue darken-4 tse-header-button">Apply</a> 
+          <a className="waves-effect btn-large white black-text tse-header-button">Learn More</a>
+        </span>
+      }
+      background='tse-header-geisel'
+      ></Header> 
     <Footer></Footer> 
   </div>
 )

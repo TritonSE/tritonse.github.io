@@ -6,7 +6,7 @@ import '../styles/site.css'
 
 import '../../node_modules/materialize-css/dist/css/materialize.min.css'
 
-const Header = ({data}) => (
+const Header = ({data, title, subtitle, buttons, background}) => (
   <div>
     <nav className="blue darken-3">
       <div className="nav-wrapper container">
@@ -26,18 +26,17 @@ const Header = ({data}) => (
         </div>
       </div>
     </nav>
-    <div className="tse-bheader-background">
+    <div className={`tse-header ${background}`}>
       <div className="container">
         <div className="row center white-text">
           <div className="col s12">
-            <h1>Triton Software Engineering</h1>
+            <h1>{title}</h1>
           </div>
           <div className="col s12">
-            <h5>We're an organization of engineers, designers, and problem solvers offering pro-bono technical and web development services for nonprofits.</h5>
+            <h5>{subtitle}</h5>
           </div>
-          <div className="col s12">
-            <a className="waves-effect waves-light btn blue darken-4 tse-button">Apply</a> 
-            <a className="waves-effect waves-light btn white black-text tse-button">Learn More</a>
+          <div className="col s12 tse-header-buttons">
+            {buttons}
           </div>
         </div>
         <p></p>
