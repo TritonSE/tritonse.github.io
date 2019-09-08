@@ -10,7 +10,9 @@ require('../../node_modules/materialize-css/dist/js/materialize.min.js')
 
 class Header extends React.Component {
   componentDidMount() {
-    window.M.AutoInit();
+    if (typeof window !== undefined) {
+      window.M.AutoInit();
+    }
   }
 
   render() {
