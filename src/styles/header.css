@@ -45,6 +45,12 @@
 
 /* Apply Header */
 
+.tse-header-apply {
+  width: 100%;
+  padding-top: 8em;
+  padding-bottom: 8em;
+}
+
 .tse-header-apply-image {
   width: 50%;
   max-height: auto;

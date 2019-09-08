@@ -32,6 +32,18 @@ a {
   border-radius: 15px;
 }
 
+/* Apply Pages */
+
+.tse-apply-circle {
+  padding-top: 2em;
+  padding-bottom: 2em;
+  width: 8em; 
+	display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 50%;
+}
+
 /* Separation */
 
 .tse-separation-small {
@@ -53,3 +65,10 @@ a {
 	content: "";
 	display: block;
 }
+
+/* Text */
+
+.tse-text-medium {
+  font-size: 1.25em;
+}
+

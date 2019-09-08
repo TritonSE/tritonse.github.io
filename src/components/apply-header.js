@@ -38,7 +38,7 @@ class Header extends React.Component {
           </div>
         </div>
       </nav>
-      <div className={`tse-header`}>
+      <div className="tse-header-apply">
         <div className="container">
           <div className="row black-text">
             <div className="col l6 s12 center">

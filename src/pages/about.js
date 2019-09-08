@@ -59,8 +59,8 @@ export default ({data}) => {
     />
     <div class="container">
       <Divider title="Strong Mind, Stronger Heart" subtitle="ABOUT US"/>
-      <p>In Spring of 2017, we were a group of passionate students who banded together to form Triton Software Engineering. We saw a huge problem: nonprofits had little to no resources to procure professional web and technical development services. By providing a venue for both student engineers and nonprofits to connect, we foster growth in both social good and technical expertise.</p>
-      <p>We believe that technology should be utilized to better the community. Something as simple as a sleek, static, and easy-to-use website or as complicated as  a mobile app to track donations to your organizations can have a huge impact on an organization of any size. Let us help you help the community.</p>
+      <p className="tse-text-medium">In Spring of 2017, a group of passionate students banded together to form Triton Software Engineering. They saw a huge problem: nonprofits had little to no resources to procure professional web and technical development services. By providing a venue for both student engineers and nonprofits to connect, they hoped to foster growth in both social good and technical expertise.</p>
+      <p className="tse-text-medium">We believe that technology should be utilized to better the community. Something as simple as a sleek, static, and easy-to-use website or as complicated as  a mobile app to track donations to your organizations can have a huge impact on an organization of any size. Let us help you help the community.</p>
       <div class="tse-separation-medium"></div>
     </div>
     <div class="blue darken-3">

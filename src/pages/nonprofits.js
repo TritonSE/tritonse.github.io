@@ -11,24 +11,6 @@ import '../styles/pages.css'
 import '../../node_modules/materialize-css/dist/css/materialize.min.css'
 
 export default ({data}) => {
-  let applications = {};
-
-  // Application information is stored in data.allTseApplications
-  // This is fetched using a GraphQL query that maps to the tritonse-source-firestore plugin
-  data.allTseApplications.edges.forEach(function (value) {
-    let node = value.node;
-    if (node.active) {
-      applications[node.id] = <span className="siimple--color-success">
-        Applications are open for this position! <strong><a className="siimple--color-success" href={node.link}>Apply here.</a></strong>
-      </span>;
-    }
-    else {
-      applications[node.id] = <span className="siimple--color-error">
-        Applications for this position are currently closed.
-      </span>;
-    }
-  });
-
   return (<div>
     <SEO title="Contact"/>
     <Header
@@ -36,40 +18,53 @@ export default ({data}) => {
       subtitle="Partner up with TSE and we will work hand-in-hand to develop the technology that will turn your vision into a reality without costing you a penny."
       icon="nonprofits"
     />
-    <div class="container">
-      <Divider subtitle="FREQUENTLY ASKED QUESTIONS" textColor="amber-text" lineColor="tse-divider-line-amber"/>
-    </div>
-    <div className="siimple-jumbotron tse-jumbotron-normal siimple-jumbotron--large">
-      <div className="siimple-jumbotron-title">Get in Contact</div>
-      <div className="siimple-jumbotron-subtitle">Shoot us a message and we will be in touch with you shortly</div>
-    </div>
-    <div className="siimple-content siimple-content--large">
-      <div className="siimple-grid">
-        <div className="siimple-grid-row">
-          <div className="siimple-grid-col siimple-grid-col--6 siimple-grid-col--sm-12">
-            <div className="siimple-h2">Students</div>
-            <div className="siimple-h6">What positions do we have?</div>
-            <br/>
-            <p className="siimple-p"><strong>Project managers</strong> lead a team of four to six students to complete a project for a client. This is not your typical class project. This is a project for a real client. {applications['managers']}</p>
-            <p className="siimple-p"><strong>Developers</strong> learn, program, and grow. You are matched up to a team and client upon joining, and you get the opportunity to develop your skillset by contributing your code to meaningful projects. {applications['developers']}</p> 
-            <p className="siimple-p"><strong>Designers</strong>, like developers, are assigned to teams and clients upon joining. You will get to integrate your designs into real client-facing projects, and you will get to guide the design process for your team. {applications['designers']}</p>
+    <div class="amber lighten-4">
+      <div class="container">
+        <Divider subtitle="DECISION CRITERIA" textColor="black-text" lineColor="tse-divider-line-black"/>
+        <div className="row center black-text">
+          <div className="col l4 s12">
+            <div className="tse-apply-circle amber darken-1"><i className="fa fa-4x fa-globe white-text"></i></div>
+            <h4>Impact</h4>
+            <p className="tse-text-medium">How will your project impact the community?</p>
           </div>
-          <div className="siimple-grid-col siimple-grid-col--6 siimple-grid-col--sm-12">
-            <div className="siimple-h2">Non-profits</div>
-            <div className="siimple-h6">Why work with us?</div>
-            <br/>
-            <p className="siimple-p">We are <strong>affordable</strong>. You can get your website or application designed at almost no cost.</p>
-            <p className="siimple-p">We are <strong>dedicated</strong>. You will get a dedicated team that can develop a tailored solution for your organization's needs.</p>
-            <p className="siimple-p">We are <strong>personal</strong>. Your team will be in constant, one-on-one contact with you, so that we can deliver to you what you need the most.</p>
-            <p className="siimple-p">We are <strong>long-term</strong>. Even after building what you need, we will continue to provide maintenance and updates to it when necessary.</p>
-            <p className="siimple-p">If you are a non-profit and believe that we can help you, send us an email. Our contact information is listed below.</p>
+          <div className="col l4 s12">
+            <div className="tse-apply-circle amber darken-1"><i className="fa fa-4x fa-puzzle-piece white-text"></i></div>
+            <h4>Necessity</h4>
+            <p className="tse-text-medium">How important is your project for your non-profit?</p>
+          </div>
+          <div className="col l4 s12">
+            <div className="tse-apply-circle amber darken-1"><i className="fa fa-4x fa-calendar white-text"></i></div>
+            <h4>Scope</h4>
+            <p className="tse-text-medium">Are your goals something we can achieve in the allotted time?</p>
+          </div>
+        </div>
+        <div className="row center black-text">
+          <div className="col offset-l2 l4 s12">
+            <div className="tse-apply-circle amber darken-1"><i className="fa fa-4x fa-object-group white-text"></i></div>
+            <h4>Technical Fit</h4>
+            <p className="tse-text-medium">Is software & technological development integral to your project?</p>
+          </div>
+          <div className="col l4 s12">
+            <div className="tse-apply-circle amber darken-1"><i className="fa fa-4x fa-eye white-text"></i></div>
+            <h4>Credibility</h4>
+            <p className="tse-text-medium">Is there evidence that your project will make an impact?</p>
           </div>
         </div>
       </div>
-      <div className="siimple-box">
-        <div className="siimple-box-title">Email Us!</div>
-        <div className="siimple-box-subtitle">tse@ucsd.edu</div>
-        <div className="siimple-box-detail">Direct any inquries you might have to this email address. We will respond promptly.</div>
+      <div class="tse-separation-medium"></div>
+    </div>
+    <div className="container">
+      <div id="faq"></div>
+      <Divider subtitle="FREQUENTLY ASKED QUESTIONS" textColor="black-text" lineColor="tse-divider-line-amber"/>
+      <div className="row">
+        <div className="col s12">
+          <h4>How are TSE projects structured?</h4>
+          <p className="tse-faq-answer">TSE's structure consists of our board and 4-6 project-based teams. Each team is made up of a project leader, 3-4 developers, and a UI/UX designer. Teams work independently of one another to create software for a specific non-profit they have been assigned to.</p>
+        </div>
+        <div className="col s12">
+          <h4>What resources does TSE have to ensure success?</h4>
+          <p className="tse-faq-answer">Our organization recruits some of the most hard-working, passionate, and brighest students at UC San Diego. Through effective leadership, frequent check-ins, and organized project timelines set with our clients and board, we can ensure that our combination of talent, dedication, and care will result in projects that benefit the nonprofits we work with.</p>
+        </div>
       </div>
     </div>
     <Footer/>

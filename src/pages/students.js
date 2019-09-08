@@ -36,12 +36,59 @@ export default ({data}) => {
       subtitle="Come join our family and find a way to put your skills to use by giving back to the community! Our recruitment process may be tough, but we recruit annually in the fall so make sure you stay up to date."
       icon="students"
     />
-    <div class="container">
-      <Divider subtitle="FREQUENTLY ASKED QUESTIONS" textColor="blue-text text-darken-3" lineColor="tse-divider-line-blue"/>
+    <div class="blue lighten-3">
+      <div class="container">
+        <Divider subtitle="DECISION CRITERIA" textColor="black-text" lineColor="tse-divider-line-black"/>
+        <div className="row center black-text">
+          <div className="col l4 s12">
+            <div className="tse-apply-circle blue darken-3"><i className="fa fa-4x fa-heart white-text"></i></div>
+            <h4>Passion</h4>
+            <p className="tse-text-medium">Are you able to demonstrate a genuine passion for problem-solving and social good?</p>
+          </div>
+          <div className="col l4 s12">
+            <div className="tse-apply-circle blue darken-3"><i className="fa fa-4x fa-code white-text"></i></div>
+            <h4>Skill</h4>
+            <p className="tse-text-medium">Do you have the necessary skills to effectively contribute to the projects we work on?</p>
+          </div>
+          <div className="col l4 s12">
+            <div className="tse-apply-circle blue darken-3"><i className="fa fa-4x fa-book white-text"></i></div>
+            <h4>Experience</h4>
+            <p className="tse-text-medium">Do you have any previous, relevant experience such as volunteering?</p>
+          </div>
+        </div>
+        <div className="row center black-text">
+          <div className="col l4 s12">
+            <div className="tse-apply-circle blue darken-3"><i className="fa fa-4x fa-handshake-o white-text"></i></div>
+            <h4>Teamwork</h4>
+            <p className="tse-text-medium">Are you able to work well in teams?</p>
+          </div>
+          <div className="col l4 s12">
+            <div className="tse-apply-circle blue darken-3"><i className="fa fa-4x fa-thumbs-up white-text"></i></div>
+            <h4>Attitude</h4>
+            <p className="tse-text-medium">Do you have a positive and dedicated work ethic?</p>
+          </div>
+          <div className="col l4 s12">
+            <div className="tse-apply-circle blue darken-3"><i className="fa fa-4x fa-users white-text"></i></div>
+            <h4>Culture</h4>
+            <p className="tse-text-medium">How well will you fit in with the rest of us here at TSE?</p>
+          </div>
+        </div>
+      </div>
+      <div class="tse-separation-medium"></div>
     </div>
-    <div className="siimple-jumbotron tse-jumbotron-normal siimple-jumbotron--large">
-      <div className="siimple-jumbotron-title">Get in Contact</div>
-      <div className="siimple-jumbotron-subtitle">Shoot us a message and we will be in touch with you shortly</div>
+    <div className="container">
+      <div id="faq"></div>
+      <Divider subtitle="FREQUENTLY ASKED QUESTIONS" textColor="black-text" lineColor="tse-divider-line-blue"/>
+      <div className="row">
+        <div className="col s12">
+          <h4>How are TSE projects structured?</h4>
+          <p className="tse-text-medium">TSE's structure consists of our board and 4-6 project-based teams. Each team is made up of a project leader, 3-4 developers, and a UI/UX designer. Teams work independently of one another to create software for a specific non-profit they have been assigned to.</p>
+        </div>
+        <div className="col s12">
+          <h4>Why should I join TSE?</h4>
+          <p className="tse-text-medium">TSE is an amazing opportunity for people at any skill level to give back to the community. Whether you're a seasoned developer, or just starting in the industry, TSE will teach you skills that will carry over throughout your life while also giving you real world experience.</p>
+        </div>
+      </div>
     </div>
     <div className="siimple-content siimple-content--large">
       <div className="siimple-grid">
@@ -54,22 +101,7 @@ export default ({data}) => {
             <p className="siimple-p"><strong>Developers</strong> learn, program, and grow. You are matched up to a team and client upon joining, and you get the opportunity to develop your skillset by contributing your code to meaningful projects. {applications['developers']}</p> 
             <p className="siimple-p"><strong>Designers</strong>, like developers, are assigned to teams and clients upon joining. You will get to integrate your designs into real client-facing projects, and you will get to guide the design process for your team. {applications['designers']}</p>
           </div>
-          <div className="siimple-grid-col siimple-grid-col--6 siimple-grid-col--sm-12">
-            <div className="siimple-h2">Non-profits</div>
-            <div className="siimple-h6">Why work with us?</div>
-            <br/>
-            <p className="siimple-p">We are <strong>affordable</strong>. You can get your website or application designed at almost no cost.</p>
-            <p className="siimple-p">We are <strong>dedicated</strong>. You will get a dedicated team that can develop a tailored solution for your organization's needs.</p>
-            <p className="siimple-p">We are <strong>personal</strong>. Your team will be in constant, one-on-one contact with you, so that we can deliver to you what you need the most.</p>
-            <p className="siimple-p">We are <strong>long-term</strong>. Even after building what you need, we will continue to provide maintenance and updates to it when necessary.</p>
-            <p className="siimple-p">If you are a non-profit and believe that we can help you, send us an email. Our contact information is listed below.</p>
-          </div>
         </div>
-      </div>
-      <div className="siimple-box">
-        <div className="siimple-box-title">Email Us!</div>
-        <div className="siimple-box-subtitle">tse@ucsd.edu</div>
-        <div className="siimple-box-detail">Direct any inquries you might have to this email address. We will respond promptly.</div>
       </div>
     </div>
     <Footer/>
