@@ -6,13 +6,10 @@ import '../styles/header.css'
 
 import '../../node_modules/materialize-css/dist/css/materialize.min.css'
 
-require('../../node_modules/materialize-css/dist/js/materialize.min.js')
-
 class Header extends React.Component {
   componentDidMount() {
-    if (typeof window !== undefined) {
-      window.M.AutoInit();
-    }
+    require('../../node_modules/materialize-css/dist/js/materialize.min.js')
+    window.M.AutoInit();
   }
 
   render() {
