@@ -13,7 +13,7 @@ import '../../node_modules/materialize-css/dist/css/materialize.min.css'
 
 export default ({data}) => {
   return (<div>
-    <SEO title="Contact"/>
+    <SEO title="Nonprofits"/>
     <Header
       title="For Nonprofits"
       subtitle="Partner up with TSE and we will work hand-in-hand to develop the technology that will turn your vision into a reality without costing you a penny."

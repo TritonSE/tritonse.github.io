@@ -30,7 +30,7 @@ export default ({data}) => {
   });
 
   return (<div>
-    <SEO title="Contact"/>
+    <SEO title="Students"/>
     <Header
       title="For Students"
       subtitle="Come join our family and find a way to put your skills to use by giving back to the community! Our recruitment process may be tough, but we recruit annually in the fall so make sure you stay up to date."
