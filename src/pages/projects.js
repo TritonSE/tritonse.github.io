@@ -29,11 +29,12 @@ function condense(text, length) {
   }
 }
 
-function gridify(elements, num_columns) {
+function gridify(elements) {
+  let num_columns = 3;
   let rows = [];
   for (let i = 0; i < elements.length; i += num_columns) {
     rows.push(
-      <div className="siimple-grid-row">
+      <div className="row">
         {elements.slice(i, i + num_columns)}
       </div>
     );
@@ -42,28 +43,37 @@ function gridify(elements, num_columns) {
 }
 
 export default ({data}) => {
-  // Project information is stored in data.allTseProjects
-  // This is fetched using a GraphQL query that maps to the tritonse-source-firestore plugin
-  let projects = data.allTseProjects.edges.map((value) => {
+  const get_project_html = (value) => {
     let description = condense(value.node.description, 500);
-    let status = value.node.ongoing ? 
-      <span class="siimple-tag siimple-tag--primary">Ongoing</span> : 
-      <span class="siimple-tag siimple-tag--success">Completed</span>;
     return (
       <div key={`${value.node.name}`}>
-        <div className="siimple-grid-col siimple-grid-col--6 siimple-grid-col--sm-12">
-          <div className="siimple-card">
-              <div className="siimple-card-body">
-                  <Img fluid={value.node.local_image.childImageSharp.fluid} className="tse-project-image"></Img>
-                  <div className="siimple-card-title tse-separation-small">{value.node.name}</div>
-                  <div className="siimple-card-subtitle">{status}</div>
-                  <p>{description}</p>
-              </div>
-          </div>
+        <div className="col l4 sm12">
+          <Img fluid={value.node.local_image.childImageSharp.fluid} className="tse-project-image"></Img>
+          <p><b>{value.node.name}</b></p>
+          <p>{description}</p>
         </div>
       </div>
-    )}
+    )
+  };
+  // Project information is stored in data.allTseProjects
+  // This is fetched using a GraphQL query that maps to the tritonse-source-firestore plugin
+  let ongoing_projects = data.allTseProjects.edges
+    .filter((value) => {
+      return value.node.ongoing
+    })
+    .map((value) => {
+      return get_project_html(value);      
+    }
   );
+  let completed_projects = data.allTseProjects.edges
+    .filter((value) => {
+      return !value.node.ongoing
+    })
+    .map((value) => {
+      return get_project_html(value);      
+    }
+  );
+
   return (<div>
     <SEO title="Projects"/>
     <Header
@@ -74,18 +84,20 @@ export default ({data}) => {
       buttons={
         <span>
           <a className="waves-effect waves-light btn-large blue darken-4 tse-header-button" href="https://github.com/tritonse">
-            Visit Our GitHub &nbsp;
-            <i className="fa fa-github" style={{'font-size': '1em'}}></i>
+            Visit Our GitHub
+            <i class="material-icons right">code</i>
           </a>
         </span>
       }
       background='tse-header-hands'
       ></Header>
-    <Divider title="What We've Been Up To" subtitle="CURRENT PROJECTS"></Divider>
-    <div className="siimple-content siimple-content--large">
-      <div className="siimple-grid">
-        {gridify(projects, 2)}
-      </div>
+    <div className="container">
+      <Divider title="What We've Been Up To" subtitle="CURRENT PROJECTS"></Divider>
+      {gridify(ongoing_projects)}
+    </div>
+    <div className="container">
+      <Divider title="What We Were Up To" subtitle="PAST PROJECTS"></Divider>
+      {gridify(completed_projects)}
     </div>
     <Footer></Footer> 
   </div>)
