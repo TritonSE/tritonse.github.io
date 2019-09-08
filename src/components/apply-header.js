@@ -17,8 +17,8 @@ class Header extends React.Component {
     const {data, title, subtitle, icon, buttons} = this.props;
     return (<div>
       <ul id="tse-navbar-dropdown" className="dropdown-content">
-        <li><Link to="/students">Students</Link></li>
-        <li><Link to="/nonprofits">Nonprofits</Link></li>
+        <li><Link to="/students" className="black-text">Students</Link></li>
+        <li><Link to="/nonprofits" className="black-text">Nonprofits</Link></li>
       </ul>
       <nav className="white">
         <div className="nav-wrapper container">
