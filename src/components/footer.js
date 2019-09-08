@@ -38,14 +38,14 @@ const Footer = ({data}) => (
           <div className="col l2 s12">
             <h5 className="white-text">Students</h5>
             <ul>
-              <li><a className="tse-footer-link" href="#!">Apply</a></li>
+              <li><Link to="/students" className="tse-footer-link">Apply</Link></li>
               <li><a className="tse-footer-link" href="#!">FAQs</a></li>
             </ul>
           </div>
           <div className="col l2 s12">
             <h5 className="white-text">Nonprofits</h5>
             <ul>
-              <li><a className="tse-footer-link" href="#!">Apply</a></li>
+              <li><Link to="/nonprofits" className="tse-footer-link">Apply</Link></li>
               <li><a className="tse-footer-link" href="#!">FAQs</a></li>
             </ul>
           </div>
