@@ -1,5 +1,5 @@
 import React from 'react'
-import { StaticQuery, graphql } from 'gatsby'
+import { Link, StaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 
 import '../styles/footer.css'
@@ -14,7 +14,9 @@ const Footer = ({data}) => (
       <div className="container">
         <div className="row">
           <div className="col l6 s12">
-            <Img fluid={data.logo.childImageSharp.fluid} className="tse-footer-logo"></Img>
+            <Link to="/">
+              <Img fluid={data.logo.childImageSharp.fluid} className="tse-footer-logo"></Img>
+            </Link>
             <p className="grey-text text-lighten-4">tse@ucsd.edu</p>
             <a href="https://fb.com/tritonse" className="tse-footer-social tse-footer-social-facebook">
               <i className="fa fa-facebook"></i>
@@ -29,9 +31,8 @@ const Footer = ({data}) => (
           <div className="col l2 s12">
             <h5 className="white-text">General</h5>
             <ul>
-              <li><a className="tse-footer-link" href="#!">About</a></li>
-              <li><a className="tse-footer-link" href="#!">Projects</a></li>
-              <li><a className="tse-footer-link" href="#!">Contact</a></li>
+              <li><Link to="/about" className="tse-footer-link">About</Link></li>
+              <li><Link to="/projects" className="tse-footer-link">Projects</Link></li>
             </ul>
           </div>
           <div className="col l2 s12">

@@ -30,7 +30,7 @@ export default ({data}) => {
   let members = data.allTseMembers.edges
     .sort((a, b) => (a.node.priority - b.node.priority))
     .map((value) => (
-    <div key={`${value.node.name}`} className="col l2 s6 center">
+    <div key={`${value.node.name}`} className="col l2 m4 s6 center">
       <div>
         <Img fluid={value.node.local_image.childImageSharp.fluid} className="tse-profile-image"></Img>
       </div>
