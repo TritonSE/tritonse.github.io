@@ -3,6 +3,7 @@ import { graphql } from 'gatsby'
 import Img from 'gatsby-image'
 
 import SEO from '../components/seo.js'
+import Header from '../components/gradient-header.js'
 import Footer from '../components/footer.js'
 
 import '../styles/pages.css'
@@ -64,10 +65,21 @@ export default ({data}) => {
   );
   return (<div>
     <SEO title="Projects"/>
-    <div className="siimple-jumbotron tse-jumbotron-normal siimple-jumbotron--large">
-      <div className="siimple-jumbotron-title">Ongoing & Past Projects</div>
-      <div className="siimple-jumbotron-subtitle">Take a look at some of our work with non-profits</div>
-    </div>
+    <Header
+      title={
+        <span>Our <span className="amber-text">Projects</span></span>
+      }
+      subtitle="At TSE, we believe in keeping our work open source because we value transparency and connectivity."
+      buttons={
+        <span>
+          <a className="waves-effect waves-light btn-large blue darken-4 tse-header-button" href="https://github.com/tritonse">
+            Visit Our GitHub &nbsp;
+            <i className="fa fa-github" style={{'font-size': '1em'}}></i>
+          </a>
+        </span>
+      }
+      background='tse-header-gradient'
+      ></Header>
     <div className="siimple-content siimple-content--large">
       <div className="siimple-grid">
         {gridify(projects, 2)}

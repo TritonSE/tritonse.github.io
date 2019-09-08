@@ -45,11 +45,11 @@ export default ({data}) => {
 
   return (<div>
     <SEO title="About"/>
-    <Header 
+    <Header
       title={
         <span>We Are <span className="amber-text">TSE</span></span>
       }
-      subtitle="We're an organization of engineers, designers, and problem solvers offering pro-bono technical and web development services for nonprofits." 
+      subtitle="We're an organization of engineers, designers, and problem solvers offering pro-bono technical and web development services for nonprofits."
       buttons={
         <span>
           <a className="waves-effect waves-light btn-large blue darken-4 tse-header-button">Learn More</a> 

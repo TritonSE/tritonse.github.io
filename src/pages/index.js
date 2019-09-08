@@ -13,11 +13,11 @@ import '../../node_modules/materialize-css/dist/css/materialize.min.css'
 export default ({data}) => (
   <div>
     <SEO title="Home" keywords={[`ucsd`, `tse`, `software`, `nonprofit`]} />
-    <Header 
+    <Header
       title={
         <span><span className="amber-text">T</span>riton <span className="amber-text">S</span>oftware <span className="amber-text">E</span>ngineering</span>
       }
-      subtitle="We're an organization of engineers, designers, and problem solvers offering pro-bono technical and web development services for nonprofits." 
+      subtitle="We're an organization of engineers, designers, and problem solvers offering pro-bono technical and web development services for nonprofits."
       buttons={
         <span>
           <a className="waves-effect waves-light btn-large blue darken-4 tse-header-button">Apply</a> 
