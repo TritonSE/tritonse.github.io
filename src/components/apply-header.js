@@ -14,13 +14,13 @@ class Header extends React.Component {
   }
 
   render() {
-    const {data, title, subtitle, buttons, background} = this.props;
+    const {data, title, subtitle, icon, buttons} = this.props;
     return (<div>
       <ul id="tse-navbar-dropdown" className="dropdown-content">
         <li><Link to="/students">Students</Link></li>
         <li><Link to="/nonprofits">Nonprofits</Link></li>
       </ul>
-      <nav className="blue darken-3">
+      <nav className="white">
         <div className="nav-wrapper container">
           <div className="row">
             <div className="col l6 s12">
@@ -30,24 +30,25 @@ class Header extends React.Component {
             </div>
             <div className="col l6 s12 hide-on-med-and-down">
               <ul className="right">
-                <li><Link to="/about">About</Link></li>
-                <li><Link to="/projects">Projects</Link></li>
-                <li><a className="dropdown-trigger" href="#!" data-target="tse-navbar-dropdown">Contact</a></li>
+                <li><Link to="/about" className="black-text">About</Link></li>
+                <li><Link to="/projects"  className="black-text">Projects</Link></li>
+                <li><a className="dropdown-trigger black-text" href="#!" data-target="tse-navbar-dropdown">Contact</a></li>
               </ul>
             </div>
           </div>
         </div>
       </nav>
-      <div className={`tse-header ${background ? background : 'tse-header-gradient'}`}>
+      <div className={`tse-header`}>
         <div className="container">
-          <div className="row center white-text">
-            <div className="col s12">
-              <h1>{title}</h1>
+          <div className="row black-text">
+            <div className="col l6 s12 center">
+              <Img 
+                fluid={icon === 'students' ? data.students.childImageSharp.fluid : data.nonprofits.childImageSharp.fluid} 
+                className="tse-header-apply-image"></Img>
+              <h2>{title}</h2>
             </div>
-            <div className="col s12">
-              <h5>{subtitle}</h5>
-            </div>
-            <div className="col s12 tse-header-buttons">
+            <div className="col l6 s12">
+              <h5 className="tse-header-apply-subtitle">{subtitle}</h5>
               {buttons}
             </div>
           </div>
@@ -72,7 +73,13 @@ export default props => (
   <StaticQuery
     query={graphql`
       query {
-        logo: file(relativePath: { eq: "logo-white.png" }) {
+        logo: file(relativePath: { eq: "logo-colored.png" }) {
+          ...FluidImage
+        }
+        students: file(relativePath: { eq: "icon-students.png" }) {
+          ...FluidImage
+        }
+        nonprofits: file(relativePath: { eq: "icon-nonprofits.png" }) {
           ...FluidImage
         }
       }

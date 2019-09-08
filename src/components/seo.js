@@ -36,7 +36,7 @@ function SEO({ description, lang, meta, keywords, title }) {
               .concat(meta)}
           >
             <link rel="shortcut icon" href={favicon}/>
-            <link href="//fonts.googleapis.com/css?family=IBM+Plex+Sans&display=swap" rel="stylesheet"/>
+            <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,700&display=swap" rel="stylesheet"/>
             <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
           </Helmet>
         )

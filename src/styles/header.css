@@ -42,3 +42,17 @@
   margin-left: 3em;
   margin-right: 3em;
 }
+
+/* Apply Header */
+
+.tse-header-apply-image {
+  width: 50%;
+  max-height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tse-header-apply-subtitle {
+  font-size: 2em;
+}

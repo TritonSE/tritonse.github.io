@@ -2,6 +2,8 @@ import React from 'react'
 import { graphql } from 'gatsby'
 
 import SEO from '../components/seo.js'
+import Header from '../components/apply-header.js'
+import Divider from '../components/divider.js'
 import Footer from '../components/footer.js'
 
 import '../styles/pages.css'
@@ -29,6 +31,11 @@ export default ({data}) => {
 
   return (<div>
     <SEO title="Contact"/>
+    <Header
+      title="For Nonprofits"
+      subtitle="Partner up with TSE and we will work hand-in-hand to develop the technology that will turn your vision into a reality without costing you a penny."
+      icon="nonprofits"
+      ></Header>
     <div className="siimple-jumbotron tse-jumbotron-normal siimple-jumbotron--large">
       <div className="siimple-jumbotron-title">Get in Contact</div>
       <div className="siimple-jumbotron-subtitle">Shoot us a message and we will be in touch with you shortly</div>
