@@ -6,8 +6,21 @@ import '../styles/header.css'
 
 import '../../node_modules/materialize-css/dist/css/materialize.min.css'
 
-const Header = ({data, title, subtitle, buttons, background}) => (
-  <div>
+require('../../node_modules/materialize-css/dist/js/materialize.min.js')
+
+class Header extends React.Component {
+  componentDidMount() {
+    window.M.AutoInit();
+  }
+
+  render() {
+    const {data, title, subtitle, buttons, background} = this.props;
+      return (
+<div>
+    <ul id="tse-navbar-dropdown" className="dropdown-content">
+      <li><Link to="/students">Students</Link></li>
+      <li><Link to="/nonprofits">Nonprofits</Link></li>
+    </ul>
     <nav className="blue darken-3">
       <div className="nav-wrapper container">
         <div className="row">
@@ -20,7 +33,7 @@ const Header = ({data, title, subtitle, buttons, background}) => (
             <ul className="right hide-on-med-and-down">
               <li><Link to="/about">About</Link></li>
               <li><Link to="/projects">Projects</Link></li>
-              <li><Link to="/contact">Contact</Link></li>
+              <li><a className="dropdown-trigger" href="#!" data-target="tse-navbar-dropdown">Contact</a></li>
             </ul>
           </div>
         </div>
@@ -42,8 +55,9 @@ const Header = ({data, title, subtitle, buttons, background}) => (
         <p></p>
       </div>
     </div>
-  </div>
-)
+  </div>);
+  }
+}
 
 const FluidImage = graphql`
 fragment FluidImage on File {
