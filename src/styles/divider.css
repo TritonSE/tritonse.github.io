@@ -8,10 +8,14 @@
   width: 8em;
 }
 
+.tse-divider-line-white {
+  border: 1px solid white;
+}
+
 .tse-divider-line-amber {
   border: 1px solid #ffc107;
 }
 
-.tse-divider-line-white {
-  border: 1px solid white;
+.tse-divider-line-blue {
+  border: 1px solid #1565c0;
 }

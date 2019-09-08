@@ -35,7 +35,10 @@ export default ({data}) => {
       title="For Nonprofits"
       subtitle="Partner up with TSE and we will work hand-in-hand to develop the technology that will turn your vision into a reality without costing you a penny."
       icon="nonprofits"
-      ></Header>
+    />
+    <div class="container">
+      <Divider subtitle="FREQUENTLY ASKED QUESTIONS" textColor="amber-text" lineColor="tse-divider-line-amber"/>
+    </div>
     <div className="siimple-jumbotron tse-jumbotron-normal siimple-jumbotron--large">
       <div className="siimple-jumbotron-title">Get in Contact</div>
       <div className="siimple-jumbotron-subtitle">Shoot us a message and we will be in touch with you shortly</div>
@@ -69,7 +72,7 @@ export default ({data}) => {
         <div className="siimple-box-detail">Direct any inquries you might have to this email address. We will respond promptly.</div>
       </div>
     </div>
-    <Footer></Footer> 
+    <Footer/>
   </div>)
 }
 

@@ -56,25 +56,25 @@ export default ({data}) => {
         </span>
       }
       background='tse-header-laptop'
-      ></Header> 
+    />
     <div class="container">
-      <Divider title="Strong Mind, Stronger Heart" subtitle="ABOUT US"></Divider>
+      <Divider title="Strong Mind, Stronger Heart" subtitle="ABOUT US"/>
       <p>In Spring of 2017, we were a group of passionate students who banded together to form Triton Software Engineering. We saw a huge problem: nonprofits had little to no resources to procure professional web and technical development services. By providing a venue for both student engineers and nonprofits to connect, we foster growth in both social good and technical expertise.</p>
       <p>We believe that technology should be utilized to better the community. Something as simple as a sleek, static, and easy-to-use website or as complicated as  a mobile app to track donations to your organizations can have a huge impact on an organization of any size. Let us help you help the community.</p>
       <div class="tse-separation-medium"></div>
     </div>
     <div class="blue darken-3">
       <div class="container">
-        <Divider subtitle="OUR MISSION" textColor="white-text" lineColor="tse-divider-line-white"></Divider>
+        <Divider subtitle="OUR MISSION" textColor="white-text" lineColor="tse-divider-line-white"/>
         <h5 className="white-text"><b>"Triton Software Engineering (TSE) is a multidiciplinary student organization at UC San Diego. We partner with nonprofits to design and develop software, websites and mobile applications pro-bono for <span className="amber-text">social good</span>, while giving our developers <span className="amber-text">practical, real world experience</span>."</b></h5>
       </div>
       <div class="tse-separation-medium"></div>
     </div>
     <div className="container">
-      <Divider title="Who's Doing What?" subtitle="THE TEAM"></Divider>
+      <Divider title="Who's Doing What?" subtitle="THE TEAM"/>
       {gridify(members)}
     </div>
-    <Footer></Footer>
+    <Footer/>
   </div>)
 }
 

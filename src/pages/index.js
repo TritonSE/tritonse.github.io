@@ -25,8 +25,8 @@ export default ({data}) => (
         </span>
       }
       background='tse-header-geisel'
-      ></Header> 
-    <Footer></Footer> 
+    />
+    <Footer/>
   </div>
 )
 

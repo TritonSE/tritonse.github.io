@@ -35,7 +35,10 @@ export default ({data}) => {
       title="For Students"
       subtitle="Come join our family and find a way to put your skills to use by giving back to the community! Our recruitment process may be tough, but we recruit annually in the fall so make sure you stay up to date."
       icon="students"
-      ></Header>
+    />
+    <div class="container">
+      <Divider subtitle="FREQUENTLY ASKED QUESTIONS" textColor="blue-text text-darken-3" lineColor="tse-divider-line-blue"/>
+    </div>
     <div className="siimple-jumbotron tse-jumbotron-normal siimple-jumbotron--large">
       <div className="siimple-jumbotron-title">Get in Contact</div>
       <div className="siimple-jumbotron-subtitle">Shoot us a message and we will be in touch with you shortly</div>
@@ -69,7 +72,7 @@ export default ({data}) => {
         <div className="siimple-box-detail">Direct any inquries you might have to this email address. We will respond promptly.</div>
       </div>
     </div>
-    <Footer></Footer> 
+    <Footer/>
   </div>)
 }
 

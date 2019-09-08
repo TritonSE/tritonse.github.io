@@ -90,16 +90,16 @@ export default ({data}) => {
         </span>
       }
       background='tse-header-hands'
-      ></Header>
+    />
     <div className="container">
-      <Divider title="What We've Been Up To" subtitle="CURRENT PROJECTS"></Divider>
+      <Divider title="What We've Been Up To" subtitle="CURRENT PROJECTS"/>
       {gridify(ongoing_projects)}
     </div>
     <div className="container">
-      <Divider title="What We Were Up To" subtitle="PAST PROJECTS"></Divider>
+      <Divider title="What We Were Up To" subtitle="PAST PROJECTS"/>
       {gridify(completed_projects)}
     </div>
-    <Footer></Footer> 
+    <Footer/>
   </div>)
 }
 
