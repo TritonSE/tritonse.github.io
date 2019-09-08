@@ -44,6 +44,22 @@ a {
   border-radius: 50%;
 }
 
+.tse-nonprofits-mobile-image {
+  max-width: 8em;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tse-nonprofits-web-image {
+  max-width: 12.9em;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* Separation */
 
 .tse-separation-small {

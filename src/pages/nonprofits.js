@@ -1,5 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
+import Img from 'gatsby-image';
 
 import SEO from '../components/seo.js'
 import Header from '../components/apply-header.js'
@@ -18,6 +19,26 @@ export default ({data}) => {
       subtitle="Partner up with TSE and we will work hand-in-hand to develop the technology that will turn your vision into a reality without costing you a penny."
       icon="nonprofits"
     />
+    <div class="container">
+      <Divider subtitle="OUR SERVICES" textColor="black-text" lineColor="tse-divider-line-amber"/>
+      <div class="row">
+        <div class="col l6 s12 center">
+          <Img 
+            fluid={data.mobile.childImageSharp.fluid} 
+            className="tse-nonprofits-mobile-image"></Img>
+          <h4 className="blue-text text-darken-3">Mobile Development</h4>
+          <p className="tse-text-medium">Mobile applications allow us to bring powerful computing power to nearly anyone.</p>
+        </div>
+        <div class="col l6 s12 center">
+          <Img 
+            fluid={data.web.childImageSharp.fluid} 
+            className="tse-nonprofits-web-image"></Img>
+          <h4 className="amber-text text-darken-1">Web Development</h4>
+          <p className="tse-text-medium">TSE can help you build web applications to take advantage of the power of the Internet in expanding your organization.</p>
+        </div>
+      </div>
+      <div class="tse-separation-medium"></div>
+    </div>
     <div class="amber lighten-4">
       <div class="container">
         <Divider subtitle="DECISION CRITERIA" textColor="black-text" lineColor="tse-divider-line-black"/>
@@ -71,8 +92,24 @@ export default ({data}) => {
   </div>)
 }
 
+const FluidImage = graphql`
+fragment FluidImage on File {
+  childImageSharp {
+    fluid(maxWidth: 1000) {
+      ...GatsbyImageSharpFluid
+    }
+  }
+}
+`;
+
 export const query = graphql`
   query {
+    mobile: file(relativePath: { eq: "icon-mobile.png" }) {
+      ...FluidImage
+    }
+    web: file(relativePath: { eq: "icon-web.png" }) {
+      ...FluidImage
+    }
     allTseApplications {
       edges {
         node {
