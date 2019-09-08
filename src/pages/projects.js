@@ -4,6 +4,7 @@ import Img from 'gatsby-image'
 
 import SEO from '../components/seo.js'
 import Header from '../components/gradient-header.js'
+import Divider from '../components/divider.js'
 import Footer from '../components/footer.js'
 
 import '../styles/pages.css'
@@ -78,8 +79,9 @@ export default ({data}) => {
           </a>
         </span>
       }
-      background='tse-header-gradient'
+      background='tse-header-hands'
       ></Header>
+    <Divider title="What We've Been Up To" subtitle="CURRENT PROJECTS"></Divider>
     <div className="siimple-content siimple-content--large">
       <div className="siimple-grid">
         {gridify(projects, 2)}
