@@ -1,9 +1,9 @@
 {
-  "name": "tritonse-website",
+  "name": "tse-website",
   "private": true,
   "description": "The main website for UCSD's Triton Software Engineering club",
-  "version": "0.0.1",
-  "author": "David Hacker <dmhacker@protonmail.com>",
+  "version": "1.0.0",
+  "author": "Triton Software Engineering <tse@ucsd.edu>",
   "dependencies": {
     "firebase": "^5.11.1",
     "font-awesome": "^4.7.0",
@@ -42,9 +42,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/tritonse/tritonse-website"
+    "url": "https://github.com/tritonse/website"
   },
   "bugs": {
-    "url": "https://github.com/tritonse/tritonse-website/issues"
+    "url": "https://github.com/tritonse/website/issues"
   }
 }
