@@ -18,6 +18,9 @@ export default ({data}) => {
       title="For Nonprofits"
       subtitle="Partner up with TSE and we will work hand-in-hand to develop the technology that will turn your vision into a reality without costing you a penny."
       icon="nonprofits"
+      buttons={
+        <p className="tse-text-medium tse-separation-small">If you have a proposal for an appropriate project, get in touch with us by emailing <b>tse@ucsd.edu</b>. We will work with you to deliver a solution that satisfies your needs.</p>
+      }
     />
     <div class="container">
       <Divider subtitle="OUR SERVICES" textColor="black-text" lineColor="tse-divider-line-amber"/>

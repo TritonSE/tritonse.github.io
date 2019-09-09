@@ -11,33 +11,46 @@ import '../styles/pages.css'
 import '../../node_modules/materialize-css/dist/css/materialize.min.css'
 
 export default ({data}) => {
-  let applications = {};
-
   // Application information is stored in data.allTseApplications
   // This is fetched using a GraphQL query that maps to the tritonse-source-firestore plugin
+  let applications = {};
   data.allTseApplications.edges.forEach(function (value) {
     let node = value.node;
-    if (node.active) {
-      applications[node.id] = <span className="siimple--color-success">
-        Applications are open for this position! <strong><a className="siimple--color-success" href={node.link}>Apply here.</a></strong>
-      </span>;
-    }
-    else {
-      applications[node.id] = <span className="siimple--color-error">
-        Applications for this position are currently closed.
-      </span>;
-    }
+    applications[node.id] = node;
   });
+
+  let developers_open = applications.developers.active;
+  let designers_open = applications.designers.active;
+  let managers_open = applications.managers.active;
+  let apps_open = developers_open || designers_open || managers_open;
+
+  let apps_message = apps_open ? 
+    <p className="tse-text-medium">
+      Applications are open! Apply to your desired position(s).
+    </p> : 
+    <p className="tse-text-medium tse-separation-small">
+      Applications are currently closed. Please check back next fall if you are interested in joining.
+    </p>;
 
   return (<div>
     <SEO title="Students"/>
     <Header
       title="For Students"
-      subtitle="Come join our family and find a way to put your skills to use by giving back to the community! Our recruitment process may be tough, but we recruit annually in the fall so make sure you stay up to date."
+      subtitle="Come join our family and find a way to put your skills to use by giving back to the community! We recruit annually in the fall so make sure you stay up to date."
       icon="students"
+      buttons={
+        <div>
+          {apps_message}
+          <div className="row">
+            {developers_open ? <div class="col s12 m4 center"><a className="waves-effect waves-light btn blue darken-4 tse-apply-button" href={applications.developers.link}>Developers</a></div> : ""}
+            {designers_open ? <div class="col s12 m4 center"><a className="waves-effect waves-light btn blue darken-4 tse-apply-button" href={applications.designers.link}>Designers</a></div> : ""}
+            {managers_open ? <div class="col s12 m4 center"><a className="waves-effect waves-light btn blue darken-4 tse-apply-button" href={applications.managers.link}>Managers</a></div> : ""}
+          </div>
+        </div>
+      }
     />
-    <div class="blue lighten-3">
-      <div class="container">
+    <div className="blue lighten-3">
+      <div className="container">
         <Divider subtitle="DECISION CRITERIA" textColor="black-text" lineColor="tse-divider-line-black"/>
         <div className="row center black-text">
           <div className="col l4 s12">
@@ -74,7 +87,7 @@ export default ({data}) => {
           </div>
         </div>
       </div>
-      <div class="tse-separation-medium"></div>
+      <div className="tse-separation-medium"></div>
     </div>
     <div className="container">
       <div id="faq"></div>
@@ -88,20 +101,11 @@ export default ({data}) => {
           <h4>Why should I join TSE?</h4>
           <p className="tse-text-medium">TSE is an amazing opportunity for people at any skill level to give back to the community. Whether you're a seasoned developer, or just starting in the industry, TSE will teach you skills that will carry over throughout your life while also giving you real world experience.</p>
         </div>
-      </div>
-    </div>
-    <div className="siimple-content siimple-content--large">
-      <div className="siimple-grid">
-        <div className="siimple-grid-row">
-          <div className="siimple-grid-col siimple-grid-col--6 siimple-grid-col--sm-12">
-            <div className="siimple-h2">Students</div>
-            <div className="siimple-h6">What positions do we have?</div>
-            <br/>
-            <p className="siimple-p"><strong>Project managers</strong> lead a team of four to six students to complete a project for a client. This is not your typical class project. This is a project for a real client. {applications['managers']}</p>
-            <p className="siimple-p"><strong>Developers</strong> learn, program, and grow. You are matched up to a team and client upon joining, and you get the opportunity to develop your skillset by contributing your code to meaningful projects. {applications['developers']}</p> 
-            <p className="siimple-p"><strong>Designers</strong>, like developers, are assigned to teams and clients upon joining. You will get to integrate your designs into real client-facing projects, and you will get to guide the design process for your team. {applications['designers']}</p>
-          </div>
+        <div className="col s12">
+          <h4>Do I need coding experience to join TSE?</h4>
+          <p className="tse-text-medium">No, you do not! We take anyone </p>
         </div>
+
       </div>
     </div>
     <Footer/>

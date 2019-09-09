@@ -44,6 +44,12 @@ a {
   border-radius: 50%;
 }
 
+@media only screen and (max-width: 600px) {
+  .tse-apply-button {
+    margin-top: 1em;
+  }
+}
+
 .tse-nonprofits-mobile-image {
   max-width: 8em;
   height: auto;
