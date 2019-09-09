@@ -103,9 +103,12 @@ export default ({data}) => {
         </div>
         <div className="col s12">
           <h4>Do I need coding experience to join TSE?</h4>
-          <p className="tse-text-medium">No, you do not! We take anyone </p>
+          <p className="tse-text-medium">No, you do not! We take anyone from beginners to experts. What we look for is your ability to problem solve and a passion for learning. Once accepted, we can teach you all of the necessary languages, frameworks, and libraries that we use.</p>
         </div>
-
+        <div className="col s12">
+          <h4>What sort of development work can I expect once in TSE?</h4>
+          <p className="tse-text-medium">The work that you will be doing depends on your client. For most web development work, we tend to stick to the MERN stack, and for most cross-platform mobile development, we focus on using React Native with Expo. This means that, as a whole, TSE ends up with many JavaScript-based applications. However, depending on the client's needs, we have been known to use other technologies, such as Java and PHP.</p>
+        </div>
       </div>
     </div>
     <Footer/>

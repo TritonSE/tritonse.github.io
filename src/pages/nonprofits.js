@@ -83,11 +83,11 @@ export default ({data}) => {
       <div className="row">
         <div className="col s12">
           <h4>How are TSE projects structured?</h4>
-          <p className="tse-faq-answer">TSE's structure consists of our board and 4-6 project-based teams. Each team is made up of a project leader, 3-4 developers, and a UI/UX designer. Teams work independently of one another to create software for a specific non-profit they have been assigned to.</p>
+          <p className="tse-text-medium">TSE's structure consists of our board and 4-6 project-based teams. Each team is made up of a project leader, 3-4 developers, and a UI/UX designer. Teams work independently of one another to create software for a specific non-profit they have been assigned to.</p>
         </div>
         <div className="col s12">
           <h4>What resources does TSE have to ensure success?</h4>
-          <p className="tse-faq-answer">Our organization recruits some of the most hard-working, passionate, and brighest students at UC San Diego. Through effective leadership, frequent check-ins, and organized project timelines set with our clients and board, we can ensure that our combination of talent, dedication, and care will result in projects that benefit the nonprofits we work with.</p>
+          <p className="tse-text-medium">Our organization recruits some of the most hard-working, passionate, and brighest students at UC San Diego. Through effective leadership, frequent check-ins, and organized project timelines set with our clients and board, we can ensure that our combination of talent, dedication, and care will result in projects that benefit the nonprofits we work with.</p>
         </div>
       </div>
     </div>
