@@ -23,12 +23,15 @@ class Header extends React.Component {
       <nav className="blue darken-3">
         <div className="nav-wrapper container">
           <div className="row">
-            <div className="col l6 s12">
+            <div className="col s6">
               <Link to="/">
                 <Img fluid={data.logo.childImageSharp.fluid} className="tse-navbar-logo" ></Img>
               </Link>
             </div>
-            <div className="col l6 s12 hide-on-med-and-down">
+            <div className="col s6 show-on-medium-and-down">
+              <a href="#" data-target="tse-mobile-menu" class="sidenav-trigger right"><i class="material-icons">menu</i></a>
+            </div>
+            <div className="col s6 hide-on-med-and-down">
               <ul className="right">
                 <li><Link to="/about">About</Link></li>
                 <li><Link to="/projects">Projects</Link></li>
@@ -38,6 +41,12 @@ class Header extends React.Component {
           </div>
         </div>
       </nav>
+      <ul className="sidenav blue darken-3" id="tse-mobile-menu">
+        <li><Link to="/about" className="white-text">About</Link></li>
+        <li><Link to="/projects" className="white-text">Projects</Link></li>
+        <li><Link to="/students" className="white-text">Students</Link></li>
+        <li><Link to="/nonprofits" className="white-text">Nonprofits</Link></li>
+      </ul>
       <div className={`tse-header ${background ? background : 'tse-header-gradient'}`}>
         <div className="container">
           <div className="row center white-text">
