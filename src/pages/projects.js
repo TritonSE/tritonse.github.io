@@ -85,7 +85,7 @@ export default ({data}) => {
         <span>
           <a className="waves-effect waves-light btn-large blue darken-4 tse-header-button" href="https://github.com/tritonse">
             Visit Our GitHub
-            <i class="material-icons right">code</i>
+            <i className="material-icons right">code</i>
           </a>
         </span>
       }

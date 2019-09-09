@@ -26,7 +26,7 @@ export default ({data}) => {
 
   let apps_message = apps_open ? 
     <p className="tse-text-medium">
-      Applications are open! Apply to your desired position(s).
+      Applications are open! Apply using the links below.
     </p> : 
     <p className="tse-text-medium tse-separation-small">
       Applications are currently closed. Please check back next fall if you are interested in joining.
