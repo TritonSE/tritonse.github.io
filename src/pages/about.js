@@ -7,22 +7,11 @@ import Header from '../components/gradient-header.js'
 import Divider from '../components/divider.js'
 import Footer from '../components/footer.js'
 
+import { gridify } from '../util/styling.js'
+
 import '../styles/pages.css'
 
 import '../../node_modules/materialize-css/dist/css/materialize.min.css'
-
-function gridify(elements) {
-  let num_columns = 6;
-  let rows = [];
-  for (let i = 0; i < elements.length; i += num_columns) {
-    rows.push(
-      <div className="row">
-        {elements.slice(i, i + num_columns)}
-      </div>
-    );
-  }
-  return rows;
-}
 
 export default ({data}) => {
   // Member information is stored in data.allTseMembers
@@ -70,7 +59,7 @@ export default ({data}) => {
       </div>
       <div class="row hide-on-large-only">
         <div class="col s12">
-          <Img fluid={data.programming.childImageSharp.fluid} className="tse-generic-image tse-programming-image"></Img>
+          <Img fluid={data.programming.childImageSharp.fluid} className="tse-generic-image tse-highlight-image"></Img>
         </div>
         <div class="col s12">
           <p className="tse-text-medium">In Spring of 2017, a group of passionate students banded together to form Triton Software Engineering. They saw a huge problem: nonprofits had little to no resources to procure professional web and technical development services. By providing a venue for both student engineers and nonprofits to connect, they hoped to foster growth in both social good and technical expertise.</p>
@@ -88,7 +77,7 @@ export default ({data}) => {
     </div>
     <div className="container">
       <Divider title="Who's Doing What?" subtitle="THE TEAM"/>
-      {gridify(members)}
+      {gridify(members, 6)}
     </div>
     <Footer/>
   </div>)

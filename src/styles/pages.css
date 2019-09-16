@@ -35,7 +35,12 @@ a {
 }
 
 .tse-profile-image {
+  width: 9em;
+  height: 9em;
   border-radius: 15px;
+	display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Projects Page */

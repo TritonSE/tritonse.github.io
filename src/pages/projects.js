@@ -7,40 +7,11 @@ import Header from '../components/gradient-header.js'
 import Divider from '../components/divider.js'
 import Footer from '../components/footer.js'
 
+import { condense, gridify } from '../util/styling.js'
+
 import '../styles/pages.css'
 
 import '../../node_modules/materialize-css/dist/css/materialize.min.css'
-
-function condense(text, length) {
-  if (text.length > length - 3) {
-    // If the string is too long, trim it and add ellipses at the end
-    return text.substring(0, length) + '...'; 
-  }
-  else if (text.length < length) {
-    // HACKY: If the length of the text is too short, we pad it with invisible non-breaking spaces
-    // These spaces ensure that the card is padded vertically to the correct size
-    // Chances are descriptions are long enough but this is a fallback measure to keep card heights identical 
-    let nbsp = "\xa0".repeat(4);
-    let nbsp_scale = 1.7;
-    return text + ` ${nbsp}`.repeat((length - text.length) / nbsp.length * nbsp_scale);
-  }
-  else {
-    return text;
-  }
-}
-
-function gridify(elements) {
-  let num_columns = 3;
-  let rows = [];
-  for (let i = 0; i < elements.length; i += num_columns) {
-    rows.push(
-      <div className="row">
-        {elements.slice(i, i + num_columns)}
-      </div>
-    );
-  }
-  return rows;
-}
 
 export default ({data}) => {
   const get_project_html = (value) => {
@@ -93,11 +64,11 @@ export default ({data}) => {
     />
     <div className="container">
       <Divider title="What We've Been Up To" subtitle="CURRENT PROJECTS"/>
-      {gridify(ongoing_projects)}
+      {gridify(ongoing_projects, 3)}
     </div>
     <div className="container">
       <Divider title="What We Were Up To" subtitle="PAST PROJECTS"/>
-      {gridify(completed_projects)}
+      {gridify(completed_projects, 3)}
     </div>
     <Footer/>
   </div>)

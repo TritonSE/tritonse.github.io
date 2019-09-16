@@ -7,27 +7,11 @@ import Header from '../components/gradient-header.js'
 import Divider from '../components/divider.js'
 import Footer from '../components/footer.js'
 
+import { condense } from '../util/styling.js'
+
 import '../styles/pages.css'
 
 import '../../node_modules/materialize-css/dist/css/materialize.min.css'
-
-function condense(text, length) {
-  if (text.length > length - 3) {
-    // If the string is too long, trim it and add ellipses at the end
-    return text.substring(0, length) + '...'; 
-  }
-  else if (text.length < length) {
-    // HACKY: If the length of the text is too short, we pad it with invisible non-breaking spaces
-    // These spaces ensure that the card is padded vertically to the correct size
-    // Chances are descriptions are long enough but this is a fallback measure to keep card heights identical 
-    let nbsp = "\xa0".repeat(4);
-    let nbsp_scale = 1.7;
-    return text + ` ${nbsp}`.repeat((length - text.length) / nbsp.length * nbsp_scale);
-  }
-  else {
-    return text;
-  }
-}
 
 export default ({data}) => {
   let project1 = data.allTseProjects.edges[0].node;
