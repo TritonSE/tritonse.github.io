@@ -44,13 +44,13 @@ function gridify(elements) {
 
 export default ({data}) => {
   const get_project_html = (value) => {
-    let description = condense(value.node.description, 500);
+    let description = condense(value.node.description, 250);
     return (
       <div key={`${value.node.name}`}>
-        <div className="col l4 sm12">
+        <div className="col l4 s12">
           <Img fluid={value.node.local_image.childImageSharp.fluid} className="tse-project-image"></Img>
-          <p><b>{value.node.name}</b></p>
-          <p>{description}</p>
+          <p className="tse-text-large blue-text text-darken-3 center"><b>{value.node.name}</b></p>
+          <p className="tse-text-medium">{description}</p>
         </div>
       </div>
     )
