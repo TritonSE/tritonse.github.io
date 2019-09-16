@@ -95,16 +95,6 @@ export default ({data}) => {
   </div>)
 }
 
-const FluidImage = graphql`
-fragment FluidImage on File {
-  childImageSharp {
-    fluid(maxWidth: 1000) {
-      ...GatsbyImageSharpFluid
-    }
-  }
-}
-`;
-
 export const query = graphql`
   query {
     mobile: file(relativePath: { eq: "icon-mobile.png" }) {

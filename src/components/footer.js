@@ -57,16 +57,6 @@ const Footer = ({data}) => (
   </div>
 )
 
-const FluidImage = graphql`
-fragment FluidImage on File {
-  childImageSharp {
-    fluid(maxWidth: 1000) {
-      ...GatsbyImageSharpFluid
-    }
-  }
-}
-`;
-
 export default props => (
   <StaticQuery
     query={graphql`
