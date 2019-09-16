@@ -98,6 +98,20 @@ a {
 	display: block;
 }
 
+.tse-highlight-image {
+  box-shadow: 10px 10px #fbc02d;
+  border-radius: 15px;
+}
+
+.tse-generic-image {
+  width: 75%;
+  max-height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 3em;
+}
+
 /* Text */
 
 .tse-text-medium {

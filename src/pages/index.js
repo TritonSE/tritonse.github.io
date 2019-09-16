@@ -29,8 +29,15 @@ export default ({data}) => (
     />
     <div class="container">
       <Divider title="Technology for Good" subtitle="OUR MISSION"/>
-      <p className="tse-text-medium">We believe that technology should be utilized to better the community. Something as simple as a sleek, static, and easy-to-use website or as complicated as  a mobile app to track donations to your organizations can have a huge impact on an organization of any size. Let us help you help the community.</p>
-      <Link to="/about"><span className="blue-text text-darken-3 tse-text-large">Learn More <i class="material-icons tse-text-large">chevron_right</i></span></Link>
+      <div class="row">
+        <div class="col l6 s12">
+          <Img fluid={data.whiteboard.childImageSharp.fluid} className="tse-generic-image tse-highlight-image"></Img>
+        </div>
+        <div class="col l6 s12">
+          <p className="tse-text-medium">We believe that technology should be utilized to better the community. Something as simple as a sleek, static, and easy-to-use website or as complicated as  a mobile app to track donations to your organizations can have a huge impact on an organization of any size. Let us help you help the community.</p>
+          <Link to="/about"><span className="blue-text text-darken-3 tse-text-large">Learn More <i class="material-icons tse-text-large">chevron_right</i></span></Link>
+        </div>
+      </div>
       <div class="tse-separation-medium"></div>
     </div>
     <div class="blue darken-3">
@@ -128,6 +135,9 @@ export const query = graphql`
       ...FluidImage
     }
     nonprofits: file(relativePath: { eq: "icon-nonprofits.png" }) {
+      ...FluidImage
+    }
+    whiteboard: file(relativePath: { eq: "generic-whiteboard.jpg" }) {
       ...FluidImage
     }
   }
