@@ -15,15 +15,17 @@ export default ({data}) => {
   return (<div>
     <SEO title="Nonprofits"/>
     <Header/>
-    <div className="tse-header-apply container">
-      <div className="row black-text">
-        <div className="col l6 s12 center">
-          <Img fluid={data.nonprofits.childImageSharp.fluid} className="tse-header-apply-image"></Img>
-          <h2>For Nonprofits</h2>
-        </div>
-        <div className="col l6 s12">
-          <h5 className="tse-header-apply-subtitle">Partner up with TSE and we will work hand-in-hand to develop the technology that will turn your vision into a reality without costing you a penny.</h5>
-          <p className="tse-text-medium tse-separation-small">If you have a proposal for an appropriate project, get in touch with us by emailing <b>tse@ucsd.edu</b>. We will work with you to deliver a solution that satisfies your needs.</p>
+    <div className="tse-apply-container">
+      <div className="container">
+        <div className="row black-text">
+          <div className="col l6 s12 center">
+            <Img fluid={data.nonprofits.childImageSharp.fluid} className="tse-apply-image"></Img>
+            <h2>For Nonprofits</h2>
+          </div>
+          <div className="col l6 s12">
+            <h5 className="tse-apply-subtitle">Partner up with TSE and we will work hand-in-hand to develop the technology that will turn your vision into a reality without costing you a penny.</h5>
+            <p className="tse-text-medium tse-separation-small">If you have a proposal for an appropriate project, get in touch with us by emailing <b>tse@ucsd.edu</b>. We will work with you to deliver a solution that satisfies your needs.</p>
+          </div>
         </div>
       </div>
     </div>

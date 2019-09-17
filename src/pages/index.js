@@ -135,7 +135,6 @@ export default ({data}) => {
         </div>
       </div>
     </div>
-
     <Footer/>
   </div>
 )}

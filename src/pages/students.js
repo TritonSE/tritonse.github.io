@@ -36,20 +36,22 @@ export default ({data}) => {
   return (<div>
     <SEO title="Students"/>
     <Header/>
-    <div className="tse-header-apply container">
-      <div className="row black-text">
-        <div className="col l6 s12 center">
-          <Img fluid={data.students.childImageSharp.fluid} className="tse-header-apply-image"></Img>
-          <h2>For Students</h2>
-        </div>
-        <div className="col l6 s12">
-          <h5 className="tse-header-apply-subtitle">Come join our family and find a way to put your skills to use by giving back to the community! We recruit annually in the fall so make sure you stay up to date.</h5>
-          <div>
-            {apps_message}
-            <div className="row">
-              {developers_open ? <div class="col s12 m4 center"><a className="waves-effect waves-light btn blue darken-4 tse-apply-button" href={applications.developers.link}>Developers</a></div> : ""}
-              {designers_open ? <div class="col s12 m4 center"><a className="waves-effect waves-light btn blue darken-4 tse-apply-button" href={applications.designers.link}>Designers</a></div> : ""}
-              {managers_open ? <div class="col s12 m4 center"><a className="waves-effect waves-light btn blue darken-4 tse-apply-button" href={applications.managers.link}>Managers</a></div> : ""}
+    <div className="tse-apply-container">
+      <div className="container">
+        <div className="row black-text">
+          <div className="col l6 s12 center">
+            <Img fluid={data.students.childImageSharp.fluid} className="tse-apply-image"></Img>
+            <h2>For Students</h2>
+          </div>
+          <div className="col l6 s12">
+            <h5 className="tse-apply-subtitle">Come join our family and find a way to put your skills to use by giving back to the community! We recruit annually in the fall so make sure you stay up to date.</h5>
+            <div>
+              {apps_message}
+              <div className="row">
+                {developers_open ? <div class="col s12 m4 center"><a className="waves-effect waves-light btn blue darken-4 tse-apply-button" href={applications.developers.link}>Developers</a></div> : ""}
+                {designers_open ? <div class="col s12 m4 center"><a className="waves-effect waves-light btn blue darken-4 tse-apply-button" href={applications.designers.link}>Designers</a></div> : ""}
+                {managers_open ? <div class="col s12 m4 center"><a className="waves-effect waves-light btn blue darken-4 tse-apply-button" href={applications.managers.link}>Managers</a></div> : ""}
+              </div>
             </div>
           </div>
         </div>
