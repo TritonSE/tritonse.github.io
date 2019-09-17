@@ -26,7 +26,8 @@ export default ({ data }) => {
         background='tse-header-gradient'
       />
       <div class="container">
-        <Divider title="What's This Project About?" subtitle="OVERVIEW"/>
+        <Divider title="What's This Project About?" subtitle="OVERVIEW" textColor="black-text" lineColor="tse-divider-line-amber"/>
+        <p className="tse-text-medium">{project.description}</p>
       </div>
       <Footer/>
     </div>
@@ -38,7 +39,6 @@ export const query = graphql`
     tseProjects(id: { eq: $id }) {
       name
       description
-      ongoing
       image
       local_image {
         ...FluidImage
