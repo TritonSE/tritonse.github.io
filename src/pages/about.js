@@ -46,34 +46,34 @@ export default ({data}) => {
       }
       background='tse-header-laptop'
     />
-    <div class="container" id="history">
+    <div className="container" id="history">
       <Divider title="Strong Mind, Stronger Heart" subtitle="ABOUT US"/>
-      <div class="row valign-wrapper hide-on-med-and-down">
-        <div class="col l6">
+      <div className="row valign-wrapper hide-on-med-and-down">
+        <div className="col l6">
           <Img fluid={data.programming.childImageSharp.fluid} className="tse-generic-image tse-highlight-image"></Img>
         </div>
-        <div class="col l6">
+        <div className="col l6">
           <p className="tse-text-medium">In Spring of 2017, a group of passionate students banded together to form Triton Software Engineering. They saw a huge problem: nonprofits had little to no resources to procure professional web and technical development services. By providing a venue for both student engineers and nonprofits to connect, they hoped to foster growth in both social good and technical expertise.</p>
           <p className="tse-text-medium">We believe that technology should be utilized to better the community. Something as simple as a sleek, static, and easy-to-use website or as complicated as  a mobile app to track donations to your organizations can have a huge impact on an organization of any size. Let us help you help the community.</p>
         </div>
       </div>
-      <div class="row hide-on-large-only">
-        <div class="col s12">
+      <div className="row hide-on-large-only">
+        <div className="col s12">
           <Img fluid={data.programming.childImageSharp.fluid} className="tse-generic-image tse-highlight-image"></Img>
         </div>
-        <div class="col s12">
+        <div className="col s12">
           <p className="tse-text-medium">In Spring of 2017, a group of passionate students banded together to form Triton Software Engineering. They saw a huge problem: nonprofits had little to no resources to procure professional web and technical development services. By providing a venue for both student engineers and nonprofits to connect, they hoped to foster growth in both social good and technical expertise.</p>
           <p className="tse-text-medium">We believe that technology should be utilized to better the community. Something as simple as a sleek, static, and easy-to-use website or as complicated as  a mobile app to track donations to your organizations can have a huge impact on an organization of any size. Let us help you help the community.</p>
         </div>
       </div>
-      <div class="tse-separation-medium"></div>
+      <div className="tse-separation-medium"></div>
     </div>
-    <div class="blue darken-3">
-      <div class="container">
+    <div className="blue darken-3">
+      <div className="container">
         <Divider subtitle="OUR MISSION" textColor="white-text" lineColor="tse-divider-line-white"/>
         <h5 className="white-text"><b>"Triton Software Engineering (TSE) is a multidiciplinary student organization at UC San Diego. We partner with nonprofits to design and develop software, websites and mobile applications pro-bono for <span className="amber-text">social good</span>, while giving our developers <span className="amber-text">practical, real world experience</span>."</b></h5>
       </div>
-      <div class="tse-separation-medium"></div>
+      <div className="tse-separation-medium"></div>
     </div>
     <div className="container" id="team">
       <Divider title="Who's Doing What?" subtitle="THE TEAM"/>

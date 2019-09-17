@@ -10,6 +10,7 @@ import Footer from '../components/footer.js'
 import { condense } from '../util/styling.js'
 
 import '../styles/pages.css'
+import '../styles/forms.css'
 
 import '../../node_modules/materialize-css/dist/css/materialize.min.css'
 
@@ -34,15 +35,15 @@ export default ({data}) => {
       }
       background='tse-header-geisel'
     />
-    <div class="container">
+    <div className="container">
       <Divider title="Technology for Good" subtitle="OUR MISSION"/>
-      <div class="row">
-        <div class="col l6 s12">
+      <div className="row">
+        <div className="col l6 s12">
           <Img fluid={data.whiteboard.childImageSharp.fluid} className="tse-generic-image tse-highlight-image"></Img>
         </div>
-        <div class="col l6 s12">
+        <div className="col l6 s12">
           <p className="tse-text-medium">We believe that technology should be utilized to better the community. Something as simple as a sleek, static, and easy-to-use website or as complicated as  a mobile app to track donations to your organizations can have a huge impact on an organization of any size. Let us help you help the community.</p>
-          <Link to="/about"><span className="blue-text text-darken-3 tse-text-large">Learn More <i class="material-icons tse-text-large">chevron_right</i></span></Link> </div>
+          <Link to="/about"><span className="blue-text text-darken-3 tse-text-large">Learn More <i className="material-icons tse-text-large">chevron_right</i></span></Link> </div>
       </div>
       <div className="tse-separation-medium"></div>
     </div>
@@ -52,7 +53,7 @@ export default ({data}) => {
         <div className="row">
           <div className="col s12">
             <p className="tse-text-medium white-text">Every year, teams of 5 to 6 students work closely with nonprofit organizations on projects that are customized for the client and that will better the community. These are often mobile or web apps, but are not limited to just those categories.</p>
-            <Link to="/projects"><span className="amber-text text-lighten-1 tse-text-large">View All Projects <i class="material-icons tse-text-large">chevron_right</i></span></Link>
+            <Link to="/projects"><span className="amber-text text-lighten-1 tse-text-large">View All Projects <i className="material-icons tse-text-large">chevron_right</i></span></Link>
           </div>
         </div>
         <div className="row">
@@ -83,7 +84,7 @@ export default ({data}) => {
             <h4 className="blue-text text-darken-3 center">For Nonprofits</h4>
             <Img fluid={data.nonprofits.childImageSharp.fluid} className="tse-home-apply-image"></Img> 
             <p className="tse-text-medium">If you're a nonprofit organization in need of technical help, feel free to contact us! We accept applications year round and try to respond as quickly as possible.</p>
-            <Link to="/nonprofits"><span className="blue-text text-darken-3 tse-text-large">Learn More <i class="material-icons tse-text-large">chevron_right</i></span></Link>
+            <Link to="/nonprofits"><span className="blue-text text-darken-3 tse-text-large">Learn More <i className="material-icons tse-text-large">chevron_right</i></span></Link>
           </div>
         </div>
         <div className="col m6 s12">
@@ -91,7 +92,7 @@ export default ({data}) => {
             <h4 className="amber-text text-darken-1 center">For Students</h4>
             <Img fluid={data.students.childImageSharp.fluid} className="tse-home-apply-image"></Img> 
             <p className="tse-text-medium">Our applications for student positions will open in the fall of each year. Feel free to follow our Facebook page to stay updated!</p>
-            <Link to="/students"><span className="amber-text text-darken-1 tse-text-large">Learn More <i class="material-icons tse-text-large">chevron_right</i></span></Link>
+            <Link to="/students"><span className="amber-text text-darken-1 tse-text-large">Learn More <i className="material-icons tse-text-large">chevron_right</i></span></Link>
           </div>
         </div>
       </div>

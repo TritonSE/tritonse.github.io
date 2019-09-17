@@ -29,17 +29,17 @@ export default ({data}) => {
         </div>
       </div>
     </div>
-    <div class="container">
+    <div className="container">
       <Divider subtitle="OUR SERVICES" textColor="black-text" lineColor="tse-divider-line-amber"/>
-      <div class="row">
-        <div class="col l6 s12 center">
+      <div className="row">
+        <div className="col l6 s12 center">
           <Img 
             fluid={data.mobile.childImageSharp.fluid} 
             className="tse-nonprofits-mobile-image"></Img>
           <h4 className="blue-text text-darken-3">Mobile Development</h4>
           <p className="tse-text-medium">Mobile applications allow us to bring powerful computing power to nearly anyone.</p>
         </div>
-        <div class="col l6 s12 center">
+        <div className="col l6 s12 center">
           <Img 
             fluid={data.web.childImageSharp.fluid} 
             className="tse-nonprofits-web-image"></Img>
@@ -47,10 +47,10 @@ export default ({data}) => {
           <p className="tse-text-medium">TSE can help you build web applications to take advantage of the power of the Internet in expanding your organization.</p>
         </div>
       </div>
-      <div class="tse-separation-medium"></div>
+      <div className="tse-separation-medium"></div>
     </div>
-    <div class="amber lighten-4">
-      <div class="container">
+    <div className="amber lighten-4">
+      <div className="container">
         <Divider subtitle="DECISION CRITERIA" textColor="black-text" lineColor="tse-divider-line-black"/>
         <div className="row center black-text">
           <div className="col l4 s12">
@@ -82,7 +82,7 @@ export default ({data}) => {
           </div>
         </div>
       </div>
-      <div class="tse-separation-medium"></div>
+      <div className="tse-separation-medium"></div>
     </div>
     <div className="container" id="faq">
       <Divider subtitle="FREQUENTLY ASKED QUESTIONS" textColor="black-text" lineColor="tse-divider-line-amber"/>
