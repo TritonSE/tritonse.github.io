@@ -26,6 +26,10 @@ a {
 
 /* About Page */
 
+.tse-mission {
+  line-height: 1.7em;
+}
+
 .tse-profile-name {
   margin-top: 0.5em; 
 }
