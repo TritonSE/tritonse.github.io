@@ -35,7 +35,7 @@ class Header extends React.Component {
               <ul className="right">
                 <li><Link to="/about">About</Link></li>
                 <li><Link to="/projects">Projects</Link></li>
-                <li><a className="dropdown-trigger" href="#!" data-target="tse-navbar-dropdown">Contact</a></li>
+                <li><a className="dropdown-trigger" href="#!" data-target="tse-navbar-dropdown">Connect</a></li>
               </ul>
             </div>
           </div>

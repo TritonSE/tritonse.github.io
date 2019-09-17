@@ -14,14 +14,19 @@ import '../../node_modules/materialize-css/dist/css/materialize.min.css'
 export default ({data}) => {
   return (<div>
     <SEO title="Nonprofits"/>
-    <Header
-      title="For Nonprofits"
-      subtitle="Partner up with TSE and we will work hand-in-hand to develop the technology that will turn your vision into a reality without costing you a penny."
-      icon="nonprofits"
-      buttons={
-        <p className="tse-text-medium tse-separation-small">If you have a proposal for an appropriate project, get in touch with us by emailing <b>tse@ucsd.edu</b>. We will work with you to deliver a solution that satisfies your needs.</p>
-      }
-    />
+    <Header/>
+    <div className="tse-header-apply container">
+      <div className="row black-text">
+        <div className="col l6 s12 center">
+          <Img fluid={data.nonprofits.childImageSharp.fluid} className="tse-header-apply-image"></Img>
+          <h2>For Nonprofits</h2>
+        </div>
+        <div className="col l6 s12">
+          <h5 className="tse-header-apply-subtitle">Partner up with TSE and we will work hand-in-hand to develop the technology that will turn your vision into a reality without costing you a penny.</h5>
+          <p className="tse-text-medium tse-separation-small">If you have a proposal for an appropriate project, get in touch with us by emailing <b>tse@ucsd.edu</b>. We will work with you to deliver a solution that satisfies your needs.</p>
+        </div>
+      </div>
+    </div>
     <div class="container">
       <Divider subtitle="OUR SERVICES" textColor="black-text" lineColor="tse-divider-line-amber"/>
       <div class="row">
@@ -77,8 +82,7 @@ export default ({data}) => {
       </div>
       <div class="tse-separation-medium"></div>
     </div>
-    <div className="container">
-      <div id="faq"></div>
+    <div className="container" id="faq">
       <Divider subtitle="FREQUENTLY ASKED QUESTIONS" textColor="black-text" lineColor="tse-divider-line-amber"/>
       <div className="row">
         <div className="col s12">
@@ -97,20 +101,14 @@ export default ({data}) => {
 
 export const query = graphql`
   query {
+    nonprofits: file(relativePath: { eq: "icon-nonprofits.png" }) {
+      ...FluidImage
+    }
     mobile: file(relativePath: { eq: "icon-mobile.png" }) {
       ...FluidImage
     }
     web: file(relativePath: { eq: "icon-web.png" }) {
       ...FluidImage
-    }
-    allTseApplications {
-      edges {
-        node {
-          id
-          active
-          link 
-        }
-      }
     }
   }
 `

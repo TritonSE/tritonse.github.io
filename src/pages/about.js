@@ -1,5 +1,5 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import { Link, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 
 import SEO from '../components/seo.js'
@@ -41,12 +41,12 @@ export default ({data}) => {
       subtitle="We're an organization of engineers, designers, and problem solvers offering pro-bono technical and web development services for nonprofits."
       buttons={
         <span>
-          <a className="waves-effect waves-light btn-large blue darken-4 tse-header-button">Learn More</a> 
+          <Link to="/about#history" className="waves-effect waves-light btn-large blue darken-4 tse-header-button">Read More</Link>
         </span>
       }
       background='tse-header-laptop'
     />
-    <div class="container">
+    <div class="container" id="history">
       <Divider title="Strong Mind, Stronger Heart" subtitle="ABOUT US"/>
       <div class="row valign-wrapper hide-on-med-and-down">
         <div class="col l6">
@@ -75,7 +75,7 @@ export default ({data}) => {
       </div>
       <div class="tse-separation-medium"></div>
     </div>
-    <div className="container">
+    <div className="container" id="team">
       <Divider title="Who's Doing What?" subtitle="THE TEAM"/>
       {gridify(members, 6)}
     </div>
@@ -85,9 +85,6 @@ export default ({data}) => {
 
 export const query = graphql`
   query {
-    programming: file(relativePath: { eq: "generic-programming.png" }) {
-      ...FluidImage
-    }
     allTseMembers {
       edges {
         node {
@@ -100,6 +97,9 @@ export const query = graphql`
           }
         }
       }
+    }
+    programming: file(relativePath: { eq: "generic-programming.png" }) {
+      ...FluidImage
     }
   }
 `

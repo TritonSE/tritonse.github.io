@@ -28,8 +28,8 @@ export default ({data}) => {
       subtitle="We're an organization of engineers, designers, and problem solvers offering pro-bono technical and web development services for nonprofits."
       buttons={
         <span>
-          <a className="waves-effect waves-light btn-large blue darken-4 tse-header-button">Apply</a> 
-          <a className="waves-effect btn-large white black-text tse-header-button">Learn More</a>
+          <Link to="/apply" className="waves-effect waves-light btn-large blue darken-4 tse-header-button">Apply</Link> 
+          <Link to="/about" className="waves-effect btn-large white black-text tse-header-button">Learn More</Link>
         </span>
       }
       background='tse-header-geisel'

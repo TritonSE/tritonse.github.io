@@ -14,7 +14,7 @@ class Header extends React.Component {
   }
 
   render() {
-    const {data, title, subtitle, icon, buttons} = this.props;
+    const {data} = this.props;
     return (<div>
       <ul id="tse-navbar-dropdown" className="dropdown-content">
         <li><Link to="/students" className="black-text">Students</Link></li>
@@ -35,7 +35,7 @@ class Header extends React.Component {
               <ul className="right">
                 <li><Link to="/about" className="black-text">About</Link></li>
                 <li><Link to="/projects"  className="black-text">Projects</Link></li>
-                <li><a className="dropdown-trigger black-text" href="#!" data-target="tse-navbar-dropdown">Contact</a></li>
+                <li><a className="dropdown-trigger black-text" href="#!" data-target="tse-navbar-dropdown">Connect</a></li>
               </ul>
             </div>
           </div>
@@ -47,23 +47,6 @@ class Header extends React.Component {
         <li><Link to="/students">Students</Link></li>
         <li><Link to="/nonprofits">Nonprofits</Link></li>
       </ul>
-      <div className="tse-header-apply">
-        <div className="container">
-          <div className="row black-text">
-            <div className="col l6 s12 center">
-              <Img 
-                fluid={icon === 'students' ? data.students.childImageSharp.fluid : data.nonprofits.childImageSharp.fluid} 
-                className="tse-header-apply-image"></Img>
-              <h2>{title}</h2>
-            </div>
-            <div className="col l6 s12">
-              <h5 className="tse-header-apply-subtitle">{subtitle}</h5>
-              {buttons}
-            </div>
-          </div>
-          <p></p>
-        </div>
-      </div>
     </div>);
   }
 }
@@ -73,12 +56,6 @@ export default props => (
     query={graphql`
       query {
         logo: file(relativePath: { eq: "logo-colored.png" }) {
-          ...FluidImage
-        }
-        students: file(relativePath: { eq: "icon-students.png" }) {
-          ...FluidImage
-        }
-        nonprofits: file(relativePath: { eq: "icon-nonprofits.png" }) {
           ...FluidImage
         }
       }

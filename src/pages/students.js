@@ -1,5 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
+import Img from 'gatsby-image'
 
 import SEO from '../components/seo.js'
 import Header from '../components/apply-header.js'
@@ -34,21 +35,26 @@ export default ({data}) => {
 
   return (<div>
     <SEO title="Students"/>
-    <Header
-      title="For Students"
-      subtitle="Come join our family and find a way to put your skills to use by giving back to the community! We recruit annually in the fall so make sure you stay up to date."
-      icon="students"
-      buttons={
-        <div>
-          {apps_message}
-          <div className="row">
-            {developers_open ? <div class="col s12 m4 center"><a className="waves-effect waves-light btn blue darken-4 tse-apply-button" href={applications.developers.link}>Developers</a></div> : ""}
-            {designers_open ? <div class="col s12 m4 center"><a className="waves-effect waves-light btn blue darken-4 tse-apply-button" href={applications.designers.link}>Designers</a></div> : ""}
-            {managers_open ? <div class="col s12 m4 center"><a className="waves-effect waves-light btn blue darken-4 tse-apply-button" href={applications.managers.link}>Managers</a></div> : ""}
+    <Header/>
+    <div className="tse-header-apply container">
+      <div className="row black-text">
+        <div className="col l6 s12 center">
+          <Img fluid={data.students.childImageSharp.fluid} className="tse-header-apply-image"></Img>
+          <h2>For Students</h2>
+        </div>
+        <div className="col l6 s12">
+          <h5 className="tse-header-apply-subtitle">Come join our family and find a way to put your skills to use by giving back to the community! We recruit annually in the fall so make sure you stay up to date.</h5>
+          <div>
+            {apps_message}
+            <div className="row">
+              {developers_open ? <div class="col s12 m4 center"><a className="waves-effect waves-light btn blue darken-4 tse-apply-button" href={applications.developers.link}>Developers</a></div> : ""}
+              {designers_open ? <div class="col s12 m4 center"><a className="waves-effect waves-light btn blue darken-4 tse-apply-button" href={applications.designers.link}>Designers</a></div> : ""}
+              {managers_open ? <div class="col s12 m4 center"><a className="waves-effect waves-light btn blue darken-4 tse-apply-button" href={applications.managers.link}>Managers</a></div> : ""}
+            </div>
           </div>
         </div>
-      }
-    />
+      </div>
+    </div>
     <div className="blue lighten-3">
       <div className="container">
         <Divider subtitle="DECISION CRITERIA" textColor="black-text" lineColor="tse-divider-line-black"/>
@@ -89,8 +95,7 @@ export default ({data}) => {
       </div>
       <div className="tse-separation-medium"></div>
     </div>
-    <div className="container">
-      <div id="faq"></div>
+    <div className="container" id="faq">
       <Divider subtitle="FREQUENTLY ASKED QUESTIONS" textColor="black-text" lineColor="tse-divider-line-blue"/>
       <div className="row">
         <div className="col s12">
@@ -125,6 +130,9 @@ export const query = graphql`
           link 
         }
       }
+    }
+    students: file(relativePath: { eq: "icon-students.png" }) {
+      ...FluidImage
     }
   }
 `
