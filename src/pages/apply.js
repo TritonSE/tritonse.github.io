@@ -28,7 +28,7 @@ export default ({data}) => {
             <Img fluid={data.students.childImageSharp.fluid} className="tse-apply-image"/>
             <h2>For Students</h2>
             <p className="tse-text-large">Join our family and truly utilize your skills to give back to the community.</p>
-            <Link to="/students" className="btn-large waves-effect blue darken-3">Apply Now</Link>
+            <Link to="/students" className="btn-large waves-effect waves-light blue darken-3">Apply Now</Link>
           </div>
         </div>
       </div>
