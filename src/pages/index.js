@@ -8,6 +8,7 @@ import Divider from '../components/divider.js'
 import Footer from '../components/footer.js'
 
 import { condense } from '../util/styling.js'
+import { guid } from '../util/randgen.js'
 
 import '../styles/pages.css'
 import '../styles/forms.css'
@@ -37,7 +38,22 @@ class IndexPage extends React.Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    window.M.toast({html: 'The contact form is disabled at the moment.<br/>Please send us an email directly.', classes: 'red darken-2'});
+    if (this.state.name && this.state.email && this.state.message) {
+      let id = `${Math.floor(Date.now())}-${guid()}`
+      window.firestore.collection("messages").doc(id).set({
+        name: this.state.name,
+        email: this.state.email,
+        message: this.state.message
+      }).then((ref) => {
+        window.M.toast({html: 'Submitted! Thanks for contacting us!', classes: 'green darken-1'});
+        this.setState({name: "", email: "", message: ""});
+      }).catch((err) => {
+        window.M.toast({html: 'An error occurred: ' + err.message, classes: 'red darken-2'});
+      });
+    }
+    else {
+      window.M.toast({html: 'Please fill out all required fields.', classes: 'red darken-2'});
+    }
   }
 
   render() {
@@ -137,17 +153,17 @@ class IndexPage extends React.Component {
                   <div className="row">
                     <div className="input-field col s6">
                       <span className="white-text"><b>Name</b></span>
-                      <input id="contact_name" type="text" name="name" className="validate white-text" onChange={this.handleInputChange}/>
+                      <input type="text" name="name" className="validate white-text" value={this.state.name} onChange={this.handleInputChange}/>
                     </div>
                     <div className="input-field col s6">
                       <span className="white-text"><b>Email</b></span>
-                      <input id="contact_email" type="email" name="email" className="validate white-text" onChange={this.handleInputChange}/>
+                      <input type="email" name="email" className="validate white-text" value={this.state.email} onChange={this.handleInputChange}/>
                     </div>
                   </div>
                   <div className="row">
                     <div className="input-field col s12">
                       <span className="white-text"><b>Message</b></span>
-                      <textarea id="contact_message" className="materialize-textarea white-text" name="message" onChange={this.handleInputChange}></textarea>
+                      <textarea name="message" className="materialize-textarea white-text" value={this.state.message} onChange={this.handleInputChange}></textarea>
                     </div>
                   </div>
                   <div className="row">
