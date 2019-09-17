@@ -17,8 +17,8 @@ class Header extends React.Component {
     const {data} = this.props;
     return (<div>
       <ul id="tse-navbar-dropdown" className="dropdown-content">
-        <li><Link to="/students" className="black-text">Students</Link></li>
-        <li><Link to="/nonprofits" className="black-text">Nonprofits</Link></li>
+        <li><Link to="/students"><span className="black-text">Students</span></Link></li>
+        <li><Link to="/nonprofits"><span className="black-text">Nonprofits</span></Link></li>
       </ul>
       <nav className="white">
         <div className="nav-wrapper container">
@@ -33,19 +33,18 @@ class Header extends React.Component {
             </div>
             <div className="col s6 hide-on-med-and-down">
               <ul className="right">
-                <li><Link to="/about" className="black-text">About</Link></li>
-                <li><Link to="/projects"  className="black-text">Projects</Link></li>
-                <li><a className="dropdown-trigger black-text" href="#!" data-target="tse-navbar-dropdown">Connect</a></li>
+                <li><Link to="/about"><span className="black-text tse-navbar-link">About</span></Link></li>
+                <li><Link to="/projects"><span className="black-text tse-navbar-link">Projects</span></Link></li>
+                <li><a className="dropdown-trigger" href="#!" data-target="tse-navbar-dropdown"><span className="black-text tse-navbar-link">Connect</span></a></li>
               </ul>
             </div>
           </div>
         </div>
       </nav>
       <ul className="sidenav" id="tse-mobile-menu">
-        <li><Link to="/about">About</Link></li>
-        <li><Link to="/projects">Projects</Link></li>
-        <li><Link to="/students">Students</Link></li>
-        <li><Link to="/nonprofits">Nonprofits</Link></li>
+        <li><Link to="/about"><span className="tse-text-medium">About</span></Link></li>
+        <li><Link to="/projects"><span className="tse-text-medium">Projects</span></Link></li>
+        <li><Link to="/apply"><span className="tse-text-medium">Connect</span></Link></li>
       </ul>
     </div>);
   }
