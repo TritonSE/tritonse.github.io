@@ -26,6 +26,7 @@
 .tse-footer-social {
   color: #ffffff;
   font-size: 1.75em;
+  margin-right: 1em;
 }
 
 .tse-footer-social:hover {
@@ -35,19 +36,6 @@
   -ms-transition:.35s;
   -moz-transition:.35s;
   -webkit-transition:.35s;
-}
-
-.tse-footer-social-facebook {
-  padding-right: 0.5em;
-}
-
-.tse-footer-social-linkedin {
-  padding-left: 0.5em;
-  padding-right: 0.5em;
-}
-
-.tse-footer-social-github {
-  padding-left: 0.5em;
 }
 
 .tse-footer-link {

@@ -18,13 +18,13 @@ const Footer = ({data}) => (
               <Img fluid={data.logo.childImageSharp.fluid} className="tse-footer-logo"></Img>
             </Link>
             <p className="grey-text text-lighten-4">tse@ucsd.edu</p>
-            <a href="https://fb.com/tritonse" className="tse-footer-social tse-footer-social-facebook">
+            <a href="https://fb.com/tritonse" className="tse-footer-social">
               <i className="fa fa-facebook"></i>
             </a>
-            <a href="https://linkedin.com/company/tritonsoftwareengineering/" className="tse-footer-social tse-footer-social-linkedin">
+            <a href="https://linkedin.com/company/tritonsoftwareengineering/" className="tse-footer-social">
               <i className="fa fa-linkedin"></i>
             </a>
-            <a href="https://github.com/tritonse" className="tse-footer-social tse-footer-social-github">
+            <a href="https://github.com/tritonse" className="tse-footer-social">
               <i className="fa fa-github"></i>
             </a>
           </div>
