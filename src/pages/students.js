@@ -3,7 +3,7 @@ import { graphql } from 'gatsby'
 import Img from 'gatsby-image'
 
 import SEO from '../components/seo.js'
-import Header from '../components/apply-header.js'
+import Navbar from '../components/navbar.js'
 import Divider from '../components/divider.js'
 import Footer from '../components/footer.js'
 
@@ -35,7 +35,7 @@ export default ({data}) => {
 
   return (<div>
     <SEO title="Students"/>
-    <Header/>
+    <Navbar/>
     <div className="tse-apply-container">
       <div className="container">
         <div className="row black-text">

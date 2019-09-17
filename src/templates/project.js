@@ -1,7 +1,8 @@
 import React from "react"
+import { graphql } from 'gatsby'
 
 import SEO from "../components/seo.js"
-import Header from "../components/gradient-header.js"
+import Header from "../components/header.js"
 import Divider from "../components/divider.js"
 import Footer from "../components/footer.js"
 

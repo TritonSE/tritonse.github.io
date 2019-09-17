@@ -3,7 +3,7 @@ import { Link, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 
 import SEO from '../components/seo.js'
-import Header from '../components/gradient-header.js'
+import Header from '../components/header.js'
 import Divider from '../components/divider.js'
 import Footer from '../components/footer.js'
 
