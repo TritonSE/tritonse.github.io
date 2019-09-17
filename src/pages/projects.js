@@ -1,5 +1,5 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import { Link, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 
 import SEO from '../components/seo.js'
@@ -20,7 +20,9 @@ export default ({data}) => {
       <div key={`${value.node.name}`}>
         <div className="col l4 s12">
           <Img fluid={value.node.local_image.childImageSharp.fluid} className="tse-project-image"></Img>
-          <p className="tse-text-large blue-text text-darken-3 center"><b>{value.node.name}</b></p>
+          <div className="tse-project-title center">
+            <Link to={`/project/${value.node.id}`} className="blue-text text-darken-3 tse-text-large tse-project-link-blue"><b>{value.node.name}</b></Link>
+          </div>
           <p className="tse-text-medium">{description}</p>
         </div>
       </div>
@@ -79,6 +81,7 @@ export const query = graphql`
     allTseProjects {
       edges {
         node {
+          id
           name
           description
           ongoing

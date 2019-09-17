@@ -56,6 +56,18 @@ a {
   border-radius: 5px;
 }
 
+.tse-project-title {
+  margin-top: 2em;
+}
+
+.tse-project-link-amber:hover {
+  color: #ffb300;
+}
+
+.tse-project-link-blue:hover {
+  color: #fff;
+}
+
 /* Apply Pages */
 
 .tse-apply-container {
