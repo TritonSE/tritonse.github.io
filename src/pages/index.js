@@ -218,7 +218,6 @@ export const query = graphql`
           id
           name
           description
-          image
           local_image {
             ...FluidImage
           }

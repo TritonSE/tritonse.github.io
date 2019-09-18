@@ -85,7 +85,6 @@ export const query = graphql`
           name
           description
           ongoing
-          image
           local_image {
             ...FluidImage
           }

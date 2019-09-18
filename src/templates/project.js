@@ -6,6 +6,8 @@ import Header from "../components/header.js"
 import Divider from "../components/divider.js"
 import Footer from "../components/footer.js"
 
+import { condense } from '../util/styling.js'
+
 export default ({ data }) => {
   let project = data.tseProjects;
   return (
@@ -15,10 +17,10 @@ export default ({ data }) => {
         title={
           <span>{project.name}</span>
         }
-        subtitle="This will need to be filled in."
+        subtitle={condense(project.description, 200)}
         buttons={
           <span>
-            <a className="waves-effect waves-light btn-large blue darken-4 tse-header-button" href="https://github.com/tritonse">
+            <a className="waves-effect waves-light btn-large blue darken-4 tse-header-button" href={project.github}>
               Visit Our GitHub
               <i className="material-icons right">code</i>
             </a>
@@ -40,7 +42,7 @@ export const query = graphql`
     tseProjects(id: { eq: $id }) {
       name
       description
-      image
+      github
       local_image {
         ...FluidImage
       }
