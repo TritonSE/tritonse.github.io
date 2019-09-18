@@ -20,7 +20,7 @@ class Navbar extends React.Component {
     const logo = gradient ? data.wlogo.childImageSharp.fluid : 
       data.clogo.childImageSharp.fluid;
     return (<div>
-      <ul id="tse-navbar-dropdown" className="dropdown-content">
+      <ul id="tse-navbar-dropdown" className={`dropdown-content ${background}`}>
         <li><Link to="/students"><span className={foreground}>Students</span></Link></li>
         <li><Link to="/nonprofits"><span className={foreground}>Nonprofits</span></Link></li>
       </ul>
@@ -45,7 +45,7 @@ class Navbar extends React.Component {
           </div>
         </div>
       </nav>
-      <ul className="sidenav" id="tse-mobile-menu">
+      <ul className={`sidenav ${background}`} id="tse-mobile-menu">
         <li><Link to="/about" className={foreground}><span className="tse-text-medium">About</span></Link></li>
         <li><Link to="/projects" className={foreground}><span className="tse-text-medium">Projects</span></Link></li>
         <li><Link to="/apply" className={foreground}><span className="tse-text-medium">Connect</span></Link></li>

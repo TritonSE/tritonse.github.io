@@ -21,7 +21,7 @@ export default ({data}) => {
         <div className="col l4 s12">
           <Img fluid={value.node.local_image.childImageSharp.fluid} className="tse-project-image"></Img>
           <div className="tse-project-title center">
-            <Link to={`/project/${value.node.id}`} className="blue-text text-darken-3 tse-text-large tse-project-link-blue"><b>{value.node.name}</b></Link>
+            <Link to={`/project/${value.node.id}`} className="blue-text text-darken-3 tse-text-large"><b className="tse-project-link-blue">{value.node.name}</b></Link>
           </div>
           <p className="tse-text-medium">{description}</p>
         </div>

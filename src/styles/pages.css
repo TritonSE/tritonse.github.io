@@ -62,10 +62,20 @@ a {
 
 .tse-project-link-amber:hover {
   color: #ffb300;
+  transition:.35s;
+  -o-transition:.35s;
+  -ms-transition:.35s;
+  -moz-transition:.35s;
+  -webkit-transition:.35s;
 }
 
 .tse-project-link-blue:hover {
-  color: #fff;
+  color: #64b5f6;
+  transition:.35s;
+  -o-transition:.35s;
+  -ms-transition:.35s;
+  -moz-transition:.35s;
+  -webkit-transition:.35s;
 }
 
 /* Apply Pages */
