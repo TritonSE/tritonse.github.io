@@ -4,6 +4,12 @@
   padding-bottom: 20em;
 }
 
+.tse-header-project {
+  width: 100%;
+  padding-top: 6em;
+  padding-bottom: 12em;
+}
+
 .tse-header-gradient {
   background: linear-gradient(to bottom, rgba(21, 101, 192, 1), rgba(91, 117, 149, 1), rgba(255, 255, 255, 1));
   background-size: cover;

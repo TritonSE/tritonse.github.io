@@ -56,6 +56,12 @@ a {
   border-radius: 5px;
 }
 
+.tse-project-template-image {
+  height: 15em;
+  width: auto;
+  margin-top: 2em;
+}
+
 .tse-project-title {
   margin-top: 2em;
 }

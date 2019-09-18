@@ -31,7 +31,17 @@ export default ({data}) => {
       </div>
     </div>
   ));
-
+  let history_left = (
+    <div className="col l6 s12">
+      <Img fluid={data.programming.childImageSharp.fluid} className="tse-generic-image tse-highlight-image"></Img>
+    </div>
+  );
+  let history_right = (
+    <div className="col l6 s12">
+      <p className="tse-text-medium">In Spring of 2017, a group of passionate students banded together to form Triton Software Engineering. They saw a huge problem: nonprofits had little to no resources to procure professional web and technical development services. By providing a venue for both student engineers and nonprofits to connect, they hoped to foster growth in both social good and technical expertise.</p>
+      <p className="tse-text-medium">We believe that technology should be utilized to better the community. Something as simple as a sleek, static, and easy-to-use website or as complicated as  a mobile app to track donations to your organizations can have a huge impact on an organization of any size. Let us help you help the community.</p>
+    </div>
+  );
   return (<div>
     <SEO title="About"/>
     <Header
@@ -49,22 +59,12 @@ export default ({data}) => {
     <div className="container" id="history">
       <Divider title="Strong Mind, Stronger Heart" subtitle="ABOUT US"/>
       <div className="row valign-wrapper hide-on-med-and-down">
-        <div className="col l6">
-          <Img fluid={data.programming.childImageSharp.fluid} className="tse-generic-image tse-highlight-image"></Img>
-        </div>
-        <div className="col l6">
-          <p className="tse-text-medium">In Spring of 2017, a group of passionate students banded together to form Triton Software Engineering. They saw a huge problem: nonprofits had little to no resources to procure professional web and technical development services. By providing a venue for both student engineers and nonprofits to connect, they hoped to foster growth in both social good and technical expertise.</p>
-          <p className="tse-text-medium">We believe that technology should be utilized to better the community. Something as simple as a sleek, static, and easy-to-use website or as complicated as  a mobile app to track donations to your organizations can have a huge impact on an organization of any size. Let us help you help the community.</p>
-        </div>
+        {history_left}     
+        {history_right}     
       </div>
       <div className="row hide-on-large-only">
-        <div className="col s12">
-          <Img fluid={data.programming.childImageSharp.fluid} className="tse-generic-image tse-highlight-image"></Img>
-        </div>
-        <div className="col s12">
-          <p className="tse-text-medium">In Spring of 2017, a group of passionate students banded together to form Triton Software Engineering. They saw a huge problem: nonprofits had little to no resources to procure professional web and technical development services. By providing a venue for both student engineers and nonprofits to connect, they hoped to foster growth in both social good and technical expertise.</p>
-          <p className="tse-text-medium">We believe that technology should be utilized to better the community. Something as simple as a sleek, static, and easy-to-use website or as complicated as  a mobile app to track donations to your organizations can have a huge impact on an organization of any size. Let us help you help the community.</p>
-        </div>
+        {history_left}     
+        {history_right}     
       </div>
       <div className="tse-separation-medium"></div>
     </div>
