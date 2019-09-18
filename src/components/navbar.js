@@ -33,7 +33,7 @@ class Navbar extends React.Component {
               </Link>
             </div>
             <div className="col s6 show-on-medium-and-down">
-              <a href="#" data-target="tse-mobile-menu" class={`sidenav-trigger right ${foreground}`}><i class="material-icons">menu</i></a>
+              <a href="#!" data-target="tse-mobile-menu" class={`sidenav-trigger right ${foreground}`}><i class="material-icons">menu</i></a>
             </div>
             <div className="col s6 hide-on-med-and-down">
               <ul className="right">

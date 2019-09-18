@@ -33,8 +33,7 @@ class IndexPage extends React.Component {
     const name = target.name
     this.setState({
       [name]: value,
-    })
-  }
+    }) }
 
   handleSubmit(event) {
     event.preventDefault();
@@ -104,23 +103,23 @@ class IndexPage extends React.Component {
             <div className="col l4 s12">
               <Img fluid={project1.local_image.childImageSharp.fluid} className="tse-home-project-image tse-highlight-image"></Img>
               <div className="tse-project-title center">
-                <Link to={`/project/${project1.id}`} className="tse-text-large white-text"><b className="tse-project-link-amber">{project1.name}</b></Link>
+                <Link to={`/project/${project1.id}`} className="tse-text-large white-text"><b className="tse-project-link-amber">{project1.title}</b></Link>
               </div>
-              <p className="tse-text-medium white-text">{condense(project1.description, 250)}</p>
+              <p className="tse-text-medium white-text">{condense(project1.subtitle, 250)}</p>
             </div>
             <div className="col l4 s12">
               <Img fluid={project2.local_image.childImageSharp.fluid} className="tse-home-project-image tse-highlight-image"></Img>
               <div className="tse-project-title center">
-                <Link to={`/project/${project2.id}`} className="tse-text-large white-text"><b className="tse-project-link-amber">{project2.name}</b></Link>
+                <Link to={`/project/${project2.id}`} className="tse-text-large white-text"><b className="tse-project-link-amber">{project2.title}</b></Link>
               </div>
-              <p className="tse-text-medium white-text">{condense(project2.description, 250)}</p>
+              <p className="tse-text-medium white-text">{condense(project2.subtitle, 250)}</p>
             </div>
             <div className="col l4 s12">
               <Img fluid={project3.local_image.childImageSharp.fluid} className="tse-home-project-image tse-highlight-image"></Img>
               <div className="tse-project-title center">
-                <Link to={`/project/${project3.id}`} className="tse-text-large white-text"><b className="tse-project-link-amber">{project3.name}</b></Link>
+                <Link to={`/project/${project3.id}`} className="tse-text-large white-text"><b className="tse-project-link-amber">{project3.title}</b></Link>
               </div>
-              <p className="tse-text-medium white-text">{condense(project3.description, 250)}</p>
+              <p className="tse-text-medium white-text">{condense(project3.subtitle, 250)}</p>
             </div>
           </div>
         </div>
@@ -216,8 +215,8 @@ export const query = graphql`
       edges {
         node {
           id
-          name
-          description
+          title
+          subtitle
           local_image {
             ...FluidImage
           }

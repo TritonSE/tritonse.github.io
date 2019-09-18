@@ -12,12 +12,12 @@ export default ({ data }) => {
   let project = data.tseProjects;
   return (
     <div>
-      <SEO title={project.name}/>
+      <SEO title={project.title}/>
       <Header
         title={
-          <span>{project.name}</span>
+          <span>{project.title}</span>
         }
-        subtitle={condense(project.description, 200)}
+        subtitle={condense(project.subtitle, 250)}
         buttons={
           <span>
             <a className="waves-effect waves-light btn-large blue darken-4 tse-header-button" href={project.github}>
@@ -30,7 +30,7 @@ export default ({ data }) => {
       />
       <div class="container">
         <Divider title="What's This Project About?" subtitle="OVERVIEW" textColor="black-text" lineColor="tse-divider-line-amber"/>
-        <p className="tse-text-medium">{project.description}</p>
+        <p className="tse-text-medium">{project.overview}</p>
       </div>
       <Footer/>
     </div>
@@ -40,8 +40,9 @@ export default ({ data }) => {
 export const query = graphql`
   query($id: String!) {
     tseProjects(id: { eq: $id }) {
-      name
-      description
+      title
+      subtitle
+      overview
       github
       local_image {
         ...FluidImage

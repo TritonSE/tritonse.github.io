@@ -15,15 +15,14 @@ import '../../node_modules/materialize-css/dist/css/materialize.min.css'
 
 export default ({data}) => {
   const get_project_html = (value) => {
-    let description = condense(value.node.description, 250);
     return (
       <div key={`${value.node.name}`}>
         <div className="col l4 s12">
           <Img fluid={value.node.local_image.childImageSharp.fluid} className="tse-project-image"></Img>
           <div className="tse-project-title center">
-            <Link to={`/project/${value.node.id}`} className="blue-text text-darken-3 tse-text-large"><b className="tse-project-link-blue">{value.node.name}</b></Link>
+            <Link to={`/project/${value.node.id}`} className="blue-text text-darken-3 tse-text-large"><b className="tse-project-link-blue">{value.node.title}</b></Link>
           </div>
-          <p className="tse-text-medium">{description}</p>
+          <p className="tse-text-medium">{condense(value.node.subtitle, 250)}</p>
         </div>
       </div>
     )
@@ -82,8 +81,8 @@ export const query = graphql`
       edges {
         node {
           id
-          name
-          description
+          title
+          subtitle
           ongoing
           local_image {
             ...FluidImage
