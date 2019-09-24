@@ -94,8 +94,8 @@ export default ({data}) => {
             <p className="tse-text-medium">How well will you fit in with the rest of us here at TSE?</p>
           </div>
         </div>
+        <div className="row tse-separation-medium"></div>
       </div>
-      <div className="tse-separation-medium"></div>
     </div>
     <div className="container" id="faq">
       <Divider subtitle="FREQUENTLY ASKED QUESTIONS" textColor="black-text" lineColor="tse-divider-line-blue"/>
