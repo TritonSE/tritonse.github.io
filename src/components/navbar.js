@@ -21,8 +21,8 @@ class Navbar extends React.Component {
       data.clogo.childImageSharp.fluid;
     return (<div>
       <ul id="tse-navbar-dropdown" className={`dropdown-content ${background}`}>
-        <li><Link to="/students"><span className={foreground}>Students</span></Link></li>
-        <li><Link to="/nonprofits"><span className={foreground}>Nonprofits</span></Link></li>
+        <li><a href="/students"><span className={foreground}>Students</span></a></li>
+        <li><a href="/nonprofits"><span className={foreground}>Nonprofits</span></a></li>
       </ul>
       <nav className={background}>
         <div className="nav-wrapper container">
@@ -33,7 +33,7 @@ class Navbar extends React.Component {
               </Link>
             </div>
             <div className="col s6 show-on-medium-and-down">
-              <a href="#!" data-target="tse-mobile-menu" class={`sidenav-trigger right ${foreground}`}><i class="material-icons">menu</i></a>
+              <a href="#!" data-target="tse-mobile-menu" className={`sidenav-trigger right ${foreground}`}><i className="material-icons">menu</i></a>
             </div>
             <div className="col s6 hide-on-med-and-down">
               <ul className="right">
@@ -46,9 +46,9 @@ class Navbar extends React.Component {
         </div>
       </nav>
       <ul className={`sidenav ${background}`} id="tse-mobile-menu">
-        <li><Link to="/about" className={foreground}><span className="tse-text-medium">About</span></Link></li>
-        <li><Link to="/projects" className={foreground}><span className="tse-text-medium">Projects</span></Link></li>
-        <li><Link to="/apply" className={foreground}><span className="tse-text-medium">Connect</span></Link></li>
+        <li><a href="/about" className={foreground}><span className="tse-text-medium">About</span></a></li>
+        <li><a href="/projects" className={foreground}><span className="tse-text-medium">Projects</span></a></li>
+        <li><a href="/apply" className={foreground}><span className="tse-text-medium">Connect</span></a></li>
       </ul>
     </div>);
   }
