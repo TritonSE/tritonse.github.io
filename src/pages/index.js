@@ -172,11 +172,11 @@ class IndexPage extends React.Component {
                     </div>
                   </div>
                   <div className="row">
-                    <div className="col s9">
+                    <div className="col m8 s12">
                       <p>We will do our best to answer promptly to any inquries received through this form. You can also reach us at <b>tse@ucsd.edu</b>.</p>
                     </div>
-                    <div className="col s3 right-align">
-                      <button className="waves-effect btn-large amber darken-1" type="submit">Send</button>
+                    <div className="col m4 s12 right-align">
+                      <button className="waves-effect tse-separation-small btn amber darken-1" type="submit">Send</button>
                     </div>
                   </div>
                 </form>
