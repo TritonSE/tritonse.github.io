@@ -66,14 +66,14 @@ export default ({data}) => {
         {history_left}     
         {history_right}     
       </div>
-      <div className="tse-separation-medium"></div>
+      <div className="tse-padding-medium"></div>
     </div>
     <div className="blue darken-3">
       <div className="container">
         <Divider subtitle="OUR MISSION" textColor="white-text" lineColor="tse-divider-line-white"/>
         <h5 className="white-text tse-mission"><b>"Triton Software Engineering (TSE) is a multidiciplinary student organization at UC San Diego. We partner with nonprofits to design and develop software, websites and mobile applications pro-bono for <span className="amber-text">social good</span>, while giving our developers <span className="amber-text">practical, real world experience</span>."</b></h5>
-        <div className="tse-separation-medium"></div>
       </div>
+      <div className="tse-padding-medium"></div>
     </div>
     <div className="container" id="team">
       <Divider title="Who's Doing What?" subtitle="THE TEAM"/>
