@@ -9,6 +9,7 @@ deploy:
   local-dir: public
   provider: pages
   skip-cleanup: true
+  keep-history: false
   github-token: $GITHUB_TOKEN  
   target-branch: master
   on:
