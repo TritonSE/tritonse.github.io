@@ -23,4 +23,4 @@ jobs:
           command: npm run-script build 
       - run: 
           name: Deploy to master branch 
-          command: yes | sudo gh-pages --dist public 
+          command: git subtree push --prefix public --force origin master
