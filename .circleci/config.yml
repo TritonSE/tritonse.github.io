@@ -11,7 +11,7 @@ jobs:
           command: 'sudo npm install -g npm@latest'
       - run:
           name: Install gh-pages command 
-          command: 'sudo npm install -g gh-pages@latest'
+          command: 'npm install -g gh-pages@latest'
       - run:
           name: Install Firebase plugin dependencies
           command: npm install --prefix plugins/tritonse-source-firestore
