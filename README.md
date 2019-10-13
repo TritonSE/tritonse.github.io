@@ -1,5 +1,4 @@
 # TSE Website 
-[![Build Status](https://travis-ci.com/TritonSE/tritonse-web.svg?branch=master)](https://travis-ci.com/TritonSE/tritonse-web)
 
 This repository contains both:
   1. The source code used to build our website 
