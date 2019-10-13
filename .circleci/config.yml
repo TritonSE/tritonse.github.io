@@ -1,0 +1,26 @@
+version: 2.1 
+jobs: 
+  build: 
+    working_directory: ~/website
+    docker: 
+      - image: circleci/node:10.16.3 
+    steps: 
+      - checkout
+      - run:
+          name: Update NPM 
+          command: 'sudo npm install -g npm@latest'
+      - run:
+          name: Install gh-pages command 
+          command: 'sudo npm install -g gh-pages@latest'
+      - run:
+          name: Install Firebase plugin dependencies
+          command: npm install --prefix plugins/tritonse-source-firestore
+      - run:
+          name: Install website dependencies 
+          command: npm install
+      - run: 
+          name: Build website 
+          command: npm run-script build 
+      - run: 
+          name: Deploy to master branch 
+          command: gh-pages --dist public 
