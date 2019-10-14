@@ -29,7 +29,6 @@ workflows:
   build-deploy:
     jobs:
       - build:
-          filter:
+          filters:
             branches:
-              only:
-                - source
+              only: source
