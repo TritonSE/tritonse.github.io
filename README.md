@@ -1,5 +1,7 @@
 # TSE Website 
 
+[![CircleCI](https://circleci.com/gh/TritonSE/tritonse.github.io/tree/source.svg?style=svg)](https://circleci.com/gh/TritonSE/tritonse.github.io/tree/source)
+
 This repository contains both:
   1. The source code used to build our website 
   2. The results of the build process in a separate branch
