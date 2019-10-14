@@ -20,7 +20,7 @@ jobs:
           command: npm run-script build 
       - add_ssh_keys:
           fingerprints:
-            - "49:45:2b:ef:fb:31:c9:b3:bf:90:42:16:04:e8:0e:73" 
+            - "f3:c6:13:c0:cd:b7:4f:4f:e4:b2:e5:8c:48:74:3a:9a"
       - run: 
           name: Deploy to master branch 
           command: sh scripts/circleci-deploy.sh
