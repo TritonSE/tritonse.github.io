@@ -23,4 +23,4 @@ jobs:
             - "cc:e6:5c:55:b1:c7:8c:ff:d7:b1:fa:ce:e8:7c:33:aa" 
       - run: 
           name: Deploy to master branch 
-          command: sh scripts/deploy.sh
+          command: sh scripts/circleci-deploy.sh
