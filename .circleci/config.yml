@@ -1,10 +1,9 @@
 version: 2.1 
-general:
-  branches:
-    only:
-      - source 
 jobs: 
   build: 
+    branches:
+      only:
+        - source 
     working_directory: ~/website
     docker: 
       - image: circleci/node:10.16.3 
