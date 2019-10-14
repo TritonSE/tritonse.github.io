@@ -10,9 +10,6 @@ jobs:
           name: Update NPM 
           command: 'sudo npm install -g npm@latest'
       - run:
-          name: Install gh-pages command 
-          command: 'sudo npm install -g gh-pages@latest'
-      - run:
           name: Install Firebase plugin dependencies
           command: npm install --prefix plugins/tritonse-source-firestore
       - run:
@@ -21,6 +18,9 @@ jobs:
       - run: 
           name: Build website 
           command: npm run-script build 
+      - add_ssh_keys:
+          fingerprints:
+            - "cc:e6:5c:55:b1:c7:8c:ff:d7:b1:fa:ce:e8:7c:33:aa" 
       - run: 
           name: Deploy to master branch 
-          command: git subtree push --prefix public --force origin master
+          command: sh scripts/deploy.sh
