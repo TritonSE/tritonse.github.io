@@ -38,3 +38,14 @@ Finally, using Gatsby's CLI commands, build our files and run a development serv
 ```
 gatsby develop
 ```
+
+## Docker Installation
+
+Assuming you have Docker installed on your system, you can use:
+
+```
+scripts/run-docker.sh
+```
+
+This will build a Docker image with the correct dependencies and then run it as a container.
+Note that you will have to kill the container manually if you exit out.
