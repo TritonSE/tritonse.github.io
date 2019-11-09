@@ -12,4 +12,6 @@ RUN npm install --prefix plugins/tritonse-source-firestore
 COPY . .
 
 EXPOSE 8000
-CMD [ "gatsby", "develop" ]
+
+ENV NODE_TLS_REJECT_UNAUTHORIZED 0
+CMD [ "gatsby", "develop", "--https" ]
