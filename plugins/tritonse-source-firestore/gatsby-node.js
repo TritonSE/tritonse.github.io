@@ -20,10 +20,6 @@ exports.sourceNodes = (
 
   const db = firebase.firestore()
 
-  db.settings({
-    timestampsInSnapshots: true
-  });
-
   let snapshot_tasks = [];
 
   // Download each snapshot in parallel
