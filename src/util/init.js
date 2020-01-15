@@ -1,5 +1,3 @@
-import React from 'react'
-
 function init_materialize() {
   require('../../node_modules/materialize-css/dist/js/materialize.min.js');
   window.M.AutoInit();
