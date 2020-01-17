@@ -11,3 +11,8 @@ rm -rf ../public
 git add .
 git commit -m "[ci skip] Deploy build files to master branch"
 git push
+apt-get install sshpass
+ sshpass -p $ACSWEB_PASSWORD ssh tse@acsweb.ucsd.edu
+./refresh.sh
+exit
+history -r
