@@ -11,4 +11,3 @@ rm -rf ../public
 git add .
 git commit -m "[ci skip] Deploy build files to master branch"
 git push
-sshpass -e ssh tse@acsweb.ucsd.edu 'sh refresh.sh'
