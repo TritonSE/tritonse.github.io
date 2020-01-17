@@ -40,7 +40,7 @@ jobs:
             git add .
             git commit -m "[ci skip] Deploy build files to master branch"
             git push
-        - run:
+      - run:
           name: Deploy to remote server
           command: 'sshpass -e ssh tse@acsweb.ucsd.edu \'sh refresh.sh\''
 workflows:
