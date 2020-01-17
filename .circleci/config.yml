@@ -1,4 +1,4 @@
-version: 2.1 
+version: 2 
 jobs: 
   deploy: 
     working_directory: ~/website
@@ -6,6 +6,9 @@ jobs:
       - image: circleci/node:10.16.3 
     steps: 
       - checkout
+      - run:
+          name: Install deployment dependencies
+          command: 'sudo apt-get install sshpass'
       - run:
           name: Update NPM 
           command: 'sudo npm install -g npm@latest'
