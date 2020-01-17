@@ -14,10 +14,21 @@ import '../styles/pages.css'
 import '../../node_modules/materialize-css/dist/css/materialize.min.css'
 
 export default ({data}) => {
+  const priorities = {
+    'President': 0,
+    'VP Operations': 1,
+    'VP External': 2,
+    'VP Technology': 3,
+    'VP Projects': 4,
+    'UI/UX Design Lead': 5,
+    'Project Manager': 6,
+    'Developer': 7,
+    'UI/UX Designer': 8,
+  };
   // Member information is stored in data.allTseMembers
   // This is fetched using a GraphQL query that maps to the tritonse-source-firestore plugin
   let members = data.allTseMembers.edges
-    .sort((a, b) => (a.node.priority - b.node.priority))
+    .sort((a, b) => (priorities[a.node.role] - priorities[b.node.role] || a.node.name.localeCompare(b.node.name)))
     .map((value) => (
     <div key={`${value.node.name}`} className="col l2 m4 s6 center">
       <div>
@@ -89,7 +100,6 @@ export const query = graphql`
       edges {
         node {
           name
-          priority
           role
           image
           local_image {
