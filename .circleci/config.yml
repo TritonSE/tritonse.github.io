@@ -31,7 +31,7 @@ jobs:
           command: 'sh .circleci/deploy.sh'
       - run:
           name: Deploy to remote server
-          command: sshpass -e ssh tse@acsweb.ucsd.edu 'sh refresh.sh'
+          command: sshpass -e ssh -o StrictHostKeyChecking=no tse@acsweb.ucsd.edu 'sh refresh.sh'
 workflows:
   version: 2
   website:
