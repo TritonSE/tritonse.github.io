@@ -50,7 +50,7 @@ export default ({ data }) => {
       </div>
       <div class="container">
         <Divider title="What's This Project About?" subtitle="OVERVIEW" textColor="black-text" lineColor="tse-divider-line-amber"/>
-        <p className="tse-text-medium">{project.overview}</p>
+        <p className="tse-text-medium" dangerouslySetInnerHTML={{__html: project.overview}}/>
       </div>
       <Footer/>
     </div>
