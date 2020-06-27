@@ -8,7 +8,6 @@ import Divider from '../components/divider.js'
 import Footer from '../components/footer.js'
 
 import { condense } from '../util/styling.js'
-import { guid } from '../util/randgen.js'
 
 import '../styles/pages.css'
 import '../styles/forms.css'
@@ -16,45 +15,6 @@ import '../styles/forms.css'
 import '../../node_modules/materialize-css/dist/css/materialize.min.css'
 
 class IndexPage extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      name: "",
-      email: "",
-      message: ""
-    };
-    this.handleInputChange = this.handleInputChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
-  }
-
-  handleInputChange(event) {
-    const target = event.target
-    const value = target.value
-    const name = target.name
-    this.setState({
-      [name]: value,
-    }) }
-
-  handleSubmit(event) {
-    event.preventDefault();
-    if (this.state.name && this.state.email && this.state.message) {
-      let id = `${Math.floor(Date.now())}-${guid()}`
-      window.firestore.collection("messages").doc(id).set({
-        name: this.state.name,
-        email: this.state.email,
-        message: this.state.message
-      }).then((ref) => {
-        window.M.toast({html: 'Submitted! Thanks for contacting us!', classes: 'green darken-1'});
-        this.setState({name: "", email: "", message: ""});
-      }).catch((err) => {
-        window.M.toast({html: 'An error occurred: ' + err.message, classes: 'red darken-2'});
-      });
-    }
-    else {
-      window.M.toast({html: 'Please fill out all required fields.', classes: 'red darken-2'});
-    }
-  }
-
   render() {
     const {data} = this.props;
 
@@ -151,37 +111,8 @@ class IndexPage extends React.Component {
         <Divider title="We'd Love to Hear from You" subtitle="CONTACT US" textColor="blue-text text-darken-3" lineColor="tse-divider-line-amber"/>
         <div className="row">
           <div className="col s12">
-            <div className="card blue darken-4">
-              <div className="card-content white-text container">
-                <h4 className="center">Contact Form</h4>
-                <form onSubmit={this.handleSubmit}>
-                  <div className="row">
-                    <div className="input-field col s6">
-                      <span className="white-text"><b>Name</b></span>
-                      <input type="text" name="name" className="validate white-text" value={this.state.name} onChange={this.handleInputChange}/>
-                    </div>
-                    <div className="input-field col s6">
-                      <span className="white-text"><b>Email</b></span>
-                      <input type="email" name="email" className="validate white-text" value={this.state.email} onChange={this.handleInputChange}/>
-                    </div>
-                  </div>
-                  <div className="row">
-                    <div className="input-field col s12">
-                      <span className="white-text"><b>Message</b></span>
-                      <textarea name="message" className="materialize-textarea white-text" value={this.state.message} onChange={this.handleInputChange}></textarea>
-                    </div>
-                  </div>
-                  <div className="row">
-                    <div className="col m8 s12">
-                      <p>We will do our best to answer promptly to any inquries received through this form. You can also reach us at <b>tse@ucsd.edu</b>.</p>
-                    </div>
-                    <div className="col m4 s12 right-align">
-                      <button className="waves-effect tse-separation-small btn amber darken-1" type="submit">Send</button>
-                    </div>
-                  </div>
-                </form>
-              </div>
-            </div>
+            <h4 className="center">Email us at <a href="mailto:tse@ucsd.edu"><b className="amber-text text-darken-1">tse@ucsd.edu.</b></a></h4>
+            <p className="center">We will do our best to promptly answer any inquiries.</p>
           </div>
         </div>
       </div>
