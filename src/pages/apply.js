@@ -1,16 +1,18 @@
 import React from 'react'
-import { Link, graphql } from 'gatsby'
+import {
+  Link,
+  graphql
+} from 'gatsby'
 import Img from 'gatsby-image'
-
 import SEO from '../components/seo.js'
 import Navbar from '../components/navbar.js'
 import Footer from '../components/footer.js'
-
 import '../styles/pages.css'
-
 import '../../node_modules/materialize-css/dist/css/materialize.min.css'
 
-export default ({data}) => {
+export default ({
+  data
+}) => {
   return (<div>
     <SEO title="Apply"/>
     <Navbar/>
@@ -37,7 +39,7 @@ export default ({data}) => {
   </div>)
 }
 
-export const query = graphql`
+export const query = graphql `
   query {
     students: file(relativePath: { eq: "icon-students.png" }) {
       ...FluidImage

@@ -1,12 +1,15 @@
 import React from 'react'
-
 import Navbar from '../components/navbar.js'
-
 import '../styles/header.css'
-
 import '../../node_modules/materialize-css/dist/css/materialize.min.css'
 
-const Header = ({data, title, subtitle, buttons, background}) => ( 
+const Header = ({
+  data,
+  title,
+  subtitle,
+  buttons,
+  background
+}) => (
   <div>
     <Navbar gradient={true}/>
     <div className={`tse-header ${background ? background : 'tse-header-gradient'}`}>
@@ -26,6 +29,6 @@ const Header = ({data, title, subtitle, buttons, background}) => (
       </div>
     </div>
   </div>
-) 
+)
 
 export default Header;

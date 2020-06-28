@@ -1,29 +1,32 @@
 import React from 'react'
-import { Link, graphql } from 'gatsby'
+import {
+  Link,
+  graphql
+} from 'gatsby'
 import Img from 'gatsby-image'
-
 import SEO from '../components/seo.js'
 import Header from '../components/header.js'
 import Divider from '../components/divider.js'
 import Footer from '../components/footer.js'
-
-import { condense } from '../util/styling.js'
-
+import {
+  condense
+} from '../util/styling.js'
 import '../styles/pages.css'
 import '../styles/forms.css'
-
 import '../../node_modules/materialize-css/dist/css/materialize.min.css'
 
 class IndexPage extends React.Component {
   render() {
-    const {data} = this.props;
+    const {
+      data
+    } = this.props;
 
     let project1 = data.allTseProjects.edges[0].node;
     let project2 = data.allTseProjects.edges[1].node;
     let project3 = data.allTseProjects.edges[2].node;
 
     return (
-    <div>
+      <div>
       <SEO title="Home" keywords={[`ucsd`, `tse`, `software`, `nonprofit`]} />
       <Header
         title={
@@ -61,21 +64,21 @@ class IndexPage extends React.Component {
           </div>
           <div className="row">
             <div className="col l4 s12">
-              <Img fluid={project1.local_image.childImageSharp.fluid} className="tse-home-project-image tse-highlight-image"></Img>
+              <Img fluid={project1.image_node.childImageSharp.fluid} className="tse-home-project-image tse-highlight-image"></Img>
               <div className="tse-project-title center">
                 <Link to={`/project/${project1.id}`} className="tse-text-large white-text"><b className="tse-project-link-amber">{project1.title}</b></Link>
               </div>
               <p className="tse-text-medium white-text">{condense(project1.subtitle, 250)}</p>
             </div>
             <div className="col l4 s12">
-              <Img fluid={project2.local_image.childImageSharp.fluid} className="tse-home-project-image tse-highlight-image"></Img>
+              <Img fluid={project2.image_node.childImageSharp.fluid} className="tse-home-project-image tse-highlight-image"></Img>
               <div className="tse-project-title center">
                 <Link to={`/project/${project2.id}`} className="tse-text-large white-text"><b className="tse-project-link-amber">{project2.title}</b></Link>
               </div>
               <p className="tse-text-medium white-text">{condense(project2.subtitle, 250)}</p>
             </div>
             <div className="col l4 s12">
-              <Img fluid={project3.local_image.childImageSharp.fluid} className="tse-home-project-image tse-highlight-image"></Img>
+              <Img fluid={project3.image_node.childImageSharp.fluid} className="tse-home-project-image tse-highlight-image"></Img>
               <div className="tse-project-title center">
                 <Link to={`/project/${project3.id}`} className="tse-text-large white-text"><b className="tse-project-link-amber">{project3.title}</b></Link>
               </div>
@@ -124,7 +127,7 @@ class IndexPage extends React.Component {
 
 export default IndexPage;
 
-export const FluidImage = graphql`
+export const FluidImage = graphql `
 fragment FluidImage on File {
   childImageSharp {
     fluid(maxWidth: 1000) {
@@ -134,7 +137,7 @@ fragment FluidImage on File {
 }
 `;
 
-export const query = graphql`
+export const query = graphql `
   query {
     site {
       siteMetadata {
@@ -148,7 +151,7 @@ export const query = graphql`
           id
           title
           subtitle
-          local_image {
+          image_node {
             ...FluidImage
           }
         }

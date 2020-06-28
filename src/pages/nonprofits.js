@@ -1,17 +1,18 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import {
+  graphql
+} from 'gatsby'
 import Img from 'gatsby-image';
-
 import SEO from '../components/seo.js'
 import Navbar from '../components/navbar.js'
 import Divider from '../components/divider.js'
 import Footer from '../components/footer.js'
-
 import '../styles/pages.css'
-
 import '../../node_modules/materialize-css/dist/css/materialize.min.css'
 
-export default ({data}) => {
+export default ({
+  data
+}) => {
   return (<div>
     <SEO title="Nonprofits"/>
     <Navbar/>
@@ -101,7 +102,7 @@ export default ({data}) => {
   </div>)
 }
 
-export const query = graphql`
+export const query = graphql `
   query {
     nonprofits: file(relativePath: { eq: "icon-nonprofits.png" }) {
       ...FluidImage

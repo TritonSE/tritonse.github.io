@@ -1,13 +1,17 @@
 import React from 'react'
-import { Link, StaticQuery, graphql } from 'gatsby'
+import {
+  Link,
+  StaticQuery,
+  graphql
+} from 'gatsby'
 import Img from 'gatsby-image'
-
 import '../styles/footer.css'
-
 import '../../node_modules/materialize-css/dist/css/materialize.min.css'
 import '../../node_modules/font-awesome/css/font-awesome.min.css'
 
-const Footer = ({data}) => (
+const Footer = ({
+  data
+}) => (
   <div>
     <div className="tse-footer-semicircle"></div>
     <footer className="page-footer blue darken-3">
@@ -58,7 +62,7 @@ const Footer = ({data}) => (
 )
 
 export default props => (
-  <StaticQuery
+<StaticQuery
     query={graphql`
       query {
         logo: file(relativePath: { eq: "logo-white.png" }) {
@@ -66,6 +70,7 @@ export default props => (
         }
       }
     `}
-    render={data => <Footer data={data} {...props} />}
-  />
+    render={data => <Footer data={data} {...props} />
+}
+/>
 )

@@ -1,20 +1,22 @@
 import React from "react"
-import { graphql } from 'gatsby'
+import {
+  graphql
+} from 'gatsby'
 import Img from 'gatsby-image'
-
 import SEO from "../components/seo.js"
 import Navbar from "../components/navbar.js"
 import Divider from "../components/divider.js"
 import Footer from "../components/footer.js"
-
-import { condense } from '../util/styling.js'
-
+import {
+  condense
+} from '../util/styling.js'
 import '../styles/header.css'
 import '../styles/pages.css'
-
 import '../../node_modules/materialize-css/dist/css/materialize.min.css'
 
-export default ({ data }) => {
+export default ({
+  data
+}) => {
   let project = data.tseProjects;
   let jumbo_left = (
     <div className="col l6 s12">
@@ -29,7 +31,7 @@ export default ({ data }) => {
     </div>);
   let jumbo_right = (
     <div className="col l6 s12">
-      <Img fluid={project.local_image.childImageSharp.fluid} className="tse-project-template-image tse-highlight-image"></Img>
+      <Img fluid={project.image_node.childImageSharp.fluid} className="tse-project-template-image tse-highlight-image"></Img>
     </div>
   );
   return (
@@ -57,14 +59,14 @@ export default ({ data }) => {
   )
 }
 
-export const query = graphql`
+export const query = graphql `
   query($id: String!) {
     tseProjects(id: { eq: $id }) {
       title
       subtitle
       overview
       github
-      local_image {
+      image_node {
         ...FluidImage
       }
     }

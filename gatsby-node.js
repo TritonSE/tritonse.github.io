@@ -1,7 +1,12 @@
 const path = require(`path`)
 
-exports.createPages = async ({ graphql, actions }) => {
-  const { createPage } = actions
+exports.createPages = async ({
+  graphql,
+  actions
+}) => {
+  const {
+    createPage
+  } = actions
   const result = await graphql(`
     query {
       allTseProjects {
@@ -13,13 +18,15 @@ exports.createPages = async ({ graphql, actions }) => {
       }
     }
   `)
-  result.data.allTseProjects.edges.forEach(({ node }) => {
+  result.data.allTseProjects.edges.forEach(({
+    node
+  }) => {
     console.log(`Generated project page at /project/${node.id}.`);
     createPage({
       path: `project/${node.id}`,
       component: path.resolve(`./src/templates/project.js`),
       context: {
-        id: node.id 
+        id: node.id
       },
     })
   })

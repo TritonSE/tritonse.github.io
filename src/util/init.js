@@ -25,4 +25,8 @@ function init_all() {
   init_firebase();
 }
 
-export { init_materialize, init_firebase, init_all };
+export {
+  init_materialize,
+  init_firebase,
+  init_all
+};

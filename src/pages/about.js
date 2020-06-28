@@ -1,19 +1,22 @@
 import React from 'react'
-import { Link, graphql } from 'gatsby'
+import {
+  Link,
+  graphql
+} from 'gatsby'
 import Img from 'gatsby-image'
-
 import SEO from '../components/seo.js'
 import Header from '../components/header.js'
 import Divider from '../components/divider.js'
 import Footer from '../components/footer.js'
-
-import { gridify } from '../util/styling.js'
-
+import {
+  gridify
+} from '../util/styling.js'
 import '../styles/pages.css'
-
 import '../../node_modules/materialize-css/dist/css/materialize.min.css'
 
-export default ({data}) => {
+export default ({
+  data
+}) => {
   const priorities = {
     'President': 0,
     'VP Operations': 1,
@@ -30,9 +33,9 @@ export default ({data}) => {
   let members = data.allTseMembers.edges
     .sort((a, b) => (priorities[a.node.role] - priorities[b.node.role] || a.node.name.localeCompare(b.node.name)))
     .map((value) => (
-    <div key={`${value.node.name}`} className="col l2 m4 s6 center">
+      <div key={`${value.node.name}`} className="col l2 m4 s6 center">
       <div>
-        <Img fluid={value.node.local_image.childImageSharp.fluid} className="tse-profile-image"></Img>
+        <Img fluid={value.node.image_node.childImageSharp.fluid} className="tse-profile-image"></Img>
       </div>
       <div className="tse-profile-name">
         <b>{value.node.name}</b>
@@ -41,7 +44,7 @@ export default ({data}) => {
         {value.node.role} 
       </div>
     </div>
-  ));
+    ));
   let history_left = (
     <div className="col l6 s12">
       <Img fluid={data.programming.childImageSharp.fluid} className="tse-generic-image tse-highlight-image"></Img>
@@ -94,7 +97,7 @@ export default ({data}) => {
   </div>)
 }
 
-export const query = graphql`
+export const query = graphql `
   query {
     allTseMembers {
       edges {
@@ -102,7 +105,7 @@ export const query = graphql`
           name
           role
           image
-          local_image {
+          image_node {
             ...FluidImage
           }
         }

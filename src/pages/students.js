@@ -1,21 +1,22 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import {
+  graphql
+} from 'gatsby'
 import Img from 'gatsby-image'
-
 import SEO from '../components/seo.js'
 import Navbar from '../components/navbar.js'
 import Divider from '../components/divider.js'
 import Footer from '../components/footer.js'
-
 import '../styles/pages.css'
-
 import '../../node_modules/materialize-css/dist/css/materialize.min.css'
 
-export default ({data}) => {
+export default ({
+  data
+}) => {
   // Application information is stored in data.allTseApplications
   // This is fetched using a GraphQL query that maps to the tritonse-source-firestore plugin
   let applications = {};
-  data.allTseApplications.edges.forEach(function (value) {
+  data.allTseApplications.edges.forEach(function(value) {
     let node = value.node;
     applications[node.id] = node;
   });
@@ -25,10 +26,10 @@ export default ({data}) => {
   let managers_open = applications.managers.active;
   let apps_open = developers_open || designers_open || managers_open;
 
-  let apps_message = apps_open ? 
+  let apps_message = apps_open ?
     <p className="tse-text-medium">
       Applications are open! Apply using the links below.
-    </p> : 
+    </p> :
     <p className="tse-text-medium tse-separation-small">
       Applications are currently closed. Please check back next fall if you are interested in joining.
     </p>;
@@ -122,7 +123,7 @@ export default ({data}) => {
   </div>)
 }
 
-export const query = graphql`
+export const query = graphql `
   query {
     allTseApplications {
       edges {

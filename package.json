@@ -5,7 +5,7 @@
   "version": "1.0.0",
   "author": "Triton Software Engineering <tse@ucsd.edu>",
   "dependencies": {
-    "firebase": "^6.6.1",
+    "firebase": "^7.15.5",
     "font-awesome": "^4.7.0",
     "gatsby": "^2.20.12",
     "gatsby-image": "^2.2.17",
@@ -19,7 +19,7 @@
     "gatsby-transformer-sharp": "^2.2.13",
     "materialize-css": "^1.0.0",
     "mem": "^5.1.1",
-    "node-sass": "^4.13.1",
+    "node-sass": "^4.14.1",
     "prop-types": "^15.7.2",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",

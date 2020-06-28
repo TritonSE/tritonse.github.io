@@ -6,8 +6,7 @@ module.exports = {
     description: "Organization at UCSD that partners with nonprofits to develop applications for social good",
     author: "David Hacker"
   },
-  plugins: [
-    {
+  plugins: [{
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `gatsby-starter-default`,
@@ -16,7 +15,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, 
+        icon: `src/images/gatsby-icon.png`,
       },
     },
     {
@@ -29,8 +28,7 @@ module.exports = {
     {
       resolve: `tritonse-source-firestore`,
       options: {
-        types: [
-          {
+        types: [{
             type: "Applications",
             path: "applications",
           },
