@@ -1,0 +1,9 @@
+version: '3.0'
+
+services:
+  tritonse.github.io:
+    build: .
+    image: tritonse/tritonse.github.io
+    container_name: tritonse.github.io
+    ports:
+      - "8000:8000"
