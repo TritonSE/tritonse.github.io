@@ -10,11 +10,8 @@ jobs:
           name: Install deployment dependencies
           command: sudo apt-get install sshpass
       - run:
-          name: Update NPM 
+          name: Re-install NPM latest version
           command: 'sudo npm install -g npm@latest'
-      - run:
-          name: Install Firebase plugin dependencies
-          command: npm install --prefix plugins/tritonse-source-firestore
       - run:
           name: Install website dependencies 
           command: npm install
