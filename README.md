@@ -27,11 +27,7 @@ Then, perform local installation procedures (e.g. install Node dependencies).
 
 ```
 npm install 
-npm install --prefix plugins/tritonse-source-firestore
 ```
-
-Do note that both commands have to be run: once for the Gatsby project and once 
-for our custom Gatsby plugin, which allows us to quickly fetch data from Firebase. 
 
 Finally, using Gatsby's CLI commands, build our files and run a development server.
 
