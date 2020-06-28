@@ -10,7 +10,7 @@ jobs:
           name: Install deployment dependencies
           command: sudo apt-get install sshpass
       - run:
-          name: Re-install NPM latest version
+          name: Install latest version of NPM
           command: 'sudo npm install -g npm@latest'
       - run:
           name: Install website dependencies 
