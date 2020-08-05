@@ -24,8 +24,8 @@ class Navbar extends React.Component {
     } = this.props;
     const foreground = gradient ? 'white-text' : 'navy-text';
     const background = gradient ? 'navy' : 'white';
-    const logo = gradient ? data.wlogo.childImageSharp.fluid :
-      data.clogo.childImageSharp.fluid;
+    const logo = gradient ? data.ylogo.childImageSharp.fluid :
+      data.blogo.childImageSharp.fluid;
     return (<div>
       <ul id="tse-navbar-dropdown" className={`dropdown-content ${background}`}>
         <li><a href="/students"><span className={foreground}>Students</span></a></li>
@@ -65,10 +65,10 @@ export default props => (
 <StaticQuery
     query={graphql`
       query {
-        clogo: file(relativePath: { eq: "logo-colored.png" }) {
+        ylogo: file(relativePath: { eq: "logo-yellow.png" }) {
           ...FluidImage
         }
-        wlogo: file(relativePath: { eq: "logo-white.png" }) {
+        blogo: file(relativePath: { eq: "logo-blue.png" }) {
           ...FluidImage
         }
       }
