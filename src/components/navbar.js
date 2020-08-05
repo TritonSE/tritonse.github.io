@@ -9,6 +9,7 @@ import {
   init_all
 } from '../util/init.js'
 import '../styles/navbar.css'
+import '../styles/colors.css'
 import '../../node_modules/materialize-css/dist/css/materialize.min.css'
 
 class Navbar extends React.Component {
@@ -21,8 +22,8 @@ class Navbar extends React.Component {
       data,
       gradient
     } = this.props;
-    const foreground = gradient ? 'white-text' : 'black-text';
-    const background = gradient ? 'blue darken-3' : 'white';
+    const foreground = gradient ? 'white-text' : 'navy-text';
+    const background = gradient ? 'navy' : 'white';
     const logo = gradient ? data.wlogo.childImageSharp.fluid :
       data.clogo.childImageSharp.fluid;
     return (<div>
