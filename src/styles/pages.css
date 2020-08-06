@@ -36,10 +36,12 @@ a {
 
 .tse-profile-name {
   margin-top: 0.5em; 
+  color: #0C2B35;
 }
 
 .tse-profile-role {
   font-size: 0.8em; 
+  color: #0C2B35;
 }
 
 .tse-profile-image {

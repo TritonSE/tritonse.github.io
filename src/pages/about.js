@@ -12,6 +12,7 @@ import {
   gridify
 } from '../util/styling.js'
 import '../styles/pages.css'
+import '../styles/colors.css'
 import '../../node_modules/materialize-css/dist/css/materialize.min.css'
 
 export default ({
@@ -60,19 +61,19 @@ export default ({
     <SEO title="About"/>
     <Header
       title={
-        <span>We Are <span className="amber-text">TSE</span></span>
+        <span>We Are <span className="dark-yellow-text">TSE</span></span>
       }
       subtitle="We're an organization of engineers, designers, and problem solvers offering pro-bono technical and web development services for nonprofits."
       buttons={
         <span>
-          <Link to="/about#history" className="waves-effect waves-light btn-large blue darken-4 tse-header-button">Read More</Link>
+          <Link to="/about#history" className="waves-effect waves-light btn-large navy tse-header-button">Read More</Link>
         </span>
       }
       background='tse-header-laptop'
     />
     <div className="container" id="history">
-      <Divider title="Strong Mind, Stronger Heart" subtitle="ABOUT US"/>
-      <div className="row valign-wrapper hide-on-med-and-down">
+      <Divider title="Strong Mind, Stronger Heart" subtitle="ABOUT US" textColor="navy-text"/>
+      <div className="row valign-wrapper hide-on-med-and-down navy-text">
         {history_left}     
         {history_right}     
       </div>
@@ -82,15 +83,15 @@ export default ({
       </div>
       <div className="tse-padding-medium"></div>
     </div>
-    <div className="blue darken-3">
+    <div className="navy">
       <div className="container">
         <Divider subtitle="OUR MISSION" textColor="white-text" lineColor="tse-divider-line-white"/>
-        <h5 className="white-text tse-mission"><b>"Triton Software Engineering (TSE) is a multidisciplinary student organization at UC San Diego. We partner with nonprofits to design and develop software, websites and mobile applications pro-bono for <span className="amber-text">social good</span>, while giving our developers <span className="amber-text">practical, real world experience</span>."</b></h5>
+        <h5 className="white-text tse-mission"><b>"Triton Software Engineering (TSE) is a multidisciplinary student organization at UC San Diego. We partner with nonprofits to design and develop software, websites and mobile applications pro-bono for <span className="dark-yellow-text">social good</span>, while giving our developers <span className="dark-yellow-text">practical, real world experience</span>."</b></h5>
       </div>
       <div className="tse-padding-medium"></div>
     </div>
     <div className="container" id="team">
-      <Divider title="Who's Doing What?" subtitle="THE TEAM"/>
+      <Divider title="Who's Doing What?" subtitle="THE TEAM" textColor="navy-text"/>
       {gridify(members, 6)}
     </div>
     <Footer/>
