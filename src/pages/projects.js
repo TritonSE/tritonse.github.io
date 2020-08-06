@@ -67,11 +67,11 @@ export default ({
       background='tse-header-hands'
     />
     <div className="container">
-      <Divider title="What We've Been Up To" subtitle="CURRENT PROJECTS" textColor="navy-text"/>
+      <Divider title="What We've Been Up To" subtitle="CURRENT PROJECTS" textColor="navy-text" lineColor="tse-divider-line-dark-yellow"/>
       {gridify(ongoing_projects, 3)}
     </div>
     <div className="container">
-      <Divider title="What We Were Up To" subtitle="PAST PROJECTS" textColor="navy-text"/>
+      <Divider title="What We Were Up To" subtitle="PAST PROJECTS" textColor="navy-text" lineColor="tse-divider-line-dark-yellow"/>
       {gridify(completed_projects, 3)}
     </div>
     <Footer/>

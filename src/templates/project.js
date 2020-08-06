@@ -23,7 +23,7 @@ export default ({
       <h2 className="white-text">{project.title}</h2>
       <h5 className="white-text">{condense(project.subtitle, 250)}</h5>
       <div class="tse-header-buttons white-text">
-        <a className="waves-effect waves-light btn-large blue darken-4" href={project.github}>
+        <a className="waves-effect waves-light btn-large navy" href={project.github}>
           Visit Our GitHub
           <i className="material-icons right">code</i>
         </a>
@@ -51,8 +51,8 @@ export default ({
         </div>
       </div>
       <div class="container">
-        <Divider title="What's This Project About?" subtitle="OVERVIEW" textColor="black-text" lineColor="tse-divider-line-amber"/>
-        <p className="tse-text-medium" dangerouslySetInnerHTML={{__html: project.overview}}/>
+        <Divider title="What's This Project About?" subtitle="OVERVIEW" textColor="navy-text" lineColor="tse-divider-line-dark-yellow"/>
+        <p className="tse-text-medium navy-text" dangerouslySetInnerHTML={{__html: project.overview}}/>
       </div>
       <Footer/>
     </div>

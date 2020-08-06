@@ -36,14 +36,14 @@ class IndexPage extends React.Component {
         subtitle="We're an organization of engineers, designers, and problem solvers offering pro-bono technical and web development services for nonprofits."
         buttons={
           <span>
-            <Link to="/apply" className="waves-effect waves-light btn-large navy tse-header-button">Apply</Link> 
-            <Link to="/about" className="waves-effect btn-large white navy-text tse-header-button">Learn More</Link>
+            <Link to="/apply" className="waves-effect waves-light btn-large tse-apply-button tse-header-button">Apply</Link> 
+            <Link to="/about" className="waves-effect btn-large navy white-text tse-header-button">Learn More</Link>
           </span>
         }
         background='tse-header-geisel'
       />
       <div className="container">
-        <Divider title="Technology for Good" subtitle="OUR MISSION" textColor="navy-text"/>
+        <Divider title="Technology for Good" subtitle="OUR MISSION" textColor="navy-text" lineColor="tse-divider-line-dark-yellow"/>
         <div className="row">
           <div className="col l6 s12">
             <Img fluid={data.whiteboard.childImageSharp.fluid} className="tse-generic-image tse-highlight-image"></Img>
@@ -56,7 +56,7 @@ class IndexPage extends React.Component {
       </div>
       <div className="navy">
         <div className="container">
-          <Divider title="Our Work So Far" subtitle="PROJECTS" textColor="white-text" lineColor="tse-divider-line-white"/>
+          <Divider title="Our Work So Far" subtitle="PROJECTS" textColor="white-text" lineColor="tse-divider-line-dark-yellow"/>
           <div className="row">
             <div className="col s12">
               <p className="tse-text-medium white-text">Every year, teams of 5 to 6 students work closely with nonprofit organizations on projects that are customized for the client and that will better the community. These are often mobile or web apps, but are not limited to just those categories.</p>
@@ -90,7 +90,7 @@ class IndexPage extends React.Component {
         <div className="tse-separation-medium"></div>
       </div>
       <div className="container">
-        <Divider title="Let's Better the World" subtitle="OUR MISSION" textColor="navy-text" lineColor="tse-divider-line-amber"/>
+        <Divider title="Let's Better the World" subtitle="OUR MISSION" textColor="navy-text" lineColor="tse-divider-line-dark-yellow"/>
         <div className="row">
           <div className="col m6 s12">
             <div className="container">
@@ -112,7 +112,7 @@ class IndexPage extends React.Component {
         <div className="tse-separation-medium"></div>
       </div>
       <div className="container">
-        <Divider title="We'd Love to Hear from You" subtitle="CONTACT US" textColor="navy-text" lineColor="tse-divider-line-amber"/>
+        <Divider title="We'd Love to Hear from You" subtitle="CONTACT US" textColor="navy-text" lineColor="tse-divider-line-dark-yellow"/>
         <div className="row">
           <div className="col s12">
             <h4 className="center navy-text">Email us at <a href="mailto:tse@ucsd.edu"><b className="dark-yellow-text">tse@ucsd.edu.</b></a></h4>

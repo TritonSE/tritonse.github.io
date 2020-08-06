@@ -61,7 +61,7 @@ export default ({
     </div>
     <div className="navy">
       <div className="container">
-        <Divider subtitle="DECISION CRITERIA" textColor="white-text" lineColor="tse-divider-line-black"/>
+        <Divider subtitle="DECISION CRITERIA" textColor="white-text" lineColor="tse-divider-line-dark-yellow"/>
         <div className="row center white-text">
           <div className="col l4 s12">
             <div className="tse-apply-circle blue darken-3"><i className="fa fa-4x fa-heart white-text"></i></div>
@@ -100,7 +100,7 @@ export default ({
       </div>
     </div>
     <div className="container" id="faq">
-      <Divider subtitle="FREQUENTLY ASKED QUESTIONS" textColor="navy-text" lineColor="tse-divider-line-blue"/>
+      <Divider subtitle="FREQUENTLY ASKED QUESTIONS" textColor="navy-text" lineColor="tse-divider-line-dark-yellow"/>
       <div className="row navy-text">
         <div className="col s12">
           <h4>How are TSE projects structured?</h4>

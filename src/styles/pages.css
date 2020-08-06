@@ -23,6 +23,14 @@ a {
   margin-right: auto;
 }
 
+.tse-apply-button {
+  background-color: #DEBB01;
+}
+
+.tse-apply-button:hover {
+  background-color: #DEBB01;
+}
+
 .tse-home-project-image {
   height: 12em;
   width: auto;

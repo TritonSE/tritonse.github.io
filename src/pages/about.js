@@ -72,7 +72,7 @@ export default ({
       background='tse-header-laptop'
     />
     <div className="container" id="history">
-      <Divider title="Strong Mind, Stronger Heart" subtitle="ABOUT US" textColor="navy-text"/>
+      <Divider title="Strong Mind, Stronger Heart" subtitle="ABOUT US" textColor="navy-text" lineColor="tse-divider-line-dark-yellow"/>
       <div className="row valign-wrapper hide-on-med-and-down navy-text">
         {history_left}     
         {history_right}     
@@ -85,13 +85,13 @@ export default ({
     </div>
     <div className="navy">
       <div className="container">
-        <Divider subtitle="OUR MISSION" textColor="white-text" lineColor="tse-divider-line-white"/>
+        <Divider subtitle="OUR MISSION" textColor="white-text" lineColor="tse-divider-line-dark-yellow"/>
         <h5 className="white-text tse-mission"><b>"Triton Software Engineering (TSE) is a multidisciplinary student organization at UC San Diego. We partner with nonprofits to design and develop software, websites and mobile applications pro-bono for <span className="dark-yellow-text">social good</span>, while giving our developers <span className="dark-yellow-text">practical, real world experience</span>."</b></h5>
       </div>
       <div className="tse-padding-medium"></div>
     </div>
     <div className="container" id="team">
-      <Divider title="Who's Doing What?" subtitle="THE TEAM" textColor="navy-text"/>
+      <Divider title="Who's Doing What?" subtitle="THE TEAM" textColor="navy-text" lineColor="tse-divider-line-dark-yellow"/>
       {gridify(members, 6)}
     </div>
     <Footer/>
