@@ -1,7 +1,11 @@
 /* Global */
 
 body {
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: 'Rubik', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 150%;
+  letter-spacing: 0.02em;
 }
 
 a {
@@ -139,7 +143,7 @@ a {
 /* Images */
 
 .tse-highlight-image {
-  box-shadow: 7px 7px #fbc02d;
+  box-shadow: 7px 7px #DEBB01;
   border-radius: 5px;
 }
 

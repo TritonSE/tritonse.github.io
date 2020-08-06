@@ -1,5 +1,6 @@
 import React from 'react'
 import '../styles/divider.css'
+import '../styles/colors.css'
 import '../../node_modules/materialize-css/dist/css/materialize.min.css'
 
 const Divider = ({
