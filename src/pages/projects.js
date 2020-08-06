@@ -13,6 +13,7 @@ import {
   gridify
 } from '../util/styling.js'
 import '../styles/pages.css'
+import '../styles/colors.css'
 import '../../node_modules/materialize-css/dist/css/materialize.min.css'
 
 export default ({
@@ -24,9 +25,9 @@ export default ({
         <div className="col l4 s12">
           <Img fluid={value.node.local_image.childImageSharp.fluid} className="tse-project-image"></Img>
           <div className="tse-project-title center">
-            <Link to={`/project/${value.node.id}`} className="blue-text text-darken-3 tse-text-large"><b className="tse-project-link-blue">{value.node.title}</b></Link>
+            <Link to={`/project/${value.node.id}`} className="blue-text tse-text-large"><b className="tse-project-link-blue">{value.node.title}</b></Link>
           </div>
-          <p className="tse-text-medium">{condense(value.node.subtitle, 250)}</p>
+          <p className="tse-text-medium navy-text">{condense(value.node.subtitle, 250)}</p>
         </div>
       </div>
     )
@@ -52,12 +53,12 @@ export default ({
     <SEO title="Projects"/>
     <Header
       title={
-        <span>Our <span className="amber-text">Projects</span></span>
+        <span>Our <span className="dark-yellow-text">Projects</span></span>
       }
       subtitle="At TSE, we believe in keeping our work open source because we value transparency and connectivity."
       buttons={
         <span>
-          <a className="waves-effect waves-light btn-large blue darken-4 tse-header-button" href="https://github.com/tritonse">
+          <a className="waves-effect waves-light btn-large navy tse-header-button" href="https://github.com/tritonse">
             Visit Our GitHub
             <i className="material-icons right">code</i>
           </a>
@@ -66,11 +67,11 @@ export default ({
       background='tse-header-hands'
     />
     <div className="container">
-      <Divider title="What We've Been Up To" subtitle="CURRENT PROJECTS"/>
+      <Divider title="What We've Been Up To" subtitle="CURRENT PROJECTS" textColor="navy-text"/>
       {gridify(ongoing_projects, 3)}
     </div>
     <div className="container">
-      <Divider title="What We Were Up To" subtitle="PAST PROJECTS"/>
+      <Divider title="What We Were Up To" subtitle="PAST PROJECTS" textColor="navy-text"/>
       {gridify(completed_projects, 3)}
     </div>
     <Footer/>

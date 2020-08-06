@@ -8,6 +8,7 @@ import Navbar from '../components/navbar.js'
 import Divider from '../components/divider.js'
 import Footer from '../components/footer.js'
 import '../styles/pages.css'
+import '../styles/colors.css'
 import '../../node_modules/materialize-css/dist/css/materialize.min.css'
 
 export default ({
@@ -39,7 +40,7 @@ export default ({
     <Navbar/>
     <div className="tse-apply-container">
       <div className="container">
-        <div className="row black-text">
+        <div className="row navy-text">
           <div className="col l6 s12 center">
             <Img fluid={data.students.childImageSharp.fluid} className="tse-apply-image"></Img>
             <h2>For Students</h2>
@@ -49,19 +50,19 @@ export default ({
             <div>
               {apps_message}
               <div className="row">
-                {developers_open ? <div className="col s12 m4 center"><a className="waves-effect waves-light btn blue darken-4 tse-apply-button" href={applications.developers.link}>Developers</a></div> : ""}
-                {designers_open ? <div className="col s12 m4 center"><a className="waves-effect waves-light btn blue darken-4 tse-apply-button" href={applications.designers.link}>Designers</a></div> : ""}
-                {managers_open ? <div className="col s12 m4 center"><a className="waves-effect waves-light btn blue darken-4 tse-apply-button" href={applications.managers.link}>Managers</a></div> : ""}
+                {developers_open ? <div className="col s12 m4 center"><a className="waves-effect waves-light btn navy-text tse-apply-button" href={applications.developers.link}>Developers</a></div> : ""}
+                {designers_open ? <div className="col s12 m4 center"><a className="waves-effect waves-light btn navy-text tse-apply-button" href={applications.designers.link}>Designers</a></div> : ""}
+                {managers_open ? <div className="col s12 m4 center"><a className="waves-effect waves-light btn navy-text tse-apply-button" href={applications.managers.link}>Managers</a></div> : ""}
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div className="blue lighten-3">
+    <div className="navy">
       <div className="container">
-        <Divider subtitle="DECISION CRITERIA" textColor="black-text" lineColor="tse-divider-line-black"/>
-        <div className="row center black-text">
+        <Divider subtitle="DECISION CRITERIA" textColor="white-text" lineColor="tse-divider-line-black"/>
+        <div className="row center white-text">
           <div className="col l4 s12">
             <div className="tse-apply-circle blue darken-3"><i className="fa fa-4x fa-heart white-text"></i></div>
             <h4>Passion</h4>
@@ -78,7 +79,7 @@ export default ({
             <p className="tse-text-medium">Do you have any previous, relevant experience such as volunteering?</p>
           </div>
         </div>
-        <div className="row center black-text">
+        <div className="row center white-text">
           <div className="col l4 s12">
             <div className="tse-apply-circle blue darken-3"><i className="fa fa-4x fa-handshake-o white-text"></i></div>
             <h4>Teamwork</h4>
@@ -99,8 +100,8 @@ export default ({
       </div>
     </div>
     <div className="container" id="faq">
-      <Divider subtitle="FREQUENTLY ASKED QUESTIONS" textColor="black-text" lineColor="tse-divider-line-blue"/>
-      <div className="row">
+      <Divider subtitle="FREQUENTLY ASKED QUESTIONS" textColor="navy-text" lineColor="tse-divider-line-blue"/>
+      <div className="row navy-text">
         <div className="col s12">
           <h4>How are TSE projects structured?</h4>
           <p className="tse-text-medium">TSE's structure consists of our board and 4-6 project-based teams. Each team is made up of a project leader, 3-4 developers, and a UI/UX designer. Teams work independently of one another to create software for a specific non-profit they have been assigned to.</p>
