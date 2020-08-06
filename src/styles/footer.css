@@ -9,7 +9,7 @@
 
 .tse-footer-semicircle::before {
   border-radius: 100%;
-  background: #1565c0;
+  background: #0C2B35;
   position: absolute;
   right: -100px;
   left: -100px;
@@ -19,8 +19,8 @@
 }
 
 .tse-footer-logo {
-  max-width: 7em;
-  height: auto;
+  max-width: 4.5em;
+  max-height: 4.5em;
 }
 
 .tse-footer-social {
@@ -30,7 +30,7 @@
 }
 
 .tse-footer-social:hover {
-  color: #ffc107;
+  color: #DEBB01;
   transition:.35s;
   -o-transition:.35s;
   -ms-transition:.35s;
@@ -43,7 +43,7 @@
 }
 
 .tse-footer-link:hover {
-  color: #ffc107;
+  color: #DEBB01;
   transition:.35s;
   -o-transition:.35s;
   -ms-transition:.35s;
