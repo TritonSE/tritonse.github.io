@@ -44,6 +44,7 @@ class Navbar extends React.Component {
             </div>
             <div className="col s6 hide-on-med-and-down">
               <ul className="right">
+                <li><Link to="/"><span className={`tse-navbar-link ${foreground}`}>Home</span></Link></li>
                 <li><Link to="/about"><span className={`tse-navbar-link ${foreground}`}>About</span></Link></li>
                 <li><Link to="/projects"><span className={`tse-navbar-link ${foreground}`}>Projects</span></Link></li>
                 <li><a className="dropdown-trigger" href="#!" data-target="tse-navbar-dropdown"><span className={`tse-navbar-link ${foreground}`}>Connect</span></a></li>
