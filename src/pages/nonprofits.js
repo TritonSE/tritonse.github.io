@@ -1,5 +1,6 @@
 import React from 'react'
 import {
+  Link,
   graphql
 } from 'gatsby'
 import Img from 'gatsby-image';
@@ -25,8 +26,9 @@ export default ({
             <h2 className="navy-text">For Nonprofits</h2>
           </div>
           <div className="col l6 s12">
-            <h5 className="tse-apply-subtitle navy-text">Partner up with TSE and we will work hand-in-hand to develop the technology that will turn your vision into a reality without costing you a penny.</h5>
+            <h5 className="tse-apply-subtitle navy-text">Partner up with Triton Software Engineering and we will work hand-in-hand to develop the technology that will turn your vision into a reality without costing you a penny.</h5>
             <p className="tse-text-medium tse-separation-small navy-text">If you have a proposal for an appropriate project, get in touch with us by emailing <b>tse@ucsd.edu</b>. We will work with you to deliver a solution that satisfies your needs.</p>
+            <Link to="/projects#pastprojects" className="btn-large navy">See Past Projects</Link>
           </div>
         </div>
       </div>

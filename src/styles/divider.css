@@ -19,3 +19,8 @@
 .tse-divider-line-blue {
   border: 1px solid #1565c0;
 }
+
+.tse-caption {
+  font-size: 1.2em;
+  padding-top: 2em;
+}

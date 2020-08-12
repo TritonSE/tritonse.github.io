@@ -33,7 +33,7 @@ class IndexPage extends React.Component {
         title={
           <span>Triton Software Engineering</span>
         }
-        subtitle="We're an organization of engineers, designers, and problem solvers offering pro-bono technical and web development services for nonprofits."
+        subtitle="We are an organization of engineers, designers, and problem solvers offering pro-bono technical and web development services for nonprofits."
         buttons={
           <span>
             <Link to="/apply" className="waves-effect waves-light btn-large tse-apply-button tse-header-button">Apply</Link> 
@@ -50,7 +50,7 @@ class IndexPage extends React.Component {
           </div>
           <div className="col l6 s12">
             <p className="tse-text-medium navy-text">We believe that technology should be utilized to better the community. Something as simple as a sleek, static, and easy-to-use website or as complicated as  a mobile app to track donations to your organizations can have a huge impact on an organization of any size. Let us help you help the community.</p>
-            <Link to="/about"><span className="blue-text tse-text-large">Learn More <i className="material-icons tse-text-large">chevron_right</i></span></Link> </div>
+            <Link to="/about"><span className="link-text-color tse-text-large">Learn More <i className="material-icons tse-text-large">chevron_right</i></span></Link> </div>
         </div>
         <div className="tse-separation-medium"></div>
       </div>
@@ -97,7 +97,7 @@ class IndexPage extends React.Component {
               <h4 className="blue-text center">For Nonprofits</h4>
               <Img fluid={data.nonprofits.childImageSharp.fluid} className="tse-home-apply-image"></Img> 
               <p className="tse-text-medium navy-text">If you're a nonprofit organization in need of technical help, feel free to contact us! We accept applications year round and try to respond as quickly as possible.</p>
-              <Link to="/nonprofits"><span className="blue-text tse-text-large">Learn More <i className="material-icons tse-text-large">chevron_right</i></span></Link>
+              <Link to="/nonprofits"><span className="link-text-color tse-text-large">Learn More <i className="material-icons tse-text-large">chevron_right</i></span></Link>
             </div>
           </div>
           <div className="col m6 s12">
@@ -105,7 +105,7 @@ class IndexPage extends React.Component {
               <h4 className="dark-yellow-text center">For Students</h4>
               <Img fluid={data.students.childImageSharp.fluid} className="tse-home-apply-image"></Img> 
               <p className="tse-text-medium navy-text">Our applications for student positions will open in the fall of each year. Feel free to follow our Facebook page to stay updated!</p>
-              <Link to="/students"><span className="dark-yellow-text tse-text-large">Learn More <i className="material-icons tse-text-large">chevron_right</i></span></Link>
+              <Link to="/students"><span className="link-text-color tse-text-large">Learn More <i className="material-icons tse-text-large">chevron_right</i></span></Link>
             </div>
           </div>
         </div>

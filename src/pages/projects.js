@@ -25,7 +25,7 @@ export default ({
         <div className="col l4 s12">
           <Img fluid={value.node.local_image.childImageSharp.fluid} className="tse-project-image"></Img>
           <div className="tse-project-title center">
-            <Link to={`/project/${value.node.id}`} className="blue-text tse-text-large"><b className="tse-project-link-blue">{value.node.title}</b></Link>
+            <Link to={`/project/${value.node.id}`} className="link-text-color tse-text-large"><b className="tse-project-link-blue">{value.node.title}</b></Link>
           </div>
           <p className="tse-text-medium navy-text">{condense(value.node.subtitle, 250)}</p>
         </div>
@@ -55,7 +55,7 @@ export default ({
       title={
         <span>Our <span className="dark-yellow-text">Projects</span></span>
       }
-      subtitle="At TSE, we believe in keeping our work open source because we value transparency and connectivity."
+      subtitle="At Triton Software Engineering, we believe in keeping our work open source because we value transparency and connectivity."
       buttons={
         <span>
           <a className="waves-effect waves-light btn-large navy tse-header-button" href="https://github.com/tritonse">
@@ -70,7 +70,7 @@ export default ({
       <Divider title="What We've Been Up To" subtitle="CURRENT PROJECTS" textColor="navy-text" lineColor="tse-divider-line-dark-yellow"/>
       {gridify(ongoing_projects, 3)}
     </div>
-    <div className="container">
+    <div className="container" id="pastprojects">
       <Divider title="What We Were Up To" subtitle="PAST PROJECTS" textColor="navy-text" lineColor="tse-divider-line-dark-yellow"/>
       {gridify(completed_projects, 3)}
     </div>

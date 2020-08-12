@@ -39,6 +39,7 @@ a {
 /* About Page */
 
 .tse-mission {
+  margin-top: -2em;
   line-height: 1.7em;
 }
 
@@ -89,8 +90,13 @@ a {
   -webkit-transition:.35s;
 }
 
+.tse-project-link-blue {
+  color: #96A1A1;
+}
+
 .tse-project-link-blue:hover {
-  color: #64b5f6;
+  /*color: #64b5f6;*/
+  color: #697B82;
   transition:.35s;
   -o-transition:.35s;
   -ms-transition:.35s;
@@ -132,6 +138,16 @@ a {
   .tse-apply-button {
     margin-top: 1em;
   }
+}
+
+.tse-slogan-container {
+  width: 62em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tse-slogan {
+  font-size: 1.2em;
 }
 
 .tse-nonprofits-mobile-image {
