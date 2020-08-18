@@ -14,7 +14,7 @@ const Divider = ({
     <p className={`${textColor}`}>{subtitle}</p>
     <h3 className={`${textColor}`}>{title}</h3>
     <hr className={`tse-divider-line ${lineColor ? lineColor : 'tse-divider-line-amber'}`}/>
-    <p className={`tse-caption ${textColor}`}>{caption}</p>
+    <p className={`tse-divider-caption ${textColor}`}>{caption}</p>
   </div>
 )
 

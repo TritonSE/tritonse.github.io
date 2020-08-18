@@ -43,7 +43,7 @@ class IndexPage extends React.Component {
         background='tse-header-geisel'
       />
       <div className="container">
-        <Divider title="Technology for Good" subtitle="OUR MISSION" textColor="navy-text" lineColor="tse-divider-line-dark-yellow"/>
+        <Divider title="Technology for Good" textColor="navy-text" lineColor="tse-divider-line-dark-yellow"/>
         <div className="row">
           <div className="col l6 s12">
             <Img fluid={data.whiteboard.childImageSharp.fluid} className="tse-generic-image tse-highlight-image"></Img>
@@ -90,7 +90,7 @@ class IndexPage extends React.Component {
         <div className="tse-separation-medium"></div>
       </div>
       <div className="container">
-        <Divider title="Let's Better the World" subtitle="OUR MISSION" textColor="navy-text" lineColor="tse-divider-line-dark-yellow"/>
+        <Divider title="Let's Better the World" textColor="navy-text" lineColor="tse-divider-line-dark-yellow"/>
         <div className="row">
           <div className="col m6 s12">
             <div className="container">

@@ -20,7 +20,8 @@
   border: 1px solid #1565c0;
 }
 
-.tse-caption {
-  font-size: 1.2em;
+.tse-divider-caption {
+  font-size: 1.25em;
   padding-top: 2em;
+  width: 37em;
 }

@@ -15,6 +15,12 @@ import '../../node_modules/materialize-css/dist/css/materialize.min.css'
 class Navbar extends React.Component {
   componentDidMount() {
     init_all();
+
+    let dropdown = document.querySelectorAll('.dropdown-trigger');
+    let options = {
+        coverTrigger: false, 
+    };
+    M.Dropdown.init(dropdown, options);
   }
 
   render() {

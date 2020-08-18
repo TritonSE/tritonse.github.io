@@ -60,26 +60,27 @@ export default ({
   );
   return (<div>
     <SEO title="About"/>
-    <Navbar gradient={true}/>
-    {/*<Header
+    <Header
       title={
-        <span>We Are <span className="dark-yellow-text">TSE</span></span>
+        <span>Our Mission</span>
       }
-      subtitle="We're an organization of engineers, designers, and problem solvers offering pro-bono technical and web development services for nonprofits."
+      subtitle={
+        <span>"Triton Software Engineering (TSE) is a multidisciplinary student organization at UC San Diego. We partner with nonprofits to design and develop software, websites and mobile applications pro-bono for <span className="dark-yellow-text">social good</span>, while giving our developers <span className="dark-yellow-text">practical, real world experience</span>."</span>
+      }
       buttons={
         <span>
           <Link to="/about#history" className="waves-effect waves-light btn-large navy tse-header-button">Read More</Link>
         </span>
       }
       background='tse-header-laptop'
-    /> */}
-    <div className="navy">
-      <div className="container">
+    />
+    {/*<div className="navy">
+      *<div className="container">
         <Divider subtitle="OUR MISSION" textColor="white-text" lineColor="tse-divider-line-dark-yellow"/>
         <h5 className="white-text tse-mission"><b>"Triton Software Engineering (TSE) is a multidisciplinary student organization at UC San Diego. We partner with nonprofits to design and develop software, websites and mobile applications pro-bono for <span className="dark-yellow-text">social good</span>, while giving our developers <span className="dark-yellow-text">practical, real world experience</span>."</b></h5>
       </div>
-      <div className="tse-padding-medium"></div>
-    </div>
+    <div className="tse-padding-medium"></div>
+    </div>*/}
     <div className="container" id="history">
       <Divider title="Strong Mind, Stronger Heart" subtitle="ABOUT US" textColor="navy-text" lineColor="tse-divider-line-dark-yellow"/>
       <div className="row valign-wrapper hide-on-med-and-down navy-text">
