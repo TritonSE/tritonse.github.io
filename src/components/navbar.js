@@ -34,8 +34,8 @@ class Navbar extends React.Component {
       data.blogo.childImageSharp.fluid;
     return (<div>
       <ul id="tse-navbar-dropdown" className={`dropdown-content ${background}`}>
-        <li><a href="/students"><span className={foreground}>Students</span></a></li>
-        <li><a href="/nonprofits"><span className={foreground}>Nonprofits</span></a></li>
+        <li><a href="/students"><span className={`tse-navbar-dropdown-item ${foreground}`}>Students</span></a></li>
+        <li><a href="/nonprofits"><span className={`tse-navbar-dropdown-item ${foreground}`}>Nonprofits</span></a></li>
       </ul>
       <nav className={background}>
         <div className="nav-wrapper container">

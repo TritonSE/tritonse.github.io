@@ -121,8 +121,8 @@ a {
 }
 
 .tse-apply-subtitle {
-  /*font-size: 2em;*/
-  line-height: 0.96em;
+  font-size: 2em;
+  line-height: 1em;
 }
 
 .tse-apply-circle {
