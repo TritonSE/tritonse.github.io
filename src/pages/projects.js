@@ -53,7 +53,7 @@ export default ({
     <SEO title="Projects"/>
     <Header
       title={
-        <span>Our <span className="dark-yellow-text">Projects</span></span>
+        <span>Our Projects</span>
       }
       subtitle="At Triton Software Engineering, we believe in keeping our work open source because we value transparency and connectivity."
       buttons={

@@ -4,6 +4,10 @@
   padding-bottom: 20em;
 }
 
+.tse-header-title {
+  letter-spacing: 0.03em;
+}
+
 .tse-header-project {
   width: 100%;
   padding-top: 6em;

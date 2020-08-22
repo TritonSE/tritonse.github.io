@@ -60,6 +60,7 @@ class Navbar extends React.Component {
         </div>
       </nav>
       <ul className={`sidenav ${background}`} id="tse-mobile-menu">
+        <li><a href="/" className={foreground}><span className="tse-text-medium">Home</span></a></li>
         <li><a href="/about" className={foreground}><span className="tse-text-medium">About</span></a></li>
         <li><a href="/projects" className={foreground}><span className="tse-text-medium">Projects</span></a></li>
         <li><a href="/apply" className={foreground}><span className="tse-text-medium">Connect</span></a></li>
