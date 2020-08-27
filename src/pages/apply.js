@@ -45,7 +45,7 @@ export const query = graphql `
     students: file(relativePath: { eq: "icon-students.png" }) {
       ...FluidImage
     }
-    nonprofits: file(relativePath: { eq: "icon-nonprofits.png" }) {
+    nonprofits: file(relativePath: { eq: "NEW-icon-nonprofits.png" }) {
       ...FluidImage
     }
   }
