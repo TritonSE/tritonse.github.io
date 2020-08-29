@@ -115,7 +115,7 @@ export const query = graphql `
         }
       }
     }
-    programming: file(relativePath: { eq: "generic-programming.png" }) {
+    programming: file(relativePath: { eq: "jason-group.png" }) {
       ...FluidImage
     }
   }

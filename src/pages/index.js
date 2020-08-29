@@ -164,7 +164,7 @@ export const query = graphql `
     nonprofits: file(relativePath: { eq: "icon-nonprofits.png" }) {
       ...FluidImage
     }
-    whiteboard: file(relativePath: { eq: "generic-whiteboard.jpg" }) {
+    whiteboard: file(relativePath: { eq: "declan-image.png" }) {
       ...FluidImage
     }
   }
