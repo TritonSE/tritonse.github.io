@@ -27,8 +27,11 @@ jobs:
           name: Deploy to master branch 
           command: 'sh .circleci/deploy.sh'
       - run:
+          name: Clean up stale remote server
+          command: sshpass -e ssh -o StrictHostKeyChecking=no tse@acsweb.ucsd.edu 'sh clean.sh'
+      - run:
           name: Deploy to remote server
-          command: sshpass -e ssh -o StrictHostKeyChecking=no tse@acsweb.ucsd.edu 'sh refresh.sh'
+          command: sshpass -e scp -o StrictHostKeyChecking=no -r . tse@acsweb.ucsd.edu:public_html
 workflows:
   version: 2
   website:
