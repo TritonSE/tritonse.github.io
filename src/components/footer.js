@@ -6,6 +6,7 @@ import {
 } from 'gatsby'
 import Img from 'gatsby-image'
 import '../styles/footer.css'
+import '../styles/colors.css'
 import '../../node_modules/materialize-css/dist/css/materialize.min.css'
 import '../../node_modules/font-awesome/css/font-awesome.min.css'
 
@@ -14,8 +15,8 @@ const Footer = ({
 }) => (
   <div>
     <div className="tse-footer-semicircle"></div>
-    <footer className="page-footer blue darken-3">
-      <div className="container">
+    <footer className="page-footer navy">
+      <div className="container navy">
         <div className="row">
           <div className="col l6 s12">
             <Link to="/">
@@ -55,7 +56,7 @@ const Footer = ({
           </div>
         </div>
       </div>
-      <div className="footer-copyright blue darken-3">
+      <div className="footer-copyright navy">
       </div>
     </footer>
   </div>
@@ -65,7 +66,7 @@ export default props => (
 <StaticQuery
     query={graphql`
       query {
-        logo: file(relativePath: { eq: "logo-white.png" }) {
+        logo: file(relativePath: { eq: "logo-yellow.png" }) {
           ...FluidImage
         }
       }

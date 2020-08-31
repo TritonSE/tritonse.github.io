@@ -4,6 +4,10 @@
   padding-bottom: 20em;
 }
 
+.tse-header-title {
+  letter-spacing: 0.03em;
+}
+
 .tse-header-project {
   width: 100%;
   padding-top: 6em;
@@ -11,22 +15,22 @@
 }
 
 .tse-header-gradient {
-  background: linear-gradient(to bottom, rgba(21, 101, 192, 1), rgba(91, 117, 149, 1), rgba(255, 255, 255, 1));
+  background: linear-gradient(to bottom, rgba(12, 43, 53, 1), rgba(91, 117, 149, 1), rgba(255, 255, 255, 1));
   background-size: cover;
 }
 
 .tse-header-geisel {
-  background: linear-gradient(to bottom, rgba(21, 101, 192, 1), rgba(91, 117, 149, 0.925), rgba(255, 255, 255, 1)), url('../images/background-geisel.jpg');
+  background: linear-gradient(to bottom, rgba(12, 43, 53, 1), rgba(91, 117, 149, 0.925), rgba(255, 255, 255, 1)), url('../images/background-geisel.jpg');
   background-size: cover;
 }
 
 .tse-header-laptop {
-  background: linear-gradient(to bottom, rgba(21, 101, 192, 1), rgba(91, 117, 149, 0.8), rgba(255, 255, 255, 1)), url('../images/background-laptop.jpg');
+  background: linear-gradient(to bottom, rgba(12, 43, 53, 1), rgba(91, 117, 149, 0.8), rgba(255, 255, 255, 1)), url('../images/background-laptop.jpg');
   background-size: cover;
 }
 
 .tse-header-hands {
-  background: linear-gradient(to bottom, rgba(21, 101, 192, 1), rgba(91, 117, 149, 0.9), rgba(255, 255, 255, 1)), url('../images/background-hands.jpg');
+  background: linear-gradient(to bottom, rgba(12, 43, 53, 1), rgba(91, 117, 149, 0.9), rgba(255, 255, 255, 1)), url('../images/background-hands.jpg');
   background-size: cover;
 }
 

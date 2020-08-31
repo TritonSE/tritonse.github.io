@@ -12,10 +12,16 @@
   border: 1px solid white;
 }
 
-.tse-divider-line-amber {
-  border: 1px solid #ffb300;
+.tse-divider-line-dark-yellow {
+  border: 1px solid #DEBB01;
 }
 
 .tse-divider-line-blue {
   border: 1px solid #1565c0;
+}
+
+.tse-divider-caption {
+  font-size: 1.25em;
+  padding-top: 2em;
+  width: 37em;
 }

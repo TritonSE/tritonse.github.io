@@ -5,6 +5,7 @@ import {
 } from 'gatsby'
 import Img from 'gatsby-image'
 import SEO from '../components/seo.js'
+import Navbar from '../components/navbar.js'
 import Header from '../components/header.js'
 import Divider from '../components/divider.js'
 import Footer from '../components/footer.js'
@@ -12,6 +13,7 @@ import {
   gridify
 } from '../util/styling.js'
 import '../styles/pages.css'
+import '../styles/colors.css'
 import '../../node_modules/materialize-css/dist/css/materialize.min.css'
 
 export default ({
@@ -60,19 +62,28 @@ export default ({
     <SEO title="About"/>
     <Header
       title={
-        <span>We Are <span className="amber-text">TSE</span></span>
+        <span>Our Mission</span>
       }
-      subtitle="We're an organization of engineers, designers, and problem solvers offering pro-bono technical and web development services for nonprofits."
+      subtitle={
+        <span>"Triton Software Engineering (TSE) is a multidisciplinary student organization at UC San Diego. We partner with nonprofits to design and develop software, websites and mobile applications pro-bono for <span className="dark-yellow-text">social good</span>, while giving our developers <span className="dark-yellow-text">practical, real world experience</span>."</span>
+      }
       buttons={
         <span>
-          <Link to="/about#history" className="waves-effect waves-light btn-large blue darken-4 tse-header-button">Read More</Link>
+          <Link to="/about#history" className="waves-effect waves-light btn-large navy tse-header-button">Read More</Link>
         </span>
       }
       background='tse-header-laptop'
     />
+    {/*<div className="navy">
+      *<div className="container">
+        <Divider subtitle="OUR MISSION" textColor="white-text" lineColor="tse-divider-line-dark-yellow"/>
+        <h5 className="white-text tse-mission"><b>"Triton Software Engineering (TSE) is a multidisciplinary student organization at UC San Diego. We partner with nonprofits to design and develop software, websites and mobile applications pro-bono for <span className="dark-yellow-text">social good</span>, while giving our developers <span className="dark-yellow-text">practical, real world experience</span>."</b></h5>
+      </div>
+    <div className="tse-padding-medium"></div>
+    </div>*/}
     <div className="container" id="history">
-      <Divider title="Strong Mind, Stronger Heart" subtitle="ABOUT US"/>
-      <div className="row valign-wrapper hide-on-med-and-down">
+      <Divider title="Strong Mind, Stronger Heart" subtitle="ABOUT US" textColor="navy-text" lineColor="tse-divider-line-dark-yellow"/>
+      <div className="row valign-wrapper hide-on-med-and-down navy-text">
         {history_left}     
         {history_right}     
       </div>
@@ -82,15 +93,8 @@ export default ({
       </div>
       <div className="tse-padding-medium"></div>
     </div>
-    <div className="blue darken-3">
-      <div className="container">
-        <Divider subtitle="OUR MISSION" textColor="white-text" lineColor="tse-divider-line-white"/>
-        <h5 className="white-text tse-mission"><b>"Triton Software Engineering (TSE) is a multidisciplinary student organization at UC San Diego. We partner with nonprofits to design and develop software, websites and mobile applications pro-bono for <span className="amber-text">social good</span>, while giving our developers <span className="amber-text">practical, real world experience</span>."</b></h5>
-      </div>
-      <div className="tse-padding-medium"></div>
-    </div>
     <div className="container" id="team">
-      <Divider title="Who's Doing What?" subtitle="THE TEAM"/>
+      <Divider title="Who's Doing What?" subtitle="THE TEAM" textColor="navy-text" lineColor="tse-divider-line-dark-yellow"/>
       {gridify(members, 6)}
     </div>
     <Footer/>
@@ -111,7 +115,7 @@ export const query = graphql `
         }
       }
     }
-    programming: file(relativePath: { eq: "generic-programming.png" }) {
+    programming: file(relativePath: { eq: "jason-group.png" }) {
       ...FluidImage
     }
   }

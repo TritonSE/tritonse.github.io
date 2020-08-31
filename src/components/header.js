@@ -16,7 +16,7 @@ const Header = ({
       <div className="container">
         <div className="row center white-text">
           <div className="col s12">
-            <h1>{title}</h1>
+            <h1 className="tse-header-title">{title}</h1>
           </div>
           <div className="col s12">
             <h5>{subtitle}</h5>
