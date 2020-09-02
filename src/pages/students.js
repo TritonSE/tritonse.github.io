@@ -316,7 +316,6 @@ export const query = graphql `
         node {
           id
           active
-          link 
         }
       }
     }
