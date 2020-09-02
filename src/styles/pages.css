@@ -201,6 +201,10 @@ a {
   font-size: 1.75em;
 }
 
+.tse-text-small {
+  font-size: 0.8em;
+}
+
 /* Separation */
 
 .tse-separation-small {
