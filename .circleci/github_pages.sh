@@ -1,10 +1,10 @@
 #!/bin/bash
 
 git config --global user.email "tse@ucsd.edu"
-git config --global user.name "CircleCI Bot"
+git config --global user.name "TSE CircleCI Bot"
 git pull
 mv public ..
-git checkout master
+git checkout gh-pages
 rm -rf *
 mv ../public/* .
 rm -rf ../public
