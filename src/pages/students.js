@@ -28,6 +28,7 @@ class StudentsPage extends React.Component {
     this.handleInputChange = this.handleInputChange.bind(this);
     this.handleDirectInputChange = this.handleDirectInputChange.bind(this);
     this.validateForm = this.validateForm.bind(this);
+    this.resetForm = this.resetForm.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
@@ -47,6 +48,18 @@ class StudentsPage extends React.Component {
     return validation;
   }
 
+  resetForm(event) {
+    this.setState({
+      name: "",
+      email: "",
+      role: "",
+      resume: "",
+      graduation: "",
+      about: "",
+      why: ""
+    });
+  }
+
   handleInputChange(event) {
     this.handleDirectInputChange(event.target.name, event.target.value);
   }
@@ -59,10 +72,13 @@ class StudentsPage extends React.Component {
     event.preventDefault();
     const validation = this.validateForm(event);
     if (validation.valid) {
-      document.getElementById('submit').disabled = true; 
+      document.getElementById('app-submit').disabled = true;
       fetch('https://tse-recruitment-backend.herokuapp.com/applications', {
         method: 'POST',
-        body: {
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
           name: this.state.name,
           email: this.state.email,
           role: this.state.role,
@@ -70,29 +86,30 @@ class StudentsPage extends React.Component {
           graduation: this.state.graduation,
           about: this.state.about,
           why: this.state.why
-        }
+        })
       }).then(response => {
         if (response.status === 429) {
           window.M.toast({html: 'You are attempting to submit too many applications.', classes: 'red darken-2'});
-          document.getElementById('submit').disabled = false; 
+          document.getElementById('app-submit').disabled = false;
           return;
         }
         response.json().then(rjson => {
           if (response.status === 200) {
-            this.resetForm();
             window.M.toast({html: 'Submitted! Expect to hear back within a few weeks.', classes: 'green darken-1'});
+            document.getElementById('app-submit').disabled = false;
+            this.resetForm();
           }
           else {
             window.M.toast({html: 'Could not submit application: ' + rjson.message, classes: 'red darken-2'});
           }
-          document.getElementById('submit').disabled = false; 
+          document.getElementById('app-submit').disabled = false;
         }).catch(error => {
           window.M.toast({html: 'An error occurred: ' + error.message, classes: 'red darken-2'});
-          document.getElementById('submit').disabled = false; 
+          document.getElementById('app-submit').disabled = false;
         });
       }).catch(error => {
         window.M.toast({html: 'An error occurred: ' + error.message, classes: 'red darken-2'});
-        document.getElementById('submit').disabled = false; 
+        document.getElementById('app-submit').disabled = false;
       });
     }
     else {
@@ -204,7 +221,7 @@ class StudentsPage extends React.Component {
                     </div>
                     <div className="row">
                       <div className="col s12 center-align">
-                        <button className="waves-effect tse-separation-small btn-large amber darken-1" type="submit" id="submit">Submit</button>
+                        <button className="waves-effect tse-separation-small btn-large amber darken-1" type="submit" id="app-submit">Submit</button>
                       </div>
                     </div>
                   </form>
