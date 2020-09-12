@@ -146,7 +146,7 @@ class StudentsPage extends React.Component {
                   Applications are open! Apply below. We will reach out to you with more details if you are selected.
                 </p> :
                 <p className="tse-text-medium tse-separation-small">
-                  Applications are currently closed. Please check back next fall if you are interested in joining.
+                  Applications are currently closed. Please check back week 0 of Fall Quarter 2020 if you are interested in joining.
                 </p>}
               </div>
             </div>
