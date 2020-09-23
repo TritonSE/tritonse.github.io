@@ -159,6 +159,7 @@ class StudentsPage extends React.Component {
               <div className="card navy">
                 <div className="card-content white-text container">
                   <h4 className="center">TSE Student Application</h4>
+                  <p className="center">Please whitelist the email <b>tse.recruitment.ucsd@gmail.com</b> to prevent any recruitment-related emails from going to spam!</p>
                   <form onSubmit={this.handleSubmit}>
                     <div className="row">
                       <div className="input-field col s6">
