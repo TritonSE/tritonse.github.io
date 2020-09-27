@@ -73,6 +73,7 @@ class StudentsPage extends React.Component {
     const validation = this.validateForm(event);
     if (validation.valid) {
       document.getElementById('app-submit').disabled = true;
+      window.M.toast({html: 'Please wait up to a few seconds for the submission to go through.', classes: 'gray darken-1'});
       fetch('https://tse-recruitment-backend.herokuapp.com/applications', {
         method: 'POST',
         headers: {
