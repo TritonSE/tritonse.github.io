@@ -316,11 +316,11 @@ class StudentsPage extends React.Component {
           </div>
         </div>
       </div>
-      <div className="tse-slogan-container">
-        <div className="container">
-          <Divider textColor="navy-text" lineColor="tse-divider-line-dark-yellow" caption="Develop for social good. Design for real world clients. Problem-solve with us."/>
-        </div>
-      </div>
+      {/* <div className="tse-slogan-container"> */}
+      {/*   <div className="container"> */}
+      {/*     <Divider textColor="navy-text" lineColor="tse-divider-line-dark-yellow" caption="Develop for social good. Design for real world clients. Problem-solve with us."/> */}
+      {/*   </div> */}
+      {/* </div> */}
       <Footer/>
     </div>)
   }
