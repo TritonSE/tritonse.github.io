@@ -1,11 +1,9 @@
 import React from 'react'
-import {
-  init_wowjs
-} from '../util/init.js'
+import { initWowJS } from '../util/init.js'
 
 class Winners extends React.Component {
     componentDidMount() {
-      init_wowjs();
+      initWowJS();
     }
 
     render() {

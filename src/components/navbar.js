@@ -5,17 +5,14 @@ import {
   graphql
 } from 'gatsby'
 import Img from 'gatsby-image'
-import {
-  init_materialize
-} from '../util/init.js'
+import { initMaterialize } from '../util/init.js'
 import '../styles/navbar.css'
 import '../styles/colors.css'
 import '../../node_modules/materialize-css/dist/css/materialize.min.css'
 
 class Navbar extends React.Component {
   componentDidMount() {
-    init_materialize();
-
+    initMaterialize();
     let dropdown = document.querySelectorAll('.dropdown-trigger');
     let options = {
         coverTrigger: false, 

@@ -1,4 +1,4 @@
-function init_materialize() {
+function initMaterialize() {
   require('../../node_modules/materialize-css/dist/js/materialize.min.js');
   window.M.AutoInit();
   window.Waves.displayEffect();
@@ -8,12 +8,12 @@ function init_materialize() {
   });
 }
 
-function init_wowjs() {
+function initWowJS() {
   const wow = require('../../node_modules/wowjs/dist/wow.min.js');
   new wow.WOW().init();
 }
 
 export {
-  init_materialize,
-  init_wowjs
+  initMaterialize,
+  initWowJS
 };
