@@ -5,7 +5,7 @@
   "version": "1.0.0",
   "author": "Triton Software Engineering <tse@ucsd.edu>",
   "dependencies": {
-    "firebase": "^7.15.5",
+    "firebase": "^7.22.1",
     "font-awesome": "^4.7.0",
     "gatsby": "^2.23.11",
     "gatsby-image": "^2.4.9",
@@ -14,7 +14,7 @@
     "gatsby-plugin-offline": "^2.2.10",
     "gatsby-plugin-react-helmet": "^3.3.6",
     "gatsby-plugin-sass": "^2.3.6",
-    "gatsby-plugin-sharp": "^2.6.14",
+    "gatsby-plugin-sharp": "^2.6.38",
     "gatsby-source-filesystem": "^2.3.14",
     "gatsby-transformer-sharp": "^2.5.7",
     "materialize-css": "^1.0.0",

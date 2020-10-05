@@ -1,10 +1,13 @@
 import React from 'react'
-import wow from '../../node_modules/wowjs';
+import {
+  init_wowjs
+} from '../util/init.js'
 
 class Winners extends React.Component {
     componentDidMount() {
-        new wow.WOW().init();
+      init_wowjs();
     }
+
     render() {
         return (
             <section className="services">

@@ -1,10 +1,11 @@
 import React from 'react'
-import wow from '../../node_modules/wowjs';
+import {
+  init_wowjs
+} from '../util/init.js'
 
 class Matrix extends React.Component {
     componentDidMount() {
-        new wow.WOW().init();
-        this.updateCanvas();
+      init_wowjs();
     }
 
     updateCanvas() {
@@ -75,7 +76,7 @@ class Matrix extends React.Component {
                             </div>
                             <div className="head-title wow fadeIn" data-wow-duration=".6s"
                                  data-wow-delay="0s">
-                                <h3 class="center-align"> TSE Hall of Fame</h3>
+                                <h3 className="center-align"> TSE Hall of Fame</h3>
                             </div>
                             <div className="head-content wow fadeIn" data-wow-duration=".6s"
                                  data-wow-delay="0s">
