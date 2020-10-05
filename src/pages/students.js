@@ -144,10 +144,10 @@ class StudentsPage extends React.Component {
               <div>
                 {apps_active ?
                 <p className="tse-text-medium">
-                  Applications are open! Apply below. We will reach out to you with more details if you are selected.
+                  Applications are open! Apply below. We will reach out to you with more details if you are selected. Applications close on 11:59 PDT, October 23rd, 2020.
                 </p> :
                 <p className="tse-text-medium tse-separation-small">
-                  Applications are currently closed. Please check back Week 0 of Fall Quarter 2020 if you are interested in joining.
+                  Applications are currently closed. Please check back Week 0 of Fall Quarter 2021 if you are interested in joining.
                 </p>}
               </div>
             </div>
