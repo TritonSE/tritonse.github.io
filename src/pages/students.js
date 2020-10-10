@@ -190,7 +190,7 @@ class StudentsPage extends React.Component {
                     </div>
                     <div className="row">
                       <div className="input-field col s6">
-                        <span className="white-text"><b>Link to Resume</b></span>
+                        <span className="white-text"><b>Link to Resume (PDF)</b></span>
                         <input type="text" name="resume" className="validate white-text" value={this.state.resume} onChange={this.handleInputChange}/>
                       </div>
                       <div className="input-field col s6">
