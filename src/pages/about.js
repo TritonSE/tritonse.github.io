@@ -65,7 +65,7 @@ export default ({
         <span>Our Mission</span>
       }
       subtitle={
-        <span>"Triton Software Engineering (TSE) is a multidisciplinary student organization at UC San Diego. We partner with nonprofits to design and develop software, websites and mobile applications pro-bono for <span className="dark-yellow-text">social good</span>, while giving our developers <span className="dark-yellow-text">practical, real world experience</span>."</span>
+        <span>"Triton Software Engineering (TSE) is a multidisciplinary student organization at UC San Diego. We partner with nonprofit organizations to design and develop software pro-bono for <span className="dark-yellow-text">social good</span>, while giving our students <span className="dark-yellow-text">practical, real world experience</span>."</span>
       }
       buttons={
         <span>
