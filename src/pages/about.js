@@ -25,7 +25,7 @@ export default ({
     'VP External': 2,
     'VP Technology': 3,
     'VP Projects': 4,
-    'UI/UX Design Lead': 5,
+    'VP Design': 5,
     'Project Manager': 6,
     'Developer': 7,
     'UI/UX Designer': 8,
