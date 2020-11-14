@@ -12,7 +12,7 @@ class Winners extends React.Component {
                 <div className="container">
                     <h4 className="service-des center-align wow bounceInRight" data-wow-duration=".6s"
                         data-wow-delay="0.4s">
-                        2020 Codewords Winners:
+                        {this.props.activity}
                     </h4>
                     {this.props.winners.map(row => {
                         return(<div className="row">
