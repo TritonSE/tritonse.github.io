@@ -5,6 +5,7 @@ import '../styles/animated/animated.min.css';
 import Matrix from "../components/matrix";
 import Winners from "../components/winners";
 import Footer from '../components/footer.js'
+
 // 2d Arr for winner list, each row takes 4 entries
 const amazingWinnersFA20AllHands2 = [
   [
@@ -76,10 +77,6 @@ const amazingWinnersSP20AllHands2 = [
     }
   ]
 ];
-
-
-
-
 
 export default ({
     data
