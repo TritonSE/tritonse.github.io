@@ -17,7 +17,9 @@ class Winners extends React.Component {
                     {this.props.winners.map(row => {
                         return(<div className="row">
                             {row.map((winner, index) => {
-                                return(<div className={`col s12 m3 l3 wow ${index>=row.length/2 ?
+                                const columnSize = 12/row.length;
+                                const isRight = index>=row.length/2;
+                                return(<div className={`col s12 m3 l${columnSize} wow ${isRight ?
                                     'fadeInRight' : 'fadeInLeft'}`} data-wow-duration=".6s"
                                             data-wow-delay="0.4s">
                                     <div className="card wow rollIn">
