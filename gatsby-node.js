@@ -51,7 +51,7 @@ exports.sourceNodes = async ({
   // One document = one JSON file => the ID is the filename - the extension
   const documents = [];
   for (const type of ["Applications", "Members", "Projects"]) {
-    const typepath = path.join(__dirname, "data", type.toLowerCase());
+    const typepath = path.join(__dirname, "src", "data", type.toLowerCase());
     for (const filename of fs.readdirSync(typepath)) {
       const filepath = path.join(typepath, filename);
       const stats = fs.statSync(filepath);
