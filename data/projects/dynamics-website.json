@@ -1,0 +1,8 @@
+{
+  "title": "Dynamics Team Website",
+  "subtitle": "We are creating a website for the Dynamics Performance Team to showcase their non-profit organization.",
+  "overview": "Dynamics Performance Team is a non profit dance organization that’s based in San Jose, California. Using React and CSS, TSE has created a website for them that showcases their organization to all supporters. In the website, users can learn more about the organization itself and check out some action shots of performers.",
+  "image": "https://firebasestorage.googleapis.com/v0/b/tritonse-web.appspot.com/o/Project_DynamicsPerformanceTeam.jpg?alt=media&token=ab14e013-bea4-4617-8d0d-d533a1599a3c",
+  "github": "https://github.com/TritonSE/dynamics-website",
+  "ongoing": true
+}

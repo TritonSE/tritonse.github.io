@@ -1,6 +1,6 @@
 const path = require(`path`)
-const firebase = require('firebase');
-// const async = require('async');
+const fs = require(`fs`)
+const firebase = require(`firebase`)
 const {
   createRemoteFileNode,
 } = require('gatsby-source-filesystem');
@@ -47,7 +47,8 @@ exports.sourceNodes = async ({
   const {
     createNode,
   } = actions;
-  const types = [{
+  const types = [
+    {
       type: "Applications",
       path: "applications",
     },
@@ -60,6 +61,22 @@ exports.sourceNodes = async ({
       path: "projects"
     }
   ];
+
+  // const documents = [];
+  // for (const type of types) {
+  //   const typepath = path.join(__dirname, "data", type.path);
+  //   for (const filename of fs.readdirSync(typepath)) {
+  //     const filepath = path.join(typepath, filename);
+  //     const stats = fs.statSync(filepath);
+  //     if (stats.isDirectory()) {
+  //       continue;
+  //     }
+  //     const rawdoc = fs.readFileSync(filepath, 'utf8')
+  //     const doc = JSON.parse(rawdoc)
+  //     documents.push([type, doc])
+  //   }
+  // }
+
   // Initialize Firebase application
   firebase.initializeApp({
     apiKey: 'AIzaSyBtdsy5_rUnaKB_A4f_SFMulkKqC4loxFg',
@@ -83,52 +100,56 @@ exports.sourceNodes = async ({
   }));
   const snapshots = await Promise.all(snapshot_promises);
   // Break each snapshot into its documents
-  const documents = [];
+  // const documents = [];
   snapshots.forEach(([type, snapshot]) => {
     snapshot.forEach((doc) => {
-      documents.push([type, doc]);
+      // documents.push([type, doc]);
+      const typepath = path.join(__dirname, "data", type.toLowerCase());
+      const filepath = path.join(typepath, doc.id + ".json");
+      fs.writeFileSync(filepath, JSON.stringify(doc.data(), null, 2))
     });
   });
-  // Resolve each document into a Gatsby node
-  const document_promises = documents.map(([type, doc]) => new Promise(async (resolve, reject) => {
-    try {
-      const data = doc.data();
-      let image_promise;
-      if (data.image != null) {
-        image_promise = createRemoteFileNode({
-          url: data.image,
-          store,
-          cache,
-          createNode,
-          createNodeId,
-        });
-      } else {
-        image_promise = new Promise((resolve, _) => {
-          resolve(null);
-        });
-      }
-      const image_node = await image_promise;
-      const node_internal = {
-        ...data
-      };
-      if (image_node != null) {
-        node_internal.local_image___NODE = image_node.id;
-      }
-      const node = Object.assign(node_internal, {
-        id: doc.id,
-        parent: null,
-        children: [],
-        internal: {
-          type: `Tse${type}`,
-          content: JSON.stringify(node_internal),
-          contentDigest: createContentDigest(node_internal),
-        },
-      });
-      createNode(node);
-      resolve();
-    } catch (err) {
-      reject(err);
-    }
-  }));
-  await Promise.all(document_promises);
+  // console.log(documents)
+  // // Resolve each document into a Gatsby node
+  // const document_promises = documents.map(([type, doc]) => new Promise(async (resolve, reject) => {
+  //   try {
+  //     const data = doc.data();
+  //     let image_promise;
+  //     if (data.image != null) {
+  //       image_promise = createRemoteFileNode({
+  //         url: data.image,
+  //         store,
+  //         cache,
+  //         createNode,
+  //         createNodeId,
+  //       });
+  //     } else {
+  //       image_promise = new Promise((resolve, _) => {
+  //         resolve(null);
+  //       });
+  //     }
+  //     const image_node = await image_promise;
+  //     const node_internal = {
+  //       ...data
+  //     };
+  //     if (image_node != null) {
+  //       node_internal.local_image___NODE = image_node.id;
+  //     }
+  //     const node = Object.assign(node_internal, {
+  //       id: doc.id,
+  //       parent: null,
+  //       children: [],
+  //       internal: {
+  //         type: `Tse${type}`,
+  //         content: JSON.stringify(node_internal),
+  //         contentDigest: createContentDigest(node_internal),
+  //       },
+  //     });
+  //     createNode(node);
+  //     resolve();
+  //   } catch (err) {
+  //     reject(err);
+  //   }
+  // }));
+  // await Promise.all(document_promises);
 };

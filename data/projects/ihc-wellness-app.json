@@ -1,0 +1,8 @@
+{
+  "title": "IHC Wellness App",
+  "github": "https://github.com/TritonSE/Expo-IHCWellness",
+  "subtitle": "Under guidance from the International Health Collective, we created an app that gamifies good habits for mental health. Users are able to take care of a plant via points that are earned through doing recommended wellness activities.",
+  "image": "https://www.engledow.com/wp-content/uploads/2017/04/Sprouting-Plant.jpg",
+  "overview": "IHCWellness is a native iOS & Android application that encourages you to perform daily check-ins, log your mood and record your current activities. By answering a short series of questions daily and doing recommended activities (tailored by the International Health Collective), users earn points that they can spend on purchasing materials to grow a plant. For UCSD students, there is also a calendar of campus wellness events that can be attended for additional points. All of this can be done through the application.",
+  "ongoing": true
+}
