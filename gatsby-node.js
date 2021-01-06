@@ -46,6 +46,7 @@ exports.sourceNodes = async ({
   cache,
   createNodeId,
   createContentDigest,
+  getNodesByType
 }) => {
   const {
     createNode,
@@ -81,25 +82,32 @@ exports.sourceNodes = async ({
   const document_promises = documents.map(([type, doc]) => new Promise(async (resolve, reject) => {
     try {
       const data = doc.data;
-      let image_promise;
-      if (data.image != null) {
-        image_promise = createRemoteFileNode({
-          url: data.image,
-          store,
-          cache,
-          createNode,
-          createNodeId,
-        });
-      } else {
-        image_promise = new Promise((resolve, _) => {
-          resolve(null);
-        });
-      }
-      const image_node = await image_promise;
       const node_internal = {
         ...data
       };
-      if (image_node != null) {
+      if (type !== "Projects") {
+        let image_promise;
+        if (data.image != null) {
+          image_promise = createRemoteFileNode({
+            url: data.image,
+            store,
+            cache,
+            createNode,
+            createNodeId,
+          });
+        } else {
+          image_promise = new Promise((resolve, _) => {
+            resolve(null);
+          });
+        }
+        const image_node = await image_promise;
+        if (image_node != null) {
+          node_internal.image___NODE = image_node.id;
+          delete node_internal.image;
+        }
+      } else {
+        const file_nodes = getNodesByType('File');
+        const image_node = file_nodes.find(fn => fn.relativePath === data.image);
         node_internal.image___NODE = image_node.id;
         delete node_internal.image;
       }

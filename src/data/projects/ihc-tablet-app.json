@@ -1,7 +1,7 @@
 {
   "subtitle": "This is a tablet EMR application for the International Health Collective that has a simple user interface in which the volunteers of Clinica Innovadores can easily utilize for managing their patient’s records.",
   "ongoing": true,
-  "image": "http://evedentalcentre.com.au/wp-content/uploads/2017/07/bnr1.jpg",
+  "image": "projects/IHC_Tablet_App.jpg",
   "title": "IHC Tablet EMR Application",
   "github": "https://github.com/TritonSE/ihc",
   "overview": "Triton Software Engineering has paired up with the International Health Collective (IHC) to create an EMR for Clinica Innovadores deIHC, a local health clinic in Tijuana, in order to help them efficiently manage their patients' medical records. Our application will aid volunteers in guiding patients through the process of their check ups."

@@ -2,7 +2,7 @@
   "ongoing": true,
   "subtitle": "We are collaborating with the United Women of East Africa Support Team to create an online ordering tool for their community kitchen.",
   "github": "https://github.com/TritonSE/uweast-ck",
-  "image": "https://firebasestorage.googleapis.com/v0/b/tritonse-web.appspot.com/o/Project_UWEASTCommunityKitchen.jpg?alt=media&token=05ed07ab-ce10-4a11-8c38-971a5fcf4f09",
+  "image": "projects/UWEAST_Community_Kitchen.jpg",
   "overview": "We are building an online ordering tool for the United Women of East Africa Support Team.  It allows users to load the site, add the food they would like to order to a cart, then pay for their order.  They can also filter the menu down to see certain options, like appetizers or main dishes.  Those running the site can then fulfill these orders and mark them as done through the site, as well as update the webpage to contain more items.  The website communicates with a database to track user orders, payments, and to keep up to date the current menu items offered.",
   "title": "UWEAST Community Kitchen"
 }
