@@ -79,54 +79,27 @@ exports.sourceNodes = async ({
   // Resolve each document into a Gatsby node
   activity = reporter.activityTimer(`load project, member, applications images`);
   activity.start();
-  const document_promises = documents.map(([type, doc]) => new Promise(async (resolve, reject) => {
-    try {
-      const data = doc.data;
-      const node_internal = {
-        ...data
-      };
-      if (type !== "Projects") {
-        let image_promise;
-        if (data.image != null) {
-          image_promise = createRemoteFileNode({
-            url: data.image,
-            store,
-            cache,
-            createNode,
-            createNodeId,
-          });
-        } else {
-          image_promise = new Promise((resolve, _) => {
-            resolve(null);
-          });
-        }
-        const image_node = await image_promise;
-        if (image_node != null) {
-          node_internal.image___NODE = image_node.id;
-          delete node_internal.image;
-        }
-      } else {
-        const file_nodes = getNodesByType('File');
-        const image_node = file_nodes.find(fn => fn.relativePath === data.image);
-        node_internal.image___NODE = image_node.id;
-        delete node_internal.image;
-      }
-      const node = Object.assign(node_internal, {
-        id: doc.id,
-        parent: null,
-        children: [],
-        internal: {
-          type: `Tse${type}`,
-          content: JSON.stringify(node_internal),
-          contentDigest: createContentDigest(node_internal),
-        },
-      });
-      createNode(node);
-      resolve();
-    } catch (err) {
-      reject(err);
+  for (const [type, doc] of documents) {
+    const content = {
+      ...doc.data
+    };
+    if (content.image != null) {
+      const file_nodes = getNodesByType('File');
+      const image_node = file_nodes.find(fn => fn.relativePath === content.image);
+      content.image___NODE = image_node.id;
+      delete content.image;
     }
-  }));
-  await Promise.all(document_promises);
+    const node = Object.assign(content, {
+      id: doc.id,
+      parent: null,
+      children: [],
+      internal: {
+        type: `Tse${type}`,
+        content: JSON.stringify(content),
+        contentDigest: createContentDigest(content),
+      },
+    });
+    createNode(node);
+  }
   activity.end();
 };
