@@ -37,7 +37,7 @@ export default ({
     .map((value) => (
       <div key={`${value.node.name}`} className="col l2 m4 s6 center">
       <div>
-        <Img fluid={value.node.local_image.childImageSharp.fluid} className="tse-profile-image"></Img>
+        <Img fluid={value.node.image.childImageSharp.fluid} className="tse-profile-image"></Img>
       </div>
       <div className="tse-profile-name">
         <b>{value.node.name}</b>
@@ -108,8 +108,7 @@ export const query = graphql `
         node {
           name
           role
-          image
-          local_image {
+          image {
             ...FluidImage
           }
         }

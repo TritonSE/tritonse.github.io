@@ -65,21 +65,21 @@ class IndexPage extends React.Component {
           </div>
           <div className="row">
             <div className="col l4 s12">
-              <Img fluid={project1.local_image.childImageSharp.fluid} className="tse-home-project-image tse-highlight-image"></Img>
+              <Img fluid={project1.image.childImageSharp.fluid} className="tse-home-project-image tse-highlight-image"></Img>
               <div className="tse-project-title center">
                 <Link to={`/project/${project1.id}`} className="tse-text-large white-text"><b className="tse-project-link-amber">{project1.title}</b></Link>
               </div>
               <p className="tse-text-medium white-text">{condense(project1.subtitle, 250)}</p>
             </div>
             <div className="col l4 s12">
-              <Img fluid={project2.local_image.childImageSharp.fluid} className="tse-home-project-image tse-highlight-image"></Img>
+              <Img fluid={project2.image.childImageSharp.fluid} className="tse-home-project-image tse-highlight-image"></Img>
               <div className="tse-project-title center">
                 <Link to={`/project/${project2.id}`} className="tse-text-large white-text"><b className="tse-project-link-amber">{project2.title}</b></Link>
               </div>
               <p className="tse-text-medium white-text">{condense(project2.subtitle, 250)}</p>
             </div>
             <div className="col l4 s12">
-              <Img fluid={project3.local_image.childImageSharp.fluid} className="tse-home-project-image tse-highlight-image"></Img>
+              <Img fluid={project3.image.childImageSharp.fluid} className="tse-home-project-image tse-highlight-image"></Img>
               <div className="tse-project-title center">
                 <Link to={`/project/${project3.id}`} className="tse-text-large white-text"><b className="tse-project-link-amber">{project3.title}</b></Link>
               </div>
@@ -152,7 +152,7 @@ export const query = graphql `
           id
           title
           subtitle
-          local_image {
+          image {
             ...FluidImage
           }
         }

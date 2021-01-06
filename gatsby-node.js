@@ -6,7 +6,8 @@ const {
 
 exports.createPages = async ({
   graphql,
-  actions
+  actions,
+  reporter
 }) => {
   const {
     createPage
@@ -25,7 +26,8 @@ exports.createPages = async ({
   result.data.allTseProjects.edges.forEach(({
     node
   }) => {
-    console.log(`Generated project page at /project/${node.id}.`);
+    const activity = reporter.activityTimer(`generate page /project/${node.id}`);
+    activity.start();
     createPage({
       path: `project/${node.id}`,
       component: path.resolve(`./src/templates/project.js`),
@@ -33,11 +35,13 @@ exports.createPages = async ({
         id: node.id
       },
     })
+    activity.end();
   })
 }
 
 exports.sourceNodes = async ({
   actions,
+  reporter,
   store,
   cache,
   createNodeId,
@@ -49,6 +53,8 @@ exports.sourceNodes = async ({
 
   // These "documents" used to be stored in Firebase's Cloud Firestore
   // One document = one JSON file => the ID is the filename - the extension
+  let activity = reporter.activityTimer(`read project, member, applications metadata`);
+  activity.start();
   const documents = [];
   for (const type of ["Applications", "Members", "Projects"]) {
     const typepath = path.join(__dirname, "src", "data", type.toLowerCase());
@@ -67,8 +73,11 @@ exports.sourceNodes = async ({
       }])
     }
   }
+  activity.end();
 
   // Resolve each document into a Gatsby node
+  activity = reporter.activityTimer(`load project, member, applications images`);
+  activity.start();
   const document_promises = documents.map(([type, doc]) => new Promise(async (resolve, reject) => {
     try {
       const data = doc.data;
@@ -91,7 +100,8 @@ exports.sourceNodes = async ({
         ...data
       };
       if (image_node != null) {
-        node_internal.local_image___NODE = image_node.id;
+        node_internal.image___NODE = image_node.id;
+        delete node_internal.image;
       }
       const node = Object.assign(node_internal, {
         id: doc.id,
@@ -110,4 +120,5 @@ exports.sourceNodes = async ({
     }
   }));
   await Promise.all(document_promises);
+  activity.end();
 };

@@ -31,7 +31,7 @@ export default ({
     </div>);
   let jumbo_right = (
     <div className="col l6 s12">
-      <Img fluid={project.local_image.childImageSharp.fluid} className="tse-project-template-image tse-highlight-image"></Img>
+      <Img fluid={project.image.childImageSharp.fluid} className="tse-project-template-image tse-highlight-image"></Img>
     </div>
   );
   return (
@@ -66,7 +66,7 @@ export const query = graphql `
       subtitle
       overview
       github
-      local_image {
+      image {
         ...FluidImage
       }
     }
