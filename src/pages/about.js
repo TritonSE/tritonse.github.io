@@ -26,9 +26,10 @@ export default ({
     'VP Technology': 3,
     'VP Projects': 4,
     'VP Design': 5,
-    'Project Manager': 6,
-    'Developer': 7,
-    'UI/UX Designer': 8,
+    'Outreach Lead': 6,
+    'Project Manager': 7,
+    'Developer': 8,
+    'UI/UX Designer': 9,
   };
   // Member information is stored in data.allTseMembers
   // This is fetched using a GraphQL query that maps to the tritonse-source-firestore plugin
@@ -37,7 +38,7 @@ export default ({
     .map((value) => (
       <div key={`${value.node.name}`} className="col l2 m4 s6 center">
       <div>
-        <Img fluid={value.node.local_image.childImageSharp.fluid} className="tse-profile-image"></Img>
+        <Img fluid={value.node.image.childImageSharp.fluid} className="tse-profile-image"></Img>
       </div>
       <div className="tse-profile-name">
         <b>{value.node.name}</b>
@@ -108,8 +109,7 @@ export const query = graphql `
         node {
           name
           role
-          image
-          local_image {
+          image {
             ...FluidImage
           }
         }

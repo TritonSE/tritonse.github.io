@@ -23,7 +23,7 @@ export default ({
     return (
       <div key={`${value.node.name}`}>
         <div className="col l4 s12">
-          <Img fluid={value.node.local_image.childImageSharp.fluid} className="tse-project-image"></Img>
+          <Img fluid={value.node.image.childImageSharp.fluid} className="tse-project-image"></Img>
           <div className="tse-project-title center">
             <Link to={`/project/${value.node.id}`} className="link-text-color tse-text-large"><b className="tse-project-link-blue">{value.node.title}</b></Link>
           </div>
@@ -87,7 +87,7 @@ export const query = graphql `
           title
           subtitle
           ongoing
-          local_image {
+          image {
             ...FluidImage
           }
         }
