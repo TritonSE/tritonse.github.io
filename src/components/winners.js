@@ -1,4 +1,5 @@
 import React from 'react'
+import Img from 'gatsby-image'
 import { initWowJS } from '../util/init.js'
 
 class Winners extends React.Component {
@@ -10,8 +11,7 @@ class Winners extends React.Component {
         return (
             <section className="services">
                 <div className="container">
-                    <h4 className="service-des center-align wow bounceInRight" data-wow-duration=".6s"
-                        data-wow-delay="0.4s">
+                    <h4 className="service-des center-align wow bounceInRight" data-wow-duration=".6s" data-wow-delay="0.4s">
                         {this.props.activity}
                     </h4>
                     {this.props.winners.map(row => {
@@ -20,16 +20,13 @@ class Winners extends React.Component {
                                 const columnSize = 12/row.length;
                                 const isRight = index>=row.length/2;
                                 return(<div className={`col s12 m3 l${columnSize} wow ${isRight ?
-                                    'fadeInRight' : 'fadeInLeft'}`} data-wow-duration=".6s"
-                                            data-wow-delay="0.4s">
+                                    'fadeInRight' : 'fadeInLeft'}`} data-wow-duration=".6s" data-wow-delay="0.4s">
                                     <div className="card wow rollIn">
                                         <div className="card-image service-img">
-                                            <img
-                                                src={winner.img} alt={winner.name}
-                                            />
+                                          <Img fluid={winner.image.childImageSharp.fluid} className="tse-profile-image"></Img>
                                         </div>
                                         <div className="card-block">
-                                            <h4 className="service-des center-align">{winner.name}</h4>
+                                            <h5 className="service-des center-align">{winner.name}</h5>
                                             <div className="service-divider"></div>
                                             <p className="service-extra center-align">{winner.position}</p>
                                         </div>

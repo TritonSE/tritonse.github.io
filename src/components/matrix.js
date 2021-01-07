@@ -75,7 +75,7 @@ class Matrix extends React.Component {
                             </div>
                             <div className="head-content wow fadeIn" data-wow-duration=".6s"
                                  data-wow-delay="0s">
-                                <h5 class="center-align"> Since the 2019-2020 school year, TSE holds an annual tournament between project
+                                <h5 className="center-align"> Since the 2019-2020 school year, TSE holds an annual tournament between project
                                     teams. Winners are immortalized forever on this page.
                                 </h5>
                             </div>
