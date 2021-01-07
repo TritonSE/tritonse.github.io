@@ -7,16 +7,16 @@ jobs:
     steps: 
       - checkout
       - run:
-          name: Install deployment dependencies
+          name: Installing deployment dependencies
           command: sudo apt-get install sshpass
       - run:
-          name: Install latest version of NPM
+          name: Installing latest version of NPM
           command: 'sudo npm install -g npm@latest'
       - run:
-          name: Install website dependencies 
+          name: Installing website dependencies
           command: npm install
       - run: 
-          name: Build website 
+          name: Building website
           command: npm run-script build 
           environment:
             NODE_TLS_REJECT_UNAUTHORIZED: 0
@@ -24,13 +24,13 @@ jobs:
           fingerprints:
             - "f3:c6:13:c0:cd:b7:4f:4f:e4:b2:e5:8c:48:74:3a:9a"
       - run: 
-          name: Deploy to GitHub pages branch 
+          name: Deploying to GitHub Pages
           command: 'sh .circleci/github_pages.sh'
       - run:
-          name: Clean up stale remote server
+          name: Cleaning up stale remote server
           command: sshpass -e ssh -o StrictHostKeyChecking=no tse@acsweb.ucsd.edu 'sh clean.sh'
       - run:
-          name: Deploy to remote server
+          name: Deploying to remote server
           command: sshpass -e scp -o StrictHostKeyChecking=no -r . tse@acsweb.ucsd.edu:public_html
 workflows:
   version: 2
@@ -39,4 +39,4 @@ workflows:
       - deploy:
           filters:
             branches:
-              only: master
+              only: main
