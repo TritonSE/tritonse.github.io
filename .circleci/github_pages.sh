@@ -4,8 +4,7 @@ git config --global user.email "tse@ucsd.edu"
 git config --global user.name "TSE CircleCI Bot"
 git pull
 mv public ..
-git stash
-git stash drop
+git reset --hard HEAD
 git checkout gh-pages
 rm -rf *
 mv ../public/* .
