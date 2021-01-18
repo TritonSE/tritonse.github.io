@@ -27,9 +27,10 @@ export default ({
     'VP Projects': 4,
     'VP Design': 5,
     'Outreach Lead': 6,
-    'Project Manager': 7,
-    'Developer': 8,
+    'Marketing Lead': 7,
+    'Project Manager': 8,
     'UI/UX Designer': 9,
+    'Developer': 10,
   };
   // Member information is stored in data.allTseMembers
   // This is fetched using a GraphQL query that maps to the tritonse-source-firestore plugin
