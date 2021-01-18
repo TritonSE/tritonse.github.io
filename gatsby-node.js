@@ -86,6 +86,11 @@ exports.sourceNodes = async ({
     if (content.image != null) {
       const file_nodes = getNodesByType('File');
       const image_node = file_nodes.find(fn => fn.relativePath === content.image);
+      if (image_node == null) {
+        console.error("Could not find image for member:")
+        console.error(content)
+        continue
+      }
       content.image___NODE = image_node.id;
       delete content.image;
     }
