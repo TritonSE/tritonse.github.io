@@ -30,11 +30,11 @@ const winnersFA20SocialEvent = [
 const winnersFA20DesignWorkshop = [
   [
     {
-      name: 'Dhanush Reddy',
+      name: 'Dhanush Nanjunda Reddy',
       position: 'Developer'
     },
     {
-      name: 'Nick La Polla',
+      name: 'Nicolas La Polla',
       position: 'Developer'
     },
     {
@@ -65,7 +65,7 @@ const winnersFA20AllHands2 = [
       position: 'Project Manager'
     },
     {
-      name: 'Dhanush Reddy',
+      name: 'Dhanush Nanjunda Reddy',
       position: 'Developer'
     },
     {
@@ -185,7 +185,7 @@ export const query = graphql `
         }
       }
     }
-    anonTseMember: file(relativePath: { eq: "members/Anonymous.jpg" }) {
+    anonTseMember: file(relativePath: { eq: "members/Anonymous.png" }) {
       ...FluidImage
     }
   }
