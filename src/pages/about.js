@@ -34,7 +34,7 @@ export default ({
   };
   // Member information is stored in data.allTseMembers
   // This is fetched using a GraphQL query that maps to the tritonse-source-firestore plugin
-  let members = data.allTseMembers.edges
+  const members = data.allTseMembers.edges
     .sort((a, b) => (priorities[a.node.role] - priorities[b.node.role] || a.node.name.localeCompare(b.node.name)))
     .map((value) => (
       <div key={`${value.node.name}`} className="col l2 m4 s6 center">
@@ -49,12 +49,12 @@ export default ({
       </div>
     </div>
     ));
-  let history_left = (
+  const history_left = (
     <div className="col l6 s12">
       <Img fluid={data.programming.childImageSharp.fluid} className="tse-generic-image tse-highlight-image"></Img>
     </div>
   );
-  let history_right = (
+  const history_right = (
     <div className="col l6 s12">
       <p className="tse-text-medium">In Spring of 2017, a group of passionate students banded together to form Triton Software Engineering. They saw a huge problem: nonprofits had little to no resources to procure professional web and technical development services. By providing a venue for both student engineers and nonprofits to connect, they hoped to foster growth in both social good and technical expertise.</p>
       <p className="tse-text-medium">We believe that technology should be utilized to better the community. Something as simple as a sleek, static, and easy-to-use website or as complicated as  a mobile app to track donations to your organizations can have a huge impact on an organization of any size. Let us help you help the community.</p>

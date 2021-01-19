@@ -1,0 +1,22 @@
+{
+  "activity": "SP20 Codewords Winners",
+  "ordering": 0,
+  "winners": [
+    {
+      "name": "David Cruz",
+      "position": "Project Manager"
+    },
+    {
+      "name": "Ryan Bui",
+      "position": "Developer"
+    },
+    {
+      "name": "Shravan Hariharan",
+      "position": "Developer"
+    },
+    {
+      "name": "Thomas Li",
+      "position": "Developer"
+    }
+  ]
+}

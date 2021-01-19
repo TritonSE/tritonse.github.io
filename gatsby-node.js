@@ -54,10 +54,10 @@ exports.sourceNodes = async ({
 
   // These "documents" used to be stored in Firebase's Cloud Firestore
   // One document = one JSON file => the ID is the filename - the extension
-  let activity = reporter.activityTimer(`read project, member, applications metadata`);
+  let activity = reporter.activityTimer(`read metadata`);
   activity.start();
   const documents = [];
-  for (const type of ["Applications", "Members", "Projects"]) {
+  for (const type of ["Applications", "Members", "Projects", "Winners"]) {
     const typepath = path.join(__dirname, "src", "data", type.toLowerCase());
     for (const filename of fs.readdirSync(typepath)) {
       const filepath = path.join(typepath, filename);
@@ -77,7 +77,7 @@ exports.sourceNodes = async ({
   activity.end();
 
   // Resolve each document into a Gatsby node
-  activity = reporter.activityTimer(`load project, member, applications images`);
+  activity = reporter.activityTimer(`load images from metadata`);
   activity.start();
   for (const [type, doc] of documents) {
     const content = {

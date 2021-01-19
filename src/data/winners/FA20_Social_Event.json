@@ -1,0 +1,18 @@
+{
+  "activity": "FA20 Trivia Winners",
+  "ordering": 4,
+  "winners": [
+    {
+      "name": "Justin Yao Du",
+      "position": "Developer"
+    },
+    {
+      "name": "Kelly Li",
+      "position": "UI/UX Designer"
+    },
+    {
+      "name": "Viren Abhyankar",
+      "position": "VP External"
+    }
+  ]
+}
