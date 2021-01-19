@@ -4,5 +4,6 @@
   "image": "projects/IHC_EMR_App.jpg",
   "title": "IHC Tablet EMR Application",
   "github": "https://github.com/TritonSE/ihc-emr",
-  "overview": "Triton Software Engineering has paired up with the International Health Collective (IHC) to create an EMR for Clinica Innovadores deIHC, a local health clinic in Tijuana, in order to help them efficiently manage their patients' medical records. Our application will aid volunteers in guiding patients through the process of their check ups."
+  "overview": "Triton Software Engineering has paired up with the International Health Collective (IHC) to create an EMR for Clinica Innovadores deIHC, a local health clinic in Tijuana, in order to help them efficiently manage their patients' medical records. Our application will aid volunteers in guiding patients through the process of their check ups.",
+  "tag": "ihc-emr-app"
 }

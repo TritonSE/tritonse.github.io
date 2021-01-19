@@ -18,6 +18,7 @@ exports.createPages = async ({
         edges {
           node {
             id
+            tag
           }
         }
       }
@@ -26,10 +27,10 @@ exports.createPages = async ({
   result.data.allTseProjects.edges.forEach(({
     node
   }) => {
-    const activity = reporter.activityTimer(`generate page /project/${node.id}`);
+    const activity = reporter.activityTimer(`generate page /project/${node.tag}`);
     activity.start();
     createPage({
-      path: `project/${node.id}`,
+      path: `project/${node.tag}`,
       component: path.resolve(`./src/templates/project.js`),
       context: {
         id: node.id
