@@ -4,5 +4,6 @@
   "title": "Key Conservation: Skilled Impact",
   "ongoing": true,
   "overview": "TSE is collaborating with Key Conservation and Lambda School Labs to help build a social network for volunteers and philanthropists. We're expanding the Key Conservation app to allow supporters to build a resumé of their skills and past volunteer experience, and to allow conservationist organizations to find skilled help for their campaigns. From their Android or iOS devices, supporters can follow campaigns they're interested in, advertise their skills, and apply to organizations looking for skilled help. From the same app, conservationist organizations can share their progress, post applications, and review candidates. We're excited to help both volunteers and nonprofits further their positive impact on society's most urgent needs. Our application is built with Node + Express + Postgres comprising our backend and React Native + Redux on the frontend.",
-  "image": "projects/KC_Skilled_Impact_App.png"
+  "image": "projects/KC_Skilled_Impact_App.png",
+  "tag": "kc-skilled-impact-app"
 }

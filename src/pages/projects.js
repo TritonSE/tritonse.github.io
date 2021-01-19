@@ -25,7 +25,7 @@ export default ({
         <div className="col l4 s12">
           <Img fluid={value.node.image.childImageSharp.fluid} className="tse-project-image"></Img>
           <div className="tse-project-title center">
-            <Link to={`/project/${value.node.id}`} className="link-text-color tse-text-large"><b className="tse-project-link-blue">{value.node.title}</b></Link>
+            <Link to={`/project/${value.node.tag}`} className="link-text-color tse-text-large"><b className="tse-project-link-blue">{value.node.title}</b></Link>
           </div>
           <p className="tse-text-medium navy-text">{condense(value.node.subtitle, 250)}</p>
         </div>
@@ -34,14 +34,14 @@ export default ({
   };
   // Project information is stored in data.allTseProjects
   // This is fetched using a GraphQL query that maps to the tritonse-source-firestore plugin
-  let ongoing_projects = data.allTseProjects.edges
+  const ongoing_projects = data.allTseProjects.edges
     .filter((value) => {
       return value.node.ongoing
     })
     .map((value) => {
       return get_project_html(value);
     });
-  let completed_projects = data.allTseProjects.edges
+  const completed_projects = data.allTseProjects.edges
     .filter((value) => {
       return !value.node.ongoing
     })
@@ -83,7 +83,7 @@ export const query = graphql `
     allTseProjects {
       edges {
         node {
-          id
+          tag
           title
           subtitle
           ongoing

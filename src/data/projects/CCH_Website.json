@@ -4,5 +4,6 @@
   "image": "projects/CCH_Website.jpg",
   "overview": "The Center for Community Health is an organization working to improve access to fresh, healthy, and affordable food through their Live Well Community Market Program. They are currently doing this by assessing markets through a paper form and then calculating a level for each market by hand. Markets that provide healthier options have higher scores than those with lower markets. CCH then gives rewards to markets who are doing well (have a higher level) in order to incentivize markets with lower levels to provide healthier options to their community. Because the surveys are taken on paper and the calculations are done by hand, the process is tedious and prone to error. Our team is building an online market assessment tool so that the process is more efficient and accurate. After filling out the online form, users will be able to have immediate access to the level of the market. Users will also be able to visualize data of markets that have already been assessed with graphs and pie charts. This will help CCH analyze what areas of San Diego have healthier markets, so that they can easily see what areas need more development when working on improving access to healthy and affordable food.",
   "ongoing": false,
-  "title": "CCH Community Markets"
+  "title": "CCH Community Markets",
+  "tag": "cch-website"
 }

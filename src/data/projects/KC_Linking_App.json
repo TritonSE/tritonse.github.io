@@ -4,5 +4,6 @@
   "image": "projects/KC_Linking_App.jpg",
   "github": "https://github.com/Lambda-School-Labs/key-conservation-mobile",
   "title": "Key Conservation: Linking",
-  "ongoing": true
+  "ongoing": true,
+  "tag": "kc-linking-app"
 }

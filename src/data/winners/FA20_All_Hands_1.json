@@ -1,0 +1,18 @@
+{
+  "activity": "FA20 Family Feud Winners",
+  "ordering": 1,
+  "winners": [
+    {
+      "name": "Amrit Singh",
+      "position": "Project Manager"
+    },
+    {
+        "name": "Mylinh Lac",
+        "position": "UI/UX Designer"
+    },
+    {
+      "name": "Nirmal Agnihotri",
+      "position": "Developer"
+    }
+  ]
+}
