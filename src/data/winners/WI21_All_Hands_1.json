@@ -1,0 +1,26 @@
+{
+  "activity": "WI21 Secret Hitler Winners",
+  "ordering": 6,
+  "winners": [
+    {
+      "name": "Emmanuel Flores",
+      "position": "Developer"
+    },
+    {
+      "name": "Anshul Birla",
+      "position": "Developer"
+    },
+    {
+      "name": "Thomas Garry",
+      "position": "Developer"
+    },
+    {
+      "name": "Ly Nguyen",
+      "position": "Developer"
+    },
+    {
+      "name": "Aksharan Saravanan",
+      "position": "Developer"
+    }
+  ]
+}
