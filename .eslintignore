@@ -1,3 +1,4 @@
-# Build artifacts
+.cache
 build
 public
+node_modules

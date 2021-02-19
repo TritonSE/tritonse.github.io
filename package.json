@@ -1,8 +1,8 @@
 {
   "name": "tritonse.github.io",
-  "private": true,
   "version": "1.0.0",
   "author": "Triton Software Engineering <tse@ucsd.edu>",
+  "private": true,
   "dependencies": {
     "font-awesome": "^4.7.0",
     "gatsby": "^2.32.4",
