@@ -21,7 +21,7 @@ jobs:
           environment:
             NODE_TLS_REJECT_UNAUTHORIZED: 0
       - persist_to_workspace:
-          root: ~
+          root: ~/
           paths:
             - tmp
   deploy: 
