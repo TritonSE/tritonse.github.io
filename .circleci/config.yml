@@ -60,7 +60,7 @@ jobs:
           command: sshpass -e scp -o StrictHostKeyChecking=no -r . tse@acsweb.ucsd.edu:public_html
 workflows:
   version: 2
-  build-deploy:
+  lint-build-deploy:
     jobs:
       # Linting occurs on all branches
       - lint
