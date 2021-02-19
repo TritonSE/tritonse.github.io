@@ -1,12 +1,14 @@
-let path = require('path');
+let path = require("path");
 
 module.exports = {
   siteMetadata: {
     title: "Triton Software Engineering",
-    description: "Organization at UCSD that partners with nonprofits to develop applications for social good",
+    description:
+      "Organization at UCSD that partners with nonprofits to develop applications for social good",
     author: "David Hacker"
   },
-  plugins: [{
+  plugins: [
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `gatsby-starter-default`,
@@ -15,8 +17,8 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/tse-favicon.png`,
-      },
+        icon: `src/images/tse-favicon.png`
+      }
     },
     {
       resolve: `gatsby-source-filesystem`,
@@ -29,5 +31,5 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`
-  ],
-}
+  ]
+};

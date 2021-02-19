@@ -1,43 +1,44 @@
-import React from "react"
-import {
-  graphql
-} from 'gatsby'
-import Img from 'gatsby-image'
-import SEO from "../components/seo.js"
-import Navbar from "../components/navbar.js"
-import Divider from "../components/divider.js"
-import Footer from "../components/footer.js"
-import {
-  condense
-} from '../util/styling.js'
-import '../styles/header.css'
-import '../styles/pages.css'
-import '../../node_modules/materialize-css/dist/css/materialize.min.css'
+import React from "react";
+import { graphql } from "gatsby";
+import Img from "gatsby-image";
+import SEO from "../components/seo.js";
+import Navbar from "../components/navbar.js";
+import Divider from "../components/divider.js";
+import Footer from "../components/footer.js";
+import { condense } from "../util/styling.js";
+import "../styles/header.css";
+import "../styles/pages.css";
+import "../../node_modules/materialize-css/dist/css/materialize.min.css";
 
-export default ({
-  data
-}) => {
+export default ({ data }) => {
   let project = data.tseProjects;
   let jumbo_left = (
     <div className="col l6 s12">
       <h2 className="white-text">{project.title}</h2>
       <h5 className="white-text">{condense(project.subtitle, 250)}</h5>
       <div class="tse-header-buttons white-text">
-        <a className="waves-effect waves-light btn-large navy" href={project.github}>
+        <a
+          className="waves-effect waves-light btn-large navy"
+          href={project.github}
+        >
           Visit Our GitHub
           <i className="material-icons right">code</i>
         </a>
       </div>
-    </div>);
+    </div>
+  );
   let jumbo_right = (
     <div className="col l6 s12">
-      <Img fluid={project.image.childImageSharp.fluid} className="tse-project-template-image tse-highlight-image"></Img>
+      <Img
+        fluid={project.image.childImageSharp.fluid}
+        className="tse-project-template-image tse-highlight-image"
+      ></Img>
     </div>
   );
   return (
     <div>
-      <SEO title={project.title}/>
-      <Navbar gradient={true}/>
+      <SEO title={project.title} />
+      <Navbar gradient={true} />
       <div className="tse-header-project tse-header-gradient">
         <div className="container">
           <div className="row valign-wrapper hide-on-med-and-down">
@@ -51,15 +52,23 @@ export default ({
         </div>
       </div>
       <div class="container">
-        <Divider title="What's This Project About?" subtitle="OVERVIEW" textColor="navy-text" lineColor="tse-divider-line-dark-yellow"/>
-        <p className="tse-text-medium navy-text" dangerouslySetInnerHTML={{__html: project.overview}}/>
+        <Divider
+          title="What's This Project About?"
+          subtitle="OVERVIEW"
+          textColor="navy-text"
+          lineColor="tse-divider-line-dark-yellow"
+        />
+        <p
+          className="tse-text-medium navy-text"
+          dangerouslySetInnerHTML={{ __html: project.overview }}
+        />
       </div>
-      <Footer/>
+      <Footer />
     </div>
-  )
-}
+  );
+};
 
-export const query = graphql `
+export const query = graphql`
   query($id: String!) {
     tseProjects(id: { eq: $id }) {
       title
@@ -71,4 +80,4 @@ export const query = graphql `
       }
     }
   }
-`
+`;

@@ -1,0 +1,9 @@
+# Not JS related
+.circleci
+.github
+
+# Build artifacts
+.cache
+build
+public
+node_modules

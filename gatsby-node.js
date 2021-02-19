@@ -1,17 +1,9 @@
-const path = require(`path`)
-const fs = require(`fs`)
-const {
-  createRemoteFileNode,
-} = require('gatsby-source-filesystem');
+const path = require(`path`);
+const fs = require(`fs`);
+const { createRemoteFileNode } = require("gatsby-source-filesystem");
 
-exports.createPages = async ({
-  graphql,
-  actions,
-  reporter
-}) => {
-  const {
-    createPage
-  } = actions
+exports.createPages = async ({ graphql, actions, reporter }) => {
+  const { createPage } = actions;
   const result = await graphql(`
     query {
       allTseProjects {
@@ -23,22 +15,22 @@ exports.createPages = async ({
         }
       }
     }
-  `)
-  result.data.allTseProjects.edges.forEach(({
-    node
-  }) => {
-    const activity = reporter.activityTimer(`generate page /project/${node.tag}`);
+  `);
+  result.data.allTseProjects.edges.forEach(({ node }) => {
+    const activity = reporter.activityTimer(
+      `generate page /project/${node.tag}`
+    );
     activity.start();
     createPage({
       path: `project/${node.tag}`,
       component: path.resolve(`./src/templates/project.js`),
       context: {
         id: node.id
-      },
-    })
+      }
+    });
     activity.end();
-  })
-}
+  });
+};
 
 exports.sourceNodes = async ({
   actions,
@@ -49,9 +41,7 @@ exports.sourceNodes = async ({
   createContentDigest,
   getNodesByType
 }) => {
-  const {
-    createNode,
-  } = actions;
+  const { createNode } = actions;
 
   // These "documents" used to be stored in Firebase's Cloud Firestore
   // One document = one JSON file => the ID is the filename - the extension
@@ -67,12 +57,15 @@ exports.sourceNodes = async ({
         continue;
       }
       const id = path.parse(filename).name;
-      const strdata = fs.readFileSync(filepath, 'utf8');
+      const strdata = fs.readFileSync(filepath, "utf8");
       const data = JSON.parse(strdata);
-      documents.push([type, {
-        id,
-        data
-      }])
+      documents.push([
+        type,
+        {
+          id,
+          data
+        }
+      ]);
     }
   }
   activity.end();
@@ -85,11 +78,15 @@ exports.sourceNodes = async ({
       ...doc.data
     };
     if (content.image != null) {
-      const file_nodes = getNodesByType('File');
-      const image_node = file_nodes.find(fn => fn.relativePath === content.image);
+      const file_nodes = getNodesByType("File");
+      const image_node = file_nodes.find(
+        fn => fn.relativePath === content.image
+      );
       if (image_node == null) {
-        console.error(`Could not find image for member: ${JSON.stringify(content)}`)
-        continue
+        console.error(
+          `Could not find image for member: ${JSON.stringify(content)}`
+        );
+        continue;
       }
       content.image___NODE = image_node.id;
       delete content.image;
@@ -101,8 +98,8 @@ exports.sourceNodes = async ({
       internal: {
         type: `Tse${type}`,
         content: JSON.stringify(content),
-        contentDigest: createContentDigest(content),
-      },
+        contentDigest: createContentDigest(content)
+      }
     });
     createNode(node);
   }

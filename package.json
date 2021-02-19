@@ -1,7 +1,6 @@
 {
   "name": "tritonse.github.io",
   "private": true,
-  "description": "The main website for UCSD's Triton Software Engineering club",
   "version": "1.0.0",
   "author": "Triton Software Engineering <tse@ucsd.edu>",
   "dependencies": {
@@ -34,17 +33,17 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "start": "npm run develop",
-    "format": "prettier --write \"src/**/*.js\"",
-    "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
+    "lint": "npx prettier --check \"**/*.js\"",
+    "prettify": "npx prettier --write \"**/*.js\""
   },
   "devDependencies": {
-    "prettier": "^1.19.1"
+    "prettier": "1.19.1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/tritonse/website"
+    "url": "https://github.com/tritonse/tritonse.github.io"
   },
   "bugs": {
-    "url": "https://github.com/tritonse/website/issues"
+    "url": "https://github.com/tritonse/tritonse.github.io/issues"
   }
 }

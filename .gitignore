@@ -1,7 +1,3 @@
-# Firebase
-firebase-key.json
-plugins/**/node_modules
-
 # Logs
 logs
 *.log
