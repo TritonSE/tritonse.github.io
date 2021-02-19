@@ -13,6 +13,9 @@ jobs:
           name: Installing latest version of NPM
           command: 'sudo npm install -g npm@latest'
       - run:
+          name: Printing current directory
+          command: 'pwd'
+      - run:
           name: Installing website dependencies
           command: npm install
       - run: 
