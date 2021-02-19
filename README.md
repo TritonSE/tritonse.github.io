@@ -1,6 +1,6 @@
 # TSE Website 
 
-[![CircleCI](https://circleci.com/gh/TritonSE/tritonse.github.io.svg?style=shield)](https://circleci.com/gh/TritonSE/tritonse.github.io)
+[![CircleCI](https://circleci.com/gh/TritonSE/tritonse.github.io.svg?style=shield)](https://app.circleci.com/pipelines/github/TritonSE/tritonse.github.io)
 
 This repository contains both:
   1. The source code used to build our website 
