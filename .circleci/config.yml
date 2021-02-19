@@ -28,7 +28,7 @@ jobs:
     executor: tmp-executor
     steps: 
       - attach_workspace:
-        at: /tmp/tritonse.github.io
+          at: ~/tmp/tritonse.github.io
       - run:
           name: Installing deployment dependencies
           command: sudo apt-get install sshpass
