@@ -1,7 +1,7 @@
 version: 2.1
 executors:
   tmp-executor:
-    working_directory: ~/tmp
+    working_directory: /tmp
     docker: 
       - image: circleci/node:12
 jobs: 
@@ -21,14 +21,15 @@ jobs:
           environment:
             NODE_TLS_REJECT_UNAUTHORIZED: 0
       - persist_to_workspace:
-          root: ~/
+          root: .
           paths:
-            - tmp
+            - public/
   deploy: 
     executor: tmp-executor
     steps: 
+      - checkout
       - attach_workspace:
-          at: ~/tmp
+          at: /tmp
       - run:
           name: Installing deployment dependencies
           command: sudo apt-get install sshpass
