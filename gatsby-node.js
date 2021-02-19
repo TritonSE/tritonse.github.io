@@ -1,6 +1,5 @@
 const path = require(`path`);
 const fs = require(`fs`);
-const { createRemoteFileNode } = require("gatsby-source-filesystem");
 
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions;

@@ -2,7 +2,6 @@ import React from "react";
 import { Link, graphql } from "gatsby";
 import Img from "gatsby-image";
 import SEO from "../components/seo.js";
-import Navbar from "../components/navbar.js";
 import Header from "../components/header.js";
 import Divider from "../components/divider.js";
 import Footer from "../components/footer.js";

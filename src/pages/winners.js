@@ -5,7 +5,6 @@ import "../styles/animated/animated.min.css";
 
 import Matrix from "../components/matrix";
 import Winners from "../components/winners";
-import Footer from "../components/footer.js";
 
 export default ({ data }) => {
   const events = [];

@@ -4,7 +4,8 @@ function initMaterialize() {
   window.Waves.displayEffect();
   document.addEventListener("DOMContentLoaded", function() {
     var elems = document.querySelectorAll("select");
-    var instances = M.FormSelect.init(elems, options);
+    /* global M */
+    M.FormSelect.init(elems, {});
   });
 }
 

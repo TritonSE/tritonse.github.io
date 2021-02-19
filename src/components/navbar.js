@@ -13,6 +13,7 @@ class Navbar extends React.Component {
     let options = {
       coverTrigger: false
     };
+    /* global M */
     M.Dropdown.init(dropdown, options);
   }
 
