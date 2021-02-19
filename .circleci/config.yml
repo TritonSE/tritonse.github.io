@@ -1,6 +1,6 @@
 version: 2 
 jobs: 
-  deploy: 
+  build:
     working_directory: ~/website
     docker: 
       - image: circleci/node:12
@@ -20,6 +20,11 @@ jobs:
           command: npm run-script build 
           environment:
             NODE_TLS_REJECT_UNAUTHORIZED: 0
+  deploy: 
+    working_directory: ~/website
+    docker: 
+      - image: circleci/node:12
+    steps: 
       - add_ssh_keys:
           fingerprints:
             - "f3:c6:13:c0:cd:b7:4f:4f:e4:b2:e5:8c:48:74:3a:9a"
@@ -34,9 +39,15 @@ jobs:
           command: sshpass -e scp -o StrictHostKeyChecking=no -r . tse@acsweb.ucsd.edu:public_html
 workflows:
   version: 2
-  website:
+  build-deploy:
     jobs:
+      - build:
+          filters:
+            branches:
+              only: main
       - deploy:
+          requires:
+            - build
           filters:
             branches:
               only: main
