@@ -13,9 +13,6 @@ jobs:
           name: Installing latest version of NPM
           command: 'sudo npm install -g npm@latest'
       - run:
-          name: Printing current directory
-          command: 'pwd'
-      - run:
           name: Installing website dependencies
           command: npm install
       - run: 
@@ -24,14 +21,14 @@ jobs:
           environment:
             NODE_TLS_REJECT_UNAUTHORIZED: 0
       - persist_to_workspace:
-          root: tritonse.github.io
+          root: ~
           paths:
-            - .
+            - tmp
   deploy: 
     executor: tmp-executor
     steps: 
       - attach_workspace:
-          at: ~/tmp/tritonse.github.io
+          at: ~/tmp
       - run:
           name: Installing deployment dependencies
           command: sudo apt-get install sshpass
