@@ -50,6 +50,16 @@ export default ({ data }) => {
           lineColor="tse-divider-line-dark-yellow"
         />
       </div>
+
+      <div className="navy">
+        <div className="container">
+          <div className="tse-padding-medium"></div>
+          <h5 className="white-text">We thank all of our alumni for the hard work & dedication that they have poured into TSE throughout their time at UCSD. Listed below is each member, their graduation year and the highest position they have held within the organization.</h5>
+          <div className="tse-padding-medium"></div>
+        </div>
+      </div>
+      <div className="tse-padding-medium"></div>
+
       {elements}
       <Footer />
     </div>
