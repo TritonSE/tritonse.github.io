@@ -68,13 +68,6 @@ export default ({ data }) => {
         }
         background="tse-header-laptop"
       />
-      {/*<div className="navy">
-      *<div className="container">
-        <Divider subtitle="OUR MISSION" textColor="white-text" lineColor="tse-divider-line-dark-yellow"/>
-        <h5 className="white-text tse-mission"><b>"Triton Software Engineering (TSE) is a multidisciplinary student organization at UC San Diego. We partner with nonprofits to design and develop software, websites and mobile applications pro-bono for <span className="dark-yellow-text">social good</span>, while giving our developers <span className="dark-yellow-text">practical, real world experience</span>."</b></h5>
-      </div>
-    <div className="tse-padding-medium"></div>
-    </div>*/}
       <div className="container" id="history">
         <Divider
           title="Strong Mind, Stronger Heart"
@@ -99,7 +92,18 @@ export default ({ data }) => {
           textColor="navy-text"
           lineColor="tse-divider-line-dark-yellow"
         />
-        <Members members={data.allTseMembers.edges} />
+        <Members
+          members={data.allTseMembers.edges.filter(m => m.node.alumni === -1)}
+        />
+      </div>
+      <div className="container center" id="alumni">
+        <span>
+          To find more about our past members, please visit{" "}
+          <Link to="/alumni" className="navy-text underline">
+            <u>our alumni section</u>
+          </Link>
+          .
+        </span>
       </div>
       <Footer />
     </div>
@@ -116,6 +120,7 @@ export const query = graphql`
           image {
             ...FluidImage
           }
+          alumni
         }
       }
     }
