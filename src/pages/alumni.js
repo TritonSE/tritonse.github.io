@@ -1,6 +1,5 @@
 import React from "react";
-import { Link, graphql } from "gatsby";
-import Img from "gatsby-image";
+import { graphql } from "gatsby";
 import SEO from "../components/seo.js";
 import Navbar from "../components/navbar.js";
 import Divider from "../components/divider.js";
@@ -15,28 +14,34 @@ export default ({ data }) => {
   data.allTseMembers.edges.forEach(member => {
     if (member.node.alumni in classes) {
       classes[member.node.alumni].push(member);
-    }
-    else {
+    } else {
       classes[member.node.alumni] = [member];
     }
   });
   const elements = [];
-  Object.keys(classes).sort().reverse().forEach(function(year) {
-    if (year === "-1" || year === -1) {
-      return;
-    }
-    const members = classes[year];
-    elements.push((<div className="container">
-      <h5>Class of <b>{year}</b></h5>
-      <div className="tse-separation-small"></div>
-      <Members members={members}/>
-      <div className="tse-separation-medium"></div>
-    </div>));
-  });
+  Object.keys(classes)
+    .sort()
+    .reverse()
+    .forEach(function(year) {
+      if (year === "-1" || year === -1) {
+        return;
+      }
+      const members = classes[year];
+      elements.push(
+        <div className="container">
+          <h5>
+            Class of <b>{year}</b>
+          </h5>
+          <div className="tse-separation-small"></div>
+          <Members members={members} />
+          <div className="tse-separation-medium"></div>
+        </div>
+      );
+    });
   return (
     <div>
       <SEO title="Alumni" />
-      <Navbar/>
+      <Navbar />
       <div className="container">
         <Divider
           title={<span>Who Did What?</span>}
