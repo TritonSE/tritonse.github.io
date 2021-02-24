@@ -5,47 +5,12 @@ import SEO from "../components/seo.js";
 import Header from "../components/header.js";
 import Divider from "../components/divider.js";
 import Footer from "../components/footer.js";
-import { gridify } from "../util/styling.js";
+import Members from "../components/members.js";
 import "../styles/pages.css";
 import "../styles/colors.css";
 import "../../node_modules/materialize-css/dist/css/materialize.min.css";
 
 export default ({ data }) => {
-  const priorities = {
-    President: 0,
-    "VP Operations": 1,
-    "VP External": 2,
-    "VP Technology": 3,
-    "VP Projects": 4,
-    "VP Design": 5,
-    "Outreach Lead": 6,
-    "Marketing Lead": 7,
-    "Project Manager": 8,
-    "UI/UX Designer": 9,
-    Developer: 10
-  };
-  // Member information is stored in data.allTseMembers
-  // This is fetched using a GraphQL query that maps to the tritonse-source-firestore plugin
-  const members = data.allTseMembers.edges
-    .sort(
-      (a, b) =>
-        priorities[a.node.role] - priorities[b.node.role] ||
-        a.node.name.localeCompare(b.node.name)
-    )
-    .map(value => (
-      <div key={`${value.node.name}`} className="col l2 m4 s6 center">
-        <div>
-          <Img
-            fluid={value.node.image.childImageSharp.fluid}
-            className="tse-profile-image"
-          ></Img>
-        </div>
-        <div className="tse-profile-name">
-          <b>{value.node.name}</b>
-        </div>
-        <div className="tse-profile-role">{value.node.role}</div>
-      </div>
-    ));
   const history_left = (
     <div className="col l6 s12">
       <Img
@@ -134,7 +99,7 @@ export default ({ data }) => {
           textColor="navy-text"
           lineColor="tse-divider-line-dark-yellow"
         />
-        {gridify(members, 6)}
+        <Members members={data.allTseMembers.edges} />
       </div>
       <Footer />
     </div>
