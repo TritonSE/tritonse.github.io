@@ -1,0 +1,38 @@
+{
+  "activity": "WI21 One Night Werewolf Winners",
+  "ordering": 7,
+  "winners": [
+    {
+      "name": "William Wu",
+      "position": "Developer"
+    },
+    {
+      "name": "Wesley Chen",
+      "position": "President"
+    },
+    {
+      "name": "Viren Abhyankar",
+      "position": "VP External"
+    },
+    {
+      "name": "Sara Blumin",
+      "position": "Developer"
+    },
+    {
+      "name": "Patrick Brown",
+      "position": "Developer"
+    },
+    {
+      "name": "Ly Nguyen",
+      "position": "Developer"
+    },
+    {
+      "name": "David Hacker",
+      "position": "VP Technology"
+    },
+    {
+      "name": "Allison Bhavsar",
+      "position": "Developer"
+    }
+  ]
+}
