@@ -2,7 +2,6 @@ import React from "react";
 import PropTypes from "prop-types";
 import Helmet from "react-helmet";
 import { StaticQuery, graphql } from "gatsby";
-import favicon from "../../favicon.ico";
 
 function SEO({ description, lang, meta, keywords, title }) {
   return (
@@ -34,7 +33,6 @@ function SEO({ description, lang, meta, keywords, title }) {
               )
               .concat(meta)}
           >
-            <link rel="shortcut icon" href={favicon} />
             <link
               href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,700&display=swap"
               rel="stylesheet"

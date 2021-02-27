@@ -3,6 +3,7 @@ import React from "react";
 import "../styles/winners.css";
 import "../styles/animated/animated.min.css";
 
+import SEO from "../components/seo.js";
 import Matrix from "../components/matrix";
 import Winners from "../components/winners";
 
@@ -35,17 +36,20 @@ export default ({ data }) => {
   });
   events.sort((a, b) => b.ordering - a.ordering);
   return (
-    <div className="body">
-      <Matrix />
-      {events.map(event => {
-        return (
-          <Winners
-            key={event.id}
-            winners={event.winners}
-            activity={event.activity}
-          />
-        );
-      })}
+    <div>
+      <SEO title="Winners" />
+      <div className="body">
+        <Matrix />
+        {events.map(event => {
+          return (
+            <Winners
+              key={event.id}
+              winners={event.winners}
+              activity={event.activity}
+            />
+          );
+        })}
+      </div>
     </div>
   );
 };
