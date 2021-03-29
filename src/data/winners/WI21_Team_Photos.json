@@ -1,0 +1,38 @@
+{
+  "activity": "WI21 Team Photo Winners (Distribution Web App)",
+  "ordering": 8,
+  "winners": [
+    {
+      "name": "Sara Blumin",
+      "position": "Project Manager"
+    },
+    {
+      "name": "Roger Ji",
+      "position": "Developer"
+    },
+    {
+      "name": "William Wu",
+      "position": "Developer"
+    },
+    {
+      "name": "Nicolas La Polla",
+      "position": "Developer"
+    },
+    {
+      "name": "Nirmal Agnihotri",
+      "position": "Developer"
+    },
+    {
+      "name": "Ryan Bui",
+      "position": "Developer"
+    },
+    {
+      "name": "Stephen Tan",
+      "position": "Developer"
+    },
+    {
+      "name": "Emmanuel Flores",
+      "position": "Developer"
+    }
+  ]
+}
