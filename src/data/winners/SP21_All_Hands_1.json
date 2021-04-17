@@ -1,0 +1,18 @@
+{
+  "activity": "SP21 Trivia Winners",
+  "ordering": 9,
+  "winners": [
+    {
+      "name": "Justin Yao Du",
+      "position": "Developer"
+    },
+    {
+      "name": "Navid Boloorian",
+      "position": "Project Manager"
+    },
+    {
+      "name": "Tracy Nguyen",
+      "position": "UI/UX Designer"
+    }
+  ]
+}
