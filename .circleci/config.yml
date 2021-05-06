@@ -46,9 +46,6 @@ jobs:
       - run:
           name: Installing deployment dependencies
           command: 'sudo apt-get install sshpass'
-      # - add_ssh_keys:
-      #     fingerprints:
-      #       - "f3:c6:13:c0:cd:b7:4f:4f:e4:b2:e5:8c:48:74:3a:9a"
       - run: 
           name: Deploying to GitHub Pages
           command: 'sh .circleci/github_pages.sh'
