@@ -48,7 +48,7 @@ jobs:
           command: 'sudo apt-get install sshpass'
       - add_ssh_keys:
           fingerprints:
-            - "d1:9b:76:1b:e4:85:9b:fe:0f:80:9c:33:65:7f:09:04"
+            - "36:bc:a1:73:2d:81:bd:a8:17:9c:61:1e:28:84:f0:4e"
       - run: 
           name: Deploying to GitHub Pages
           command: 'sh .circleci/github_pages.sh'
