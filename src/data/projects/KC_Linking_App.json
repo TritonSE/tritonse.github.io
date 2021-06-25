@@ -1,9 +1,0 @@
-{
-  "subtitle": "We are working with Key Conservation to help conservationists gain critical funding and global support by making posts and profiles easy to access via links.",
-  "overview": "Our team is working with KeyConservation to implement a new feature on their social media app. This feature involves generating a shareable link that directs a user to a specific campaign post or an organization's profile page. This will allow sharing of posts beyond the range of in-app users as well as help promote usage of the app.",
-  "image": "projects/KC_Linking_App.jpg",
-  "github": "https://github.com/Lambda-School-Labs/key-conservation-mobile",
-  "title": "Key Conservation: Linking",
-  "ongoing": true,
-  "tag": "kc-linking-app"
-}

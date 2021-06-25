@@ -1,9 +1,0 @@
-{
-  "image": "projects/GreenPoint_App.jpg",
-  "subtitle": "We collaborated with Build It Green to develop a mobile application to help homeowners and certified GreenPoint raters to create healthy and sustainable homes. ",
-  "title": "GreenPoint Rated Application",
-  "overview": "GreenPoint Rated App is a native iOS & Android application that allows home owners and certified GreenPoint raters (trained by Build-It-Green) to together build health, energy- and resource-efficient homes. The application supports the GreenPoint Rated system which implements and recommends measures and performance benchmarks for home owners to address climate and market conditions. Home owners can upload pictures and manufacture details of their housing facilities, and GreenPoint raters will grant points to the home owners if these facilities fulfill GreenPoint requirements. Everything related to GreenPoint Rated Certification can be completed in this application.",
-  "github": "https://github.com/TritonSE/GreenPoint-Rated-App",
-  "ongoing": true,
-  "tag": "greenpoint-app"
-}

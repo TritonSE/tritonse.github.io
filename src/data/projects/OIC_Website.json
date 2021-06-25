@@ -1,9 +1,0 @@
-{
-  "github": "https://github.com/TritonSE/Innovation-Portal",
-  "image": "projects/OIC_Website.jpg",
-  "title": "OIC Web Portal",
-  "subtitle": "We collaborated with UCSD's Office of Innovation and Commercialization to develop a new online resource to aggregate programs and opportunities across campus and help connect students with other innovators. ",
-  "ongoing": false,
-  "overview": "For this project, TSE worked closely with UCSD's Office of Innovation & Commercialization (OIC) to create a website portal that would help aggregate information about university resources offered through OIC. Any OIC clients can now identify themselves as one of three available options (friends & alumni, faculty, students) and can peruse through a list of resources offered at the university, optionally filtering by criteria matching their area(s) of interest. The portal also displays a list of all the relevant items matching the filter in the form of clickable image boxes, which redirect the user to corresponding websites.<br/><br/>The portal was inspired by <a href=\"https://innovation.mit.edu/resources\" class=\"blue-text text-darken-3 tse-project-link-blue\">MIT’s own resources portal</a>. We used WordPress as the main development medium for this project. The completed website can now be found at <a href=\"https://innovation.ucsd.edu\" class=\"blue-text text-darken-3 tse-project-link-blue\">https://innovation.ucsd.edu</a>.",
-  "tag": "oic-website"
-}
