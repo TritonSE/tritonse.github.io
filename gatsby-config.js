@@ -4,14 +4,32 @@ module.exports = {
   },
   plugins: [
     "gatsby-plugin-react-helmet",
-    "gatsby-plugin-mdx",
+    {
+      resolve: "gatsby-plugin-mdx",
+      options: {
+        defaultLayouts: {
+          projectPages: require.resolve("./src/layouts/ProjectLayout.js"),
+          default: require.resolve("./src/layouts/PlainLayout.js"),
+        },
+        rehypePlugins: [
+          require("rehype-slug"),
+          [require("rehype-autolink-headings"), { behavior: "wrap" }],
+        ],
+      }
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "projectPages",
+        path: "./src/pages/projects/",
+      },
+    },
     {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "pages",
         path: "./src/pages/",
       },
-      __key: "pages",
     },
   ],
 };

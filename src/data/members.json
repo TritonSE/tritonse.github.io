@@ -1,0 +1,16 @@
+[
+  {
+    "name": "Wesley Chen",
+    "graduation_year": 2021,
+    "graduated": true,
+    "roles": ["Developer", "VP External", "President"]
+  },
+  {
+    "name": "Justin Yao Du",
+    "graduation_year": 2024,
+    "graduated": false,
+    "roles": ["Developer", "VP Technology"],
+    "github": "justinyaodu",
+    "linkedin": "justinyaodu"
+  }
+]

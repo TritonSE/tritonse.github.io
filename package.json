@@ -23,6 +23,8 @@
     "gatsby-source-filesystem": "^3.8.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "react-helmet": "^6.1.0"
+    "react-helmet": "^6.1.0",
+    "rehype-autolink-headings": "^5.1.0",
+    "rehype-slug": "^4.0.1"
   }
 }
