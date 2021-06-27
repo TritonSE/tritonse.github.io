@@ -38,7 +38,7 @@ function parsePageMetadata(data) {
       page.path.pop();
     }
 
-    page.pathname = "/" + page.path.join("/");
+    page.pathname = `/${  page.path.join("/")}`;
   }
 }
 

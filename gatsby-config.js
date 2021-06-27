@@ -38,6 +38,12 @@ module.exports = {
           "inter",
         ]
       }
-    }
+    },
+    {
+      resolve: "gatsby-plugin-eslint",
+      options: {
+        stages: ["develop"],
+      }
+    },
   ],
 };

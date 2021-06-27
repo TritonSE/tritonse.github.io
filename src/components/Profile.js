@@ -10,7 +10,7 @@ import React from "react";
  * @param {?string} props.website Website URL.
  * @param {boolean} props.centered Whether to center the content instead of left aligning.
  */
-export default function Profile({ title, subtitles, linkedin, github, website, centered = false }) {
+export default function Profile(/* { title, subtitles, linkedin, github, website, centered = false } */) {
   // Icons: https://react-icons.github.io/react-icons
   return (
     <>

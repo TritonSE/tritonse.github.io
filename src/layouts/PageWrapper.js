@@ -10,7 +10,7 @@ export default function PageWrapper({ title, children }) {
     <>
       <Helmet>
         <meta charSet="utf-8"/>
-        <title>{title ? title + " — " : ""}Triton Software Engineering</title>
+        <title>{title ? `${title  } — ` : ""}Triton Software Engineering</title>
       </Helmet>
       <Navbar/>
       <main>
