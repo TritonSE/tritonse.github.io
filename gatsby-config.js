@@ -4,6 +4,7 @@ module.exports = {
   },
   plugins: [
     "gatsby-plugin-react-helmet",
+    "gatsby-plugin-sass",
     {
       resolve: "gatsby-plugin-mdx",
       options: {
@@ -13,7 +14,6 @@ module.exports = {
         },
         rehypePlugins: [
           require("rehype-slug"),
-          [require("rehype-autolink-headings"), { behavior: "wrap" }],
         ],
       }
     },
@@ -31,5 +31,13 @@ module.exports = {
         path: "./src/pages/",
       },
     },
+    {
+      resolve: "gatsby-plugin-google-fonts",
+      options: {
+        fonts: [
+          "inter",
+        ]
+      }
+    }
   ],
 };

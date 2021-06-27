@@ -6,10 +6,12 @@ export default function RecruitmentCard() {
   // Card: https://react-bootstrap.github.io/components/cards/
   // Don't worry about the close button for now
   // Use h2 for the title
-  // Use ArrowLink for "Learn more", and link to /students
   return (
     <>
-      Recruitment card placeholder
+      <p>
+        Recruitment card placeholder
+      </p>
+      <ArrowLink to="/students">Learn more</ArrowLink>
     </>
   );
 }

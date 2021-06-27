@@ -17,14 +17,19 @@
   "dependencies": {
     "@mdx-js/mdx": "^1.6.22",
     "@mdx-js/react": "^1.6.22",
+    "bootstrap": "^5.0.2",
     "gatsby": "^3.6.2",
+    "gatsby-plugin-google-fonts": "^1.0.1",
     "gatsby-plugin-mdx": "^2.8.0",
     "gatsby-plugin-react-helmet": "^4.8.0",
+    "gatsby-plugin-sass": "^4.8.0",
     "gatsby-source-filesystem": "^3.8.0",
     "react": "^17.0.1",
+    "react-bootstrap": "^1.6.1",
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0",
-    "rehype-autolink-headings": "^5.1.0",
-    "rehype-slug": "^4.0.1"
+    "react-icons": "^4.2.0",
+    "rehype-slug": "^4.0.1",
+    "sass": "^1.35.1"
   }
 }
