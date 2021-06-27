@@ -8,7 +8,7 @@ export default function ProjectLayout({ pageContext: { frontmatter }, children, 
   const metadata = pageMetadata(data, location);
   return (
     <PageWrapper title={frontmatter.title}>
-      <TableOfContents items={metadata.tableOfContents.items || []}/>
+      <TableOfContents items={metadata.tableOfContents.items || []} />
       {/* TODO position the table of contents and page content */}
       <div>
         <header>

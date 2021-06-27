@@ -10,9 +10,5 @@ import React from "react";
  */
 export default function Profiles(/* { members, clients } */) {
   // Refer to: https://react-bootstrap.github.io/components/navs/#fill-and-justify
-  return (
-    <>
-      Profiles placeholder
-    </>
-  );
+  return <>Profiles placeholder</>;
 }

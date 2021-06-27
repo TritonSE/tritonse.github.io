@@ -9,13 +9,11 @@ export default function TableOfContents({ items }) {
   return (
     <ol>
       Table of contents placeholder
-      {
-        items.map(({ url, title }) => (
-          <li>
-            <a href={url}>{title}</a>
-          </li>
-        ))
-      }
+      {items.map(({ url, title }) => (
+        <li>
+          <a href={url}>{title}</a>
+        </li>
+      ))}
     </ol>
   );
 }

@@ -9,10 +9,8 @@ export default function ArrowLink({ to, children }) {
   // TODO fix styling
   return (
     <span>
-      <Link to={to}>
-        {children}
-      </Link>
-      <BsArrowRight/>
+      <Link to={to}>{children}</Link>
+      <BsArrowRight />
     </span>
   );
 }

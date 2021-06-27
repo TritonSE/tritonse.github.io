@@ -12,9 +12,5 @@ import React from "react";
  */
 export default function Profile(/* { title, subtitles, linkedin, github, website, centered = false } */) {
   // Icons: https://react-icons.github.io/react-icons
-  return (
-    <>
-      Profile placeholder
-    </>
-  );
+  return <>Profile placeholder</>;
 }

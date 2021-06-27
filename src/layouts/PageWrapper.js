@@ -9,14 +9,12 @@ export default function PageWrapper({ title, children }) {
   return (
     <>
       <Helmet>
-        <meta charSet="utf-8"/>
-        <title>{title ? `${title  } — ` : ""}Triton Software Engineering</title>
+        <meta charSet="utf-8" />
+        <title>{title ? `${title} — ` : ""}Triton Software Engineering</title>
       </Helmet>
-      <Navbar/>
-      <main>
-        {children}
-      </main>
-      <Footer/>
+      <Navbar />
+      <main>{children}</main>
+      <Footer />
     </>
   );
 }

@@ -4,7 +4,7 @@
  * because pages do not have access to their own GraphQL attributes, which would
  * otherwise be used to query for their own metadata. Hardcoding an attribute
  * value might work, but would be difficult to maintain.
- * 
+ *
  * The workaround implemented here makes MDX pages query every other MDX page
  * in their page queries. After getting the metadata for all pages, the location
  * prop of each page is used to find the metadata specific to each page.
@@ -38,7 +38,7 @@ function parsePageMetadata(data) {
       page.path.pop();
     }
 
-    page.pathname = `/${  page.path.join("/")}`;
+    page.pathname = `/${page.path.join("/")}`;
   }
 }
 

@@ -8,9 +8,7 @@ export default function RecruitmentCard() {
   // Use h2 for the title
   return (
     <>
-      <p>
-        Recruitment card placeholder
-      </p>
+      <p>Recruitment card placeholder</p>
       <ArrowLink to="/students">Learn more</ArrowLink>
     </>
   );

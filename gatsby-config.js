@@ -12,10 +12,8 @@ module.exports = {
           projectPages: require.resolve("./src/layouts/ProjectLayout.js"),
           default: require.resolve("./src/layouts/PlainLayout.js"),
         },
-        rehypePlugins: [
-          require("rehype-slug"),
-        ],
-      }
+        rehypePlugins: [require("rehype-slug")],
+      },
     },
     {
       resolve: "gatsby-source-filesystem",
@@ -34,16 +32,14 @@ module.exports = {
     {
       resolve: "gatsby-plugin-google-fonts",
       options: {
-        fonts: [
-          "inter",
-        ]
-      }
+        fonts: ["inter"],
+      },
     },
     {
       resolve: "gatsby-plugin-eslint",
       options: {
         stages: ["develop"],
-      }
+      },
     },
   ],
 };
