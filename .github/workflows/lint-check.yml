@@ -1,0 +1,16 @@
+name: Lint and style checks
+
+on:
+  pull_request:
+    branches: main
+
+jobs:
+  lint_check:
+    name: Lint and style check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+      - run: |
+          npm ci
+          npm run lint-check
