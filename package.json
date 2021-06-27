@@ -15,7 +15,8 @@
     "clean": "gatsby clean",
     "format": "prettier --write .",
     "lint-fix": "(eslint --fix --cache --report-unused-disable-directives . || true) && prettier --write .",
-    "lint-check": "eslint --cache --report-unused-disable-directives . && prettier --check ."
+    "lint-check": "eslint --cache --report-unused-disable-directives . && prettier --check .",
+    "prepare": "husky install .husky"
   },
   "dependencies": {
     "@mdx-js/mdx": "^1.6.22",
@@ -48,6 +49,7 @@
     "eslint-plugin-react-hooks": "^4.2.0",
     "eslint-webpack-plugin": "^2.5.4",
     "gatsby-plugin-eslint": "^3.0.0",
+    "husky": "^6.0.0",
     "prettier": "^2.3.2"
   }
 }
