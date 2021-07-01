@@ -1,0 +1,3 @@
+.UnselectableSpace::after {
+  content: " ";
+}
