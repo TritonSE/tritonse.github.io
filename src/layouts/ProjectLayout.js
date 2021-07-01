@@ -15,7 +15,6 @@ export default function ProjectLayout({ pageContext: { frontmatter }, children, 
           <h1>{frontmatter.title}</h1>
           <em>{frontmatter.subtitle}</em>
         </header>
-        <p>{location.pathname}</p>
         {children}
       </div>
     </PageWrapper>
