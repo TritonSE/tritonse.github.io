@@ -1,0 +1,16 @@
+.studentAppContainer {
+  margin: 60px;
+}
+
+.studentAppRow {
+  margin: 50px 0px;
+}
+
+.appPositionContainer {
+  padding: 8px 0px;
+}
+
+.appBtnContainer {
+  display: flex;
+  justify-content: flex-end;
+}
