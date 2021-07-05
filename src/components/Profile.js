@@ -5,12 +5,28 @@ import React from "react";
  * @param props
  * @param {string} props.title
  * @param {string[]} props.subtitles
- * @param {?string} props.linkedin LinkedIn username.
- * @param {?string} props.github GitHub username.
- * @param {?string} props.website Website URL.
- * @param {boolean} props.centered Whether to center the content instead of left aligning.
+ * @param {{ github: ?string, linkedin: ?string, website: ?string }} props.socials
+ * @param {?boolean} props.centered Whether to center the content instead of left aligning.
  */
-export default function Profile(/* { title, subtitles, linkedin, github, website, centered = false } */) {
+export default function Profile({ title, subtitles, socials /* centered = false */ }) {
   // Icons: https://react-icons.github.io/react-icons
-  return <>Profile placeholder</>;
+  return (
+    <div>
+      <strong>{title}</strong>
+      {subtitles.length && (
+        <ol>
+          {subtitles.map((subtitle) => (
+            <li>{subtitle}</li>
+          ))}
+        </ol>
+      )}
+      <ul>
+        {Object.entries(socials).map(([key, value]) => (
+          <li>
+            {key}: {value}
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
 }
