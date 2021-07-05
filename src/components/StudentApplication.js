@@ -4,6 +4,7 @@ import Form from "react-bootstrap/Form";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Button from "react-bootstrap/Button";
+import Alert from "react-bootstrap/Alert";
 
 export default function StudentApplication() {
   const [fields, setFields] = useState({
@@ -16,7 +17,13 @@ export default function StudentApplication() {
     about: "",
     reason: "",
   });
+  const [loading, setLoading] = useState(false);
   const [validated, setValidated] = useState(false);
+  const [alert, setAlert] = useState({
+    show: false,
+    variant: "",
+    message: "",
+  });
 
   function handleChange(event) {
     const fieldName = event.target.name;
@@ -24,11 +31,46 @@ export default function StudentApplication() {
     setFields({ ...fields, [fieldName]: fieldVal });
   }
 
-  function handleSubmit() {
-    setValidated(true);
+  function fakeRequest() {
+    return new Promise((resolve) => setTimeout(resolve, 2000));
   }
 
-  // Refer to: https://react-bootstrap.github.io/components/forms/
+  function handleSubmit(event) {
+    event.preventDefault();
+    setAlert({
+      show: false,
+      variant: "",
+      message: "",
+    });
+    const form = event.currentTarget;
+
+    // missing fields or invalid email
+    if (!form.checkValidity()) {
+      setValidated(true);
+      setAlert({
+        show: true,
+        variant: "danger",
+        message: "Please fill out all fields in the application.",
+      });
+      return;
+    }
+
+    setValidated(false);
+    setLoading(true);
+
+    // post field data – fake for now
+    fakeRequest().then(() => {
+      // success
+      form.reset();
+      setLoading(false);
+      setAlert({
+        show: true,
+        variant: "success",
+        message: "Submitted! Expect to hear back within a few weeks.",
+      });
+    });
+  }
+
   return (
     <div className="studentAppContainer">
       <div className="studentAppRow">
@@ -39,7 +81,7 @@ export default function StudentApplication() {
         </p>
       </div>
 
-      <Form validated={validated}>
+      <Form noValidate validated={validated} onSubmit={handleSubmit}>
         <Row className="studentAppRow">
           <Col>
             <Form.Label>Name</Form.Label>
@@ -128,11 +170,15 @@ export default function StudentApplication() {
         </Form.Group>
 
         <div className="appBtnContainer">
-          <Button type="submit" onClick={handleSubmit}>
+          <Button id="studentAppBtn" variant="custom" type="submit" disabled={loading}>
             SUBMIT
           </Button>
         </div>
       </Form>
+
+      <Alert className="studentAppAlert" show={alert.show} variant={alert.variant}>
+        {alert.message}
+      </Alert>
     </div>
   );
 }
