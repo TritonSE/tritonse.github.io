@@ -5,6 +5,10 @@ module.exports = {
   plugins: [
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sass",
+    "gatsby-plugin-image",
+    "gatsby-plugin-sharp",
+    "gatsby-transformer-sharp",
+    "gatsby-remark-images",
     {
       resolve: "gatsby-plugin-mdx",
       options: {
@@ -13,6 +17,14 @@ module.exports = {
           default: require.resolve("./src/layouts/PlainLayout.js"),
         },
         rehypePlugins: [require("rehype-slug")],
+        gatsbyRemarkPlugins: [
+          {
+            resolve: "gatsby-remark-images",
+            options: {
+              maxWidth: 1920,
+            },
+          },
+        ],
       },
     },
     {
@@ -27,6 +39,13 @@ module.exports = {
       options: {
         name: "pages",
         path: "./src/pages/",
+      },
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "images",
+        path: "./src/images/",
       },
     },
     {

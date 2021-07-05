@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "gatsby";
-import { BsArrowRight } from "react-icons/bs";
+import { BsArrowRight, BsBoxArrowUpRight } from "react-icons/bs";
 
 import "./ArrowLink.css";
 
@@ -15,11 +15,12 @@ function UnselectableSpace() {
  * Create a link with an arrow next to it.
  */
 export default function ArrowLink({ to, children }) {
+  const isExternalLink = to.includes("://");
   return (
-    <span className="ArrowLink">
-      <Link to={to}>{children}</Link>
+    <span>
+      {isExternalLink ? <a href={to}>{children}</a> : <Link to={to}>{children}</Link>}
       <UnselectableSpace />
-      <BsArrowRight />
+      {isExternalLink ? <BsBoxArrowUpRight /> : <BsArrowRight />}
     </span>
   );
 }
