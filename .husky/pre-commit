@@ -126,7 +126,7 @@ autocrlf_check() {
 }
 
 unstaged_changes_check() {
-	if git status --porcelain | grep -qv '^[MARC] '; then
+	if git status --porcelain | grep -qv '^[MARCD] '; then
 		git status
 
 		warn "The working tree has unstaged changes, which"

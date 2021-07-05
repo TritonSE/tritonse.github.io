@@ -5,6 +5,9 @@ module.exports = {
   plugins: [
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sass",
+    "gatsby-plugin-image",
+    "gatsby-plugin-sharp",
+    "gatsby-transformer-sharp",
     {
       resolve: "gatsby-plugin-mdx",
       options: {
@@ -27,6 +30,13 @@ module.exports = {
       options: {
         name: "pages",
         path: "./src/pages/",
+      },
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "images",
+        path: "./src/images/",
       },
     },
     {
