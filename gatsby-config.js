@@ -8,6 +8,7 @@ module.exports = {
     "gatsby-plugin-image",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
+    "gatsby-remark-images",
     {
       resolve: "gatsby-plugin-mdx",
       options: {
@@ -16,6 +17,14 @@ module.exports = {
           default: require.resolve("./src/layouts/PlainLayout.js"),
         },
         rehypePlugins: [require("rehype-slug")],
+        gatsbyRemarkPlugins: [
+          {
+            resolve: "gatsby-remark-images",
+            options: {
+              maxWidth: 1920,
+            },
+          },
+        ],
       },
     },
     {
