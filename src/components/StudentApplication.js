@@ -83,11 +83,11 @@ export default function StudentApplication() {
 
       <Form noValidate validated={validated} onSubmit={handleSubmit}>
         <Row className="studentAppRow">
-          <Col>
+          <Col xs={12} md={6}>
             <Form.Label>Name</Form.Label>
             <Form.Control required type="text" name="name" onChange={handleChange} />
           </Col>
-          <Col>
+          <Col xs={12} md={6}>
             <Form.Label>UCSD Email</Form.Label>
             <Form.Control required type="email" name="email" onChange={handleChange} />
           </Col>
@@ -141,19 +141,18 @@ export default function StudentApplication() {
         </fieldset>
 
         <Row className="studentAppRow">
-          <Col>
+          <Col xs={12} md={6}>
             <Form.Label>Link to Resume (PDF)</Form.Label>
             <Form.Control required name="resume" onChange={handleChange} />
           </Col>
-          <Col />
         </Row>
 
         <Row className="studentAppRow">
-          <Col>
+          <Col xs={12} md={6}>
             <Form.Label>Starting Year + Quarter</Form.Label>
             <Form.Control required type="text" name="starting" onChange={handleChange} />
           </Col>
-          <Col>
+          <Col xs={12} md={6}>
             <Form.Label>Expected Graduation Year + Quarter</Form.Label>
             <Form.Control required type="text" name="graduation" onChange={handleChange} />
           </Col>
