@@ -3,7 +3,15 @@ title: About
 ---
 
 import Profiles from "../components/Profiles";
+import TabbedInterface from "../components/TabbedInterface";
 
 <!-- TODO write page query and pass in props -->
 
 <Profiles />
+<TabbedInterface
+  profiles={[
+    { name: "members", count: "65" },
+    { name: "alumni", count: "19" },
+    { name: "clients", count: "17" },
+  ]}
+/>
