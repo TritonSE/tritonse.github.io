@@ -1,18 +1,21 @@
+# This config file is sourced by the pre-commit script.
+
 # Change 1 to 0 to disable linting.
 enabled=1
 
-# Directories containing Node.js projects to be linted.
-node_dirs=(.)
+# Directories containing Node.js projects to be linted, separated by spaces.
+node_dirs='.'
 
 # Command used to run a lint check.
-check_command=(npm run lint-check)
+check_command='npm run lint-check'
 
 # Command used to autofix lint errors.
-fix_command=(npm run lint-fix)
+fix_command='npm run lint-fix'
 
 # Search for npm in these paths if it cannot be found.
 # Needed for GitHub Desktop on Windows, since $PATH is not set properly.
-npm_fallback_paths=('/c/Program Files/nodejs')
+# Multiple paths can be separated with colons.
+fallback_nodejs_paths='/c/Program Files/nodejs'
 
 # Escape sequences for formatted output.
 format_error="$(tput setaf 3 2> /dev/null)"
