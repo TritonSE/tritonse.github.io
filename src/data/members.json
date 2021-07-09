@@ -1,16 +1,343 @@
 [
   {
+    "name": "Aaron Yang",
+    "roles": ["President"],
+    "graduationYear": 2018
+  },
+  {
+    "name": "Thomas Galpin",
+    "roles": ["VP Operations"],
+    "graduationYear": 2018
+  },
+  {
+    "name": "Belal Aboabdo",
+    "roles": ["VP External"],
+    "graduationYear": 2018
+  },
+  {
+    "name": "Khaled Ahmad",
+    "roles": ["VP Technology"],
+    "graduationYear": 2018
+  },
+  {
+    "name": "Zach Liou",
+    "roles": ["Project Manager", "VP Technology"],
+    "graduationYear": 2018
+  },
+  {
+    "name": "Donald Kwan",
+    "roles": ["Project Manager"],
+    "graduationYear": 2018
+  },
+  {
+    "name": "Joann Chen",
+    "roles": ["Developer", "Project Manager"],
+    "graduationYear": 2018
+  },
+  {
+    "name": "Gary Zhao",
+    "roles": ["Developer"],
+    "graduationYear": 2019
+  },
+  {
+    "name": "John Lu",
+    "roles": ["Developer"],
+    "graduationYear": 2019
+  },
+  {
+    "name": "Sumeet Bansal",
+    "roles": ["Developer", "Project Manager", "President"],
+    "graduationYear": 2020
+  },
+  {
+    "name": "Alex Chiu",
+    "roles": ["Developer", "Project Manager"],
+    "graduationYear": 2020
+  },
+  {
+    "name": "Bryant Liu",
+    "roles": ["Developer", "Project Manager"],
+    "graduationYear": 2020
+  },
+  {
+    "name": "Dan Huang",
+    "roles": ["Project Manager"],
+    "graduationYear": 2020
+  },
+  {
+    "name": "Glenn Raskovich",
+    "roles": ["Developer", "Project Manager"],
+    "graduationYear": 2020
+  },
+  {
+    "name": "Kenny Yi",
+    "roles": ["Developer", "Project Manager"],
+    "graduationYear": 2020
+  },
+  {
+    "name": "Winnie Chen",
+    "roles": ["UI/UX Designer"],
+    "graduationYear": 2020
+  },
+  {
+    "name": "Benson Budiman",
+    "roles": ["Developer", "VP Operations"],
+    "graduationYear": 2021
+  },
+  {
+    "name": "Ayush Shukla",
+    "roles": ["Developer", "VP External"],
+    "graduationYear": 2021
+  },
+  {
+    "name": "Jessica Nguyen",
+    "roles": ["UI/UX Designer", "VP Design"],
+    "graduationYear": 2021
+  },
+  {
     "name": "Wesley Chen",
-    "graduation_year": 2021,
-    "graduated": true,
-    "roles": ["Developer", "VP External", "President"]
+    "roles": ["Developer", "VP External", "President"],
+    "graduationYear": 2021
+  },
+  {
+    "name": "Anoushka Dave",
+    "roles": ["Developer", "VP Operations", "President"]
+  },
+  {
+    "name": "Viren Abhyankar",
+    "roles": ["Developer", "VP External"]
+  },
+  {
+    "name": "David Hacker",
+    "roles": ["Developer", "VP Technology"],
+    "graduationYear": 2021
+  },
+  {
+    "name": "Holly Ham",
+    "roles": ["Developer", "Project Manager", "VP Projects"],
+    "graduationYear": 2021
+  },
+  {
+    "name": "Mylinh Lac",
+    "roles": ["UI/UX Designer", "VP Design"],
+    "hidden": true
+  },
+  {
+    "name": "Heather Gan",
+    "roles": ["Developer", "Outreach Lead"]
+  },
+  {
+    "name": "Kelly Li",
+    "roles": ["UI/UX Designer", "Marketing Lead"]
+  },
+  {
+    "name": "Amrit Singh",
+    "roles": ["Developer", "Project Manager"]
+  },
+  {
+    "name": "Arnold Duan",
+    "roles": ["Developer", "Project Manager"],
+    "graduationYear": 2021
+  },
+  {
+    "name": "David Cruz",
+    "roles": ["Developer", "Project Manager"]
+  },
+  {
+    "name": "Hannah Hsu",
+    "roles": ["Developer", "Project Manager"],
+    "graduationYear": 2021
+  },
+  {
+    "name": "Sara Blumin",
+    "roles": ["Developer", "Project Manager"],
+    "graduationYear": 2021
+  },
+  {
+    "name": "Andrew Caballero",
+    "roles": ["UI/UX Designer"]
+  },
+  {
+    "name": "Evan Lam",
+    "roles": ["UI/UX Designer"]
+  },
+  {
+    "name": "Kenny Tran",
+    "roles": ["UI/UX Designer"]
+  },
+  {
+    "name": "Lydia Smith",
+    "roles": ["UI/UX Designer"]
+  },
+  {
+    "name": "Rachel Blumin",
+    "roles": ["UI/UX Designer"]
+  },
+  {
+    "name": "Rickie Chen",
+    "roles": ["UI/UX Designer"]
+  },
+  {
+    "name": "Tracy Nguyen",
+    "roles": ["UI/UX Designer"]
+  },
+  {
+    "name": "Aaron Kirk",
+    "roles": ["UI/UX Designer"]
+  },
+  {
+    "name": "Advay Sharma",
+    "roles": ["UI/UX Designer"]
+  },
+  {
+    "name": "Aksharan Saravanan",
+    "roles": ["Developer"]
+  },
+  {
+    "name": "Alejandro Rodriguez Pascual",
+    "roles": ["Developer"]
+  },
+  {
+    "name": "Allison Bhavsar",
+    "roles": ["Developer"]
+  },
+  {
+    "name": "Amitesh Sharma",
+    "roles": ["Developer"]
+  },
+  {
+    "name": "Anshul Birla",
+    "roles": ["Developer"]
+  },
+  {
+    "name": "Anson Lee",
+    "roles": ["Developer"],
+    "graduationYear": 2021
+  },
+  {
+    "name": "Benson Vuong",
+    "roles": ["Developer"]
+  },
+  {
+    "name": "Bobby Tatum",
+    "roles": ["Developer"]
+  },
+  {
+    "name": "Deepansha Singh",
+    "roles": ["Developer"]
+  },
+  {
+    "name": "Dhanush Nanjunda Reddy",
+    "roles": ["Developer"]
+  },
+  {
+    "name": "Dhruv Sood",
+    "roles": ["Developer"]
+  },
+  {
+    "name": "Elias Fang",
+    "roles": ["Developer"]
+  },
+  {
+    "name": "Emmanuel Flores",
+    "roles": ["Developer"]
+  },
+  {
+    "name": "Hana Kim",
+    "roles": ["Developer"]
+  },
+  {
+    "name": "Jacob Au",
+    "roles": ["Developer"]
   },
   {
     "name": "Justin Yao Du",
-    "graduation_year": 2024,
-    "graduated": false,
     "roles": ["Developer", "VP Technology"],
-    "github": "justinyaodu",
-    "linkedin": "justinyaodu"
+    "socials": { "github": "justinyaodu", "linkedin": "justinyaodu" }
+  },
+  {
+    "name": "Kevin Han",
+    "roles": ["Developer"]
+  },
+  {
+    "name": "Kunal Bhandarkar",
+    "roles": ["Developer", "VP Projects"]
+  },
+  {
+    "name": "Ly Nguyen",
+    "roles": ["Developer"]
+  },
+  {
+    "name": "Navid Boloorian",
+    "roles": ["Developer", "Project Manager"]
+  },
+  {
+    "name": "Nicholas Vanny",
+    "roles": ["Developer"]
+  },
+  {
+    "name": "Nicolas La Polla",
+    "roles": ["Developer"]
+  },
+  {
+    "name": "Nirmal Agnihotri",
+    "roles": ["Developer"]
+  },
+  {
+    "name": "Patrick Brown",
+    "roles": ["Developer"]
+  },
+  {
+    "name": "Philip Zhang",
+    "roles": ["Developer"]
+  },
+  {
+    "name": "Rohan Puthukudy",
+    "roles": ["Developer"]
+  },
+  {
+    "name": "Rohith Kasar",
+    "roles": ["Developer"]
+  },
+  {
+    "name": "Ryan Bui",
+    "roles": ["Developer"]
+  },
+  {
+    "name": "Shravan Hariharan",
+    "roles": ["Developer"]
+  },
+  {
+    "name": "Shravan Konduru",
+    "roles": ["Developer"]
+  },
+  {
+    "name": "Stephen Tan",
+    "roles": ["Developer"]
+  },
+  {
+    "name": "Thai Gillespie",
+    "roles": ["Developer"],
+    "graduationYear": 2021
+  },
+  {
+    "name": "Thomas Garry",
+    "roles": ["Developer"]
+  },
+  {
+    "name": "Upo Bhat",
+    "roles": ["Developer"]
+  },
+  {
+    "name": "William Wu",
+    "roles": ["Developer"]
+  },
+  {
+    "name": "Xi-Kai Wu",
+    "roles": ["Developer"]
+  },
+  {
+    "name": "Zain Khan",
+    "roles": ["Developer"]
   }
 ]
