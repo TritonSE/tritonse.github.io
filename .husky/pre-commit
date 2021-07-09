@@ -174,10 +174,6 @@ cancel() {
 	exit 0
 }
 
-find_npm() {
-	command -v npm > /dev/null 2>&1
-}
-
 main() {
 	config_file="$(dirname "${0}")/lint-config.sh"
 	if ! . "${config_file}"; then
@@ -194,24 +190,14 @@ main() {
 	log "Starting lint check. Use Ctrl+C to cancel."
 
 	interactive=1
-	if ! [ -e /dev/tty ] || ! exec < /dev/tty; then
+	if ! [ -c /dev/tty ] || ! true < /dev/tty; then
 		warn "Cannot open stdin. Disabling interactive prompts."
 		warn " If you are currently using a graphical Git tool,"
 		warn " consider using Git from the command line to enable"
 		warn " interactive prompts for warnings and quick fixes."
 		interactive=0
-	fi
-
-	if ! find_npm; then
-		warn 'Cannot find npm. Searching additional path(s):'
-		warn "    ${fallback_nodejs_paths}"
-		PATH="${PATH}:${fallback_nodejs_paths}"
-
-		if ! find_npm; then
-			error 'Still cannot find npm. $PATH is:'
-			error "    ${PATH}"
-			exit 1
-		fi
+	else
+		exec < /dev/tty
 	fi
 
 	dir_check

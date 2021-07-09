@@ -12,11 +12,6 @@ check_command='npm run lint-check'
 # Command used to autofix lint errors.
 fix_command='npm run lint-fix'
 
-# Search for npm in these paths if it cannot be found.
-# Needed for GitHub Desktop on Windows, since $PATH is not set properly.
-# Multiple paths can be separated with colons.
-fallback_nodejs_paths='/c/Program Files/nodejs'
-
 # Escape sequences for formatted output.
 format_error="$(tput setaf 3 2> /dev/null)"
 format_warn="$(tput setaf 1 2> /dev/null)"
