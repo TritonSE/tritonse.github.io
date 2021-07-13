@@ -1,6 +1,26 @@
 import React from "react";
 
 import Profile from "./Profile";
+import { allClients, currentMembers, alumni } from "../data";
+import { nameToFilename } from "../util/strings";
+
+function getProfilesFromCategory(category) {
+  console.log(allClients);
+  switch (category) {
+    case "members":
+      return currentMembers;
+
+    case "alumni":
+      return alumni;
+
+    case "clients":
+      // TODO fix when all client info is available
+      return currentMembers;
+
+    default:
+      return currentMembers;
+  }
+}
 
 /**
  * Tabbed interface showing members, alumni, and clients.
@@ -11,28 +31,17 @@ import Profile from "./Profile";
 export default function Profiles(props /* { members, clients } */) {
   return (
     <div className={`tab-content text-light row  ${props.display ? "d-flex" : "d-none"}`}>
-      {/* TODO: Loop through each member's info */}
-      <Profile title={props.name} subtitles={["President", "Developer"]} />
-      <Profile
-        title="Firstname Lastname"
-        subtitles={["President", "Developer"]}
-        linkedin="https//www.google.com"
-      />
-      <Profile
-        title="Firstname Lastname"
-        subtitles={["President", "Developer"]}
-        linkedin="https//www.google.com"
-      />
-      <Profile
-        title="Firstname Lastname"
-        subtitles={["President", "Developer"]}
-        linkedin="https//www.google.com"
-      />
-      <Profile
-        title="Firstname Lastname"
-        subtitles={["President", "Developer"]}
-        linkedin="https//www.google.com"
-      />
+      {
+        // creates a profile for each member/client
+        getProfilesFromCategory(props.name).map((member) => (
+          <Profile
+            imagePaths={[`members/${nameToFilename(member.name)}`, "members/anonymous"]}
+            title={member.name}
+            subtitles={member.roles.slice().reverse()}
+            socials={member.socials}
+          />
+        ))
+      }
     </div>
   );
 }

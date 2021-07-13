@@ -2,6 +2,10 @@
   cursor: pointer;
 }
 
+.tab > p {
+  font-size: 2rem;
+}
+
 .tab > hr {
   border-top: 2px solid var(--bs-dark); /*this is color bootstrap uses for dark theme*/
   border-bottom: 2px solid;

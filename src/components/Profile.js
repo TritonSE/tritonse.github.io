@@ -4,6 +4,7 @@ import { AiFillLinkedin, AiFillGithub } from "react-icons/ai";
 import { FiGlobe } from "react-icons/fi";
 
 import DynamicImage from "./DynamicImage";
+import "./Profile.css";
 
 /**
  * Display a profile picture, title, optional subtitles, and optional links.
@@ -15,44 +16,38 @@ import DynamicImage from "./DynamicImage";
  * @param {?boolean} props.centered Whether to center the content instead of left aligning.
  */
 
-// export default function Profile(
-//   props /* { title, subtitles, linkedin, github, website, centered = false } */
-// ) {
-//   // Icons: https://react-icons.github.io/react-icons
-//   return (
-//     <div className="tab-card col-sm-3 p-2">
-//       <img className="tab-image bg-secondary" />
-//       <p className="font-weight-bold">{props.title}</p>
-//       {props.subtitles.map((subtitle) => (
-//         <p>{subtitle}</p>
-//       ))}
-
-//       {props.linkedin ? <AiFillLinkedin /> : ""}
-//       {props.github ? <AiFillGithub /> : ""}
-//       {props.website ? <FiGlobe /> : ""}
 export default function Profile({ imagePaths, title, subtitles, socials /* centered = false */ }) {
   // Icons: https://react-icons.github.io/react-icons
   return (
-    <div>
-      <div style={{ maxWidth: "200px" }}>
+    <div className="tab-card col-sm-6 col-md-3 py-2 px-4 mt-5">
+      <div className="profile-image">
         <DynamicImage paths={imagePaths} alt={title} />
       </div>
-      <div>
+
+      <div className="profile-description">
         <strong>{title}</strong>
         {subtitles.length && (
-          <ol>
+          <ol className="roles-text">
             {subtitles.map((subtitle) => (
               <li>{subtitle}</li>
             ))}
           </ol>
         )}
-        <ul>
-          {Object.entries(socials).map(([key, value]) => (
-            <li>
-              {key}: {value}
-            </li>
-          ))}
-        </ul>
+        <div className="socials-container">
+          {Object.entries(socials).map(([key, value]) => {
+            switch (key) {
+              case "github":
+                return (
+                  <a target="_blank" href="https://google.com" rel="noreferrer">
+                    <AiFillGithub />
+                  </a>
+                );
+
+              case "linkedin":
+                return <AiFillLinkedin />;
+            }
+          })}
+        </div>
       </div>
     </div>
   );

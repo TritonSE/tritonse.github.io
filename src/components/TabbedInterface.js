@@ -30,7 +30,7 @@ export default function TabbedInterface({ profiles }) {
     <>
       <div className="container bg-dark">
         <div className="row py-3">
-          <h3 className="text-center text-light">We are always growing.</h3>
+          <h2 className="text-center text-light">We are always growing.</h2>
         </div>
         <div className="row pt-3">
           {profiles.map(({ name, count }) => (
@@ -42,8 +42,8 @@ export default function TabbedInterface({ profiles }) {
                 handleTabChange(name);
               }}
             >
-              <h2>{count}</h2>
-              <p>{name}</p>
+              <h1>{count}</h1>
+              <h2>{name}</h2>
               <hr />
             </div>
           ))}

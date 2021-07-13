@@ -6,6 +6,7 @@ import { DateTime } from "luxon";
 
 import allMembers from "./members.json";
 import allEvents from "./events.json";
+import allClients from "./clients.json";
 
 allMembers.forEach((member) => {
   member.socials = member.socials || {};
@@ -19,4 +20,4 @@ allEvents.forEach((event) => {
   event.startTime = DateTime.fromISO(event.startTime, { zone: "America/Los_Angeles" });
 });
 
-export { allMembers, currentMembers, alumni, allEvents };
+export { allMembers, currentMembers, alumni, allEvents, allClients };
