@@ -76,7 +76,7 @@ export default function StudentApplication() {
       <div className="studentAppRow">
         <h1>TSE Student Application</h1>
         <p>
-          Please whitelist the email address tse.recruitment.ucsd@gmail.com to prevent any
+          Please whitelist the email address tse.oktavian.ucsd@gmail.com to prevent any
           recruitment-related emails from going to spam!
         </p>
       </div>
