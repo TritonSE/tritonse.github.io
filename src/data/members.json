@@ -253,7 +253,11 @@
   {
     "name": "Justin Yao Du",
     "roles": ["Developer", "VP Technology"],
-    "socials": { "github": "justinyaodu", "linkedin": "justinyaodu" }
+    "socials": {
+      "github": "justinyaodu",
+      "linkedin": "justinyaodu",
+      "website": "https://google.com"
+    }
   },
   {
     "name": "Kevin Han",

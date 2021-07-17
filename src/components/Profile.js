@@ -16,6 +16,9 @@ import "./Profile.css";
  * @param {?boolean} props.centered Whether to center the content instead of left aligning.
  */
 
+const linkedinPrefix = "https://www.linkedin.com/in/";
+const githubPrefix = "https://github.com/";
+
 export default function Profile({ imagePaths, title, subtitles, socials /* centered = false */ }) {
   // Icons: https://react-icons.github.io/react-icons
   return (
@@ -38,13 +41,24 @@ export default function Profile({ imagePaths, title, subtitles, socials /* cente
             switch (key) {
               case "github":
                 return (
-                  <a target="_blank" href="https://google.com" rel="noreferrer">
+                  <a target="_blank" href={`${githubPrefix}/${value}`} rel="noreferrer">
                     <AiFillGithub />
                   </a>
                 );
 
               case "linkedin":
-                return <AiFillLinkedin />;
+                return (
+                  <a target="_blank" href={`${linkedinPrefix}/${value}`} rel="noreferrer">
+                    <AiFillLinkedin />
+                  </a>
+                );
+
+              case "website":
+                return (
+                  <a target="_blank" href={`${value}`} rel="noreferrer">
+                    <FiGlobe />
+                  </a>
+                );
             }
           })}
         </div>
