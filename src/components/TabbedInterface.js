@@ -2,6 +2,9 @@ import React, { useState } from "react";
 
 import Profiles from "./Profiles";
 import "./TabbedInterface.css";
+
+import { clients, currentMembers, alumni } from "../data";
+
 /**
  * @param props
  * @param {{ name: string, count: integer }[]} profiles list of Object of members, alumni, and clients and their respective count.
@@ -26,6 +29,19 @@ export default function TabbedInterface({ profiles }) {
     });
   };
 
+  const getCount = (profile) => {
+    switch (profile) {
+      case "members":
+        return currentMembers.length;
+      case "alumni":
+        return alumni.length;
+      case "clients":
+        return clients.length;
+      default:
+        return 0;
+    }
+  };
+
   return (
     <>
       <div className="container bg-dark">
@@ -33,7 +49,7 @@ export default function TabbedInterface({ profiles }) {
           <h2 className="text-center text-light">We are always growing.</h2>
         </div>
         <div className="row pt-3">
-          {profiles.map(({ name, count }) => (
+          {profiles.map(({ name }) => (
             <div
               className={`tab text-center col-sm-4 p-0 ${
                 tab[name] ? "selected font-weight-bold text-light" : "text-muted"
@@ -42,7 +58,7 @@ export default function TabbedInterface({ profiles }) {
                 handleTabChange(name);
               }}
             >
-              <h1>{count}</h1>
+              <h1>{getCount(name)}</h1>
               <h2>{name}</h2>
               <hr />
             </div>
