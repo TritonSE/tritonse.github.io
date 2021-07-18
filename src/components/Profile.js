@@ -1,10 +1,12 @@
 import React from "react";
-// import { FaBeer } from "@react-icons/all-files/fa/FaBeer";
 import { AiFillLinkedin, AiFillGithub } from "react-icons/ai";
 import { FiGlobe } from "react-icons/fi";
 
 import DynamicImage from "./DynamicImage";
 import "./Profile.css";
+
+const LINKEDIN_PREFIX = "https://www.linkedin.com/in/";
+const GITHUB_PREFIX = "https://github.com/";
 
 /**
  * Display a profile picture, title, optional subtitles, and optional links.
@@ -15,10 +17,6 @@ import "./Profile.css";
  * @param {{ github: ?string, linkedin: ?string, website: ?string }} props.socials
  * @param {?boolean} props.centered Whether to center the content instead of left aligning.
  */
-
-const linkedinPrefix = "https://www.linkedin.com/in/";
-const githubPrefix = "https://github.com/";
-
 export default function Profile({ imagePaths, title, subtitles, socials /* centered = false */ }) {
   // Icons: https://react-icons.github.io/react-icons
   return (
@@ -41,24 +39,26 @@ export default function Profile({ imagePaths, title, subtitles, socials /* cente
             switch (key) {
               case "github":
                 return (
-                  <a target="_blank" href={`${githubPrefix}/${value}`} rel="noreferrer">
+                  <a target="_blank" href={GITHUB_PREFIX + value} rel="noreferrer">
                     <AiFillGithub />
                   </a>
                 );
 
               case "linkedin":
                 return (
-                  <a target="_blank" href={`${linkedinPrefix}/${value}`} rel="noreferrer">
+                  <a target="_blank" href={LINKEDIN_PREFIX + value} rel="noreferrer">
                     <AiFillLinkedin />
                   </a>
                 );
 
               case "website":
                 return (
-                  <a target="_blank" href={`${value}`} rel="noreferrer">
+                  <a target="_blank" href={value} rel="noreferrer">
                     <FiGlobe />
                   </a>
                 );
+              default:
+                throw new Error("Unrecognized social type: " + key);
             }
           })}
         </div>

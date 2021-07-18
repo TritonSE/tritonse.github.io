@@ -39,7 +39,7 @@ function getSocialsFromClients(profile) {
  * @param {object[]} clients Refer to clients.json.
  */
 export default function Profiles(props /* { members, clients } */) {
-  const category = props.name == "clients" ? "clients" : "members";
+  const category = props.name === "clients" ? "clients" : "members";
   return (
     <div className={`tab-content text-light row  ${props.display ? "d-flex" : "d-none"}`}>
       {
@@ -49,11 +49,11 @@ export default function Profiles(props /* { members, clients } */) {
             imagePaths={[`${category}/${nameToFilename(profile.name)}`, `${category}/anonymous`]}
             title={profile.name}
             subtitles={
-              category == "clients"
+              category === "clients"
                 ? getSubtitlesFromClients(profile)
                 : getSubtitlesFromMembers(profile)
             }
-            socials={category == "clients" ? getSocialsFromClients(profile) : profile.socials}
+            socials={category === "clients" ? getSocialsFromClients(profile) : profile.socials}
           />
         ))
       }
