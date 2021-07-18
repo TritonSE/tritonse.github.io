@@ -1,0 +1,16 @@
+.tableOfContentsWrapper {
+  position: fixed;
+}
+
+.tableOfContentsItem {
+  color: white;
+}
+
+.tableOfContentsItem:hover {
+  color: white;
+}
+
+.tableOfContentsItemActive {
+  display: list-item;
+  list-style-type: disc;
+}
