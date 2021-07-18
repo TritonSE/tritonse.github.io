@@ -69,7 +69,8 @@ export default function PageWrapper(props) {
   );
 
   const title = props.pageContext.frontmatter.title;
-  const metadata = pages[props.location.pathname];
+  const pathname = props.location.pathname.replace(/[/]$/, "");
+  const metadata = pages[pathname];
   return (
     <>
       <Helmet>
