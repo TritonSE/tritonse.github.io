@@ -7,5 +7,5 @@ export function removeFileExtension(filename) {
 }
 
 export function nameToFilename(name) {
-  return name.toLowerCase().replaceAll(" ", "_");
+  return name.toLowerCase().replace(/ /g, "_");
 }
