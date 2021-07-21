@@ -3,10 +3,9 @@ title: About
 ---
 
 import Profiles from "../components/Profiles";
+import TabbedInterface from "../components/TabbedInterface";
 import AllMembers from "../components/AllMembers";
 
 <!-- TODO for testing purposes -->
 
-<AllMembers />
-
-<Profiles />
+<TabbedInterface profiles={[{ name: "members" }, { name: "alumni" }, { name: "clients" }]} />
