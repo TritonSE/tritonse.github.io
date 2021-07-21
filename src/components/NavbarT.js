@@ -3,7 +3,7 @@ import { Link } from "gatsby";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import { StaticImage } from "gatsby-plugin-image";
-import "./NavbarT.css";
+import "./NavbarT.css"; // temp file for when additional css is added for transparency
 
 export default function NavbarT() {
   // Refer to: https://react-bootstrap.github.io/components/navbar/
