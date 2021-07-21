@@ -1,0 +1,7 @@
+.get-involved {
+  filter: grayscale(100%);
+}
+
+.get-involved:hover {
+  filter: none;
+}
