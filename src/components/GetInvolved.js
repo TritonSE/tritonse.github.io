@@ -1,6 +1,7 @@
 import React from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import "./GetInvolved.css";
+import InvolvedCard from "./InvolvedCard";
 
 export default function GetInvolved() {
   // Card: https://react-bootstrap.github.io/components/cards/
@@ -9,12 +10,10 @@ export default function GetInvolved() {
   return (
     <>
       <h3>Get Involved</h3>
-      <StaticImage
-        src="../images/icons/tse-bulb.png"
-        alt="Logo"
-        height={47}
-        imgClassName="get-involved"
-      />
+      <InvolvedCard imgPath="../images/icons/tse-bulb.png">
+        We recruit student developers and designers every academic year during the fall. Learn how
+        to join!
+      </InvolvedCard>
     </>
   );
 }
