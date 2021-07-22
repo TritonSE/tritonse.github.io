@@ -13,9 +13,9 @@ export default function StudentApplication() {
     position: "",
     resume: "",
     startingYear: "",
-    startingQuarter: "Fall",
+    startingQuarter: "",
     graduationYear: "",
-    graduationQuarter: "Fall",
+    graduationQuarter: "",
     about: "",
     reason: "",
   });
@@ -60,9 +60,7 @@ export default function StudentApplication() {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        "Access-Control-Allow-Origin": "http://localhost:8000",
       },
-      mode: "cors",
       body: JSON.stringify({
         name: fields.name,
         email: fields.email,
@@ -210,27 +208,37 @@ export default function StudentApplication() {
         </Row>
 
         <Row className="studentAppRow">
-          <Col xs={12} md={6}>
+          <Col xs={6} md={3}>
             <Form.Label>Starting Year</Form.Label>
             <Form.Control required type="text" name="startingYear" onChange={handleChange} />
-            <Form.Label>Starting Quarter</Form.Label>
-            <select name="startingQuarter" onChange={handleChange}>
-              <option value="Fall">Fall</option>
-              <option value="Winter">Winter</option>
-              <option value="Spring">Spring</option>
-              <option value="Summer">Summer</option>
-            </select>
           </Col>
-          <Col xs={12} md={6}>
-            <Form.Label>Expected Graduation Year</Form.Label>
-            <Form.Control required type="text" name="graduationYear" onChange={handleChange} />
-            <Form.Label>Graduation Quarter</Form.Label>
-            <select name="graduationQuarter" onChange={handleChange}>
+          <Col xs={6} md={3}>
+            <Form.Label>Starting Quarter</Form.Label>
+            <Form.Control required as="select" name="startingQuarter" onChange={handleChange}>
+              <option value="" disabled selected>
+                Select
+              </option>
               <option value="Fall">Fall</option>
               <option value="Winter">Winter</option>
               <option value="Spring">Spring</option>
               <option value="Summer">Summer</option>
-            </select>
+            </Form.Control>
+          </Col>
+          <Col xs={6} md={3}>
+            <Form.Label>Graduation Year</Form.Label>
+            <Form.Control required type="text" name="graduationYear" onChange={handleChange} />
+          </Col>
+          <Col xs={6} md={3}>
+            <Form.Label>Graduation Quarter</Form.Label>
+            <Form.Control required as="select" name="graduationQuarter" onChange={handleChange}>
+              <option value="" disabled selected>
+                Select
+              </option>
+              <option value="Fall">Fall</option>
+              <option value="Winter">Winter</option>
+              <option value="Spring">Spring</option>
+              <option value="Summer">Summer</option>
+            </Form.Control>
           </Col>
         </Row>
 
