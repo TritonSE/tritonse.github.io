@@ -6,8 +6,15 @@
     height: 839px;
 }
 
-h2, ul {
+h2 {
     color: white;
+}
+
+.link {
+    color: white;
+    margin-left: 80px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 h2 {
@@ -35,8 +42,8 @@ a {
 a:link {
     text-decoration: none!important;
     color: white;
-    padding-top: 40px;
-    padding-bottom: 40px;
+    /* padding-top: 40px;
+    padding-bottom: 40px; */
 }
 
 a:link:hover {
