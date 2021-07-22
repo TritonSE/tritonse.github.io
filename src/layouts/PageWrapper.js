@@ -2,7 +2,7 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import { graphql, useStaticQuery } from "gatsby";
 
-import Navbar from "../components/Navbar";
+import NavbarT from "../components/NavbarT";
 import Footer from "../components/Footer";
 import { removeFileExtension } from "../util/strings";
 import { deepCopy } from "../util/objects";
@@ -77,7 +77,7 @@ export default function PageWrapper(props) {
         <meta charSet="utf-8" />
         <title>{title ? `${title} — ` : ""}Triton Software Engineering</title>
       </Helmet>
-      <Navbar />
+      <NavbarT />
       <main>{props.render({ ...props, metadata })}</main>
       <Footer />
     </>
