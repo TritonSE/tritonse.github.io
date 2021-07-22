@@ -5,6 +5,8 @@ const { readFileSync } = require("fs");
 const generalRules = {
   "no-plusplus": "off",
   "no-continue": "off",
+  "default-case": "off",
+  "prefer-template": "off",
   "prefer-destructuring": "off",
 
   // Allow leading underscores in identifiers (e.g. _id in MongoDB).

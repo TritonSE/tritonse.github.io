@@ -2,7 +2,7 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import { graphql, useStaticQuery } from "gatsby";
 
-import Navbar from "../components/Navbar";
+import NavbarT from "../components/NavbarT";
 import Footer from "../components/Footer";
 import { removeFileExtension } from "../util/strings";
 import { deepCopy } from "../util/objects";
@@ -69,14 +69,15 @@ export default function PageWrapper(props) {
   );
 
   const title = props.pageContext.frontmatter.title;
-  const metadata = pages[props.location.pathname];
+  const pathname = props.location.pathname.replace(/[/]$/, "");
+  const metadata = pages[pathname];
   return (
     <>
       <Helmet>
         <meta charSet="utf-8" />
         <title>{title ? `${title} — ` : ""}Triton Software Engineering</title>
       </Helmet>
-      <Navbar />
+      <NavbarT />
       <main>{props.render({ ...props, metadata })}</main>
       <Footer />
     </>
