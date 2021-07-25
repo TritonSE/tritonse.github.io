@@ -1,0 +1,20 @@
+@import "../styles/common.scss";
+
+.Footer {
+  margin-top: 9rem;
+  margin-bottom: 1.5rem;
+
+  .Footer__Heading {
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  .Footer__Link {
+    padding-left: 0;
+    color: $body-color;
+  }
+
+  .Footer__IconNav {
+    text-align: right;
+  }
+}

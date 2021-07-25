@@ -1,0 +1,19 @@
+@import "../styles/common.scss";
+
+.TableOfContents {
+  .TableOfContents__Link {
+    font-weight: bold;
+    color: $body-color;
+  }
+
+  .TableOfContents__Link:active,
+  .TableOfContents__Link:focus,
+  .TableOfContents__Link:hover {
+    color: $primary;
+  }
+
+  .TableOfContents__Link--active {
+    display: list-item;
+    list-style-type: disc;
+  }
+}

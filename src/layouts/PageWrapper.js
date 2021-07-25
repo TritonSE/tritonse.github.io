@@ -2,11 +2,11 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import { graphql, useStaticQuery } from "gatsby";
 
-import NavbarT from "../components/NavbarT";
+import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { removeFileExtension } from "../util/strings";
 import { deepCopy } from "../util/objects";
-import "./PageWrapper.scss";
+import "../styles/common.scss";
 
 // Look up each page by its pathname.
 let pages = null;
@@ -77,7 +77,7 @@ export default function PageWrapper(props) {
         <meta charSet="utf-8" />
         <title>{title ? `${title} — ` : ""}Triton Software Engineering</title>
       </Helmet>
-      <NavbarT />
+      <Navbar />
       <main>{props.render({ ...props, metadata })}</main>
       <Footer />
     </>
