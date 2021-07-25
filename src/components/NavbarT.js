@@ -19,7 +19,7 @@ export default function NavbarT() {
         <Nav className="mr-auto" as="ul">
           <Nav.Item as="li">
             <Link to="/about" className="nav-link">
-              About us
+              About Us
             </Link>
           </Nav.Item>
           <Nav.Item as="li">

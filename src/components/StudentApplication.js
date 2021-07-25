@@ -186,7 +186,15 @@ export default function StudentApplication() {
               name="position"
               onChange={handleChange}
               value="Test Developer"
-              label="Test Developer"
+              label={
+                <>
+                  TEST Developer
+                  <br />
+                  <Form.Text>
+                    <i>Develop beginner-level, internal software engineering projects in a team.</i>
+                  </Form.Text>
+                </>
+              }
             />
             <Form.Check
               required
@@ -195,7 +203,18 @@ export default function StudentApplication() {
               name="position"
               onChange={handleChange}
               value="Test Designer"
-              label="Test Designer"
+              label={
+                <>
+                  TEST Designer
+                  <br />
+                  <Form.Text>
+                    <i>
+                      Design beginner-level internal websites and tools while learning industry
+                      level design strategies in a team.
+                    </i>
+                  </Form.Text>
+                </>
+              }
             />
           </Form.Group>
         </fieldset>
