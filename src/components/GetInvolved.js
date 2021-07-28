@@ -15,15 +15,15 @@ export default function GetInvolved() {
       <h2>
         <b>Get Involved</b>
       </h2>
-      <Container style={{ display: "flex" }}>
-        <Row style={{ margin: "auto" }}>
-          <Col xs={10} md={6}>
+      <Container>
+        <Row className="justify-content-md-center">
+          <Col xs lg="4">
             <InvolvedCard imgPath="../images/icons/tse-bulb.png" title="Students">
               We recruit student developers and designers every academic year during the fall. Learn
               how to join!
             </InvolvedCard>
           </Col>
-          <Col xs={5} md={6}>
+          <Col xs lg="4">
             <InvolvedCard imgPath="../images/icons/tse-bulb.png" title="Non Profits">
               We’re always looking for opportunities to help non profits operate with ease. Learn
               how to partner with us!
