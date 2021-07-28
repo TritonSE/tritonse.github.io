@@ -1,21 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
+import classNames from "classnames";
 import Nav from "react-bootstrap/Nav";
-import "./TableOfContents.css";
 
-const Headings = ({ headings, activeId }) => (
-  <ul>
-    {headings.map((heading) => (
-      <Nav.Link
-        className={`tableOfContentsItem${
-          heading.url.replace("#", "") === activeId ? " tableOfContentsItemActive" : ""
-        }`}
-        href={heading.url}
-      >
-        {heading.title}
-      </Nav.Link>
-    ))}
-  </ul>
-);
+import "./TableOfContents.scss";
 
 /**
  * @param props
@@ -42,14 +29,26 @@ export default function TableOfContents({ items }) {
   useEffect(() => {
     const observer = new IntersectionObserver(observerCallback, { rootMargin: "0px 0px -40% 0px" });
     ids.forEach((id) => observer.observe(document.getElementById(id)));
-    return observer.disconnect;
+    return () => {
+      observer.disconnect();
+    };
   }, [items]);
 
   return (
-    <div className="tableOfContentsWrapper">
-      <Nav className="flex-column">
-        <Headings headings={items} activeId={activeId} />
-      </Nav>
-    </div>
+    <Nav as="ul" className="flex-column TableOfContents">
+      {items.map((item) => (
+        <Nav.Item as="li">
+          <Nav.Link
+            href={item.url}
+            className={classNames({
+              TableOfContents__Link: true,
+              "TableOfContents__Link--active": item.url.slice(1) === activeId,
+            })}
+          >
+            {item.title}
+          </Nav.Link>
+        </Nav.Item>
+      ))}
+    </Nav>
   );
 }

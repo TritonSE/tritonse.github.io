@@ -12,8 +12,10 @@ export default function StudentApplication() {
     email: "",
     position: "",
     resume: "",
-    starting: "",
-    graduation: "",
+    startingYear: "",
+    startingQuarter: "",
+    graduationYear: "",
+    graduationQuarter: "",
     about: "",
     reason: "",
   });
@@ -31,17 +33,8 @@ export default function StudentApplication() {
     setFields({ ...fields, [fieldName]: fieldVal });
   }
 
-  function fakeRequest() {
-    return new Promise((resolve) => setTimeout(resolve, 2000));
-  }
-
   function handleSubmit(event) {
     event.preventDefault();
-    setAlert({
-      show: false,
-      variant: "",
-      message: "",
-    });
     const form = event.currentTarget;
 
     // missing fields or invalid email
@@ -54,21 +47,70 @@ export default function StudentApplication() {
       });
       return;
     }
-
     setValidated(false);
+
+    setAlert({
+      show: true,
+      variant: "secondary",
+      message: "Please wait up to a few seconds for the submission to go through.",
+    });
     setLoading(true);
 
-    // post field data – fake for now
-    fakeRequest().then(() => {
-      // success
-      form.reset();
-      setLoading(false);
-      setAlert({
-        show: true,
-        variant: "success",
-        message: "Submitted! Expect to hear back within a few weeks.",
+    fetch("https://tse-oktavian.herokuapp.com/api/applications", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        name: fields.name,
+        email: fields.email,
+        role: fields.position,
+        resume: fields.resume,
+        start_year: fields.startingYear,
+        start_quarter: fields.startingQuarter,
+        graduation_year: fields.graduationYear,
+        graduation_quarter: fields.graduationQuarter,
+        about: fields.about,
+        why: fields.reason,
+      }),
+    })
+      .then((response) => {
+        response
+          .json()
+          .then((rjson) => {
+            if (response.status === 200) {
+              setAlert({
+                show: true,
+                variant: "success",
+                message: "Submitted! Expect to hear back within a few weeks.",
+              });
+              form.reset();
+            } else {
+              setAlert({
+                show: true,
+                variant: "danger",
+                message: "Could not submit application: " + rjson.message,
+              });
+            }
+            setLoading(false);
+          })
+          .catch((error) => {
+            setAlert({
+              show: true,
+              variant: "danger",
+              message: "An error occurred: " + error.message,
+            });
+            setLoading(false);
+          });
+      })
+      .catch((error) => {
+        setAlert({
+          show: true,
+          variant: "danger",
+          message: "An error occurred: " + error.message,
+        });
+        setLoading(false);
       });
-    });
   }
 
   return (
@@ -137,6 +179,43 @@ export default function StudentApplication() {
                 </>
               }
             />
+            <Form.Check
+              required
+              className="appPositionContainer"
+              type="radio"
+              name="position"
+              onChange={handleChange}
+              value="Test Developer"
+              label={
+                <>
+                  TEST Developer
+                  <br />
+                  <Form.Text>
+                    <i>Develop beginner-level, internal software engineering projects in a team.</i>
+                  </Form.Text>
+                </>
+              }
+            />
+            <Form.Check
+              required
+              className="appPositionContainer"
+              type="radio"
+              name="position"
+              onChange={handleChange}
+              value="Test Designer"
+              label={
+                <>
+                  TEST Designer
+                  <br />
+                  <Form.Text>
+                    <i>
+                      Design beginner-level internal websites and tools while learning industry
+                      level design strategies in a team.
+                    </i>
+                  </Form.Text>
+                </>
+              }
+            />
           </Form.Group>
         </fieldset>
 
@@ -148,13 +227,37 @@ export default function StudentApplication() {
         </Row>
 
         <Row className="studentAppRow">
-          <Col xs={12} md={6}>
-            <Form.Label>Starting Year + Quarter</Form.Label>
-            <Form.Control required type="text" name="starting" onChange={handleChange} />
+          <Col xs={6} md={3}>
+            <Form.Label>Starting Year</Form.Label>
+            <Form.Control required type="text" name="startingYear" onChange={handleChange} />
           </Col>
-          <Col xs={12} md={6}>
-            <Form.Label>Expected Graduation Year + Quarter</Form.Label>
-            <Form.Control required type="text" name="graduation" onChange={handleChange} />
+          <Col xs={6} md={3}>
+            <Form.Label>Starting Quarter</Form.Label>
+            <Form.Control required as="select" name="startingQuarter" onChange={handleChange}>
+              <option value="" disabled selected>
+                Select
+              </option>
+              <option value="Fall">Fall</option>
+              <option value="Winter">Winter</option>
+              <option value="Spring">Spring</option>
+              <option value="Summer">Summer</option>
+            </Form.Control>
+          </Col>
+          <Col xs={6} md={3}>
+            <Form.Label>Graduation Year</Form.Label>
+            <Form.Control required type="text" name="graduationYear" onChange={handleChange} />
+          </Col>
+          <Col xs={6} md={3}>
+            <Form.Label>Graduation Quarter</Form.Label>
+            <Form.Control required as="select" name="graduationQuarter" onChange={handleChange}>
+              <option value="" disabled selected>
+                Select
+              </option>
+              <option value="Fall">Fall</option>
+              <option value="Winter">Winter</option>
+              <option value="Spring">Spring</option>
+              <option value="Summer">Summer</option>
+            </Form.Control>
           </Col>
         </Row>
 

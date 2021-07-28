@@ -6,7 +6,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { removeFileExtension } from "../util/strings";
 import { deepCopy } from "../util/objects";
-import "./PageWrapper.scss";
+import "../styles/common.scss";
 
 // Look up each page by its pathname.
 let pages = null;
