@@ -1,5 +1,8 @@
 import React from "react";
 import DynamicImage from "./DynamicImage";
+import { Jumbotron, Button } from "react-bootstrap";
+
+import "./Hero.scss"
 
 /**
  * Render a full-width banner image, with text and buttons on top.
@@ -11,23 +14,31 @@ import DynamicImage from "./DynamicImage";
  * @param {?boolean} props.centered Whether the text and buttons should be centered.
  */
 export default function Hero({ imagePath, title, description, links = [], centered = false }) {
+  const images = require.context('../images/content', true);
+  let imgsrc = images(`./${imagePath}.jpg`).default;
+  const imgStyle = {
+    paddingTop: 100,
+    paddingBottom: 250,
+    backgroundColor: 'red',
+    backgroundSize: 'cover',
+    backgroundImage: `url(${imgsrc})`,
+    backgroundPosition: 'center'
+  };
   return (
-    <div>
-      <p>Hero placeholder begins here</p>
-      <DynamicImage paths={[imagePath]} />
-      <h1>{title}</h1>
-      <p>{description}</p>
-      {links.length > 0 && (
-        <ol>
-          {links.map(({ text, url }) => (
-            <li>
-              <a href={url}>{text}</a>
-            </li>
-          ))}
-        </ol>
-      )}
-      <p>{centered ? "This should be centered" : "This should not be centered"}</p>
-      <p>Hero placeholder ends here</p>
-    </div>
+    <Jumbotron style={imgStyle}>
+      <div style={ centered ? { textAlign : 'center' } : {} } className="container">
+        <h1 className="display-4">{title}</h1>
+        <p className="lead">{description}</p>
+        {links.length > 0 && (
+          <ol className="buttonsList">
+            {links.map(({ text, url }) => (
+              <li className="heroButton">
+                <Button href={url}>{text}</Button>
+              </li>
+            ))}
+          </ol>
+        )}
+      </div>
+    </Jumbotron>
   );
 }
