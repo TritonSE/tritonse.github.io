@@ -1,10 +1,10 @@
 import React from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import "./GetInvolved.css";
-import InvolvedCard from "./InvolvedCard";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Container from "react-bootstrap/Container";
+import InvolvedCard from "./InvolvedCard";
 
 export default function GetInvolved() {
   // Card: https://react-bootstrap.github.io/components/cards/

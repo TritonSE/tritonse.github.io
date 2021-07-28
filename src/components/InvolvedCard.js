@@ -27,7 +27,7 @@ export default function InvolvedCard({ imgPath, children, title }) {
             width={250}
             imgClassName="get-involved"
           />
-          <Card.Text>{children}</Card.Text>
+          <Card.Text style={{ color: "black" }}>{children}</Card.Text>
         </Card.Body>
       </Card>
     </>
