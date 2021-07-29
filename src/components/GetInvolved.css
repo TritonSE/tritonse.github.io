@@ -4,4 +4,5 @@
 
 .get-involved:hover {
   filter: none;
+  transition: all 0.8s ease;
 }
