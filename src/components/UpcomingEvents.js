@@ -32,7 +32,8 @@ export default function UpcomingEvents(props) {
     "numToShow" in props ? getNRecentEvents(props["numToShow"]) : getNRecentEvents();
 
   return (
-    <div className="row m-5 text-dark">
+    // empty card (displayed when no upcoming events)
+    <div className="row m-5">
       {upcomingEvents.length === 0 ? (
         <div className="col-md-6 my-3 d-flex align-items-stretch justify-content-around">
           <div className="empty-event event-card card p-4">
