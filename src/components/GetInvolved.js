@@ -7,9 +7,6 @@ import Container from "react-bootstrap/Container";
 import InvolvedCard from "./InvolvedCard";
 
 export default function GetInvolved() {
-  // Card: https://react-bootstrap.github.io/components/cards/
-  // Don't worry about the close button for now
-  // Use h2 for the title
   return (
     <>
       <h2>

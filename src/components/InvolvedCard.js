@@ -4,10 +4,6 @@ import "./GetInvolved.css";
 import Card from "react-bootstrap/Card";
 
 export default function InvolvedCard({ imgPath, children, title }) {
-  // Card: https://react-bootstrap.github.io/components/cards/
-  // Don't worry about the close button for now
-  // Use h2 for the title
-  console.log(imgPath);
   return (
     <>
       <Card style={{ width: "18rem" }}>
