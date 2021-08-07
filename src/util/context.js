@@ -1,7 +1,7 @@
 import { deepCopy } from "./objects";
 import { removeFileExtension } from "./strings";
 
-function allPagesContext(data) {
+export function allPagesContext(data) {
   // Make deep copies of each page object.
   const pages = data.allMdx.edges.map((edge) => deepCopy(edge.node));
 
@@ -30,5 +30,3 @@ function allPagesContext(data) {
 
   return pages;
 }
-
-export { allPagesContext };

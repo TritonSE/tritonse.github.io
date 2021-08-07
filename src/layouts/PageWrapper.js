@@ -3,9 +3,10 @@ import { graphql, useStaticQuery } from "gatsby";
 import { Helmet } from "react-helmet";
 
 import PageContext from "../components/PageContext";
-import { allPagesContext } from "../util/context";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import { allPagesContext } from "../util/context";
+import { normalizePagePath } from "../util/strings";
 import "../styles/common.scss";
 
 function makeGlobalContext(data) {
@@ -54,10 +55,7 @@ export default function PageWrapper({ children, location }) {
     `)
   );
 
-  let pathname = location.pathname;
-  if (pathname !== "/") {
-    pathname = pathname.replace(/[/]$/, "");
-  }
+  const pathname = normalizePagePath(location.pathname);
   const thisPage = globalContext.allPages.filter((page) => page.pathname === pathname)[0];
   const title = thisPage.frontmatter.title;
 
