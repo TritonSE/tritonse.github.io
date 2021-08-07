@@ -37,7 +37,7 @@ export default function TableOfContents({ items }) {
   return (
     <Nav as="ul" className="flex-column TableOfContents">
       {items.map((item) => (
-        <Nav.Item as="li">
+        <Nav.Item as="li" key={item.url}>
           <Nav.Link
             href={item.url}
             className={classNames({

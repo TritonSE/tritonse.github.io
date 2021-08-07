@@ -3,7 +3,15 @@
  */
 
 export function removeFileExtension(filename) {
-  return filename.replace(/\..*$/, "");
+  return filename.replace(/\.[^/]+$/, "");
+}
+
+export function normalizePagePath(path) {
+  if (path !== "/") {
+    path = path.replace(/[/]$/, "");
+  }
+  path = removeFileExtension(path);
+  return path;
 }
 
 export function nameToFilename(name) {
