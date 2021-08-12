@@ -18,9 +18,15 @@ export default function ArrowLink({ to, children }) {
   const isExternalLink = to.includes("://");
   return (
     <span>
-      {isExternalLink ? <a href={to}>{children}</a> : <Link to={to}>{children}</Link>}
+      {isExternalLink ? (
+        <a href={to}>{children}</a>
+      ) : (
+        <Link style={{ color: "black" }} to={to}>
+          {children}
+        </Link>
+      )}
       <UnselectableSpace />
-      {isExternalLink ? <BsBoxArrowUpRight /> : <BsArrowRight />}
+      {isExternalLink ? <BsBoxArrowUpRight /> : <BsArrowRight style={{ color: "black" }} />}
     </span>
   );
 }
