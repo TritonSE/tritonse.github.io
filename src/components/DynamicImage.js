@@ -45,8 +45,11 @@ export default function DynamicImage({ paths, alt }) {
   );
 
   let image;
+  console.log(images["content/photoshoot-marketing-7"]);
   for (const path of paths) {
+    console.log(path);
     image = images[path];
+    console.log(image);
     if (image !== undefined) {
       break;
     }

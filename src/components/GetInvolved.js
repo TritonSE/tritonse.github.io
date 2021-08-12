@@ -5,17 +5,18 @@ import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Container from "react-bootstrap/Container";
 import InvolvedCard from "./InvolvedCard";
+import marketing7 from "../images/content/photoshoot-marketing-7.jpg";
 
 export default function GetInvolved() {
   return (
-    <>
-      <h2>
+    <div className="get-involved-body">
+      <h2 style={{ marginLeft: "80px", color: "black" }}>
         <b>Get Involved</b>
       </h2>
       <Container>
         <Row className="justify-content-md-center">
           <Col xs lg="4">
-            <InvolvedCard imgPath="../images/icons/tse-bulb.png" title="Students">
+            <InvolvedCard imagePath="content/photoshoot-marketing-7" title="Students">
               We recruit student developers and designers every academic year during the fall. Learn
               how to join!
             </InvolvedCard>
@@ -28,6 +29,6 @@ export default function GetInvolved() {
           </Col>
         </Row>
       </Container>
-    </>
+    </div>
   );
 }

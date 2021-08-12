@@ -1,28 +1,17 @@
 import React from "react";
 import { StaticImage } from "gatsby-plugin-image";
-import "./GetInvolved.css";
+import "./InvolvedCard.css";
 import Card from "react-bootstrap/Card";
+import marketing7 from "../images/content/photoshoot-marketing-7.jpg";
+import DynamicImage from "./DynamicImage";
 
 export default function InvolvedCard({ imgPath, children, title }) {
   return (
     <>
       <Card style={{ width: "18rem" }}>
-        <StaticImage
-          src="../images/icons/tse-bulb.png"
-          alt="InvolvedImage"
-          height={250}
-          width={250}
-          imgClassName="get-involved"
-        />
         <Card.Body>
-          <Card.Title>{title}</Card.Title>
-          <StaticImage
-            src={imgPath}
-            alt="InvolvedImage"
-            height={250}
-            width={250}
-            imgClassName="get-involved"
-          />
+          <Card.Title style={{ color: "black" }}>{title}</Card.Title>
+          <DynamicImage paths={[imgPath]} alt="InvolvedImage" />
           <Card.Text style={{ color: "black" }}>{children}</Card.Text>
         </Card.Body>
       </Card>
