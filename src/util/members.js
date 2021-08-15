@@ -7,6 +7,7 @@ const ROLE_ORDER = [
   "VP External",
   "VP Technology",
   "VP Projects",
+  "VP Design",
   "Outreach Lead",
   "Marketing Lead",
   "Project Manager",
