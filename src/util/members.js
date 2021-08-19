@@ -15,11 +15,7 @@ const ROLE_ORDER = [
   "Developer",
 ];
 
-export function sortMembersByRole(members) {
-  members.sort(compareByRole);
-}
-
-let compareByRole = (a, b) => {
+function compareByRole(a, b) {
   const aRole = a.roles[a.roles.length - 1];
   const bRole = b.roles[b.roles.length - 1];
   const roleComparison = ROLE_ORDER.indexOf(aRole) - ROLE_ORDER.indexOf(bRole);
@@ -41,7 +37,11 @@ let compareByRole = (a, b) => {
   }
 
   return 0;
-};
+}
+
+export function sortMembersByRole(members) {
+  members.sort(compareByRole);
+}
 
 /**
  * given a list of members (must have a graduation year field), group them into years
@@ -59,9 +59,7 @@ export function categorizeMembersIntoYears(members) {
   }
 
   // sort the categorized members
-  for (const keys in result) {
-    result[keys].sort(compareByRole);
-  }
+  Object.values(result).forEach((group) => group.sort(compareByRole));
 
   return result;
 }

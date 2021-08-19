@@ -14,19 +14,26 @@ function UnselectableSpace() {
 /**
  * Create a link with an arrow next to it.
  */
-export default function ArrowLink({ to, children }) {
+export default function ArrowLink({ to, children, dark = false }) {
   const isExternalLink = to.includes("://");
+  const className = dark ? "text-dark" : "";
   return (
     <span>
       {isExternalLink ? (
-        <a href={to}>{children}</a>
+        <a href={to} className={className}>
+          {children}
+        </a>
       ) : (
-        <Link style={{ color: "black" }} to={to}>
+        <Link to={to} className={className}>
           {children}
         </Link>
       )}
       <UnselectableSpace />
-      {isExternalLink ? <BsBoxArrowUpRight /> : <BsArrowRight style={{ color: "black" }} />}
+      {isExternalLink ? (
+        <BsBoxArrowUpRight className={className} />
+      ) : (
+        <BsArrowRight className={className} />
+      )}
     </span>
   );
 }

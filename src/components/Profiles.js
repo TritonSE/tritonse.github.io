@@ -12,8 +12,7 @@ function getProfilesFromCategory(category) {
       return currentMembers;
 
     case "alumni":
-      const result = categorizeMembersIntoYears(alumni);
-      return result;
+      return categorizeMembersIntoYears(alumni);
 
     case "clients":
       return clients;

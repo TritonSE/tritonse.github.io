@@ -31,7 +31,9 @@ export default function Event({ title, description, location, startTime, url }) 
           <strong>When:</strong> {startTime.toLocaleString(DateTime.DATETIME_FULL)}
         </p>
         <p>
-          <ArrowLink to={url}>Learn More</ArrowLink>
+          <ArrowLink dark to={url}>
+            Learn More
+          </ArrowLink>
         </p>
       </div>
     </div>
