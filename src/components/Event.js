@@ -16,7 +16,7 @@ import "./Events.css";
  */
 export default function Event({ title, description, location, startTime, url }) {
   return (
-    <div className="col-md-6 my-3 d-flex align-items-stretch justify-content-around">
+    <div className="col-md-6 my-3 d-flex align-items-stretch justify-content-around text-dark">
       <div className="event-card card p-4">
         <h2 className="card-title mb-4 ">
           <strong>{title}</strong>

@@ -24,3 +24,7 @@
 .studentAppAlert {
   margin-top: 20px;
 }
+
+.studentAppContainer .caret {
+  border-color: black;
+}
