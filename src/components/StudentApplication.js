@@ -243,7 +243,10 @@ export default function StudentApplication() {
             <Form.Label>Starting Year</Form.Label>
             <Form.Control
               required
-              type="text"
+              type="number"
+              min="2000"
+              max="2099"
+              step="1"
               name="startingYear"
               onChange={handleChange}
               className="text-dark"
@@ -271,7 +274,10 @@ export default function StudentApplication() {
             <Form.Label>Graduation Year</Form.Label>
             <Form.Control
               required
-              type="text"
+              type="number"
+              min="2000"
+              max="2099"
+              step="1"
               name="graduationYear"
               onChange={handleChange}
               className="text-dark"
