@@ -52,7 +52,7 @@ export default function StudentApplication() {
     setAlert({
       show: true,
       variant: "secondary",
-      message: "Please wait up to a few seconds for the submission to go through.",
+      message: "Your application is being submitted. This may take a minute or two.",
     });
     setLoading(true);
 
@@ -114,7 +114,7 @@ export default function StudentApplication() {
   }
 
   return (
-    <div className="studentAppContainer">
+    <div className="studentAppContainer bg-light text-dark">
       <div className="studentAppRow">
         <h1>TSE Student Application</h1>
         <p>
@@ -127,11 +127,23 @@ export default function StudentApplication() {
         <Row className="studentAppRow">
           <Col xs={12} md={6}>
             <Form.Label>Name</Form.Label>
-            <Form.Control required type="text" name="name" onChange={handleChange} />
+            <Form.Control
+              required
+              type="text"
+              name="name"
+              className="text-dark"
+              onChange={handleChange}
+            />
           </Col>
           <Col xs={12} md={6}>
             <Form.Label>UCSD Email</Form.Label>
-            <Form.Control required type="email" name="email" onChange={handleChange} />
+            <Form.Control
+              required
+              type="email"
+              name="email"
+              className="text-dark"
+              onChange={handleChange}
+            />
           </Col>
         </Row>
 
@@ -222,18 +234,33 @@ export default function StudentApplication() {
         <Row className="studentAppRow">
           <Col xs={12} md={6}>
             <Form.Label>Link to Resume (PDF)</Form.Label>
-            <Form.Control required name="resume" onChange={handleChange} />
+            <Form.Control required name="resume" onChange={handleChange} className="text-dark" />
           </Col>
         </Row>
 
         <Row className="studentAppRow">
           <Col xs={6} md={3}>
             <Form.Label>Starting Year</Form.Label>
-            <Form.Control required type="text" name="startingYear" onChange={handleChange} />
+            <Form.Control
+              required
+              type="number"
+              min="2000"
+              max="2099"
+              step="1"
+              name="startingYear"
+              onChange={handleChange}
+              className="text-dark"
+            />
           </Col>
           <Col xs={6} md={3}>
             <Form.Label>Starting Quarter</Form.Label>
-            <Form.Control required as="select" name="startingQuarter" onChange={handleChange}>
+            <Form.Control
+              required
+              as="select"
+              name="startingQuarter"
+              onChange={handleChange}
+              className="text-dark"
+            >
               <option value="" disabled selected>
                 Select
               </option>
@@ -245,11 +272,26 @@ export default function StudentApplication() {
           </Col>
           <Col xs={6} md={3}>
             <Form.Label>Graduation Year</Form.Label>
-            <Form.Control required type="text" name="graduationYear" onChange={handleChange} />
+            <Form.Control
+              required
+              type="number"
+              min="2000"
+              max="2099"
+              step="1"
+              name="graduationYear"
+              onChange={handleChange}
+              className="text-dark"
+            />
           </Col>
           <Col xs={6} md={3}>
             <Form.Label>Graduation Quarter</Form.Label>
-            <Form.Control required as="select" name="graduationQuarter" onChange={handleChange}>
+            <Form.Control
+              required
+              as="select"
+              name="graduationQuarter"
+              onChange={handleChange}
+              className="text-dark"
+            >
               <option value="" disabled selected>
                 Select
               </option>
@@ -263,12 +305,26 @@ export default function StudentApplication() {
 
         <Form.Group className="studentAppRow">
           <Form.Label>Tell us a bit about yourself</Form.Label>
-          <Form.Control required as="textarea" rows={8} name="about" onChange={handleChange} />
+          <Form.Control
+            required
+            as="textarea"
+            rows={8}
+            name="about"
+            onChange={handleChange}
+            className="text-dark"
+          />
         </Form.Group>
 
         <Form.Group className="studentAppRow">
           <Form.Label>Why do you want to join TSE?</Form.Label>
-          <Form.Control required as="textarea" rows={8} name="reason" onChange={handleChange} />
+          <Form.Control
+            required
+            as="textarea"
+            rows={8}
+            name="reason"
+            onChange={handleChange}
+            className="text-dark"
+          />
         </Form.Group>
 
         <div className="appBtnContainer">
