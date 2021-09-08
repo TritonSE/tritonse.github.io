@@ -1,0 +1,19 @@
+.carousel-inner > .item > .hover-card {
+  margin: 0 auto;
+}
+
+.carousel-control-prev {
+  left: unset !important;
+  right: 200px !important;
+}
+
+.carousel-control-next {
+  margin-right: 170px !important;
+}
+
+.carousel .carousel-control-prev,
+.carousel .carousel-control-next {
+  width: 30px !important;
+  height: 30px !important;
+  top: 100% !important;
+}

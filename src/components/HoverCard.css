@@ -1,0 +1,22 @@
+.get-involved {
+  filter: grayscale(100%);
+}
+
+.card:hover .get-involved {
+  filter: none;
+  transition: all 1s ease;
+}
+
+.card {
+  display: inline-block;
+  background-color: #e5e5e5 !important;
+}
+.card:hover {
+  background-color: white !important;
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  -ms-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+  width: 18rem;
+}
