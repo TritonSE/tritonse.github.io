@@ -17,8 +17,6 @@ function initialize(data) {
     const node = edge.node;
     images[removeFileExtension(node.relativePath)] = deepCopy(node.childImageSharp.gatsbyImageData);
   }
-
-  console.log("SFDSAF", images);
 }
 
 /**
