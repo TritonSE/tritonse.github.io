@@ -17,6 +17,8 @@ function initialize(data) {
     const node = edge.node;
     images[removeFileExtension(node.relativePath)] = deepCopy(node.childImageSharp.gatsbyImageData);
   }
+
+  console.log("SFDSAF", images);
 }
 
 /**
@@ -26,7 +28,7 @@ function initialize(data) {
  * extension. The first image found will be used.
  * @param {string} props.alt Alt text.
  */
-export default function DynamicImage({ paths, alt }) {
+export default function DynamicImage({ style, imgStyle, paths, alt }) {
   initialize(
     useStaticQuery(graphql`
       query {
@@ -56,5 +58,5 @@ export default function DynamicImage({ paths, alt }) {
     throw new Error(`None of the following image paths exist: ${JSON.stringify(paths)}`);
   }
 
-  return <GatsbyImage image={image} alt={alt} />;
+  return <GatsbyImage style={style} imgStyle={imgStyle} image={image} alt={alt} />;
 }
