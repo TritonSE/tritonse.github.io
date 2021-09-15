@@ -60,5 +60,6 @@ module.exports = {
         stages: ["develop"],
       },
     },
+    "gatsby-plugin-client-side-redirect",
   ],
 };
