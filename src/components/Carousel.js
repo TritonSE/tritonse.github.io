@@ -8,11 +8,32 @@ import { BsArrowRight, BsArrowLeft } from "react-icons/bs";
 import ArrowLink from "./ArrowLink";
 import HoverCard from "./HoverCard";
 import "./Carousel.css";
+import { clients } from "../data";
 
 export default function ProjectCarousel({ imgPath, children, title }) {
   // Card: https://react-bootstrap.github.io/components/cards/
   // Don't worry about the close button for now
   // Use h2 for the title
+  const renderedResult = [];
+
+  for (let i = 0; i < clients.length; i += 3) {
+    renderedResult.push(
+      <Carousel.Item key={i}>
+        <Container key={i}>
+          <Row key={i}>
+            {clients.slice(i, i + 3).map((client) => (
+              <Col xs="3" sm="4">
+                <HoverCard title={client.name} className="hover-card">
+                  A web and mobile application providing online children books, focused on language
+                  accessibility.
+                </HoverCard>
+              </Col>
+            ))}
+          </Row>
+        </Container>
+      </Carousel.Item>
+    );
+  }
   return (
     <>
       <h4>Latest Work</h4>
@@ -23,42 +44,7 @@ export default function ProjectCarousel({ imgPath, children, title }) {
         nextIcon={<BsArrowRight />}
         prevIcon={<BsArrowLeft />}
       >
-        <Carousel.Item>
-          <Container>
-            <Row className="justify-content-md-center">
-              <Col xs="3" sm="4">
-                <HoverCard title="Words Alive" className="hover-card">
-                  A web and mobile application providing online children books, focused on language
-                  accessibility.
-                </HoverCard>
-              </Col>
-              <Col xs="3" sm="4">
-                <HoverCard title="Words Alive" className="hover-card">
-                  A web and mobile application providing online children books, focused on language
-                  accessibility.
-                </HoverCard>
-              </Col>
-              <Col xs="3" sm="4">
-                <HoverCard title="Words Alive" className="hover-card">
-                  A web and mobile application providing online children books, focused on language
-                  accessibility.
-                </HoverCard>
-              </Col>
-            </Row>
-          </Container>
-        </Carousel.Item>
-        <Carousel.Item>
-          <HoverCard title="Words Alive" className="hover-card">
-            A web and mobile application providing online children books, focused on language
-            accessibility.
-          </HoverCard>
-        </Carousel.Item>
-        <Carousel.Item>
-          <HoverCard title="Words Alive" className="hover-card">
-            A web and mobile application providing online children books, focused on language
-            accessibility.
-          </HoverCard>
-        </Carousel.Item>
+        {renderedResult}
       </Carousel>
     </>
   );

@@ -1,15 +1,27 @@
 import React from "react";
 
+import Card from "react-bootstrap/Card";
 import ArrowLink from "./ArrowLink";
 
 export default function RecruitmentCard() {
-  // Card: https://react-bootstrap.github.io/components/cards/
-  // Don't worry about the close button for now
-  // Use h2 for the title
   return (
-    <>
-      <p>Recruitment card placeholder</p>
-      <ArrowLink to="/students">Learn more</ArrowLink>
-    </>
+    <Card style={{ width: "24rem", marginLeft: "65px" }}>
+      <Card.Body>
+        <Card.Title style={{ color: "black" }}>
+          <b>We&apos;re Recruiting!</b>
+        </Card.Title>
+        <Card.Text style={{ color: "black" }}>
+          Want real world project experience? <br /> Apply to be a TSE developer or designer!
+        </Card.Text>
+        <Card.Text style={{ color: "black" }}>
+          <em>*You must be a UCSD undergraduate to apply</em>
+        </Card.Text>
+        <footer style={{ color: "black" }}>
+          <ArrowLink dark to="/students">
+            <b>Learn more</b>
+          </ArrowLink>
+        </footer>
+      </Card.Body>
+    </Card>
   );
 }
