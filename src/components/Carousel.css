@@ -1,19 +1,29 @@
-.carousel-inner > .item > .hover-card {
-  margin: 0 auto;
+.container-fluid {
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+}
+.container-fluid::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
 }
 
+picture > img {
+  width: 50px;
+  height: 10px;
+}
+
+.btn-group {
+  float: right;
+}
 .carousel-control-prev {
-  left: unset !important;
-  right: 200px !important;
+  float: right;
 }
 
 .carousel-control-next {
-  margin-right: 170px !important;
+  float: right;
 }
 
-.carousel .carousel-control-prev,
-.carousel .carousel-control-next {
-  width: 30px !important;
-  height: 30px !important;
-  top: 100% !important;
+.carousel-control-prev,
+.carousel-control-next {
+  width: 30px;
+  height: 30px;
 }

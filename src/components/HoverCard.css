@@ -20,3 +20,14 @@
   transition: all 0.2s ease-in;
   width: 18rem;
 }
+
+.image-control {
+  margin: 0 auto;
+  margin-top: 1em;
+  width: 250px;
+  height: 250px;
+}
+.image-control > * {
+  height: 100%;
+  width: 100%;
+}
