@@ -45,7 +45,7 @@ export default function ProjectCarousel({ imgPath, children, title }) {
             {({ allProjects }) => (
               <div className="d-flex flex-row align-items-stretch">
                 {allProjects.map(({ frontmatter: { title, subtitle, thumbnail } }) => (
-                  <Col xs="12" sm="4" lg="4" key={title}>
+                  <Col xs="12" sm="4" lg="3" key={title}>
                     <HoverCard
                       title={title}
                       imgPath={[thumbnail || "icons/tse-bulb"]}
@@ -56,7 +56,7 @@ export default function ProjectCarousel({ imgPath, children, title }) {
                     </HoverCard>
                   </Col>
                 ))}
-                <Col xs="12" sm="4" lg="4">
+                <Col xs="12" sm="4" lg="3">
                   <HoverCard
                     title={"FSD"}
                     imgPath={["icons/tse-bulb"]}
@@ -66,7 +66,7 @@ export default function ProjectCarousel({ imgPath, children, title }) {
                     TESTING
                   </HoverCard>
                 </Col>
-                <Col xs="12" sm="4" lg="4">
+                <Col xs="12" sm="4" lg="3">
                   <HoverCard
                     title={"FSD"}
                     imgPath={["icons/tse-bulb"]}
@@ -76,7 +76,7 @@ export default function ProjectCarousel({ imgPath, children, title }) {
                     TESTING
                   </HoverCard>
                 </Col>
-                <Col xs="12" sm="4" lg="4">
+                <Col xs="12" sm="4" lg="3">
                   <HoverCard
                     title={"FSD"}
                     imgPath={["icons/tse-bulb"]}
