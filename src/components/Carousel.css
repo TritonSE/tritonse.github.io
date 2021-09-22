@@ -27,3 +27,9 @@ picture > img {
   width: 30px;
   height: 30px;
 }
+
+@media screen and (max-width: 500px) {
+  .carousel-control {
+    display: none;
+  }
+}

@@ -91,22 +91,17 @@ export default function ProjectCarousel({ imgPath, children, title }) {
           </PageContext.Consumer>
         </div>
       </Container>
-      {window && window.innerWidth > 500 ? (
-        <ButtonGroup className="hidden-xs-down">
-          <Button
-            onClick={() => scrollList("left")}
-            className="carousel-control-prev hidden-xs-down"
-          >
-            <BsArrowLeft />
-          </Button>
-          <Button
-            onClick={() => scrollList("right")}
-            className="carousel-control-next hidden-xs-down"
-          >
-            <BsArrowRight />
-          </Button>
-        </ButtonGroup>
-      ) : null}
+      <ButtonGroup className="carousel-control">
+        <Button onClick={() => scrollList("left")} className="carousel-control-prev hidden-xs-down">
+          <BsArrowLeft />
+        </Button>
+        <Button
+          onClick={() => scrollList("right")}
+          className="carousel-control-next hidden-xs-down"
+        >
+          <BsArrowRight />
+        </Button>
+      </ButtonGroup>
     </div>
   );
 }
