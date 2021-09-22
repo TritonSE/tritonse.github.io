@@ -91,7 +91,7 @@ export default function ProjectCarousel({ imgPath, children, title }) {
           </PageContext.Consumer>
         </div>
       </Container>
-      {window.innerWidth > 500 ? (
+      {window && window.innerWidth > 500 ? (
         <ButtonGroup className="hidden-xs-down">
           <Button
             onClick={() => scrollList("left")}
