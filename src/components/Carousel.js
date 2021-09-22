@@ -23,7 +23,7 @@ export default function ProjectCarousel({ imgPath, children, title }) {
 
   function sideScroll(element, direction, speed, distance, step) {
     let scrollAmount = 0;
-    var slideTimer = setInterval(function () {
+    var slideTimer = setInterval(() => {
       if (direction == "left") {
         element.scrollLeft -= step;
       } else {
@@ -58,7 +58,7 @@ export default function ProjectCarousel({ imgPath, children, title }) {
                 ))}
                 <Col xs="12" sm="4" lg="3">
                   <HoverCard
-                    title={"FSD"}
+                    title="FSD"
                     imgPath={["icons/tse-bulb"]}
                     altText="Project image"
                     className="hover-card"
@@ -68,7 +68,7 @@ export default function ProjectCarousel({ imgPath, children, title }) {
                 </Col>
                 <Col xs="12" sm="4" lg="3">
                   <HoverCard
-                    title={"FSD"}
+                    title="FSD"
                     imgPath={["icons/tse-bulb"]}
                     altText="Project image"
                     className="hover-card"
@@ -78,7 +78,7 @@ export default function ProjectCarousel({ imgPath, children, title }) {
                 </Col>
                 <Col xs="12" sm="4" lg="3">
                   <HoverCard
-                    title={"FSD"}
+                    title="FSD"
                     imgPath={["icons/tse-bulb"]}
                     altText="Project image"
                     className="hover-card"
