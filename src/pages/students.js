@@ -387,6 +387,12 @@ class StudentsPage extends React.Component {
               </p>
             </div>
             <div className="col s12">
+              <h4>What does being a project manager look like at TSE?</h4>
+              <p className="tse-text-medium">
+                A product manager is on a project team with developers and designers. They attend every client meeting to understand the nonprofit’s needs and convert them into features that designers and developers will work on building. The product manager may have 1 client meeting each week, as well as a team meeting where they can communicate their updates. Finally, they’ll also meet with the rest of the product managers each week to update each other on their progress. There will also be documentation written every few weeks to keep track of changes to the product roadmap. A typical week for product managers has 3-4 meetings and a couple of hours worth of preparation, totaling up to 4-6 hours worth of work per week.
+              </p>
+            </div>
+            <div className="col s12">
               <h4>How will TSE operate under the ongoing pandemic?</h4>
               <p className="tse-text-medium">
                 We are going fully remote. Our recruitment process will be
