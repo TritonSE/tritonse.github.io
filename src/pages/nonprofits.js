@@ -144,10 +144,7 @@ export default ({ data }) => {
           <div className="col s12">
             <h4 className="navy-text">How are TSE projects structured?</h4>
             <p className="tse-text-medium navy-text">
-              TSE's structure consists of our board and 4-6 project-based teams.
-              Each team is made up of a project leader, 3-4 developers, and a
-              UI/UX designer. Teams work independently of one another to create
-              software for a specific non-profit they have been assigned to.
+TSE’s structure consists of our board and about 7 project-based teams. Each team is made up of a development manager, product manager, 6 developers, and 2 UI/UX designers. Teams work independently of one another to create software for a specific non-profit they have been assigned to.
             </p>
           </div>
           <div className="col s12">

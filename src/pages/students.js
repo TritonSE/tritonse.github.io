@@ -173,10 +173,12 @@ class StudentsPage extends React.Component {
                 </h5>
                 <div>
                   {apps_active ? (
-                    <p className="tse-text-medium">
+                    <><p className="tse-text-medium">
                       Applications are open! Please <a className="link-text-color" href="https://tritonse.github.io/student-application/" target="_blank" rel="noopener noreferrer">click here</a> to apply. We will reach out to
                       you with more details if you are selected.
-                    </p>
+                    </p><p className="tse-text-medium">
+                      The deadline to apply as a TEST developer or TEST designer is Thursday, October 7th at 11:59PM PDT. The deadline to apply for all other roles is Monday, October 11th at 11:59 PM PDT.
+                    </p></>
                   ) : (
                     <p className="tse-text-medium tse-separation-small">
                       Applications are currently closed. Please check back Week
@@ -299,9 +301,9 @@ class StudentsPage extends React.Component {
                 At Triton Software Engineering, we seek students who are
                 hardworking and passionate for social good. We are a
                 project-based organization, so experience working in teams is a
-                plus! You will also need some prior experience with designing or
-                developing, depending on whether you want to be a developer or
-                designer respectively.
+                plus! TEST designers and TEST developers do not necessarily need prior experience
+                in their field (see the next section for more details). Other developer and designer positions will
+                require some prior experience.
               </p>
               <p className="tse-text-medium">
                 Designers must have working knowledge of the standard design
@@ -318,18 +320,18 @@ class StudentsPage extends React.Component {
               </p>
             </div>
             <div className="col s12">
+              <h4>What is the TEST program?</h4>
+              <p className="tse-text-medium">
+                TSE Early Start Training (TEST) is a new program that TSE is introducing this year that is catered towards students with little to no technical development/design experience. This includes, but is not limited to, students who come from disadvantaged backgrounds. TEST developers and designers will learn the fundamentals of their domain while working on beginner-level internal projects for TSE.
+              </p>
+            </div>
+            <div className="col s12">
               <h4>What is the TSE Recruitment Process like?</h4>
               <p className="tse-text-medium">
-                TSE recruits new members at the beginning of every Fall quarter.
-                In 2019, we accepted a total of 31 members from 167 applicants.
+TSE recruits new members at the beginning of every Fall quarter. In 2019, we accepted a total of 31 members from 167 applicants. In 2020, we accepted a total of 29 members from 164 applicants.
               </p>
               <p className="tse-text-medium">
-                There are three stages: a resume screen, a quick behavioral
-                phone chat, and an in-person technical interview. Due to the
-                current circumstances, we’ll be shifting our in-person
-                interviews online. In 2020, we’ll be holding two info sessions
-                regarding this process. Please keep an eye on our Facebook page
-                for more details!
+There are three stages: a resume screen, a phone screen, and an in-person technical interview. For TEST, we will have a resume screen and then a combined behavioral and technical in-person interview. Due to the current circumstances, our in-person interviews will be virtual.
               </p>
               <p className="tse-text-medium">
                 Interested in applying?{" "}
@@ -344,17 +346,10 @@ class StudentsPage extends React.Component {
                 structured?
               </h4>
               <p className="tse-text-medium">
-                The number of project teams in TSE depends on the number of
-                nonprofits we are able to secure collaborations with every year.
-                For the 2019-2020 school year, we had 7 project teams.
+The number of project teams in TSE depends on the number of nonprofits we are able to secure collaborations with every year. In the past two school years, we had 7 project teams.
               </p>
               <p className="tse-text-medium">
-                For the 2020-2021 school year, TSE's structure consists of our
-                board, a design team, and 7 project-based teams. Our design team
-                is a team of 7 designers led by our VP Design. Each development
-                team is made up of a project leader and 7 developers. Teams work
-                independently of one another to create software for a specific
-                non-profit they have been assigned to.
+For the 2021-2022 school year, TSE’s structure consists of our board, a design team, and 7 project-based teams. Each project team is made up of a development manager, product manager, 6 developers, and 2 designers. Teams work independently of one another to create software for a specific non-profit they have been assigned to.
               </p>
             </div>
             <div className="col s12">
@@ -387,7 +382,7 @@ class StudentsPage extends React.Component {
               </p>
             </div>
             <div className="col s12">
-              <h4>What does being a project manager look like at TSE?</h4>
+              <h4>What does being a product manager look like at TSE?</h4>
               <p className="tse-text-medium">
                 A product manager is on a project team with developers and designers. They attend every client meeting to understand the nonprofit’s needs and convert them into features that designers and developers will work on building. The product manager may have 1 client meeting each week, as well as a team meeting where they can communicate their updates. Finally, they’ll also meet with the rest of the product managers each week to update each other on their progress. There will also be documentation written every few weeks to keep track of changes to the product roadmap. A typical week for product managers has 3-4 meetings and a couple of hours worth of preparation, totaling up to 4-6 hours worth of work per week.
               </p>
