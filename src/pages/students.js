@@ -182,7 +182,7 @@ class StudentsPage extends React.Component {
                   ) : (
                     <p className="tse-text-medium tse-separation-small">
                       Applications are currently closed. Please check back Week
-                      0 of Fall Quarter 2021 if you are interested in joining.
+                      0 of Fall Quarter 2022 if you are interested in joining.
                     </p>
                   )}
                 </div>

@@ -1,0 +1,18 @@
+{
+  "activity": "FA21 Codenames Winners",
+  "ordering": 12,
+  "winners": [
+    {
+      "name": "Amrit Singh",
+      "position": "Development Manager"
+    },
+    {
+      "name": "Navid Boloorian",
+      "position": "Development Manager"
+    },
+    {
+      "name": "William Wu",
+      "position": "Developer"
+    }
+  ]
+}
