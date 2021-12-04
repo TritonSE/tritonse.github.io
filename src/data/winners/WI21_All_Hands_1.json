@@ -1,5 +1,5 @@
 {
-  "activity": "WI21 Secret Hitler Winners",
+  "activity": "WI21 Social Deduction Game Winners",
   "ordering": 6,
   "winners": [
     {
@@ -16,10 +16,6 @@
     },
     {
       "name": "Ly Nguyen",
-      "position": "Developer"
-    },
-    {
-      "name": "Aksharan Saravanan",
       "position": "Developer"
     }
   ]

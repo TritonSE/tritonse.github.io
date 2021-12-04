@@ -1,0 +1,34 @@
+{
+  "activity": "FA21 Many Truths One Lie Winners",
+  "ordering": 13,
+  "winners": [
+    {
+      "name": "Alejandro Rodriguez Pascual",
+      "position": "Developer"
+    },
+    {
+      "name": "Deepansha Singh",
+      "position": "Developer"
+    },
+    {
+      "name": "Evan Lam",
+      "position": "VP Design"
+    },
+    {
+      "name": "Mrinal Sharma",
+      "position": "Product Manager"
+    },
+    {
+      "name": "Rohan Puthukudy",
+      "position": "Developer"
+    },
+    {
+      "name": "Tracey Du",
+      "position": "UI/UX Designer"
+    },
+    {
+      "name": "William Wu",
+      "position": "Developer"
+    }
+  ]
+}
