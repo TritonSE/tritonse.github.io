@@ -1,0 +1,13 @@
+.container {
+  display: flex;
+  flex-flow: column nowrap;
+  min-height: 100vh;
+
+  * {
+    flex-grow: 0;
+  }
+
+  .main {
+    flex-grow: 1;
+  }
+}
