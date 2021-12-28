@@ -17,17 +17,21 @@ const ROLES = [
   "Engineering Manager",
   "Product Manager",
   "Project Manager",
+  // TEST
+  "TEST Design Lead",
+  "TEST Developer Lead",
+  "TEST Designer",
+  "TEST Developer",
   // Everyone else
   "Designer",
   "Developer",
-  "TEST Designer",
-  "TEST Developer",
 ] as const;
 type Role = typeof ROLES[number];
 
 interface Member {
   readonly name: string,
   readonly roles: readonly Role[],
+  readonly hidden?: boolean,
 }
 
 interface Alumnus extends Member {
@@ -143,7 +147,7 @@ const constPeople = [
   },
   {
     "name": "Viren Abhyankar",
-    "roles": ["Developer", "VP External"]
+    "roles": ["Developer", "VP Projects"]
   },
   {
     "name": "David Hacker",
@@ -156,6 +160,11 @@ const constPeople = [
     "graduationYear": 2021
   },
   {
+    "name": "Mylinh Lac",
+    "roles": ["Designer", "VP Design"],
+    "hidden": true
+  },
+  {
     "name": "Heather Gan",
     "roles": ["Developer", "Outreach Lead"]
   },
@@ -165,7 +174,8 @@ const constPeople = [
   },
   {
     "name": "Amrit Singh",
-    "roles": ["Developer", "Project Manager"]
+    "roles": ["Developer", "Project Manager"],
+    "graduationYear": 2021,
   },
   {
     "name": "Arnold Duan",
@@ -174,7 +184,8 @@ const constPeople = [
   },
   {
     "name": "David Cruz",
-    "roles": ["Developer", "Project Manager"]
+    "roles": ["Developer", "Project Manager"],
+    "graduationYear": 2021
   },
   {
     "name": "Hannah Hsu",
@@ -196,7 +207,8 @@ const constPeople = [
   },
   {
     "name": "Kenny Tran",
-    "roles": ["Designer"]
+    "roles": ["Designer"],
+    "graduationYear": 2021
   },
   {
     "name": "Lydia Smith",
@@ -208,7 +220,7 @@ const constPeople = [
   },
   {
     "name": "Rickie Chen",
-    "roles": ["Designer"]
+    "roles": ["Designer", "TEST Design Lead"]
   },
   {
     "name": "Tracy Nguyen",
@@ -228,7 +240,8 @@ const constPeople = [
   },
   {
     "name": "Alejandro Rodriguez Pascual",
-    "roles": ["Developer"]
+    "roles": ["Developer"],
+    "hidden": true,
   },
   {
     "name": "Allison Bhavsar",
@@ -236,11 +249,12 @@ const constPeople = [
   },
   {
     "name": "Amitesh Sharma",
-    "roles": ["Developer"]
+    "roles": ["Developer"],
+    "hidden": true,
   },
   {
     "name": "Anshul Birla",
-    "roles": ["Developer"]
+    "roles": ["Developer", "Engineering Manager"]
   },
   {
     "name": "Anson Lee",
@@ -261,11 +275,12 @@ const constPeople = [
   },
   {
     "name": "Dhanush Nanjunda Reddy",
-    "roles": ["Developer"]
+    "roles": ["Developer", "Engineering Manager"]
   },
   {
     "name": "Dhruv Sood",
-    "roles": ["Developer"]
+    "roles": ["Developer"],
+    "hidden": true,
   },
   {
     "name": "Elias Fang",
@@ -289,7 +304,8 @@ const constPeople = [
   },
   {
     "name": "Kevin Han",
-    "roles": ["Developer"]
+    "roles": ["Developer"],
+    "graduationYear": 2021,
   },
   {
     "name": "Kunal Bhandarkar",
@@ -301,7 +317,7 @@ const constPeople = [
   },
   {
     "name": "Navid Boloorian",
-    "roles": ["Developer", "Project Manager"]
+    "roles": ["Developer", "Engineering Manager"]
   },
   {
     "name": "Nicholas Vanny",
@@ -309,15 +325,15 @@ const constPeople = [
   },
   {
     "name": "Nicolas La Polla",
-    "roles": ["Developer"]
+    "roles": ["Developer", "Engineering Manager"]
   },
   {
     "name": "Nirmal Agnihotri",
-    "roles": ["Developer"]
+    "roles": ["Developer", "Engineering Manager"]
   },
   {
     "name": "Patrick Brown",
-    "roles": ["Developer"]
+    "roles": ["Developer", "Engineering Manager"]
   },
   {
     "name": "Philip Zhang",
@@ -329,7 +345,8 @@ const constPeople = [
   },
   {
     "name": "Rohith Kasar",
-    "roles": ["Developer"]
+    "roles": ["Developer"],
+    "hidden": true,
   },
   {
     "name": "Ryan Bui",
@@ -345,7 +362,7 @@ const constPeople = [
   },
   {
     "name": "Stephen Tan",
-    "roles": ["Developer"]
+    "roles": ["Developer", "TEST Developer Lead"]
   },
   {
     "name": "Thai Gillespie",
@@ -354,7 +371,8 @@ const constPeople = [
   },
   {
     "name": "Thomas Garry",
-    "roles": ["Developer"]
+    "roles": ["Developer"],
+    "hidden": true,
   },
   {
     "name": "Upo Bhat",
@@ -371,6 +389,230 @@ const constPeople = [
   {
     "name": "Zain Khan",
     "roles": ["Developer"]
+  },
+  {
+    "name": "Ainesh Arumugam",
+    "roles": ["Developer"]
+  },
+  {
+    "name": "Alex Zhang",
+    "roles": ["Developer"]
+  },
+  {
+    "name": "Kevin Fu",
+    "roles": ["Developer"]
+  },
+  {
+    "name": "Pratyush Chand",
+    "roles": ["Developer"]
+  },
+  {
+    "name": "Andrew Russell",
+    "roles": ["Developer"]
+  },
+  {
+    "name": "James Zhang",
+    "roles": ["Developer"]
+  },
+  {
+    "name": "Mohak Vaswani",
+    "roles": ["Developer"]
+  },
+  {
+    "name": "Shreya Gupta",
+    "roles": ["Developer"]
+  },
+  {
+    "name": "Akhilan Gurumoorthy",
+    "roles": [
+      "Developer"
+    ]
+  },
+  {
+    "name": "Aammya Sapra",
+    "roles": [
+      "Developer"
+    ]
+  },
+  {
+    "name": "Andrew Masek",
+    "roles": [
+      "Developer"
+    ]
+  },
+  {
+    "name": "Anvitaa Sekhsaria",
+    "roles": [
+      "Developer"
+    ]
+  },
+  {
+    "name": "Artyom Muradyan",
+    "roles": [
+      "Developer"
+    ]
+  },
+  {
+    "name": "Helen Lin",
+    "roles": [
+      "Developer"
+    ]
+  },
+  {
+    "name": "Mary Vu",
+    "roles": [
+      "Developer"
+    ]
+  },
+  {
+    "name": "Nishant Balaji",
+    "roles": [
+      "Developer"
+    ]
+  },
+  {
+    "name": "Aman Aggarwal",
+    "roles": [
+      "Developer"
+    ]
+  },
+  {
+    "name": "Parth Patel",
+    "roles": [
+      "Developer"
+    ]
+  },
+  {
+    "name": "Assaf Cohen-Arazi",
+    "roles": [
+      "Developer"
+    ]
+  },
+  {
+    "name": "Ryan Hung",
+    "roles": [
+      "Developer"
+    ]
+  },
+  {
+    "name": "Shreekar Pandey",
+    "roles": [
+      "Developer"
+    ]
+  },
+  {
+    "name": "William Jin",
+    "roles": [
+      "Developer"
+    ]
+  },
+  {
+    "name": "Yucheng Huang",
+    "roles": [
+      "Developer"
+    ]
+  },
+  {
+    "name": "Leslie Aguiar",
+    "roles": [
+      "Designer"
+    ]
+  },
+  {
+    "name": "Jonathan Lum",
+    "roles": [
+      "Designer"
+    ]
+  },
+  {
+    "name": "Juliet Zhuang",
+    "roles": [
+      "Designer"
+    ]
+  },
+  {
+    "name": "Tracey Du",
+    "roles": [
+      "Designer"
+    ]
+  },
+  {
+    "name": "Mrinal Sharma",
+    "roles": [
+      "Product Manager"
+    ]
+  },
+  {
+    "name": "Akash Premkumar",
+    "roles": [
+      "Product Manager"
+    ]
+  },
+  {
+    "name": "Annie Wen",
+    "roles": [
+      "Product Manager"
+    ]
+  },
+  {
+    "name": "Emmanuel Christian Lantin Flores",
+    "roles": [
+      "Product Manager"
+    ]
+  },
+  {
+    "name": " Casey Toy",
+    "roles": [
+      "TEST Developer"
+    ]
+  },
+  {
+    "name": "Sage Amon",
+    "roles": [
+      "TEST Developer"
+    ]
+  },
+  {
+    "name": "Abel Seyoum",
+    "roles": [
+      "TEST Developer"
+    ]
+  },
+  {
+    "name": "Garrett Lam",
+    "roles": [
+      "TEST Developer"
+    ]
+  },
+  {
+    "name": "Eric Shults",
+    "roles": [
+      "TEST Developer"
+    ]
+  },
+  {
+    "name": "Alicia Danielle",
+    "roles": [
+      "TEST Developer"
+    ]
+  },
+  {
+    "name": "Frances Sy",
+    "roles": [
+      "TEST Designer"
+    ]
+  },
+  {
+    "name": "Aska Kunita Demirci",
+    "roles": [
+      "TEST Designer"
+    ]
+  },
+  {
+    "name": "Annie Ye",
+    "roles": [
+      "TEST Designer"
+    ]
   }
 ] as const;
 
@@ -383,10 +625,24 @@ people.sort(makeComparator(({ roles, name, ...person }) => [
   name,
 ]));
 
+// Check for duplicate names
+function checkDuplicates() {
+  const names: { [key: string]: boolean } = {};
+  for (const person of people) {
+    if (person.name in names) {
+      throw new Error(`Name appears multiple times: '${person.name}'`);
+    }
+    names[person.name] = true;
+  }
+}
+checkDuplicates();
+
 const members: Member[] = [];
 const alumni: Alumnus[] = [];
 for (const person of people) {
-  (("graduationYear" in person) ? alumni : members).push(person);
+  if (!person.hidden) {
+    (("graduationYear" in person) ? alumni : members).push(person);
+  }
 }
 
 function getPersonByName(name: PersonName): Person {
