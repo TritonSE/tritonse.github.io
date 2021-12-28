@@ -1,26 +1,46 @@
 import React from "react";
-// import slugify from "slugify";
-// import { MDXProvider } from "@mdx-js/react";
 import PlainLayout from "./PlainLayout";
 import type { PlainMetadata } from "./PlainLayout";
+import ProfileCardGroup from "../components/ProfileCardGroup";
+import MemberProfileCard from "../components/MemberProfileCard";
+import { getPersonByName } from "../data/people";
 
-/*
-// TODO: identify headings for table of contents
-function CustomH2({ children }: { children: React.ReactNode }) {
+import { getProjectByName, ProjectName, ProjectTeam } from "../data/projects";
+
+function TeamProfiles({ team }: { team: ProjectTeam }) {
   return (
-    <h2>
-      {children}
-    </h2>
+    <>
+      {team.map(({ role, names }) => (
+        <React.Fragment key={role}>
+          <h3>{role}</h3>
+          <ProfileCardGroup
+            profiles={names.map((name) => (
+              <MemberProfileCard member={getPersonByName(name)} roleLimit={0} key={name} />
+            ))}
+          />
+        </React.Fragment>
+      ))}
+    </>
   );
 }
-*/
 
-export default function ProjectLayout({ metadata, children }: { metadata: PlainMetadata, children: React.ReactNode }) {
+export default function ProjectLayout({ name, children }: { name: ProjectName, children: React.ReactNode }) {
+  const project = getProjectByName(name);
   return (
-    <PlainLayout metadata={metadata}>
-      {/* <MDXProvider components={{h2: CustomH2}}> */}
-        {children}
-      {/* </MDXProvider> */}
+    <PlainLayout metadata={{ title: project.name, subtitle: project.description }}>
+      {children}
+      <h2>Meet the Team</h2>
+      <TeamProfiles team={project.team} />
     </PlainLayout>
   );
+}
+
+export function makeProjectPage(name: ProjectName, Content: (props: any) => JSX.Element) {
+  return function ProjectPage() {
+    return (
+      <ProjectLayout name={name}>
+        <Content />
+      </ProjectLayout>
+    );
+  };
 }

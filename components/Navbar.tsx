@@ -24,7 +24,7 @@ export default function Navbar() {
       <Container>
         <BsNavbar.Brand className="py-0">
           <Link href="/" passHref>
-            <a>
+            <a style={{ position: "relative", top: "3px" }}>
               <Image src={logo} alt="Logo" width={50} height={50} />
             </a>
           </Link>

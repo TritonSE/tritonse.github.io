@@ -1,4 +1,42 @@
-[
+import { makeComparator } from "../util";
+
+// Roles are listed alphabetically in each category.
+const ROLES = [
+  "President",
+  // VPs
+  "VP Design",
+  "VP Engineering",
+  "VP External",
+  "VP Operations",
+  "VP Projects",
+  "VP Technology",
+  // Leads
+  "Marketing Lead",
+  "Outreach Lead",
+  // Managers
+  "Engineering Manager",
+  "Product Manager",
+  "Project Manager",
+  // Everyone else
+  "Designer",
+  "Developer",
+  "TEST Designer",
+  "TEST Developer",
+] as const;
+type Role = typeof ROLES[number];
+
+interface Member {
+  readonly name: string,
+  readonly roles: readonly Role[],
+}
+
+interface Alumnus extends Member {
+  readonly graduationYear: number,
+}
+
+type Person = Member | Alumnus;
+
+const constPeople = [
   {
     "name": "Aaron Yang",
     "roles": ["President"],
@@ -118,11 +156,6 @@
     "graduationYear": 2021
   },
   {
-    "name": "Mylinh Lac",
-    "roles": ["Designer", "VP Design"],
-    "hidden": true
-  },
-  {
     "name": "Heather Gan",
     "roles": ["Developer", "Outreach Lead"]
   },
@@ -183,11 +216,11 @@
   },
   {
     "name": "Aaron Kirk",
-    "roles": ["Designer"]
+    "roles": ["Developer"]
   },
   {
     "name": "Advay Sharma",
-    "roles": ["Designer"]
+    "roles": ["Developer"]
   },
   {
     "name": "Aksharan Saravanan",
@@ -339,4 +372,41 @@
     "name": "Zain Khan",
     "roles": ["Developer"]
   }
-]
+] as const;
+
+type PersonName = typeof constPeople[number]["name"];
+
+const people: Person[] = constPeople.slice();
+people.sort(makeComparator(({ roles, name, ...person }) => [
+  ("graduationYear" in person) ? person.graduationYear : 9999,
+  ROLES.indexOf(roles[roles.length - 1]),
+  name,
+]));
+
+const members: Member[] = [];
+const alumni: Alumnus[] = [];
+for (const person of people) {
+  (("graduationYear" in person) ? alumni : members).push(person);
+}
+
+function getPersonByName(name: PersonName): Person {
+  // A matching Person is guaranteed to exist because each PersonName corresponds to a Person.
+  return people.find((person) => person.name === name) as Person;
+}
+
+const readonlyMembers = members as readonly Member[];
+const readonlyAlumni = alumni as readonly Alumnus[];
+export {
+  ROLES,
+  readonlyMembers as members,
+  readonlyAlumni as alumni,
+  getPersonByName,
+}
+
+export type {
+  Role,
+  Person,
+  PersonName,
+  Member,
+  Alumnus,
+}

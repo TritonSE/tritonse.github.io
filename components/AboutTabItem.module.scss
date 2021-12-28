@@ -1,0 +1,18 @@
+.tabItem {
+  color: #CACACA;
+  border-bottom: 2px solid #C4C4C4;
+
+  .title {
+    font-size: 3rem;
+  }
+
+  .subtitle {
+    font-size: 2rem;
+  }
+}
+
+.tabItem:global(.active) {
+  color: white;
+  border-bottom: 5px solid #81D8D3;
+  font-weight: 600;
+}

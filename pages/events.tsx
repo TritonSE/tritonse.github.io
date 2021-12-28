@@ -5,30 +5,18 @@ import PageTitle from "../components/PageTitle";
 import EventCardGroup from "../components/EventCardGroup";
 import events from "../data/events";
 import type { Event } from "../data/events";
+import { groupBy } from "../util";
 
-function getYearsAndEvents() {
-  const eventsBySchoolYear: {[key:string]: Event[]} = {};
-  for (const event of events) {
-    const schoolYear = event.startTime.minus({ months: 8 }).year;
-
-    if (!eventsBySchoolYear.hasOwnProperty(schoolYear)) {
-      eventsBySchoolYear[schoolYear] = [];
-    }
-    eventsBySchoolYear[schoolYear].push(event);
-  }
-
-  const entries = (Object.entries(eventsBySchoolYear)
-    .map(([year, events]) => [parseInt(year), events] as [number, Event[]]));
-  entries.sort((entry1, entry2) => entry2[0] - entry1[0]);
-  return entries;
+function getSchoolYear(event: Event): number {
+  return event.startTime.minus({ months: 8 }).year
 }
 
-function formatSchoolYear(year: number) {
+function formatSchoolYear(year: number): string {
   return year + "–" + (year + 1).toString().slice(2);
 }
 
 export default function Events() {
-  const yearsAndEvents = getYearsAndEvents();
+  const yearsAndEvents = groupBy(events, getSchoolYear);
   return (
     <>
       <PageTitle title="Events" />
