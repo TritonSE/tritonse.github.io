@@ -1,11 +1,12 @@
 import React from "react";
-import PlainLayout from "./PlainLayout";
-import type { PlainMetadata } from "./PlainLayout";
-import ProfileCardGroup from "../components/ProfileCardGroup";
-import MemberProfileCard from "../components/MemberProfileCard";
-import { getPersonByName } from "../data/people";
 
+import MemberProfileCard from "../components/MemberProfileCard";
+import ProfileCardGroup from "../components/ProfileCardGroup";
+import { getPersonByName } from "../data/people";
 import { getProjectByName, ProjectName, ProjectTeam } from "../data/projects";
+
+import type { PlainMetadata } from "./PlainLayout";
+import PlainLayout from "./PlainLayout";
 
 function TeamProfiles({ team }: { team: ProjectTeam }) {
   return (

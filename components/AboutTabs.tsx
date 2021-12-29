@@ -1,12 +1,14 @@
 import Nav from "react-bootstrap/Nav";
 import Tab from "react-bootstrap/Tab";
-import ClientProfileCard from "../components/ClientProfileCard";
-import MemberProfileCard from "../components/MemberProfileCard";
-import ProfileCardGroup from "../components/ProfileCardGroup";
+
 import clients from "../data/clients";
 import { members, alumni } from "../data/people";
 import { groupBy } from "../util";
+
 import AboutTabItem from "./AboutTabItem";
+import ClientProfileCard from "./ClientProfileCard";
+import MemberProfileCard from "./MemberProfileCard";
+import ProfileCardGroup from "./ProfileCardGroup";
 
 function Members() {
   return (

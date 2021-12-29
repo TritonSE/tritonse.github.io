@@ -1,4 +1,5 @@
 import { Container } from "react-bootstrap";
+
 import PageTitle from "../components/PageTitle";
 
 export interface PlainMetadata {

@@ -1,6 +1,7 @@
-import ProfileCard from "./ProfileCard";
-import { nameToFilename } from "../util";
 import type { Client } from "../data/clients";
+import { nameToFilename } from "../util";
+
+import ProfileCard from "./ProfileCard";
 
 export default function ClientProfileCard({ client }: { client: Client }) {
   const imageProps = {

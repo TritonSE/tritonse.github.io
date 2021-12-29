@@ -1,9 +1,10 @@
-import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import React from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import BsNavbar from "react-bootstrap/Navbar";
+
 import logo from "../public/images/icons/tse-bulb.png";
 
 function NavbarItem({ href, children }: { href: string; children: React.ReactNode }) {

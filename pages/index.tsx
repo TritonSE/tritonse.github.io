@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
 import Container from "react-bootstrap/Container";
+
+import ArrowLink from "../components/ArrowLink";
 import EventCardGroup from "../components/EventCardGroup";
+import PageTitle from "../components/PageTitle";
 import events from "../data/events";
 import type { Event } from "../data/events";
-import ArrowLink from "../components/ArrowLink";
-import PageTitle from "../components/PageTitle";
 
 function Heading(props: any) {
   return <h2 className="mb-5" style={{ fontWeight: 600 }} {...props} />;

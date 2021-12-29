@@ -1,7 +1,9 @@
 import "../styles/common.scss";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
 import type { AppProps } from "next/app";
+
+import Footer from "../components/Footer";
+import Navbar from "../components/Navbar";
+
 import styles from "./_app.module.scss";
 
 function MyApp({ Component, pageProps }: AppProps) {

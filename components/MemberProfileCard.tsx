@@ -1,6 +1,7 @@
-import { nameToFilename } from "../util";
-import ProfileCard from "./ProfileCard";
 import type { Member } from "../data/people";
+import { nameToFilename } from "../util";
+
+import ProfileCard from "./ProfileCard";
 
 export default function MemberProfileCard({
   member,

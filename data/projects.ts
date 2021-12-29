@@ -1,4 +1,5 @@
 import { makeComparator } from "../util";
+
 import { PersonName, Role, ROLES } from "./people";
 
 type ProjectTeam = readonly {

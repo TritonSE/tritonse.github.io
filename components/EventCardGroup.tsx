@@ -1,8 +1,10 @@
 import Card from "react-bootstrap/Card";
-import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import EventCard from "../components/EventCard";
+import Row from "react-bootstrap/Row";
+
 import type { Event } from "../data/events";
+
+import EventCard from "./EventCard";
 
 export default function EventCardGroup({ events }: { events: Event[] }) {
   if (events.length === 0) {

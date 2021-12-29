@@ -8,6 +8,16 @@ const generalRules = {
   "no-continue": "off",
   "prefer-template": "off",
   "prefer-destructuring": "off",
+  "import/extensions": ["warn", "never"],
+  "import/order": [
+    "warn",
+    {
+      "alphabetize": {
+        "order": "asc",
+      },
+      "newlines-between": "always",
+    }
+  ],
 
   // Allow leading underscores in identifiers (e.g. _id in MongoDB).
   "no-underscore-dangle": "off",

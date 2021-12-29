@@ -1,6 +1,7 @@
 import Container from "react-bootstrap/Container";
-import PageTitle from "../components/PageTitle";
+
 import AboutTabs from "../components/AboutTabs";
+import PageTitle from "../components/PageTitle";
 
 export default function About() {
   return (

@@ -1,4 +1,5 @@
 import Document, { Html, Head, Main, NextScript } from "next/document";
+
 import PageTitle from "../components/PageTitle";
 
 class MyDocument extends Document {

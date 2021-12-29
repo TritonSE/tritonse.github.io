@@ -1,6 +1,7 @@
-import Nav from "react-bootstrap/Nav";
-import type { NavLinkProps } from "react-bootstrap";
 import classNames from "classnames";
+import type { NavLinkProps } from "react-bootstrap";
+import Nav from "react-bootstrap/Nav";
+
 import styles from "./AboutTabItem.module.scss";
 
 export default function AboutTabItem({

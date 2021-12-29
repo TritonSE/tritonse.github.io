@@ -1,5 +1,7 @@
 import Card from "react-bootstrap/Card";
+
 import type { Event } from "../data/events";
+
 import ArrowLink from "./ArrowLink";
 
 function EventText({
