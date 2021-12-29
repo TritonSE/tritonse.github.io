@@ -7,7 +7,10 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "lint-fix": "(eslint --fix --cache --report-unused-disable-directives . || true) && prettier --write .",
+    "lint-check": "eslint --cache --report-unused-disable-directives . && prettier --check .",
+    "prepare": "husky install .husky"
   },
   "dependencies": {
     "@mdx-js/loader": "^1.6.22",
@@ -41,6 +44,7 @@
     "eslint-plugin-jsx-a11y": "^6.5.1",
     "eslint-plugin-react": "^7.28.0",
     "eslint-plugin-react-hooks": "^4.3.0",
+    "husky": "^7.0.4",
     "typescript": "^4.5.4"
   }
 }

@@ -288,7 +288,7 @@ const constPeople = [
   },
   {
     name: "Emmanuel Flores",
-    roles: ["Developer"],
+    roles: ["Developer", "Product Manager"],
   },
   {
     name: "Hana Kim",
@@ -508,10 +508,6 @@ const constPeople = [
   },
   {
     name: "Annie Wen",
-    roles: ["Product Manager"],
-  },
-  {
-    name: "Emmanuel Christian Lantin Flores",
     roles: ["Product Manager"],
   },
   {
