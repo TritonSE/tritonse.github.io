@@ -3,7 +3,7 @@ import Container from "react-bootstrap/Container";
 
 import EventCardGroup from "../components/EventCardGroup";
 import PageTitle from "../components/PageTitle";
-import events from "../data/events";
+import allEvents from "../data/events";
 import type { Event } from "../data/events";
 import { groupBy } from "../util";
 
@@ -16,7 +16,7 @@ function formatSchoolYear(year: number): string {
 }
 
 export default function Events() {
-  const yearsAndEvents = groupBy(events, getSchoolYear);
+  const yearsAndEvents = groupBy(allEvents, getSchoolYear);
   return (
     <>
       <PageTitle title="Events" />

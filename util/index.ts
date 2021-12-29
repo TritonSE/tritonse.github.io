@@ -1,6 +1,6 @@
-export function makeComparator<Type, Key extends readonly any[]>(
-  keyFunc: (value: Type) => Key
-): (value1: Type, value2: Type) => number {
+export function makeComparator<Type, Key extends readonly (number | string)[]>(
+  keyFunc: (v: Type) => Key
+): (v1: Type, v2: Type) => number {
   return (value1, value2) => {
     const key1 = keyFunc(value1);
     const key2 = keyFunc(value2);
@@ -12,13 +12,13 @@ export function makeComparator<Type, Key extends readonly any[]>(
   };
 }
 
-export function groupBy<Type, Key extends Object>(
+export function groupBy<Type, Key extends number | string>(
   objects: readonly Type[],
   keyFunc: (obj: Type) => Key
 ): [Key, Type[]][] {
   const groups = {} as {
     [key: string]: {
-      value: any;
+      value: Key;
       objs: Type[];
     };
   };
@@ -26,7 +26,7 @@ export function groupBy<Type, Key extends Object>(
   for (const obj of objects) {
     const value = keyFunc(obj);
     const valueString = value.toString();
-    if (!groups.hasOwnProperty(valueString)) {
+    if (!Object.prototype.hasOwnProperty.call(groups, valueString)) {
       groups[valueString] = { value, objs: [] };
     }
     groups[valueString].objs.push(obj);

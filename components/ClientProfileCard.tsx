@@ -1,3 +1,5 @@
+import React from "react";
+
 import type { Client } from "../data/clients";
 import { nameToFilename } from "../util";
 

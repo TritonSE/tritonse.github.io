@@ -1,3 +1,5 @@
+import React from "react";
+
 import type { Member } from "../data/people";
 import { nameToFilename } from "../util";
 

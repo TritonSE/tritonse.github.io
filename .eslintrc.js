@@ -12,11 +12,11 @@ const generalRules = {
   "import/order": [
     "warn",
     {
-      "alphabetize": {
-        "order": "asc",
+      alphabetize: {
+        order: "asc",
       },
       "newlines-between": "always",
-    }
+    },
   ],
 
   // Allow leading underscores in identifiers (e.g. _id in MongoDB).
@@ -40,7 +40,7 @@ const generalRules = {
    *
    * Prefix variable names with an underscore to suppress the warning.
    */
-  "no-unused-vars": [
+  "@typescript-eslint/no-unused-vars": [
     "warn",
     {
       argsIgnorePattern: "^_",
@@ -99,7 +99,7 @@ function getAccessibilityOverrideRules() {
 function getAirbnbOverrideRules() {
   let airbnbRules;
   try {
-    airbnbRules = require("eslint-config-airbnb-base/rules/style.js").rules;
+    airbnbRules = require("eslint-config-airbnb-base/rules/style").rules;
   } catch (e) {
     return {};
   }
@@ -165,7 +165,7 @@ function generateConfig() {
 
   const config = {
     ...eslintrcJson,
-    rules: generateRules(usingReact, usingNode),
+    rules: Object.assign(generateRules(usingReact, usingNode), eslintrcJson.rules || {}),
   };
 
   return config;

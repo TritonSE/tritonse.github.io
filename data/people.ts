@@ -584,8 +584,8 @@ function getPersonByName(name: PersonName): Person {
   return people.find((person) => person.name === name) as Person;
 }
 
-const readonlyMembers = members as readonly Member[];
-const readonlyAlumni = alumni as readonly Alumnus[];
-export { ROLES, readonlyMembers as members, readonlyAlumni as alumni, getPersonByName };
+const allMembers = members as readonly Member[];
+const allAlumni = alumni as readonly Alumnus[];
+export { ROLES, allMembers, allAlumni, getPersonByName };
 
 export type { Role, Person, PersonName, Member, Alumnus };

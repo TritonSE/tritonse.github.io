@@ -1,8 +1,9 @@
+import React from "react";
 import Nav from "react-bootstrap/Nav";
 import Tab from "react-bootstrap/Tab";
 
-import clients from "../data/clients";
-import { members, alumni } from "../data/people";
+import allClients from "../data/clients";
+import { allMembers, allAlumni } from "../data/people";
 import { groupBy } from "../util";
 
 import AboutTabItem from "./AboutTabItem";
@@ -13,7 +14,7 @@ import ProfileCardGroup from "./ProfileCardGroup";
 function Members() {
   return (
     <ProfileCardGroup
-      profiles={members.map((member, index) => (
+      profiles={allMembers.map((member, index) => (
         <MemberProfileCard member={member} roleLimit={1} key={index} />
       ))}
     />
@@ -21,7 +22,7 @@ function Members() {
 }
 
 function Alumni() {
-  const yearsAndAlumni = groupBy(alumni, (alumnus) => alumnus.graduationYear).reverse();
+  const yearsAndAlumni = groupBy(allAlumni, (alumnus) => alumnus.graduationYear).reverse();
   return (
     <>
       {yearsAndAlumni.map(([year, alumni]) => (
@@ -38,7 +39,7 @@ function Alumni() {
 }
 
 function Clients() {
-  const statusesAndClients = groupBy(clients, (client) =>
+  const statusesAndClients = groupBy(allClients, (client) =>
     client.endYear === null ? "Current" : "Past"
   );
   return (
@@ -60,9 +61,9 @@ export default function AboutTabs() {
   return (
     <Tab.Container defaultActiveKey="members">
       <Nav justify className="mb-5">
-        <AboutTabItem title={members.length.toString()} subtitle="Members" eventKey="members" />
-        <AboutTabItem title={alumni.length.toString()} subtitle="Alumni" eventKey="alumni" />
-        <AboutTabItem title={clients.length.toString()} subtitle="Clients" eventKey="clients" />
+        <AboutTabItem title={allMembers.length.toString()} subtitle="Members" eventKey="members" />
+        <AboutTabItem title={allAlumni.length.toString()} subtitle="Alumni" eventKey="alumni" />
+        <AboutTabItem title={allClients.length.toString()} subtitle="Clients" eventKey="clients" />
       </Nav>
       <Tab.Content>
         <Tab.Pane eventKey="members">

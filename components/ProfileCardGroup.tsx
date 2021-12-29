@@ -2,15 +2,14 @@ import React from "react";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 
-export default function ProfileCardGroup({
-  title,
-  profiles,
-}: {
+export interface ProfileCardGroupProps {
   title?: string;
   profiles: React.ReactNode[];
-}) {
+}
+
+export default function ProfileCardGroup({ title, profiles }: ProfileCardGroupProps) {
   if (profiles.length === 0) {
-    return <></>;
+    return null;
   }
 
   return (

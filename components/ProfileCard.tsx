@@ -1,16 +1,16 @@
+import React from "react";
 import Card from "react-bootstrap/Card";
 
-import ImageWithFallback, { ImageWithFallbackProps } from "./ImageWithFallback";
+import ImageWithFallback from "./ImageWithFallback";
+import type { ImageWithFallbackProps } from "./ImageWithFallback";
 
-export default function ProfileCard({
-  name,
-  subtitles,
-  imageProps,
-}: {
+interface ProfileCardProps {
   name: string;
   subtitles: string[];
   imageProps: ImageWithFallbackProps;
-}) {
+}
+
+export default function ProfileCard({ name, subtitles, imageProps }: ProfileCardProps) {
   return (
     <Card className="m-3 mb-5" style={{ background: "rgba(0, 0, 0, 0)" }}>
       <div className="mb-3">

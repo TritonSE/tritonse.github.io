@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import Container from "react-bootstrap/Container";
 
 import ArrowLink from "../components/ArrowLink";
@@ -7,8 +7,12 @@ import PageTitle from "../components/PageTitle";
 import events from "../data/events";
 import type { Event } from "../data/events";
 
-function Heading(props: any) {
-  return <h2 className="mb-5" style={{ fontWeight: 600 }} {...props} />;
+function Heading({ children }: { children: React.ReactNode }) {
+  return (
+    <h2 className="mb-5" style={{ fontWeight: 600 }}>
+      {children}
+    </h2>
+  );
 }
 
 export default function Home() {

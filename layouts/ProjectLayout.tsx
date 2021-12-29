@@ -1,3 +1,4 @@
+import { MDXProps } from "mdx/types";
 import React from "react";
 
 import MemberProfileCard from "../components/MemberProfileCard";
@@ -5,7 +6,6 @@ import ProfileCardGroup from "../components/ProfileCardGroup";
 import { getPersonByName } from "../data/people";
 import { getProjectByName, ProjectName, ProjectTeam } from "../data/projects";
 
-import type { PlainMetadata } from "./PlainLayout";
 import PlainLayout from "./PlainLayout";
 
 function TeamProfiles({ team }: { team: ProjectTeam }) {
@@ -42,7 +42,7 @@ export default function ProjectLayout({
   );
 }
 
-export function makeProjectPage(name: ProjectName, Content: (props: any) => JSX.Element) {
+export function makeProjectPage(name: ProjectName, Content: (props: MDXProps) => JSX.Element) {
   return function ProjectPage() {
     return (
       <ProjectLayout name={name}>

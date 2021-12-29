@@ -1,17 +1,16 @@
+import React from "react";
 import Card from "react-bootstrap/Card";
 
 import type { Event } from "../data/events";
 
 import ArrowLink from "./ArrowLink";
 
-function EventText({
-  className,
-  children,
-  ...props
-}: {
+interface EventTextProps {
   className?: string;
   children: React.ReactNode;
-}) {
+}
+
+function EventText({ className, children, ...props }: EventTextProps) {
   return (
     <Card.Text className={className || "mb-3"} {...props}>
       {children}
@@ -19,11 +18,17 @@ function EventText({
   );
 }
 
+EventText.defaultProps = {
+  className: undefined,
+};
+
+interface EventCardProps {
+  event: Event;
+}
+
 export default function EventCard({
   event: { title, description, location, startTime, url },
-}: {
-  event: Event;
-}) {
+}: EventCardProps) {
   return (
     <Card className="mb-3 text-dark shadow">
       <Card.Body>

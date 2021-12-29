@@ -1,13 +1,11 @@
-import Image from "next/image";
-import { useState } from "react";
+import Image, { ImageProps } from "next/image";
+import React, { useState } from "react";
 
-export interface ImageWithFallbackProps {
+export type ImageWithFallbackProps = {
   paths: string[];
-  alt: string;
-  [key: string]: any;
-}
+} & Omit<ImageProps, "src">;
 
-export default function ImageWithFallback({ paths, alt, ...props }: ImageWithFallbackProps) {
+export default function ImageWithFallback({ paths, ...props }: ImageWithFallbackProps) {
   const srcs = [] as string[];
   for (const path of paths) {
     for (const extension of ["png", "jpg"]) {
@@ -19,15 +17,14 @@ export default function ImageWithFallback({ paths, alt, ...props }: ImageWithFal
 
   return (
     <Image
-      alt={alt}
+      {...props}
       src={srcs[index]}
       onError={() => {
-        if (index == srcs.length - 1) {
+        if (index === srcs.length - 1) {
           throw Error(`Could not load any of the candidate images: ${JSON.stringify(srcs)}`);
         }
         setIndex(index + 1);
       }}
-      {...props}
     />
   );
 }
