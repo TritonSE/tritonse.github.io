@@ -6,7 +6,7 @@ import type { Event } from "../data/events";
 
 export default function EventCardGroup({ events }: { events: Event[] }) {
   if (events.length === 0) {
-    return <p>No events scheduled.</p>
+    return <p>No events scheduled.</p>;
   }
 
   return (

@@ -19,7 +19,7 @@ function Members() {
 }
 
 function Alumni() {
-  const yearsAndAlumni = groupBy(alumni, (alumnus) => (alumnus.graduationYear)).reverse();
+  const yearsAndAlumni = groupBy(alumni, (alumnus) => alumnus.graduationYear).reverse();
   return (
     <>
       {yearsAndAlumni.map(([year, alumni]) => (
@@ -32,11 +32,13 @@ function Alumni() {
         />
       ))}
     </>
-  )
+  );
 }
 
 function Clients() {
-  const statusesAndClients = groupBy(clients, (client) => client.endYear === null ? "Current" : "Past");
+  const statusesAndClients = groupBy(clients, (client) =>
+    client.endYear === null ? "Current" : "Past"
+  );
   return (
     <>
       {statusesAndClients.map(([status, clients]) => (
@@ -49,7 +51,7 @@ function Clients() {
         />
       ))}
     </>
-  )
+  );
 }
 
 export default function AboutTabs() {
@@ -61,9 +63,15 @@ export default function AboutTabs() {
         <AboutTabItem title={clients.length.toString()} subtitle="Clients" eventKey="clients" />
       </Nav>
       <Tab.Content>
-        <Tab.Pane eventKey="members"><Members /></Tab.Pane>
-        <Tab.Pane eventKey="alumni"><Alumni /></Tab.Pane>
-        <Tab.Pane eventKey="clients"><Clients /></Tab.Pane>
+        <Tab.Pane eventKey="members">
+          <Members />
+        </Tab.Pane>
+        <Tab.Pane eventKey="alumni">
+          <Alumni />
+        </Tab.Pane>
+        <Tab.Pane eventKey="clients">
+          <Clients />
+        </Tab.Pane>
       </Tab.Content>
     </Tab.Container>
   );

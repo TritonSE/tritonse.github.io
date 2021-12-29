@@ -2,9 +2,9 @@ import { useState } from "react";
 import Image from "next/image";
 
 export interface ImageWithFallbackProps {
-  paths: string[],
-  alt: string,
-  [key: string]: any,
+  paths: string[];
+  alt: string;
+  [key: string]: any;
 }
 
 export default function ImageWithFallback({ paths, alt, ...props }: ImageWithFallbackProps) {

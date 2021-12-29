@@ -1,7 +1,15 @@
 import Link from "next/link";
 import { BsArrowRight, BsBoxArrowUpRight } from "react-icons/bs";
 
-export default function ArrowLink({ href, children, dark }: { href: string, children: React.ReactNode, dark?: boolean }) {
+export default function ArrowLink({
+  href,
+  children,
+  dark,
+}: {
+  href: string;
+  children: React.ReactNode;
+  dark?: boolean;
+}) {
   const className = dark ? "text-dark" : "";
   const arrowStyles = { marginLeft: "0.25em" };
   return (
@@ -15,7 +23,7 @@ export default function ArrowLink({ href, children, dark }: { href: string, chil
         <Link href={href}>
           <a className={className}>
             {children}
-            <BsArrowRight style={arrowStyles}/>
+            <BsArrowRight style={arrowStyles} />
           </a>
         </Link>
       )}

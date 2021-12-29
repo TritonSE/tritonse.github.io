@@ -8,7 +8,7 @@ import type { Event } from "../data/events";
 import { groupBy } from "../util";
 
 function getSchoolYear(event: Event): number {
-  return event.startTime.minus({ months: 8 }).year
+  return event.startTime.minus({ months: 8 }).year;
 }
 
 function formatSchoolYear(year: number): string {
@@ -30,5 +30,5 @@ export default function Events() {
         ))}
       </Container>
     </>
-  )
+  );
 }

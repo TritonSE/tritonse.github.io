@@ -1,8 +1,8 @@
-import "../styles/common.scss"
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
-import type { AppProps } from 'next/app';
-import styles from "./_app.module.scss"
+import "../styles/common.scss";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import type { AppProps } from "next/app";
+import styles from "./_app.module.scss";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -13,7 +13,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       </main>
       <Footer />
     </div>
-  )
+  );
 }
 
 export default MyApp;

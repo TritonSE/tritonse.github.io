@@ -24,7 +24,13 @@ function TeamProfiles({ team }: { team: ProjectTeam }) {
   );
 }
 
-export default function ProjectLayout({ name, children }: { name: ProjectName, children: React.ReactNode }) {
+export default function ProjectLayout({
+  name,
+  children,
+}: {
+  name: ProjectName;
+  children: React.ReactNode;
+}) {
   const project = getProjectByName(name);
   return (
     <PlainLayout metadata={{ title: project.name, subtitle: project.description }}>

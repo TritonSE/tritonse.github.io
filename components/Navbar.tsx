@@ -6,13 +6,11 @@ import Nav from "react-bootstrap/Nav";
 import BsNavbar from "react-bootstrap/Navbar";
 import logo from "../public/images/icons/tse-bulb.png";
 
-function NavbarItem({ href, children }: { href: string, children: React.ReactNode }) {
+function NavbarItem({ href, children }: { href: string; children: React.ReactNode }) {
   return (
     <Nav.Item as="li">
       <Link href={href} passHref>
-        <Nav.Link className="px-3">
-          {children}
-        </Nav.Link>
+        <Nav.Link className="px-3">{children}</Nav.Link>
       </Link>
     </Nav.Item>
   );

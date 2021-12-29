@@ -1,21 +1,21 @@
 import { useEffect, useState } from "react";
 import Container from "react-bootstrap/Container";
-import EventCardGroup from '../components/EventCardGroup';
-import events from '../data/events';
+import EventCardGroup from "../components/EventCardGroup";
+import events from "../data/events";
 import type { Event } from "../data/events";
 import ArrowLink from "../components/ArrowLink";
 import PageTitle from "../components/PageTitle";
 
 function Heading(props: any) {
-  return (
-    <h2 className="mb-5" style={{ fontWeight: 600 }} {...props} />
-  )
+  return <h2 className="mb-5" style={{ fontWeight: 600 }} {...props} />;
 }
 
 export default function Home() {
   const [upcomingEvents, setUpcomingEvents] = useState([] as Event[]);
   useEffect(() => {
-    setUpcomingEvents(events.filter((event) => event.startTime.toMillis() >= Date.now()).slice(0, 4));
+    setUpcomingEvents(
+      events.filter((event) => event.startTime.toMillis() >= Date.now()).slice(0, 4)
+    );
   }, []);
 
   return (
@@ -30,9 +30,11 @@ export default function Home() {
         <Container className="py-5 text-black">
           <Heading>Upcoming Events</Heading>
           <EventCardGroup events={upcomingEvents} />
-          <ArrowLink href="/events" dark>See all past events</ArrowLink>
+          <ArrowLink href="/events" dark>
+            See all past events
+          </ArrowLink>
         </Container>
       </div>
     </>
-  )
+  );
 }

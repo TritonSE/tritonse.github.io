@@ -13,7 +13,7 @@ function FooterHeading({ children }: { children: React.ReactNode }) {
   return <h2 className={styles.heading}>{children}</h2>;
 }
 
-function FooterItem({ href, children }: { href: string, children: React.ReactNode }) {
+function FooterItem({ href, children }: { href: string; children: React.ReactNode }) {
   const external = href.indexOf(":") >= 0;
   const navLinkProps = { className: styles.link };
   return (
@@ -31,7 +31,7 @@ function FooterItem({ href, children }: { href: string, children: React.ReactNod
   );
 }
 
-function FooterIcon({ icon, href }: { icon: IconType, href: string }) {
+function FooterIcon({ icon, href }: { icon: IconType; href: string }) {
   const IconClass = icon;
   return (
     <FooterItem href={href}>
@@ -62,7 +62,8 @@ export default function Footer() {
                 <FooterItem href="/nonprofits">Nonprofits</FooterItem>
               </Nav>
             </Col>
-            <Col xs={0} md /> {/* Take up space to prevent the links in the second column from getting too long */}
+            <Col xs={0} md />{" "}
+            {/* Take up space to prevent the links in the second column from getting too long */}
           </Row>
         </Col>
         <Col className="mt-4" xs={3} sm={1}>
