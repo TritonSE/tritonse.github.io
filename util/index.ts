@@ -16,12 +16,12 @@ export function groupBy<Type, Key extends number | string>(
   objects: readonly Type[],
   keyFunc: (obj: Type) => Key
 ): [Key, Type[]][] {
-  const groups = {} as {
+  const groups: {
     [key: string]: {
       value: Key;
       objs: Type[];
     };
-  };
+  } = {};
 
   for (const obj of objects) {
     const value = keyFunc(obj);

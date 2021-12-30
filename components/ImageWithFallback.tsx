@@ -6,7 +6,7 @@ export type ImageWithFallbackProps = {
 } & Omit<ImageProps, "src">;
 
 export default function ImageWithFallback({ paths, ...props }: ImageWithFallbackProps) {
-  const srcs = [] as string[];
+  const srcs: string[] = [];
   for (const path of paths) {
     for (const extension of ["png", "jpg"]) {
       srcs.push(`/images/${path}.${extension}`);

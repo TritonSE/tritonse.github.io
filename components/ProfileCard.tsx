@@ -14,7 +14,13 @@ export default function ProfileCard({ name, subtitles, imageProps }: ProfileCard
   return (
     <Card className="m-3 mb-5" style={{ background: "rgba(0, 0, 0, 0)" }}>
       <div className="mb-3">
-        <ImageWithFallback width={500} height={500} layout="responsive" {...imageProps} />
+        <ImageWithFallback
+          width={500}
+          height={500}
+          layout="responsive"
+          objectFit="cover"
+          {...imageProps}
+        />
       </div>
       <Card.Title style={{ fontWeight: 600 }}>{name}</Card.Title>
       {subtitles.map((subtitle, index) => (
