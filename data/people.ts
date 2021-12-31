@@ -559,8 +559,7 @@ people.sort(
   ])
 );
 
-// Check for duplicate names
-function checkDuplicates() {
+function checkDuplicateNames() {
   const names: { [key: string]: boolean } = {};
   for (const person of people) {
     if (person.name in names) {
@@ -569,7 +568,7 @@ function checkDuplicates() {
     names[person.name] = true;
   }
 }
-checkDuplicates();
+checkDuplicateNames();
 
 const members: Member[] = [];
 const alumni: Alumnus[] = [];
@@ -579,13 +578,9 @@ for (const person of people) {
   }
 }
 
-function getPersonByName(name: PersonName): Person {
-  // A matching Person is guaranteed to exist because each PersonName corresponds to a Person.
-  return people.find((person) => person.name === name) as Person;
-}
-
+const allPeople = people as readonly Person[];
 const allMembers = members as readonly Member[];
 const allAlumni = alumni as readonly Alumnus[];
-export { ROLES, allMembers, allAlumni, getPersonByName };
+export { ROLES, allAlumni, allMembers, allPeople };
 
-export type { Role, Person, PersonName, Member, Alumnus };
+export type { Alumnus, Member, Person, PersonName, Role };

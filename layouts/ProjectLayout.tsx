@@ -1,10 +1,10 @@
-import { MDXProps } from "mdx/types";
 import React from "react";
 
 import MemberProfileCard from "../components/MemberProfileCard";
 import ProfileCardGroup from "../components/ProfileCardGroup";
-import { getPersonByName } from "../data/people";
-import { getProjectByName, ProjectName, ProjectTeam } from "../data/projects";
+import { allPeople } from "../data/people";
+import { Project, ProjectTeam } from "../data/projects";
+import { findOne } from "../util";
 
 import PlainLayout from "./PlainLayout";
 
@@ -13,10 +13,10 @@ function TeamProfiles({ team }: { team: ProjectTeam }) {
     <>
       {team.map(({ role, names }) => (
         <React.Fragment key={role}>
-          <h3>{role}</h3>
+          <h3>{role + (names.length > 1 ? "s" : "")}</h3>
           <ProfileCardGroup
             profiles={names.map((name) => (
-              <MemberProfileCard member={getPersonByName(name)} roleLimit={0} key={name} />
+              <MemberProfileCard member={findOne(allPeople, { name })} roleLimit={0} key={name} />
             ))}
           />
         </React.Fragment>
@@ -25,14 +25,12 @@ function TeamProfiles({ team }: { team: ProjectTeam }) {
   );
 }
 
-export default function ProjectLayout({
-  name,
-  children,
-}: {
-  name: ProjectName;
+interface ProjectLayoutProps {
+  project: Project;
   children: React.ReactNode;
-}) {
-  const project = getProjectByName(name);
+}
+
+export default function ProjectLayout({ project, children }: ProjectLayoutProps) {
   return (
     <PlainLayout metadata={{ title: project.name, subtitle: project.description }}>
       {children}
@@ -40,14 +38,4 @@ export default function ProjectLayout({
       <TeamProfiles team={project.team} />
     </PlainLayout>
   );
-}
-
-export function makeProjectPage(name: ProjectName, Content: (props: MDXProps) => JSX.Element) {
-  return function ProjectPage() {
-    return (
-      <ProjectLayout name={name}>
-        <Content />
-      </ProjectLayout>
-    );
-  };
 }

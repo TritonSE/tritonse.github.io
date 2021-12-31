@@ -1,6 +1,11 @@
-import { makeComparator } from "../util";
+import { MDXProps } from "mdx/types";
+
+import contentUWEAST from "../projects/uweast-community-kitchen.mdx";
+import { makeComparator, makeSlug } from "../util";
 
 import { PersonName, Role, ROLES } from "./people";
+
+type MDXPage = (props: MDXProps) => JSX.Element;
 
 type ProjectTeam = readonly {
   readonly role: Role;
@@ -8,9 +13,13 @@ type ProjectTeam = readonly {
 }[];
 
 interface Project {
-  readonly name: string;
+  /* eslint-disable-next-line no-use-before-define */
+  readonly name: ProjectName;
+  readonly slug: string;
   readonly description: string;
+  readonly thumbnail?: string;
   readonly team: ProjectTeam;
+  readonly content: MDXPage;
 }
 
 const constProjects = [
@@ -18,6 +27,7 @@ const constProjects = [
     name: "UWEAST Community Kitchen",
     description:
       "Web application for UWEAST that allows customers to view the menu, place orders, and pay",
+    thumbnail: undefined,
     team: [
       {
         role: "Project Manager",
@@ -30,10 +40,10 @@ const constProjects = [
       {
         role: "Developer",
         names: [
-          "Aaron Kirk",
           "Alejandro Rodriguez Pascual",
           "Amitesh Sharma",
           "Dhanush Nanjunda Reddy",
+          "Aaron Kirk",
           "Navid Boloorian",
           "Patrick Brown",
           "Thomas Garry",
@@ -45,19 +55,26 @@ const constProjects = [
 
 type ProjectName = typeof constProjects[number]["name"];
 
+const projectPageContent: { [key in ProjectName]: (props: MDXProps) => JSX.Element } = {
+  "UWEAST Community Kitchen": contentUWEAST,
+};
+
 function sortTeam(team: ProjectTeam): ProjectTeam {
-  return team.slice().sort(makeComparator((group) => [ROLES.indexOf(group.role)]));
+  return team
+    .slice()
+    .sort(makeComparator((group) => [ROLES.indexOf(group.role)]))
+    .map(({ role, names }) => ({ role, names: names.slice().sort() }));
 }
 
-const projects: Project[] = constProjects
-  .slice()
-  .map(({ team, ...project }) => ({ ...project, team: sortTeam(team) }));
+const projects: Project[] = constProjects.slice().map(({ name, team, ...project }) => ({
+  ...project,
+  name,
+  slug: makeSlug(name, "-"),
+  team: sortTeam(team),
+  content: projectPageContent[name],
+}));
 
-function getProjectByName(name: ProjectName): Project {
-  return projects.find((project) => project.name === name) as Project;
-}
-
-const readonlyProjects = projects as readonly Project[];
-export { readonlyProjects as projects, getProjectByName };
+const allProjects = projects as readonly Project[];
+export { allProjects };
 
 export type { Project, ProjectName, ProjectTeam };
