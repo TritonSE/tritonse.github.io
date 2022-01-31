@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 import Card from "react-bootstrap/Card";
 
@@ -8,9 +9,10 @@ interface ProfileCardProps {
   name: string;
   subtitles: string[];
   imageProps: ImageWithFallbackProps;
+  href?: string;
 }
 
-export default function ProfileCard({ name, subtitles, imageProps }: ProfileCardProps) {
+export default function ProfileCard({ name, subtitles, imageProps, href }: ProfileCardProps) {
   return (
     <Card className="m-3 mb-5" style={{ background: "rgba(0, 0, 0, 0)" }}>
       <div className="mb-3">
@@ -28,6 +30,12 @@ export default function ProfileCard({ name, subtitles, imageProps }: ProfileCard
           {subtitle}
         </Card.Text>
       ))}
+      {href !== undefined && (
+        <Link href={href}>
+          <a className="stretched-link">Learn more</a>
+        </Link>
+      )}
     </Card>
   );
 }
+ProfileCard.defaultProps = { href: undefined };

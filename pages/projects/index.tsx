@@ -9,8 +9,8 @@ export default function Projects() {
   return (
     <Container>
       <ProfileCardGroup
-        profiles={allProjects.map((project, index) => (
-          <ProjectProfileCard project={project} key={index} />
+        profiles={allProjects.map((project) => (
+          <ProjectProfileCard project={project} key={project.name} />
         ))}
       />
     </Container>
