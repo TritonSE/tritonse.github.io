@@ -13,8 +13,7 @@ type ProjectTeam = readonly {
 }[];
 
 interface Project {
-  /* eslint-disable-next-line no-use-before-define */
-  readonly name: ProjectName;
+  readonly name: string;
   readonly slug: string;
   readonly description: string;
   readonly content: MDXPage;
@@ -55,8 +54,6 @@ const constProjects = [
   },
 ] as const;
 
-type ProjectName = typeof constProjects[number]["name"];
-
 function sortTeam(team: ProjectTeam): ProjectTeam {
   return (
     team
@@ -79,4 +76,4 @@ assertUniqueKey(allProjects, "slug");
 
 export { allProjects };
 
-export type { Project, ProjectName, ProjectTeam };
+export type { Project, ProjectTeam };

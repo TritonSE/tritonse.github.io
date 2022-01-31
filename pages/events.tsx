@@ -3,7 +3,7 @@ import Container from "react-bootstrap/Container";
 
 import EventCardGroup from "../components/EventCardGroup";
 import PageTitle from "../components/PageTitle";
-import allEvents from "../data/events";
+import { allEvents } from "../data/events";
 import type { Event } from "../data/events";
 import { groupBy } from "../util";
 

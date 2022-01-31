@@ -9,7 +9,7 @@ export interface ArrowLinkProps {
 }
 
 export default function ArrowLink({ href, children, dark }: ArrowLinkProps) {
-  const className = dark ? "text-dark" : "";
+  const className = dark ? "text-dark" : "text-light";
   const arrowStyles = { marginLeft: "0.25em" };
   return (
     <span>
