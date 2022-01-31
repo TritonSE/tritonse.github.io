@@ -1,6 +1,10 @@
-export function makeComparator<Type, Key extends (number | string)[]>(
-  keyFunc: (v: Type) => Key
-): (v1: Type, v2: Type) => number {
+/**
+ * Create a comparator for sorting objects.
+ * @param keyFunc Map each object to an array of values to sort by.
+ */
+export function makeComparator<T, K extends (number | string)[]>(
+  keyFunc: (v: T) => K
+): (v1: T, v2: T) => number {
   return (value1, value2) => {
     const key1 = keyFunc(value1);
     const key2 = keyFunc(value2);
@@ -12,14 +16,17 @@ export function makeComparator<Type, Key extends (number | string)[]>(
   };
 }
 
-export function groupBy<Type, Key extends number | string>(
-  objects: readonly Type[],
-  keyFunc: (obj: Type) => Key
-): [Key, Type[]][] {
+/**
+ * Group objects by the value of a specified key.
+ */
+export function groupBy<T, K extends number | string>(
+  objects: readonly T[],
+  keyFunc: (obj: T) => K
+): [K, T[]][] {
   const groups: {
     [key: string]: {
-      value: Key;
-      objs: Type[];
+      value: K;
+      objs: T[];
     };
   } = {};
 
@@ -37,30 +44,35 @@ export function groupBy<Type, Key extends number | string>(
     .map((group) => [group.value, group.objs]);
 }
 
-export function findWhere<Type, Key extends keyof Type>(
-  arr: readonly Type[],
-  key: Key,
-  value: Type[Key]
-): Type {
-  const found = arr.find((element) => element[key] === value);
-  if (found === undefined) {
-    throw new Error(`No element found where element.${key} is ${value}`);
-  }
-  return found;
-}
-
-export function findOne<Type>(arr: readonly Type[], query: Partial<Type>): Type {
+/**
+ * Find one object with key-value pairs that match the query.
+ */
+export function findOne<T>(arr: readonly T[], query: Partial<T>): T {
   const found = arr.find((obj) => {
     for (const [key, value] of Object.entries(query)) {
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      if ((obj as any)[key] !== (value as any)) return false;
+      if ((obj as any)[key] !== value) return false;
     }
     return true;
   });
   if (found !== undefined) {
     return found;
   }
-  throw new Error(`No element found matching query: ${query}`);
+  throw new Error(`No element found matching query: ${JSON.stringify(query)}`);
+}
+
+/**
+ * Assert that each object in the array has a unique value for the specified key.
+ */
+export function assertUniqueKey<T, K extends keyof T>(arr: readonly T[], key: K) {
+  const seen = new Set();
+  for (const element of arr) {
+    const value = element[key];
+    if (seen.has(value)) {
+      throw new Error(`Duplicate value for key '${key}': ${value}`);
+    }
+    seen.add(value);
+  }
 }
 
 export function makeSlug(name: string, replaceChar = "_") {

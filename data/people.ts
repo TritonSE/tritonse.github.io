@@ -1,7 +1,7 @@
-import { makeComparator } from "../util";
+import { assertUniqueKey, makeComparator } from "../util";
 
 // Roles are listed alphabetically in each category.
-const ROLES = [
+const allRoles = [
   "President",
   // VPs
   "VP Design",
@@ -26,7 +26,7 @@ const ROLES = [
   "Designer",
   "Developer",
 ] as const;
-type Role = typeof ROLES[number];
+type Role = typeof allRoles[number];
 
 interface Member {
   readonly name: string;
@@ -547,40 +547,29 @@ const constPeople = [
     roles: ["TEST Designer"],
   },
 ] as const;
-
 type PersonName = typeof constPeople[number]["name"];
 
-const people: Person[] = constPeople.slice();
-people.sort(
+// Sort and validate data.
+const mutablePeople: Person[] = constPeople.slice();
+mutablePeople.sort(
   makeComparator(({ roles, name, ...person }) => [
     "graduationYear" in person ? person.graduationYear : 9999,
-    ROLES.indexOf(roles[roles.length - 1]),
+    allRoles.indexOf(roles[roles.length - 1]),
     name,
   ])
 );
+assertUniqueKey(mutablePeople, "name");
 
-function checkDuplicateNames() {
-  const names: { [key: string]: boolean } = {};
-  for (const person of people) {
-    if (person.name in names) {
-      throw new Error(`Name appears multiple times: '${person.name}'`);
-    }
-    names[person.name] = true;
-  }
+const allPeople = mutablePeople as readonly Person[];
+const visiblePeople = allPeople.filter((person) => !person.hidden);
+
+// Create arrays with only alumni and only members.
+function isAlumnus(member: Member): member is Alumnus {
+  return "graduationYear" in member;
 }
-checkDuplicateNames();
+const allAlumni: readonly Alumnus[] = visiblePeople.filter(isAlumnus);
+const allMembers: readonly Member[] = visiblePeople.filter((person) => !isAlumnus(person));
 
-const members: Member[] = [];
-const alumni: Alumnus[] = [];
-for (const person of people) {
-  if (!person.hidden) {
-    ("graduationYear" in person ? alumni : members).push(person);
-  }
-}
-
-const allPeople = people as readonly Person[];
-const allMembers = members as readonly Member[];
-const allAlumni = alumni as readonly Alumnus[];
-export { ROLES, allAlumni, allMembers, allPeople };
+export { allRoles, allAlumni, allMembers, allPeople };
 
 export type { Alumnus, Member, Person, PersonName, Role };

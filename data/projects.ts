@@ -1,9 +1,9 @@
 import { MDXProps } from "mdx/types";
 
 import contentUWEAST from "../projects/uweast-community-kitchen.mdx";
-import { makeComparator, makeSlug } from "../util";
+import { assertUniqueKey, makeComparator, makeSlug } from "../util";
 
-import { PersonName, Role, ROLES } from "./people";
+import { PersonName, Role, allRoles } from "./people";
 
 type MDXPage = (props: MDXProps) => JSX.Element;
 
@@ -17,17 +17,19 @@ interface Project {
   readonly name: ProjectName;
   readonly slug: string;
   readonly description: string;
-  readonly thumbnail?: string;
-  readonly team: ProjectTeam;
   readonly content: MDXPage;
+  readonly thumbnail: string | null;
+  readonly team: ProjectTeam;
 }
 
+// Metadata for each project.
 const constProjects = [
   {
     name: "UWEAST Community Kitchen",
     description:
       "Web application for UWEAST that allows customers to view the menu, place orders, and pay",
-    thumbnail: undefined,
+    content: contentUWEAST,
+    thumbnail: null,
     team: [
       {
         role: "Project Manager",
@@ -55,26 +57,26 @@ const constProjects = [
 
 type ProjectName = typeof constProjects[number]["name"];
 
-const projectPageContent: { [key in ProjectName]: (props: MDXProps) => JSX.Element } = {
-  "UWEAST Community Kitchen": contentUWEAST,
-};
-
 function sortTeam(team: ProjectTeam): ProjectTeam {
-  return team
-    .slice()
-    .sort(makeComparator((group) => [ROLES.indexOf(group.role)]))
-    .map(({ role, names }) => ({ role, names: names.slice().sort() }));
+  return (
+    team
+      .slice()
+      // Sort roles by rank.
+      .sort(makeComparator((group) => [allRoles.indexOf(group.role)]))
+      // Sort names for each role.
+      .map(({ role, names }) => ({ role, names: names.slice().sort() }))
+  );
 }
 
-const projects: Project[] = constProjects.slice().map(({ name, team, ...project }) => ({
+const allProjects: readonly Project[] = constProjects.slice().map(({ name, team, ...project }) => ({
   ...project,
   name,
   slug: makeSlug(name, "-"),
   team: sortTeam(team),
-  content: projectPageContent[name],
 }));
+assertUniqueKey(allProjects, "name");
+assertUniqueKey(allProjects, "slug");
 
-const allProjects = projects as readonly Project[];
 export { allProjects };
 
 export type { Project, ProjectName, ProjectTeam };

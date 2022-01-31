@@ -1,16 +1,12 @@
-import { GetStaticPropsContext } from "next";
+import { GetStaticPaths, GetStaticProps } from "next";
 import React from "react";
 
-import { allProjects, ProjectName } from "../../data/projects";
+import { allProjects } from "../../data/projects";
 import ProjectLayout from "../../layouts/ProjectLayout";
 import { findOne } from "../../util";
 
-interface ProjectPageProps {
-  name: ProjectName;
-}
-
-export default function ProjectPage({ name }: ProjectPageProps) {
-  const project = findOne(allProjects, { name });
+export default function ProjectPage({ slug }: { slug: string }) {
+  const project = findOne(allProjects, { slug });
   const Content = project.content;
   return (
     <ProjectLayout project={project}>
@@ -19,22 +15,20 @@ export default function ProjectPage({ name }: ProjectPageProps) {
   );
 }
 
-export async function getStaticProps(
-  context: GetStaticPropsContext
-): Promise<{ props: ProjectPageProps }> {
-  const slug = context.params.slug as string;
+export const getStaticPaths: GetStaticPaths = async () => ({
+  paths: allProjects.map((project) => ({
+    params: { slug: project.slug },
+  })),
+  fallback: false,
+});
+
+export const getStaticProps: GetStaticProps = async (context) => {
+  if (context.params === undefined || typeof context.params.slug !== "string") {
+    throw new Error("Invalid context params");
+  }
   return {
     props: {
-      name: findOne(allProjects, { slug }).name,
+      slug: context.params.slug,
     },
   };
-}
-
-export async function getStaticPaths() {
-  return {
-    paths: allProjects.map((project) => ({
-      params: { slug: project.slug },
-    })),
-    fallback: false,
-  };
-}
+};
