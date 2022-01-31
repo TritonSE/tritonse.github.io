@@ -1,0 +1,18 @@
+name: Lint, style, and build checks
+
+on:
+  pull_request:
+    branches: main
+
+jobs:
+  frontend:
+    name: Lint, style, and build checks
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+      - working-directory: .
+        run: |
+          npm ci
+          npm run lint-check
+          npm run build

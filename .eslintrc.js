@@ -161,7 +161,7 @@ function generateConfig() {
 
   const eslintrcJson = loadEslintrcJson();
   const usingReact = eslintrcJson.plugins !== undefined && eslintrcJson.plugins.includes("react");
-  const usingNode = eslintrcJson.env.node;
+  const usingNode = false;
 
   const config = {
     ...eslintrcJson,
