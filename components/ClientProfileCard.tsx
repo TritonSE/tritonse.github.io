@@ -12,8 +12,11 @@ export default function ClientProfileCard({ client }: { client: Client }) {
   };
   const subtitle = `${client.startYear}–${client.endYear || "Present"}`;
   return (
-    <a href={client.url}>
-      <ProfileCard name={client.name} subtitles={[subtitle]} imageProps={imageProps} />
-    </a>
+    <ProfileCard
+      name={client.name}
+      subtitles={[subtitle]}
+      imageProps={imageProps}
+      href={client.url}
+    />
   );
 }

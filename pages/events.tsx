@@ -16,7 +16,7 @@ function formatSchoolYear(year: number): string {
 }
 
 export default function Events() {
-  const yearsAndEvents = groupBy(allEvents, getSchoolYear);
+  const yearsAndEvents = groupBy(allEvents, getSchoolYear).reverse();
   return (
     <>
       <PageTitle title="Events" />

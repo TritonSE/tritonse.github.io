@@ -62,8 +62,8 @@ export default function Footer() {
                 <FooterItem href="/nonprofits">Nonprofits</FooterItem>
               </Nav>
             </Col>
-            <Col xs={0} md />{" "}
             {/* Take up space to prevent the links in the second column from getting too long */}
+            <Col xs={0} md />{" "}
           </Row>
         </Col>
         <Col className="mt-4" xs={3} sm={1}>
