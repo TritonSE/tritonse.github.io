@@ -9,12 +9,13 @@ interface ProjectProfileCardProps {
 }
 
 export default function ProjectProfileCard({
-  project: { name, description, thumbnail },
+  project: { name, description, thumbnail, slug },
 }: ProjectProfileCardProps) {
   const paths = (thumbnail ? [thumbnail] : []).concat(["icons/tse-bulb"]);
   const imageProps = {
     paths,
     alt: "project thumbnail",
   };
-  return <ProfileCard name={name} subtitles={[description]} imageProps={imageProps} />;
+  const href = `/projects/${slug}`;
+  return <ProfileCard name={name} subtitles={[description]} imageProps={imageProps} href={href} />;
 }
