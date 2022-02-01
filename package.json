@@ -5,12 +5,13 @@
   "scripts": {
     "dev": "next dev",
     "build": "node images/generate.js && next build && next export",
+    "fast-build": "IMAGE_OPTIMIZATION=none npm run build",
     "start": "next start",
     "format": "prettier --write .",
     "generate-images": "node images/generate.js",
     "lint-fix": "(eslint --fix --cache --report-unused-disable-directives . || true) && prettier --write .",
     "lint-check": "tsc && eslint --cache --report-unused-disable-directives . && prettier --check .",
-    "link-test": "linkinator out/",
+    "link-test": "linkinator --skip www.linkedin.com out/",
     "prepare": "husky install .husky"
   },
   "dependencies": {

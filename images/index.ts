@@ -1,5 +1,5 @@
 /* eslint-disable */
-export default {
+const allImages = {
   "clients/center_for_community_health": require("./clients/center_for_community_health.jpg"),
   "clients/dynamics_performance_team": require("./clients/dynamics_performance_team.jpg"),
   "clients/feeding_san_diego": require("./clients/feeding_san_diego.jpg"),
@@ -89,4 +89,7 @@ export default {
   "members/winnie_chen": require("./members/winnie_chen.jpg"),
   "members/xi-kai_wu": require("./members/xi-kai_wu.jpg"),
   "members/zach_liou": require("./members/zach_liou.jpg"),
-}
+} as const;
+export type ImageKey = keyof typeof allImages;
+function isImageKey(key: string): key is ImageKey { return Object.prototype.hasOwnProperty.call(allImages, key); }
+export { allImages, isImageKey };

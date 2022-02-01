@@ -1,11 +1,10 @@
-import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import BsNavbar from "react-bootstrap/Navbar";
 
-import images from "../images";
+import ImageWithFallback from "./ImageWithFallback";
 
 function NavbarItem({ href, children }: { href: string; children: React.ReactNode }) {
   return (
@@ -24,7 +23,7 @@ export default function Navbar() {
         <BsNavbar.Brand className="py-0">
           <Link href="/" passHref>
             <a style={{ position: "relative", top: "3px" }}>
-              <Image src={images["icons/tse-bulb"]} alt="Logo" width={50} height={50} />
+              <ImageWithFallback paths={["icons/tse-bulb"]} alt="Logo" width={50} height={50} />
             </a>
           </Link>
         </BsNavbar.Brand>
