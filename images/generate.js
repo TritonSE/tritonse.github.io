@@ -15,7 +15,7 @@ function walk(dir) {
     } else if (entry.isFile()) {
       const extension = path.extname(absPath);
       if (imageExtensions.includes(extension)) {
-        const relPath = path.relative(__dirname, absPath);
+        const relPath = path.relative(__dirname, absPath).replace(/\\/g, "/");
         images[relPath.slice(0, -extension.length)] = relPath;
       }
     }
