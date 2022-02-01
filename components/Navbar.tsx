@@ -5,6 +5,8 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import BsNavbar from "react-bootstrap/Navbar";
 
+import images from "../images";
+
 function NavbarItem({ href, children }: { href: string; children: React.ReactNode }) {
   return (
     <Nav.Item as="li">
@@ -22,7 +24,7 @@ export default function Navbar() {
         <BsNavbar.Brand className="py-0">
           <Link href="/" passHref>
             <a style={{ position: "relative", top: "3px" }}>
-              <Image src="/images/icons/tse-bulb.png" alt="Logo" width={50} height={50} />
+              <Image src={images["icons/tse-bulb"]} alt="Logo" width={50} height={50} />
             </a>
           </Link>
         </BsNavbar.Brand>
