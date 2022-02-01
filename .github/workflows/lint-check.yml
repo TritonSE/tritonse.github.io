@@ -15,4 +15,5 @@ jobs:
         run: |
           npm ci
           npm run lint-check
-          npm run build
+          npm run fast-build
+          npm run link-test

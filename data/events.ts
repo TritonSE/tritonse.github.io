@@ -1,5 +1,7 @@
 import { DateTime } from "luxon";
 
+import { makeComparator } from "../util";
+
 export interface Event {
   readonly title: string;
   readonly description: string;
@@ -9,11 +11,11 @@ export interface Event {
 }
 
 function parseDate(date: string): DateTime {
-  const dateTimeRegex = /^\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d$/;
-  if (!dateTimeRegex.test(date)) {
-    throw new Error(`Date '${date}' does not match regex '${dateTimeRegex}'`);
+  const parsed = DateTime.fromISO(date, { zone: "America/Los_Angeles" });
+  if (parsed.isValid) {
+    return parsed;
   }
-  return DateTime.fromISO(date, { zone: "America/Los_Angeles" });
+  throw new Error(`Invalid date '${date}': ${parsed.invalidExplanation}`);
 }
 
 const events: Event[] = [
@@ -53,11 +55,13 @@ const events: Event[] = [
     title: "Test Fake Event: Apple Pie",
     description: "Apple pie is tasty! Come enjoy some pie.",
     location: "Somewhere over the rainbow",
-    startTime: parseDate("2022-01-21T14:00:00"),
+    startTime: parseDate("2022-03-21T14:00:00"),
     url: "https://www.example.com",
   },
 ];
 
-events.sort((e1, e2) => e1.startTime.toMillis() - e2.startTime.toMillis());
+events.sort(makeComparator((event) => [event.startTime.toMillis(), event.title]));
 
-export default events as readonly Event[];
+const allEvents = events as readonly Event[];
+
+export { allEvents };

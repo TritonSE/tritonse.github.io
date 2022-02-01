@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
-import Container from "react-bootstrap/Container";
 
 import ArrowLink from "../components/ArrowLink";
 import EventCardGroup from "../components/EventCardGroup";
 import Hero from "../components/Hero";
+import PaddedBox from "../components/PaddedBox";
 import PageTitle from "../components/PageTitle";
-import events from "../data/events";
+import { allEvents } from "../data/events";
 import type { Event } from "../data/events";
 
 function Heading({ children }: { children: React.ReactNode }) {
@@ -20,7 +20,7 @@ export default function Home() {
   const [upcomingEvents, setUpcomingEvents] = useState([] as Event[]);
   useEffect(() => {
     setUpcomingEvents(
-      events.filter((event) => event.startTime.toMillis() >= Date.now()).slice(0, 4)
+      allEvents.filter((event) => event.startTime.toMillis() >= Date.now()).slice(0, 4)
     );
   }, []);
 
@@ -33,20 +33,16 @@ export default function Home() {
         </div>
       </Hero>
       <PageTitle title="Home" />
-      <div style={{ backgroundColor: "#F8F8F8" }}>
-        <Container className="py-5 text-black">
-          <Heading>Latest Work</Heading>
-        </Container>
-      </div>
-      <div style={{ backgroundColor: "#F4F4F4" }}>
-        <Container className="py-5 text-black">
-          <Heading>Upcoming Events</Heading>
-          <EventCardGroup events={upcomingEvents} />
-          <ArrowLink href="/events" dark>
-            See all past events
-          </ArrowLink>
-        </Container>
-      </div>
+      <PaddedBox backgroundColor="#F8F8F8" className="text-black">
+        <Heading>Latest Work</Heading>
+      </PaddedBox>
+      <PaddedBox backgroundColor="#F4F4F4" className="text-black">
+        <Heading>Upcoming Events</Heading>
+        <EventCardGroup events={upcomingEvents} />
+        <ArrowLink href="/events" dark>
+          See all past events
+        </ArrowLink>
+      </PaddedBox>
     </>
   );
 }
