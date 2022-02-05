@@ -1,17 +1,47 @@
 import React from "react";
-import Container from "react-bootstrap/Container";
 
 import AboutTabs from "../components/AboutTabs";
 import ArrowLink from "../components/ArrowLink";
-import FullWidthImage from "../components/FullWidthImage";
+import Hero from "../components/Hero";
 import PaddedBox from "../components/PaddedBox";
 import PageTitle from "../components/PageTitle";
+import SideBySide from "../components/SideBySide";
 
 export default function About() {
   return (
     <>
       <PageTitle title="About Us" />
-      <FullWidthImage path="content/photoshoot-marketing-17" />
+      <PaddedBox>
+        <SideBySide
+          layout={[
+            {
+              image: { key: "content/photoshoot-marketing-3", aspectRatio: 100 },
+              width: (9 / 26) * 100,
+            },
+            {
+              image: { key: "content/fa21-all-hands-2-group-pic-1", aspectRatio: (9 / 16) * 100 },
+              width: (16 / 26) * 100,
+            },
+          ]}
+        />
+      </PaddedBox>
+      <PaddedBox>
+        <SideBySide
+          layout={[{}, { image: { key: "content/photoshoot-marketing-12", aspectRatio: 100 } }]}
+        >
+          <p>
+            In Spring of 2017, a group of passionate students saw a huge problem: many nonprofits
+            had little to no resources to procure professional web and technical development
+            services.
+          </p>
+          <p>
+            In response, they banded together to create Triton Software Engineering. By providing a
+            venue for both UCSD students and nonprofits to connect, they hoped to foster growth in
+            both social good and technical expertise.
+          </p>
+        </SideBySide>
+      </PaddedBox>
+      <Hero image="content/photoshoot-marketing-17" />
       <PaddedBox>
         <h2>More than a team.</h2>
         <p>
@@ -22,12 +52,9 @@ export default function About() {
         </p>
         <ArrowLink href="/students">Cool! How do I join?</ArrowLink>
       </PaddedBox>
-      <PaddedBox center>
-        <h2>We are always growing.</h2>
-      </PaddedBox>
-      <Container>
+      <PaddedBox center heading="We are always growing.">
         <AboutTabs />
-      </Container>
+      </PaddedBox>
     </>
   );
 }

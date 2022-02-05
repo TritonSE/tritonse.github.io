@@ -2,6 +2,7 @@ import React from "react";
 import Container from "react-bootstrap/Container";
 
 import Hero from "../../components/Hero";
+import PageTitle from "../../components/PageTitle";
 import ProfileCardGroup from "../../components/ProfileCardGroup";
 import ProjectProfileCard from "../../components/ProjectProfileCard";
 import { allProjects } from "../../data/projects";
@@ -9,7 +10,8 @@ import { allProjects } from "../../data/projects";
 export default function Projects() {
   return (
     <>
-      <Hero path="content/photoshoot-marketing-17">
+      <PageTitle title="Projects" />
+      <Hero image="content/photoshoot-marketing-17">
         <h1>Projects</h1>
         <p>Lorem ipsum dolor sit amet</p>
         <a

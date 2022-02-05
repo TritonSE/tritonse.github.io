@@ -8,14 +8,6 @@ import PageTitle from "../components/PageTitle";
 import { allEvents } from "../data/events";
 import type { Event } from "../data/events";
 
-function Heading({ children }: { children: React.ReactNode }) {
-  return (
-    <h2 className="mb-5" style={{ fontWeight: 600 }}>
-      {children}
-    </h2>
-  );
-}
-
 export default function Home() {
   const [upcomingEvents, setUpcomingEvents] = useState([] as Event[]);
   useEffect(() => {
@@ -26,18 +18,17 @@ export default function Home() {
 
   return (
     <>
-      <Hero path="content/photoshoot-marketing-15">
+      <Hero image="content/photoshoot-marketing-15">
         <div className="text-center">
           <h1>Triton Software Engineering</h1>
           <p>Crafting digital solutions for the community around us.</p>
         </div>
       </Hero>
       <PageTitle title="Home" />
-      <PaddedBox backgroundColor="#F8F8F8" className="text-black">
-        <Heading>Latest Work</Heading>
+      <PaddedBox backgroundColor="#F8F8F8" className="text-black" heading="Latest Work">
+        <p>todo</p>
       </PaddedBox>
-      <PaddedBox backgroundColor="#F4F4F4" className="text-black">
-        <Heading>Upcoming Events</Heading>
+      <PaddedBox backgroundColor="#F4F4F4" className="text-black" heading="Upcoming Events">
         <EventCardGroup events={upcomingEvents} />
         <ArrowLink href="/events" dark>
           See all past events

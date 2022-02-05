@@ -14,7 +14,7 @@ interface ProfileCardProps {
 
 export default function ProfileCard({ name, subtitles, imageProps, href }: ProfileCardProps) {
   return (
-    <Card className="m-3 mb-5" style={{ background: "rgba(0, 0, 0, 0)" }}>
+    <Card className="m-3 mb-4" style={{ background: "rgba(0, 0, 0, 0)" }}>
       <div className="mb-3">
         <ImageWithFallback
           width={500}

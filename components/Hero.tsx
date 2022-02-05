@@ -3,7 +3,12 @@ import { Container } from "react-bootstrap";
 
 import ImageWithFallback from "./ImageWithFallback";
 
-export default function Hero({ path, children }: { path: string; children: React.ReactNode }) {
+export interface HeroProps {
+  image: string;
+  children?: React.ReactNode;
+}
+
+export default function Hero({ image, children }: HeroProps) {
   return (
     <div
       style={{
@@ -14,7 +19,7 @@ export default function Hero({ path, children }: { path: string; children: React
         justifyContent: "center",
       }}
     >
-      <Container className="py-5 fw-bold">{children}</Container>
+      {children && <Container className="py-5 fw-bold">{children}</Container>}
       <div
         style={{
           position: "absolute",
@@ -23,10 +28,10 @@ export default function Hero({ path, children }: { path: string; children: React
           width: "100%",
           height: "100%",
           zIndex: -100,
-          filter: "brightness(0.7)",
+          filter: children ? "brightness(0.7)" : undefined,
         }}
       >
-        <ImageWithFallback paths={[path]} layout="fill" objectFit="cover" />
+        <ImageWithFallback paths={[image]} layout="fill" objectFit="cover" />
       </div>
     </div>
   );

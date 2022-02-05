@@ -9,7 +9,7 @@ const allImages = {
   "clients/og_yoga": require("./clients/og_yoga.jpg"),
   "clients/symphonic_student_association": require("./clients/symphonic_student_association.jpg"),
   "clients/united_women_of_east_africa": require("./clients/united_women_of_east_africa.jpg"),
-  "content/all-hands-wi21": require("./content/all-hands-wi21.png"),
+  "content/fa21-all-hands-2-group-pic-1": require("./content/fa21-all-hands-2-group-pic-1.jpg"),
   "content/photoshoot-marketing-12": require("./content/photoshoot-marketing-12.jpg"),
   "content/photoshoot-marketing-15": require("./content/photoshoot-marketing-15.jpg"),
   "content/photoshoot-marketing-17": require("./content/photoshoot-marketing-17.jpg"),
