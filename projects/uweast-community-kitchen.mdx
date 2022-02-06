@@ -1,6 +1,26 @@
+import Gallery from "../components/Gallery";
+
+<Gallery layout={[{ imageKey: "projects/uweast-community-kitchen/contact-page" }]} />
+
 ## About the Client
 
+<Gallery layout={[{ width: 70 }, { imageKey: "clients/united_women_of_east_africa", width: 25 }]}>
+
 UWEAST strives to be the force for cultural competent health services, education, and advocacy for the East African community. They provide lifestyle and wellness services for all ages, as well economic and education empowerment programs for the youth. They host tutoring and fellowships with the goal of financial literacy and responsibility. The organization currently consists of 100 East African women and men.
+
+</Gallery>
+
+<Gallery layout={[{}, { imageKey: "projects/uweast-community-kitchen/contact-page" }]} reverseOnSmallScreens>
+
+Text on the left side or below. Lorem [ipsum](#) _dolor_ **sit** amet.
+
+</Gallery>
+
+<Gallery layout={[{ imageKey: "projects/uweast-community-kitchen/contact-page" }, {}]}>
+
+Text on the right side or below. Lorem [ipsum](#) _dolor_ **sit** amet.
+
+</Gallery>
 
 ## Executive Summary
 
