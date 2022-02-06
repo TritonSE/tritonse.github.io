@@ -4,7 +4,7 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import BsNavbar from "react-bootstrap/Navbar";
 
-import ImageWithFallback from "./ImageWithFallback";
+import CustomImage from "./CustomImage";
 
 function NavbarItem({ href, children }: { href: string; children: React.ReactNode }) {
   return (
@@ -23,7 +23,7 @@ export default function Navbar() {
         <BsNavbar.Brand className="py-0">
           <Link href="/" passHref>
             <a style={{ position: "relative", top: "3px" }}>
-              <ImageWithFallback paths={["icons/tse-bulb"]} alt="Logo" width={50} height={50} />
+              <CustomImage imageKey="icons/tse-bulb" alt="Logo" width={50} height={50} />
             </a>
           </Link>
         </BsNavbar.Brand>

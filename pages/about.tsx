@@ -37,7 +37,7 @@ In response, they banded together to create Triton Software Engineering. By prov
           `}
         </SideBySide>
       </PaddedBox>
-      <Hero image="content/photoshoot-marketing-17" />
+      <Hero imageKey="content/photoshoot-marketing-17" />
       <PaddedBox>
         {markdown`
 ## More than a team.

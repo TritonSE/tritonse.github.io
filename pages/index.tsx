@@ -20,7 +20,7 @@ export default function Home() {
   return (
     <>
       <PageTitle title="Home" />
-      <Hero image="content/photoshoot-marketing-15">
+      <Hero imageKey="content/photoshoot-marketing-15">
         <div className="text-center">
           {markdown`
 # Triton Software Engineering

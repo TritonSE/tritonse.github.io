@@ -71,7 +71,7 @@ const clients: Client[] = [
 ];
 
 function sortKey(client: Client) {
-  return [-(client.endYear === null ? Infinity : client.endYear), client.startYear, client.name];
+  return [client.endYear === null ? -Infinity : -client.endYear, client.startYear, client.name];
 }
 clients.sort(makeComparator(sortKey));
 

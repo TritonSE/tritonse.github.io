@@ -12,7 +12,7 @@ export default function Projects() {
   return (
     <>
       <PageTitle title="Projects" />
-      <Hero image="content/photoshoot-marketing-17">
+      <Hero imageKey="content/photoshoot-marketing-17">
         {markdown`
 # Projects
 

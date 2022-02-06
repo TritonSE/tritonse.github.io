@@ -1,4 +1,6 @@
+// Do not edit. Automatically generated from index-template.ts by generate.js
 /* eslint-disable */
+
 const allImages = {
   "clients/center_for_community_health": require("./clients/center_for_community_health.jpg"),
   "clients/dynamics_performance_team": require("./clients/dynamics_performance_team.jpg"),
@@ -89,7 +91,26 @@ const allImages = {
   "members/winnie_chen": require("./members/winnie_chen.jpg"),
   "members/xi-kai_wu": require("./members/xi-kai_wu.jpg"),
   "members/zach_liou": require("./members/zach_liou.jpg"),
+  "projects/uweast-community-kitchen/contact-page": require("./projects/uweast-community-kitchen/contact-page.png"),
 } as const;
+
 export type ImageKey = keyof typeof allImages;
-function isImageKey(key: string): key is ImageKey { return Object.prototype.hasOwnProperty.call(allImages, key); }
-export { allImages, isImageKey };
+
+function isImageKey(key: string): key is ImageKey {
+  return Object.prototype.hasOwnProperty.call(allImages, key);
+}
+
+function getImage(key: ImageKey) {
+  return allImages[key];
+}
+
+function firstValidImageKey(...keys: string[]) {
+  for (const key of keys) {
+    if (isImageKey(key)) {
+      return key;
+    }
+  }
+  throw new Error(`No image found matching key(s): ${JSON.stringify(keys)}`);
+}
+
+export { isImageKey, getImage, firstValidImageKey };

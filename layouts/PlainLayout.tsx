@@ -3,11 +3,12 @@ import Container from "react-bootstrap/Container";
 
 import Hero from "../components/Hero";
 import PageTitle from "../components/PageTitle";
+import { ImageKey } from "../images";
 
 export interface PlainMetadata {
   title: string;
   subtitle?: string;
-  heroImage?: string;
+  heroImage?: ImageKey;
 }
 
 export interface PlainLayoutProps {
@@ -28,7 +29,7 @@ export default function PlainLayout({
   return (
     <>
       <PageTitle title={title} />
-      {heroImage && <Hero image={heroImage}>{headerContents}</Hero>}
+      {heroImage && <Hero imageKey={heroImage}>{headerContents}</Hero>}
       <Container className="mt-5">
         {!heroImage && <header>{headerContents}</header>}
         {children}

@@ -1,10 +1,12 @@
 import React from "react";
 import Ratio from "react-bootstrap/Ratio";
 
-import ImageWithFallback from "./ImageWithFallback";
+import { ImageKey } from "../images";
+
+import CustomImage from "./CustomImage";
 
 export interface ImageSpec {
-  key: string;
+  key: ImageKey;
   aspectRatio: number;
 }
 
@@ -25,7 +27,7 @@ export default function SideBySide({ layout, children }: SideBySideProps) {
           ...spec,
           element: (
             <Ratio aspectRatio={spec.image.aspectRatio}>
-              <ImageWithFallback paths={[spec.image.key]} layout="fill" objectFit="cover" />
+              <CustomImage imageKey={spec.image.key} layout="fill" objectFit="cover" />
             </Ratio>
           ),
         }

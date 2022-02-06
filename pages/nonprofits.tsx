@@ -10,7 +10,7 @@ export default function Nonprofits() {
   return (
     <>
       <PageTitle title={title} />
-      <Hero image="content/photoshoot-marketing-7">
+      <Hero imageKey="content/photoshoot-marketing-7">
         {markdown`
 # ${title}
 

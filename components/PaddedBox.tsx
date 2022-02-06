@@ -1,6 +1,6 @@
 import classNames from "classnames";
 import React from "react";
-import { Container } from "react-bootstrap";
+import Container from "react-bootstrap/Container";
 
 function Heading({ children }: { children: React.ReactNode }) {
   return (

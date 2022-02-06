@@ -2,13 +2,13 @@ import Link from "next/link";
 import React from "react";
 import Card from "react-bootstrap/Card";
 
-import ImageWithFallback from "./ImageWithFallback";
-import type { ImageWithFallbackProps } from "./ImageWithFallback";
+import CustomImage from "./CustomImage";
+import type { CustomImageProps } from "./CustomImage";
 
 interface ProfileCardProps {
   name: string;
   subtitles: string[];
-  imageProps: ImageWithFallbackProps;
+  imageProps: CustomImageProps;
   href?: string;
 }
 
@@ -16,7 +16,7 @@ export default function ProfileCard({ name, subtitles, imageProps, href }: Profi
   return (
     <Card className="m-3 mb-4" style={{ background: "rgba(0, 0, 0, 0)" }}>
       <div className="mb-3">
-        <ImageWithFallback
+        <CustomImage
           width={500}
           height={500}
           layout="responsive"

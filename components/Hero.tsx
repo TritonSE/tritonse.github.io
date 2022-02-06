@@ -1,14 +1,16 @@
 import React from "react";
-import { Container } from "react-bootstrap";
+import Container from "react-bootstrap/Container";
 
-import ImageWithFallback from "./ImageWithFallback";
+import { ImageKey } from "../images";
+
+import CustomImage from "./CustomImage";
 
 export interface HeroProps {
-  image: string;
+  imageKey: ImageKey;
   children?: React.ReactNode;
 }
 
-export default function Hero({ image, children }: HeroProps) {
+export default function Hero({ imageKey, children }: HeroProps) {
   return (
     <div
       style={{
@@ -31,7 +33,7 @@ export default function Hero({ image, children }: HeroProps) {
           filter: children ? "brightness(0.7)" : undefined,
         }}
       >
-        <ImageWithFallback paths={[image]} layout="fill" objectFit="cover" />
+        <CustomImage imageKey={imageKey} layout="fill" objectFit="cover" />
       </div>
     </div>
   );

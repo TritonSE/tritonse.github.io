@@ -10,7 +10,7 @@ export default function Approach() {
   return (
     <>
       <PageTitle title={title} />
-      <Hero image="content/photoshoot-marketing-15">
+      <Hero imageKey="content/photoshoot-marketing-15">
         {markdown`
 # ${title}
 

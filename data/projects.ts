@@ -1,5 +1,6 @@
 import { MDXProps } from "mdx/types";
 
+import { ImageKey } from "../images";
 import contentUWEAST from "../projects/uweast-community-kitchen.mdx";
 import { assertUniqueKey, makeComparator, makeSlug } from "../util";
 
@@ -17,7 +18,7 @@ interface Project {
   readonly slug: string;
   readonly description: string;
   readonly content: MDXPage;
-  readonly thumbnail: string | null;
+  readonly thumbnail: ImageKey | null;
   readonly team: ProjectTeam;
 }
 
@@ -28,7 +29,7 @@ const constProjects = [
     description:
       "Web application for UWEAST that allows customers to view the menu, place orders, and pay",
     content: contentUWEAST,
-    thumbnail: null,
+    thumbnail: "projects/uweast-community-kitchen/contact-page",
     team: [
       {
         role: "Project Manager",
