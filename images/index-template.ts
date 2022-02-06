@@ -1,10 +1,17 @@
 // Template for generating index.ts.
 
-const allImages = {
+interface ImageWrapper {
+  data: unknown;
+  width: number;
+  height: number;
+}
+
+const constImages = {
   // Generated imports go here.
 } as const;
+export type ImageKey = keyof typeof constImages;
 
-export type ImageKey = keyof typeof allImages;
+const allImages: { [key: string]: ImageWrapper } = constImages;
 
 function isImageKey(key: string): key is ImageKey {
   return Object.prototype.hasOwnProperty.call(allImages, key);

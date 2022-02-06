@@ -13,5 +13,14 @@ const loader: ImageLoader = ({ src }) => src;
 const wrappedLoader = process.env.NODE_ENV === "production" ? { loader } : {};
 
 export default function CustomImage({ imageKey: key, ...props }: CustomImageProps) {
-  return <Image {...props} {...wrappedLoader} src={getImage(key)} />;
+  const image = getImage(key);
+  return (
+    <Image
+      src={image.data}
+      width={image.width}
+      height={image.height}
+      {...wrappedLoader}
+      {...props}
+    />
+  );
 }
