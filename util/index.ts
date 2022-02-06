@@ -75,6 +75,9 @@ export function assertUniqueKey<T, K extends keyof T>(arr: readonly T[], key: K)
   }
 }
 
-export function makeSlug(name: string, replaceChar = "_") {
-  return name.replace(/[^A-Za-z0-9]/g, replaceChar).toLowerCase();
+/**
+ * Convert a string to lowercase and replace non-alphanumeric characters.
+ */
+export function makeSlug(s: string, replaceChar = "_") {
+  return s.replace(/[^A-Za-z0-9]/g, replaceChar).toLowerCase();
 }

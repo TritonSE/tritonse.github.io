@@ -7,6 +7,7 @@ import PaddedBox from "../components/PaddedBox";
 import PageTitle from "../components/PageTitle";
 import { allEvents } from "../data/events";
 import type { Event } from "../data/events";
+import markdown from "../util/markdown";
 
 export default function Home() {
   const [upcomingEvents, setUpcomingEvents] = useState([] as Event[]);
@@ -18,13 +19,16 @@ export default function Home() {
 
   return (
     <>
+      <PageTitle title="Home" />
       <Hero image="content/photoshoot-marketing-15">
         <div className="text-center">
-          <h1>Triton Software Engineering</h1>
-          <p>Crafting digital solutions for the community around us.</p>
+          {markdown`
+# Triton Software Engineering
+
+Crafting digital solutions for the community around us.
+          `}
         </div>
       </Hero>
-      <PageTitle title="Home" />
       <PaddedBox backgroundColor="#F8F8F8" className="text-black" heading="Latest Work">
         <p>todo</p>
       </PaddedBox>

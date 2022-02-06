@@ -21,7 +21,7 @@ export default function Events() {
     <>
       <PageTitle title="Events" />
       <Container>
-        <h1 className="mt-5">TSE Events</h1>
+        <h1>TSE Events</h1>
         {yearsAndEvents.map(([year, events]) => (
           <React.Fragment key={year}>
             <h2 className="my-5">{formatSchoolYear(year)}</h2>

@@ -6,7 +6,6 @@ import PageTitle from "../components/PageTitle";
 
 export interface PlainMetadata {
   title: string;
-  showTitle?: boolean;
   subtitle?: string;
   heroImage?: string;
 }
@@ -17,12 +16,12 @@ export interface PlainLayoutProps {
 }
 
 export default function PlainLayout({
-  metadata: { title, showTitle, subtitle, heroImage },
+  metadata: { title, subtitle, heroImage },
   children,
 }: PlainLayoutProps) {
   const headerContents = (
     <>
-      {showTitle !== false && <h1>{title}</h1>}
+      <h1>{title}</h1>
       {subtitle && <p>{heroImage ? subtitle : <em>{subtitle}</em>}</p>}
     </>
   );

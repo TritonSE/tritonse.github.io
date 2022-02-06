@@ -6,14 +6,18 @@ import PageTitle from "../../components/PageTitle";
 import ProfileCardGroup from "../../components/ProfileCardGroup";
 import ProjectProfileCard from "../../components/ProjectProfileCard";
 import { allProjects } from "../../data/projects";
+import markdown from "../../util/markdown";
 
 export default function Projects() {
   return (
     <>
       <PageTitle title="Projects" />
       <Hero image="content/photoshoot-marketing-17">
-        <h1>Projects</h1>
-        <p>Lorem ipsum dolor sit amet</p>
+        {markdown`
+# Projects
+
+At Triton Software Engineering, we believe in keeping our work open source because we value transparency and connectivity.
+        `}
         <a
           className="btn btn-dark fw-bold"
           href="https://github.com/TritonSE"
@@ -25,8 +29,8 @@ export default function Projects() {
       </Hero>
       <Container>
         <ProfileCardGroup
-          profiles={allProjects.map((project) => (
-            <ProjectProfileCard project={project} key={project.name} />
+          profiles={allProjects.map((project, index) => (
+            <ProjectProfileCard project={project} key={index} />
           ))}
         />
       </Container>

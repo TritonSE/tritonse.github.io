@@ -6,6 +6,7 @@ import Hero from "../components/Hero";
 import PaddedBox from "../components/PaddedBox";
 import PageTitle from "../components/PageTitle";
 import SideBySide from "../components/SideBySide";
+import markdown from "../util/markdown";
 
 export default function About() {
   return (
@@ -29,27 +30,20 @@ export default function About() {
         <SideBySide
           layout={[{}, { image: { key: "content/photoshoot-marketing-12", aspectRatio: 100 } }]}
         >
-          <p>
-            In Spring of 2017, a group of passionate students saw a huge problem: many nonprofits
-            had little to no resources to procure professional web and technical development
-            services.
-          </p>
-          <p>
-            In response, they banded together to create Triton Software Engineering. By providing a
-            venue for both UCSD students and nonprofits to connect, they hoped to foster growth in
-            both social good and technical expertise.
-          </p>
+          {markdown`
+In Spring of 2017, a group of passionate students saw a huge problem: many nonprofits had little to no resources to procure professional web and technical development services.
+
+In response, they banded together to create Triton Software Engineering. By providing a venue for both UCSD students and nonprofits to connect, they hoped to foster growth in both social good and technical expertise.
+          `}
         </SideBySide>
       </PaddedBox>
       <Hero image="content/photoshoot-marketing-17" />
       <PaddedBox>
-        <h2>More than a team.</h2>
-        <p>
-          When not heads-down designing and developing, we set time aside to create opportunities to
-          bond through games and mentorship. We care about celebrate each other’s successes as well!
-          As a student member at TSE, you gain valuable skills and a network of talented peers who
-          share a drive to do good for the community.
-        </p>
+        {markdown`
+## More than a team.
+
+When not heads-down designing and developing, we set time aside to create opportunities to bond through games and mentorship. We care about celebrate each other's successes as well! As a student member at TSE, you gain valuable skills and a network of talented peers who share a drive to do good for the community.
+        `}
         <ArrowLink href="/students">Cool! How do I join?</ArrowLink>
       </PaddedBox>
       <PaddedBox center heading="We are always growing.">
