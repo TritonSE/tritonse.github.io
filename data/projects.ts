@@ -29,7 +29,7 @@ const constProjects = [
     description:
       "Web application for UWEAST that allows customers to view the menu, place orders, and pay",
     content: contentUWEAST,
-    thumbnail: "projects/uweast-community-kitchen/contact-page",
+    thumbnail: "projects/uweast_community_kitchen/contact_page",
     team: [
       {
         role: "Project Manager",
