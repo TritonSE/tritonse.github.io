@@ -96,7 +96,7 @@ function generateCode(images: Images) {
     "export default allImages;",
   ];
 
-  fs.writeFileSync(codegenFile, lines.join("\n"));
+  fs.writeFileSync(codegenFile, lines.map((line) => line + "\n").join(""));
   console.log(`Generated: ${codegenFile}`);
 }
 
