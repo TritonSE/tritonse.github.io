@@ -1,7 +1,11 @@
 const config = {
+  staticPrefix: "assets/images",
   widthOverride: {
     members: 1080,
   },
+  // Keep this in sync with next.config.js
+  sizes: [16, 32, 48, 64, 96, 128, 256, 384, 640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+  extensions: [".jpg", ".png"],
 };
 
 function getMaxWidth(relPath: string, width: number) {
@@ -13,4 +17,5 @@ function getMaxWidth(relPath: string, width: number) {
   return width;
 }
 
+export default config;
 export { getMaxWidth };

@@ -5,19 +5,13 @@ import path from "path";
 
 import sharp from "sharp";
 
-import nextConfig from "../next.config";
-
-import { getMaxWidth } from "./config";
-import { addWidthToImagePath } from "./util";
-
-const imageSizes = [...nextConfig.images.imageSizes, ...nextConfig.images.deviceSizes] as number[];
+import config, { getMaxWidth } from "./config";
+import { getOptimizedImagePath } from "./util";
 
 const templateFile = path.join(__dirname, "index-template.ts");
 const codegenFile = path.join(__dirname, "index.ts");
 const publicDir = path.join(__dirname, "../public");
-const optimizedDir = path.join(publicDir, "assets/images");
-
-const imageExtensions = [".jpg", ".png"];
+const optimizedDir = path.join(publicDir, config.staticPrefix);
 
 async function forEachFile(dir: string, handler: (absPath: string) => Promise<unknown>) {
   const promises: Promise<unknown>[] = [];
@@ -37,7 +31,7 @@ type Images = {
     relPath: string;
     originalWidth: number;
     originalHeight: number;
-    maxWidth: number;
+    sizes: number[];
   };
 };
 
@@ -56,11 +50,23 @@ async function imageDimensions(absPath: string) {
   return [metadata.height, metadata.width];
 }
 
+function getSizes(maxSize: number) {
+  // Generate up to one size larger than the image's original size.
+  const sizes: number[] = [];
+  for (const size of config.sizes) {
+    sizes.push(size);
+    if (size >= maxSize) {
+      break;
+    }
+  }
+  return sizes;
+}
+
 async function findImages() {
   const images: Images = {};
   await forEachFile(__dirname, async (absPath) => {
     const extension = path.extname(absPath);
-    if (!imageExtensions.includes(extension)) {
+    if (!config.extensions.includes(extension)) {
       return;
     }
     const [width, height] = await imageDimensions(absPath);
@@ -69,35 +75,13 @@ async function findImages() {
       relPath,
       originalWidth: width,
       originalHeight: height,
-      maxWidth: getMaxWidth(relPath, width),
+      sizes: getSizes(getMaxWidth(relPath, width)),
     };
   });
   return images;
 }
 
-function sizeMap(maxWidth: number) {
-  const sizes: { [key: number]: number } = {};
-  let maxSize;
-  for (const size of imageSizes) {
-    if (size < maxWidth) {
-      sizes[size] = size;
-      continue;
-    }
-    // Use the same size for all sizes larger than the original size.
-    if (maxSize === undefined) {
-      maxSize = size;
-    }
-    sizes[size] = maxSize;
-  }
-  return sizes;
-}
-
-function staticPath(relPath: string) {
-  return "/" + path.join(path.relative(publicDir, optimizedDir), relPath.replace(/[/]/g, "__"));
-}
-
 function generateCode(images: Images) {
-  console.log(`Reading: ${templateFile}`);
   const templateLines = fs.readFileSync(templateFile, { encoding: "utf8" }).split(/\r?\n/);
 
   const replaceIndex = templateLines.findIndex((line) => line.includes("// generate"));
@@ -112,21 +96,19 @@ function generateCode(images: Images) {
     ...templateLines.slice(1, replaceIndex),
     ...Object.entries(images)
       .map(
-        ([key, { relPath: relativePath, originalWidth, originalHeight, maxWidth }]) =>
+        ([key, { relPath, originalWidth, originalHeight, sizes }]) =>
           `  ${JSON.stringify(
             key
-          )}: { width: ${originalWidth}, height: ${originalHeight}, sizeMap: ${JSON.stringify(
-            sizeMap(maxWidth)
-          )}, require: require(${JSON.stringify(
-            "./" + relativePath
-          )}), staticPath: ${JSON.stringify(staticPath(relativePath))} },`
+          )}: { width: ${originalWidth}, height: ${originalHeight}, maxSize: ${
+            sizes[sizes.length - 1]
+          }, ext: ${JSON.stringify(path.extname(relPath))} },`
       )
       .sort(),
     ...templateLines.slice(replaceIndex + 1),
   ];
 
-  console.log(`Writing: ${codegenFile}`);
   fs.writeFileSync(codegenFile, lines.join("\n"));
+  console.log(`Generated: ${codegenFile}`);
 }
 
 async function optimizeImages(images: Images) {
@@ -135,14 +117,12 @@ async function optimizeImages(images: Images) {
 
   const outputFiles = new Set();
   await Promise.all(
-    Object.values(images).map(async ({ relPath, maxWidth }) => {
+    Object.values(images).map(async ({ relPath, sizes }) => {
       const mtime = fs.statSync(path.join(__dirname, relPath)).mtime;
+
       return Promise.all(
-        Array.from(new Set(Object.values(sizeMap(maxWidth)))).map(async (newWidth) => {
-          const outputFile = path.join(
-            publicDir,
-            addWidthToImagePath(staticPath(relPath), newWidth)
-          );
+        sizes.map(async (size) => {
+          const outputFile = path.join(optimizedDir, getOptimizedImagePath(relPath, size));
           outputFiles.add(outputFile);
 
           try {
@@ -151,16 +131,14 @@ async function optimizeImages(images: Images) {
               return;
             }
           } catch (e) {
-            console.error(e);
             // File does not exist. Do nothing.
           }
 
-          const absPath = path.join(__dirname, relPath);
-          console.log(`Optimizing: ${absPath}`);
-          await sharp(absPath)
-            .resize({ width: newWidth })
-            .jpeg({ mozjpeg: true })
+          await sharp(path.join(__dirname, relPath))
+            .resize({ width: size, background: { r: 0, g: 0, b: 0, alpha: 0 } })
+            .jpeg({ mozjpeg: true, force: false })
             .toFile(outputFile);
+          console.log(`Optimized: ${outputFile}`);
         })
       );
     })
@@ -169,8 +147,8 @@ async function optimizeImages(images: Images) {
   // Delete extraneous files.
   await forEachFile(optimizedDir, async (absPath) => {
     if (!outputFiles.has(absPath)) {
-      console.log(`Deleting: ${absPath}`);
       await fs.promises.rm(absPath);
+      console.log(`Deleted: ${absPath}`);
     }
   });
 }

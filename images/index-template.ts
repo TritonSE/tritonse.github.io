@@ -1,18 +1,20 @@
 // Template for generating index.ts.
+import path from "path";
+
 import { ImageLoader } from "next/image";
 
-import { addWidthToImagePath } from "./util";
+import config from "./config";
+import { getOptimizedImagePath } from "./util";
 
 export interface ImageWrapper {
-  require: unknown;
-  staticPath: string;
   width: number;
   height: number;
-  sizeMap: { [key: number]: number };
+  maxSize: number;
+  ext: string;
 }
 
 const allImages = {
-  "": { require: null, staticPath: "", width: 0, height: 0, sizeMap: {} }, // generate
+  "": { width: 0, height: 0, maxSize: 0, require: null, ext: "" }, // generate
 } as const;
 
 export type ImageKey = keyof typeof allImages;
@@ -36,7 +38,11 @@ function firstValidImageKey(...keys: string[]) {
 
 const staticLoader: ImageLoader = ({ src, width }) => {
   const image = getImage(firstValidImageKey(src));
-  return addWidthToImagePath(image.staticPath, image.sizeMap[width]);
+  return path.join(
+    "/",
+    config.staticPrefix,
+    getOptimizedImagePath(src + image.ext, Math.min(width, image.maxSize))
+  );
 };
 
 export { isImageKey, getImage, firstValidImageKey, staticLoader };

@@ -1,5 +1,5 @@
-function addWidthToImagePath(imagePath: string, width: number) {
-  return imagePath.replace(/(?=\.[^.]+$)/, `__${width}`);
+function getOptimizedImagePath(relPath: string, width: number) {
+  return relPath.replace(/[/]/g, "__").replace(/(?=\.[^.]+$)/, `__${width}`);
 }
 
-export { addWidthToImagePath };
+export { getOptimizedImagePath };
