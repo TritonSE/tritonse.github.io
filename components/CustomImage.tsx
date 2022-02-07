@@ -1,26 +1,20 @@
-import process from "process";
-
-import Image, { ImageLoader, ImageProps } from "next/image";
+import Image, { ImageProps } from "next/image";
 import React from "react";
 
-import { getImage, ImageKey } from "../images";
+import { getImage, ImageKey, staticLoader } from "../images";
 
 export type CustomImageProps = {
   imageKey: ImageKey;
 } & Omit<ImageProps, "src">;
 
-const loader: ImageLoader = ({ src }) => src;
-const wrappedLoader = process.env.NODE_ENV === "production" ? { loader } : {};
-
-export default function CustomImage({ imageKey: key, ...props }: CustomImageProps) {
-  const image = getImage(key);
-  return (
-    <Image
-      src={image.data}
-      width={image.width}
-      height={image.height}
-      {...wrappedLoader}
-      {...props}
-    />
-  );
+export default function CustomImage({ imageKey, ...props }: CustomImageProps) {
+  const image = getImage(imageKey);
+  const sizeProps =
+    props.layout === "intrinsic" || props.layout === "fill"
+      ? {}
+      : {
+          width: image.width,
+          height: image.height,
+        };
+  return <Image src={imageKey} loader={staticLoader} {...sizeProps} {...props} />;
 }
