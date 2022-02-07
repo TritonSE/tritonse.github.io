@@ -101,7 +101,6 @@ function generateCode(images: Images) {
 }
 
 async function optimizeImages(images: Images) {
-  console.log("Optimizing images...");
   await fs.promises.mkdir(optimizedDir, { recursive: true });
 
   const outputFiles = new Set();
@@ -146,6 +145,7 @@ async function main() {
   const images = await findImages();
   await generateCode(images);
   await optimizeImages(images);
+  console.log("Finished code generation and image optimization.");
 }
 
 main();
