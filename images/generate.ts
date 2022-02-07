@@ -123,7 +123,8 @@ async function optimizeImages(images: Images) {
           }
 
           await sharp(path.join(__dirname, relPath))
-            .resize({ width: size, background: { r: 0, g: 0, b: 0, alpha: 0 } })
+            .rotate()
+            .resize(size)
             .jpeg({ mozjpeg: true, force: false })
             .toFile(outputFile);
           console.log(`Optimized: ${outputFile}`);

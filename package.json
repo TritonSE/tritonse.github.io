@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "generate-images": "ts-node images/generate.ts",
-    "dev": "concurrently \"next dev\" \"chokidar \\\"images/*/**\\\" -c \\\"npm run generate-images\\\"\"",
+    "dev": "concurrently \"next dev\" \"chokidar \\\"images/*/**\\\" -c \\\"npm run generate-images\\\"\" \"npm run generate-images\"",
     "build": "npm run generate-images && next build && next export",
     "start": "next start",
     "format": "prettier --write .",
