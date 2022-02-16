@@ -1,10 +1,10 @@
 import classNames from "classnames";
 import React from "react";
-import Ratio from "react-bootstrap/Ratio";
 
 import { ImageKey } from "../images";
 
 import CustomImage from "./CustomImage";
+import RatioImage from "./RatioImage";
 
 export interface LayoutSpec {
   imageKey?: ImageKey;
@@ -32,13 +32,7 @@ export default function Gallery({
     if (aspectRatio === undefined) {
       return <CustomImage imageKey={imageKey} layout="responsive" />;
     }
-    return (
-      <Ratio aspectRatio={(aspectRatio[1] / aspectRatio[0]) * 100}>
-        <div>
-          <CustomImage imageKey={imageKey} layout="fill" objectFit="cover" />;
-        </div>
-      </Ratio>
-    );
+    return <RatioImage aspectRatio={aspectRatio} imageKey={imageKey} />;
   }
 
   const wideItems = layout.map((spec) => ({

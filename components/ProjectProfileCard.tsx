@@ -3,6 +3,7 @@ import React from "react";
 import type { Project } from "../data/projects";
 import { firstValidImageKey } from "../images";
 
+import CustomImage from "./CustomImage";
 import ProfileCard from "./ProfileCard";
 
 interface ProjectProfileCardProps {
@@ -12,15 +13,13 @@ interface ProjectProfileCardProps {
 export default function ProjectProfileCard({
   project: { name, description, thumbnail, slug },
 }: ProjectProfileCardProps) {
-  const imageKeys = [];
-  if (thumbnail) {
-    imageKeys.push(thumbnail);
-  }
-  imageKeys.push("icons/tse-bulb");
-  const imageProps = {
-    imageKey: firstValidImageKey(...imageKeys),
-    alt: `Thumbnail of ${name}`,
-  };
   const href = `/projects/${slug}`;
-  return <ProfileCard name={name} subtitles={[description]} imageProps={imageProps} href={href} />;
+  return (
+    <ProfileCard name={name} subtitles={[description]} href={href}>
+      <CustomImage
+        imageKey={firstValidImageKey(thumbnail, "icons/tse-bulb")}
+        alt={`Thumbnail of ${name}`}
+      />
+    </ProfileCard>
+  );
 }

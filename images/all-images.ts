@@ -5,6 +5,7 @@ const allImages = {
   "clients/feeding_san_diego": { width: 390, height: 390, maxSize: 640, extension: ".jpg" },
   "clients/international_health_collective": { width: 247, height: 247, maxSize: 256, extension: ".jpg" },
   "clients/key_conservation": { width: 480, height: 480, maxSize: 640, extension: ".jpg" },
+  "clients/make_a_wish": { width: 2150, height: 814, maxSize: 3840, extension: ".png" },
   "clients/office_of_innovation_and_commercialization": { width: 500, height: 500, maxSize: 640, extension: ".jpg" },
   "clients/og_yoga": { width: 200, height: 200, maxSize: 256, extension: ".jpg" },
   "clients/symphonic_student_association": { width: 224, height: 224, maxSize: 256, extension: ".jpg" },

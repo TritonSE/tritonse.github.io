@@ -63,10 +63,10 @@ const clients: Client[] = [
     url: "https://feedingsandiego.org/",
   },
   {
-    name: "Fake Current Client",
-    startYear: 1970,
+    name: "Make-A-Wish",
+    startYear: 2021,
     endYear: null,
-    url: "https://www.example.com",
+    url: "https://wish.org/",
   },
 ];
 
