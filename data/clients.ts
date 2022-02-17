@@ -7,7 +7,7 @@ export interface Client {
   readonly url: string;
 }
 
-const clients: Client[] = [
+const constClients = [
   {
     name: "International Health Collective",
     startYear: 2018,
@@ -68,11 +68,11 @@ const clients: Client[] = [
     endYear: null,
     url: "https://wish.org/",
   },
-];
+] as const;
+export type ClientName = typeof constClients[number]["name"];
 
-function sortKey(client: Client) {
-  return [client.endYear === null ? -Infinity : -client.endYear, client.startYear, client.name];
-}
-clients.sort(makeComparator(sortKey));
+const allClients: readonly Client[] = constClients
+  .slice()
+  .sort(makeComparator((client) => [-(client.endYear || Infinity), client.startYear, client.name]));
 
-export default clients as readonly Client[];
+export { allClients };

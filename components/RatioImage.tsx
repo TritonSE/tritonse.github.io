@@ -5,17 +5,14 @@ import CustomImage, { CustomImageProps } from "./CustomImage";
 
 interface RatioImageProps extends CustomImageProps {
   aspectRatio: [number, number];
-  className?: string;
 }
 
-export default function RatioImage({ aspectRatio, className, ...props }: RatioImageProps) {
+export default function RatioImage({ aspectRatio, ...props }: RatioImageProps) {
   return (
     <Ratio aspectRatio={(aspectRatio[1] / aspectRatio[0]) * 100}>
-      <div className={className}>
+      <div>
         <CustomImage layout="fill" objectFit="cover" {...props} />
       </div>
     </Ratio>
   );
 }
-
-RatioImage.defaultProps = { className: undefined };

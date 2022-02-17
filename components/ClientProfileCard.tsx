@@ -11,13 +11,14 @@ export default function ClientProfileCard({ client }: { client: Client }) {
   const subtitle = `${client.startYear}–${client.endYear || "Present"}`;
   return (
     <ProfileCard name={client.name} subtitles={[subtitle]} href={client.url}>
-      <RatioImage
-        aspectRatio={[1, 1]}
-        className="bg-white"
-        imageKey={firstValidImageKey(`clients/${makeSlug(client.name)}`, "icons/tse-bulb")}
-        alt={`Logo of ${client.name}`}
-        objectFit="contain"
-      />
+      <div className="bg-white p-3">
+        <RatioImage
+          aspectRatio={[1, 1]}
+          imageKey={firstValidImageKey(`clients/${makeSlug(client.name)}`, "icons/tse-bulb")}
+          alt={`Logo of ${client.name}`}
+          objectFit="contain"
+        />
+      </div>
     </ProfileCard>
   );
 }
