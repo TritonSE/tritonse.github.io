@@ -16,6 +16,7 @@ interface PaddedBoxProps {
   children: React.ReactNode;
   className?: string;
   heading?: string;
+  noContainer?: boolean;
 }
 
 export default function PaddedBox({
@@ -24,14 +25,14 @@ export default function PaddedBox({
   children,
   className,
   heading,
+  noContainer,
 }: PaddedBoxProps) {
   const styles = backgroundColor ? { backgroundColor } : {};
+  const ContainerElement = noContainer ? React.Fragment : Container;
   return (
     <div className={classNames("py-5", { "text-center": center }, className)} style={styles}>
-      <Container>
-        {heading && <Heading>{heading}</Heading>}
-        {children}
-      </Container>
+      <Container>{heading && <Heading>{heading}</Heading>}</Container>
+      <ContainerElement>{children}</ContainerElement>
     </div>
   );
 }
@@ -41,4 +42,5 @@ PaddedBox.defaultProps = {
   backgroundColor: undefined,
   className: undefined,
   heading: undefined,
+  noContainer: false,
 };

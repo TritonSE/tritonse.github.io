@@ -5,6 +5,7 @@ import { Card } from "react-bootstrap";
 
 import { ImageKey } from "../images";
 
+import styles from "./BigCard.module.scss";
 import RatioImage from "./RatioImage";
 
 export interface BigCardProps {
@@ -12,12 +13,25 @@ export interface BigCardProps {
   title: string;
   children: React.ReactNode;
   href: string;
-  className?: string;
+  colorHover?: boolean;
+  sized?: boolean;
 }
 
-export default function BigCard({ imageKey, title, children, href, className }: BigCardProps) {
+export default function BigCard({
+  imageKey,
+  title,
+  children,
+  href,
+  colorHover,
+  sized,
+}: BigCardProps) {
   return (
-    <Card className={classNames("p-4 m-4", className)}>
+    <Card
+      className={classNames("p-3 m-4", styles.card, {
+        [styles.colorHover]: colorHover,
+        [styles.sized]: sized,
+      })}
+    >
       <Card.Body>
         <RatioImage aspectRatio={[1, 1]} imageKey={imageKey} />
         <div className="mb-5" />

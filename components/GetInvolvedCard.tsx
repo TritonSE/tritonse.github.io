@@ -2,7 +2,6 @@ import React from "react";
 
 import ArrowLink from "./ArrowLink";
 import BigCard, { BigCardProps } from "./BigCard";
-import styles from "./GetInvolvedCard.module.scss";
 
 export interface GetInvolvedCardProps extends BigCardProps {
   linkText: string;
@@ -15,7 +14,7 @@ export default function GetInvolvedCard({
   ...props
 }: GetInvolvedCardProps) {
   return (
-    <BigCard href={href} className={styles.card} {...props}>
+    <BigCard href={href} colorHover {...props}>
       {children}
       <ArrowLink dark href={href}>
         {linkText}

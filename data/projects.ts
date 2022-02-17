@@ -8,12 +8,12 @@ import { PersonName, Role, allRoles } from "./people";
 
 type MDXPage = (props: MDXProps) => JSX.Element;
 
-type ProjectTeam = readonly {
+export type ProjectTeam = readonly {
   readonly role: Role;
   readonly names: readonly PersonName[];
 }[];
 
-interface Project {
+export interface Project {
   readonly name: string;
   readonly slug: string;
   readonly description: string;
@@ -22,7 +22,8 @@ interface Project {
   readonly team: ProjectTeam;
 }
 
-// Metadata for each project.
+// Metadata for each project. Projects should be manually ordered from oldest
+// to newest, since the dates are not stored for each project.
 const constProjects = [
   {
     name: "UWEAST Community Kitchen",
@@ -53,6 +54,29 @@ const constProjects = [
       },
     ],
   },
+  // TODO remove these once actual projects are created.
+  // These were used to test the project carousel on the homepage.
+  {
+    name: "Fake Project 1",
+    description: "Made some cool stuff for some cool people",
+    content: contentUWEAST,
+    thumbnail: null,
+    team: [],
+  },
+  {
+    name: "Fake Project 2",
+    description: "Made some more cool stuff for some more cool people",
+    content: contentUWEAST,
+    thumbnail: null,
+    team: [],
+  },
+  {
+    name: "Fake Project 3",
+    description: "Made the coolest stuff for the coolest people",
+    content: contentUWEAST,
+    thumbnail: null,
+    team: [],
+  },
 ] as const;
 
 function sortTeam(team: ProjectTeam): ProjectTeam {
@@ -76,5 +100,3 @@ assertUniqueKey(allProjects, "name");
 assertUniqueKey(allProjects, "slug");
 
 export { allProjects };
-
-export type { Project, ProjectTeam };

@@ -1,0 +1,46 @@
+.card {
+  background-color: transparent;
+  border: 0px;
+  border-radius: 10px;
+  transition: background-color 0.25s ease;
+}
+
+.card:focus,
+.card:hover,
+.card:active {
+  background-color: white;
+  box-shadow: 0px 4px 20px 0px #0000000d;
+}
+
+// Only do the grayscale-to-color animation on devices with a mouse pointer.
+@media (hover: hover) {
+  .colorHover {
+    img {
+      transition: filter 0.5s ease;
+      filter: grayscale(100%);
+    }
+  }
+
+  .colorHover:focus,
+  .colorHover:hover,
+  .colorHover:active {
+    img {
+      filter: none;
+    }
+  }
+}
+
+.sized {
+  width: 55vw;
+  @media (min-width: 768px) {
+    width: 35vw;
+  }
+  @media (min-width: 1200px) {
+    width: 25vw;
+  }
+  @media (min-width: 1600px) {
+    width: 25vw;
+  }
+  flex-grow: 0;
+  flex-shrink: 0;
+}
