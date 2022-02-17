@@ -1,15 +1,24 @@
 import React from "react";
-import Col from "react-bootstrap/Col";
+import Col, { ColProps } from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 
 export interface ProfileCardGroupProps {
   title?: string;
   profiles: React.ReactNode[];
+  width: 3 | 4;
 }
 
-export default function ProfileCardGroup({ title, profiles }: ProfileCardGroupProps) {
+export default function ProfileCardGroup({ title, profiles, width }: ProfileCardGroupProps) {
   if (profiles.length === 0) {
     return null;
+  }
+
+  const colSizes: Partial<ColProps> = {
+    xs: 6,
+    md: 4,
+  };
+  if (width === 4) {
+    colSizes.lg = 3;
   }
 
   return (
@@ -21,7 +30,7 @@ export default function ProfileCardGroup({ title, profiles }: ProfileCardGroupPr
       )}
       <Row style={{ marginLeft: "-1.75rem", marginRight: "-1.75rem" }}>
         {profiles.map((profile, index) => (
-          <Col xs={6} md={4} lg={3} key={index}>
+          <Col key={index} {...colSizes}>
             {profile}
           </Col>
         ))}
@@ -29,3 +38,5 @@ export default function ProfileCardGroup({ title, profiles }: ProfileCardGroupPr
     </>
   );
 }
+
+ProfileCardGroup.defaultProps = { width: 4 };

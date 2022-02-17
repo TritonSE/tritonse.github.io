@@ -29,6 +29,7 @@ At Triton Software Engineering, we believe in keeping our work open source becau
       </Hero>
       <Container>
         <ProfileCardGroup
+          width={3}
           profiles={allProjects.map((project, index) => (
             <ProjectProfileCard project={project} key={index} />
           ))}

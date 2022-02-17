@@ -88,7 +88,7 @@ const allImages = {
   "members/wesley_chen": { width: 2029, height: 2029, maxSize: 1080, extension: ".jpg" },
   "members/william_wu": { width: 600, height: 600, maxSize: 640, extension: ".jpg" },
   "members/winnie_chen": { width: 1000, height: 1005, maxSize: 1080, extension: ".jpg" },
-  "members/xi-kai_wu": { width: 4213, height: 4213, maxSize: 1080, extension: ".jpg" },
+  "members/xi_kai_wu": { width: 4213, height: 4213, maxSize: 1080, extension: ".jpg" },
   "members/zach_liou": { width: 1359, height: 1360, maxSize: 1080, extension: ".jpg" },
   "projects/uweast_community_kitchen/contact_page": { width: 469, height: 264, maxSize: 640, extension: ".png" },
   "sponsors/san_diego_county_taxpayers_association": { width: 892, height: 267, maxSize: 1080, extension: ".jpg" },
