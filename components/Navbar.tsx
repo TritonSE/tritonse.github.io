@@ -18,7 +18,7 @@ function NavbarItem({ href, children }: { href: string; children: React.ReactNod
 
 export default function Navbar() {
   return (
-    <BsNavbar expand="lg" bg="dark" variant="dark">
+    <BsNavbar expand="lg" bg="dark" variant="dark" style={{ background: "#18232a" }}>
       <Container>
         <BsNavbar.Brand className="py-0">
           <Link href="/" passHref>

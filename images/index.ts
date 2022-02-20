@@ -1,5 +1,3 @@
-// Do not edit. Automatically generated from index-template.ts by generate.ts
-
 import path from "path";
 
 import { ImageLoader } from "next/image";
@@ -25,9 +23,9 @@ function getImage(key: ImageKey): ImageWrapper {
   return allImages[key];
 }
 
-function firstValidImageKey(...keys: string[]) {
+function firstValidImageKey(...keys: (string | null)[]) {
   for (const key of keys) {
-    if (isImageKey(key)) {
+    if (key !== null && isImageKey(key)) {
       return key;
     }
   }

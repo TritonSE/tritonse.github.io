@@ -2,22 +2,17 @@ import Link from "next/link";
 import React from "react";
 import Card from "react-bootstrap/Card";
 
-import CustomImage from "./CustomImage";
-import type { CustomImageProps } from "./CustomImage";
-
 interface ProfileCardProps {
   name: string;
   subtitles: string[];
-  imageProps: CustomImageProps;
   href?: string;
+  children?: React.ReactNode;
 }
 
-export default function ProfileCard({ name, subtitles, imageProps, href }: ProfileCardProps) {
+export default function ProfileCard({ name, subtitles, href, children }: ProfileCardProps) {
   return (
     <Card className="m-3 mb-4" style={{ background: "rgba(0, 0, 0, 0)" }}>
-      <div className="mb-3">
-        <CustomImage layout="responsive" objectFit="cover" sizes="50vw" {...imageProps} />
-      </div>
+      <div className="mb-3">{children}</div>
       <Card.Title style={{ fontWeight: 600 }}>{name}</Card.Title>
       {subtitles.map((subtitle, index) => (
         <Card.Text className="m-0" key={index}>
@@ -32,4 +27,4 @@ export default function ProfileCard({ name, subtitles, imageProps, href }: Profi
     </Card>
   );
 }
-ProfileCard.defaultProps = { href: undefined };
+ProfileCard.defaultProps = { href: undefined, children: undefined };

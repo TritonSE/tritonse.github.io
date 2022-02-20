@@ -9,12 +9,12 @@ export type CustomImageProps = {
 
 export default function CustomImage({ imageKey, ...props }: CustomImageProps) {
   const image = getImage(imageKey);
-  const sizeProps =
-    props.layout === "intrinsic" || props.layout === "fill"
-      ? {}
-      : {
-          width: image.width,
-          height: image.height,
-        };
+  const sizeProps: Partial<ImageProps> = {};
+  if (typeof props.height === "number") {
+    sizeProps.width = image.width * (props.height / image.height);
+  } else if (props.layout !== "fill") {
+    sizeProps.width = image.width;
+    sizeProps.height = image.height;
+  }
   return <Image src={imageKey} loader={staticLoader} {...sizeProps} {...props} />;
 }

@@ -2,7 +2,7 @@ import React from "react";
 import Nav from "react-bootstrap/Nav";
 import Tab from "react-bootstrap/Tab";
 
-import allClients from "../data/clients";
+import { allClients } from "../data/clients";
 import { allMembers, allAlumni } from "../data/people";
 import { groupBy } from "../util";
 
