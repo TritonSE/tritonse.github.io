@@ -266,7 +266,7 @@ const constPeople = [
     roles: ["Developer"],
   },
   {
-    name: "Bobby Tatum",
+    name: "Robert Tatum",
     roles: ["Developer", "Project Manager"],
     graduationYear: 2022,
   },
