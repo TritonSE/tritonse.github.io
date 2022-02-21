@@ -28,6 +28,10 @@ export default function Home() {
     );
   }, []);
 
+  /**
+   * TODO:
+   * - Update the client testimonials to match the Figma: images, scrolling, colored blue text
+   */
   return (
     <>
       <PageTitle title="Home" />
@@ -40,7 +44,15 @@ Crafting digital solutions for the community around us.
           `}
         </div>
       </Hero>
-      <PaddedBox heading="Tech For Good">Lorem ipsum dolor sit amet</PaddedBox>
+      <PaddedBox heading="Tech For Good">
+        We believe that technology should be utilized to better the community. Something as simple
+        as a sleek, static, and easy-to-use website or as complicated as a mobile app to track
+        donations to your nonprofit organization can have a huge impact on an organization of any
+        size.
+        <Container style={{ marginTop: "1.5em", marginLeft: "-0.75em" }}>
+          <ArrowLink href="/about">Our Story</ArrowLink>
+        </Container>
+      </PaddedBox>
       <PaddedBox
         backgroundColor="#F4F4F4"
         className="text-black pb-0"
@@ -54,9 +66,14 @@ Crafting digital solutions for the community around us.
         </Container>
         <ProjectCarousel />
       </PaddedBox>
-      <PaddedBox heading="Todo">
-        Think of something to put here... dark background is good because it makes the scrollbar
-        above look less ugly
+      <PaddedBox heading="Client Testimonials">
+        {markdown`
+As a powerhouse of 36 developers and 8 UI/UX designers, we are extremely collaborative here at Triton Software Engineering. In the past 5 years, we have provided software services pro bono for 18 nonprofit organizations, and we are continuing to grow. Here are some of our client testimonials:
+
+_“The tool TSE created for us has immensely helped operations move along. The team was so cooperative and quick thinking!”_ - Words Alive (NPO)
+
+_“We’ve worked with TSE on 3 projects so far, and must say they’ve been wonderful. Always professional and highly creative.”_ - Key Conservation (NPO)
+        `}
       </PaddedBox>
       <PaddedBox backgroundColor="#F8F8F8" className="text-black" heading="Get Involved">
         <GetInvolvedCards />
