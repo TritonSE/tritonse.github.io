@@ -6,10 +6,11 @@ import PageTitle from "../components/PageTitle";
 import markdown from "../util/markdown";
 
 export default function Students() {
-  const title = "For Students";
+  const title = "Get Involved";
   /**
-   * TODO: update all links (in the following list) to match website structure after complete website has been deployed
-   * - Application link for students in "What is TSE's recruitment process like?"
+   * TODO:
+   * - Update all links (in the following list) to match website structure after complete website has been deployed
+   *   - Application link for students in "What is TSE's recruitment process like?"
    */
   return (
     <>
@@ -18,22 +19,20 @@ export default function Students() {
         {markdown`
 # ${title}
 
-Become part of Triton Software Engineering and join us in using technology to build a better community. Together, we can work alongside nonprofit organizations to create a greater impact.
+Work with Triton Software Engineering and use software solutions to better the community.
         `}
       </Hero>
       <PaddedBox>
         {markdown`
-## Overview
+## For Students
 
-##### For Students
+Become a part of the Triton Software Engineering family and put your skills to use by giving back to the community! Together, we can work alongside nonprofit organizations to create a greater impact. We recruit annually in the fall so make sure you stay up to date.
 
-Come join our family and find a way to put your skills to use by giving back to the community! We recruit annually in the fall so make sure you stay up to date.
-
-### Apply
+# Apply
 
 Applications are currently closed. Please check back Week 0 of Fall Quarter 2022 if you are interested in joining.
 
-### FAQs
+# FAQs
 
 ##### What is Triton Software Engineering?
 
@@ -69,7 +68,7 @@ Interested in applying? [Click here!](/students#apply)
 
 The number of project teams in TSE depends on the number of nonprofits we are able to secure collaborations with every year. In the past two school years, we had 7 project teams.
 
-For the 2021-2022 school year, TSE’s structure consists of our board, a design team, 6 project-based teams, and the TEST team. Each project team is made up of an engineering manager, a product manager, 6 developers, and 2-3 designers. Teams work independently of one another to create software for a specific nonprofit organization that they have been assigned to.
+For the 2021-2022 school year, TSE’s structure consists of our board, a design team, 6 project-based teams, and the TEST team. Each project team is made up of an engineering manager, a product manager, 6 developers, and 2-3 designers. Teams work independently of one another to create software for the nonprofit organization that they have been assigned to.
 
 ##### What does being a product manager look like at TSE?
 
@@ -91,7 +90,7 @@ We host both internal and public events. To find our public events, follow us on
 
 We are working in a hybrid model. Our last recruitment season was completely online, but we hope that we can have a hybrid recruitment process next year. We will do our best to provide as much support as possible through in person Information Sessions and various panels, but all interviews and phone screens will continue to be remote. By the end of Winter 2022, all teams in TSE will return to in person weekly meetings. We will be continuing regular virtual & in person workshops and social events. Please visit our website and Facebook page for the most up-to-date information.
 
-### Still have questions?
+## Still have questions?
 
 If you still have any questions regarding how to get involved with us, please feel free to contact us at [tse@ucsd.edu](mailto:tse@ucsd.edu) and we will get in touch with you as soon as possible.
         `}
