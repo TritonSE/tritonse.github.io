@@ -21,7 +21,7 @@ export default function GetInvolvedCards() {
           linkText="Learn how to join!"
         >
           {markdown`
-We recruit student developers and designers every academic year during the fall.
+We recruit student product managers, designers, and developers every academic year during the fall.
           `}
         </GetInvolvedCard>
       </Col>
@@ -33,7 +33,7 @@ We recruit student developers and designers every academic year during the fall.
           linkText="Learn how to partner with us!"
         >
           {markdown`
-We're always looking for opportunities to help nonprofits operate with ease.
+We are always looking for opportunities to help nonprofits operate with ease.
           `}
         </GetInvolvedCard>
       </Col>

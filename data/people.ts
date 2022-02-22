@@ -266,8 +266,9 @@ const constPeople = [
     roles: ["Developer"],
   },
   {
-    name: "Bobby Tatum",
-    roles: ["Developer"],
+    name: "Robert Tatum",
+    roles: ["Developer", "Project Manager"],
+    graduationYear: 2022,
   },
   {
     name: "Deepansha Singh",
@@ -293,6 +294,7 @@ const constPeople = [
   {
     name: "Hana Kim",
     roles: ["Developer"],
+    hidden: true,
   },
   {
     name: "Jacob Au",
@@ -322,6 +324,7 @@ const constPeople = [
   {
     name: "Nicholas Vanny",
     roles: ["Developer"],
+    hidden: true,
   },
   {
     name: "Nicolas La Polla",
@@ -355,6 +358,7 @@ const constPeople = [
   {
     name: "Shravan Hariharan",
     roles: ["Developer"],
+    hidden: true,
   },
   {
     name: "Shravan Konduru",
@@ -377,6 +381,7 @@ const constPeople = [
   {
     name: "Upo Bhat",
     roles: ["Developer"],
+    hidden: true,
   },
   {
     name: "William Wu",
@@ -385,6 +390,7 @@ const constPeople = [
   {
     name: "Xi-Kai Wu",
     roles: ["Developer"],
+    hidden: true,
   },
   {
     name: "Zain Khan",

@@ -8,6 +8,9 @@ import PaddedBox from "../components/PaddedBox";
 import PageTitle from "../components/PageTitle";
 import markdown from "../util/markdown";
 
+/**
+ * TODO: make text blue as required, indicated on Figma
+ */
 export default function About() {
   return (
     <>
@@ -35,7 +38,7 @@ Triton Software Engineering (TSE) is a multidisciplinary student organization at
           layout={[{}, { imageKey: "content/photoshoot-marketing-12", aspectRatio: [4, 3] }]}
         >
           {markdown`
-In Spring of 2017, a group of passionate students saw a huge problem: many nonprofits had little to no resources to procure professional web and technical development services.
+In Spring of 2017, a group of passionate students saw a huge problem: many nonprofit organizations had little to no resources to procure professional web and technical development services.
 
 In response, they banded together to create Triton Software Engineering. By providing a venue for both UCSD students and nonprofits to connect, they hoped to foster growth in both social good and technical expertise.
           `}
@@ -43,15 +46,16 @@ In response, they banded together to create Triton Software Engineering. By prov
       </PaddedBox>
       <PaddedBox heading="Our Values">
         <ol style={{ fontSize: "3rem", paddingLeft: "1.5em" }}>
-          <li>First</li>
-          <li>Second</li>
-          <li>Third</li>
+          <li>Innovation</li>
+          <li>Community</li>
+          <li>Education</li>
+          <li>Collaboration</li>
         </ol>
       </PaddedBox>
       <Hero imageKey="content/photoshoot-marketing-17" />
       <PaddedBox heading="More than a team.">
         {markdown`
-When not heads-down designing and developing, we set time aside to create opportunities to bond through games and mentorship. We care about celebrate each other's successes as well! As a student member at TSE, you gain valuable skills and a network of talented peers who share a drive to do good for the community.
+When not heads-down designing and developing, we set time aside to create opportunities to bond through games and mentorship. We care about celebrating each other's successes as well! As a member in TSE, you gain valuable skills and a network of talented peers who share a drive to do good for the community.
         `}
         <ArrowLink href="/students">Cool! How do I join?</ArrowLink>
       </PaddedBox>
