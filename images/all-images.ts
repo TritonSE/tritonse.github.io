@@ -2,7 +2,7 @@
 const allImages = {
   "clients/center_for_community_health": { width: 940, height: 192, maxSize: 1080, extension: ".png" },
   "clients/dynamics_performance_team": { width: 1312, height: 1312, maxSize: 1920, extension: ".jpg" },
-  "clients/feeding_san_diego": { width: 2550, height: 1220, maxSize: 3840, extension: ".png" },
+  "clients/feeding_san_diego": { width: 2550, height: 1220, maxSize: 1920, extension: ".png" },
   "clients/international_health_collective": { width: 1200, height: 628, maxSize: 1200, extension: ".png" },
   "clients/key_conservation": { width: 480, height: 480, maxSize: 640, extension: ".jpg" },
   "clients/make_a_wish": { width: 1834, height: 500, maxSize: 1920, extension: ".png" },
@@ -92,6 +92,6 @@ const allImages = {
   "members/zach_liou": { width: 1359, height: 1360, maxSize: 1080, extension: ".jpg" },
   "projects/uweast_community_kitchen/contact_page": { width: 469, height: 264, maxSize: 640, extension: ".png" },
   "sponsors/san_diego_county_taxpayers_association": { width: 892, height: 267, maxSize: 1080, extension: ".jpg" },
-  "sponsors/verkada": { width: 3977, height: 1191, maxSize: 3840, extension: ".png" },
+  "sponsors/verkada": { width: 3977, height: 1191, maxSize: 1920, extension: ".png" },
 } as const;
 export default allImages;

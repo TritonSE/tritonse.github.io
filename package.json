@@ -10,7 +10,7 @@
     "format": "prettier --write .",
     "lint-fix": "(eslint --fix --cache --report-unused-disable-directives . || true) && prettier --write .",
     "lint-check": "tsc && eslint --cache --report-unused-disable-directives . && prettier --check .",
-    "link-test": "linkinator --skip www.linkedin.com out/",
+    "link-test": "linkinator out/",
     "prepare": "husky install .husky"
   },
   "dependencies": {
