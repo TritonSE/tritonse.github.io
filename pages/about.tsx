@@ -8,6 +8,9 @@ import PaddedBox from "../components/PaddedBox";
 import PageTitle from "../components/PageTitle";
 import markdown from "../util/markdown";
 
+/**
+ * TODO: make text blue as required, indicated on Figma
+ */
 export default function About() {
   return (
     <>
@@ -43,9 +46,10 @@ In response, they banded together to create Triton Software Engineering. By prov
       </PaddedBox>
       <PaddedBox heading="Our Values">
         <ol style={{ fontSize: "3rem", paddingLeft: "1.5em" }}>
-          <li>First</li>
-          <li>Second</li>
-          <li>Third</li>
+          <li>Innovation</li>
+          <li>Community</li>
+          <li>Education</li>
+          <li>Collaboration</li>
         </ol>
       </PaddedBox>
       <Hero imageKey="content/photoshoot-marketing-17" />

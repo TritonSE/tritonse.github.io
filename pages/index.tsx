@@ -49,7 +49,7 @@ Crafting digital solutions for the community around us.
         as a sleek, static, and easy-to-use website or as complicated as a mobile app to track
         donations to your nonprofit organization can have a huge impact on an organization of any
         size.
-        <Container style={{ marginTop: "1.5em", marginLeft: "-0.75em" }}>
+        <Container style={{ marginTop: "1.5em", marginLeft: "-0.6em" }}>
           <ArrowLink href="/about">Our Story</ArrowLink>
         </Container>
       </PaddedBox>
