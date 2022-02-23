@@ -54,7 +54,7 @@ Developers must be familiar with any one OOP language (Java, Python, and C/C++ a
 
 ##### What is the TEST program?
 
-TSE Early Start Training (TEST) is a new program that TSE is introducing this year that is catered towards students with little to no technical development/design experience. This includes, but is not limited to, students who come from disadvantaged backgrounds. TEST developers and designers will learn the fundamentals of their domain while working on beginner-level internal projects for TSE.
+TSE Early Start Training (TEST) is a new program that TSE is introducing this year that is catered towards students with little to no technical development/design experience. This includes, but is not limited to, students who come from disadvantaged backgrounds. To address the lack of technical development/design experience, TEST developers and designers will learn the fundamentals of their domain through a quarter-long bootcamp while working on beginner-level internal projects for TSE.
 
 ##### What is TSE's recruitment process like?
 
