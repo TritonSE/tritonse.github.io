@@ -68,6 +68,43 @@ const constClients = [
     endYear: null,
     url: "https://wish.org/",
   },
+  {
+    name: "Words Alive",
+    startYear: 2020,
+    endYear: 2021,
+    url: "https://www.wordsalive.org/",
+  },
+  {
+    name: "Sakyadhita",
+    startYear: 2021,
+    endYear: 2022,
+    url: "https://sakyadhita.org/",
+  },
+  {
+    name: "YStem & Chess",
+    startYear: 2021,
+    endYear: null,
+    url: "https://ystemandchess.com/",
+  },
+  {
+    name: "The Animal Pad",
+    startYear: 2021,
+    endYear: null,
+    url: "https://theanimalpad.org/",
+  },
+  {
+    name: "The League of Amazing Programmers",
+    startYear: 2021,
+    endYear: null,
+    url: "https://www.jointheleague.org/",
+  },
+  {
+    name: "Laktaa Bhutan",
+    startYear: 2021,
+    endYear: null,
+    url: "", // TODO: add website
+  },
+  // TODO: add YCW info
 ] as const;
 export type ClientName = typeof constClients[number]["name"];
 
