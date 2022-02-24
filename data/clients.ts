@@ -4,7 +4,7 @@ export interface Client {
   readonly name: string;
   readonly startYear: number;
   readonly endYear: number | null;
-  readonly url: string;
+  readonly url: string | null;
 }
 
 const constClients = [
