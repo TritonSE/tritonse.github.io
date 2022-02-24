@@ -116,7 +116,7 @@ const allImages = {
   "members/tracy_nguyen": { width: 2819, height: 2819, maxSize: 1080, extension: ".jpg" },
   "members/viren_abhyankar": { width: 1051, height: 1051, maxSize: 1080, extension: ".jpg" },
   "members/wesley_chen": { width: 2029, height: 2029, maxSize: 1080, extension: ".jpg" },
-  "members/william_jin_not_working": { width: 2732, height: 2734, maxSize: 1080, extension: ".jpg" },
+  "members/william_jin": { width: 2732, height: 2734, maxSize: 1080, extension: ".jpg" },
   "members/william_wu": { width: 600, height: 600, maxSize: 640, extension: ".jpg" },
   "members/winnie_chen": { width: 1000, height: 1005, maxSize: 1080, extension: ".jpg" },
   "members/xi_kai_wu": { width: 4213, height: 4213, maxSize: 1080, extension: ".jpg" },
