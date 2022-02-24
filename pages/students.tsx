@@ -34,7 +34,7 @@ Applications are currently closed. Please check back Week 0 of Fall Quarter 2022
 
 ## FAQs
 
-### What is Triton Software Engineering?
+##### What is Triton Software Engineering?
 
 Triton Software Engineering (TSE) is a multidisciplinary student organization at UC San Diego. We partner with nonprofits to design and develop software, websites, and mobile applications pro-bono for social good, while giving our developers practical, real world experience.
 
