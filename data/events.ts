@@ -52,11 +52,12 @@ const events: Event[] = [
     url: "https://www.facebook.com/TritonSE/posts/2872472886301898",
   },
   {
-    title: "Test Fake Event: Apple Pie",
-    description: "Apple pie is tasty! Come enjoy some pie.",
-    location: "Somewhere over the rainbow",
-    startTime: parseDate("2022-03-21T14:00:00"),
-    url: "https://www.example.com",
+    title: "Recruitment Info Session",
+    description:
+      'Do you need meaningful experience to give your resume a little boost? Are you passionate about giving back to the community? Do you want to develop your leadership and programming skills? If you said "yes" to any of the above questions consider applying to join Triton Conceptualize! We are a group of passionate students at UCSD whose mission is to provide technical development services to local non profits pro-bono. And we are looking for like minded individuals to join us. You will be put on a team and work on real projects with requirements from real clients.',
+    location: "Little Q Room @ Jacob's School of Engineering",
+    startTime: parseDate("2017-06-02T17:00:00"),
+    url: "https://www.facebook.com/TritonSE/posts/299543323820414",
   },
 ];
 
