@@ -13,18 +13,18 @@ const allRoles = [
   // Leads
   "Marketing Lead",
   "Outreach Lead",
+  "TEST Design Lead",
+  "TEST Developer Lead",
   // Managers
   "Engineering Manager",
   "Product Manager",
   "Project Manager",
-  // TEST
-  "TEST Design Lead",
-  "TEST Developer Lead",
-  "TEST Designer",
-  "TEST Developer",
-  // Everyone else
+  // Members
   "Designer",
   "Developer",
+  // TEST
+  "TEST Designer",
+  "TEST Developer",
 ] as const;
 type Role = typeof allRoles[number];
 
