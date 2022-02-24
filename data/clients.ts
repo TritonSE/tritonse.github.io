@@ -102,7 +102,7 @@ const constClients = [
     name: "Laktaa Bhutan",
     startYear: 2021,
     endYear: null,
-    url: "", // TODO: add website
+    url: "https://laktaa.medium.com/",
   },
   // TODO: add YCW info
 ] as const;
