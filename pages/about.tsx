@@ -47,9 +47,9 @@ In response, they banded together to create Triton Software Engineering. By prov
       <PaddedBox heading="Our Values">
         <ol style={{ fontSize: "3rem", paddingLeft: "1.5em" }}>
           <li>Innovation</li>
-          <li>Community</li>
           <li>Education</li>
           <li>Collaboration</li>
+          <li>Service</li>
         </ol>
       </PaddedBox>
       <Hero imageKey="content/photoshoot-marketing-17" />

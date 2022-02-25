@@ -122,7 +122,10 @@ const allImages = {
   "members/xi_kai_wu": { width: 4213, height: 4213, maxSize: 1080, extension: ".jpg" },
   "members/zach_liou": { width: 1359, height: 1360, maxSize: 1080, extension: ".jpg" },
   "members/zain_khan": { width: 1110, height: 1110, maxSize: 1080, extension: ".jpg" },
+  "projects/dynamics_performance_team/home_page": { width: 1920, height: 1001, maxSize: 1920, extension: ".png" },
+  "projects/ihc_wellness_app/app-screens": { width: 1334, height: 657, maxSize: 1920, extension: ".png" },
   "projects/uweast_community_kitchen/contact_page": { width: 469, height: 264, maxSize: 640, extension: ".png" },
+  "projects/uweast_community_kitchen/home_page": { width: 3820, height: 2556, maxSize: 3840, extension: ".png" },
   "sponsors/san_diego_county_taxpayers_association": { width: 892, height: 267, maxSize: 1080, extension: ".jpg" },
   "sponsors/verkada": { width: 3977, height: 1191, maxSize: 1920, extension: ".png" },
 } as const;
