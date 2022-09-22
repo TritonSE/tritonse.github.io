@@ -30,7 +30,7 @@ Become a part of the Triton Software Engineering family and put your skills to u
 
 ## Apply
 
-Applications are currently closed. Please check back Week 0 of Fall Quarter 2022 if you are interested in joining.
+Please fill out the application form [here](https://tritonse.github.io/TSE-Application-Form/).
 
 ## FAQs
 
