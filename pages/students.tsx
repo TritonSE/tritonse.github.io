@@ -54,7 +54,7 @@ Developers must be familiar with any one OOP language (Java, Python, and C/C++ a
 
 ### What is the TEST program?
 
-The TSE Early Start Training (TEST) program provides students from underprivileged backgrounds who have little to no technical development/design experience with a first step into exploring software engineering and UI/UX design. TEST developers and designers will learn the fundamentals of their domain while working on beginner-level internal projects for TSE. 
+The TSE Early Start Training (TEST) program provides students from underprivileged backgrounds who have little to no technical development/design experience with a first step into exploring software engineering and UI/UX design. TEST developers and designers will learn the fundamentals of their domain while working on beginner-level internal projects for TSE.
 
 You may either apply to TSE or the TEST program, not both. If you are unsure about which is right for you, please email adave@ucsd.edu.
 
@@ -90,7 +90,7 @@ We host both internal and public events. To find our public events, follow us on
 
 ### How is TSE operating during the ongoing pandemic?
 
-We are working in a hybrid model. Our last recruitment season was completely online and we plan to continue the online structure this year. We hope to have a hybrid recruitment process next year. We will do our best to provide as much support as possible through in person Information Sessions and various panels, but all interviews and phone screens will continue to be remote. 
+We are working in a hybrid model. Our last recruitment season was completely online and we plan to continue the online structure this year. We hope to have a hybrid recruitment process next year. We will do our best to provide as much support as possible through in person Information Sessions and various panels, but all interviews and phone screens will continue to be remote.
 
 All TSE team meetings and work are conducted in a hybrid structure at the moment. We will be continuing regular virtual & in person workshops and social events. This year, all of our events are primarily in person. Please visit our website and Facebook page for the most up-to-date information.
 
