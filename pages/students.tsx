@@ -62,7 +62,7 @@ You may either apply to TSE or the TEST program, not both. If you are unsure abo
 
 TSE recruits new members at the beginning of every Fall quarter. In 2019, we accepted a total of 31 members from 167 applicants. In 2020, we accepted a total of 29 members from 164 applicants. In 2021, we accepted a total of 30 members from 311 applicants.
 
-There are three stages for both designers and developers. We start with a resume screen, then a behvioral phone screen (with a Systems Design question for aspiring TSE developers), followed by a technical interview. For TEST, we will have a resume screen and then a combined behavioral and technical interview. Due to the current circumstances, our recruitment process will be conducted virtually.
+There are three stages for both designers and developers. We start with a resume screen, then a behavioral phone screen (with a Systems Design question for aspiring TSE developers), followed by a technical interview. For TEST, we will have a resume screen and then a combined behavioral and technical interview. Due to the current circumstances, our recruitment process will be conducted virtually.
 
 Interested in applying? [Click here!](/students#apply)
 
