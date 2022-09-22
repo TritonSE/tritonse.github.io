@@ -41,7 +41,7 @@ Our organization recruits some of the most hard-working, passionate, and brighte
 
 ### How is TSE operating during the ongoing pandemic?
 
-We are working in a hybrid model. By the end of Winter 2022, all teams in TSE will return to in person weekly meetings; however, all TSE meetings with you will be remote.
+We are working in a hybrid model with most project teams primarily meeting in person. All TSE meetings with nonprofit clients will continue to be remote.
 
 ## Still have questions?
 
