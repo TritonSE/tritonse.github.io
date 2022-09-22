@@ -8,6 +8,7 @@ const allRoles = [
   "VP Engineering",
   "VP External",
   "VP Operations",
+  "VP Products",
   "VP Projects",
   "VP Technology",
   // Leads
@@ -147,7 +148,7 @@ const constPeople = [
   },
   {
     name: "Viren Abhyankar",
-    roles: ["Developer", "VP Projects"],
+    roles: ["Developer", "VP Products"],
   },
   {
     name: "David Hacker",
@@ -167,10 +168,12 @@ const constPeople = [
   {
     name: "Heather Gan",
     roles: ["Developer", "Outreach Lead"],
+    graduationYear: 2022,
   },
   {
     name: "Kelly Li",
     roles: ["Designer", "Marketing Lead"],
+    graduationYear: 2022,
   },
   {
     name: "Amrit Singh",
@@ -199,11 +202,12 @@ const constPeople = [
   },
   {
     name: "Andrew Caballero",
-    roles: ["Designer"],
+    roles: ["Designer", "VP Design"],
   },
   {
     name: "Evan Lam",
     roles: ["Designer", "VP Design"],
+    graduationYear: 2022,
   },
   {
     name: "Kenny Tran",
@@ -213,6 +217,7 @@ const constPeople = [
   {
     name: "Lydia Smith",
     roles: ["Designer"],
+    graduationYear: 2022,
   },
   {
     name: "Rachel Blumin",
@@ -225,6 +230,7 @@ const constPeople = [
   {
     name: "Tracy Nguyen",
     roles: ["Designer"],
+    graduationYear: 2022,
   },
   {
     name: "Aaron Kirk",
@@ -246,6 +252,7 @@ const constPeople = [
   {
     name: "Allison Bhavsar",
     roles: ["Developer"],
+    graduationYear: 2022,
   },
   {
     name: "Amitesh Sharma",
@@ -264,6 +271,7 @@ const constPeople = [
   {
     name: "Benson Vuong",
     roles: ["Developer"],
+    graduationYear: 2022,
   },
   {
     name: "Robert Tatum",
@@ -277,6 +285,7 @@ const constPeople = [
   {
     name: "Dhanush Nanjunda Reddy",
     roles: ["Developer", "Engineering Manager"],
+    graduationYear: 2022,
   },
   {
     name: "Dhruv Sood",
@@ -286,6 +295,7 @@ const constPeople = [
   {
     name: "Elias Fang",
     roles: ["Developer"],
+    graduationYear: 2022,
   },
   {
     name: "Emmanuel Flores",
@@ -312,10 +322,12 @@ const constPeople = [
   {
     name: "Kunal Bhandarkar",
     roles: ["Developer", "VP Engineering"],
+    graduationYear: 2022,
   },
   {
     name: "Ly Nguyen",
     roles: ["Developer"],
+    graduationYear: 2022,
   },
   {
     name: "Navid Boloorian",
@@ -329,6 +341,7 @@ const constPeople = [
   {
     name: "Nicolas La Polla",
     roles: ["Developer", "Engineering Manager"],
+    graduationYear: 2022,
   },
   {
     name: "Nirmal Agnihotri",
@@ -344,7 +357,7 @@ const constPeople = [
   },
   {
     name: "Rohan Puthukudy",
-    roles: ["Developer"],
+    roles: ["Developer", "TEST Developer Lead"],
   },
   {
     name: "Rohith Kasar",
@@ -366,7 +379,7 @@ const constPeople = [
   },
   {
     name: "Stephen Tan",
-    roles: ["Developer", "TEST Developer Lead"],
+    roles: ["Developer", "TEST Developer Lead", "Product Manager"],
   },
   {
     name: "Thai Gillespie",
@@ -385,7 +398,7 @@ const constPeople = [
   },
   {
     name: "William Wu",
-    roles: ["Developer"],
+    roles: ["Developer", "VP Engineering"],
   },
   {
     name: "Xi-Kai Wu",
@@ -402,7 +415,7 @@ const constPeople = [
   },
   {
     name: "Alex Zhang",
-    roles: ["Developer"],
+    roles: ["Developer", "Engineering Manager"],
   },
   {
     name: "Kevin Fu",
@@ -414,7 +427,7 @@ const constPeople = [
   },
   {
     name: "Andrew Russell",
-    roles: ["Developer"],
+    roles: ["Developer", "Engineering Manager"],
   },
   {
     name: "James Zhang",
@@ -422,7 +435,7 @@ const constPeople = [
   },
   {
     name: "Mohak Vaswani",
-    roles: ["Developer"],
+    roles: ["Developer", "Product Manager"],
   },
   {
     name: "Shreya Gupta",
@@ -470,7 +483,7 @@ const constPeople = [
   },
   {
     name: "Assaf Cohen-Arazi",
-    roles: ["Developer"],
+    roles: ["Developer", "Engineering Manager"],
   },
   {
     name: "Ryan Hung",
@@ -478,7 +491,7 @@ const constPeople = [
   },
   {
     name: "Shreekar Pandey",
-    roles: ["Developer"],
+    roles: ["Developer", "VP External"],
   },
   {
     name: "William Jin",
@@ -491,6 +504,7 @@ const constPeople = [
   {
     name: "Leslie Aguiar",
     roles: ["Designer"],
+    graduationYear: 2022,
   },
   {
     name: "Jonathan Lum",
@@ -498,7 +512,7 @@ const constPeople = [
   },
   {
     name: "Juliet Zhuang",
-    roles: ["Designer"],
+    roles: ["Designer", "Marketing Lead"],
   },
   {
     name: "Tracey Du",
@@ -519,38 +533,47 @@ const constPeople = [
   {
     name: " Casey Toy",
     roles: ["TEST Developer"],
+    graduationYear: 2022,
   },
   {
     name: "Sage Amon",
     roles: ["TEST Developer"],
+    graduationYear: 2022,
   },
   {
     name: "Abel Seyoum",
     roles: ["TEST Developer"],
+    graduationYear: 2022,
   },
   {
     name: "Garrett Lam",
     roles: ["TEST Developer"],
+    graduationYear: 2022,
   },
   {
     name: "Eric Shults",
     roles: ["TEST Developer"],
+    graduationYear: 2022,
   },
   {
     name: "Alicia Danielle",
     roles: ["TEST Developer"],
+    graduationYear: 2022,
   },
   {
     name: "Frances Sy",
     roles: ["TEST Designer"],
+    graduationYear: 2022,
   },
   {
     name: "Aska Kunita Demirci",
     roles: ["TEST Designer"],
+    graduationYear: 2022,
   },
   {
     name: "Annie Ye",
     roles: ["TEST Designer"],
+    graduationYear: 2022,
   },
 ] as const;
 type PersonName = typeof constPeople[number]["name"];
