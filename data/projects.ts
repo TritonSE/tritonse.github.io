@@ -1,6 +1,8 @@
 import { MDXProps } from "mdx/types";
 
 import { ImageKey } from "../images";
+import contentDynamics from "../projects/dynamics-website.mdx";
+import contentIHCWellnessApp from "../projects/ihc-wellness-app.mdx";
 import contentUWEAST from "../projects/uweast-community-kitchen.mdx";
 import { assertUniqueKey, makeComparator, makeSlug } from "../util";
 
@@ -28,9 +30,9 @@ const constProjects = [
   {
     name: "UWEAST Community Kitchen",
     description:
-      "Web application for UWEAST that allows customers to view the menu, place orders, and pay",
+      "Web application for UWEAST that allows customers to view the menu, place orders, and pay.",
     content: contentUWEAST,
-    thumbnail: "projects/uweast_community_kitchen/contact_page",
+    thumbnail: "projects/uweast_community_kitchen/home_page",
     team: [
       {
         role: "Project Manager",
@@ -54,28 +56,49 @@ const constProjects = [
       },
     ],
   },
-  // TODO remove these once actual projects are created.
-  // These were used to test the project carousel on the homepage.
   {
-    name: "Fake Project 1",
-    description: "Made some cool stuff for some cool people",
-    content: contentUWEAST,
-    thumbnail: null,
-    team: [],
+    name: "Dynamics Team Website",
+    description:
+      "Website to help promote Dynamics Performance Team while providing ways to support the organization financially.",
+    content: contentDynamics,
+    thumbnail: "projects/dynamics_performance_team/home_page",
+    team: [
+      {
+        role: "Project Manager",
+        names: ["Jason Cabrera"],
+      },
+      {
+        role: "Designer",
+        names: ["Jessica Nguyen", "Nhu Luong"],
+      },
+      {
+        role: "Developer",
+        names: [
+          "Amrit Singh",
+          "Nicholas Vanny",
+          "Dhanush Nanjunda Reddy",
+          "Upo Bhat",
+          "Anshul Birla",
+        ],
+      },
+    ],
   },
   {
-    name: "Fake Project 2",
-    description: "Made some more cool stuff for some more cool people",
-    content: contentUWEAST,
-    thumbnail: null,
-    team: [],
-  },
-  {
-    name: "Fake Project 3",
-    description: "Made the coolest stuff for the coolest people",
-    content: contentUWEAST,
-    thumbnail: null,
-    team: [],
+    name: "IHC Wellness App",
+    description:
+      "Mobile application encouraging more open dialogue, healthy coping mechanisms, and better utilization of on campus resources for students under intense academic pressure.",
+    content: contentIHCWellnessApp,
+    thumbnail: "projects/ihc_wellness_app/app-screens",
+    team: [
+      {
+        role: "Project Manager",
+        names: ["Glenn Raskovich"],
+      },
+      {
+        role: "Developer",
+        names: ["Anoushka Dave", "Benson Vuong", "Robert Tatum", "Rohith Kasar"],
+      },
+    ],
   },
 ] as const;
 

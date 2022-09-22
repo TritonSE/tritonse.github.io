@@ -575,6 +575,17 @@ const constPeople = [
     roles: ["TEST Designer"],
     graduationYear: 2022,
   },
+  {
+    name: "Jason Cabrera",
+    roles: ["Project Manager"],
+    graduationYear: 2021,
+    hidden: true,
+  },
+  {
+    name: "Nhu Luong",
+    roles: ["Designer"],
+    hidden: true,
+  },
 ] as const;
 type PersonName = typeof constPeople[number]["name"];
 
