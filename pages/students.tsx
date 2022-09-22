@@ -44,23 +44,25 @@ If you are passionate about helping others using the skills you learn in college
 
 ### What kind of experience do I need to join TSE?
 
-At Triton Software Engineering, we seek students who are hardworking and passionate for social good. We are a project-based organization, so experience working in teams is a plus! TEST designers and TEST developers do not need prior experience in their field (see the next section for more details). Other developer and designer positions will require some prior experience.
+At Triton Software Engineering, we seek students who are hardworking and passionate about social good. We are a project-based organization, so experience working in teams is a plus! TEST designers and TEST developers do not need prior experience in their field (see the next section for more details). Other developer and designer positions will require some prior experience.
 
 Product Managers must have some leadership experience and optionally some software engineering knowledge. The leadership experience tells us that you are ready to lead the direction of your product and the potential software background will provide you with context on our projects.
 
 Designers must have working knowledge of the standard design process (i.e. stages of research, ideation, testing) and also some experience with their own UI/UX work (if you have a portfolio to show us, that’d be fantastic!).
 
-Developers must be familiar with any one OOP language (Java, Python, and C/C++ are common ones). Juniors and serniors should have basic exposure to web development (HTML, CSS, JavaScript, HTTP, REST APIs) and at least one database. Familiarity with React.js and/or backend development is a plus. However, knowledge of specific technologies is not required, as we will teach you the technologies necessary to contribute.
+Developers must be familiar with any one OOP language (Java, Python, and C/C++ are common ones). Juniors and seniors should have basic exposure to web development (HTML, CSS, JavaScript, HTTP, REST APIs) and at least one database. Familiarity with React.js and/or backend development is a plus. However, knowledge of specific technologies is not required, as we will teach you the technologies necessary to contribute.
 
 ### What is the TEST program?
 
-TSE Early Start Training (TEST) is a new program that TSE is introducing this year that is catered towards students with little to no technical development/design experience. This includes, but is not limited to, students who come from disadvantaged backgrounds. TEST developers and designers will learn the fundamentals of their domain while working on beginner-level internal projects for TSE.
+The TSE Early Start Training (TEST) program provides students from underprivileged backgrounds who have little to no technical development/design experience with a first step into exploring software engineering and UI/UX design. TEST developers and designers will learn the fundamentals of their domain while working on beginner-level internal projects for TSE. 
+
+You may either apply to TSE or the TEST program, not both. If you are unsure about which is right for you, please email adave@ucsd.edu.
 
 ### What is TSE's recruitment process like?
 
 TSE recruits new members at the beginning of every Fall quarter. In 2019, we accepted a total of 31 members from 167 applicants. In 2020, we accepted a total of 29 members from 164 applicants. In 2021, we accepted a total of 30 members from 311 applicants.
 
-There are three stages: a resume screen, a behvioral phone screen with a Systems Design question, and an in-person technical interview. For TEST, we will have a resume screen and then a combined behavioral and technical in-person interview. Due to the current circumstances, our in-person interviews will be virtual.
+There are three stages for both designers and developers. We start with a resume screen, then a behvioral phone screen (with a Systems Design question for aspiring TSE developers), followed by an in-person technical interview. For TEST, we will have a resume screen and then a combined behavioral and technical in-person interview. Due to the current circumstances, our in-person interviews will be virtual.
 
 Interested in applying? [Click here!](/students#apply)
 
@@ -68,7 +70,7 @@ Interested in applying? [Click here!](/students#apply)
 
 The number of project teams in TSE depends on the number of nonprofits we are able to secure collaborations with every year. In the past two school years, we had 7 project teams.
 
-For the 2021-2022 school year, TSE’s structure consists of our board, a design team, 6 project-based teams, and the TEST team. Each project team is made up of an engineering manager, a product manager, 6 developers, and 2-3 designers. Teams work independently of one another to create software for the nonprofit organization that they have been assigned to.
+In the 2021-2022 school year, TSE’s structure consisted of our board, a design team, 6 project-based teams, and the TEST team. Each project team was made up of an engineering manager, a product manager, 6 developers, and 2-3 designers. Teams work independently of one another to create software for the nonprofit organization that they have been assigned to.
 
 ### What does being a product manager look like at TSE?
 
@@ -88,7 +90,9 @@ We host both internal and public events. To find our public events, follow us on
 
 ### How is TSE operating during the ongoing pandemic?
 
-We are working in a hybrid model. Our last recruitment season was completely online, but we hope that we can have a hybrid recruitment process next year. We will do our best to provide as much support as possible through in person Information Sessions and various panels, but all interviews and phone screens will continue to be remote. By the end of Winter 2022, all teams in TSE will return to in person weekly meetings. We will be continuing regular virtual & in person workshops and social events. Please visit our website and Facebook page for the most up-to-date information.
+We are working in a hybrid model. Our last recruitment season was completely online and we plan to continue the online structure this year. We hope to have a hybrid recruitment process next year. We will do our best to provide as much support as possible through in person Information Sessions and various panels, but all interviews and phone screens will continue to be remote. 
+
+All TSE team meetings and work are conducted in a hybrid structure at the moment. We will be continuing regular virtual & in person workshops and social events. This year, all of our events are primarily in person. Please visit our website and Facebook page for the most up-to-date information.
 
 ## Still have questions?
 
