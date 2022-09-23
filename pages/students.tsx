@@ -5,13 +5,10 @@ import PaddedBox from "../components/PaddedBox";
 import PageTitle from "../components/PageTitle";
 import markdown from "../util/markdown";
 
+const APPLICATION_URL = "https://tritonse.github.io/TSE-Application-Form/";
+
 export default function Students() {
   const title = "Get Involved";
-  /**
-   * TODO:
-   * - Update all links (in the following list) to match website structure after complete website has been deployed
-   *   - Application link for students in "What is TSE's recruitment process like?"
-   */
   return (
     <>
       <PageTitle title={title} />
@@ -30,7 +27,7 @@ Become a part of the Triton Software Engineering family and put your skills to u
 
 ## Apply
 
-Please fill out the application form [here](https://tritonse.github.io/TSE-Application-Form/).
+Please fill out the application form [here](${APPLICATION_URL}).
 
 ## FAQs
 
@@ -64,7 +61,7 @@ TSE recruits new members at the beginning of every Fall quarter. In 2019, we acc
 
 There are three stages for both designers and developers. We start with a resume screen, then a behavioral phone screen (with a Systems Design question for aspiring TSE developers), followed by a technical interview. For TEST, we will have a resume screen and then a combined behavioral and technical interview. Due to the current circumstances, our recruitment process will be conducted virtually.
 
-Interested in applying? [Click here!](/students#apply)
+Interested in applying? [Click here!](${APPLICATION_URL})
 
 ### How many project teams are there? How are TSE projects structured?
 
