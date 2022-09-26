@@ -22,7 +22,9 @@ function Members() {
 }
 
 function Alumni() {
-  const yearsAndAlumni = groupBy(allAlumni, (alumnus) => alumnus.graduation).reverse();
+  let yearsAndAlumni = groupBy(allAlumni, (alumnus) => alumnus.graduation).reverse();
+  // TODO: dirty hack to move TEST to the bottom for now
+  yearsAndAlumni = [...yearsAndAlumni.slice(1), yearsAndAlumni[0]];
   return (
     <>
       {yearsAndAlumni.map(([graduation, alumni]) => (
