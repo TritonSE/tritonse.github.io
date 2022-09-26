@@ -36,7 +36,7 @@ interface Member {
 }
 
 interface Alumnus extends Member {
-  readonly graduationYear: number;
+  readonly graduation: number | "TEST";
 }
 
 type Person = Member | Alumnus;
@@ -45,102 +45,102 @@ const constPeople = [
   {
     name: "Aaron Yang",
     roles: ["President"],
-    graduationYear: 2018,
+    graduation: 2018,
   },
   {
     name: "Thomas Galpin",
     roles: ["VP Operations"],
-    graduationYear: 2018,
+    graduation: 2018,
   },
   {
     name: "Belal Aboabdo",
     roles: ["VP External"],
-    graduationYear: 2018,
+    graduation: 2018,
   },
   {
     name: "Khaled Ahmad",
     roles: ["VP Technology"],
-    graduationYear: 2018,
+    graduation: 2018,
   },
   {
     name: "Zach Liou",
     roles: ["Project Manager", "VP Technology"],
-    graduationYear: 2018,
+    graduation: 2018,
   },
   {
     name: "Donald Kwan",
     roles: ["Project Manager"],
-    graduationYear: 2018,
+    graduation: 2018,
   },
   {
     name: "Joann Chen",
     roles: ["Developer", "Project Manager"],
-    graduationYear: 2018,
+    graduation: 2018,
   },
   {
     name: "Gary Zhao",
     roles: ["Developer"],
-    graduationYear: 2019,
+    graduation: 2019,
   },
   {
     name: "John Lu",
     roles: ["Developer"],
-    graduationYear: 2019,
+    graduation: 2019,
   },
   {
     name: "Sumeet Bansal",
     roles: ["Developer", "Project Manager", "President"],
-    graduationYear: 2020,
+    graduation: 2020,
   },
   {
     name: "Alex Chiu",
     roles: ["Developer", "Project Manager"],
-    graduationYear: 2020,
+    graduation: 2020,
   },
   {
     name: "Bryant Liu",
     roles: ["Developer", "Project Manager"],
-    graduationYear: 2020,
+    graduation: 2020,
   },
   {
     name: "Dan Huang",
     roles: ["Project Manager"],
-    graduationYear: 2020,
+    graduation: 2020,
   },
   {
     name: "Glenn Raskovich",
     roles: ["Developer", "Project Manager"],
-    graduationYear: 2020,
+    graduation: 2020,
   },
   {
     name: "Kenny Yi",
     roles: ["Developer", "Project Manager"],
-    graduationYear: 2020,
+    graduation: 2020,
   },
   {
     name: "Winnie Chen",
     roles: ["Designer"],
-    graduationYear: 2020,
+    graduation: 2020,
   },
   {
     name: "Benson Budiman",
     roles: ["Developer", "VP Operations"],
-    graduationYear: 2021,
+    graduation: 2021,
   },
   {
     name: "Ayush Shukla",
     roles: ["Developer", "VP External"],
-    graduationYear: 2021,
+    graduation: 2021,
   },
   {
     name: "Jessica Nguyen",
     roles: ["Designer", "VP Design"],
-    graduationYear: 2021,
+    graduation: 2021,
   },
   {
     name: "Wesley Chen",
     roles: ["Developer", "VP External", "President"],
-    graduationYear: 2021,
+    graduation: 2021,
   },
   {
     name: "Anoushka Dave",
@@ -153,12 +153,12 @@ const constPeople = [
   {
     name: "David Hacker",
     roles: ["Developer", "VP Technology"],
-    graduationYear: 2021,
+    graduation: 2021,
   },
   {
     name: "Holly Ham",
     roles: ["Developer", "Project Manager", "VP Projects"],
-    graduationYear: 2021,
+    graduation: 2021,
   },
   {
     name: "Mylinh Lac",
@@ -168,37 +168,37 @@ const constPeople = [
   {
     name: "Heather Gan",
     roles: ["Developer", "Outreach Lead"],
-    graduationYear: 2022,
+    graduation: 2022,
   },
   {
     name: "Kelly Li",
     roles: ["Designer", "Marketing Lead"],
-    graduationYear: 2022,
+    graduation: 2022,
   },
   {
     name: "Amrit Singh",
     roles: ["Developer", "Project Manager"],
-    graduationYear: 2021,
+    graduation: 2021,
   },
   {
     name: "Arnold Duan",
     roles: ["Developer", "Project Manager"],
-    graduationYear: 2021,
+    graduation: 2021,
   },
   {
     name: "David Cruz",
     roles: ["Developer", "Project Manager"],
-    graduationYear: 2021,
+    graduation: 2021,
   },
   {
     name: "Hannah Hsu",
     roles: ["Developer", "Project Manager"],
-    graduationYear: 2021,
+    graduation: 2021,
   },
   {
     name: "Sara Blumin",
     roles: ["Developer", "Project Manager"],
-    graduationYear: 2021,
+    graduation: 2021,
   },
   {
     name: "Andrew Caballero",
@@ -207,17 +207,17 @@ const constPeople = [
   {
     name: "Evan Lam",
     roles: ["Designer", "VP Design"],
-    graduationYear: 2022,
+    graduation: 2022,
   },
   {
     name: "Kenny Tran",
     roles: ["Designer"],
-    graduationYear: 2021,
+    graduation: 2021,
   },
   {
     name: "Lydia Smith",
     roles: ["Designer"],
-    graduationYear: 2022,
+    graduation: 2022,
   },
   {
     name: "Rachel Blumin",
@@ -230,7 +230,7 @@ const constPeople = [
   {
     name: "Tracy Nguyen",
     roles: ["Designer"],
-    graduationYear: 2022,
+    graduation: 2022,
   },
   {
     name: "Aaron Kirk",
@@ -252,7 +252,7 @@ const constPeople = [
   {
     name: "Allison Bhavsar",
     roles: ["Developer"],
-    graduationYear: 2022,
+    graduation: 2022,
   },
   {
     name: "Amitesh Sharma",
@@ -266,17 +266,17 @@ const constPeople = [
   {
     name: "Anson Lee",
     roles: ["Developer"],
-    graduationYear: 2021,
+    graduation: 2021,
   },
   {
     name: "Benson Vuong",
     roles: ["Developer"],
-    graduationYear: 2022,
+    graduation: 2022,
   },
   {
     name: "Robert Tatum",
     roles: ["Developer", "Project Manager"],
-    graduationYear: 2022,
+    graduation: 2022,
   },
   {
     name: "Deepansha Singh",
@@ -285,7 +285,7 @@ const constPeople = [
   {
     name: "Dhanush Nanjunda Reddy",
     roles: ["Developer", "Engineering Manager"],
-    graduationYear: 2022,
+    graduation: 2022,
   },
   {
     name: "Dhruv Sood",
@@ -295,7 +295,7 @@ const constPeople = [
   {
     name: "Elias Fang",
     roles: ["Developer"],
-    graduationYear: 2022,
+    graduation: 2022,
   },
   {
     name: "Emmanuel Flores",
@@ -317,17 +317,17 @@ const constPeople = [
   {
     name: "Kevin Han",
     roles: ["Developer"],
-    graduationYear: 2021,
+    graduation: 2021,
   },
   {
     name: "Kunal Bhandarkar",
     roles: ["Developer", "VP Engineering"],
-    graduationYear: 2022,
+    graduation: 2022,
   },
   {
     name: "Ly Nguyen",
     roles: ["Developer"],
-    graduationYear: 2022,
+    graduation: 2022,
   },
   {
     name: "Navid Boloorian",
@@ -341,7 +341,7 @@ const constPeople = [
   {
     name: "Nicolas La Polla",
     roles: ["Developer", "Engineering Manager"],
-    graduationYear: 2022,
+    graduation: 2022,
   },
   {
     name: "Nirmal Agnihotri",
@@ -384,7 +384,7 @@ const constPeople = [
   {
     name: "Thai Gillespie",
     roles: ["Developer"],
-    graduationYear: 2021,
+    graduation: 2021,
   },
   {
     name: "Thomas Garry",
@@ -504,7 +504,7 @@ const constPeople = [
   {
     name: "Leslie Aguiar",
     roles: ["Designer"],
-    graduationYear: 2022,
+    graduation: 2022,
   },
   {
     name: "Jonathan Lum",
@@ -533,52 +533,52 @@ const constPeople = [
   {
     name: " Casey Toy",
     roles: ["TEST Developer"],
-    graduationYear: 2022,
+    graduation: "TEST",
   },
   {
     name: "Sage Amon",
     roles: ["TEST Developer"],
-    graduationYear: 2022,
+    graduation: "TEST",
   },
   {
     name: "Abel Seyoum",
     roles: ["TEST Developer"],
-    graduationYear: 2022,
+    graduation: "TEST",
   },
   {
     name: "Garrett Lam",
     roles: ["TEST Developer"],
-    graduationYear: 2022,
+    graduation: "TEST",
   },
   {
     name: "Eric Shults",
     roles: ["TEST Developer"],
-    graduationYear: 2022,
+    graduation: "TEST",
   },
   {
     name: "Alicia Danielle",
     roles: ["TEST Developer"],
-    graduationYear: 2022,
+    graduation: "TEST",
   },
   {
     name: "Frances Sy",
     roles: ["TEST Designer"],
-    graduationYear: 2022,
+    graduation: "TEST",
   },
   {
     name: "Aska Kunita Demirci",
     roles: ["TEST Designer"],
-    graduationYear: 2022,
+    graduation: "TEST",
   },
   {
     name: "Annie Ye",
     roles: ["TEST Designer"],
-    graduationYear: 2022,
+    graduation: "TEST",
   },
   {
     name: "Jason Cabrera",
     roles: ["Project Manager"],
-    graduationYear: 2021,
+    graduation: "TEST",
     hidden: true,
   },
   {
@@ -593,7 +593,7 @@ type PersonName = typeof constPeople[number]["name"];
 const mutablePeople: Person[] = constPeople.slice();
 mutablePeople.sort(
   makeComparator(({ roles, name, ...person }) => [
-    "graduationYear" in person ? person.graduationYear : 9999,
+    "graduation" in person ? person.graduation : 9999,
     allRoles.indexOf(roles[roles.length - 1]),
     name,
   ])
@@ -605,7 +605,7 @@ const visiblePeople = allPeople.filter((person) => !person.hidden);
 
 // Create arrays with only alumni and only members.
 function isAlumnus(member: Member): member is Alumnus {
-  return "graduationYear" in member;
+  return "graduation" in member;
 }
 const allAlumni: readonly Alumnus[] = visiblePeople.filter(isAlumnus);
 const allMembers: readonly Member[] = visiblePeople.filter((person) => !isAlumnus(person));
