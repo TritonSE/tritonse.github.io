@@ -22,13 +22,13 @@ function Members() {
 }
 
 function Alumni() {
-  const yearsAndAlumni = groupBy(allAlumni, (alumnus) => alumnus.graduationYear).reverse();
+  const yearsAndAlumni = groupBy(allAlumni, (alumnus) => alumnus.graduation).reverse();
   return (
     <>
-      {yearsAndAlumni.map(([year, alumni]) => (
+      {yearsAndAlumni.map(([graduation, alumni]) => (
         <ProfileCardGroup
-          key={year}
-          title={`Class of ${year}`}
+          key={graduation}
+          title={typeof graduation === "number" ? `Class of ${graduation}` : `${graduation} Alumni`}
           profiles={alumni.map((alumnus, index) => (
             <MemberProfileCard member={alumnus} roleLimit={100} key={index} />
           ))}
