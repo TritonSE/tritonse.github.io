@@ -20,6 +20,30 @@ function parseDate(date: string): DateTime {
 
 const events: Event[] = [
   {
+    title: "Recruitment Info Session 2",
+    description:
+      "We are looking to recruit developers, designers, and product managers to come join our mission of developing solutions to the software needs of nonprofits! You can learn more about our organization and the work we have done in the past on our website! This year, we are also introducing a new program called TSE Early Start Training (TEST), where prospective developers and designers from underprivileged backgrounds can apply to learn the fundamentals of software engineering and UI/UX design through workshops and internal projects. Join us for Info Session 2 to learn about our organization in-depth, including who we work with, what technologies we use, and what we have to offer to you!",
+    location: "CSE 4140",
+    startTime: parseDate("2022-10-06T18:00:00"),
+    url: "https://www.facebook.com/events/450802656850341",
+  },
+  {
+    title: "Recruitment Info Session 1",
+    description:
+      "We are looking to recruit developers, designers, and product managers to come join our mission of developing solutions to the software needs of nonprofits! You can learn more about our organization and the work we have done in the past on our website! This year, we are also introducing a new program called TSE Early Start Training (TEST), where prospective developers and designers from underprivileged backgrounds can apply to learn the fundamentals of software engineering and UI/UX design through workshops and internal projects. Join us for Info Session 1 to learn about our organization in-depth, including who we work with, what technologies we use, and what we have to offer to you!",
+    location: "CSE 1202",
+    startTime: parseDate("2022-10-04T19:00:00"),
+    url: "https://www.facebook.com/events/1115792662377006",
+  },
+  {
+    title: "Intern Panel",
+    description:
+      "Are YOU looking for an internship for next summer? Do YOU want to kick start your software engineering career by gaining vital industry experience? Do you want to learn more about how to get your first software engineering or UI/UX design internship? If so, then this event is for YOU! On October 1st, 2022 from 1:00 to 2:30PM PDT in CSE 1202, Triton Software Engineering (TSE) will be hosting an intern panel consisting of six TSE members with extensive internship experiences. The panelists are well versed in the ins and outs of the internship application process and have a lot of insights to share with you! Our panelists have interned at numerous companies including Meta, Amazon, Microsoft, Stripe, Snap, SpaceX, and many more! Come out to ask all of your questions about internships and the software industry!",
+    location: "CSE 1202",
+    startTime: parseDate("2022-10-01T13:00:00"),
+    url: "https://www.facebook.com/events/881867846108716",
+  },
+  {
     title: "Harvard Business School x Google Panel",
     description:
       "Unsure about which career path to follow? Interested in learning the different industry options available for you? Start this quarter strong by learning the different industry options available for you! Our panelists include MBA Candidates, PMs, and Software Engineers from different industries, including Harvard Business School, Uber, Google, and Salesforce! These tech leaders will share their stories on their different career paths!",
