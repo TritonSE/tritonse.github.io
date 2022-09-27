@@ -238,7 +238,7 @@ const constPeople = [
   },
   {
     name: "Advay Sharma",
-    roles: ["Developer"],
+    roles: ["Developer", "Engineering Manager"],
   },
   {
     name: "Aksharan Saravanan",
