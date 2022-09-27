@@ -12,6 +12,7 @@ import ProjectCarousel from "../components/ProjectCarousel";
 import { allClients } from "../data/clients";
 import { allEvents } from "../data/events";
 import type { Event } from "../data/events";
+import recruitment from "../data/recruitment";
 import { allSponsors } from "../data/sponsors";
 import { firstValidImageKey } from "../images";
 import { makeSlug } from "../util";
@@ -44,6 +45,12 @@ Crafting digital solutions for the community around us.
           `}
         </div>
       </Hero>
+      {recruitment.acceptingApplications && (
+        <PaddedBox heading="Apply Now!">
+          Are you a UCSD student interested in joining TSE this school year?{" "}
+          <ArrowLink href="/students">Click here to learn more!</ArrowLink>
+        </PaddedBox>
+      )}
       <PaddedBox heading="Tech For Good">
         We believe that technology should be utilized to better the community. Something as simple
         as a sleek, static, and easy-to-use website or as complicated as a mobile app to track

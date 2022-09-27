@@ -3,9 +3,8 @@ import React from "react";
 import Hero from "../components/Hero";
 import PaddedBox from "../components/PaddedBox";
 import PageTitle from "../components/PageTitle";
+import recruitment from "../data/recruitment";
 import markdown from "../util/markdown";
-
-const APPLICATION_URL = "https://tritonse.github.io/TSE-Application-Form/";
 
 export default function Students() {
   const title = "Get Involved";
@@ -27,7 +26,11 @@ Become a part of the Triton Software Engineering family and put your skills to u
 
 ## Apply
 
-Please fill out the application form [here](${APPLICATION_URL}).
+${
+  recruitment.acceptingApplications
+    ? `Please fill out the application form [here](${recruitment.applicationUrl}).`
+    : "We are no longer accepting applications for this school year. If you are interested, please apply in Fall quarter of the next school year."
+}
 
 ## FAQs
 
@@ -61,7 +64,7 @@ TSE recruits new members at the beginning of every Fall quarter. In 2019, we acc
 
 There are three stages for both designers and developers. We start with a resume screen, then a behavioral phone screen (with a Systems Design question for aspiring TSE developers), followed by a technical interview. For TEST, we will have a resume screen and then a combined behavioral and technical interview. Due to the current circumstances, our recruitment process will be conducted virtually.
 
-Interested in applying? [Click here!](${APPLICATION_URL})
+Interested in applying? [Click here!](${recruitment.applicationUrl})
 
 ### How can I prepare for the technical components of the developer recruitment process?
 
