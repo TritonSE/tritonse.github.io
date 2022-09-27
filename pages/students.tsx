@@ -78,6 +78,12 @@ To prep for the technical interview:
 - SOPHOMORES: be prepared for the topics above, and also: multidimensional arrays, dictionaries, pointers or references (depending on the language you use), sorting, binary search, and recursion.
 - JUNIORS/SENIORS: be prepared for the topics above, and also: JSON, designing JSON-compatible data representations in the language of your choice (don't worry about serialization/deserialization), analyzing algorithms' big-O time and memory complexity. Our interview questions involve more than algorithms, but you should be comfortable with stacks, queues, heaps, trees, graphs, divide and conquer, recursion and backtracking, memoization, and basic dynamic programming.
 
+### How can I prepare for the technical interview in the designer recruitment process?
+
+Be prepared to present a past project you worked on. The presentation will be a total of 25 minutes, with 15 minutes of presentation and 10 minutes of questions. It is recommended to have either slides or some sort of visual component to your presentation.
+
+Be prepared to solve a design challenge. You will be given a prompt similar to an actual TSE project and will have 30 minutes to demonstrate your ability to think through and solve this problem. You should be prepared to both talk through your thought process as well as create some very low fidelity visuals to convey your ideas. We really want to understand what you are thinking the whole time, so please think out loud! If you get stuck at any point, the interviewer(s) will be there to help guide you
+
 ### How many project teams are there? How are TSE projects structured?
 
 The number of project teams in TSE depends on the number of nonprofits we are able to secure collaborations with every year. In the past two school years, we had 7 project teams.
