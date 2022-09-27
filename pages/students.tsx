@@ -63,6 +63,21 @@ There are three stages for both designers and developers. We start with a resume
 
 Interested in applying? [Click here!](${APPLICATION_URL})
 
+### How can I prepare for the technical components of the developer recruitment process?
+
+To prep for the systems design question:
+- You won't write any code during the phone screen, so you don’t need to memorize any specific code or methods.
+- FRESHMEN/SOPHOMORES should review the following: object-oriented programming (classes and methods), using standard input/output to interact with the user, and storing data in files.
+- JUNIORS/SENIORS should review CRUD web application concepts: database concepts (relational or document-based), including data types, schema design, IDs, and queries; web server backend, including REST API design, HTTP verbs/requests/responses, and JSON; and how the frontend communicates with the backend over HTTP (frontend specifics are not necessary).
+
+To prep for the technical interview:
+- Brush up on a high-level programming language. Python, Java, or JavaScript is preferred. C or C++ might work, but due to the nature of the interview tasks, it may be more difficult to use these languages. You will not be able to compile or run your code, so exact syntax/APIs are not that important, but we expect you to demonstrate familiarity with the language you choose.
+- Expect to solve one or more programming tasks, which may have multiple parts. Be mindful of edge cases, and discuss your approach with your interviewer before you start writing code.
+- You will be evaluated on your communication and problem-solving skills, the readability, maintainability, and correctness of your code, and (for juniors/seniors) the algorithmic performance of your code.
+- FRESHMEN: be prepared to use basic datatypes (integers, strings, floating-point numbers, arrays), control flow structures (if/else statements, for/while loops), functions, and object-oriented concepts (classes, constructors, instance variables, methods).
+- SOPHOMORES: be prepared for the topics above, and also: multidimensional arrays, dictionaries, pointers or references (depending on the language you use), sorting, binary search, and recursion.
+- JUNIORS/SENIORS: be prepared for the topics above, and also: JSON, designing JSON-compatible data representations in the language of your choice (don't worry about serialization/deserialization), analyzing algorithms' big-O time and memory complexity. Our interview questions involve more than algorithms, but you should be comfortable with stacks, queues, heaps, trees, graphs, divide and conquer, recursion and backtracking, memoization, and basic dynamic programming.
+
 ### How many project teams are there? How are TSE projects structured?
 
 The number of project teams in TSE depends on the number of nonprofits we are able to secure collaborations with every year. In the past two school years, we had 7 project teams.
