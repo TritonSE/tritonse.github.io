@@ -10,7 +10,7 @@
     "format": "prettier --write .",
     "lint-fix": "(eslint --fix --cache --report-unused-disable-directives . || true) && prettier --write .",
     "lint-check": "tsc && eslint --cache --report-unused-disable-directives . && prettier --check .",
-    "link-test": "linkinator out/ --skip 'dynamicsperformanceteam.com|linkedin.com|ssa.ucsd.edu'",
+    "link-test": "linkinator out/ --skip 'dynamicsperformanceteam.com|linkedin.com|ssa.ucsd.edu|jointheleague.org'",
     "prepare": "husky install .husky"
   },
   "dependencies": {
