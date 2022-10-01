@@ -73,7 +73,7 @@ Here is the knowledge we expect for each grade level. The interview questions mi
 #### Freshmen
 
 - Familiarity with at least one programming language
-- Basic datatypes: integers, floating-point numbers, strings, arrays/lists
+- Basic datatypes: booleans, integers, floating-point numbers, strings, arrays/lists
 - Control flow structures: if/else statements, for/while loops
 - Functions
 - Exceptions
