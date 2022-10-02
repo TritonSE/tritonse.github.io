@@ -28,7 +28,7 @@ Become a part of the Triton Software Engineering family and put your skills to u
 
 ${
   recruitment.acceptingApplications
-    ? `Please fill out the application form [here](${recruitment.applicationUrl}).`
+    ? `Please fill out the application form [here](${recruitment.applicationUrl}). Applications are due on ${recruitment.deadline}.`
     : "We are no longer accepting applications for this school year. If you are interested, please apply in Fall quarter of the next school year."
 }
 
