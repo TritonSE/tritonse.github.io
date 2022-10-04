@@ -20,6 +20,14 @@ function parseDate(date: string): DateTime {
 
 const events: Event[] = [
   {
+    title: "Verkada x TSE: Product Demo and Q&A",
+    description:
+      "Verkada is partnering with TSE for a product demo and Q&A session on Monday, October 10th from 6-7PM in The Forum, Price Center. Verkada will be bringing in engineers to showcase their product as well as answer any questions that you may have about the work that they do, culture, opportunities, and more. A Verkada recruiter will also be talking about the internship and new grad opportunities that they have available! Come out to learn more about the world of cloud-based security systems. There will also be FREE REGENT'S PIZZA AND SWAG!",
+    location: "The Forum, Price Center at UC San Diego",
+    startTime: parseDate("2022-10-10T18:00:00"),
+    url: "https://www.facebook.com/events/535080255289320",
+  },
+  {
     title: "Recruitment Info Session 2",
     description:
       "We are looking to recruit developers, designers, and product managers to come join our mission of developing solutions to the software needs of nonprofits! You can learn more about our organization and the work we have done in the past on our website! This year, we are also introducing a new program called TSE Early Start Training (TEST), where prospective developers and designers from underprivileged backgrounds can apply to learn the fundamentals of software engineering and UI/UX design through workshops and internal projects. Join us for Info Session 2 to learn about our organization in-depth, including who we work with, what technologies we use, and what we have to offer to you!",
