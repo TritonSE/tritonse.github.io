@@ -132,7 +132,7 @@ We host both internal and public events. To find our public events, follow us on
 
 We worked in a hybrid model during the pandemic. Now, we are continuing our hybrid model while increasing in person activities. Our last recruitment season was completely online and we plan to continue the online structure this year. We will do our best to provide as much support as possible through in person Information Sessions and various panels, but all interviews and phone screens will continue to be remote.
 
-All TSE team meetings and work are conducted in a hybrid structure at the moment. We will be continuing regular virtual & in person workshops and social events. This year, all of our events are primarily in person. Please visit our website and Facebook page for the most up-to-date information.
+All TSE team meetings and work are conducted in a hybrid structure at the moment. We will be continuing regular virtual & in person workshops and social events. This year, all of our events are primarily in person. For the most up-to-date information, visit our Facebook page or check out upcoming events [here](/events).
 
 ## Still have questions?
 
