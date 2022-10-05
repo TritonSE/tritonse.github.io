@@ -42,16 +42,6 @@ Triton Software Engineering (TSE) is a multidisciplinary student organization at
 
 If you are passionate about helping others using the skills you learn in college, then TSE is the perfect place for you! We are all about social good, and we hope you share our passion. TSE offers a close network of like-minded students, and we can help you build skills that allow you to advance your career.
 
-### What kind of experience do I need to join TSE?
-
-At Triton Software Engineering, we seek students who are hardworking and passionate about social good. We are a project-based organization, so experience working in teams is a plus! TEST designers and TEST developers do not need prior experience in their field (see the next section for more details). Other developer and designer positions will require some prior experience.
-
-Product Managers must have some leadership experience and optionally some software engineering knowledge. The leadership experience tells us that you are ready to lead the direction of your product and the potential software background will provide you with context on our projects.
-
-Designers must have working knowledge of the standard design process (i.e. stages of research, ideation, testing) and also some experience with their own UI/UX work (if you have a portfolio to show us, that’d be fantastic!).
-
-Developers must be familiar with any one OOP language (Java, Python, and C/C++ are common ones). Juniors and seniors should have basic exposure to web development (HTML, CSS, JavaScript, HTTP, REST APIs) and at least one database. Familiarity with React.js and/or backend development is a plus. However, knowledge of specific technologies is not required, as we will teach you the technologies necessary to contribute.
-
 ### What is the TEST program?
 
 The TSE Early Start Training (TEST) program provides students from underprivileged backgrounds who have little to no technical development/design experience with a first step into exploring software engineering and UI/UX design. TEST developers and designers will learn the fundamentals of their domain while working on beginner-level internal projects for TSE.
@@ -138,11 +128,11 @@ We emulate the Agile Workflow to give our developers some insight on industry st
 
 We host both internal and public events. To find our public events, follow us on [Facebook](https://www.facebook.com/TritonSE) and [Instagram](https://www.instagram.com/ucsd_tse/). You can also find a list of our past and upcoming events [here](/events).
 
-### How is TSE operating during the ongoing pandemic?
+### How did TSE operate during the pandemic?
 
-We are working in a hybrid model. Our last recruitment season was completely online and we plan to continue the online structure this year. We hope to have a hybrid recruitment process next year. We will do our best to provide as much support as possible through in person Information Sessions and various panels, but all interviews and phone screens will continue to be remote.
+We worked in a hybrid model during the pandemic. Now, we are continuing our hybrid model while increasing in person activities. Our last recruitment season was completely online and we plan to continue the online structure this year. We will do our best to provide as much support as possible through in person Information Sessions and various panels, but all interviews and phone screens will continue to be remote.
 
-All TSE team meetings and work are conducted in a hybrid structure at the moment. We will be continuing regular virtual & in person workshops and social events. This year, all of our events are primarily in person. Please visit our website and Facebook page for the most up-to-date information.
+All TSE team meetings and work are conducted in a hybrid structure at the moment. We will be continuing regular virtual & in person workshops and social events. This year, all of our events are primarily in person. For the most up-to-date information, visit our Facebook page or check out upcoming events [here](/events).
 
 ## Still have questions?
 
