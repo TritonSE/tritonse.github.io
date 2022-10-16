@@ -235,6 +235,7 @@ const constPeople = [
   {
     name: "Aaron Kirk",
     roles: ["Developer"],
+    hidden: true,
   },
   {
     name: "Advay Sharma",
@@ -367,6 +368,7 @@ const constPeople = [
   {
     name: "Ryan Bui",
     roles: ["Developer"],
+    hidden: true,
   },
   {
     name: "Shravan Hariharan",
@@ -420,6 +422,7 @@ const constPeople = [
   {
     name: "Kevin Fu",
     roles: ["Developer"],
+    hidden: true,
   },
   {
     name: "Pratyush Chand",
@@ -460,6 +463,7 @@ const constPeople = [
   {
     name: "Artyom Muradyan",
     roles: ["Developer"],
+    hidden: true,
   },
   {
     name: "Helen Lin",
@@ -468,6 +472,7 @@ const constPeople = [
   {
     name: "Mary Vu",
     roles: ["Developer"],
+    hidden: true,
   },
   {
     name: "Nishant Balaji",
@@ -488,6 +493,7 @@ const constPeople = [
   {
     name: "Ryan Hung",
     roles: ["Developer"],
+    hidden: true,
   },
   {
     name: "Shreekar Pandey",
@@ -500,6 +506,7 @@ const constPeople = [
   {
     name: "Yucheng Huang",
     roles: ["Developer"],
+    hidden: true,
   },
   {
     name: "Leslie Aguiar",
