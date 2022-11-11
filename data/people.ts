@@ -163,7 +163,7 @@ const constPeople = [
   {
     name: "Mylinh Lac",
     roles: ["Designer", "VP Design"],
-    hidden: true,
+    graduation: 2022,
   },
   {
     name: "Heather Gan",
@@ -585,8 +585,7 @@ const constPeople = [
   {
     name: "Jason Cabrera",
     roles: ["Project Manager"],
-    graduation: "TEST",
-    hidden: true,
+    graduation: 2021,
   },
   {
     name: "Nhu Luong",
