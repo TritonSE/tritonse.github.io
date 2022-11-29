@@ -414,6 +414,7 @@ const constPeople = [
   {
     name: "Ainesh Arumugam",
     roles: ["Developer"],
+    hidden: true,
   },
   {
     name: "Alex Zhang",
