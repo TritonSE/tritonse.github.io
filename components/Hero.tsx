@@ -38,3 +38,5 @@ export default function Hero({ imageKey, children }: HeroProps) {
     </div>
   );
 }
+
+Hero.defaultProps = { children: undefined };

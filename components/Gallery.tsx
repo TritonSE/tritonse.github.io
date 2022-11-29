@@ -6,11 +6,17 @@ import { ImageKey } from "../images";
 import CustomImage from "./CustomImage";
 import RatioImage from "./RatioImage";
 
+// Incorrectly detected as prop types, but these are actually array elements, so
+// it doesn't make sense to give default values.
+/* eslint-disable react/require-default-props */
+/* eslint-disable react/no-unused-prop-types */
 export interface LayoutSpec {
   imageKey?: ImageKey;
   width?: number;
   aspectRatio?: [number, number];
 }
+/* eslint-enable react/require-default-props */
+/* eslint-enable react/no-unused-prop-types */
 
 export interface GalleryProps {
   children?: React.ReactNode;
@@ -70,3 +76,5 @@ export default function Gallery({
     </>
   );
 }
+
+Gallery.defaultProps = { children: false, className: undefined, reverseOnSmallScreens: undefined };

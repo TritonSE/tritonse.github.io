@@ -12,3 +12,5 @@ export default function PageTitle({ title }: PageTitleProps) {
     </Head>
   );
 }
+
+PageTitle.defaultProps = { title: undefined };

@@ -46,3 +46,5 @@ export default function BigCard({
     </Card>
   );
 }
+
+BigCard.defaultProps = { colorHover: undefined, sized: undefined };

@@ -69,7 +69,7 @@ export function assertUniqueKey<T, K extends keyof T>(arr: readonly T[], key: K)
   for (const element of arr) {
     const value = element[key];
     if (seen.has(value)) {
-      throw new Error(`Duplicate value for key '${key}': ${value}`);
+      throw new Error(`Duplicate value for key '${key.toString()}': ${value}`);
     }
     seen.add(value);
   }

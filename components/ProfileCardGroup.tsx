@@ -5,7 +5,7 @@ import Row from "react-bootstrap/Row";
 export interface ProfileCardGroupProps {
   title?: string;
   profiles: React.ReactNode[];
-  width: 3 | 4;
+  width?: 3 | 4;
 }
 
 export default function ProfileCardGroup({ title, profiles, width }: ProfileCardGroupProps) {
@@ -39,4 +39,4 @@ export default function ProfileCardGroup({ title, profiles, width }: ProfileCard
   );
 }
 
-ProfileCardGroup.defaultProps = { width: 4 };
+ProfileCardGroup.defaultProps = { title: undefined, width: 4 };
