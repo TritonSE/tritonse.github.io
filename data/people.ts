@@ -147,7 +147,7 @@ const constPeople = [
     roles: ["Developer", "VP Operations", "President"],
   },
   {
-    name: "Viren Abhyankar",
+    name: "Reyna Abhyankar",
     roles: ["Developer", "VP Products"],
   },
   {
