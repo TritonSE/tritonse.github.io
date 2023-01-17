@@ -91,7 +91,7 @@ const allImages = {
   "members/philip_zhang": { width: 854, height: 854, maxSize: 1080, extension: ".jpg" },
   "members/pratyush_chand": { width: 296, height: 358, maxSize: 384, extension: ".jpg" },
   "members/rachel_blumin": { width: 2218, height: 2218, maxSize: 1080, extension: ".jpg" },
-  "members/reyna_abhyankar": { width: 1051, height: 1051, maxSize: 1080, extension: ".jpg" },
+  "members/reyna_abhyankar": { width: 512, height: 512, maxSize: 640, extension: ".jpg" },
   "members/rickie_chen": { width: 1801, height: 1801, maxSize: 1080, extension: ".jpg" },
   "members/robert_tatum": { width: 1865, height: 1865, maxSize: 1080, extension: ".jpg" },
   "members/roger_ji": { width: 782, height: 772, maxSize: 828, extension: ".png" },
