@@ -240,6 +240,7 @@ const constPeople = [
   {
     name: "Advay Sharma",
     roles: ["Developer", "Engineering Manager"],
+    hidden: true,
   },
   {
     name: "Aksharan Saravanan",
@@ -282,6 +283,7 @@ const constPeople = [
   {
     name: "Deepansha Singh",
     roles: ["Developer"],
+    hidden: true,
   },
   {
     name: "Dhanush Nanjunda Reddy",
