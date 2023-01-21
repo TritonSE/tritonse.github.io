@@ -92,7 +92,7 @@ const allImages = {
   "members/jacob_au": { width: 1387, height: 1387, maxSize: 1080, extension: ".jpg" },
   "members/james_luo": { width: 960, height: 960, maxSize: 1080, extension: ".jpg" },
   "members/james_zhang": { width: 803, height: 824, maxSize: 828, extension: ".jpg" },
-  "members/jared_rosas": { width: 3024, height: 3024, maxSize: 1080, extension: ".png" },
+  "members/jared_rosas": { width: 3024, height: 3024, maxSize: 1080, extension: ".jpg" },
   "members/jennifer_chen": { width: 960, height: 960, maxSize: 1080, extension: ".png" },
   "members/jennifer_tanurdjaja": { width: 2320, height: 2320, maxSize: 1080, extension: ".jpg" },
   "members/jenny_mar": { width: 1372, height: 1372, maxSize: 1080, extension: ".jpg" },
