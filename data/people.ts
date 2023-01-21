@@ -413,6 +413,7 @@ const constPeople = [
   {
     name: "Zain Khan",
     roles: ["Developer"],
+    hidden: true,
   },
   {
     name: "Ainesh Arumugam",
