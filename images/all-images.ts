@@ -123,6 +123,7 @@ const allImages = {
   "members/mohak_vaswani": { width: 700, height: 700, maxSize: 750, extension: ".png" },
   "members/mrinal_sharma": { width: 903, height: 903, maxSize: 1080, extension: ".jpg" },
   "members/mylinh_lac": { width: 3024, height: 3024, maxSize: 1080, extension: ".jpg" },
+  "members/navid_boloorian": { width: 1980, height: 1971, maxSize: 1080, extension: ".jpg" },
   "members/nicholas_vanny": { width: 2370, height: 2171, maxSize: 1080, extension: ".jpg" },
   "members/nicolas_la_polla": { width: 965, height: 543, maxSize: 1080, extension: ".jpg" },
   "members/nirmal_agnihotri": { width: 3133, height: 2810, maxSize: 1080, extension: ".jpg" },
