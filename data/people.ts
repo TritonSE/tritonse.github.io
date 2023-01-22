@@ -353,6 +353,7 @@ const constPeople = [
   {
     name: "Patrick Brown",
     roles: ["Developer", "Engineering Manager"],
+    graduation: 2022,
   },
   {
     name: "Philip Zhang",
@@ -412,6 +413,7 @@ const constPeople = [
   {
     name: "Zain Khan",
     roles: ["Developer"],
+    hidden: true,
   },
   {
     name: "Ainesh Arumugam",
@@ -483,7 +485,7 @@ const constPeople = [
   },
   {
     name: "Aman Aggarwal",
-    roles: ["Developer"],
+    roles: ["Developer", "Engineering Manager"],
   },
   {
     name: "Parth Patel",
@@ -577,8 +579,7 @@ const constPeople = [
   },
   {
     name: "Aska Kunita Demirci",
-    roles: ["TEST Designer"],
-    graduation: "TEST",
+    roles: ["TEST Designer", "Designer"],
   },
   {
     name: "Annie Ye",
@@ -594,6 +595,194 @@ const constPeople = [
     name: "Nhu Luong",
     roles: ["Designer"],
     hidden: true,
+  },
+  {
+    name: "Aaron Chan",
+    roles: ["Developer"],
+  },
+  {
+    name: "Adhithya Ananthan-Regina",
+    roles: ["Developer"],
+  },
+  {
+    name: "Anthony Pertsel",
+    roles: ["Developer"],
+  },
+  {
+    name: "Arnav Modi",
+    roles: ["Developer"],
+  },
+  {
+    name: "Arohan Mittal",
+    roles: ["Developer"],
+  },
+  {
+    name: "Benjamin Johnson",
+    roles: ["Developer"],
+  },
+  {
+    name: "Brenton Dunn",
+    roles: ["Developer"],
+  },
+  {
+    name: "Christen Xie",
+    roles: ["Developer"],
+  },
+  {
+    name: "Daniel Shao",
+    roles: ["Developer"],
+  },
+  {
+    name: "Edward Lin",
+    roles: ["Developer"],
+  },
+  {
+    name: "Emily Marschall-Niswonger",
+    roles: ["Developer"],
+  },
+  {
+    name: "Emily Yu",
+    roles: ["Designer"],
+  },
+  {
+    name: "Emma Zhu",
+    roles: ["Developer"],
+  },
+  {
+    name: "Fatima Dong",
+    roles: ["TEST Developer"],
+  },
+  {
+    name: "Harsh Gurnani",
+    roles: ["Developer"],
+  },
+  {
+    name: "Hrithik Pai",
+    roles: ["Developer"],
+  },
+  {
+    name: "James Luo",
+    roles: ["Developer"],
+  },
+  {
+    name: "Jared Rosas",
+    roles: ["TEST Developer"],
+  },
+  {
+    name: "Jennifer Chen",
+    roles: ["Developer"],
+  },
+  {
+    name: "Jennifer Tanurdjaja",
+    roles: ["Developer"],
+  },
+  {
+    name: "Jenny Mar",
+    roles: ["Developer"],
+  },
+  {
+    name: "Jocelyn Horng",
+    roles: ["Designer"],
+  },
+  {
+    name: "Kacy Umana",
+    roles: ["TEST Developer"],
+  },
+  {
+    name: "Kevin Do",
+    roles: ["Developer"],
+  },
+  {
+    name: "Laura Liu",
+    roles: ["TEST Designer"],
+  },
+  {
+    name: "Lillian Ho",
+    roles: ["Developer"],
+  },
+  {
+    name: "Madhav Bansal",
+    roles: ["Developer"],
+  },
+  {
+    name: "Megan Leong",
+    roles: ["Developer"],
+  },
+  {
+    name: "Melina Dimitropoulou",
+    roles: ["Developer"],
+  },
+  {
+    name: "Nitya Pillai",
+    roles: ["Developer"],
+  },
+  {
+    name: "Samvrit Srinath",
+    roles: ["Developer"],
+  },
+  {
+    name: "Sidhant Rohatgi",
+    roles: ["Developer"],
+  },
+  {
+    name: "Steven Shi",
+    roles: ["Developer"],
+  },
+  {
+    name: "Sydney Zhang",
+    roles: ["Developer"],
+  },
+  {
+    name: "Victor Siu",
+    roles: ["Developer"],
+  },
+  {
+    name: "Vinayak Sharma",
+    roles: ["Developer"],
+  },
+  {
+    name: "Vivian Liu",
+    roles: ["Developer"],
+  },
+  {
+    name: "Yash Ravipati",
+    roles: ["Developer"],
+  },
+  {
+    name: "Madison Plotkin",
+    roles: ["TEST Designer"],
+  },
+  {
+    name: "Mandy Lai",
+    roles: ["Designer"],
+  },
+  {
+    name: "Melanie Haro",
+    roles: ["TEST Developer"],
+  },
+  {
+    name: "Omar Khalil",
+    roles: ["TEST Designer"],
+  },
+  {
+    name: "Rosario Ortiz",
+    roles: ["TEST Developer"],
+  },
+  {
+    name: "Shana Chen",
+    roles: ["Designer"],
+  },
+  {
+    name: "Sujana Nagasuri",
+    roles: ["Designer"],
+  },
+  {
+    name: "Tiffany Lee",
+    roles: ["Designer"],
+  },
+  {
+    name: "Yoto Kim",
+    roles: ["TEST Developer"],
   },
 ] as const;
 type PersonName = typeof constPeople[number]["name"];
