@@ -149,6 +149,7 @@ const allImages = {
   "members/shravan_hariharan": { width: 1733, height: 1733, maxSize: 1080, extension: ".jpg" },
   "members/shravan_konduru": { width: 1505, height: 1505, maxSize: 1080, extension: ".jpg" },
   "members/shreekar_pandey": { width: 1014, height: 1000, maxSize: 1080, extension: ".jpg" },
+  "members/shreya_gupta": { width: 400, height: 400, maxSize: 640, extension: ".jpg" },
   "members/sidhant_rohatgi": { width: 1748, height: 1748, maxSize: 1080, extension: ".jpg" },
   "members/stephen_tan": { width: 720, height: 714, maxSize: 750, extension: ".png" },
   "members/steven_shi": { width: 2560, height: 2560, maxSize: 1080, extension: ".jpg" },
