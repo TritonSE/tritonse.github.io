@@ -22,7 +22,7 @@ const allImages = {
   "content/photoshoot-marketing-17": { width: 6000, height: 2954, maxSize: 3840, extension: ".jpg" },
   "content/photoshoot-marketing-3": { width: 3760, height: 3294, maxSize: 3840, extension: ".jpg" },
   "content/photoshoot-marketing-7": { width: 6000, height: 3376, maxSize: 3840, extension: ".jpg" },
-  "icons/scroll-to-top": { width: 60, height: 63, maxSize: 64, extension: ".png" },
+  "icons/scroll-to-top": { width: 266, height: 263, maxSize: 384, extension: ".png" },
   "icons/tse-bulb": { width: 1484, height: 1484, maxSize: 1920, extension: ".png" },
   "members/aaron_yang": { width: 1365, height: 1365, maxSize: 1080, extension: ".jpg" },
   "members/advay_sharma": { width: 3023, height: 3023, maxSize: 1080, extension: ".jpg" },

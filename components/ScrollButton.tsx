@@ -7,9 +7,9 @@ export default function Navbar() {
 
   const toggleVisible = () => {
     const scrolled = document.documentElement.scrollTop;
-    if (scrolled > 300) {
+    if (scrolled > 100) {
       setIsVisible(true);
-    } else if (scrolled <= 300) {
+    } else {
       setIsVisible(false);
     }
   };
@@ -34,6 +34,7 @@ export default function Navbar() {
         position: "fixed",
         bottom: "3px",
         right: "30px",
+        zIndex: "1",
       }}
     >
       <CustomImage
