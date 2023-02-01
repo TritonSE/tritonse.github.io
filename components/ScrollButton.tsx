@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 
 import CustomImage from "./CustomImage";
 
-export default function Navbar() {
+export default function ScrollButton() {
   const [isVisible, setIsVisible] = useState(false);
 
   const toggleVisible = () => {
