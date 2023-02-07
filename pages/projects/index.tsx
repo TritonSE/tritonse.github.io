@@ -1,6 +1,7 @@
 import React from "react";
 import Container from "react-bootstrap/Container";
 
+import AutomaticCarousel from "../../components/AutomaticCarousel";
 import Hero from "../../components/Hero";
 import PageTitle from "../../components/PageTitle";
 import ProfileCardGroup from "../../components/ProfileCardGroup";
@@ -12,6 +13,7 @@ export default function Projects() {
   return (
     <>
       <PageTitle title="Projects" />
+      <AutomaticCarousel/>
       <Hero imageKey="content/photoshoot-marketing-17">
         {markdown`
 # Projects
