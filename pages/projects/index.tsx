@@ -13,7 +13,6 @@ export default function Projects() {
   return (
     <>
       <PageTitle title="Projects" />
-      <AutomaticCarousel/>
       <Hero imageKey="content/photoshoot-marketing-17">
         {markdown`
 # Projects
@@ -29,14 +28,15 @@ At Triton Software Engineering, we believe in keeping our work open source becau
           VISIT GITHUB
         </a>
       </Hero>
-      <Container>
+      <AutomaticCarousel/>
+      {/* <Container>
         <ProfileCardGroup
           width={3}
           profiles={allProjects.map((project, index) => (
             <ProjectProfileCard project={project} key={index} />
           ))}
         />
-      </Container>
+      </Container> */}
     </>
   );
 }

@@ -1,23 +1,52 @@
 import React, {useState} from 'react';
 import { allProjects } from "../data/projects";
 import { firstValidImageKey } from "../images";
-
 import CustomImage from "./CustomImage";
 
-function CarouselItem(){
+function CarouselImage(props: CarouselImageProps){
   return (
-    <>
-  {allProjects
-    .slice(-5)
-    .reverse()
-    .map((project) => (
-      <CustomImage
-        imageKey={firstValidImageKey(project.thumbnail, "icons/tse-bulb")}
+    <div >
+      {
+        (props.activeIndex == props.index) &&
+        <CustomImage
+          height={300}
+          imageKey={firstValidImageKey(props.thumbnail, "icons/tse-bulb")}
         />
-    ))}
-    </>
+      }
+    </div>
   )
 }
+
+interface CarouselImageProps{
+  thumbnail : any, 
+  index: number, 
+  changeIndex: any,
+  activeIndex: number
+}
+
+function CarouselButton(props: CarouselButtonProps){
+  return (
+    <div style={{display:'inline'}}>
+      <button
+        style = {{
+          padding: 5,
+          backgroundColor: 'white',
+          color: 'white',
+          borderRadius: 50,
+        }}
+        onClick = {() => {
+          props.changeIndex(props.index)
+        }}
+       /> 
+    </div>
+  )
+}
+
+interface CarouselButtonProps{
+  index: number, 
+  changeIndex: any,
+}
+
 export default function AutomaticCarousel() {
   const [activeIndex, setActiveIndex] = useState(0);
 
@@ -30,10 +59,36 @@ export default function AutomaticCarousel() {
     // }
   }
   return (
-    <>
-      <CarouselItem/>
-    </>
+    <div style={{
+      overflow: "hidden"
+    }}>
+
+      <p>{activeIndex}</p>
+      {allProjects
+        .slice(-3)
+        .reverse()
+        .map((project, index) => (
+          <>
+            <CarouselImage
+              index = {index}
+              thumbnail = {firstValidImageKey(project.thumbnail, "icons/tse-bulb")}
+              changeIndex={changeIndex}
+              activeIndex = {activeIndex}
+            />
+          </>
+      ))}
+      {allProjects
+        .slice(-3)
+        .reverse()
+        .map((project, index) => (
+          <>
+            <CarouselButton
+              index={index}
+              changeIndex={changeIndex}
+             /> 
+          </>
+      ))}
+    </div>
   );
 };
 
-//      return <CustomImage imageKey={imageKey} layout="responsive" />;
