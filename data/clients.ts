@@ -65,7 +65,7 @@ const constClients = [
   {
     name: "Make-A-Wish",
     startYear: 2021,
-    endYear: null,
+    endYear: 2022,
     url: "https://wish.org/",
   },
   {
@@ -103,6 +103,30 @@ const constClients = [
     startYear: 2021,
     endYear: null,
     url: "https://laktaa.medium.com/",
+  },
+  {
+    name: "San Diego County Taxpayers Association",
+    startYear: 2022,
+    endYear: null,
+    url: "https://www.sdcta.org/",
+  },
+  {
+    name: "Call Blackline",
+    startYear: 2022,
+    endYear: null,
+    url: "https://www.callblackline.com/",
+  },
+  {
+    name: "Fix Nation",
+    startYear: 2022,
+    endYear: null,
+    url: "https://fixnation.org/",
+  },
+  {
+    name: "ALUM for Northwood",
+    startYear: 2022,
+    endYear: null,
+    url: "https://alumfornorthwood.org/",
   },
   // TODO: add YCW info
 ] as const;
