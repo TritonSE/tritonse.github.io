@@ -117,7 +117,7 @@ const constClients = [
     url: "https://www.callblackline.com/",
   },
   {
-    name: "Fix Nation",
+    name: "FixNation",
     startYear: 2022,
     endYear: null,
     url: "https://fixnation.org/",
