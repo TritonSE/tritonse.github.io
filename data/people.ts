@@ -503,6 +503,7 @@ const constPeople = [
   {
     name: "Shreekar Pandey",
     roles: ["Developer", "VP External"],
+    hidden: true,
   },
   {
     name: "William Jin",
