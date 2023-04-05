@@ -542,6 +542,7 @@ const constPeople = [
   {
     name: "Akash Premkumar",
     roles: ["Product Manager"],
+    hidden: true,
   },
   {
     name: "Annie Wen",
