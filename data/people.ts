@@ -149,6 +149,7 @@ const constPeople = [
   {
     name: "Reyna Abhyankar",
     roles: ["Developer", "VP Products"],
+    graduation: 2023,
   },
   {
     name: "David Hacker",
@@ -203,6 +204,7 @@ const constPeople = [
   {
     name: "Andrew Caballero",
     roles: ["Designer", "VP Design"],
+    graduation: 2023,
   },
   {
     name: "Evan Lam",
@@ -264,6 +266,7 @@ const constPeople = [
   {
     name: "Anshul Birla",
     roles: ["Developer", "Engineering Manager"],
+    graduation: 2023,
   },
   {
     name: "Anson Lee",
@@ -384,7 +387,7 @@ const constPeople = [
   },
   {
     name: "Stephen Tan",
-    roles: ["Developer", "TEST Developer Lead", "Product Manager"],
+    roles: ["Developer", "TEST Developer Lead", "Product Manager", "VP Products"],
   },
   {
     name: "Thai Gillespie",
@@ -464,6 +467,7 @@ const constPeople = [
   {
     name: "Anvitaa Sekhsaria",
     roles: ["Developer"],
+    graduation: 2023,
   },
   {
     name: "Artyom Muradyan",
@@ -538,6 +542,7 @@ const constPeople = [
   {
     name: "Akash Premkumar",
     roles: ["Product Manager"],
+    hidden: true,
   },
   {
     name: "Annie Wen",
@@ -779,7 +784,7 @@ const constPeople = [
   },
   {
     name: "Tiffany Lee",
-    roles: ["Designer"],
+    roles: ["Designer", "VP Design"],
   },
   {
     name: "Yoto Kim",
