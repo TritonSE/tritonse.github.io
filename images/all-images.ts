@@ -50,7 +50,7 @@ const allImages = {
   "members/andrew_russell": { width: 1234, height: 1234, maxSize: 1080, extension: ".png" },
   "members/annie_wen": { width: 1301, height: 1301, maxSize: 1080, extension: ".jpg" },
   "members/annie_ye": { width: 3024, height: 3024, maxSize: 1080, extension: ".jpg" },
-  "members/anoushka_dave": { width: 2383, height: 2383, maxSize: 1080, extension: ".jpg" },
+  "members/anoushka_dave": { width: 800, height: 800, maxSize: 828, extension: ".jpg" },
   "members/anshul_birla": { width: 2402, height: 2402, maxSize: 1080, extension: ".jpg" },
   "members/anson_lee": { width: 1844, height: 1857, maxSize: 1080, extension: ".jpg" },
   "members/anthony_pertsel": { width: 3024, height: 3024, maxSize: 1080, extension: ".jpg" },
