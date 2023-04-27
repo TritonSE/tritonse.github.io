@@ -84,7 +84,7 @@ const constClients = [
     name: "YStem & Chess",
     startYear: 2021,
     endYear: null,
-    url: "https://ystemandchess.com/",
+    url: null,
   },
   {
     name: "The Animal Pad",
