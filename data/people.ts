@@ -88,6 +88,21 @@ const constPeople = [
     graduation: 2019,
   },
   {
+    name: "Bryan Yuan",
+    roles: ["Developer"],
+    hidden: true, // hidden because not sure who they are, just adding to give credit for their work
+  },
+  {
+    name: "Jason Vega",
+    roles: ["Developer"],
+    hidden: true, // hidden because not sure who they are, just adding to give credit for their work
+  },
+  {
+    name: "Victor Luong",
+    roles: ["Developer"],
+    hidden: true, // hidden because not sure who they are, just adding to give credit for their work
+  },
+  {
     name: "Sumeet Bansal",
     roles: ["Developer", "Project Manager", "President"],
     graduation: 2020,
