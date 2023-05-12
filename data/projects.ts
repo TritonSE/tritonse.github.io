@@ -3,6 +3,7 @@ import { MDXProps } from "mdx/types";
 import { ImageKey } from "../images";
 import contentDynamics from "../projects/dynamics-website.mdx";
 import contentIHCWellnessApp from "../projects/ihc-wellness-app.mdx";
+import contentOIC from "../projects/oic-web-innovation-portal.mdx";
 import contentSSA from "../projects/ssa-website.mdx";
 import contentUWEAST from "../projects/uweast-community-kitchen.mdx";
 import { assertUniqueKey, makeComparator, makeSlug } from "../util";
@@ -29,7 +30,7 @@ export interface Project {
 // to newest, since the dates are not stored for each project.
 const constProjects = [
   {
-    name: "UWEAST Community Kitchen",
+    name: "UWEAST Community Kitchen Website",
     description:
       "Web application for UWEAST that allows customers to view the menu, place orders, and pay.",
     content: contentUWEAST,
@@ -45,15 +46,7 @@ const constProjects = [
       },
       {
         role: "Developer",
-        names: [
-          "Alejandro Rodriguez Pascual",
-          "Amitesh Sharma",
-          "Dhanush Nanjunda Reddy",
-          "Aaron Kirk",
-          "Navid Boloorian",
-          "Patrick Brown",
-          "Thomas Garry",
-        ],
+        names: ["Alejandro Rodriguez Pascual", "Amitesh Sharma", "Dhanush Nanjunda Reddy", "Aaron Kirk", "Navid Boloorian", "Patrick Brown", "Thomas Garry"],
       },
     ],
   },
@@ -75,17 +68,13 @@ const constProjects = [
       {
         role: "Developer",
         names: [
-          "Amrit Singh",
-          "Nicholas Vanny",
-          "Dhanush Nanjunda Reddy",
-          "Upo Bhat",
-          "Anshul Birla",
+          "Amrit Singh", "Nicholas Vanny", "Dhanush Nanjunda Reddy", "Upo Bhat", "Anshul Birla",
         ],
       },
     ],
   },
   {
-    name: "IHC Wellness App",
+    name: "IHC Wellness Mobile App",
     description:
       "Mobile application encouraging more open dialogue, healthy coping mechanisms, and better utilization of on campus resources for students under intense academic pressure.",
     content: contentIHCWellnessApp,
@@ -102,7 +91,28 @@ const constProjects = [
     ],
   },
   {
-    name: "Symphonic Student Association",
+    name: "OIC Web Innovation Portal",
+    description:
+      "UCSD resource hub where users can find the activity, event, or campus resource they are seeking or explore new ones.",
+    content: contentOIC,
+    thumbnail: "projects/office_of_innovation_and_commercialization/home_page",
+    team: [
+      {
+        role: "Project Manager",
+        names: ["Dan Huang"],
+      },
+      {
+        role: "Designer",
+        names: ["Jessica Nguyen"],
+      },
+      {
+        role: "Developer",
+        names: ["Alexandra Michael", "Gary Zhao", "John Lu", "Nathan Zhao"],
+      },
+    ],
+  },
+  {
+    name: "SSA Website",
     description:
       "Website for the Symphonic Student Association, a student organization fostering a community of members interested in classical music.",
     content: contentSSA,
