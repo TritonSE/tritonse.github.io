@@ -103,6 +103,21 @@ const constPeople = [
     hidden: true, // hidden because not sure who they are, just adding to give credit for their work
   },
   {
+    name: "Alexandra Michael",
+    roles: ["Developer"],
+    hidden: true, // hidden because not sure who they are, just adding to give credit for their work
+  },
+  {
+    name: "Nathan Zhao",
+    roles: ["Developer"],
+    hidden: true, // hidden because not sure who they are, just adding to give credit for their work
+  },
+  {
+    name: "Kevin Soloway",
+    roles: ["Developer"],
+    hidden: true, // hidden because not sure who they are, just adding to give credit for their work
+  },
+  {
     name: "Sumeet Bansal",
     roles: ["Developer", "Project Manager", "President"],
     graduation: 2020,
@@ -214,6 +229,16 @@ const constPeople = [
   {
     name: "Sara Blumin",
     roles: ["Developer", "Project Manager"],
+    graduation: 2021,
+  },
+  {
+    name: "Jason Cabrera",
+    roles: ["Project Manager"],
+    graduation: 2021,
+  },
+  {
+    name: "Declan Sullivan",
+    roles: ["Project Manager", "Developer"],
     graduation: 2021,
   },
   {
@@ -606,11 +631,6 @@ const constPeople = [
     name: "Annie Ye",
     roles: ["TEST Designer"],
     graduation: "TEST",
-  },
-  {
-    name: "Jason Cabrera",
-    roles: ["Project Manager"],
-    graduation: 2021,
   },
   {
     name: "Nhu Luong",
