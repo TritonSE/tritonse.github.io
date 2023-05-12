@@ -3,6 +3,7 @@ import { MDXProps } from "mdx/types";
 import { ImageKey } from "../images";
 import contentDynamics from "../projects/dynamics-website.mdx";
 import contentIHCWellnessApp from "../projects/ihc-wellness-app.mdx";
+import contentSSA from "../projects/ssa-website.mdx";
 import contentUWEAST from "../projects/uweast-community-kitchen.mdx";
 import { assertUniqueKey, makeComparator, makeSlug } from "../util";
 
@@ -88,7 +89,7 @@ const constProjects = [
     description:
       "Mobile application encouraging more open dialogue, healthy coping mechanisms, and better utilization of on campus resources for students under intense academic pressure.",
     content: contentIHCWellnessApp,
-    thumbnail: "projects/ihc_wellness_app/app-screens",
+    thumbnail: "projects/ihc_wellness_app/app_screens",
     team: [
       {
         role: "Project Manager",
@@ -97,6 +98,27 @@ const constProjects = [
       {
         role: "Developer",
         names: ["Anoushka Dave", "Benson Vuong", "Robert Tatum", "Rohith Kasar"],
+      },
+    ],
+  },
+  {
+    name: "Symphonic Student Association",
+    description:
+      "Website for the Symphonic Student Association, a student organization fostering a community of members interested in classical music.",
+    content: contentSSA,
+    thumbnail: "projects/symphonic_student_association/home_page",
+    team: [
+      {
+        role: "Project Manager",
+        names: ["Holly Ham"],
+      },
+      {
+        role: "Designer",
+        names: ["Nhu Luong"],
+      },
+      {
+        role: "Developer",
+        names: ["Jason Vega", "Bryan Yuan", "Sara Blumin", "Victor Luong"],
       },
     ],
   },
