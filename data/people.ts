@@ -88,6 +88,81 @@ const constPeople = [
     graduation: 2019,
   },
   {
+    name: "Akashnarendran Premkumar",
+    roles: ["Product Manager"],
+    hidden: true, // hidden because not sure who they are, just adding to give credit for their work
+  },
+  {
+    name: "Anne Xu",
+    roles: ["Developer"],
+    hidden: true, // hidden because not sure who they are, just adding to give credit for their work
+  },
+  {
+    name: "Uposhanto Bhattacharya",
+    roles: ["Developer"],
+    hidden: true, // hidden because not sure who they are, just adding to give credit for their work
+  },
+  {
+    name: "Arnav Taneja",
+    roles: ["Developer"],
+    hidden: true, // hidden because not sure who they are, just adding to give credit for their work
+  },
+  {
+    name: "Bryan Yuan",
+    roles: ["Developer"],
+    hidden: true, // hidden because not sure who they are, just adding to give credit for their work
+  },
+  {
+    name: "Jason Vega",
+    roles: ["Developer"],
+    hidden: true, // hidden because not sure who they are, just adding to give credit for their work
+  },
+  {
+    name: "Alex Li",
+    roles: ["Developer"],
+    hidden: true, // hidden because not sure who they are, just adding to give credit for their work
+  },
+  {
+    name: "Brent Min",
+    roles: ["Developer"],
+    hidden: true, // hidden because not sure who they are, just adding to give credit for their work
+  },
+  {
+    name: "Loc Vu",
+    roles: ["Developer"],
+    hidden: true, // hidden because not sure who they are, just adding to give credit for their work
+  },
+  {
+    name: "Roger Ji",
+    roles: ["Developer"],
+    hidden: true, // hidden because not sure who they are, just adding to give credit for their work
+  },
+  {
+    name: "Davin Tjong",
+    roles: ["Developer"],
+    hidden: true, // hidden because not sure who they are, just adding to give credit for their work
+  },
+  {
+    name: "Victor Luong",
+    roles: ["Developer"],
+    hidden: true, // hidden because not sure who they are, just adding to give credit for their work
+  },
+  {
+    name: "Alexandra Michael",
+    roles: ["Developer"],
+    hidden: true, // hidden because not sure who they are, just adding to give credit for their work
+  },
+  {
+    name: "Nathan Zhao",
+    roles: ["Developer"],
+    hidden: true, // hidden because not sure who they are, just adding to give credit for their work
+  },
+  {
+    name: "Kevin Soloway",
+    roles: ["Developer"],
+    hidden: true, // hidden because not sure who they are, just adding to give credit for their work
+  },
+  {
     name: "Sumeet Bansal",
     roles: ["Developer", "Project Manager", "President"],
     graduation: 2020,
@@ -202,6 +277,16 @@ const constPeople = [
     graduation: 2021,
   },
   {
+    name: "Jason Cabrera",
+    roles: ["Project Manager"],
+    graduation: 2021,
+  },
+  {
+    name: "Declan Sullivan",
+    roles: ["Project Manager", "Developer"],
+    graduation: 2021,
+  },
+  {
     name: "Andrew Caballero",
     roles: ["Designer", "VP Design"],
     graduation: 2023,
@@ -228,6 +313,11 @@ const constPeople = [
   {
     name: "Rickie Chen",
     roles: ["Designer", "TEST Design Lead"],
+  },
+  {
+    name: "Thomas Li",
+    roles: ["Developer", "Project Manager"],
+    hidden: true,
   },
   {
     name: "Tracy Nguyen",
@@ -591,11 +681,6 @@ const constPeople = [
     name: "Annie Ye",
     roles: ["TEST Designer"],
     graduation: "TEST",
-  },
-  {
-    name: "Jason Cabrera",
-    roles: ["Project Manager"],
-    graduation: 2021,
   },
   {
     name: "Nhu Luong",
