@@ -3,12 +3,14 @@ import { MDXProps } from "mdx/types";
 import { ImageKey } from "../images";
 import contentCCH from "../projects/cch-community-markets.mdx";
 import contentDynamics from "../projects/dynamics-website.mdx";
-import contentIHC from "../projects/ihc-wellness-app.mdx";
+import contentIHCEMR from "../projects/ihc-emr.mdx";
+import contentIHCWellness from "../projects/ihc-wellness-app.mdx";
 import contentKCLinking from "../projects/kc-linking.mdx";
 import contentKCSkilled from "../projects/kc-skilled-impact.mdx";
 import contentOIC from "../projects/oic-web-innovation-portal.mdx";
 import contentSSA from "../projects/ssa-website.mdx";
 import contentUWEAST from "../projects/uweast-community-kitchen.mdx";
+import contentYCW from "../projects/ycw-greenpoint-rated-app.mdx";
 import { assertUniqueKey, makeComparator, makeSlug } from "../util";
 
 import { PersonName, Role, allRoles } from "./people";
@@ -32,6 +34,64 @@ export interface Project {
 // Metadata for each project. Projects should be manually ordered from oldest
 // to newest, since the dates are not stored for each project.
 const constProjects = [
+  {
+    name: "YCW GreenPoint Rated Mobile App",
+    description:
+      "Mobile application for Your Clear Way (formerly Build-It-Green) which helps homeowners and certified GreenPoint raters to create healthy and sustainable homes.",
+    content: contentYCW,
+    thumbnail: "projects/ycw_greenpoint_rated_app/app-screens",
+    team: [
+      {
+        role: "Project Manager",
+        names: ["Arnold Duan", "Robert Tatum", "Advay Sharma"],
+      },
+      {
+        role: "Designer",
+        names: ["Jessica Nguyen", "Lydia Smith", "Kelly Li"],
+      },
+      {
+        role: "Developer",
+        names: [
+          "Alejandro Rodriguez Pascual",
+          "Loc Vu",
+          "Roger Ji",
+          "Rohan Puthukudy",
+          "Advay Sharma",
+          "Shravan Hariharan",
+          "Kunal Bhandarkar",
+          "Hana Kim",
+          "Robert Tatum",
+          "Uposhanto Bhattacharya",
+          "Thai Gillespie",
+        ],
+      },
+    ],
+  },
+  {
+    name: "IHC EMR Mobile App",
+    description:
+      "Mobile application for IHC that digitizes clinic administration. Volunteers, physicians, and lab technicians can view and edit information pertaining to patient check-ins, triages, lab testing, and pharmacy management.",
+    content: contentIHCEMR,
+    thumbnail: "projects/default-thumbnail",
+    team: [
+      {
+        role: "Project Manager",
+        names: ["Alex Chiu", "Bryant Liu"],
+      },
+      {
+        role: "Developer",
+        names: [
+          "Bryant Liu",
+          "Davin Tjong",
+          "Nathan Zhao",
+          "Brent Min",
+          "Alex Li",
+          "Kenny Yi",
+          "Ayush Shukla",
+        ],
+      },
+    ],
+  },
   {
     name: "KC Linking Mobile App",
     description:
@@ -133,7 +193,7 @@ const constProjects = [
     name: "IHC Wellness Mobile App",
     description:
       "Mobile application encouraging more open dialogue, healthy coping mechanisms, and better utilization of on campus resources for students under intense academic pressure.",
-    content: contentIHC,
+    content: contentIHCWellness,
     thumbnail: "projects/ihc_wellness_app/app-screens",
     team: [
       {

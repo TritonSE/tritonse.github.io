@@ -190,6 +190,7 @@ const allImages = {
   "projects/symphonic_student_association/home-page": { width: 1920, height: 926, maxSize: 1920, extension: ".png" },
   "projects/uweast_community_kitchen/contact-page": { width: 469, height: 264, maxSize: 640, extension: ".png" },
   "projects/uweast_community_kitchen/home-page": { width: 3820, height: 1910, maxSize: 3840, extension: ".png" },
+  "projects/ycw_greenpoint_rated_app/app-screens": { width: 1148, height: 574, maxSize: 1200, extension: ".png" },
   "sponsors/san_diego_county_taxpayers_association": { width: 892, height: 267, maxSize: 1080, extension: ".jpg" },
   "sponsors/verkada": { width: 3977, height: 1191, maxSize: 1920, extension: ".png" },
 } as const;
