@@ -1,6 +1,7 @@
 import { MDXProps } from "mdx/types";
 
 import { ImageKey } from "../images";
+import contentCCH from "../projects/cch-community-markets.mdx";
 import contentDynamics from "../projects/dynamics-website.mdx";
 import contentIHCWellnessApp from "../projects/ihc-wellness-app.mdx";
 import contentOIC from "../projects/oic-web-innovation-portal.mdx";
@@ -46,7 +47,15 @@ const constProjects = [
       },
       {
         role: "Developer",
-        names: ["Alejandro Rodriguez Pascual", "Amitesh Sharma", "Dhanush Nanjunda Reddy", "Aaron Kirk", "Navid Boloorian", "Patrick Brown", "Thomas Garry"],
+        names: [
+          "Alejandro Rodriguez Pascual",
+          "Amitesh Sharma",
+          "Dhanush Nanjunda Reddy",
+          "Aaron Kirk",
+          "Navid Boloorian",
+          "Patrick Brown",
+          "Thomas Garry",
+        ],
       },
     ],
   },
@@ -68,7 +77,11 @@ const constProjects = [
       {
         role: "Developer",
         names: [
-          "Amrit Singh", "Nicholas Vanny", "Dhanush Nanjunda Reddy", "Upo Bhat", "Anshul Birla",
+          "Amrit Singh",
+          "Nicholas Vanny",
+          "Dhanush Nanjunda Reddy",
+          "Upo Bhat",
+          "Anshul Birla",
         ],
       },
     ],
@@ -129,6 +142,23 @@ const constProjects = [
       {
         role: "Developer",
         names: ["Jason Vega", "Bryan Yuan", "Sara Blumin", "Victor Luong"],
+      },
+    ],
+  },
+  {
+    name: "CCH Community Markets",
+    description:
+      "Online assessment tool to determine the health of a market, allowing CCH to get accurate information on how to provide healthier foods for their community.",
+    content: contentCCH,
+    thumbnail: "projects/default-thumbnail",
+    team: [
+      {
+        role: "Project Manager",
+        names: ["Hannah Hsu"],
+      },
+      {
+        role: "Developer",
+        names: ["Jason Cabrera", "Declan Sullivan", "Kevin Soloway"],
       },
     ],
   },
