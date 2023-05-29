@@ -9,6 +9,7 @@ import contentIHCWellness from "../projects/ihc-wellness-app.mdx";
 import contentKCLinking from "../projects/kc-linking.mdx";
 import contentKCSkilled from "../projects/kc-skilled-impact.mdx";
 import contentLAP from "../projects/lap-student-tracker.mdx";
+import contentMAW from "../projects/maw-volunteer-hub.mdx";
 import contentOIC from "../projects/oic-web-innovation-portal.mdx";
 import contentSI from "../projects/si-website-revamp.mdx";
 import contentSSA from "../projects/ssa-website.mdx";
@@ -41,6 +42,38 @@ export interface Project {
 // Metadata for each project. Projects should be manually ordered from newest
 // to oldest, since the dates are not stored for each project.
 const constProjects = [
+  {
+    name: "MAW Volunteer Hub",
+    description:
+      "The Make-A-Wish Volunteer Hub is used to coordinate volunteer events, materials, and contact information for for the organization.",
+    content: contentMAW,
+    thumbnail: "projects/maw_volunteer_hub/home-page",
+    team: [
+      {
+        role: "Engineering Manager",
+        names: ["Patrick Brown"],
+      },
+      {
+        role: "Product Manager",
+        names: ["Mrinal Sharma"],
+      },
+      {
+        role: "Designer",
+        names: ["Andrew Caballero", "Juliet Zhuang", "Tracy Nguyen"],
+      },
+      {
+        role: "Developer",
+        names: [
+          "Aksharan Saravanan",
+          "Andrew Russell",
+          "Benson Vuong",
+          "James Zhang",
+          "Mohak Vaswani",
+          "Shreya Gupta",
+        ],
+      },
+    ],
+  },
   {
     name: "LAP Student Tracker",
     description:
