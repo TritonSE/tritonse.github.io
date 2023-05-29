@@ -183,6 +183,7 @@ const allImages = {
   "projects/default-thumbnail": { width: 2945, height: 1484, maxSize: 3840, extension: ".png" },
   "projects/dynamics_performance_team/home-page": { width: 1920, height: 1001, maxSize: 1920, extension: ".png" },
   "projects/dynamics_performance_team/supplemental": { width: 2804, height: 1580, maxSize: 3840, extension: ".png" },
+  "projects/fsd_distribution_web_app/home-page": { width: 1607, height: 1000, maxSize: 1920, extension: ".png" },
   "projects/ihc_wellness_app/app-screens": { width: 1334, height: 657, maxSize: 1920, extension: ".png" },
   "projects/kc_linking/app-screens": { width: 2324, height: 1162, maxSize: 3840, extension: ".png" },
   "projects/kc_skilled_impact/app-screens": { width: 2804, height: 1483, maxSize: 3840, extension: ".png" },

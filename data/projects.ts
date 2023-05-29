@@ -3,6 +3,7 @@ import { MDXProps } from "mdx/types";
 import { ImageKey } from "../images";
 import contentCCH from "../projects/cch-community-markets.mdx";
 import contentDynamics from "../projects/dynamics-website.mdx";
+import contentFSD from "../projects/fsd-distribution-web-app.mdx";
 import contentIHCEMR from "../projects/ihc-emr.mdx";
 import contentIHCWellness from "../projects/ihc-wellness-app.mdx";
 import contentKCLinking from "../projects/kc-linking.mdx";
@@ -33,9 +34,38 @@ export interface Project {
   readonly team: ProjectTeam;
 }
 
-// Metadata for each project. Projects should be manually ordered from oldest
-// to newest, since the dates are not stored for each project.
+// Metadata for each project. Projects should be manually ordered from newest
+// to oldest, since the dates are not stored for each project.
 const constProjects = [
+  {
+    name: "FSD Distribution Web Application",
+    description:
+      "The FSD Distribution Web Application tracks information on agencies and food distributions for Feeding San Diego.",
+    content: contentFSD,
+    thumbnail: "projects/fsd_distribution_web_app/home-page",
+    team: [
+      {
+        role: "Project Manager",
+        names: ["Sara Blumin"],
+      },
+      {
+        role: "Designer",
+        names: ["Kenny Tran", "Evan Lam"],
+      },
+      {
+        role: "Developer",
+        names: [
+          "Roger Ji",
+          "William Wu",
+          "Nicolas La Polla",
+          "Nirmal Agnihotri",
+          "Ryan Bui",
+          "Stephen Tan",
+          "Emmanuel Flores",
+        ],
+      },
+    ],
+  },
   {
     name: "TSE Oktavian",
     description:
