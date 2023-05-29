@@ -10,6 +10,7 @@ import contentKCSkilled from "../projects/kc-skilled-impact.mdx";
 import contentOIC from "../projects/oic-web-innovation-portal.mdx";
 import contentSI from "../projects/si-website-revamp.mdx";
 import contentSSA from "../projects/ssa-website.mdx";
+import contentOktavian from "../projects/tse-oktavian.mdx";
 import contentUWEAST from "../projects/uweast-community-kitchen.mdx";
 import contentYCW from "../projects/ycw-greenpoint-rated-app.mdx";
 import { assertUniqueKey, makeComparator, makeSlug } from "../util";
@@ -35,6 +36,41 @@ export interface Project {
 // Metadata for each project. Projects should be manually ordered from oldest
 // to newest, since the dates are not stored for each project.
 const constProjects = [
+  {
+    name: "TSE Oktavian",
+    description:
+      "Membership & logistics portal for TSE — handles recruitment, roster management, etc.",
+    content: contentOktavian,
+    thumbnail: "projects/tse_oktavian/home-page",
+    team: [
+      {
+        role: "Project Manager",
+        names: ["Hannah Hsu", "Navid Boloorian"],
+      },
+      {
+        role: "Designer",
+        names: ["Mylinh Lac", "Kenny Tran", "Kelly Li"],
+      },
+      {
+        role: "Developer",
+        names: [
+          "Philip Zhang",
+          "Justin Yao Du",
+          "Benson Vuong",
+          "Anson Lee",
+          "Zain Khan",
+          "Ly Nguyen",
+          "Arnav Taneja",
+          "Elias Fang",
+          "Jacob Au",
+          "Xi-Kai Wu",
+          "Deepansha Singh",
+          "Shravan Konduru",
+          "Nicholas Vanny",
+        ],
+      },
+    ],
+  },
   {
     name: "SI Website Revamp",
     description:
