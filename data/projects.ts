@@ -8,6 +8,7 @@ import contentIHCWellness from "../projects/ihc-wellness-app.mdx";
 import contentKCLinking from "../projects/kc-linking.mdx";
 import contentKCSkilled from "../projects/kc-skilled-impact.mdx";
 import contentOIC from "../projects/oic-web-innovation-portal.mdx";
+import contentSI from "../projects/si-website-revamp.mdx";
 import contentSSA from "../projects/ssa-website.mdx";
 import contentUWEAST from "../projects/uweast-community-kitchen.mdx";
 import contentYCW from "../projects/ycw-greenpoint-rated-app.mdx";
@@ -34,6 +35,37 @@ export interface Project {
 // Metadata for each project. Projects should be manually ordered from oldest
 // to newest, since the dates are not stored for each project.
 const constProjects = [
+  {
+    name: "SI Website Revamp",
+    description:
+      "Personalized website and admin tool for Sakyadhita to display and edit organization information.",
+    content: contentSI,
+    thumbnail: "projects/si_website_revamp/home-page",
+    team: [
+      {
+        role: "Project Manager",
+        names: ["Amrit Singh", "Navid Boloorian"],
+      },
+      {
+        role: "Designer",
+        names: ["Tracy Nguyen", "Rachel Blumin"],
+      },
+      {
+        role: "Developer",
+        names: [
+          "Alejandro Rodriguez Pascual",
+          "Dhanush Nanjunda Reddy",
+          "Patrick Brown",
+          "Thomas Garry",
+          "Amitesh Sharma",
+          "Navid Boloorian",
+          "Aaron Kirk",
+          "Elias Fang",
+          "Jacob Au",
+        ],
+      },
+    ],
+  },
   {
     name: "YCW GreenPoint Rated Mobile App",
     description:
