@@ -3,8 +3,9 @@ import { MDXProps } from "mdx/types";
 import { ImageKey } from "../images";
 import contentCCH from "../projects/cch-community-markets.mdx";
 import contentDynamics from "../projects/dynamics-website.mdx";
-import contentIHCWellnessApp from "../projects/ihc-wellness-app.mdx";
-import contentKC from "../projects/kc-skilled-impact.mdx";
+import contentIHC from "../projects/ihc-wellness-app.mdx";
+import contentKCLinking from "../projects/kc-linking.mdx";
+import contentKCSkilled from "../projects/kc-skilled-impact.mdx";
 import contentOIC from "../projects/oic-web-innovation-portal.mdx";
 import contentSSA from "../projects/ssa-website.mdx";
 import contentUWEAST from "../projects/uweast-community-kitchen.mdx";
@@ -32,10 +33,34 @@ export interface Project {
 // to newest, since the dates are not stored for each project.
 const constProjects = [
   {
-    name: "KC Skilled Impact",
+    name: "KC Linking Mobile App",
+    description:
+      "Linking feature of the Key Conservation mobile app. This feature makes posts and profiles easily accessible via links which gives conservationists easy access to critical funding and global support. ",
+    content: contentKCLinking,
+    thumbnail: "projects/kc_linking/app-screens",
+    team: [
+      {
+        role: "Project Manager",
+        names: ["Hannah Hsu", "Kenny Yi"],
+      },
+      {
+        role: "Developer",
+        names: [
+          "Arnav Taneja",
+          "Nicolas La Polla",
+          "Anne Xu",
+          "Bryant Liu",
+          "Kenny Yi",
+          "Sara Blumin",
+        ],
+      },
+    ],
+  },
+  {
+    name: "KC Skilled Impact Mobile App",
     description:
       "Volunteer connection section of the Key Conservation mobile app. Through this feature, skilled volunteers are connected to the organizations that need them most.",
-    content: contentKC,
+    content: contentKCSkilled,
     thumbnail: "projects/kc_skilled_impact/app-screens",
     team: [
       {
@@ -108,7 +133,7 @@ const constProjects = [
     name: "IHC Wellness Mobile App",
     description:
       "Mobile application encouraging more open dialogue, healthy coping mechanisms, and better utilization of on campus resources for students under intense academic pressure.",
-    content: contentIHCWellnessApp,
+    content: contentIHC,
     thumbnail: "projects/ihc_wellness_app/app-screens",
     team: [
       {
@@ -164,7 +189,7 @@ const constProjects = [
     ],
   },
   {
-    name: "CCH Community Markets",
+    name: "CCH Community Markets Website",
     description:
       "Online assessment tool to determine the health of a market, allowing CCH to get accurate information on how to provide healthier foods for their community.",
     content: contentCCH,

@@ -88,6 +88,16 @@ const constPeople = [
     graduation: 2019,
   },
   {
+    name: "Anne Xu",
+    roles: ["Developer"],
+    hidden: true, // hidden because not sure who they are, just adding to give credit for their work
+  },
+  {
+    name: "Arnav Taneja",
+    roles: ["Developer"],
+    hidden: true, // hidden because not sure who they are, just adding to give credit for their work
+  },
+  {
     name: "Bryan Yuan",
     roles: ["Developer"],
     hidden: true, // hidden because not sure who they are, just adding to give credit for their work
