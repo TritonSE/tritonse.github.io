@@ -15,6 +15,7 @@ import contentOktavian from "../projects/tse-oktavian.mdx";
 import contentUWEAST from "../projects/uweast-community-kitchen.mdx";
 import contentWA from "../projects/wa-family-literacy.mdx";
 import contentYCW from "../projects/ycw-greenpoint-rated-app.mdx";
+import contentYSC from "../projects/ysc-mobile-app.mdx";
 import { assertUniqueKey, makeComparator, makeSlug } from "../util";
 
 import { PersonName, Role, allRoles } from "./people";
@@ -38,6 +39,37 @@ export interface Project {
 // Metadata for each project. Projects should be manually ordered from newest
 // to oldest, since the dates are not stored for each project.
 const constProjects = [
+  {
+    name: "YSC Mobile App",
+    description:
+      "The YStem and Chess Mobile Application provides a platform through which underprivileged students can work with mentors in order to learn and play chess.",
+    content: contentYSC,
+    thumbnail: "projects/ysc_mobile_app/app-screens",
+    team: [
+      {
+        role: "Project Manager",
+        names: ["David Cruz"],
+      },
+      {
+        role: "Designer",
+        names: ["Kenny Tran", "Andrew Caballero", "Rickie Chen"],
+      },
+      {
+        role: "Developer",
+        names: [
+          "Rohith Kasar",
+          "Rohan Puthukudy",
+          "Allison Bhavsar",
+          "Dhruv Sood",
+          "Anshul Birla",
+          "Aksharan Saravanan",
+          "Kevin Han",
+          "Philip Zhang",
+          "Emmanuel Flores",
+        ],
+      },
+    ],
+  },
   {
     name: "WA Family Literacy Mobile App",
     description:
