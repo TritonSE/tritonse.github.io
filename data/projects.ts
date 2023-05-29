@@ -4,6 +4,7 @@ import { ImageKey } from "../images";
 import contentCCH from "../projects/cch-community-markets.mdx";
 import contentDynamics from "../projects/dynamics-website.mdx";
 import contentIHCWellnessApp from "../projects/ihc-wellness-app.mdx";
+import contentKC from "../projects/kc-skilled-impact.mdx";
 import contentOIC from "../projects/oic-web-innovation-portal.mdx";
 import contentSSA from "../projects/ssa-website.mdx";
 import contentUWEAST from "../projects/uweast-community-kitchen.mdx";
@@ -31,11 +32,28 @@ export interface Project {
 // to newest, since the dates are not stored for each project.
 const constProjects = [
   {
+    name: "KC Skilled Impact",
+    description:
+      "Volunteer connection section of the Key Conservation mobile app. Through this feature, skilled volunteers are connected to the organizations that need them most.",
+    content: contentKC,
+    thumbnail: "projects/kc_skilled_impact/app-screens",
+    team: [
+      {
+        role: "Project Manager",
+        names: ["Sumeet Bansal", "David Cruz"],
+      },
+      {
+        role: "Developer",
+        names: ["Anson Lee", "Ryan Bui", "Shravan Hariharan", "Thomas Li", "David Cruz"],
+      },
+    ],
+  },
+  {
     name: "UWEAST Community Kitchen Website",
     description:
       "Web application for UWEAST that allows customers to view the menu, place orders, and pay.",
     content: contentUWEAST,
-    thumbnail: "projects/uweast_community_kitchen/home_page",
+    thumbnail: "projects/uweast_community_kitchen/home-page",
     team: [
       {
         role: "Project Manager",
@@ -64,7 +82,7 @@ const constProjects = [
     description:
       "Website to help promote Dynamics Performance Team while providing ways to support the organization financially.",
     content: contentDynamics,
-    thumbnail: "projects/dynamics_performance_team/home_page",
+    thumbnail: "projects/dynamics_performance_team/home-page",
     team: [
       {
         role: "Project Manager",
@@ -91,7 +109,7 @@ const constProjects = [
     description:
       "Mobile application encouraging more open dialogue, healthy coping mechanisms, and better utilization of on campus resources for students under intense academic pressure.",
     content: contentIHCWellnessApp,
-    thumbnail: "projects/ihc_wellness_app/app_screens",
+    thumbnail: "projects/ihc_wellness_app/app-screens",
     team: [
       {
         role: "Project Manager",
@@ -108,7 +126,7 @@ const constProjects = [
     description:
       "UCSD resource hub where users can find the activity, event, or campus resource they are seeking or explore new ones.",
     content: contentOIC,
-    thumbnail: "projects/office_of_innovation_and_commercialization/home_page",
+    thumbnail: "projects/office_of_innovation_and_commercialization/home-page",
     team: [
       {
         role: "Project Manager",
@@ -129,7 +147,7 @@ const constProjects = [
     description:
       "Website for the Symphonic Student Association, a student organization fostering a community of members interested in classical music.",
     content: contentSSA,
-    thumbnail: "projects/symphonic_student_association/home_page",
+    thumbnail: "projects/symphonic_student_association/home-page",
     team: [
       {
         role: "Project Manager",

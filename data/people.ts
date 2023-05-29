@@ -270,6 +270,11 @@ const constPeople = [
     roles: ["Designer", "TEST Design Lead"],
   },
   {
+    name: "Thomas Li",
+    roles: ["Developer", "Project Manager"],
+    hidden: true,
+  },
+  {
     name: "Tracy Nguyen",
     roles: ["Designer"],
     graduation: 2022,
