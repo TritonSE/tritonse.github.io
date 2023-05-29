@@ -11,6 +11,7 @@ import contentKCSkilled from "../projects/kc-skilled-impact.mdx";
 import contentOIC from "../projects/oic-web-innovation-portal.mdx";
 import contentSI from "../projects/si-website-revamp.mdx";
 import contentSSA from "../projects/ssa-website.mdx";
+import contentTAP from "../projects/tap-dog-matching.mdx";
 import contentOktavian from "../projects/tse-oktavian.mdx";
 import contentUWEAST from "../projects/uweast-community-kitchen.mdx";
 import contentWA from "../projects/wa-family-literacy.mdx";
@@ -40,6 +41,34 @@ export interface Project {
 // to oldest, since the dates are not stored for each project.
 const constProjects = [
   {
+    name: "TAP Foster Dog Matching Tool",
+    description:
+      "The Animal Pad Foster Dog Matching Tool assists with the process of matching dogs to foster families.",
+    content: contentTAP,
+    thumbnail: "projects/tap_dog_matching/home-page",
+    team: [
+      {
+        role: "Engineering Manager",
+        names: ["Dhanush Nanjunda Reddy", "Advay Sharma", "William Wu"],
+      },
+      {
+        role: "Designer",
+        names: ["Rickie Chen", "Rachel Blumin"],
+      },
+      {
+        role: "Developer",
+        names: [
+          "Andrew Masek",
+          "Artyom Muradyan",
+          "Jacob Au",
+          "Parth Patel",
+          "Philip Zhang",
+          "William Jin",
+        ],
+      },
+    ],
+  },
+  {
     name: "YSC Mobile App",
     description:
       "The YStem and Chess Mobile Application provides a platform through which underprivileged students can work with mentors in order to learn and play chess.",
@@ -47,25 +76,23 @@ const constProjects = [
     thumbnail: "projects/ysc_mobile_app/app-screens",
     team: [
       {
-        role: "Project Manager",
-        names: ["David Cruz"],
+        role: "Engineering Manager",
+        names: ["Nicolas La Polla", "Andrew Russell"],
       },
       {
         role: "Designer",
-        names: ["Kenny Tran", "Andrew Caballero", "Rickie Chen"],
+        names: ["Andrew Caballero", "Rachel Blumin", "Tracey Du"],
       },
       {
         role: "Developer",
         names: [
-          "Rohith Kasar",
+          "Akhilan Gurumoorthy",
+          "Deepansha Singh",
+          "Helen Lin",
+          "Ly Nguyen",
           "Rohan Puthukudy",
-          "Allison Bhavsar",
-          "Dhruv Sood",
-          "Anshul Birla",
-          "Aksharan Saravanan",
-          "Kevin Han",
-          "Philip Zhang",
-          "Emmanuel Flores",
+          "Ryan Hung",
+          "Yucheng Huang",
         ],
       },
     ],

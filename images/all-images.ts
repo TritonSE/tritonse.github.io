@@ -191,6 +191,7 @@ const allImages = {
   "projects/si_website_revamp/home-page": { width: 1440, height: 760, maxSize: 1920, extension: ".png" },
   "projects/si_website_revamp/home-page-full": { width: 1440, height: 3066, maxSize: 1920, extension: ".png" },
   "projects/symphonic_student_association/home-page": { width: 1920, height: 926, maxSize: 1920, extension: ".png" },
+  "projects/tap_dog_matching/home-page": { width: 5349, height: 3240, maxSize: 3840, extension: ".png" },
   "projects/tse_oktavian/home-page": { width: 1440, height: 720, maxSize: 1920, extension: ".png" },
   "projects/uweast_community_kitchen/contact-page": { width: 469, height: 264, maxSize: 640, extension: ".png" },
   "projects/uweast_community_kitchen/home-page": { width: 3820, height: 1910, maxSize: 3840, extension: ".png" },
