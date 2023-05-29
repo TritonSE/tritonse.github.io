@@ -14,6 +14,7 @@ import contentOIC from "../projects/oic-web-innovation-portal.mdx";
 import contentSI from "../projects/si-website-revamp.mdx";
 import contentSSA from "../projects/ssa-website.mdx";
 import contentTAP from "../projects/tap-dog-matching.mdx";
+import contentMoneta from "../projects/tse-moneta.mdx";
 import contentOktavian from "../projects/tse-oktavian.mdx";
 import contentUWEAST from "../projects/uweast-community-kitchen.mdx";
 import contentWA from "../projects/wa-family-literacy.mdx";
@@ -70,6 +71,38 @@ const constProjects = [
           "James Zhang",
           "Mohak Vaswani",
           "Shreya Gupta",
+        ],
+      },
+    ],
+  },
+  {
+    name: "TSE Moneta",
+    description:
+      "The TSE Moneta website is an abstractable, GUI database solution that can be individually customized by nonprofits to best address their needs.",
+    content: contentMoneta,
+    thumbnail: "projects/tse_moneta/home-page",
+    team: [
+      {
+        role: "Engineering Manager",
+        names: ["Navid Boloorian"],
+      },
+      {
+        role: "Product Manager",
+        names: ["Reyna Abhyankar", "Stephen Tan"],
+      },
+      {
+        role: "Designer",
+        names: ["Kelly Li", "Jonathan Lum", "Tracey Du"],
+      },
+      {
+        role: "Developer",
+        names: [
+          "Ainesh Arumugam",
+          "Alex Zhang",
+          "Kevin Fu",
+          "Elias Fang",
+          "Pratyush Chand",
+          "William Wu",
         ],
       },
     ],
