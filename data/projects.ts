@@ -13,6 +13,7 @@ import contentSI from "../projects/si-website-revamp.mdx";
 import contentSSA from "../projects/ssa-website.mdx";
 import contentOktavian from "../projects/tse-oktavian.mdx";
 import contentUWEAST from "../projects/uweast-community-kitchen.mdx";
+import contentWA from "../projects/wa-family-literacy.mdx";
 import contentYCW from "../projects/ycw-greenpoint-rated-app.mdx";
 import { assertUniqueKey, makeComparator, makeSlug } from "../util";
 
@@ -37,6 +38,37 @@ export interface Project {
 // Metadata for each project. Projects should be manually ordered from newest
 // to oldest, since the dates are not stored for each project.
 const constProjects = [
+  {
+    name: "WA Family Literacy Mobile App",
+    description:
+      "The Words Alive Family Literacy Application promotes family literacy through an intuitive mobile app.",
+    content: contentWA,
+    thumbnail: "projects/wa_family_literacy/app-screens",
+    team: [
+      {
+        role: "Project Manager",
+        names: ["David Cruz"],
+      },
+      {
+        role: "Designer",
+        names: ["Kenny Tran", "Andrew Caballero", "Rickie Chen"],
+      },
+      {
+        role: "Developer",
+        names: [
+          "Rohith Kasar",
+          "Rohan Puthukudy",
+          "Allison Bhavsar",
+          "Dhruv Sood",
+          "Anshul Birla",
+          "Aksharan Saravanan",
+          "Kevin Han",
+          "Philip Zhang",
+          "Emmanuel Flores",
+        ],
+      },
+    ],
+  },
   {
     name: "FSD Distribution Web Application",
     description:
