@@ -187,6 +187,7 @@ const allImages = {
   "projects/ihc_wellness_app/app-screens": { width: 1334, height: 657, maxSize: 1920, extension: ".png" },
   "projects/kc_linking/app-screens": { width: 2324, height: 1162, maxSize: 3840, extension: ".png" },
   "projects/kc_skilled_impact/app-screens": { width: 2804, height: 1483, maxSize: 3840, extension: ".png" },
+  "projects/lap_student_tracker/home-page": { width: 1440, height: 900, maxSize: 1920, extension: ".png" },
   "projects/office_of_innovation_and_commercialization/home-page": { width: 1896, height: 926, maxSize: 1920, extension: ".png" },
   "projects/si_website_revamp/home-page": { width: 1440, height: 760, maxSize: 1920, extension: ".png" },
   "projects/si_website_revamp/home-page-full": { width: 1440, height: 3066, maxSize: 1920, extension: ".png" },

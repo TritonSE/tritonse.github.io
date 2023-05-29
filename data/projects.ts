@@ -8,6 +8,7 @@ import contentIHCEMR from "../projects/ihc-emr.mdx";
 import contentIHCWellness from "../projects/ihc-wellness-app.mdx";
 import contentKCLinking from "../projects/kc-linking.mdx";
 import contentKCSkilled from "../projects/kc-skilled-impact.mdx";
+import contentLAP from "../projects/lap-student-tracker.mdx";
 import contentOIC from "../projects/oic-web-innovation-portal.mdx";
 import contentSI from "../projects/si-website-revamp.mdx";
 import contentSSA from "../projects/ssa-website.mdx";
@@ -40,6 +41,39 @@ export interface Project {
 // Metadata for each project. Projects should be manually ordered from newest
 // to oldest, since the dates are not stored for each project.
 const constProjects = [
+  {
+    name: "LAP Student Tracker",
+    description:
+      "The League of Amazing Programmers Student Tracker is a hub for the League of Amazing Programmers school used by both students and teachers to centralize classroom scheduling and communication.",
+    content: contentLAP,
+    thumbnail: "projects/lap_student_tracker/home-page",
+    team: [
+      {
+        role: "Engineering Manager",
+        names: ["Anshul Birla"],
+      },
+      {
+        role: "Product Manager",
+        names: ["Annie Wen"],
+      },
+      {
+        role: "Designer",
+        names: ["Evan Lam", "Rickie Chen", "Lydia Smith"],
+      },
+      {
+        role: "Developer",
+        names: [
+          "Allison Bhavsar",
+          "Anvitaa Sekhsaria",
+          "Nishant Balaji",
+          "Ryan Bui",
+          "Zain Khan",
+          "Alex Zhang",
+          "William Jin",
+        ],
+      },
+    ],
+  },
   {
     name: "TAP Foster Dog Matching Tool",
     description:
@@ -78,6 +112,10 @@ const constProjects = [
       {
         role: "Engineering Manager",
         names: ["Nicolas La Polla", "Andrew Russell"],
+      },
+      {
+        role: "Product Manager",
+        names: ["Akashnarendran Premkumar"],
       },
       {
         role: "Designer",
