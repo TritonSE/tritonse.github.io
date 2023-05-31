@@ -196,7 +196,7 @@ const allImages = {
   "projects/tap_dog_matching/home-page": { width: 5349, height: 3240, maxSize: 3840, extension: ".png" },
   "projects/tse_moneta/home-page": { width: 5760, height: 3600, maxSize: 3840, extension: ".png" },
   "projects/tse_moneta/logo": { width: 270, height: 72, maxSize: 384, extension: ".png" },
-  "projects/tse_oktavian/home-page": { width: 1440, height: 720, maxSize: 1920, extension: ".png" },
+  "projects/tse_oktavian/home-page": { width: 1440, height: 1024, maxSize: 1920, extension: ".png" },
   "projects/uweast_community_kitchen/contact-page": { width: 469, height: 264, maxSize: 640, extension: ".png" },
   "projects/uweast_community_kitchen/home-page": { width: 3820, height: 1910, maxSize: 3840, extension: ".png" },
   "projects/wa_family_literacy/app-screens": { width: 1210, height: 660, maxSize: 1920, extension: ".png" },
