@@ -1,2 +1,26 @@
 @import "variables.scss";
 @import "~bootstrap/scss/bootstrap";
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: bold;
+  margin: 1em 0 0.5em;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.75rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+}
