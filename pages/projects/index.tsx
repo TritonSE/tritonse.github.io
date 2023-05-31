@@ -1,6 +1,7 @@
 import React from "react";
 import Container from "react-bootstrap/Container";
 
+import AutomaticCarousel from "../../components/AutomaticCarousel";
 import Hero from "../../components/Hero";
 import PageTitle from "../../components/PageTitle";
 import ProfileCardGroup from "../../components/ProfileCardGroup";
@@ -27,14 +28,15 @@ At Triton Software Engineering, we believe in keeping our work open source becau
           VISIT GITHUB
         </a>
       </Hero>
-      <Container>
+      <AutomaticCarousel/>
+      {/* <Container>
         <ProfileCardGroup
           width={3}
           profiles={allProjects.map((project, index) => (
             <ProjectProfileCard project={project} key={index} />
           ))}
         />
-      </Container>
+      </Container> */}
     </>
   );
 }
