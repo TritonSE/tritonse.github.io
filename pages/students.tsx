@@ -62,6 +62,8 @@ Here is the knowledge we expect for each grade level. The interview questions mi
 
 #### Freshmen
 
+Approximately CSE 8A or equivalent:
+
 - Familiarity with at least one programming language
 - Basic datatypes: booleans, integers, floating-point numbers, strings, arrays/lists
 - Control flow structures: if/else statements, for/while loops
@@ -71,20 +73,21 @@ Here is the knowledge we expect for each grade level. The interview questions mi
 
 #### Sophomores
 
+Approximately CSE 12 or equivalent:
+
 - All of the topics for freshmen, listed above
 - Pointers or references, depending on the language you use
 - Recursion
-- Data structures: multidimensional arrays/lists, linked lists, hash tables (also known as hash maps, dictionaries)
-- Algorithms: sorting, binary search, greedy
+- Data structures: multidimensional arrays/lists, dynamic arrays, linked lists, stacks, queues, heaps, binary search trees, hash tables (also known as hash maps, dictionaries)
+- Algorithms: sorting, binary search
 - Object-oriented programming concepts: classes, constructors, instance variables, methods
 
 #### Juniors/Seniors
 
 - All of the topics for freshmen and sophomores, listed above
-- Designing JSON-compatible data representations in the language of your choice (don't worry about serialization/deserialization though)
-- Analyzing time and memory complexity
-- Data structures: stacks, queues, heaps, trees, and graphs
-- Algorithms: divide and conquer, recursion and backtracking, memoization, _basic_ dynamic programming
+- Analyzing time and space complexity
+- Trees and graphs
+- More challenging applications of the previously listed algorithms and data structures
 
 ### How can I prepare for the technical components of the developer recruitment process?
 
