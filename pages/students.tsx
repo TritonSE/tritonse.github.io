@@ -34,7 +34,7 @@ ${
 
 ## FAQs
 
-##### What is Triton Software Engineering?
+### What is Triton Software Engineering?
 
 Triton Software Engineering (TSE) is a multidisciplinary student organization at UC San Diego. We partner with nonprofits to design and develop software, websites, and mobile applications pro-bono for social good, while giving our developers practical, real world experience.
 
@@ -46,7 +46,7 @@ If you are passionate about helping others using the skills you learn in college
 
 The TSE Early Start Training (TEST) program provides students from underprivileged backgrounds who have little to no technical development/design experience with a first step into exploring software engineering and UI/UX design. TEST developers and designers will learn the fundamentals of their domain while working on beginner-level internal projects for TSE.
 
-You may either apply to TSE or the TEST program, not both. If you are unsure about which is right for you, please email adave@ucsd.edu.
+You may either apply to TSE or the TEST program, not both. If you are unsure about which is right for you, please email nboloori@ucsd.edu.
 
 ### What is TSE's recruitment process like?
 
