@@ -34,7 +34,7 @@ ${
 
 ## FAQs
 
-##### What is Triton Software Engineering?
+### What is Triton Software Engineering?
 
 Triton Software Engineering (TSE) is a multidisciplinary student organization at UC San Diego. We partner with nonprofits to design and develop software, websites, and mobile applications pro-bono for social good, while giving our developers practical, real world experience.
 
@@ -46,7 +46,7 @@ If you are passionate about helping others using the skills you learn in college
 
 The TSE Early Start Training (TEST) program provides students from underprivileged backgrounds who have little to no technical development/design experience with a first step into exploring software engineering and UI/UX design. TEST developers and designers will learn the fundamentals of their domain while working on beginner-level internal projects for TSE.
 
-You may either apply to TSE or the TEST program, not both. If you are unsure about which is right for you, please email adave@ucsd.edu.
+You may either apply to TSE or the TEST program, not both. If you are unsure about which is right for you, please email nboloori@ucsd.edu.
 
 ### What is TSE's recruitment process like?
 
@@ -62,6 +62,8 @@ Here is the knowledge we expect for each grade level. The interview questions mi
 
 #### Freshmen
 
+Approximately CSE 8A or equivalent:
+
 - Familiarity with at least one programming language
 - Basic datatypes: booleans, integers, floating-point numbers, strings, arrays/lists
 - Control flow structures: if/else statements, for/while loops
@@ -71,20 +73,21 @@ Here is the knowledge we expect for each grade level. The interview questions mi
 
 #### Sophomores
 
+Approximately CSE 12 or equivalent:
+
 - All of the topics for freshmen, listed above
 - Pointers or references, depending on the language you use
 - Recursion
-- Data structures: multidimensional arrays/lists, linked lists, hash tables (also known as hash maps, dictionaries)
-- Algorithms: sorting, binary search, greedy
+- Data structures: multidimensional arrays/lists, dynamic arrays, linked lists, stacks, queues, heaps, binary search trees, hash tables (also known as hash maps, dictionaries)
+- Algorithms: sorting, binary search
 - Object-oriented programming concepts: classes, constructors, instance variables, methods
 
 #### Juniors/Seniors
 
 - All of the topics for freshmen and sophomores, listed above
-- Designing JSON-compatible data representations in the language of your choice (don't worry about serialization/deserialization though)
-- Analyzing time and memory complexity
-- Data structures: stacks, queues, heaps, trees, and graphs
-- Algorithms: divide and conquer, recursion and backtracking, memoization, _basic_ dynamic programming
+- Analyzing time and space complexity
+- Trees and graphs
+- More challenging applications of the previously listed algorithms and data structures
 
 ### How can I prepare for the technical components of the developer recruitment process?
 
