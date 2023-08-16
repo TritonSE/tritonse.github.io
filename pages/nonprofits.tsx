@@ -39,10 +39,6 @@ TSE’s structure consists of our board and 6 project-based teams. Each project 
 
 Our organization recruits some of the most hard-working, passionate, and brightest students at UC San Diego. Through effective leadership, frequent check-ins, and organized project timelines set with our clients and board, we ensure that our combination of talent, dedication, and care will result in projects that benefit the nonprofits we work with.
 
-### How is TSE operating during the ongoing pandemic?
-
-We are working in a hybrid model with most project teams primarily meeting in person. All TSE meetings with nonprofit clients will continue to be remote.
-
 ## Still have questions?
 
 If you still have any questions regarding how to get involved with us, please feel free to contact us at [tse@ucsd.edu](mailto:tse@ucsd.edu) and we will get in touch with you as soon as possible.
