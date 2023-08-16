@@ -1,5 +1,6 @@
 import React from "react";
 
+import CollapsibleSection from "../components/CollapsibleSection";
 import Hero from "../components/Hero";
 import PaddedBox from "../components/PaddedBox";
 import PageTitle from "../components/PageTitle";
@@ -31,9 +32,10 @@ ${
     ? `Please fill out the application form [here](${recruitment.applicationUrl}). Applications are due on ${recruitment.deadline}.`
     : "We are no longer accepting applications for this school year. If you are interested, please apply in Fall quarter of the next school year."
 }
+`}
 
-## FAQs
-
+        <CollapsibleSection title="General FAQs">
+          {markdown`
 ### What is Triton Software Engineering?
 
 Triton Software Engineering (TSE) is a multidisciplinary student organization at UC San Diego. We partner with nonprofits to design and develop software, websites, and mobile applications pro-bono for social good, while giving our developers practical, real world experience.
@@ -56,6 +58,19 @@ There are three stages for both designers and developers. We start with a resume
 
 Interested in applying? [Click here!](${recruitment.applicationUrl})
 
+### How many project teams are there? How are TSE projects structured?
+
+The number of project teams in TSE depends on the number of nonprofits we are able to secure collaborations with every year. In the past school year, we had 7 project teams.
+
+In the 2022-2023 school year, TSE’s structure consisted of our board, a design team, 6 project-based teams, and the TEST team. Each project team was made up of an engineering manager, a product manager, 8 developers, and 2-3 designers. Teams work independently of one another to create software for the nonprofit organization that they have been assigned to.
+
+### How can I stay up-to-date with upcoming TSE events?
+
+We host both internal and public events. To find our public events, follow us on [Facebook](https://www.facebook.com/TritonSE) and [Instagram](https://www.instagram.com/ucsd_tse/). You can also find a list of our past and upcoming events [here](/events).
+`}
+        </CollapsibleSection>
+        <CollapsibleSection title="Developer FAQs">
+          {markdown`
 ### What computer science knowledge is expected for the developer recruitment process?
 
 Here is the knowledge we expect for each grade level. The interview questions might not cover all of these topics, and it might be possible to pass the interviews without knowing all of these topics, but our interview questions are designed with these expectations in mind.
@@ -103,40 +118,25 @@ To prep for the technical interview:
 - Expect to solve one or more programming tasks, which may have multiple parts. Be mindful of edge cases, and discuss your approach with your interviewer before you start writing code.
 - You will be evaluated on your communication and problem-solving skills, the readability, maintainability, and correctness of your code, and (for juniors/seniors) the algorithmic performance of your code.
 
+### What does being a developer look like at TSE?
+
+We emulate the Agile Workflow to give our developers some insight on industry standards. Developers complete weekly tasks assigned to them by their project manager during their team meetings. The work that you will be doing depends on your client. For most web development work, we tend to stick to the MERN stack, and for most cross-platform mobile development, we focus on using React Native with Expo. This means that, as a whole, TSE ends up with many JavaScript-based applications. However, depending on the client's needs, we have been known to use other technologies, such as TypeScript, Go, and PostgreSQL. Typically, developers spend 4-6 hours a week on TSE activities.
+          `}
+        </CollapsibleSection>
+        <CollapsibleSection title="Designer FAQs">
+          {markdown`
 ### How can I prepare for the technical interview in the designer recruitment process?
 
 Be prepared to present a past project you worked on. The presentation will be a total of 25 minutes, with 15 minutes of presentation and 10 minutes of questions. It is recommended to have either slides or some sort of visual component to your presentation.
 
 Be prepared to solve a design challenge. You will be given a prompt similar to an actual TSE project and will have 30 minutes to demonstrate your ability to think through and solve this problem. You should be prepared to both talk through your thought process as well as create some very low fidelity visuals to convey your ideas. We really want to understand what you are thinking the whole time, so please think out loud! If you get stuck at any point, the interviewer(s) will be there to help guide you
 
-### How many project teams are there? How are TSE projects structured?
-
-The number of project teams in TSE depends on the number of nonprofits we are able to secure collaborations with every year. In the past two school years, we had 7 project teams.
-
-In the 2021-2022 school year, TSE’s structure consisted of our board, a design team, 6 project-based teams, and the TEST team. Each project team was made up of an engineering manager, a product manager, 6 developers, and 2-3 designers. Teams work independently of one another to create software for the nonprofit organization that they have been assigned to.
-
-### What does being a product manager look like at TSE?
-
-A product manager is on a project team with developers and designers. They attend every client meeting to understand the nonprofit’s needs and convert them into features that designers and developers will work on building. The product manager may have 1 client meeting each week, as well as a team meeting where they can communicate their updates. Finally, they’ll also meet with the rest of the product managers each week to update each other on their progress. There will also be documentation written every few weeks to keep track of changes to the product roadmap. A typical week for product managers has 3-4 meetings and a couple of hours worth of preparation, totaling up to 4-6 hours worth of work per week.
-
 ### What does being a designer look like at TSE?
 
 Designers communicate closely with our nonprofit clients in order to craft user flows, wireframes, and prototypes that align with their needs. Designers often take on projects in pairs. They are the ones creating the detailed plan for the end solution, which is then eventually handed off to TSE developers. There’s a variety of types of projects, ranging from website rebranding to internal software tools. Typically, designers spend 5-7 hours a week on TSE activities.
-
-### What does being a developer look like at TSE?
-
-We emulate the Agile Workflow to give our developers some insight on industry standards. Developers complete weekly tasks assigned to them by their project manager during their team meetings. The work that you will be doing depends on your client. For most web development work, we tend to stick to the MERN stack, and for most cross-platform mobile development, we focus on using React Native with Expo. This means that, as a whole, TSE ends up with many JavaScript-based applications. However, depending on the client's needs, we have been known to use other technologies, such as TypeScript, Go, and PostgreSQL. Typically, developers spend 4-6 hours a week on TSE activities.
-
-### How can I stay up-to-date with upcoming TSE events?
-
-We host both internal and public events. To find our public events, follow us on [Facebook](https://www.facebook.com/TritonSE) and [Instagram](https://www.instagram.com/ucsd_tse/). You can also find a list of our past and upcoming events [here](/events).
-
-### How did TSE operate during the pandemic?
-
-We worked in a hybrid model during the pandemic. Now, we are continuing our hybrid model while increasing in person activities. Our last recruitment season was completely online and we plan to continue the online structure this year. We will do our best to provide as much support as possible through in person Information Sessions and various panels, but all interviews and phone screens will continue to be remote.
-
-All TSE team meetings and work are conducted in a hybrid structure at the moment. We will be continuing regular virtual & in person workshops and social events. This year, all of our events are primarily in person. For the most up-to-date information, visit our Facebook page or check out upcoming events [here](/events).
-
+          `}
+        </CollapsibleSection>
+        {markdown`
 ## Still have questions?
 
 If you still have any questions regarding how to get involved with us, please feel free to contact us at [tse@ucsd.edu](mailto:tse@ucsd.edu) and we will get in touch with you as soon as possible.
