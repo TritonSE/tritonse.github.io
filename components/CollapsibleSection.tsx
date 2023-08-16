@@ -1,6 +1,5 @@
 import classNames from "classnames";
 import React, { useState } from "react";
-import { Container } from "react-bootstrap";
 import { BsArrowRightCircle } from "react-icons/bs";
 
 import styles from "./CollapsibleSection.module.scss";
@@ -19,7 +18,7 @@ export default function CollapsibleSection({ title, children }: CollapsibleSecti
 
   return (
     <>
-      <div className={styles.title} onClick={toggle}>
+      <div className={styles.title} onClick={toggle} onKeyDown={toggle} role="presentation">
         <BsArrowRightCircle
           className={classNames(styles.arrow, isOpen ? styles.facingDown : null)}
           size={40}
