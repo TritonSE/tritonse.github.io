@@ -44,11 +44,13 @@ export default function EventCard({
           <strong>When:</strong>
           {" " + startTime.toFormat("DDD / t") + " Pacific"}
         </EventText>
-        <EventText>
-          <ArrowLink href={url} dark>
-            Learn more
-          </ArrowLink>
-        </EventText>
+        {url ? (
+          <EventText>
+            <ArrowLink href={url} dark>
+              Learn more
+            </ArrowLink>
+          </EventText>
+        ) : null}
       </Card.Body>
     </Card>
   );
