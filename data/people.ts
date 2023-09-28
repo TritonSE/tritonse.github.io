@@ -536,7 +536,7 @@ const constPeople = [
   },
   {
     name: "Andrew Russell",
-    roles: ["Developer", "Engineering Manager"],
+    roles: ["Developer", "Engineering Manager", "VP Technology"],
   },
   {
     name: "James Zhang",
