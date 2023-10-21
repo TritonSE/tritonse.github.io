@@ -455,7 +455,7 @@ const constPeople = [
   },
   {
     name: "Philip Zhang",
-    roles: ["Developer"],
+    roles: ["Developer", "Engineering Manager"],
   },
   {
     name: "Rohan Puthukudy",
@@ -544,11 +544,11 @@ const constPeople = [
   },
   {
     name: "Mohak Vaswani",
-    roles: ["Developer", "Product Manager"],
+    roles: ["Developer"],
   },
   {
     name: "Shreya Gupta",
-    roles: ["Developer"],
+    roles: ["Developer", "Product Manager"],
   },
   {
     name: "Akhilan Gurumoorthy",
@@ -574,7 +574,7 @@ const constPeople = [
   },
   {
     name: "Helen Lin",
-    roles: ["Developer"],
+    roles: ["Developer", "Engineering Manager"],
   },
   {
     name: "Mary Vu",
@@ -642,6 +642,7 @@ const constPeople = [
   {
     name: "Mrinal Sharma",
     roles: ["Product Manager"],
+    graduation: 2023,
   },
   {
     name: "Akash Premkumar",
@@ -650,7 +651,7 @@ const constPeople = [
   },
   {
     name: "Annie Wen",
-    roles: ["Product Manager", "Designer"],
+    roles: ["Product Manager", "Designer", "TEST Design Lead"],
   },
   {
     name: "Casey Toy",
@@ -707,11 +708,11 @@ const constPeople = [
   },
   {
     name: "Adhithya Ananthan-Regina",
-    roles: ["Developer"],
+    roles: ["Developer", "Engineering Manager"],
   },
   {
     name: "Anthony Pertsel",
-    roles: ["Developer"],
+    roles: ["Developer", "Engineering Manager"],
   },
   {
     name: "Arnav Modi",
@@ -723,7 +724,7 @@ const constPeople = [
   },
   {
     name: "Benjamin Johnson",
-    roles: ["Developer"],
+    roles: ["Developer", "Engineering Manager"],
   },
   {
     name: "Brenton Dunn",
@@ -743,7 +744,7 @@ const constPeople = [
   },
   {
     name: "Emily Marschall-Niswonger",
-    roles: ["Developer"],
+    roles: ["Developer", "TEST Developer Lead"],
   },
   {
     name: "Emily Yu",
@@ -782,11 +783,11 @@ const constPeople = [
   },
   {
     name: "Jennifer Tanurdjaja",
-    roles: ["Developer"],
+    roles: ["Developer", "Product Manager"],
   },
   {
     name: "Jenny Mar",
-    roles: ["Developer"],
+    roles: ["Developer", "Engineering Manager"],
   },
   {
     name: "Jocelyn Horng",
