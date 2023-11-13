@@ -17,7 +17,7 @@ export default function About() {
       <PageTitle title="About Us" />
       <PaddedBox heading="Our Mission">
         {markdown`
-TSE's mission to craft digital solutions for nonprofit organizations in our community.
+TSE's mission is to craft digital solutions for nonprofit organizations in our community.
         `}
         <Gallery
           layout={[
