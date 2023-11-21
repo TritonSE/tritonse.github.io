@@ -22,22 +22,25 @@ import contentYCW from "../projects/ycw-greenpoint-rated-app.mdx";
 import contentYSC from "../projects/ysc-mobile-app.mdx";
 import { assertUniqueKey, makeComparator, makeSlug } from "../util";
 
-import { PersonName, Role, allRoles } from "./people";
+import { PersonId, Role, allRoles } from "./people";
 
 type MDXPage = (props: MDXProps) => JSX.Element;
 
-export type ProjectTeam = readonly {
+type ProjectTeam = readonly {
   readonly role: Role;
-  readonly names: readonly PersonName[];
+  readonly names: readonly PersonId[];
 }[];
 
-export interface Project {
+interface RawProject {
   readonly name: string;
-  readonly slug: string;
   readonly description: string;
   readonly content: MDXPage;
   readonly thumbnail: ImageKey | null;
   readonly team: ProjectTeam;
+}
+
+interface Project extends RawProject {
+  readonly slug: string;
 }
 
 // Metadata for each project. Projects should be manually ordered from newest
@@ -52,25 +55,25 @@ const constProjects = [
     team: [
       {
         role: "Engineering Manager",
-        names: ["Patrick Brown"],
+        names: ["Patrick Brown 0"],
       },
       {
         role: "Product Manager",
-        names: ["Mrinal Sharma"],
+        names: ["Mrinal Sharma 0"],
       },
       {
         role: "Designer",
-        names: ["Andrew Caballero", "Juliet Zhuang", "Tracy Nguyen"],
+        names: ["Andrew Caballero 0", "Juliet Zhuang 0", "Tracy Nguyen 0"],
       },
       {
         role: "Developer",
         names: [
-          "Aksharan Saravanan",
-          "Andrew Russell",
-          "Benson Vuong",
-          "James Zhang",
-          "Mohak Vaswani",
-          "Shreya Gupta",
+          "Aksharan Saravanan 0",
+          "Andrew Russell 0",
+          "Benson Vuong 0",
+          "James Zhang 0",
+          "Mohak Vaswani 0",
+          "Shreya Gupta 0",
         ],
       },
     ],
@@ -84,25 +87,25 @@ const constProjects = [
     team: [
       {
         role: "Engineering Manager",
-        names: ["Navid Boloorian"],
+        names: ["Navid Boloorian 0"],
       },
       {
         role: "Product Manager",
-        names: ["Reyna Abhyankar", "Stephen Tan"],
+        names: ["Reyna Abhyankar 0", "Stephen Tan 0"],
       },
       {
         role: "Designer",
-        names: ["Kelly Li", "Jonathan Lum", "Tracey Du"],
+        names: ["Kelly Li 0", "Jonathan Lum 0", "Tracey Du 0"],
       },
       {
         role: "Developer",
         names: [
-          "Ainesh Arumugam",
-          "Alex Zhang",
-          "Kevin Fu",
-          "Elias Fang",
-          "Pratyush Chand",
-          "William Wu",
+          "Ainesh Arumugam 0",
+          "Alex Zhang 0",
+          "Kevin Fu 0",
+          "Elias Fang 0",
+          "Pratyush Chand 0",
+          "William Wu 0",
         ],
       },
     ],
@@ -116,26 +119,26 @@ const constProjects = [
     team: [
       {
         role: "Engineering Manager",
-        names: ["Anshul Birla"],
+        names: ["Anshul Birla 0"],
       },
       {
         role: "Product Manager",
-        names: ["Annie Wen"],
+        names: ["Annie Wen 0"],
       },
       {
         role: "Designer",
-        names: ["Evan Lam", "Rickie Chen", "Lydia Smith"],
+        names: ["Evan Lam 0", "Rickie Chen 0", "Lydia Smith 0"],
       },
       {
         role: "Developer",
         names: [
-          "Allison Bhavsar",
-          "Anvitaa Sekhsaria",
-          "Nishant Balaji",
-          "Ryan Bui",
-          "Zain Khan",
-          "Alex Zhang",
-          "William Jin",
+          "Allison Bhavsar 0",
+          "Anvitaa Sekhsaria 0",
+          "Nishant Balaji 0",
+          "Ryan Bui 0",
+          "Zain Khan 0",
+          "Alex Zhang 0",
+          "William Jin 0",
         ],
       },
     ],
@@ -149,21 +152,21 @@ const constProjects = [
     team: [
       {
         role: "Engineering Manager",
-        names: ["Dhanush Nanjunda Reddy", "Advay Sharma", "William Wu"],
+        names: ["Dhanush Nanjunda Reddy 0", "Advay Sharma 0", "William Wu 0"],
       },
       {
         role: "Designer",
-        names: ["Rickie Chen", "Rachel Blumin"],
+        names: ["Rickie Chen 0", "Rachel Blumin 0"],
       },
       {
         role: "Developer",
         names: [
-          "Andrew Masek",
-          "Artyom Muradyan",
-          "Jacob Au",
-          "Parth Patel",
-          "Philip Zhang",
-          "William Jin",
+          "Andrew Masek 0",
+          "Artyom Muradyan 0",
+          "Jacob Au 0",
+          "Parth Patel 0",
+          "Philip Zhang 0",
+          "William Jin 0",
         ],
       },
     ],
@@ -177,26 +180,26 @@ const constProjects = [
     team: [
       {
         role: "Engineering Manager",
-        names: ["Nicolas La Polla", "Andrew Russell"],
+        names: ["Nicolas La Polla 0", "Andrew Russell 0"],
       },
       {
         role: "Product Manager",
-        names: ["Akashnarendran Premkumar"],
+        names: ["Akashnarendran Premkumar 0"],
       },
       {
         role: "Designer",
-        names: ["Andrew Caballero", "Rachel Blumin", "Tracey Du"],
+        names: ["Andrew Caballero 0", "Rachel Blumin 0", "Tracey Du 0"],
       },
       {
         role: "Developer",
         names: [
-          "Akhilan Gurumoorthy",
-          "Deepansha Singh",
-          "Helen Lin",
-          "Ly Nguyen",
-          "Rohan Puthukudy",
-          "Ryan Hung",
-          "Yucheng Huang",
+          "Akhilan Gurumoorthy 0",
+          "Deepansha Singh 0",
+          "Helen Lin 0",
+          "Ly Nguyen 0",
+          "Rohan Puthukudy 0",
+          "Ryan Hung 0",
+          "Yucheng Huang 0",
         ],
       },
     ],
@@ -210,24 +213,24 @@ const constProjects = [
     team: [
       {
         role: "Project Manager",
-        names: ["David Cruz"],
+        names: ["David Cruz 0"],
       },
       {
         role: "Designer",
-        names: ["Kenny Tran", "Andrew Caballero", "Rickie Chen"],
+        names: ["Kenny Tran 0", "Andrew Caballero 0", "Rickie Chen 0"],
       },
       {
         role: "Developer",
         names: [
-          "Rohith Kasar",
-          "Rohan Puthukudy",
-          "Allison Bhavsar",
-          "Dhruv Sood",
-          "Anshul Birla",
-          "Aksharan Saravanan",
-          "Kevin Han",
-          "Philip Zhang",
-          "Emmanuel Flores",
+          "Rohith Kasar 0",
+          "Rohan Puthukudy 0",
+          "Allison Bhavsar 0",
+          "Dhruv Sood 0",
+          "Anshul Birla 0",
+          "Aksharan Saravanan 0",
+          "Kevin Han 0",
+          "Philip Zhang 0",
+          "Emmanuel Flores 0",
         ],
       },
     ],
@@ -241,22 +244,22 @@ const constProjects = [
     team: [
       {
         role: "Project Manager",
-        names: ["Sara Blumin"],
+        names: ["Sara Blumin 0"],
       },
       {
         role: "Designer",
-        names: ["Kenny Tran", "Evan Lam"],
+        names: ["Kenny Tran 0", "Evan Lam 0"],
       },
       {
         role: "Developer",
         names: [
-          "Roger Ji",
-          "William Wu",
-          "Nicolas La Polla",
-          "Nirmal Agnihotri",
-          "Ryan Bui",
-          "Stephen Tan",
-          "Emmanuel Flores",
+          "Roger Ji 0",
+          "William Wu 0",
+          "Nicolas La Polla 0",
+          "Nirmal Agnihotri 0",
+          "Ryan Bui 0",
+          "Stephen Tan 0",
+          "Emmanuel Flores 0",
         ],
       },
     ],
@@ -270,28 +273,28 @@ const constProjects = [
     team: [
       {
         role: "Project Manager",
-        names: ["Hannah Hsu", "Navid Boloorian"],
+        names: ["Hannah Hsu 0", "Navid Boloorian 0"],
       },
       {
         role: "Designer",
-        names: ["Mylinh Lac", "Kenny Tran", "Kelly Li"],
+        names: ["Mylinh Lac 0", "Kenny Tran 0", "Kelly Li 0"],
       },
       {
         role: "Developer",
         names: [
-          "Philip Zhang",
-          "Justin Yao Du",
-          "Benson Vuong",
-          "Anson Lee",
-          "Zain Khan",
-          "Ly Nguyen",
-          "Arnav Taneja",
-          "Elias Fang",
-          "Jacob Au",
-          "Xi-Kai Wu",
-          "Deepansha Singh",
-          "Shravan Konduru",
-          "Nicholas Vanny",
+          "Philip Zhang 0",
+          "Justin Yao Du 0",
+          "Benson Vuong 0",
+          "Anson Lee 0",
+          "Zain Khan 0",
+          "Ly Nguyen 0",
+          "Arnav Taneja 0",
+          "Elias Fang 0",
+          "Jacob Au 0",
+          "Xi-Kai Wu 0",
+          "Deepansha Singh 0",
+          "Shravan Konduru 0",
+          "Nicholas Vanny 0",
         ],
       },
     ],
@@ -305,24 +308,24 @@ const constProjects = [
     team: [
       {
         role: "Project Manager",
-        names: ["Amrit Singh", "Navid Boloorian"],
+        names: ["Amrit Singh 0", "Navid Boloorian 0"],
       },
       {
         role: "Designer",
-        names: ["Tracy Nguyen", "Rachel Blumin"],
+        names: ["Tracy Nguyen 0", "Rachel Blumin 0"],
       },
       {
         role: "Developer",
         names: [
-          "Alejandro Rodriguez Pascual",
-          "Dhanush Nanjunda Reddy",
-          "Patrick Brown",
-          "Thomas Garry",
-          "Amitesh Sharma",
-          "Navid Boloorian",
-          "Aaron Kirk",
-          "Elias Fang",
-          "Jacob Au",
+          "Alejandro Rodriguez Pascual 0",
+          "Dhanush Nanjunda Reddy 0",
+          "Patrick Brown 0",
+          "Thomas Garry 0",
+          "Amitesh Sharma 0",
+          "Navid Boloorian 0",
+          "Aaron Kirk 0",
+          "Elias Fang 0",
+          "Jacob Au 0",
         ],
       },
     ],
@@ -336,26 +339,26 @@ const constProjects = [
     team: [
       {
         role: "Project Manager",
-        names: ["Arnold Duan", "Robert Tatum", "Advay Sharma"],
+        names: ["Arnold Duan 0", "Robert Tatum 0", "Advay Sharma 0"],
       },
       {
         role: "Designer",
-        names: ["Jessica Nguyen", "Lydia Smith", "Kelly Li"],
+        names: ["Jessica Nguyen 0", "Lydia Smith 0", "Kelly Li 0"],
       },
       {
         role: "Developer",
         names: [
-          "Alejandro Rodriguez Pascual",
-          "Loc Vu",
-          "Roger Ji",
-          "Rohan Puthukudy",
-          "Advay Sharma",
-          "Shravan Hariharan",
-          "Kunal Bhandarkar",
-          "Hana Kim",
-          "Robert Tatum",
-          "Uposhanto Bhattacharya",
-          "Thai Gillespie",
+          "Alejandro Rodriguez Pascual 0",
+          "Loc Vu 0",
+          "Roger Ji 0",
+          "Rohan Puthukudy 0",
+          "Advay Sharma 0",
+          "Shravan Hariharan 0",
+          "Kunal Bhandarkar 0",
+          "Hana Kim 0",
+          "Robert Tatum 0",
+          "Uposhanto Bhattacharya 0",
+          "Thai Gillespie 0",
         ],
       },
     ],
@@ -369,18 +372,18 @@ const constProjects = [
     team: [
       {
         role: "Project Manager",
-        names: ["Alex Chiu", "Bryant Liu"],
+        names: ["Alex Chiu 0", "Bryant Liu 0"],
       },
       {
         role: "Developer",
         names: [
-          "Bryant Liu",
-          "Davin Tjong",
-          "Nathan Zhao",
-          "Brent Min",
-          "Alex Li",
-          "Kenny Yi",
-          "Ayush Shukla",
+          "Bryant Liu 0",
+          "Davin Tjong 0",
+          "Nathan Zhao 0",
+          "Brent Min 0",
+          "Alex Li 0",
+          "Kenny Yi 0",
+          "Ayush Shukla 0",
         ],
       },
     ],
@@ -394,17 +397,17 @@ const constProjects = [
     team: [
       {
         role: "Project Manager",
-        names: ["Hannah Hsu", "Kenny Yi"],
+        names: ["Hannah Hsu 0", "Kenny Yi 0"],
       },
       {
         role: "Developer",
         names: [
-          "Arnav Taneja",
-          "Nicolas La Polla",
-          "Anne Xu",
-          "Bryant Liu",
-          "Kenny Yi",
-          "Sara Blumin",
+          "Arnav Taneja 0",
+          "Nicolas La Polla 0",
+          "Anne Xu 0",
+          "Bryant Liu 0",
+          "Kenny Yi 0",
+          "Sara Blumin 0",
         ],
       },
     ],
@@ -418,11 +421,11 @@ const constProjects = [
     team: [
       {
         role: "Project Manager",
-        names: ["Sumeet Bansal", "David Cruz"],
+        names: ["Sumeet Bansal 0", "David Cruz 0"],
       },
       {
         role: "Developer",
-        names: ["Anson Lee", "Ryan Bui", "Shravan Hariharan", "Thomas Li", "David Cruz"],
+        names: ["Anson Lee 0", "Ryan Bui 0", "Shravan Hariharan 0", "Thomas Li 0", "David Cruz 0"],
       },
     ],
   },
@@ -435,22 +438,22 @@ const constProjects = [
     team: [
       {
         role: "Project Manager",
-        names: ["Amrit Singh"],
+        names: ["Amrit Singh 0"],
       },
       {
         role: "Designer",
-        names: ["Kelly Li", "Kenny Tran", "Tracy Nguyen"],
+        names: ["Kelly Li 0", "Kenny Tran 0", "Tracy Nguyen 0"],
       },
       {
         role: "Developer",
         names: [
-          "Alejandro Rodriguez Pascual",
-          "Amitesh Sharma",
-          "Dhanush Nanjunda Reddy",
-          "Aaron Kirk",
-          "Navid Boloorian",
-          "Patrick Brown",
-          "Thomas Garry",
+          "Alejandro Rodriguez Pascual 0",
+          "Amitesh Sharma 0",
+          "Dhanush Nanjunda Reddy 0",
+          "Aaron Kirk 0",
+          "Navid Boloorian 0",
+          "Patrick Brown 0",
+          "Thomas Garry 0",
         ],
       },
     ],
@@ -464,20 +467,20 @@ const constProjects = [
     team: [
       {
         role: "Project Manager",
-        names: ["Jason Cabrera"],
+        names: ["Jason Cabrera 0"],
       },
       {
         role: "Designer",
-        names: ["Jessica Nguyen", "Nhu Luong"],
+        names: ["Jessica Nguyen 0", "Nhu Luong 0"],
       },
       {
         role: "Developer",
         names: [
-          "Amrit Singh",
-          "Nicholas Vanny",
-          "Dhanush Nanjunda Reddy",
-          "Upo Bhat",
-          "Anshul Birla",
+          "Amrit Singh 0",
+          "Nicholas Vanny 0",
+          "Dhanush Nanjunda Reddy 0",
+          "Upo Bhat 0",
+          "Anshul Birla 0",
         ],
       },
     ],
@@ -491,11 +494,11 @@ const constProjects = [
     team: [
       {
         role: "Project Manager",
-        names: ["Glenn Raskovich"],
+        names: ["Glenn Raskovich 0"],
       },
       {
         role: "Developer",
-        names: ["Anoushka Dave", "Benson Vuong", "Robert Tatum", "Rohith Kasar"],
+        names: ["Anoushka Dave 0", "Benson Vuong 0", "Robert Tatum 0", "Rohith Kasar 0"],
       },
     ],
   },
@@ -508,15 +511,15 @@ const constProjects = [
     team: [
       {
         role: "Project Manager",
-        names: ["Dan Huang"],
+        names: ["Dan Huang 0"],
       },
       {
         role: "Designer",
-        names: ["Jessica Nguyen"],
+        names: ["Jessica Nguyen 0"],
       },
       {
         role: "Developer",
-        names: ["Alexandra Michael", "Gary Zhao", "John Lu", "Nathan Zhao"],
+        names: ["Alexandra Michael 0", "Gary Zhao 0", "John Lu 0", "Nathan Zhao 0"],
       },
     ],
   },
@@ -529,15 +532,15 @@ const constProjects = [
     team: [
       {
         role: "Project Manager",
-        names: ["Holly Ham"],
+        names: ["Holly Ham 0"],
       },
       {
         role: "Designer",
-        names: ["Nhu Luong"],
+        names: ["Nhu Luong 0"],
       },
       {
         role: "Developer",
-        names: ["Jason Vega", "Bryan Yuan", "Sara Blumin", "Victor Luong"],
+        names: ["Jason Vega 0", "Bryan Yuan 0", "Sara Blumin 0", "Victor Luong 0"],
       },
     ],
   },
@@ -550,15 +553,15 @@ const constProjects = [
     team: [
       {
         role: "Project Manager",
-        names: ["Hannah Hsu"],
+        names: ["Hannah Hsu 0"],
       },
       {
         role: "Developer",
-        names: ["Jason Cabrera", "Declan Sullivan", "Kevin Soloway"],
+        names: ["Jason Cabrera 0", "Declan Sullivan 0", "Kevin Soloway 0"],
       },
     ],
   },
-] as const;
+] as const satisfies readonly RawProject[];
 
 function sortTeam(team: ProjectTeam): ProjectTeam {
   return (
@@ -581,3 +584,4 @@ assertUniqueKey(allProjects, "name");
 assertUniqueKey(allProjects, "slug");
 
 export { allProjects };
+export type { Project, ProjectTeam };
