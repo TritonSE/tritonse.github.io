@@ -15,11 +15,11 @@ interface MemberProfileCardProps {
 export default function MemberProfileCard({ member, roleLimit }: MemberProfileCardProps) {
   const subtitles = roleLimit === 0 ? [] : member.roles.slice(-roleLimit).reverse();
   return (
-    <ProfileCard name={member.name} subtitles={subtitles}>
+    <ProfileCard name={member.id} subtitles={subtitles}>
       <RatioImage
         aspectRatio={[1, 1]}
-        imageKey={firstValidImageKey(`members/${makeSlug(member.name)}`, "icons/tse-bulb")}
-        alt={`Profile photo of ${member.name}`}
+        imageKey={firstValidImageKey(`members/${makeSlug(member.id)}`, "icons/tse-bulb")}
+        alt={`Profile photo of ${member.id}`}
       />
     </ProfileCard>
   );

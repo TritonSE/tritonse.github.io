@@ -918,13 +918,13 @@ const mutablePeople: Member[] = rawPeople.map((p) => {
   return { ...p, name: p.id.replace(trailingNumberRegex, "") };
 });
 mutablePeople.sort(
-  makeComparator(({ roles, name, ...person }) => [
+  makeComparator(({ roles, id: name, ...person }) => [
     person.graduation ?? 9999,
     allRoles.indexOf(roles[roles.length - 1]),
     name,
   ])
 );
-assertUniqueKey(mutablePeople, "name");
+assertUniqueKey(mutablePeople, "id");
 
 const allPeople = mutablePeople as readonly Member[];
 const visiblePeople = allPeople.filter((person) => !person.hidden);
@@ -937,5 +937,4 @@ const allAlumni: readonly Alumnus[] = visiblePeople.filter(isAlumnus);
 const allMembers: readonly Member[] = visiblePeople.filter((person) => !isAlumnus(person));
 
 export { allRoles, allAlumni, allMembers, allPeople };
-
 export type { Alumnus, Member, PersonId, Role };

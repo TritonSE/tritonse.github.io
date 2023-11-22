@@ -1,4 +1,4 @@
-import Image, { ImageProps } from "next/image";
+import Image, { ImageProps } from "next/legacy/image";
 import React from "react";
 
 import { getImage, ImageKey, staticLoader } from "../images";

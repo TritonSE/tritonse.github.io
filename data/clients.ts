@@ -130,7 +130,7 @@ const constClients = [
   },
   // TODO: add YCW info
 ] as const;
-export type ClientName = (typeof constClients)[number]["name"];
+export type ClientName = typeof constClients[number]["name"];
 
 const allClients: readonly Client[] = constClients
   .slice()
