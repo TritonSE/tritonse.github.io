@@ -916,10 +916,10 @@ const mutablePeople: Member[] = rawPeople.map((p) => {
   return { ...p, name: p.id.replace(trailingNumberRegex, "") };
 });
 mutablePeople.sort(
-  makeComparator(({ roles, id: name, ...person }) => [
+  makeComparator(({ roles, id, ...person }) => [
     person.graduation ?? 9999,
     allRoles.indexOf(roles[roles.length - 1]),
-    name,
+    id,
   ])
 );
 assertUniqueKey(mutablePeople, "id");
