@@ -17,7 +17,7 @@ export default function About() {
       <PageTitle title="About Us" />
       <PaddedBox heading="Our Mission">
         {markdown`
-Triton Software Engineering (TSE) is a multidisciplinary student organization at UC San Diego. We partner with nonprofit organizations to design and develop software pro-bono for social good, while giving our members practical, real world experience.
+TSE's mission is to craft digital solutions for nonprofit organizations in our community.
         `}
         <Gallery
           layout={[
