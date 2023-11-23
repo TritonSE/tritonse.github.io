@@ -5,7 +5,7 @@
   "scripts": {
     "generate-images": "ts-node images/generate.ts",
     "dev": "concurrently \"next dev\" \"chokidar \\\"images/*/**\\\" -c \\\"npm run generate-images\\\"\" \"npm run generate-images\"",
-    "build": "npm run generate-images && next build && next export",
+    "build": "npm run generate-images && next build",
     "start": "next start",
     "format": "prettier --write .",
     "lint-fix": "(eslint --fix --cache --report-unused-disable-directives . || true) && prettier --write .",

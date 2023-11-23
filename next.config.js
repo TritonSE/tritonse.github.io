@@ -7,7 +7,9 @@ const withMDX = require("@next/mdx")({
     rehypePlugins: [],
   },
 });
+
 module.exports = withMDX({
+  output: "export",
   reactStrictMode: true,
   pageExtensions: ["tsx", "mdx"],
   eslint: {

@@ -28,18 +28,16 @@ const allRoles = [
 ] as const satisfies readonly string[];
 type Role = typeof allRoles[number];
 
-type Graduation = number | "TEST";
-
 interface Member {
   readonly id: string;
   readonly name: string;
   readonly roles: readonly Role[];
   readonly hidden?: boolean;
-  readonly graduation?: Graduation;
+  readonly graduation?: number;
 }
 
 interface Alumnus extends Member {
-  readonly graduation: Graduation;
+  readonly graduation: number;
 }
 
 type RawPerson = Omit<Member, "name">;
@@ -911,7 +909,7 @@ type PersonId = typeof rawPeople[number]["id"];
 const mutablePeople: Member[] = rawPeople.map((p) => {
   // Get the person's name by removing the number from the end of the ID.
   // For consistency, also assert that every ID ends with a number.
-  const trailingNumberRegex = /\s*\d*$/;
+  const trailingNumberRegex = /\s+\d+$/;
   if (!trailingNumberRegex.test(p.id)) {
     throw new Error(`Format of person ID ${JSON.stringify(p.id)} is incorrect`);
   }

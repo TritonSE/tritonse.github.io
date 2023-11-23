@@ -19,11 +19,9 @@ export default function ArrowLink({ href, children, dark }: ArrowLinkProps) {
           <BsBoxArrowUpRight style={{ position: "relative", top: "-0.2em", ...arrowStyles }} />
         </a>
       ) : (
-        <Link href={href}>
-          <a className={className}>
-            {children}
-            <BsArrowRight style={arrowStyles} />
-          </a>
+        <Link href={href} className={className}>
+          {children}
+          <BsArrowRight style={arrowStyles} />
         </Link>
       )}
     </span>

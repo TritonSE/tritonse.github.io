@@ -23,7 +23,7 @@ function FooterItem({ href, children }: { href: string; children: React.ReactNod
           {children}
         </Nav.Link>
       ) : (
-        <Link href={href} passHref>
+        <Link href={href} passHref legacyBehavior>
           <Nav.Link {...navLinkProps}>{children}</Nav.Link>
         </Link>
       )}

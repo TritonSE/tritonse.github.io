@@ -38,10 +38,8 @@ export default function BigCard({
         <Card.Title style={{ fontWeight: 600 }}>{title}</Card.Title>
         {children}
       </Card.Body>
-      <Link href={href}>
-        <a className="stretched-link">
-          <span className="visually-hidden">Learn more</span>
-        </a>
+      <Link href={href} className="stretched-link">
+        <span className="visually-hidden">Learn more</span>
       </Link>
     </Card>
   );
