@@ -23,898 +23,908 @@ const allRoles = [
   // Members
   "Designer",
   "Developer",
-  // TEST
   "TEST Designer",
   "TEST Developer",
-] as const;
+] as const satisfies readonly string[];
 type Role = typeof allRoles[number];
 
 interface Member {
+  readonly id: string;
   readonly name: string;
   readonly roles: readonly Role[];
   readonly hidden?: boolean;
+  readonly graduation?: number;
 }
 
 interface Alumnus extends Member {
-  readonly graduation: number | "TEST";
+  readonly graduation: number;
 }
 
-type Person = Member | Alumnus;
+type RawPerson = Omit<Member, "name">;
 
-const constPeople = [
+const rawPeople = [
   {
-    name: "Aaron Yang",
+    id: "Aaron Yang 0",
     roles: ["President"],
     graduation: 2018,
   },
   {
-    name: "Thomas Galpin",
+    id: "Thomas Galpin 0",
     roles: ["VP Operations"],
     graduation: 2018,
   },
   {
-    name: "Belal Aboabdo",
+    id: "Belal Aboabdo 0",
     roles: ["VP External"],
     graduation: 2018,
   },
   {
-    name: "Khaled Ahmad",
+    id: "Khaled Ahmad 0",
     roles: ["VP Technology"],
     graduation: 2018,
   },
   {
-    name: "Zach Liou",
+    id: "Zach Liou 0",
     roles: ["Project Manager", "VP Technology"],
     graduation: 2018,
   },
   {
-    name: "Donald Kwan",
+    id: "Donald Kwan 0",
     roles: ["Project Manager"],
     graduation: 2018,
   },
   {
-    name: "Joann Chen",
+    id: "Joann Chen 0",
     roles: ["Developer", "Project Manager"],
     graduation: 2018,
   },
   {
-    name: "Gary Zhao",
+    id: "Gary Zhao 0",
     roles: ["Developer"],
     graduation: 2019,
   },
   {
-    name: "John Lu",
+    id: "John Lu 0",
     roles: ["Developer"],
     graduation: 2019,
   },
   {
-    name: "Akashnarendran Premkumar",
+    id: "Akashnarendran Premkumar 0",
     roles: ["Product Manager"],
     hidden: true, // hidden because not sure who they are, just adding to give credit for their work
   },
   {
-    name: "Anne Xu",
+    id: "Anne Xu 0",
     roles: ["Developer"],
     hidden: true, // hidden because not sure who they are, just adding to give credit for their work
   },
   {
-    name: "Uposhanto Bhattacharya",
+    id: "Uposhanto Bhattacharya 0",
     roles: ["Developer"],
     hidden: true, // hidden because not sure who they are, just adding to give credit for their work
   },
   {
-    name: "Arnav Taneja",
+    id: "Arnav Taneja 0",
     roles: ["Developer"],
     hidden: true, // hidden because not sure who they are, just adding to give credit for their work
   },
   {
-    name: "Bryan Yuan",
+    id: "Bryan Yuan 0",
     roles: ["Developer"],
     hidden: true, // hidden because not sure who they are, just adding to give credit for their work
   },
   {
-    name: "Jason Vega",
+    id: "Jason Vega 0",
     roles: ["Developer"],
     hidden: true, // hidden because not sure who they are, just adding to give credit for their work
   },
   {
-    name: "Alex Li",
+    id: "Alex Li 0",
     roles: ["Developer"],
     hidden: true, // hidden because not sure who they are, just adding to give credit for their work
   },
   {
-    name: "Brent Min",
+    id: "Brent Min 0",
     roles: ["Developer"],
     hidden: true, // hidden because not sure who they are, just adding to give credit for their work
   },
   {
-    name: "Loc Vu",
+    id: "Loc Vu 0",
     roles: ["Developer"],
     hidden: true, // hidden because not sure who they are, just adding to give credit for their work
   },
   {
-    name: "Roger Ji",
+    id: "Roger Ji 0",
     roles: ["Developer"],
     hidden: true, // hidden because not sure who they are, just adding to give credit for their work
   },
   {
-    name: "Davin Tjong",
+    id: "Davin Tjong 0",
     roles: ["Developer"],
     hidden: true, // hidden because not sure who they are, just adding to give credit for their work
   },
   {
-    name: "Victor Luong",
+    id: "Victor Luong 0",
     roles: ["Developer"],
     hidden: true, // hidden because not sure who they are, just adding to give credit for their work
   },
   {
-    name: "Alexandra Michael",
+    id: "Alexandra Michael 0",
     roles: ["Developer"],
     hidden: true, // hidden because not sure who they are, just adding to give credit for their work
   },
   {
-    name: "Nathan Zhao",
+    id: "Nathan Zhao 0",
     roles: ["Developer"],
     hidden: true, // hidden because not sure who they are, just adding to give credit for their work
   },
   {
-    name: "Kevin Soloway",
+    id: "Kevin Soloway 0",
     roles: ["Developer"],
     hidden: true, // hidden because not sure who they are, just adding to give credit for their work
   },
   {
-    name: "Sumeet Bansal",
+    id: "Sumeet Bansal 0",
     roles: ["Developer", "Project Manager", "President"],
     graduation: 2020,
   },
   {
-    name: "Alex Chiu",
+    id: "Alex Chiu 0",
     roles: ["Developer", "Project Manager"],
     graduation: 2020,
   },
   {
-    name: "Bryant Liu",
+    id: "Bryant Liu 0",
     roles: ["Developer", "Project Manager"],
     graduation: 2020,
   },
   {
-    name: "Dan Huang",
+    id: "Dan Huang 0",
     roles: ["Project Manager"],
     graduation: 2020,
   },
   {
-    name: "Glenn Raskovich",
+    id: "Glenn Raskovich 0",
     roles: ["Developer", "Project Manager"],
     graduation: 2020,
   },
   {
-    name: "Kenny Yi",
+    id: "Kenny Yi 0",
     roles: ["Developer", "Project Manager"],
     graduation: 2020,
   },
   {
-    name: "Winnie Chen",
+    id: "Winnie Chen 0",
     roles: ["Designer"],
     graduation: 2020,
   },
   {
-    name: "Benson Budiman",
+    id: "Benson Budiman 0",
     roles: ["Developer", "VP Operations"],
     graduation: 2021,
   },
   {
-    name: "Ayush Shukla",
+    id: "Ayush Shukla 0",
     roles: ["Developer", "VP External"],
     graduation: 2021,
   },
   {
-    name: "Jessica Nguyen",
+    id: "Jessica Nguyen 0",
     roles: ["Designer", "VP Design"],
     graduation: 2021,
   },
   {
-    name: "Wesley Chen",
+    id: "Wesley Chen 0",
     roles: ["Developer", "VP External", "President"],
     graduation: 2021,
   },
   {
-    name: "Anoushka Dave",
+    id: "Anoushka Dave 0",
     roles: ["Developer", "VP Operations", "President"],
     graduation: 2023,
   },
   {
-    name: "Reyna Abhyankar",
+    id: "Reyna Abhyankar 0",
     roles: ["Developer", "VP Products"],
     graduation: 2023,
   },
   {
-    name: "David Hacker",
+    id: "David Hacker 0",
     roles: ["Developer", "VP Technology"],
     graduation: 2021,
   },
   {
-    name: "Holly Ham",
+    id: "Holly Ham 0",
     roles: ["Developer", "Project Manager", "VP Projects"],
     graduation: 2021,
   },
   {
-    name: "Mylinh Lac",
+    id: "Mylinh Lac 0",
     roles: ["Designer", "VP Design"],
     graduation: 2022,
   },
   {
-    name: "Heather Gan",
+    id: "Heather Gan 0",
     roles: ["Developer", "Outreach Lead"],
     graduation: 2022,
   },
   {
-    name: "Kelly Li",
+    id: "Kelly Li 0",
     roles: ["Designer", "Marketing Lead"],
     graduation: 2022,
   },
   {
-    name: "Amrit Singh",
+    id: "Amrit Singh 0",
     roles: ["Developer", "Project Manager"],
     graduation: 2021,
   },
   {
-    name: "Arnold Duan",
+    id: "Arnold Duan 0",
     roles: ["Developer", "Project Manager"],
     graduation: 2021,
   },
   {
-    name: "David Cruz",
+    id: "David Cruz 0",
     roles: ["Developer", "Project Manager"],
     graduation: 2021,
   },
   {
-    name: "Hannah Hsu",
+    id: "Hannah Hsu 0",
     roles: ["Developer", "Project Manager"],
     graduation: 2021,
   },
   {
-    name: "Sara Blumin",
+    id: "Sara Blumin 0",
     roles: ["Developer", "Project Manager"],
     graduation: 2021,
   },
   {
-    name: "Jason Cabrera",
+    id: "Jason Cabrera 0",
     roles: ["Project Manager"],
     graduation: 2021,
   },
   {
-    name: "Declan Sullivan",
+    id: "Declan Sullivan 0",
     roles: ["Project Manager", "Developer"],
     graduation: 2021,
   },
   {
-    name: "Andrew Caballero",
+    id: "Andrew Caballero 0",
     roles: ["Designer", "VP Design"],
     graduation: 2023,
   },
   {
-    name: "Evan Lam",
+    id: "Evan Lam 0",
     roles: ["Designer", "VP Design"],
     graduation: 2022,
   },
   {
-    name: "Kenny Tran",
+    id: "Kenny Tran 0",
     roles: ["Designer"],
     graduation: 2021,
   },
   {
-    name: "Lydia Smith",
+    id: "Lydia Smith 0",
     roles: ["Designer"],
     graduation: 2022,
   },
   {
-    name: "Rachel Blumin",
+    id: "Rachel Blumin 0",
     roles: ["Designer"],
     graduation: 2023,
   },
   {
-    name: "Rickie Chen",
+    id: "Rickie Chen 0",
     roles: ["Designer", "TEST Design Lead"],
     graduation: 2023,
   },
   {
-    name: "Thomas Li",
+    id: "Thomas Li 0",
     roles: ["Developer", "Project Manager"],
     hidden: true,
   },
   {
-    name: "Tracy Nguyen",
+    id: "Tracy Nguyen 0",
     roles: ["Designer"],
     graduation: 2022,
   },
   {
-    name: "Aaron Kirk",
+    id: "Aaron Kirk 0",
     roles: ["Developer"],
     hidden: true,
   },
   {
-    name: "Advay Sharma",
+    id: "Advay Sharma 0",
     roles: ["Developer", "Engineering Manager"],
     hidden: true,
   },
   {
-    name: "Aksharan Saravanan",
+    id: "Aksharan Saravanan 0",
     roles: ["Developer"],
     graduation: 2023,
   },
   {
-    name: "Alejandro Rodriguez Pascual",
+    id: "Alejandro Rodriguez Pascual 0",
     roles: ["Developer"],
     hidden: true,
   },
   {
-    name: "Allison Bhavsar",
+    id: "Allison Bhavsar 0",
     roles: ["Developer"],
     graduation: 2022,
   },
   {
-    name: "Amitesh Sharma",
+    id: "Amitesh Sharma 0",
     roles: ["Developer"],
     hidden: true,
   },
   {
-    name: "Anshul Birla",
+    id: "Anshul Birla 0",
     roles: ["Developer", "Engineering Manager"],
     graduation: 2023,
   },
   {
-    name: "Anson Lee",
+    id: "Anson Lee 0",
     roles: ["Developer"],
     graduation: 2021,
   },
   {
-    name: "Benson Vuong",
+    id: "Benson Vuong 0",
     roles: ["Developer"],
     graduation: 2022,
   },
   {
-    name: "Robert Tatum",
+    id: "Robert Tatum 0",
     roles: ["Developer", "Project Manager"],
     graduation: 2022,
   },
   {
-    name: "Deepansha Singh",
+    id: "Deepansha Singh 0",
     roles: ["Developer"],
     hidden: true,
   },
   {
-    name: "Dhanush Nanjunda Reddy",
+    id: "Dhanush Nanjunda Reddy 0",
     roles: ["Developer", "Engineering Manager"],
     graduation: 2022,
   },
   {
-    name: "Dhruv Sood",
+    id: "Dhruv Sood 0",
     roles: ["Developer"],
     hidden: true,
   },
   {
-    name: "Elias Fang",
+    id: "Elias Fang 0",
     roles: ["Developer"],
     graduation: 2022,
   },
   {
-    name: "Emmanuel Flores",
+    id: "Emmanuel Flores 0",
     roles: ["Developer", "Product Manager"],
   },
   {
-    name: "Hana Kim",
+    id: "Hana Kim 0",
     roles: ["Developer"],
     hidden: true,
   },
   {
-    name: "Jacob Au",
+    id: "Jacob Au 0",
     roles: ["Developer"],
   },
   {
-    name: "Justin Yao Du",
+    id: "Justin Yao Du 0",
     roles: ["Developer", "VP Technology"],
   },
   {
-    name: "Kevin Han",
+    id: "Kevin Han 0",
     roles: ["Developer"],
     graduation: 2021,
   },
   {
-    name: "Kunal Bhandarkar",
+    id: "Kunal Bhandarkar 0",
     roles: ["Developer", "VP Engineering"],
     graduation: 2022,
   },
   {
-    name: "Ly Nguyen",
+    id: "Ly Nguyen 0",
     roles: ["Developer"],
     graduation: 2022,
   },
   {
-    name: "Navid Boloorian",
+    id: "Navid Boloorian 0",
     roles: ["Developer", "Engineering Manager", "President"],
   },
   {
-    name: "Nicholas Vanny",
+    id: "Nicholas Vanny 0",
     roles: ["Developer"],
     hidden: true,
   },
   {
-    name: "Nicolas La Polla",
+    id: "Nicolas La Polla 0",
     roles: ["Developer", "Engineering Manager"],
     graduation: 2022,
   },
   {
-    name: "Nirmal Agnihotri",
+    id: "Nirmal Agnihotri 0",
     roles: ["Developer", "Engineering Manager"],
     graduation: 2023,
   },
   {
-    name: "Patrick Brown",
+    id: "Patrick Brown 0",
     roles: ["Developer", "Engineering Manager"],
     graduation: 2022,
   },
   {
-    name: "Philip Zhang",
+    id: "Philip Zhang 0",
     roles: ["Developer", "Engineering Manager"],
   },
   {
-    name: "Rohan Puthukudy",
+    id: "Rohan Puthukudy 0",
     roles: ["Developer", "TEST Developer Lead"],
     graduation: 2023,
   },
   {
-    name: "Rohith Kasar",
+    id: "Rohith Kasar 0",
     roles: ["Developer"],
     hidden: true,
   },
   {
-    name: "Ryan Bui",
+    id: "Ryan Bui 0",
     roles: ["Developer"],
     hidden: true,
   },
   {
-    name: "Shravan Hariharan",
+    id: "Shravan Hariharan 0",
     roles: ["Developer"],
     hidden: true,
   },
   {
-    name: "Shravan Konduru",
+    id: "Shravan Konduru 0",
     roles: ["Developer", "VP Operations"],
     graduation: 2023,
   },
   {
-    name: "Stephen Tan",
+    id: "Stephen Tan 0",
     roles: ["Developer", "TEST Developer Lead", "Product Manager", "VP Products"],
   },
   {
-    name: "Thai Gillespie",
+    id: "Thai Gillespie 0",
     roles: ["Developer"],
     graduation: 2021,
   },
   {
-    name: "Thomas Garry",
+    id: "Thomas Garry 0",
     roles: ["Developer"],
     hidden: true,
   },
   {
-    name: "Upo Bhat",
+    id: "Upo Bhat 0",
     roles: ["Developer"],
     hidden: true,
   },
   {
-    name: "William Wu",
+    id: "William Wu 0",
     roles: ["Developer", "VP Engineering"],
   },
   {
-    name: "Xi-Kai Wu",
+    id: "Xi-Kai Wu 0",
     roles: ["Developer"],
     hidden: true,
   },
   {
-    name: "Zain Khan",
+    id: "Zain Khan 0",
     roles: ["Developer"],
     hidden: true,
   },
   {
-    name: "Ainesh Arumugam",
+    id: "Ainesh Arumugam 0",
     roles: ["Developer"],
     hidden: true,
   },
   {
-    name: "Alex Zhang",
+    id: "Alex Zhang 0",
     roles: ["Developer", "Engineering Manager"],
     hidden: true,
   },
   {
-    name: "Kevin Fu",
+    id: "Kevin Fu 0",
     roles: ["Developer"],
     hidden: true,
   },
   {
-    name: "Pratyush Chand",
+    id: "Pratyush Chand 0",
     roles: ["Developer"],
   },
   {
-    name: "Andrew Russell",
+    id: "Andrew Russell 0",
     roles: ["Developer", "Engineering Manager", "VP Technology"],
   },
   {
-    name: "James Zhang",
+    id: "James Zhang 0",
     roles: ["Developer"],
   },
   {
-    name: "Mohak Vaswani",
+    id: "Mohak Vaswani 0",
     roles: ["Developer"],
   },
   {
-    name: "Shreya Gupta",
+    id: "Shreya Gupta 0",
     roles: ["Developer", "Product Manager"],
   },
   {
-    name: "Akhilan Gurumoorthy",
+    id: "Akhilan Gurumoorthy 0",
     roles: ["Developer"],
   },
   {
-    name: "Aammya Sapra",
+    id: "Aammya Sapra 0",
     roles: ["Developer"],
   },
   {
-    name: "Andrew Masek",
+    id: "Andrew Masek 0",
     roles: ["Developer"],
   },
   {
-    name: "Anvitaa Sekhsaria",
+    id: "Anvitaa Sekhsaria 0",
     roles: ["Developer"],
     graduation: 2023,
   },
   {
-    name: "Artyom Muradyan",
+    id: "Artyom Muradyan 0",
     roles: ["Developer"],
     hidden: true,
   },
   {
-    name: "Helen Lin",
+    id: "Helen Lin 0",
     roles: ["Developer", "Engineering Manager"],
   },
   {
-    name: "Mary Vu",
+    id: "Mary Vu 0",
     roles: ["Developer"],
     hidden: true,
   },
   {
-    name: "Nishant Balaji",
+    id: "Nishant Balaji 0",
     roles: ["Developer"],
     hidden: true,
   },
   {
-    name: "Aman Aggarwal",
-    roles: ["Developer", "Engineering Manager"],
-    graduation: 2023,
-  },
-  {
-    name: "Parth Patel",
-    roles: ["Developer"],
-  },
-  {
-    name: "Assaf Cohen-Arazi",
+    id: "Aman Aggarwal 0",
     roles: ["Developer", "Engineering Manager"],
     graduation: 2023,
   },
   {
-    name: "Ryan Hung",
+    id: "Parth Patel 0",
+    roles: ["Developer"],
+  },
+  {
+    id: "Assaf Cohen-Arazi 0",
+    roles: ["Developer", "Engineering Manager"],
+    graduation: 2023,
+  },
+  {
+    id: "Ryan Hung 0",
     roles: ["Developer"],
     hidden: true,
   },
   {
-    name: "Shreekar Pandey",
+    id: "Shreekar Pandey 0",
     roles: ["Developer", "VP External"],
     hidden: true,
   },
   {
-    name: "William Jin",
+    id: "William Jin 0",
     roles: ["Developer"],
   },
   {
-    name: "Yucheng Huang",
+    id: "Yucheng Huang 0",
     roles: ["Developer"],
     hidden: true,
   },
   {
-    name: "Leslie Aguiar",
+    id: "Leslie Aguiar 0",
     roles: ["Designer"],
     graduation: 2022,
   },
   {
-    name: "Jonathan Lum",
+    id: "Jonathan Lum 0",
     roles: ["Designer"],
     graduation: 2023,
   },
   {
-    name: "Juliet Zhuang",
+    id: "Juliet Zhuang 0",
     roles: ["Designer", "Marketing Lead"],
     graduation: 2023,
   },
   {
-    name: "Tracey Du",
+    id: "Tracey Du 0",
     roles: ["Designer"],
     hidden: true,
   },
   {
-    name: "Mrinal Sharma",
+    id: "Mrinal Sharma 0",
     roles: ["Product Manager"],
     graduation: 2023,
   },
   {
-    name: "Akash Premkumar",
+    id: "Akash Premkumar 0",
     roles: ["Product Manager"],
     hidden: true,
   },
   {
-    name: "Annie Wen",
+    id: "Annie Wen 0",
     roles: ["Product Manager", "Designer", "TEST Design Lead"],
   },
   {
-    name: "Casey Toy",
+    id: "Casey Toy 0",
     roles: ["TEST Developer"],
     graduation: 2022,
   },
   {
-    name: "Sage Amon",
+    id: "Sage Amon 0",
     roles: ["TEST Developer"],
     graduation: 2022,
   },
   {
-    name: "Abel Seyoum",
+    id: "Abel Seyoum 0",
     roles: ["TEST Developer"],
     graduation: 2022,
   },
   {
-    name: "Garrett Lam",
+    id: "Garrett Lam 0",
     roles: ["TEST Developer"],
     graduation: 2022,
   },
   {
-    name: "Eric Shults",
+    id: "Eric Shults 0",
     roles: ["TEST Developer"],
     graduation: 2022,
   },
   {
-    name: "Alicia Danielle",
+    id: "Alicia Danielle 0",
     roles: ["TEST Developer"],
     graduation: 2022,
   },
   {
-    name: "Frances Sy",
+    id: "Frances Sy 0",
     roles: ["TEST Designer"],
     graduation: 2022,
   },
   {
-    name: "Aska Kunita Demirci",
+    id: "Aska Kunita Demirci 0",
     roles: ["TEST Designer", "Designer"],
   },
   {
-    name: "Annie Ye",
+    id: "Annie Ye 0",
     roles: ["TEST Designer"],
     graduation: 2022,
   },
   {
-    name: "Nhu Luong",
+    id: "Nhu Luong 0",
     roles: ["Designer"],
     hidden: true,
   },
   {
-    name: "Aaron Chan",
+    id: "Aaron Chan 0",
     roles: ["Developer"],
   },
   {
-    name: "Adhithya Ananthan-Regina",
+    id: "Adhithya Ananthan-Regina 0",
     roles: ["Developer", "Engineering Manager"],
   },
   {
-    name: "Anthony Pertsel",
+    id: "Anthony Pertsel 0",
     roles: ["Developer", "Engineering Manager"],
   },
   {
-    name: "Arnav Modi",
+    id: "Arnav Modi 0",
     roles: ["Developer"],
   },
   {
-    name: "Arohan Mittal",
+    id: "Arohan Mittal 0",
     roles: ["Developer"],
   },
   {
-    name: "Benjamin Johnson",
+    id: "Benjamin Johnson 0",
     roles: ["Developer", "Engineering Manager"],
   },
   {
-    name: "Brenton Dunn",
+    id: "Brenton Dunn 0",
     roles: ["Developer"],
   },
   {
-    name: "Christen Xie",
+    id: "Christen Xie 0",
     roles: ["Developer"],
   },
   {
-    name: "Daniel Shao",
+    id: "Daniel Shao 0",
     roles: ["Developer"],
   },
   {
-    name: "Edward Lin",
+    id: "Edward Lin 0",
     roles: ["Developer"],
   },
   {
-    name: "Emily Marschall-Niswonger",
+    id: "Emily Marschall-Niswonger 0",
     roles: ["Developer", "TEST Developer Lead"],
   },
   {
-    name: "Emily Yu",
+    id: "Emily Yu 0",
     roles: ["Designer"],
   },
   {
-    name: "Emma Zhu",
+    id: "Emma Zhu 0",
     roles: ["Developer"],
   },
   {
-    name: "Fatima Dong",
+    id: "Fatima Dong 0",
     roles: ["TEST Developer"],
     graduation: 2023,
   },
   {
-    name: "Harsh Gurnani",
+    id: "Harsh Gurnani 0",
     roles: ["Developer"],
   },
   {
-    name: "Hrithik Pai",
+    id: "Hrithik Pai 0",
     roles: ["Developer"],
   },
   {
-    name: "James Luo",
+    id: "James Luo 0",
     roles: ["Developer"],
   },
   {
-    name: "Jared Rosas",
+    id: "Jared Rosas 0",
     roles: ["TEST Developer"],
     graduation: 2023,
   },
   {
-    name: "Jennifer Chen",
+    id: "Jennifer Chen 0",
     roles: ["Developer"],
     graduation: 2023,
   },
   {
-    name: "Jennifer Tanurdjaja",
+    id: "Jennifer Tanurdjaja 0",
     roles: ["Developer", "Product Manager"],
   },
   {
-    name: "Jenny Mar",
+    id: "Jenny Mar 0",
     roles: ["Developer", "Engineering Manager"],
   },
   {
-    name: "Jocelyn Horng",
+    id: "Jocelyn Horng 0",
     roles: ["Designer"],
   },
   {
-    name: "Kacy Umana",
+    id: "Kacy Umana 0",
     roles: ["TEST Developer"],
     graduation: 2023,
   },
   {
-    name: "Kevin Do",
+    id: "Kevin Do 0",
     roles: ["Developer"],
   },
   {
-    name: "Laura Liu",
+    id: "Laura Liu 0",
     roles: ["TEST Designer"],
     graduation: 2023,
   },
   {
-    name: "Lillian Ho",
+    id: "Lillian Ho 0",
     roles: ["Developer"],
   },
   {
-    name: "Madhav Bansal",
+    id: "Madhav Bansal 0",
     roles: ["Developer"],
   },
   {
-    name: "Megan Leong",
+    id: "Megan Leong 0",
     roles: ["Developer"],
   },
   {
-    name: "Melina Dimitropoulou",
+    id: "Melina Dimitropoulou 0",
     roles: ["Developer"],
   },
   {
-    name: "Nitya Pillai",
+    id: "Nitya Pillai 0",
     roles: ["Developer"],
   },
   {
-    name: "Samvrit Srinath",
+    id: "Samvrit Srinath 0",
     roles: ["Developer"],
   },
   {
-    name: "Sidhant Rohatgi",
+    id: "Sidhant Rohatgi 0",
     roles: ["Developer"],
   },
   {
-    name: "Steven Shi",
+    id: "Steven Shi 0",
     roles: ["Developer"],
   },
   {
-    name: "Sydney Zhang",
+    id: "Sydney Zhang 0",
     roles: ["Developer"],
   },
   {
-    name: "Victor Siu",
+    id: "Victor Siu 0",
     roles: ["Developer"],
   },
   {
-    name: "Vinayak Sharma",
+    id: "Vinayak Sharma 0",
     roles: ["Developer"],
   },
   {
-    name: "Vivian Liu",
+    id: "Vivian Liu 0",
     roles: ["Developer", "VP Operations"],
   },
   {
-    name: "Yash Ravipati",
+    id: "Yash Ravipati 0",
     roles: ["Developer"],
   },
   {
-    name: "Madison Plotkin",
+    id: "Madison Plotkin 0",
     roles: ["TEST Designer"],
     graduation: 2023,
   },
   {
-    name: "Mandy Lai",
+    id: "Mandy Lai 0",
     roles: ["Designer", "Marketing Lead"],
   },
   {
-    name: "Melanie Haro",
+    id: "Melanie Haro 0",
     roles: ["TEST Developer"],
     graduation: 2023,
   },
   {
-    name: "Omar Khalil",
+    id: "Omar Khalil 0",
     roles: ["TEST Designer"],
     graduation: 2023,
   },
   {
-    name: "Rosario Ortiz",
+    id: "Rosario Ortiz 0",
     roles: ["TEST Developer"],
     graduation: 2023,
   },
   {
-    name: "Shana Chen",
+    id: "Shana Chen 0",
     roles: ["Designer"],
   },
   {
-    name: "Sujana Nagasuri",
+    id: "Sujana Nagasuri 0",
     roles: ["Designer"],
   },
   {
-    name: "Tiffany Lee",
+    id: "Tiffany Lee 0",
     roles: ["Designer", "VP Design"],
   },
   {
-    name: "Yoto Kim",
+    id: "Yoto Kim 0",
     roles: ["TEST Developer"],
     graduation: 2023,
   },
-] as const;
-type PersonName = typeof constPeople[number]["name"];
+] as const satisfies readonly RawPerson[];
+
+type PersonId = typeof rawPeople[number]["id"];
 
 // Sort and validate data.
-const mutablePeople: Person[] = constPeople.slice();
+const mutablePeople: Member[] = rawPeople.map((p) => {
+  // Get the person's name by removing the number from the end of the ID.
+  // For consistency, also assert that every ID ends with a number.
+  const trailingNumberRegex = /\s+\d+$/;
+  if (!trailingNumberRegex.test(p.id)) {
+    throw new Error(`Format of person ID ${JSON.stringify(p.id)} is incorrect`);
+  }
+  return { ...p, name: p.id.replace(trailingNumberRegex, "") };
+});
 mutablePeople.sort(
-  makeComparator(({ roles, name, ...person }) => [
-    "graduation" in person ? person.graduation : 9999,
+  makeComparator(({ roles, id, ...person }) => [
+    person.graduation ?? 9999,
     allRoles.indexOf(roles[roles.length - 1]),
-    name,
+    id,
   ])
 );
-assertUniqueKey(mutablePeople, "name");
+assertUniqueKey(mutablePeople, "id");
 
-const allPeople = mutablePeople as readonly Person[];
+const allPeople = mutablePeople as readonly Member[];
 const visiblePeople = allPeople.filter((person) => !person.hidden);
 
 // Create arrays with only alumni and only members.
@@ -925,5 +935,4 @@ const allAlumni: readonly Alumnus[] = visiblePeople.filter(isAlumnus);
 const allMembers: readonly Member[] = visiblePeople.filter((person) => !isAlumnus(person));
 
 export { allRoles, allAlumni, allMembers, allPeople };
-
-export type { Alumnus, Member, Person, PersonName, Role };
+export type { Alumnus, Member, PersonId, Role };

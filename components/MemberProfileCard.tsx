@@ -18,7 +18,7 @@ export default function MemberProfileCard({ member, roleLimit }: MemberProfileCa
     <ProfileCard name={member.name} subtitles={subtitles}>
       <RatioImage
         aspectRatio={[1, 1]}
-        imageKey={firstValidImageKey(`members/${makeSlug(member.name)}`, "icons/tse-bulb")}
+        imageKey={firstValidImageKey(`members/${makeSlug(member.id)}`, "icons/tse-bulb")}
         alt={`Profile photo of ${member.name}`}
       />
     </ProfileCard>

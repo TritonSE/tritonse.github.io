@@ -28,7 +28,7 @@ function Alumni() {
       {yearsAndAlumni.map(([graduation, alumni]) => (
         <ProfileCardGroup
           key={graduation}
-          title={typeof graduation === "number" ? `Class of ${graduation}` : graduation}
+          title={`Class of ${graduation}`}
           profiles={alumni.map((alumnus, index) => (
             <MemberProfileCard member={alumnus} roleLimit={100} key={index} />
           ))}

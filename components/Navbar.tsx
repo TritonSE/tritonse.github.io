@@ -9,7 +9,7 @@ import CustomImage from "./CustomImage";
 function NavbarItem({ href, children }: { href: string; children: React.ReactNode }) {
   return (
     <Nav.Item as="li">
-      <Link href={href} passHref>
+      <Link href={href} passHref legacyBehavior>
         <Nav.Link className="px-3">{children}</Nav.Link>
       </Link>
     </Nav.Item>
@@ -21,7 +21,7 @@ export default function Navbar() {
     <BsNavbar expand="lg" bg="dark" variant="dark" style={{ background: "#18232a" }}>
       <Container>
         <BsNavbar.Brand className="py-0">
-          <Link href="/" passHref>
+          <Link href="/" passHref legacyBehavior>
             <a style={{ position: "relative", top: "3px" }}>
               <CustomImage imageKey="icons/tse-bulb" alt="Logo" width={50} height={50} />
             </a>

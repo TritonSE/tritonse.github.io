@@ -20,8 +20,8 @@ export default function ProfileCard({ name, subtitles, href, children }: Profile
         </Card.Text>
       ))}
       {href !== undefined && (
-        <Link href={href}>
-          <a className="stretched-link">Learn more</a>
+        <Link href={href} className="stretched-link">
+          Learn more
         </Link>
       )}
     </Card>

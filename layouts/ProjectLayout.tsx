@@ -11,12 +11,12 @@ import PlainLayout from "./PlainLayout";
 function TeamProfiles({ team }: { team: ProjectTeam }) {
   return (
     <>
-      {team.map(({ role, names }) => (
+      {team.map(({ role, personIds }) => (
         <React.Fragment key={role}>
-          <h3>{role + (names.length > 1 ? "s" : "")}</h3>
+          <h3>{role + (personIds.length > 1 ? "s" : "")}</h3>
           <ProfileCardGroup
-            profiles={names.map((name) => (
-              <MemberProfileCard member={findOne(allPeople, { name })} roleLimit={0} key={name} />
+            profiles={personIds.map((id) => (
+              <MemberProfileCard member={findOne(allPeople, { id })} roleLimit={0} key={id} />
             ))}
           />
         </React.Fragment>
