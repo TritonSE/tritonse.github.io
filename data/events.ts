@@ -7,7 +7,7 @@ export interface Event {
   readonly description: string;
   readonly location: string;
   readonly startTime: DateTime;
-  readonly url: string;
+  readonly url: string | null;
 }
 
 function parseDate(date: string): DateTime {
@@ -19,6 +19,30 @@ function parseDate(date: string): DateTime {
 }
 
 const events: Event[] = [
+  {
+    title: "Recruitment Info Session 2",
+    description:
+      "We are looking to recruit developers, designers, and TEST members to come join our mission of developing solutions to the software needs of nonprofits! You can learn more about our organization and the work we have done in the past on our website! Join us for Info Session 2 to learn about our organization in-depth, including who we work with, what technologies we use, and what we have to offer to you!",
+    location: "CSE 1202",
+    startTime: parseDate("2023-10-12T18:00:00"),
+    url: null,
+  },
+  {
+    title: "Recruitment Info Session 1",
+    description:
+      "We are looking to recruit developers, designers, and TEST members to come join our mission of developing solutions to the software needs of nonprofits! You can learn more about our organization and the work we have done in the past on our website! Join us for Info Session 1 to learn about our organization in-depth, including who we work with, what technologies we use, and what we have to offer to you!",
+    location: "CSE 1202",
+    startTime: parseDate("2023-10-10T19:30:00"),
+    url: null,
+  },
+  {
+    title: "Intern Panel",
+    description:
+      "Are YOU looking for an internship for next summer? Do YOU want to kick start your software engineering career by gaining vital industry experience? Do you want to learn more about how to get your first software engineering or UI/UX design internship? If so, then this event is for YOU! On October 1st, 2022 from 6:00 to 7:30PM PDT in CSE 1202, Triton Software Engineering (TSE) will be hosting an intern panel consisting of five TSE members with extensive internship experiences. The panelists are well versed in the ins and outs of the internship application process and have a lot of insights to share with you! Our panelists have interned at numerous companies including Cloudflare, Lockheed Martin, Neuralink, Protolab, Stripe, and many more! Come out to ask all of your questions about internships in the software and design industries!",
+    location: "CSE 1202",
+    startTime: parseDate("2023-10-05T18:00:00"),
+    url: null,
+  },
   {
     title: "Verkada x TSE: Product Demo and Q&A",
     description:

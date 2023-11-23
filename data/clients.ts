@@ -126,7 +126,7 @@ const constClients = [
     name: "ALUM for Northwood",
     startYear: 2022,
     endYear: null,
-    url: "https://alumfornorthwood.org/",
+    url: null,
   },
   // TODO: add YCW info
 ] as const;
