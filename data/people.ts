@@ -220,6 +220,7 @@ const constPeople = [
   {
     name: "Anoushka Dave",
     roles: ["Developer", "VP Operations", "President"],
+    graduation: 2023,
   },
   {
     name: "Reyna Abhyankar",
@@ -309,10 +310,12 @@ const constPeople = [
   {
     name: "Rachel Blumin",
     roles: ["Designer"],
+    graduation: 2023,
   },
   {
     name: "Rickie Chen",
     roles: ["Designer", "TEST Design Lead"],
+    graduation: 2023,
   },
   {
     name: "Thomas Li",
@@ -337,6 +340,7 @@ const constPeople = [
   {
     name: "Aksharan Saravanan",
     roles: ["Developer"],
+    graduation: 2023,
   },
   {
     name: "Alejandro Rodriguez Pascual",
@@ -427,7 +431,7 @@ const constPeople = [
   },
   {
     name: "Navid Boloorian",
-    roles: ["Developer", "Engineering Manager"],
+    roles: ["Developer", "Engineering Manager", "President"],
   },
   {
     name: "Nicholas Vanny",
@@ -442,6 +446,7 @@ const constPeople = [
   {
     name: "Nirmal Agnihotri",
     roles: ["Developer", "Engineering Manager"],
+    graduation: 2023,
   },
   {
     name: "Patrick Brown",
@@ -455,6 +460,7 @@ const constPeople = [
   {
     name: "Rohan Puthukudy",
     roles: ["Developer", "TEST Developer Lead"],
+    graduation: 2023,
   },
   {
     name: "Rohith Kasar",
@@ -474,6 +480,7 @@ const constPeople = [
   {
     name: "Shravan Konduru",
     roles: ["Developer", "VP Operations"],
+    graduation: 2023,
   },
   {
     name: "Stephen Tan",
@@ -516,6 +523,7 @@ const constPeople = [
   {
     name: "Alex Zhang",
     roles: ["Developer", "Engineering Manager"],
+    hidden: true,
   },
   {
     name: "Kevin Fu",
@@ -576,10 +584,12 @@ const constPeople = [
   {
     name: "Nishant Balaji",
     roles: ["Developer"],
+    hidden: true,
   },
   {
     name: "Aman Aggarwal",
     roles: ["Developer", "Engineering Manager"],
+    graduation: 2023,
   },
   {
     name: "Parth Patel",
@@ -588,6 +598,7 @@ const constPeople = [
   {
     name: "Assaf Cohen-Arazi",
     roles: ["Developer", "Engineering Manager"],
+    graduation: 2023,
   },
   {
     name: "Ryan Hung",
@@ -616,14 +627,17 @@ const constPeople = [
   {
     name: "Jonathan Lum",
     roles: ["Designer"],
+    graduation: 2023,
   },
   {
     name: "Juliet Zhuang",
     roles: ["Designer", "Marketing Lead"],
+    graduation: 2023,
   },
   {
     name: "Tracey Du",
     roles: ["Designer"],
+    hidden: true,
   },
   {
     name: "Mrinal Sharma",
@@ -636,42 +650,42 @@ const constPeople = [
   },
   {
     name: "Annie Wen",
-    roles: ["Product Manager"],
+    roles: ["Product Manager", "Designer"],
   },
   {
-    name: " Casey Toy",
+    name: "Casey Toy",
     roles: ["TEST Developer"],
-    graduation: "TEST",
+    graduation: 2022,
   },
   {
     name: "Sage Amon",
     roles: ["TEST Developer"],
-    graduation: "TEST",
+    graduation: 2022,
   },
   {
     name: "Abel Seyoum",
     roles: ["TEST Developer"],
-    graduation: "TEST",
+    graduation: 2022,
   },
   {
     name: "Garrett Lam",
     roles: ["TEST Developer"],
-    graduation: "TEST",
+    graduation: 2022,
   },
   {
     name: "Eric Shults",
     roles: ["TEST Developer"],
-    graduation: "TEST",
+    graduation: 2022,
   },
   {
     name: "Alicia Danielle",
     roles: ["TEST Developer"],
-    graduation: "TEST",
+    graduation: 2022,
   },
   {
     name: "Frances Sy",
     roles: ["TEST Designer"],
-    graduation: "TEST",
+    graduation: 2022,
   },
   {
     name: "Aska Kunita Demirci",
@@ -680,7 +694,7 @@ const constPeople = [
   {
     name: "Annie Ye",
     roles: ["TEST Designer"],
-    graduation: "TEST",
+    graduation: 2022,
   },
   {
     name: "Nhu Luong",
@@ -742,6 +756,7 @@ const constPeople = [
   {
     name: "Fatima Dong",
     roles: ["TEST Developer"],
+    graduation: 2023,
   },
   {
     name: "Harsh Gurnani",
@@ -758,10 +773,12 @@ const constPeople = [
   {
     name: "Jared Rosas",
     roles: ["TEST Developer"],
+    graduation: 2023,
   },
   {
     name: "Jennifer Chen",
     roles: ["Developer"],
+    graduation: 2023,
   },
   {
     name: "Jennifer Tanurdjaja",
@@ -778,6 +795,7 @@ const constPeople = [
   {
     name: "Kacy Umana",
     roles: ["TEST Developer"],
+    graduation: 2023,
   },
   {
     name: "Kevin Do",
@@ -786,6 +804,7 @@ const constPeople = [
   {
     name: "Laura Liu",
     roles: ["TEST Designer"],
+    graduation: 2023,
   },
   {
     name: "Lillian Ho",
@@ -833,7 +852,7 @@ const constPeople = [
   },
   {
     name: "Vivian Liu",
-    roles: ["Developer"],
+    roles: ["Developer", "VP Operations"],
   },
   {
     name: "Yash Ravipati",
@@ -842,22 +861,26 @@ const constPeople = [
   {
     name: "Madison Plotkin",
     roles: ["TEST Designer"],
+    graduation: 2023,
   },
   {
     name: "Mandy Lai",
-    roles: ["Designer"],
+    roles: ["Designer", "Marketing Lead"],
   },
   {
     name: "Melanie Haro",
     roles: ["TEST Developer"],
+    graduation: 2023,
   },
   {
     name: "Omar Khalil",
     roles: ["TEST Designer"],
+    graduation: 2023,
   },
   {
     name: "Rosario Ortiz",
     roles: ["TEST Developer"],
+    graduation: 2023,
   },
   {
     name: "Shana Chen",
@@ -874,6 +897,7 @@ const constPeople = [
   {
     name: "Yoto Kim",
     roles: ["TEST Developer"],
+    graduation: 2023,
   },
 ] as const;
 type PersonName = typeof constPeople[number]["name"];

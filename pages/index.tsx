@@ -41,7 +41,7 @@ export default function Home() {
           {markdown`
 # Triton Software Engineering
 
-Crafting digital solutions for the community around us.
+Crafting digital solutions for nonprofit organizations in our community.
           `}
         </div>
       </Hero>
