@@ -1,9 +1,9 @@
 import Head from "next/head";
 import React from "react";
 
-export interface PageTitleProps {
+export type PageTitleProps = {
   title?: string;
-}
+};
 
 export default function PageTitle({ title }: PageTitleProps) {
   return (

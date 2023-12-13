@@ -4,17 +4,18 @@ import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Row from "react-bootstrap/Row";
-import type { IconType } from "react-icons";
-import { FaEnvelope, FaFacebook, FaLinkedin, FaGithub, FaInstagram } from "react-icons/fa";
+import { FaEnvelope, FaFacebook, FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 import styles from "./Footer.module.scss";
+
+import type { IconType } from "react-icons";
 
 function FooterHeading({ children }: { children: React.ReactNode }) {
   return <h2 className={styles.heading}>{children}</h2>;
 }
 
 function FooterItem({ href, children }: { href: string; children: React.ReactNode }) {
-  const external = href.indexOf(":") >= 0;
+  const external = href.includes(":");
   const navLinkProps = { className: styles.link };
   return (
     <Nav.Item>

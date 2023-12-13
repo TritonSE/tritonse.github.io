@@ -3,9 +3,9 @@ import React from "react";
 import ArrowLink from "./ArrowLink";
 import BigCard, { BigCardProps } from "./BigCard";
 
-export interface GetInvolvedCardProps extends BigCardProps {
+export type GetInvolvedCardProps = {
   linkText: string;
-}
+} & BigCardProps;
 
 export default function GetInvolvedCard({
   href,

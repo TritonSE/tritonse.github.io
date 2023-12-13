@@ -10,14 +10,14 @@ function Heading({ children }: { children: React.ReactNode }) {
   );
 }
 
-interface PaddedBoxProps {
+type PaddedBoxProps = {
   backgroundColor?: string;
   center?: boolean;
   children: React.ReactNode;
   className?: string;
   heading?: string;
   noContainer?: boolean;
-}
+};
 
 export default function PaddedBox({
   backgroundColor,

@@ -1,11 +1,11 @@
 import { makeComparator } from "../util";
 
-export interface Client {
+export type Client = {
   readonly name: string;
   readonly startYear: number;
   readonly endYear: number | null;
   readonly url: string | null;
-}
+};
 
 const constClients = [
   {
@@ -130,7 +130,7 @@ const constClients = [
   },
   // TODO: add YCW info
 ] as const;
-export type ClientName = typeof constClients[number]["name"];
+export type ClientName = (typeof constClients)[number]["name"];
 
 const allClients: readonly Client[] = constClients
   .slice()

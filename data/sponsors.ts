@@ -1,9 +1,9 @@
 import { makeComparator } from "../util";
 
-export interface Sponsor {
+export type Sponsor = {
   readonly name: string;
   readonly url: string;
-}
+};
 
 const constSponsors = [
   {
@@ -15,7 +15,7 @@ const constSponsors = [
     url: "https://www.sdcta.org/",
   },
 ] as const;
-export type SponsorName = typeof constSponsors[number]["name"];
+export type SponsorName = (typeof constSponsors)[number]["name"];
 
 const allSponsors: readonly Sponsor[] = constSponsors
   .slice()

@@ -25,10 +25,10 @@ function TeamProfiles({ team }: { team: ProjectTeam }) {
   );
 }
 
-interface ProjectLayoutProps {
+type ProjectLayoutProps = {
   project: Project;
   children: React.ReactNode;
-}
+};
 
 export default function ProjectLayout({ project, children }: ProjectLayoutProps) {
   return (

@@ -4,10 +4,10 @@ import { BsArrowRightCircle } from "react-icons/bs";
 
 import styles from "./CollapsibleSection.module.scss";
 
-interface CollapsibleSectionProps {
+type CollapsibleSectionProps = {
   title: string;
   children: React.ReactNode;
-}
+};
 
 export default function CollapsibleSection({ title, children }: CollapsibleSectionProps) {
   const [isOpen, setIsOpen] = useState(false);

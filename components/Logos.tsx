@@ -4,12 +4,12 @@ import { ImageKey } from "../images";
 
 import CustomImage from "./CustomImage";
 
-export interface LogosProps {
+export type LogosProps = {
   logos: {
     imageKey: ImageKey;
     url: string | null;
   }[];
-}
+};
 
 export default function Logos({ logos }: LogosProps) {
   return (

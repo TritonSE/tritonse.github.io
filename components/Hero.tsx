@@ -5,10 +5,10 @@ import { ImageKey } from "../images";
 
 import CustomImage from "./CustomImage";
 
-export interface HeroProps {
+export type HeroProps = {
   imageKey: ImageKey;
   children?: React.ReactNode;
-}
+};
 
 export default function Hero({ imageKey, children }: HeroProps) {
   return (

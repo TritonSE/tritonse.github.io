@@ -8,16 +8,16 @@ import { ImageKey } from "../images";
 
 import styles from "./PlainLayout.module.scss";
 
-export interface PlainMetadata {
+export type PlainMetadata = {
   title: string;
   subtitle?: string;
   heroImage?: ImageKey;
-}
+};
 
-export interface PlainLayoutProps {
+export type PlainLayoutProps = {
   metadata: PlainMetadata;
   children: React.ReactNode;
-}
+};
 
 export default function PlainLayout({
   metadata: { title, subtitle, heroImage },

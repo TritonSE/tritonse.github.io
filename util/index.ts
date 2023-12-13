@@ -3,7 +3,7 @@
  * @param keyFunc Map each object to an array of values to sort by.
  */
 export function makeComparator<T, K extends (number | string)[]>(
-  keyFunc: (v: T) => K
+  keyFunc: (v: T) => K,
 ): (v1: T, v2: T) => number {
   return (value1, value2) => {
     const key1 = keyFunc(value1);
@@ -21,14 +21,15 @@ export function makeComparator<T, K extends (number | string)[]>(
  */
 export function groupBy<T, K extends number | string>(
   objects: readonly T[],
-  keyFunc: (obj: T) => K
+  keyFunc: (obj: T) => K,
 ): [K, T[]][] {
-  const groups: {
-    [key: string]: {
+  const groups: Record<
+    string,
+    {
       value: K;
       objs: T[];
-    };
-  } = {};
+    }
+  > = {};
 
   for (const obj of objects) {
     const value = keyFunc(obj);

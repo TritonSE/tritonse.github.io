@@ -31,17 +31,17 @@ type ProjectTeam = readonly {
   readonly personIds: readonly PersonId[];
 }[];
 
-interface RawProject {
+type RawProject = {
   readonly name: string;
   readonly description: string;
   readonly content: MDXPage;
   readonly thumbnail: ImageKey | null;
   readonly team: ProjectTeam;
-}
+};
 
-interface Project extends RawProject {
+type Project = {
   readonly slug: string;
-}
+} & RawProject;
 
 // Metadata for each project. Projects should be manually ordered from newest
 // to oldest, since the dates are not stored for each project.

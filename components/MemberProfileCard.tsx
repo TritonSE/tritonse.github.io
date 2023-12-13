@@ -1,16 +1,17 @@
 import React from "react";
 
-import type { Member } from "../data/people";
 import { firstValidImageKey } from "../images";
 import { makeSlug } from "../util";
 
 import ProfileCard from "./ProfileCard";
 import RatioImage from "./RatioImage";
 
-interface MemberProfileCardProps {
+import type { Member } from "../data/people";
+
+type MemberProfileCardProps = {
   member: Member;
   roleLimit: number;
-}
+};
 
 export default function MemberProfileCard({ member, roleLimit }: MemberProfileCardProps) {
   const subtitles = roleLimit === 0 ? [] : member.roles.slice(-roleLimit).reverse();

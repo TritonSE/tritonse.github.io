@@ -1,14 +1,15 @@
 import React from "react";
 
-import type { Project } from "../data/projects";
 import { firstValidImageKey } from "../images";
 
 import CustomImage from "./CustomImage";
 import ProfileCard from "./ProfileCard";
 
-interface ProjectProfileCardProps {
+import type { Project } from "../data/projects";
+
+type ProjectProfileCardProps = {
   project: Project;
-}
+};
 
 export default function ProjectProfileCard({
   project: { name, description, thumbnail, slug },

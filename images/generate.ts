@@ -1,5 +1,3 @@
-/* eslint-disable no-console */
-
 import fs from "fs";
 import path from "path";
 
@@ -25,14 +23,15 @@ async function forEachFile(dir: string, handler: (absPath: string) => Promise<un
   return Promise.all(promises);
 }
 
-type Images = {
-  [key: string]: {
+type Images = Record<
+  string,
+  {
     relPath: string;
     width: number;
     height: number;
     sizes: number[];
-  };
-};
+  }
+>;
 
 async function imageDimensions(absPath: string) {
   const metadata = await sharp(absPath).metadata();
@@ -89,7 +88,7 @@ function generateCode(images: Images) {
         ([key, { relPath, width, height, sizes }]) =>
           `  ${JSON.stringify(key)}: { width: ${width}, height: ${height}, maxSize: ${
             sizes[sizes.length - 1]
-          }, extension: ${JSON.stringify(path.extname(relPath))} },`
+          }, extension: ${JSON.stringify(path.extname(relPath))} },`,
       )
       .sort(),
     "} as const;",
@@ -128,9 +127,9 @@ async function optimizeImages(images: Images) {
             .jpeg({ mozjpeg: true, force: false })
             .toFile(outputFile);
           console.log(`Optimized: ${outputFile}`);
-        })
+        }),
       );
-    })
+    }),
   );
 
   // Delete extraneous files.

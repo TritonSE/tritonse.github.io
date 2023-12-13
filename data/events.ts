@@ -2,13 +2,13 @@ import { DateTime } from "luxon";
 
 import { makeComparator } from "../util";
 
-export interface Event {
+export type Event = {
   readonly title: string;
   readonly description: string;
   readonly location: string;
   readonly startTime: DateTime;
   readonly url: string | null;
-}
+};
 
 function parseDate(date: string): DateTime {
   const parsed = DateTime.fromISO(date, { zone: "America/Los_Angeles" });

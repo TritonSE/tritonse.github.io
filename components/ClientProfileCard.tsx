@@ -1,11 +1,12 @@
 import React from "react";
 
-import type { Client } from "../data/clients";
 import { firstValidImageKey } from "../images";
 import { makeSlug } from "../util";
 
 import ProfileCard from "./ProfileCard";
 import RatioImage from "./RatioImage";
+
+import type { Client } from "../data/clients";
 
 export default function ClientProfileCard({ client }: { client: Client }) {
   const subtitle = `${client.startYear}–${client.endYear || "Present"}`;

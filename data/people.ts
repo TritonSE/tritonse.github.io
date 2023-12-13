@@ -26,19 +26,19 @@ const allRoles = [
   "TEST Designer",
   "TEST Developer",
 ] as const satisfies readonly string[];
-type Role = typeof allRoles[number];
+type Role = (typeof allRoles)[number];
 
-interface Member {
+type Member = {
   readonly id: string;
   readonly name: string;
   readonly roles: readonly Role[];
   readonly hidden?: boolean;
   readonly graduation?: number;
-}
+};
 
-interface Alumnus extends Member {
+type Alumnus = {
   readonly graduation: number;
-}
+} & Member;
 
 type RawPerson = Omit<Member, "name">;
 
@@ -903,7 +903,7 @@ const rawPeople = [
   },
 ] as const satisfies readonly RawPerson[];
 
-type PersonId = typeof rawPeople[number]["id"];
+type PersonId = (typeof rawPeople)[number]["id"];
 
 // Sort and validate data.
 const mutablePeople: Member[] = rawPeople.map((p) => {
@@ -920,7 +920,7 @@ mutablePeople.sort(
     person.graduation ?? 9999,
     allRoles.indexOf(roles[roles.length - 1]),
     id,
-  ])
+  ]),
 );
 assertUniqueKey(mutablePeople, "id");
 

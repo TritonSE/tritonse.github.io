@@ -3,9 +3,9 @@ import Ratio from "react-bootstrap/Ratio";
 
 import CustomImage, { CustomImageProps } from "./CustomImage";
 
-interface RatioImageProps extends CustomImageProps {
+type RatioImageProps = {
   aspectRatio: [number, number];
-}
+} & CustomImageProps;
 
 export default function RatioImage({ aspectRatio, ...props }: RatioImageProps) {
   return (

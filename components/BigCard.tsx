@@ -8,14 +8,14 @@ import { ImageKey } from "../images";
 import styles from "./BigCard.module.scss";
 import RatioImage from "./RatioImage";
 
-export interface BigCardProps {
+export type BigCardProps = {
   imageKey: ImageKey;
   title: string;
   children: React.ReactNode;
   href: string;
   colorHover?: boolean;
   sized?: boolean;
-}
+};
 
 export default function BigCard({
   imageKey,

@@ -1,14 +1,14 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
 
-import type { Event } from "../data/events";
-
 import ArrowLink from "./ArrowLink";
 
-interface EventTextProps {
+import type { Event } from "../data/events";
+
+type EventTextProps = {
   className?: string;
   children: React.ReactNode;
-}
+};
 
 function EventText({ className, children, ...props }: EventTextProps) {
   return (
@@ -22,9 +22,9 @@ EventText.defaultProps = {
   className: undefined,
 };
 
-interface EventCardProps {
+type EventCardProps = {
   event: Event;
-}
+};
 
 export default function EventCard({
   event: { title, description, location, startTime, url },
