@@ -134,6 +134,6 @@ export type ClientName = (typeof constClients)[number]["name"];
 
 const allClients: readonly Client[] = constClients
   .slice()
-  .sort(makeComparator((client) => [-(client.endYear || Infinity), client.startYear, client.name]));
+  .sort(makeComparator((client) => [-(client.endYear ?? Infinity), client.startYear, client.name]));
 
 export { allClients };

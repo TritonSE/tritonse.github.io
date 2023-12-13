@@ -1,5 +1,3 @@
-import type { AppProps } from "next/app";
-
 import React from "react";
 import "../styles/common.scss";
 
@@ -7,6 +5,8 @@ import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 
 import styles from "./_app.module.scss";
+
+import type { AppProps } from "next/app";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (

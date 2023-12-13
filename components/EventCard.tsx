@@ -12,7 +12,7 @@ type EventTextProps = {
 
 function EventText({ className, children, ...props }: EventTextProps) {
   return (
-    <Card.Text className={className || "mb-3"} {...props}>
+    <Card.Text className={className ?? "mb-3"} {...props}>
       {children}
     </Card.Text>
   );

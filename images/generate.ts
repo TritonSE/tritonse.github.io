@@ -143,9 +143,9 @@ async function optimizeImages(images: Images) {
 
 async function main() {
   const images = await findImages();
-  await generateCode(images);
+  generateCode(images);
   await optimizeImages(images);
   console.log("Finished code generation and image optimization.");
 }
 
-main();
+main().catch(console.error);

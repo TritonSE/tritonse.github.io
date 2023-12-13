@@ -15,14 +15,14 @@ export default function ProjectPage({ slug }: { slug: string }) {
   );
 }
 
-export const getStaticPaths: GetStaticPaths = async () => ({
+export const getStaticPaths: GetStaticPaths = () => ({
   paths: allProjects.map((project) => ({
     params: { slug: project.slug },
   })),
   fallback: false,
 });
 
-export const getStaticProps: GetStaticProps = async (context) => {
+export const getStaticProps: GetStaticProps = (context) => {
   if (context.params === undefined || typeof context.params.slug !== "string") {
     throw new Error("Invalid context params");
   }

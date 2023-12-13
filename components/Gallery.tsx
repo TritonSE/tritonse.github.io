@@ -59,7 +59,7 @@ export default function Gallery({
         )}
       >
         {wideItems.map(({ element, width }, index) => (
-          <div key={index} style={{ width: `${width || defaultWidth}%` }}>
+          <div key={index} style={{ width: `${width ?? defaultWidth}%` }}>
             {element}
           </div>
         ))}

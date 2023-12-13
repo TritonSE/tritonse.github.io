@@ -51,8 +51,7 @@ export function groupBy<T, K extends number | string>(
 export function findOne<T>(arr: readonly T[], query: Partial<T>): T {
   const found = arr.find((obj) => {
     for (const [key, value] of Object.entries(query)) {
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      if ((obj as any)[key] !== value) return false;
+      if ((obj as Record<string, unknown>)[key] !== value) return false;
     }
     return true;
   });
@@ -70,7 +69,7 @@ export function assertUniqueKey<T, K extends keyof T>(arr: readonly T[], key: K)
   for (const element of arr) {
     const value = element[key];
     if (seen.has(value)) {
-      throw new Error(`Duplicate value for key '${key.toString()}': ${value}`);
+      throw new Error(`Duplicate value for key '${key.toString()}': ${String(value)}`);
     }
     seen.add(value);
   }

@@ -9,9 +9,9 @@ import RatioImage from "./RatioImage";
 import type { Client } from "../data/clients";
 
 export default function ClientProfileCard({ client }: { client: Client }) {
-  const subtitle = `${client.startYear}–${client.endYear || "Present"}`;
+  const subtitle = `${client.startYear}–${client.endYear ?? "Present"}`;
   return (
-    <ProfileCard name={client.name} subtitles={[subtitle]} href={client.url || undefined}>
+    <ProfileCard name={client.name} subtitles={[subtitle]} href={client.url ?? undefined}>
       <div className="bg-white p-3">
         <RatioImage
           aspectRatio={[1, 1]}
