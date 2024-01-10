@@ -1045,6 +1045,10 @@ const rawPeople = [
     id: "Vivian Liu 1",
     roles: ["TEST Designer"],
   },
+  {
+    id: "Lisa Liu 0",
+    roles: ["Developer"],
+  },
 ] as const satisfies readonly RawPerson[];
 
 type PersonId = typeof rawPeople[number]["id"];
