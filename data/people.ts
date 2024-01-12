@@ -563,6 +563,7 @@ const rawPeople = [
   {
     id: "Andrew Masek 0",
     roles: ["Developer"],
+    graduation: 2023,
   },
   {
     id: "Anvitaa Sekhsaria 0",
@@ -615,6 +616,7 @@ const rawPeople = [
   {
     id: "William Jin 0",
     roles: ["Developer"],
+    graduation: 2023,
   },
   {
     id: "Yucheng Huang 0",
