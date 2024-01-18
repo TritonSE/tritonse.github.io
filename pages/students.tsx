@@ -148,7 +148,7 @@ Yes! We have a process internally to transition TEST members to TSE members. Our
 
 ### What does being a TEST member look like at TSE?
 
-Our primary focus with TEST is to enable students from underprivileged backgrounds to explore development and design. As a TEST member, you will be spending the first portion of the year learning all about your chosen discipline. These lessons will be taught by our TEST Leads who have created customized curriculum to help you on your journey. You'll be collaborating with other TEST members during this entire process. After this first "bootcamp" period, you'll move onto the project portion of the year where you'll create something awesome using all of skills you picked up. Typically, TEST members spend 4-6 hours a week on TSE activities.
+Our primary focus with TEST is to enable students from underprivileged backgrounds to explore development and design. As a TEST member, you will be spending the first portion of the year learning all about your chosen discipline. These lessons will be taught by our TEST Leads who have created customized curriculum to help you on your journey. You'll be collaborating with other TEST members during this entire process. After this first "bootcamp" period, you'll move onto the project portion of the year where you'll create something awesome using all of skills you picked up. Typically, TEST members spend 4-6 hours a week on TSE activities. 
           `}
         </CollapsibleSection>
         {markdown`
