@@ -140,7 +140,7 @@ You may either apply to TSE or the TEST program, not both. If you are unsure abo
 
 ### What sort of projects will I be working on in the TEST program?
 
-The projects TEST developers and designers work on varies year-to-year based on member preferences and TEST Lead input. In the past, we've had both collaborative projects and individual ones. These projects combine all of the skills you learn throughout the year into something you can be proud of and show off. 
+The projects TEST developers and designers work on varies year-to-year based on member preferences and TEST Lead input. In the past, we've had both collaborative projects and individual ones. These projects combine all of the skills you learn throughout the year into something you can be proud of and show off.
 
 ### Can I join TSE as a developer or designer after I complete the TEST program?
 
@@ -148,7 +148,7 @@ Yes! We have a process internally to transition TEST members to TSE members. Our
 
 ### What does being a TEST member look like at TSE?
 
-Our primary focus with TEST is to enable students from underprivileged backgrounds to explore development and design. As a TEST member, you will be spending the first portion of the year learning all about your chosen discipline. These lessons will be taught by our TEST Leads who have created customized curriculum to help you on your journey. You'll be collaborating with other TEST members during this entire process. After this first "bootcamp" period, you'll move onto the project portion of the year where you'll create something awesome using all of skills you picked up. Typically, TEST members spend 4-6 hours a week on TSE activities. 
+Our primary focus with TEST is to enable students from underprivileged backgrounds to explore development and design. As a TEST member, you will be spending the first portion of the year learning all about your chosen discipline. These lessons will be taught by our TEST Leads who have created customized curriculum to help you on your journey. You'll be collaborating with other TEST members during this entire process. After this first "bootcamp" period, you'll move onto the project portion of the year where you'll create something awesome using all of skills you picked up. Typically, TEST members spend 4-6 hours a week on TSE activities.
           `}
         </CollapsibleSection>
         {markdown`
