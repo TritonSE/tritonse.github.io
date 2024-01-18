@@ -44,12 +44,6 @@ Triton Software Engineering (TSE) is a multidisciplinary student organization at
 
 If you are passionate about helping others using the skills you learn in college, then TSE is the perfect place for you! We are all about social good, and we hope you share our passion. TSE offers a close network of like-minded students, and we can help you build skills that allow you to advance your career.
 
-### What is the TEST program?
-
-The TSE Early Start Training (TEST) program provides students from underprivileged backgrounds who have little to no technical development/design experience with a first step into exploring software engineering and UI/UX design. TEST developers and designers will learn the fundamentals of their domain while working on beginner-level internal projects for TSE.
-
-You may either apply to TSE or the TEST program, not both. If you are unsure about which is right for you, please email nboloori@ucsd.edu.
-
 ### What is TSE's recruitment process like?
 
 TSE recruits new members at the beginning of every Fall quarter. In 2019, we accepted a total of 31 members from 167 applicants. In 2020, we accepted a total of 29 members from 164 applicants. In 2021, we accepted a total of 30 members from 311 applicants.
@@ -134,6 +128,27 @@ Be prepared to solve a design challenge. You will be given a prompt similar to a
 ### What does being a designer look like at TSE?
 
 Designers communicate closely with our nonprofit clients in order to craft user flows, wireframes, and prototypes that align with their needs. Designers often take on projects in pairs. They are the ones creating the detailed plan for the end solution, which is then eventually handed off to TSE developers. There’s a variety of types of projects, ranging from website rebranding to internal software tools. Typically, designers spend 5-7 hours a week on TSE activities.
+          `}
+        </CollapsibleSection>
+        <CollapsibleSection title="TEST FAQs">
+          {markdown`
+### What is the TEST program?
+
+The TSE Early Start Training (TEST) program provides students from underprivileged backgrounds who have little to no technical development/design experience with a first step into exploring software engineering and UI/UX design. TEST developers and designers will learn the fundamentals of their domain while working on beginner-level internal projects for TSE. The program lasts for the school year, after this period TEST members can choose whether or not they'd like to be evaluated to potentially become TSE developers and designers.
+
+You may either apply to TSE or the TEST program, not both. If you are unsure about which is right for you, please email nboloori@ucsd.edu.
+
+### What sort of projects will I be working on in the TEST program?
+
+The projects TEST developers and designers work on varies year-to-year based on member preferences and TEST Lead input. In the past, we've had both collaborative projects and individual ones. These projects combine all of the skills you learn throughout the year into something you can be proud of and show off. 
+
+### Can I join TSE as a developer or designer after I complete the TEST program?
+
+Yes! We have a process internally to transition TEST members to TSE members. Our goal is to maximize the conversion rate between the two. This is not to say TEST members aren't part of TSE. Everything TSE related applies to both TEST and TSE members, the only difference between the two are the projects that you work on and the additional evaluation TEST members can choose to undergo to become TSE members. This "evaluation" is just to determine whether or not TEST members are equipped to take on the more advanced work associated with TSE projects.
+
+### What does being a TEST member look like at TSE?
+
+Our primary focus with TEST is to enable students from underprivileged backgrounds to explore development and design. As a TEST member, you will be spending the first portion of the year learning all about your chosen discipline. These lessons will be taught by our TEST Leads who have created customized curriculum to help you on your journey. You'll be collaborating with other TEST members during this entire process. After this first "bootcamp" period, you'll move onto the project portion of the year where you'll create something awesome using all of skills you picked up. Typically, TEST members spend 4-6 hours a week on TSE activities. 
           `}
         </CollapsibleSection>
         {markdown`
