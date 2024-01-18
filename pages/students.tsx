@@ -140,7 +140,7 @@ You may either apply to TSE or the TEST program, not both. If you are unsure abo
 
 ### What sort of projects will I be working on in the TEST program?
 
-The projects TEST developers and designers work on varies year-to-year based on member preferences and TEST Lead input. In the past, we've had both collaborative projects and individual ones. These projects combine all of the skills you learn throughout the year into something you can be proud of and show off. 
+The projects TEST developers and designers work on varies year-to-year based on member preferences and TEST Lead input. In the past, we've had both collaborative projects and individual ones. These projects combine all of the skills you learn throughout the year into something you can be proud of and show off.
 
 ### Can I join TSE as a developer or designer after I complete the TEST program?
 

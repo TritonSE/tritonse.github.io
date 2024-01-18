@@ -555,6 +555,7 @@ const rawPeople = [
   {
     id: "Akhilan Gurumoorthy 0",
     roles: ["Developer"],
+    graduation: 2023,
   },
   {
     id: "Aammya Sapra 0",
