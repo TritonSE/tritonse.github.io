@@ -543,6 +543,7 @@ const rawPeople = [
   {
     id: "James Zhang 0",
     roles: ["Developer"],
+    graduation: 2024,
   },
   {
     id: "Mohak Vaswani 0",
@@ -797,6 +798,7 @@ const rawPeople = [
   {
     id: "Jocelyn Horng 0",
     roles: ["Designer"],
+    graduation: 2024,
   },
   {
     id: "Kacy Umana 0",
@@ -827,6 +829,7 @@ const rawPeople = [
   {
     id: "Melina Dimitropoulou 0",
     roles: ["Developer"],
+    graduation: 2024,
   },
   {
     id: "Nitya Pillai 0",
@@ -895,6 +898,7 @@ const rawPeople = [
   {
     id: "Sujana Nagasuri 0",
     roles: ["Designer"],
+    graduation: 2024,
   },
   {
     id: "Tiffany Lee 0",
@@ -918,10 +922,6 @@ const rawPeople = [
   },
   {
     id: "Jacob Hansen 0",
-    roles: ["Developer"],
-  },
-  {
-    id: "Jacob Lee 0",
     roles: ["Developer"],
   },
   {
@@ -966,10 +966,6 @@ const rawPeople = [
   },
   {
     id: "Sophia Zhu 0",
-    roles: ["Developer"],
-  },
-  {
-    id: "Sydney Badescu 0",
     roles: ["Developer"],
   },
   {
