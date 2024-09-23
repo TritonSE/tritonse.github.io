@@ -545,7 +545,8 @@ const rawPeople = [
   },
   {
     id: "Mohak Vaswani 0",
-    roles: ["Developer"], // TO DO: double check graduation
+    roles: ["Developer"],
+    graduation: 2024,
   },
   {
     id: "Shreya Gupta 0",
