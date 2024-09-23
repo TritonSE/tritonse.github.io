@@ -75,7 +75,7 @@ Crafting digital solutions for nonprofit organizations in our community.
       </PaddedBox>
       <PaddedBox heading="Get Involved">
         {markdown`
-As a powerhouse of 36 developers and 8 UI/UX designers, we are extremely collaborative here at Triton Software Engineering. In the past 5 years, we have provided software services pro bono for 18 nonprofit organizations, and we are continuing to grow.
+As a powerhouse of 42 developers and 12 UI/UX designers, we are extremely collaborative here at Triton Software Engineering. In the past 6 years, we have provided software services pro bono for 18 nonprofit organizations, and we are continuing to grow.
         `}
       </PaddedBox>
       <PaddedBox backgroundColor="#F8F8F8" className="text-black">

@@ -65,8 +65,17 @@ async function findImages() {
   const images: Images = {};
   await forEachFile(__dirname, async (absPath) => {
     const extension = path.extname(absPath);
-    if (!config.extensions.includes(extension)) {
+    if (extension === ".ts") {
       return;
+    }
+    if (!config.extensions.includes(extension)) {
+      throw new Error(
+        `${JSON.stringify(
+          absPath
+        )} does not have one of the supported image file extensions: ${JSON.stringify(
+          config.extensions
+        )}. Use jpg instead of jpeg, and make sure the capitalization matches too.`
+      );
     }
     const [width, height] = await imageDimensions(absPath);
     const relPath = path.relative(__dirname, absPath).replace(/\\/g, "/");

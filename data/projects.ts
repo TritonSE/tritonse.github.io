@@ -1,16 +1,26 @@
 import { MDXProps } from "mdx/types";
 
 import { ImageKey } from "../images";
+import content4FLOT from "../projects/4flot-website-revamp.mdx";
+import contentALUM from "../projects/alum-mentorship-mobile-application.mdx";
+import contentCBL from "../projects/cbl-crisis-line-mobile-application.mdx";
 import contentCCH from "../projects/cch-community-markets.mdx";
+import contentCCIDC from "../projects/ccidc-application-form.mdx";
+import contentDFM from "../projects/dfm-sideline-sidekick.mdx";
 import contentDynamics from "../projects/dynamics-website.mdx";
+import contentFIX from "../projects/fix-landing-page.mdx";
 import contentFSD from "../projects/fsd-distribution-web-app.mdx";
 import contentIHCEMR from "../projects/ihc-emr.mdx";
 import contentIHCWellness from "../projects/ihc-wellness-app.mdx";
 import contentKCLinking from "../projects/kc-linking.mdx";
 import contentKCSkilled from "../projects/kc-skilled-impact.mdx";
+import contentLAK from "../projects/lak-goods-transport-application.mdx";
 import contentLAP from "../projects/lap-student-tracker.mdx";
 import contentMAW from "../projects/maw-volunteer-hub.mdx";
 import contentOIC from "../projects/oic-web-innovation-portal.mdx";
+import contentPAP from "../projects/pap-application-form.mdx";
+import contentPIA from "../projects/pia-program-manager.mdx";
+import contentSDCTA from "../projects/sdcta-data-visualization-website.mdx";
 import contentSI from "../projects/si-website-revamp.mdx";
 import contentSSA from "../projects/ssa-website.mdx";
 import contentTAP from "../projects/tap-dog-matching.mdx";
@@ -20,6 +30,8 @@ import contentUWEAST from "../projects/uweast-community-kitchen.mdx";
 import contentWA from "../projects/wa-family-literacy.mdx";
 import contentYCW from "../projects/ycw-greenpoint-rated-app.mdx";
 import contentYSC from "../projects/ysc-mobile-app.mdx";
+import contentTSE from "../projects/tse-website-revamp.mdx";
+import contentUSHS from "../projects/ushs-housing-portal.mdx";
 import { assertUniqueKey, makeComparator, makeSlug } from "../util";
 
 import { PersonId, Role, allRoles } from "./people";
@@ -46,6 +58,420 @@ interface Project extends RawProject {
 // Metadata for each project. Projects should be manually ordered from newest
 // to oldest, since the dates are not stored for each project.
 const constProjects = [
+  {
+    name: "4FLOT Website Revamp",
+    description: "Website highlighting the impact of 4FLOT in the community.",
+    content: content4FLOT,
+    thumbnail: "projects/4flot_website_revamp/home-page",
+    team: [
+      {
+        role: "Engineering Manager",
+        personIds: ["Jenny Mar 0"],
+      },
+      {
+        role: "Product Manager",
+        personIds: ["Jennifer Tanurdjaja 0"],
+      },
+      {
+        role: "Designer",
+        personIds: ["Emily Yu 0", "Alice Lam 0", "Shana Chen 0"],
+      },
+      {
+        role: "Developer",
+        personIds: [
+          "Arnav Modi 0",
+          "Arohan Mittal 0",
+          "Christen Xie 0",
+          "Jacob Hansen 0",
+          "Katelyn Nguyen 0",
+          "Kevin Do 0",
+          "Rachel Wei 0",
+          "Sophia Zhu 0",
+        ],
+      },
+    ],
+  },
+  {
+    name: "CCIDC Application Form",
+    description:
+      "Redesigned application pathways to make it easier for target users to navigate and apply for certification.",
+    content: contentCCIDC,
+    thumbnail: "projects/ccidc_application_form/home-page",
+    team: [
+      {
+        role: "Engineering Manager",
+        personIds: ["Helen Lin 0"],
+      },
+      {
+        role: "Product Manager",
+        personIds: ["Shreya Gupta 0"],
+      },
+      {
+        role: "Designer",
+        personIds: ["Sujana Nagasuri 0", "Uma Naik 0", "Nandini Desai 0"],
+      },
+      {
+        role: "Developer",
+        personIds: [
+          "Emma Zhu 0",
+          "Hrithik Pai 0",
+          "Jared Rosas 0",
+          "Kathy Chen 0",
+          "Leo Friedman 0",
+          "Madhav Bansal 0",
+          "Mohak Vaswani 0",
+          "Sidhant Rohatgi 0",
+        ],
+      },
+    ],
+  },
+  {
+    name: "DFM Sideline Sidekick",
+    description:
+      "App to get quick reference on injuries and how to treat them when physicians are at on-call events.",
+    content: contentDFM,
+    thumbnail: "projects/dfm_sideline_sidekick/splashscreens",
+    team: [
+      {
+        role: "Engineering Manager",
+        personIds: ["Anthony Pertsel 0"],
+      },
+      {
+        role: "Product Manager",
+        personIds: ["Shreya Gupta 0"],
+      },
+      {
+        role: "Designer",
+        personIds: ["Jocelyn Horng 0", "Thoa Nguyen 0", "Nicole Zhi 0"],
+      },
+      {
+        role: "Developer",
+        personIds: [
+          "Edward Lin 0",
+          "Eshaan Sharma 0",
+          "Lillian Ho 0",
+          "Megan Leong 0",
+          "Pratyush Chand 0",
+          "Rohan Sachdeva 0",
+          "Vinayak Sharma 0",
+        ],
+      },
+    ],
+  },
+  {
+    name: "PAP Application Form",
+    description:
+      "A robust, streamlined way to manage and service a large volume of requests for furnishings",
+    content: contentPAP,
+    thumbnail: "projects/pap_application_form/home-page",
+    team: [
+      {
+        role: "Engineering Manager",
+        personIds: ["Benjamin Johnson 0"],
+      },
+      {
+        role: "Product Manager",
+        personIds: ["Emmanuel Flores 0"],
+      },
+      {
+        role: "Designer",
+        personIds: ["Aska Kunita Demirci 0", "Hieu Phan 0"],
+      },
+      {
+        role: "Developer",
+        personIds: [
+          "Daniel Shao 0",
+          "Harsh Gurnani 0",
+          "Melina Dimitropoulou 0",
+          "Samvrit Srinath 0",
+          "Sophia Yu 0",
+          "Steven Shi 0",
+          "Sydney Zhang 0",
+          "Yoto Kim 0",
+        ],
+      },
+    ],
+  },
+  {
+    name: "PIA Program Manager",
+    description:
+      "A database to track students, programs the students are part of, and any relevant information.",
+    content: contentPIA,
+    thumbnail: "projects/pia_program_manager/home-page",
+    team: [
+      {
+        role: "Engineering Manager",
+        personIds: ["Adhithya Ananthan-Regina 0"],
+      },
+      {
+        role: "Product Manager",
+        personIds: ["Jennifer Tanurdjaja 0"],
+      },
+      {
+        role: "Designer",
+        personIds: ["Mandy Lai 0", "Justin Kim 0", "Rain Dong 0"],
+      },
+      {
+        role: "Developer",
+        personIds: [
+          "Aammya Sapra 0",
+          "Aaron Chan 0",
+          "Andrew Pu 0",
+          "Lisa Liu 0",
+          "Michael Sullivan 0",
+          "Parth Patel 0",
+          "Victor Siu 0",
+        ],
+      },
+    ],
+  },
+  {
+    name: "USHS Housing Portal",
+    description: "Database that matches housing to people who are homeless.",
+    content: contentUSHS,
+    thumbnail: "projects/ushs_housing_portal/home-page",
+    team: [
+      {
+        role: "Engineering Manager",
+        personIds: ["Philip Zhang 0"],
+      },
+      {
+        role: "Product Manager",
+        personIds: ["Emmanuel Flores 0"],
+      },
+      {
+        role: "Designer",
+        personIds: ["Annie Wen 0", "Joanne Tsai 0", "Madison Plotkin 0"],
+      },
+      {
+        role: "Developer",
+        personIds: [
+          "Andrew Zhou 0",
+          "Brenton Dunn 0",
+          "James Zhang 0",
+          "Karen Yan 0",
+          "Nitya Pillai 0",
+          "Pranav Soma 0",
+          "Ramtin Tajbakhsh 0",
+          "Shreya Gupta 0",
+          "Yash Ravipati 0",
+        ],
+      },
+    ],
+  },
+  {
+    name: "FIX Landing Page",
+    description:
+      "Landing page with interactive elements to bring awareness to community cats and encourage people to get involved.",
+    content: contentFIX,
+    thumbnail: "projects/fix_landing_page/home-page",
+    team: [
+      {
+        role: "Engineering Manager",
+        personIds: ["Andrew Russell 0"],
+      },
+      {
+        role: "Product Manager",
+        personIds: ["Annie Wen 0"],
+      },
+      {
+        role: "Designer",
+        personIds: [
+          "Rickie Chen 0",
+          "Rachel Blumin 0",
+          "Jocelyn Horng 0",
+          "Mandy Lai 0",
+          "Annie Wen 0",
+        ],
+      },
+      {
+        role: "Developer",
+        personIds: [
+          "Jacob Au 0",
+          "Melina Dimitropoulou 0",
+          "Benjamin Johnson 0",
+          "Edward Lin 0",
+          "Emily Marschall-Niswonger 0",
+          "Daniel Shao 0",
+          "James Zhang 0",
+        ],
+      },
+    ],
+  },
+  {
+    name: "SDCTA Data Visualization Website",
+    description: "Data Visualization Website with a subscription structure.",
+    content: contentSDCTA,
+    thumbnail: "projects/sdcta_data_visualization_website/home-page",
+    team: [
+      {
+        role: "Engineering Manager",
+        personIds: ["Nirmal Agnihotri 0"],
+      },
+      {
+        role: "Product Manager",
+        personIds: ["Akashnarendran Premkumar 0", "Mohak Vaswani 0"],
+      },
+      {
+        role: "Designer",
+        personIds: ["Tracey Du 0", "Sujana Nagasuri 0", "Aska Kunita Demirci 0"],
+      },
+      {
+        role: "Developer",
+        personIds: [
+          "Aammya Sapra 0",
+          "Anthony Pertsel 0",
+          "Brenton Dunn 0",
+          "Helen Lin 0",
+          "Hrithik Pai 0",
+          "Emma Zhu 0",
+          "Megan Leong 0",
+          "Samvrit Srinath 0",
+          "Victor Siu 0",
+        ],
+      },
+    ],
+  },
+  {
+    name: "ALUM Mentorship Mobile Application",
+    description:
+      "Mobile (specifically iOS) application that provides a personalized user experience and flexibility to receive mentorship.",
+    content: contentALUM,
+    thumbnail: "projects/alum_mentorship_mobile_application/splashscreens",
+    team: [
+      {
+        role: "Engineering Manager",
+        personIds: ["Aman Aggarwal 0", "Adhithya Ananthan-Regina 0"],
+      },
+      {
+        role: "Product Manager",
+        personIds: ["Mrinal Sharma 0", "Stephen Tan 0"],
+      },
+      {
+        role: "Designer",
+        personIds: ["Juliet Zhuang 0", "Emily Yu 0"],
+      },
+      {
+        role: "Developer",
+        personIds: [
+          "Adhithya Ananthan-Regina 0",
+          "Christen Xie 0",
+          "Jenny Mar 0",
+          "Sidhant Rohatgi 0",
+          "Yash Ravipati 0",
+          "Harsh Gurnani 0",
+          "Philip Zhang 0",
+        ],
+      },
+    ],
+  },
+  {
+    name: "CBL Crisis Line Mobile Application",
+    description:
+      "Mobile app offering crisis counseling services and resources to people throughout the United States and Canada.",
+    content: contentCBL,
+    thumbnail: "projects/cbl_crisis_line/splashscreens",
+    team: [
+      {
+        role: "Engineering Manager",
+        personIds: ["Assaf Cohen-Arazi 0"],
+      },
+      {
+        role: "Product Manager",
+        personIds: ["Mohak Vaswani 0"],
+      },
+      {
+        role: "Designer",
+        personIds: ["Jonathan Lum 0", "Tiffany Lee 0", "Shana Chen 0"],
+      },
+      {
+        role: "Developer",
+        personIds: [
+          "Nishant Balaji 0",
+          "Madhav Bansal 0",
+          "Aaron Chan 0",
+          "Shreya Gupta 0",
+          "William Jin 0",
+          "Arohan Mittal 0",
+          "Parth Patel 0",
+          "Steven Shi 0",
+          "Jennifer Tanurdjaja 0",
+          "Sydney Zhang 0",
+        ],
+      },
+    ],
+  },
+  {
+    name: "LAK Goods Transport Application",
+    description:
+      "The Laktaa Goods Transport Application connects Bhutanese farmers and agricultural collectives to delivery drivers for Laktaa Bhutan (formerly FirstMile Bhutan).",
+    content: contentLAK,
+    thumbnail: "projects/lak_goods_transport/splashscreens",
+    team: [
+      {
+        role: "Engineering Manager",
+        personIds: ["Nirmal Agnihotri 0", "Alex Zhang 0"],
+      },
+      {
+        role: "Product Manager",
+        personIds: ["Emmanuel Flores 0"],
+      },
+      {
+        role: "Designer",
+        personIds: ["Kenny Tran 0", "Tracy Nguyen 0", "Leslie Aguiar 0", "Juliet Zhuang 0"],
+      },
+      {
+        role: "Developer",
+        personIds: [
+          "Aammya Sapra 0",
+          "Aaron Kirk 0",
+          "Advay Sharma 0",
+          "Aman Aggarwal 0",
+          "Assaf Cohen-Arazi 0",
+          "Shreekar Pandey 0",
+          "Pratyush Chand 0",
+          "Andrew Masek 0",
+          "Akhilan Gurumoorthy 0",
+          "Vivian Liu 0",
+          "Arnav Modi 0",
+          "Kevin Do 0",
+          "Nitya Pillai 0",
+          "Vinayak Sharma 0",
+          "Jennifer Chen 0",
+          "James Luo 0",
+          "Aksharan Saravanan 0",
+        ],
+      },
+    ],
+  },
+  {
+    name: "TSE Website Revamp",
+    description: "Our website!",
+    content: contentTSE,
+    thumbnail: "projects/tse_website_revamp/home-page",
+    team: [
+      {
+        role: "Engineering Manager",
+        personIds: ["Justin Yao Du 0", "Navid Boloorian 0"],
+      },
+      {
+        role: "Designer",
+        personIds: ["Kelly Li 0", "Mylinh Lac 0", "Juliet Zhuang 0"],
+      },
+      {
+        role: "Developer",
+        personIds: [
+          "Allison Bhavsar 0",
+          "Benson Vuong 0",
+          "Dhruv Sood 0",
+          "Nirmal Agnihotri 0",
+          "Hrithik Pai 0",
+          "Jennifer Chen 0",
+          "Emma Zhu 0",
+        ],
+      },
+    ],
+  },
   {
     name: "MAW Volunteer Hub",
     description:
@@ -357,7 +783,6 @@ const constProjects = [
           "Kunal Bhandarkar 0",
           "Hana Kim 0",
           "Robert Tatum 0",
-          "Uposhanto Bhattacharya 0",
           "Thai Gillespie 0",
         ],
       },
@@ -485,7 +910,6 @@ const constProjects = [
           "Amrit Singh 0",
           "Nicholas Vanny 0",
           "Dhanush Nanjunda Reddy 0",
-          "Upo Bhat 0",
           "Anshul Birla 0",
         ],
       },

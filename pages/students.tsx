@@ -32,8 +32,23 @@ ${
     ? `Please fill out the application form [here](${recruitment.applicationUrl}). Applications are due on ${recruitment.deadline}.`
     : "We are no longer accepting applications for this school year. If you are interested, please apply in Fall quarter of the next school year."
 }
-`}
 
+## 2024 Fall Recruitment Timeline
+
+- Application opens - Week 0 Thursday 9/26 12:01am
+- Engineers on the Green - Week 1 Tuesday 10/1 11:00am-3:00pm @ Warren Mall
+- Tabling session 1 - Week 1 Wednesday 10/2 11:00am-3:00pm @ Library Walk 1977
+- Tabling session 2 - Week 1 Thursday 10/3 11:00am-3:00pm @ Library Walk 1977
+- Intern Panel - Week 1 Thursday 10/3 6:00-7:30pm @ [tinyurl.com/tseinternpanel](https://tinyurl.com/tseinternpanel)
+- Tabling session 3 - Week 2 Monday 10/7 11:00am-3:00pm @ Library Walk 1977
+- Tabling session 4 - Week 2 Tuesday 10/8 11:00am-3:00pm @ Library Walk 1977
+- Info Session 1 - Week 2 Tuesday 10/8 7:30-8:30pm @ CSE 1202
+- Info Session 2 - Week 2 Thursday 10/10 6:00-7:00pm @ CSE 1202
+- Application closes - Week 2 Sunday 10/13 11:59pm
+- Phone screen invitation emails sent - Week 3 Friday 10/18
+- Technical interview invitation emails sent - Week 5 Friday 11/1
+- Acceptance/rejection emails sent - Week 8 Tuesday 11/19
+`}
         <CollapsibleSection title="General FAQs">
           {markdown`
 ### What is Triton Software Engineering?
@@ -61,7 +76,7 @@ In the 2022-2023 school year, TSE’s structure consisted of our board, a design
 ### How can I stay up-to-date with upcoming TSE events?
 
 We host both internal and public events. To find our public events, follow us on [Facebook](https://www.facebook.com/TritonSE) and [Instagram](https://www.instagram.com/ucsd_tse/). You can also find a list of our past and upcoming events [here](/events).
-`}
+          `}
         </CollapsibleSection>
         <CollapsibleSection title="Developer FAQs">
           {markdown`
