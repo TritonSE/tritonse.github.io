@@ -84,7 +84,7 @@ We host both internal and public events. To find our public events, follow us on
 
 Here is the knowledge we expect for each grade level. The interview questions might not cover all of these topics, and it might be possible to pass the interviews without knowing all of these topics, but our interview questions are designed with these expectations in mind.
 
-#### Freshmen
+#### First-years
 
 Approximately CSE 8A or equivalent:
 
@@ -92,26 +92,17 @@ Approximately CSE 8A or equivalent:
 - Basic datatypes: booleans, integers, floating-point numbers, strings, arrays/lists
 - Control flow structures: if/else statements, for/while loops
 - Functions
-- Exceptions
 - Unit testing concepts (no specific frameworks needed) and edge cases
 
-#### Sophomores
+#### Sophomores/Juniors/Seniors/Transfers
 
 Approximately CSE 12 or equivalent:
 
-- All of the topics for freshmen, listed above
-- Pointers or references, depending on the language you use
-- Recursion
-- Data structures: multidimensional arrays/lists, dynamic arrays, linked lists, stacks, queues, heaps, binary search trees, hash tables (also known as hash maps, dictionaries)
-- Algorithms: sorting, binary search
-- Object-oriented programming concepts: classes, constructors, instance variables, methods
-
-#### Juniors/Seniors
-
-- All of the topics for freshmen and sophomores, listed above
+- All of the topics for first-years, listed above
 - Analyzing time and space complexity
-- Trees and graphs
-- More challenging applications of the previously listed algorithms and data structures
+- Recursion
+- Data structures: multidimensional arrays/lists, dynamic arrays, stacks, queues, hash tables (also known as hash maps, dictionaries)
+- Algorithms: sorting, binary search
 
 ### How can I prepare for the technical components of the developer recruitment process?
 
@@ -125,7 +116,7 @@ To prep for the technical interview:
 
 - Brush up on a high-level programming language. Python, Java, or JavaScript is preferred. C or C++ might work, but due to the nature of the interview tasks, it may be more difficult to use these languages. You will not be able to compile or run your code, so exact syntax/APIs are not that important, but we expect you to demonstrate familiarity with the language you choose.
 - Expect to solve one or more programming tasks, which may have multiple parts. Be mindful of edge cases, and discuss your approach with your interviewer before you start writing code.
-- You will be evaluated on your communication and problem-solving skills, the readability, maintainability, and correctness of your code, and (for juniors/seniors) the algorithmic performance of your code.
+- You will be evaluated on your communication and problem-solving skills, the readability, maintainability, and correctness of your code, and (for sophomores/juniors/seniors) the algorithmic performance of your code.
 
 ### What does being a developer look like at TSE?
 
