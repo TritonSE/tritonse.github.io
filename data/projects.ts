@@ -26,12 +26,12 @@ import contentSSA from "../projects/ssa-website.mdx";
 import contentTAP from "../projects/tap-dog-matching.mdx";
 import contentMoneta from "../projects/tse-moneta.mdx";
 import contentOktavian from "../projects/tse-oktavian.mdx";
+import contentTSE from "../projects/tse-website-revamp.mdx";
+import contentUSHS from "../projects/ushs-housing-portal.mdx";
 import contentUWEAST from "../projects/uweast-community-kitchen.mdx";
 import contentWA from "../projects/wa-family-literacy.mdx";
 import contentYCW from "../projects/ycw-greenpoint-rated-app.mdx";
 import contentYSC from "../projects/ysc-mobile-app.mdx";
-import contentTSE from "../projects/tse-website-revamp.mdx";
-import contentUSHS from "../projects/ushs-housing-portal.mdx";
 import { assertUniqueKey, makeComparator, makeSlug } from "../util";
 
 import { PersonId, Role, allRoles } from "./people";
