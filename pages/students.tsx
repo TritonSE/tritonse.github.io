@@ -129,11 +129,11 @@ We emulate the Agile Workflow to give our developers some insight on industry st
 
 Be prepared to present a past project you worked on. The presentation will be a total of 25 minutes, with 15 minutes of presentation and 10 minutes of questions. It is recommended to have either slides or some sort of visual component to your presentation.
 
-Be prepared to solve a design challenge. You will be given a prompt similar to an actual TSE project and will have 30 minutes to demonstrate your ability to think through and solve this problem. You should be prepared to both talk through your thought process as well as create some very low fidelity visuals to convey your ideas. We really want to understand what you are thinking the whole time, so please think out loud! If you get stuck at any point, the interviewer(s) will be there to help guide you
+Be prepared to solve a design challenge. You will be given a prompt similar to an actual TSE project and will have 30 minutes to demonstrate your ability to think through and solve this problem. You should be prepared to both talk through your thought process as well as create some very low fidelity visuals to convey your ideas. We really want to understand what you are thinking the whole time, so please think out loud! If you get stuck at any point, the interviewer(s) will be there to help guide you.
 
 ### What does being a designer look like at TSE?
 
-Designers communicate closely with our nonprofit clients in order to craft user flows, wireframes, and prototypes that align with their needs. Designers often take on projects in pairs. They are the ones creating the detailed plan for the end solution, which is then eventually handed off to TSE developers. There’s a variety of types of projects, ranging from website rebranding to internal software tools. Typically, designers spend 5-7 hours a week on TSE activities.
+Designers collaborate closely with their non-profit client, carefully listening to the client’s needs to create tailored solutions. Using design tools like Figma, they guide projects through the entire design process, including research, ideation, wireframing, prototyping, etc. Along the way, designers hand off their designs to developers, while remaining available to address any feasibility concerns. Projects vary in scope, from website rebranding to internal software tools, providing a dynamic range of challenges. On average, designers dedicate 5-7 hours per week to TSE activities.
           `}
         </CollapsibleSection>
         <CollapsibleSection title="TEST FAQs">
