@@ -51,6 +51,12 @@ const constClients = [
     url: "https://www.uweast.org/",
   },
   {
+    name: "Your Clear Way",
+    startYear: 2019,
+    endYear: 2021,
+    url: null,
+  },
+  {
     name: "OG Yoga",
     startYear: 2020,
     endYear: 2021,
@@ -83,52 +89,87 @@ const constClients = [
   {
     name: "YStem & Chess",
     startYear: 2021,
-    endYear: null,
+    endYear: 2023,
     url: null,
   },
   {
     name: "The Animal Pad",
     startYear: 2021,
-    endYear: null,
+    endYear: 2023,
     url: "https://theanimalpad.org/",
   },
   {
     name: "The League of Amazing Programmers",
     startYear: 2021,
-    endYear: null,
+    endYear: 2023,
     url: "https://www.jointheleague.org/",
   },
   {
     name: "Laktaa Bhutan",
     startYear: 2021,
-    endYear: null,
+    endYear: 2023,
     url: "https://laktaa.medium.com/",
   },
   {
     name: "San Diego County Taxpayers Association",
     startYear: 2022,
-    endYear: null,
+    endYear: 2023,
     url: "https://www.sdcta.org/",
   },
   {
     name: "Call Blackline",
     startYear: 2022,
-    endYear: null,
+    endYear: 2023,
     url: "https://www.callblackline.com/",
   },
   {
     name: "FixNation",
     startYear: 2022,
-    endYear: null,
+    endYear: 2023,
     url: "https://fixnation.org/",
   },
   {
     name: "ALUM for Northwood",
     startYear: 2022,
-    endYear: null,
+    endYear: 2023,
     url: null,
   },
-  // TODO: add YCW info
+  {
+    name: "4 Future Leaders of Tomorrow",
+    startYear: 2023,
+    endYear: 2024,
+    url: "https://4flot.com/",
+  },
+  {
+    name: "California Council For Interior Design Certification",
+    startYear: 2023,
+    endYear: null,
+    url: "https://ccidc.org/",
+  },
+  {
+    name: "Department of Family Medicine",
+    startYear: 2023,
+    endYear: 2024,
+    url: "https://familymedicine.ucsd.edu/divisions/sports-medicine/index.html",
+  },
+  {
+    name: "Patriots and Paws",
+    startYear: 2023,
+    endYear: 2024,
+    url: null,
+  },
+  {
+    name: "Plant It Again",
+    startYear: 2023,
+    endYear: null,
+    url: "https://www.plantitagain.org/",
+  },
+  {
+    name: "Union Station Homeless Services",
+    startYear: 2023,
+    endYear: 2024,
+    url: "https://ushs.org/",
+  },
 ] as const;
 export type ClientName = typeof constClients[number]["name"];
 
