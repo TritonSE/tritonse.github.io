@@ -39,7 +39,7 @@ const events: Event[] = [
     title: "Intern Panel",
     description:
       "Are YOU looking for an internship for next summer? Do YOU want to kickstart your career by gaining vital industry experience? Do you want to learn more about how to get your first software engineering or UI/UX design internship? If so, then this event is for you! On October 3rd, 2024 from 6:00 to 7:30PM PT in CSE 1202, Triton Software Engineering (TSE) will be hosting an intern panel consisting of five TSE members with extensive internship experiences. The panelists are well versed in the ins and outs of the internship application process and have a lot of insights to share with you! Our panelists have interned at numerous companies including Apple, Capital One, Google, JPMorgan, Oracle, and many more. Come out to ask all of your questions about internships in the software and design industries!",
-    location: "CSE 1202",
+    location: "tinyurl.com/tseinternpanel",
     startTime: parseDate("2024-10-03T18:00:00"),
     url: null,
   },
