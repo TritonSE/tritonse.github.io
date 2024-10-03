@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Container from "react-bootstrap/Container";
 
+import ApplicationButton from "../components/ApplicationButton";
 import ArrowLink from "../components/ArrowLink";
 import EventCardGroup from "../components/EventCardGroup";
 import GetInvolvedCards from "../components/GetInvolvedCards";
@@ -47,8 +48,9 @@ Crafting digital solutions for nonprofit organizations in our community.
       </Hero>
       {recruitment.acceptingApplications && (
         <PaddedBox heading="Apply Now!">
-          Are you a UCSD student interested in joining TSE this school year?{" "}
-          <ArrowLink href="/students">Click here to learn more!</ArrowLink>
+          Are you a UCSD student interested in joining TSE this school year? Applications are due on{" "}
+          {recruitment.deadline}.
+          <ApplicationButton />
         </PaddedBox>
       )}
       <PaddedBox heading="Tech For Good">

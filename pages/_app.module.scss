@@ -10,4 +10,14 @@
   .main {
     flex-grow: 1;
   }
+
+  .applicationAlert {
+    border-radius: 0;
+    margin: 0;
+
+    .applicationText {
+      margin: 0;
+      text-align: center;
+    }
+  }
 }

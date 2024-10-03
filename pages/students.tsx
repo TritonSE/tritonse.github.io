@@ -1,5 +1,6 @@
 import React from "react";
 
+import ApplicationButton from "../components/ApplicationButton";
 import CollapsibleSection from "../components/CollapsibleSection";
 import Hero from "../components/Hero";
 import PaddedBox from "../components/PaddedBox";
@@ -26,13 +27,22 @@ Work with Triton Software Engineering and use software solutions to better the c
 Become a part of the Triton Software Engineering family and put your skills to use by giving back to the community! Together, we can work alongside nonprofit organizations to create a greater impact. We recruit annually in the fall so make sure you stay up to date.
 
 ## Apply
+        `}
 
-${
-  recruitment.acceptingApplications
-    ? `Please fill out the application form [here](${recruitment.applicationUrl}). Applications are due on ${recruitment.deadline}.`
-    : "We are no longer accepting applications for this school year. If you are interested, please apply in Fall quarter of the next school year."
-}
+        {recruitment.acceptingApplications ? (
+          <>
+            <ApplicationButton />
+            <div style={{ marginTop: "1.5em" }}>
+              {markdown`Applications are due on ${recruitment.deadline}.`}
+            </div>
+          </>
+        ) : (
+          markdown`
+We are no longer accepting applications for this school year. If you are interested, please apply in Fall quarter of the next school year.
+          `
+        )}
 
+        {markdown`
 ## 2024 Fall Recruitment Timeline
 
 - Application opens - Week 0 Thursday 9/26 12:01am
@@ -48,7 +58,7 @@ ${
 - Phone screen invitation emails sent - Week 3 Friday 10/18
 - Technical interview invitation emails sent - Week 5 Friday 11/1
 - Acceptance/rejection emails sent - Week 8 Tuesday 11/19
-`}
+        `}
         <CollapsibleSection title="General FAQs">
           {markdown`
 ### What is Triton Software Engineering?
