@@ -152,7 +152,7 @@ Designers collaborate closely with their non-profit client, carefully listening 
 
 The TSE Early Start Training (TEST) program provides students from underprivileged backgrounds who have little to no technical development/design experience with a first step into exploring software engineering and UI/UX design. TEST developers and designers will learn the fundamentals of their domain while working on beginner-level internal projects for TSE. The program lasts for the school year, after this period TEST members can choose whether or not they'd like to be evaluated to potentially become TSE developers and designers.
 
-You may either apply to TSE or the TEST program, not both. If you are unsure about which is right for you, please email nboloori@ucsd.edu.
+You may either apply to TSE or the TEST program, not both. If you are unsure about which is right for you, please email [${recruitment.presidentEmail}](mailto:${recruitment.presidentEmail}).
 
 ### What sort of projects will I be working on in the TEST program?
 
