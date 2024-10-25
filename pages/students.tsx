@@ -48,7 +48,7 @@ We are no longer accepting applications for this school year. If you are interes
 - Application opens - Week 0 Thursday 9/26 12:01am
 - Application closes - Week 2 Sunday 10/13 11:59pm
 - Phone screen invitation emails sent - Week 3 Friday 10/18
-- Technical interview invitation emails sent - Week 5 Friday 11/1
+- Technical interview invitation emails sent - Week 5 Saturday 11/2
 - Acceptance/rejection emails sent - Week 8 Tuesday 11/19
         `}
         <CollapsibleSection title="General FAQs">
