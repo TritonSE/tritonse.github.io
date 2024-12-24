@@ -81,7 +81,7 @@ const allImages = {
   "members/assaf_cohen_arazi_0": { width: 672, height: 672, maxSize: 750, extension: ".jpg" },
   "members/ayush_shukla_0": { width: 1000, height: 1001, maxSize: 1080, extension: ".jpg" },
   "members/belal_aboabdo_0": { width: 1840, height: 1840, maxSize: 1080, extension: ".jpg" },
-  "members/benjamin_johnson_0": { width: 546, height: 546, maxSize: 640, extension: ".jpg" },
+  "members/benjamin_johnson_0": { width: 512, height: 512, maxSize: 640, extension: ".png" },
   "members/benson_budiman_0": { width: 2143, height: 2142, maxSize: 1080, extension: ".jpg" },
   "members/benson_vuong_0": { width: 1423, height: 1433, maxSize: 1080, extension: ".jpg" },
   "members/brandon_jonathan_0": { width: 520, height: 520, maxSize: 640, extension: ".jpg" },

@@ -1081,7 +1081,7 @@ const rawPeople = [
     roles: ["Developer"],
   },
   {
-    id: "Annabelle_Guiditta 0",
+    id: "Annabelle Guiditta 0",
     roles: ["Developer"],
   },
   {
