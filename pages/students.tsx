@@ -65,15 +65,13 @@ If you are passionate about helping others using the skills you learn in college
 
 TSE recruits new members at the beginning of every Fall quarter. In 2019, we accepted a total of 31 members from 167 applicants. In 2020, we accepted a total of 29 members from 164 applicants. In 2021, we accepted a total of 30 members from 311 applicants.
 
-There are three stages for both designers and developers. We start with a resume screen, then a behavioral phone screen (with a Systems Design question for aspiring TSE developers), followed by a technical interview. For TEST, we will have a resume screen and then a combined behavioral and technical interview. Due to the current circumstances, our recruitment process will be conducted virtually.
-
-Interested in applying? [Click here!](${recruitment.applicationUrl})
+There are three stages for both designers and developers. We start with a resume screen, then a behavioral interview (with a few technical questions for aspiring TSE developers), followed by a technical interview. For TEST, we will have a resume screen and then a combined behavioral and technical interview.
 
 ### How many project teams are there? How are TSE projects structured?
 
-The number of project teams in TSE depends on the number of nonprofits we are able to secure collaborations with every year. In the past school year, we had 7 project teams.
+The number of project teams in TSE depends on the number of nonprofits we are able to secure collaborations with every year.
 
-In the 2022-2023 school year, TSE’s structure consisted of our board, a design team, 6 project-based teams, and the TEST team. Each project team was made up of an engineering manager, a product manager, 8 developers, and 2-3 designers. Teams work independently of one another to create software for the nonprofit organization that they have been assigned to.
+In the 2023-2024 school year, TSE's structure consisted of our board, a design team, 6 project-based teams, and the TEST team. Each project team was made up of an engineering manager, a product manager, 8 developers, and 2-3 designers. Teams work independently of one another to create software for the nonprofit organization that they have been assigned to.
 
 ### How can I stay up-to-date with upcoming TSE events?
 
@@ -84,7 +82,7 @@ We host both internal and public events. To find our public events, follow us on
           {markdown`
 ### What computer science knowledge is expected for the developer recruitment process?
 
-Here is the knowledge we expect for each grade level. The interview questions might not cover all of these topics, and it might be possible to pass the interviews without knowing all of these topics, but our interview questions are designed with these expectations in mind.
+Here is the knowledge we expect for each grade level. Note that your grade level is determined by the year you entered college (e.g. if you started college in 2024, graduate in 2027, and are applying during the fall 2024 recruitment cycle, then you will be evaluated as a freshman). The interview questions might not cover all of these topics, and it might be possible to pass the interviews without knowing all of these topics, but our interview questions are designed with these expectations in mind.
 
 #### First-years
 
@@ -108,7 +106,7 @@ Approximately CSE 12 or equivalent:
 
 ### How can I prepare for the technical components of the developer recruitment process?
 
-In the phone screen, expect to do one or more of the following:
+In the behavioral interview, expect to do one or more of the following:
 
 - Demonstrate your familiarity with the computer science concepts above
 - Describe how you would test a piece of code
@@ -142,7 +140,7 @@ Designers collaborate closely with their non-profit client, carefully listening 
           {markdown`
 ### What is the TEST program?
 
-The TSE Early Start Training (TEST) program provides students from underprivileged backgrounds who have little to no technical development/design experience with a first step into exploring software engineering and UI/UX design. TEST developers and designers will learn the fundamentals of their domain while working on beginner-level internal projects for TSE. The program lasts for the school year, after this period TEST members can choose whether or not they'd like to be evaluated to potentially become TSE developers and designers.
+The TSE Early Start Training (TEST) program provides students from underprivileged backgrounds who have absolutely no technical development/design experience with a first step into exploring software engineering and UI/UX design. TEST developers and designers will learn the fundamentals of their domain while working on beginner-level internal projects for TSE. The program lasts for the school year, after this period TEST members can choose whether or not they'd like to be evaluated to potentially become TSE developers and designers.
 
 You may either apply to TSE or the TEST program, not both. If you are unsure about which is right for you, please email [${recruitment.presidentEmail}](mailto:${recruitment.presidentEmail}).
 
@@ -156,7 +154,7 @@ Yes! We have a process internally to transition TEST members to TSE members. Our
 
 ### What does being a TEST member look like at TSE?
 
-Our primary focus with TEST is to enable students from underprivileged backgrounds to explore development and design. As a TEST member, you will be spending the first portion of the year learning all about your chosen discipline. These lessons will be taught by our TEST Leads who have created customized curriculum to help you on your journey. You'll be collaborating with other TEST members during this entire process. After this first "bootcamp" period, you'll move onto the project portion of the year where you'll create something awesome using all of skills you picked up. Typically, TEST members spend 4-6 hours a week on TSE activities.
+As a TEST member, you will be spending the first portion of the year learning all about your chosen discipline. These lessons will be taught by our TEST Leads who have created customized curriculum to help you on your journey. You'll be collaborating with other TEST members during this entire process. After this first "bootcamp" period, you'll move onto the project portion of the year where you'll create something awesome using all of skills you picked up. Typically, TEST members spend 4-6 hours a week on TSE activities.
           `}
         </CollapsibleSection>
         {markdown`
