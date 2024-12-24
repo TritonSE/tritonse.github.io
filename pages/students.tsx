@@ -82,7 +82,7 @@ We host both internal and public events. To find our public events, follow us on
           {markdown`
 ### What computer science knowledge is expected for the developer recruitment process?
 
-Here is the knowledge we expect for each grade level. The interview questions might not cover all of these topics, and it might be possible to pass the interviews without knowing all of these topics, but our interview questions are designed with these expectations in mind.
+Here is the knowledge we expect for each grade level. Note that your grade level is determined by the year you entered college (e.g. if you started college in 2024, graduate in 2027, and are applying during the fall 2024 recruitment cycle, then you will be evaluated as a freshman). The interview questions might not cover all of these topics, and it might be possible to pass the interviews without knowing all of these topics, but our interview questions are designed with these expectations in mind.
 
 #### First-years
 
