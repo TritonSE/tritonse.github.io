@@ -9,7 +9,7 @@ export default function ProjectCarousel() {
   return (
     <div style={{ display: "flex", overflowX: "auto" }}>
       <div style={{ flexGrow: 0, flexShrink: 0, width: "5vw" }} />
-      {allProjects.slice(0, 5).map((project) => (
+      {allProjects.slice(0, 6).map((project) => (
         <BigCard
           title={project.name}
           imageKey={firstValidImageKey(project.thumbnail, "icons/tse-bulb")}

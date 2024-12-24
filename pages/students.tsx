@@ -1,5 +1,6 @@
 import React from "react";
 
+import ApplicationButton from "../components/ApplicationButton";
 import CollapsibleSection from "../components/CollapsibleSection";
 import Hero from "../components/Hero";
 import PaddedBox from "../components/PaddedBox";
@@ -26,29 +27,30 @@ Work with Triton Software Engineering and use software solutions to better the c
 Become a part of the Triton Software Engineering family and put your skills to use by giving back to the community! Together, we can work alongside nonprofit organizations to create a greater impact. We recruit annually in the fall so make sure you stay up to date.
 
 ## Apply
+        `}
 
-${
-  recruitment.acceptingApplications
-    ? `Please fill out the application form [here](${recruitment.applicationUrl}). Applications are due on ${recruitment.deadline}.`
-    : "We are no longer accepting applications for this school year. If you are interested, please apply in Fall quarter of the next school year."
-}
+        {recruitment.acceptingApplications ? (
+          <>
+            <ApplicationButton />
+            <div style={{ marginTop: "1.5em" }}>
+              {markdown`Applications are due on ${recruitment.deadline}.`}
+            </div>
+          </>
+        ) : (
+          markdown`
+We are no longer accepting applications for this school year. If you are interested, please apply in Fall quarter of the next school year.
+          `
+        )}
 
+        {markdown`
 ## 2024 Fall Recruitment Timeline
 
 - Application opens - Week 0 Thursday 9/26 12:01am
-- Engineers on the Green - Week 1 Tuesday 10/1 11:00am-3:00pm @ Warren Mall
-- Tabling session 1 - Week 1 Wednesday 10/2 11:00am-3:00pm @ Library Walk 1977
-- Tabling session 2 - Week 1 Thursday 10/3 11:00am-3:00pm @ Library Walk 1977
-- Intern Panel - Week 1 Thursday 10/3 6:00-7:30pm @ [tinyurl.com/tseinternpanel](https://tinyurl.com/tseinternpanel)
-- Tabling session 3 - Week 2 Monday 10/7 11:00am-3:00pm @ Library Walk 1977
-- Tabling session 4 - Week 2 Tuesday 10/8 11:00am-3:00pm @ Library Walk 1977
-- Info Session 1 - Week 2 Tuesday 10/8 7:30-8:30pm @ CSE 1202
-- Info Session 2 - Week 2 Thursday 10/10 6:00-7:00pm @ CSE 1202
 - Application closes - Week 2 Sunday 10/13 11:59pm
 - Phone screen invitation emails sent - Week 3 Friday 10/18
-- Technical interview invitation emails sent - Week 5 Friday 11/1
+- Technical interview invitation emails sent - Week 5 Saturday 11/2
 - Acceptance/rejection emails sent - Week 8 Tuesday 11/19
-`}
+        `}
         <CollapsibleSection title="General FAQs">
           {markdown`
 ### What is Triton Software Engineering?
@@ -142,7 +144,7 @@ Designers collaborate closely with their non-profit client, carefully listening 
 
 The TSE Early Start Training (TEST) program provides students from underprivileged backgrounds who have little to no technical development/design experience with a first step into exploring software engineering and UI/UX design. TEST developers and designers will learn the fundamentals of their domain while working on beginner-level internal projects for TSE. The program lasts for the school year, after this period TEST members can choose whether or not they'd like to be evaluated to potentially become TSE developers and designers.
 
-You may either apply to TSE or the TEST program, not both. If you are unsure about which is right for you, please email nboloori@ucsd.edu.
+You may either apply to TSE or the TEST program, not both. If you are unsure about which is right for you, please email [${recruitment.presidentEmail}](mailto:${recruitment.presidentEmail}).
 
 ### What sort of projects will I be working on in the TEST program?
 
