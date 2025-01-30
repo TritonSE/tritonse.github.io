@@ -984,6 +984,7 @@ const rawPeople = [
   {
     id: "Sophia Zhu 0",
     roles: ["Developer"],
+    graduation: 2024,
   },
   {
     id: "Alice Lam 0",
@@ -1230,10 +1231,6 @@ const rawPeople = [
   },
   {
     id: "Joana Peralta 0",
-    roles: ["TEST Developer"],
-  },
-  {
-    id: "Poe Nu 0",
     roles: ["TEST Developer"],
   },
   {
