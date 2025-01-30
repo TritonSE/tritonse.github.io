@@ -114,7 +114,7 @@ In the behavioral interview, expect to do one or more of the following:
 
 To prep for the technical interview:
 
-- Brush up on a high-level programming language. Python, Java, or JavaScript is preferred. C or C++ might work, but due to the nature of the interview tasks, it may be more difficult to use these languages. You will not be able to compile or run your code, so exact syntax/APIs are not that important, but we expect you to demonstrate familiarity with the language you choose.
+- Brush up on a high-level programming language. Due to the nature of the interview tasks, some languages may be more difficult to use than others. Python, Java, or JavaScript is preferred. You will not be able to compile or run your code, so exact syntax/APIs are not that important, but we expect you to demonstrate familiarity with the language you choose.
 - Expect to solve one or more programming tasks, which may have multiple parts. Be mindful of edge cases, and discuss your approach with your interviewer before you start writing code.
 - You will be evaluated on your communication and problem-solving skills, the readability, maintainability, and correctness of your code, and (for sophomores/juniors/seniors) the algorithmic performance of your code.
 
@@ -133,14 +133,14 @@ Be prepared to solve a design challenge. You will be given a prompt similar to a
 
 ### What does being a designer look like at TSE?
 
-Designers collaborate closely with their non-profit client, carefully listening to the client’s needs to create tailored solutions. Using design tools like Figma, they guide projects through the entire design process, including research, ideation, wireframing, prototyping, etc. Along the way, designers hand off their designs to developers, while remaining available to address any feasibility concerns. Projects vary in scope, from website rebranding to internal software tools, providing a dynamic range of challenges. On average, designers dedicate 5-7 hours per week to TSE activities.
+Designers collaborate closely with their non-profit client, carefully listening to the client's needs to create tailored solutions. Using design tools like Figma, they guide projects through the entire design process, including research, ideation, wireframing, prototyping, etc. Along the way, designers hand off their designs to developers, while remaining available to address any feasibility concerns. Projects vary in scope, from website rebranding to internal software tools, providing a dynamic range of challenges. On average, designers dedicate 5-7 hours per week to TSE activities.
           `}
         </CollapsibleSection>
         <CollapsibleSection title="TEST FAQs">
           {markdown`
 ### What is the TEST program?
 
-The TSE Early Start Training (TEST) program provides students from underprivileged backgrounds who have absolutely no technical development/design experience with a first step into exploring software engineering and UI/UX design. TEST developers and designers will learn the fundamentals of their domain while working on beginner-level internal projects for TSE. The program lasts for the school year, after this period TEST members can choose whether or not they'd like to be evaluated to potentially become TSE developers and designers.
+The TSE Early Start Training (TEST) program provides students from underprivileged backgrounds who have absolutely no technical development/design experience with a first step into exploring software engineering or UI/UX design. TEST developers and designers will learn the fundamentals of their domain while working on beginner-level projects. The program lasts for the school year, then after this period TEST members can choose whether or not they'd like to be evaluated to potentially become TSE developers and designers.
 
 You may either apply to TSE or the TEST program, not both. If you are unsure about which is right for you, please email [${recruitment.presidentEmail}](mailto:${recruitment.presidentEmail}).
 

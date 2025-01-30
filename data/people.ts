@@ -1233,10 +1233,6 @@ const rawPeople = [
     roles: ["TEST Developer"],
   },
   {
-    id: "Poe Nu 0",
-    roles: ["TEST Developer"],
-  },
-  {
     id: "Angelica Facundo Arguilla 0",
     roles: ["TEST Designer"],
   },
