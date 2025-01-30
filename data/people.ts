@@ -984,6 +984,7 @@ const rawPeople = [
   {
     id: "Sophia Zhu 0",
     roles: ["Developer"],
+    graduation: 2024,
   },
   {
     id: "Alice Lam 0",
