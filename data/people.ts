@@ -1234,6 +1234,10 @@ const rawPeople = [
     roles: ["TEST Developer"],
   },
   {
+    id: "Kate Songpetchmongkol 0",
+    roles: ["TEST Developer"],
+  },
+  {
     id: "Angelica Facundo Arguilla 0",
     roles: ["TEST Designer"],
   },
@@ -1243,10 +1247,6 @@ const rawPeople = [
   },
   {
     id: "Johnny Tiangco 0",
-    roles: ["TEST Designer"],
-  },
-  {
-    id: "Kate Songpetchmongkol 0",
     roles: ["TEST Designer"],
   },
   {
