@@ -1,6 +1,6 @@
 import React from "react";
 
-import { allProjects } from "../data/projects";
+import { allProjectsWithContent } from "../data/projects-content";
 import { firstValidImageKey } from "../images";
 
 import BigCard from "./BigCard";
@@ -9,7 +9,7 @@ export default function ProjectCarousel() {
   return (
     <div style={{ display: "flex", overflowX: "auto" }}>
       <div style={{ flexGrow: 0, flexShrink: 0, width: "5vw" }} />
-      {allProjects.slice(0, 6).map((project) => (
+      {allProjectsWithContent.slice(0, 6).map((project) => (
         <BigCard
           title={project.name}
           imageKey={firstValidImageKey(project.thumbnail, "icons/tse-bulb")}

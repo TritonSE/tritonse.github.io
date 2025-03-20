@@ -1,0 +1,88 @@
+@use "../styles/variables.scss";
+
+.root {
+  position: relative;
+  height: 75px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-top: 10px;
+  @media (max-width: 800px) {
+    padding-top: 6px;
+  }
+}
+
+.divider {
+  height: 6px;
+  width: 100%;
+  background-color: variables.$tse-gold;
+  margin: 0 10px;
+  @media (max-width: 800px) {
+    height: 3px;
+  }
+  @media (max-width: 575px) {
+    height: 2px;
+  }
+}
+
+.imageContainer {
+  min-width: 60px;
+  display: flex;
+  justify-content: center;
+  @media (max-width: 800px) {
+    min-width: 30px;
+  }
+}
+
+.sunRayUpLeft {
+  position: absolute;
+  left: calc(50% - 14px);
+  transform: rotate(-30deg) translateX(-50%);
+  top: 8px;
+  height: 8px;
+  width: 4px;
+  border-radius: 2px;
+  background-color: variables.$tse-gold;
+  @media (max-width: 800px) {
+    left: calc(50% - 12px);
+    top: 23px;
+    height: 4px;
+    width: 2px;
+    border-radius: 1px;
+  }
+}
+
+.sunRayUpStraight {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+  height: 14px;
+  width: 4px;
+  border-radius: 2px;
+  background-color: variables.$tse-gold;
+  @media (max-width: 800px) {
+    top: 16px;
+    height: 7px;
+    width: 2px;
+    border-radius: 1px;
+  }
+}
+
+.sunRayUpRight {
+  position: absolute;
+  left: calc(50% + 14px);
+  transform: rotate(30deg) translateX(-50%);
+  top: 10px;
+  height: 8px;
+  width: 4px;
+  border-radius: 2px;
+  background-color: variables.$tse-gold;
+  @media (max-width: 800px) {
+    left: calc(50% + 12px);
+    top: 23px;
+    height: 4px;
+    width: 2px;
+    border-radius: 1px;
+  }
+}

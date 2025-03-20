@@ -1,0 +1,20 @@
+@use "../styles/variables.scss";
+
+.root {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.topRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 14px;
+}
+
+.goldText {
+  text-wrap: nowrap;
+  color: variables.$tse-gold;
+  margin: 0;
+}

@@ -1,20 +1,103 @@
 @use "../styles/variables.scss";
 
 .footer {
-  margin-top: 9rem;
-  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  background-color: #212529;
+  padding: 124px 90px;
+  margin: 0;
+  gap: 40px;
+  @media (max-width: 800px) {
+    padding: 55px 48px;
+    gap: 12px;
+  }
+  @media (max-width: 575px) {
+    flex-direction: column;
+    padding: 32px;
+    gap: 0;
+  }
 }
 
-.heading {
-  text-transform: uppercase;
+.logo {
+  // Completely hide logo and any associated padding on mobile
+  @media (max-width: 575px) {
+    display: none !important;
+  }
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  @media (max-width: 575px) {
+    gap: 4px;
+  }
+}
+
+.goldText {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: variables.$tse-gold;
+  text-wrap: nowrap;
+  line-height: 24px;
+  @media (max-width: 800px) {
+    font-size: 1.25rem;
+  }
+  @media (max-width: 575px) {
+    text-wrap: wrap;
+    margin: 0;
+    max-width: 175px;
+  }
+}
+
+.iconsRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 32px;
+  @media (max-width: 800px) {
+    gap: 20px;
+  }
+  @media (max-width: 575px) {
+    gap: 16px;
+    margin-bottom: 12px;
+  }
+}
+
+.icon {
+  color: variables.$tse-gold;
+  width: 2rem;
+  height: 2rem;
+  @media (max-width: 800px) {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  @media (max-width: 575px) {
+    width: 1.125rem;
+    height: 1.125rem;
+  }
+}
+
+.rightColumn {
+  margin-left: auto;
+  max-width: 420px;
+  @media (max-width: 575px) {
+    margin-left: 0;
+  }
+}
+
+.whiteText {
+  font-size: 1.5rem;
   font-weight: 600;
+  margin: 0;
+  line-height: 28px;
+  @media (max-width: 800px) {
+    font-size: 0.75rem;
+    line-height: 14px;
+  }
 }
 
-.link {
-  padding-left: 0;
-  color: variables.$body-color;
-}
-
-.iconNav {
-  text-align: right;
+.whiteText a {
+  color: white !important;
 }

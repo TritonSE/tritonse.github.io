@@ -1,42 +1,7 @@
-import { MDXProps } from "mdx/types";
-
 import { ImageKey } from "../images";
-import content4FLOT from "../projects/4flot-website-revamp.mdx";
-import contentALUM from "../projects/alum-mentorship-mobile-application.mdx";
-import contentCBL from "../projects/cbl-crisis-line-mobile-application.mdx";
-import contentCCH from "../projects/cch-community-markets.mdx";
-import contentCCIDC from "../projects/ccidc-application-form.mdx";
-import contentDFM from "../projects/dfm-sideline-sidekick.mdx";
-import contentDynamics from "../projects/dynamics-website.mdx";
-import contentFIX from "../projects/fix-landing-page.mdx";
-import contentFSD from "../projects/fsd-distribution-web-app.mdx";
-import contentIHCEMR from "../projects/ihc-emr.mdx";
-import contentIHCWellness from "../projects/ihc-wellness-app.mdx";
-import contentKCLinking from "../projects/kc-linking.mdx";
-import contentKCSkilled from "../projects/kc-skilled-impact.mdx";
-import contentLAK from "../projects/lak-goods-transport-application.mdx";
-import contentLAP from "../projects/lap-student-tracker.mdx";
-import contentMAW from "../projects/maw-volunteer-hub.mdx";
-import contentOIC from "../projects/oic-web-innovation-portal.mdx";
-import contentPAP from "../projects/pap-application-form.mdx";
-import contentPIA from "../projects/pia-program-manager.mdx";
-import contentSDCTA from "../projects/sdcta-data-visualization-website.mdx";
-import contentSI from "../projects/si-website-revamp.mdx";
-import contentSSA from "../projects/ssa-website.mdx";
-import contentTAP from "../projects/tap-dog-matching.mdx";
-import contentMoneta from "../projects/tse-moneta.mdx";
-import contentOktavian from "../projects/tse-oktavian.mdx";
-import contentTSE from "../projects/tse-website-revamp.mdx";
-import contentUSHS from "../projects/ushs-housing-portal.mdx";
-import contentUWEAST from "../projects/uweast-community-kitchen.mdx";
-import contentWA from "../projects/wa-family-literacy.mdx";
-import contentYCW from "../projects/ycw-greenpoint-rated-app.mdx";
-import contentYSC from "../projects/ysc-mobile-app.mdx";
 import { assertUniqueKey, makeComparator, makeSlug } from "../util";
 
 import { PersonId, Role, allRoles } from "./people";
-
-type MDXPage = (props: MDXProps) => JSX.Element;
 
 type ProjectTeam = readonly {
   readonly role: Role;
@@ -46,12 +11,11 @@ type ProjectTeam = readonly {
 interface RawProject {
   readonly name: string;
   readonly description: string;
-  readonly content: MDXPage;
   readonly thumbnail: ImageKey | null;
   readonly team: ProjectTeam;
 }
 
-interface Project extends RawProject {
+interface ProjectWithoutContent extends RawProject {
   readonly slug: string;
 }
 
@@ -61,7 +25,6 @@ const constProjects = [
   {
     name: "4FLOT Website Revamp",
     description: "Website highlighting the impact of 4FLOT in the community.",
-    content: content4FLOT,
     thumbnail: "projects/4flot_website_revamp/home-page",
     team: [
       {
@@ -95,7 +58,6 @@ const constProjects = [
     name: "CCIDC Application Form",
     description:
       "Redesigned application pathways to make it easier for target users to navigate and apply for certification.",
-    content: contentCCIDC,
     thumbnail: "projects/ccidc_application_form/home-page",
     team: [
       {
@@ -129,7 +91,6 @@ const constProjects = [
     name: "DFM Sideline Sidekick",
     description:
       "App to get quick reference on injuries and how to treat them when physicians are at on-call events.",
-    content: contentDFM,
     thumbnail: "projects/dfm_sideline_sidekick/splashscreens",
     team: [
       {
@@ -162,7 +123,6 @@ const constProjects = [
     name: "PAP Application Form",
     description:
       "A robust, streamlined way to manage and service a large volume of requests for furnishings",
-    content: contentPAP,
     thumbnail: "projects/pap_application_form/home-page",
     team: [
       {
@@ -182,7 +142,6 @@ const constProjects = [
         personIds: [
           "Daniel Shao 0",
           "Harsh Gurnani 0",
-          "Melina Dimitropoulou 0",
           "Samvrit Srinath 0",
           "Sophia Yu 0",
           "Steven Shi 0",
@@ -196,7 +155,6 @@ const constProjects = [
     name: "PIA Program Manager",
     description:
       "A database to track students, programs the students are part of, and any relevant information.",
-    content: contentPIA,
     thumbnail: "projects/pia_program_manager/home-page",
     team: [
       {
@@ -228,7 +186,6 @@ const constProjects = [
   {
     name: "USHS Housing Portal",
     description: "Database that matches housing to people who are homeless.",
-    content: contentUSHS,
     thumbnail: "projects/ushs_housing_portal/home-page",
     team: [
       {
@@ -263,7 +220,6 @@ const constProjects = [
     name: "FIX Landing Page",
     description:
       "Landing page with interactive elements to bring awareness to community cats and encourage people to get involved.",
-    content: contentFIX,
     thumbnail: "projects/fix_landing_page/home-page",
     team: [
       {
@@ -301,7 +257,6 @@ const constProjects = [
   {
     name: "SDCTA Data Visualization Website",
     description: "Data Visualization Website with a subscription structure.",
-    content: contentSDCTA,
     thumbnail: "projects/sdcta_data_visualization_website/home-page",
     team: [
       {
@@ -336,7 +291,6 @@ const constProjects = [
     name: "ALUM Mentorship Mobile Application",
     description:
       "Mobile (specifically iOS) application that provides a personalized user experience and flexibility to receive mentorship.",
-    content: contentALUM,
     thumbnail: "projects/alum_mentorship_mobile_application/splashscreens",
     team: [
       {
@@ -369,7 +323,6 @@ const constProjects = [
     name: "CBL Crisis Line Mobile Application",
     description:
       "Mobile app offering crisis counseling services and resources to people throughout the United States and Canada.",
-    content: contentCBL,
     thumbnail: "projects/cbl_crisis_line/splashscreens",
     team: [
       {
@@ -405,7 +358,6 @@ const constProjects = [
     name: "LAK Goods Transport Application",
     description:
       "The Laktaa Goods Transport Application connects Bhutanese farmers and agricultural collectives to delivery drivers for Laktaa Bhutan (formerly FirstMile Bhutan).",
-    content: contentLAK,
     thumbnail: "projects/lak_goods_transport/splashscreens",
     team: [
       {
@@ -447,7 +399,6 @@ const constProjects = [
   {
     name: "TSE Website Revamp",
     description: "Our website!",
-    content: contentTSE,
     thumbnail: "projects/tse_website_revamp/home-page",
     team: [
       {
@@ -476,7 +427,6 @@ const constProjects = [
     name: "MAW Volunteer Hub",
     description:
       "The Make-A-Wish Volunteer Hub is used to coordinate volunteer events, materials, and contact information for for the organization.",
-    content: contentMAW,
     thumbnail: "projects/maw_volunteer_hub/home-page",
     team: [
       {
@@ -508,7 +458,6 @@ const constProjects = [
     name: "TSE Moneta",
     description:
       "The TSE Moneta website is an abstractable, GUI database solution that can be individually customized by nonprofits to best address their needs.",
-    content: contentMoneta,
     thumbnail: "projects/tse_moneta/home-page",
     team: [
       {
@@ -540,7 +489,6 @@ const constProjects = [
     name: "LAP Student Tracker",
     description:
       "The League of Amazing Programmers Student Tracker is a hub for the League of Amazing Programmers school used by both students and teachers to centralize classroom scheduling and communication.",
-    content: contentLAP,
     thumbnail: "projects/lap_student_tracker/home-page",
     team: [
       {
@@ -573,7 +521,6 @@ const constProjects = [
     name: "TAP Foster Dog Matching Tool",
     description:
       "The Animal Pad Foster Dog Matching Tool assists with the process of matching dogs to foster families.",
-    content: contentTAP,
     thumbnail: "projects/tap_dog_matching/home-page",
     team: [
       {
@@ -601,7 +548,6 @@ const constProjects = [
     name: "YSC Mobile App",
     description:
       "The YStem and Chess Mobile Application provides a platform through which underprivileged students can work with mentors in order to learn and play chess.",
-    content: contentYSC,
     thumbnail: "projects/ysc_mobile_app/app-screens",
     team: [
       {
@@ -634,7 +580,6 @@ const constProjects = [
     name: "WA Family Literacy Mobile App",
     description:
       "The Words Alive Family Literacy Application promotes family literacy through an intuitive mobile app.",
-    content: contentWA,
     thumbnail: "projects/wa_family_literacy/app-screens",
     team: [
       {
@@ -665,7 +610,6 @@ const constProjects = [
     name: "FSD Distribution Web Application",
     description:
       "The FSD Distribution Web Application tracks information on agencies and food distributions for Feeding San Diego.",
-    content: contentFSD,
     thumbnail: "projects/fsd_distribution_web_app/home-page",
     team: [
       {
@@ -694,7 +638,6 @@ const constProjects = [
     name: "TSE Oktavian",
     description:
       "Membership & logistics portal for TSE — handles recruitment, roster management, etc.",
-    content: contentOktavian,
     thumbnail: "projects/tse_oktavian/home-page",
     team: [
       {
@@ -729,7 +672,6 @@ const constProjects = [
     name: "SI Website Revamp",
     description:
       "Personalized website and admin tool for Sakyadhita to display and edit organization information.",
-    content: contentSI,
     thumbnail: "projects/si_website_revamp/home-page",
     team: [
       {
@@ -760,7 +702,6 @@ const constProjects = [
     name: "YCW GreenPoint Rated Mobile App",
     description:
       "Mobile application for Your Clear Way (formerly Build-It-Green) which helps homeowners and certified GreenPoint raters to create healthy and sustainable homes.",
-    content: contentYCW,
     thumbnail: "projects/ycw_greenpoint_rated_app/app-screens",
     team: [
       {
@@ -792,7 +733,6 @@ const constProjects = [
     name: "IHC EMR Mobile App",
     description:
       "Mobile application for IHC that digitizes clinic administration. Volunteers, physicians, and lab technicians can view and edit information pertaining to patient check-ins, triages, lab testing, and pharmacy management.",
-    content: contentIHCEMR,
     thumbnail: "projects/default-thumbnail",
     team: [
       {
@@ -817,7 +757,6 @@ const constProjects = [
     name: "KC Linking Mobile App",
     description:
       "Linking feature of the Key Conservation mobile app. This feature makes posts and profiles easily accessible via links which gives conservationists easy access to critical funding and global support. ",
-    content: contentKCLinking,
     thumbnail: "projects/kc_linking/app-screens",
     team: [
       {
@@ -841,7 +780,6 @@ const constProjects = [
     name: "KC Skilled Impact Mobile App",
     description:
       "Volunteer connection section of the Key Conservation mobile app. Through this feature, skilled volunteers are connected to the organizations that need them most.",
-    content: contentKCSkilled,
     thumbnail: "projects/kc_skilled_impact/app-screens",
     team: [
       {
@@ -864,7 +802,6 @@ const constProjects = [
     name: "UWEAST Community Kitchen Website",
     description:
       "Web application for UWEAST that allows customers to view the menu, place orders, and pay.",
-    content: contentUWEAST,
     thumbnail: "projects/uweast_community_kitchen/home-page",
     team: [
       {
@@ -893,7 +830,6 @@ const constProjects = [
     name: "Dynamics Team Website",
     description:
       "Website to help promote Dynamics Performance Team while providing ways to support the organization financially.",
-    content: contentDynamics,
     thumbnail: "projects/dynamics_performance_team/home-page",
     team: [
       {
@@ -919,7 +855,6 @@ const constProjects = [
     name: "IHC Wellness Mobile App",
     description:
       "Mobile application encouraging more open dialogue, healthy coping mechanisms, and better utilization of on campus resources for students under intense academic pressure.",
-    content: contentIHCWellness,
     thumbnail: "projects/ihc_wellness_app/app-screens",
     team: [
       {
@@ -936,7 +871,6 @@ const constProjects = [
     name: "OIC Web Innovation Portal",
     description:
       "UCSD resource hub where users can find the activity, event, or campus resource they are seeking or explore new ones.",
-    content: contentOIC,
     thumbnail: "projects/office_of_innovation_and_commercialization/home-page",
     team: [
       {
@@ -957,7 +891,6 @@ const constProjects = [
     name: "SSA Website",
     description:
       "Website for the Symphonic Student Association, a student organization fostering a community of members interested in classical music.",
-    content: contentSSA,
     thumbnail: "projects/symphonic_student_association/home-page",
     team: [
       {
@@ -978,7 +911,6 @@ const constProjects = [
     name: "CCH Community Markets Website",
     description:
       "Online assessment tool to determine the health of a market, allowing CCH to get accurate information on how to provide healthier foods for their community.",
-    content: contentCCH,
     thumbnail: "projects/default-thumbnail",
     team: [
       {
@@ -1004,14 +936,16 @@ function sortTeam(team: ProjectTeam): ProjectTeam {
   );
 }
 
-const allProjects: readonly Project[] = constProjects.slice().map(({ name, team, ...project }) => ({
-  ...project,
-  name,
-  slug: makeSlug(name, "-"),
-  team: sortTeam(team),
-}));
+const allProjects: readonly ProjectWithoutContent[] = constProjects
+  .slice()
+  .map(({ name, team, ...project }) => ({
+    ...project,
+    name,
+    slug: makeSlug(name, "-"),
+    team: sortTeam(team),
+  }));
 assertUniqueKey(allProjects, "name");
 assertUniqueKey(allProjects, "slug");
 
 export { allProjects };
-export type { Project, ProjectTeam };
+export type { ProjectWithoutContent, ProjectTeam };

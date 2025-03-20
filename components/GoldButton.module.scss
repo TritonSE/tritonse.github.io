@@ -1,0 +1,36 @@
+@use "../styles/variables.scss";
+
+.button {
+  background-color: variables.$tse-gold;
+  padding: 9px 24px;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  @media (max-width: 800px) {
+    padding: 8px 20px;
+  }
+}
+
+.buttonWithHover:hover {
+  border: 2px solid variables.$tse-gold;
+  background-color: transparent;
+}
+
+.buttonWithHover:hover .text {
+  color: variables.$tse-gold;
+}
+
+.buttonSmall {
+  padding: 5px 7px;
+}
+
+.text {
+  margin: 0;
+  color: #0c2b35;
+  font-weight: 700;
+  font-size: 1.25rem !important;
+}
+
+.textSmall {
+  font-size: 0.75rem !important;
+  color: #000000;
+}

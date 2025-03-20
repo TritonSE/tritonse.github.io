@@ -1,0 +1,72 @@
+@use "../styles/variables.scss";
+
+.root {
+  background-color: #212529;
+  padding: 1rem 4rem !important;
+  @media (max-width: 1300px) {
+    padding: 0.75rem 2.5rem !important;
+  }
+  @media (max-width: 800px) {
+    padding: 0.75rem 1.5rem !important;
+  }
+}
+
+.navList {
+  width: 100%;
+  align-items: center;
+  @media (max-width: 575px) {
+    align-items: start;
+  }
+}
+
+.root .text {
+  color: variables.$tse-gold;
+  --bs-navbar-active-color: #f5f5f5;
+}
+
+.text {
+  text-wrap: nowrap;
+  font-size: 1.25rem !important;
+  padding: 0 1.5rem !important;
+  @media (max-width: 1300px) {
+    font-size: 1rem !important;
+  }
+  @media (max-width: 1100px) {
+    font-size: 0.75rem !important;
+    padding: 0 1rem !important;
+  }
+  @media (max-width: 800px) {
+    font-size: 9px !important;
+    padding: 0 0.75rem !important;
+  }
+  @media (max-width: 575px) {
+    font-size: 1rem !important;
+    padding: 0.5rem 0.5rem !important;
+  }
+}
+
+.textBold {
+  font-size: 1.5rem !important;
+  font-weight: bold;
+  @media (max-width: 1300px) {
+    font-size: 1.25rem !important;
+  }
+  @media (max-width: 1100px) {
+    font-size: 1rem !important;
+  }
+  @media (max-width: 800px) {
+    font-size: 11px !important;
+  }
+  @media (max-width: 575px) {
+    display: none;
+  }
+}
+
+.expandButton {
+  border: none;
+  color: variables.$tse-gold;
+}
+
+.expandButton span {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgb(221, 186, 2)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}

@@ -1,49 +1,68 @@
-import Link from "next/link";
+"use client";
+
+import classNames from "classnames";
 import React from "react";
-import Col from "react-bootstrap/Col";
-import Container from "react-bootstrap/Container";
-import Nav from "react-bootstrap/Nav";
-import Row from "react-bootstrap/Row";
 import type { IconType } from "react-icons";
 import { FaEnvelope, FaFacebook, FaLinkedin, FaGithub, FaInstagram } from "react-icons/fa";
 
 import styles from "./Footer.module.scss";
-
-function FooterHeading({ children }: { children: React.ReactNode }) {
-  return <h2 className={styles.heading}>{children}</h2>;
-}
-
-function FooterItem({ href, children }: { href: string; children: React.ReactNode }) {
-  const external = href.indexOf(":") >= 0;
-  const navLinkProps = { className: styles.link };
-  return (
-    <Nav.Item>
-      {external ? (
-        <Nav.Link href={href} {...navLinkProps}>
-          {children}
-        </Nav.Link>
-      ) : (
-        <Link href={href} passHref legacyBehavior>
-          <Nav.Link {...navLinkProps}>{children}</Nav.Link>
-        </Link>
-      )}
-    </Nav.Item>
-  );
-}
+import ResponsiveImage from "./ResponsiveImage";
 
 function FooterIcon({ icon, href }: { icon: IconType; href: string }) {
   const IconClass = icon;
   return (
-    <FooterItem href={href}>
-      <IconClass size="2em" />
-    </FooterItem>
+    <a href={href}>
+      <IconClass className={styles.icon} />
+    </a>
   );
 }
 
 export default function Footer() {
   return (
-    <Container className={styles.footer}>
-      <Row>
+    <div className={styles.footer}>
+      <ResponsiveImage
+        className={styles.logo}
+        imageKey="icons/tse-bulb"
+        sizes={{
+          desktop: {
+            width: 70,
+            height: 70,
+          },
+          tablet: {
+            width: 36,
+            height: 36,
+          },
+          mobile: {
+            width: 0,
+            height: 0,
+          },
+        }}
+      />
+      <div className={styles.column}>
+        <p className={styles.goldText}>Triton Software Engineering</p>
+        <div className={styles.iconsRow}>
+          <FooterIcon icon={FaEnvelope} href="mailto:tse@ucsd.edu" />
+          <FooterIcon
+            icon={FaLinkedin}
+            href="https://www.linkedin.com/company/tritonsoftwareengineering"
+          />
+          <FooterIcon icon={FaInstagram} href="https://instagram.com/ucsd_tse" />
+          <FooterIcon icon={FaFacebook} href="https://www.facebook.com/TritonSE" />
+          <FooterIcon icon={FaGithub} href="https://github.com/TritonSE" />
+        </div>
+      </div>
+      <div className={classNames(styles.column, styles.rightColumn)}>
+        <p className={styles.goldText}>Contact Us</p>
+        <p className={styles.whiteText}>
+          For all inquiries, please contact us at <a href="mailto:tse@ucsd.edu">tse@ucsd.edu</a>
+        </p>
+      </div>
+    </div>
+  );
+}
+
+/*
+     <Row>
         <Col xs={9} sm={11}>
           <Row>
             <Col className="mt-4" xs={12} md={5} lg={4} xl={3}>
@@ -62,7 +81,6 @@ export default function Footer() {
                 <FooterItem href="/nonprofits">Nonprofits</FooterItem>
               </Nav>
             </Col>
-            {/* Take up space to prevent the links in the second column from getting too long */}
             <Col xs={0} md />{" "}
           </Row>
         </Col>
@@ -79,6 +97,4 @@ export default function Footer() {
           </Nav>
         </Col>
       </Row>
-    </Container>
-  );
-}
+*/

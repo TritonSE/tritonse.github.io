@@ -3,7 +3,6 @@ import React from "react";
 import Container from "react-bootstrap/Container";
 
 import Hero from "../components/Hero";
-import PageTitle from "../components/PageTitle";
 import { ImageKey } from "../images";
 
 import styles from "./PlainLayout.module.scss";
@@ -31,7 +30,6 @@ export default function PlainLayout({
   );
   return (
     <>
-      <PageTitle title={title} />
       {heroImage && <Hero imageKey={heroImage}>{headerContents}</Hero>}
       <Container className={classNames("mt-5", styles.markdownRoot)}>
         {!heroImage && <header>{headerContents}</header>}

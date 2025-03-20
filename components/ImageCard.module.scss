@@ -1,0 +1,13 @@
+.whiteBackground {
+  background-color: white;
+  padding: 10px 10px 36px 10px;
+  display: inline-block;
+
+  @media (max-width: 800px) {
+    padding: 7px 7px 25px 7px;
+  }
+
+  @media (max-width: 575px) {
+    padding: 4px 4px 13px 4px;
+  }
+}

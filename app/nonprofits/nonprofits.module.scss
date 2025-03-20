@@ -1,0 +1,227 @@
+@use "../../styles/variables.scss";
+
+.topRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 84px;
+  margin-bottom: 104px;
+
+  @media (max-width: 800px) {
+    flex-direction: column;
+    gap: 29px;
+    margin-bottom: 29px;
+  }
+
+  @media (max-width: 575px) {
+    gap: 25px;
+  }
+}
+
+.imagesContainer {
+  display: flex;
+  position: relative;
+  min-width: 500px;
+  min-height: 625px;
+
+  @media (max-width: 1050px) {
+    min-width: 325px;
+  }
+
+  @media (max-width: 800px) {
+    min-height: 400px;
+  }
+
+  @media (max-width: 575px) {
+    min-width: 180px;
+    min-height: 235px;
+  }
+}
+
+.image1 {
+  flex-shrink: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.image2 {
+  flex-shrink: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.topTextContainer {
+  @media (max-width: 800px) {
+    text-align: center;
+  }
+}
+
+.boldText {
+  font-weight: 600;
+}
+
+.goldText {
+  color: variables.$tse-gold;
+}
+
+.contactButton {
+  border-radius: 28px !important;
+  padding: 15px 46px !important;
+  margin-top: 20px;
+
+  @media (max-width: 800px) {
+    padding: 8px 24px !important;
+    margin-top: 10px;
+  }
+
+  @media (max-width: 575px) {
+    margin-top: 0;
+  }
+}
+
+.contactButton p {
+  color: black;
+  font-size: 1.75rem !important;
+  line-height: 1.75rem;
+
+  @media (max-width: 800px) {
+    font-size: 1.375rem !important;
+    line-height: 1.375rem;
+  }
+
+  @media (max-width: 575px) {
+    font-size: 1.125rem !important;
+    line-height: 1.125rem;
+  }
+}
+
+.whyCardsContainer div {
+  justify-content: center;
+}
+
+.timelineColumn {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0;
+}
+
+.timelineLabelsTopRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.timelineLabelsBottomRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.timelineLabel {
+  color: variables.$tse-gold;
+  width: 200px;
+  text-align: center;
+  margin: 0;
+}
+
+.timeline {
+  width: 100%;
+  border-bottom: 4px solid white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 30px 0 48px;
+
+  @media (max-width: 800px) {
+    border-bottom: 2px solid white;
+    margin: 14px 0 20px;
+  }
+}
+
+.whiteCircle {
+  width: 22px;
+  height: 22px;
+  border-radius: 11px;
+  background-color: white;
+  transform: translate(0, calc(50% + 2px));
+
+  @media (max-width: 800px) {
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    transform: translate(0, calc(50% + 1px));
+  }
+
+  @media (max-width: 575px) {
+    width: 8px;
+    height: 8px;
+    border-radius: 4px;
+  }
+}
+
+.faqTitle {
+  font-weight: 700;
+}
+
+.accordion {
+  margin-bottom: 120px;
+
+  @media (max-width: 800px) {
+    margin-bottom: 50px;
+  }
+}
+
+.accordion * {
+  align-items: center !important;
+  font-size: 2rem !important;
+  font-weight: 600;
+
+  @media (max-width: 800px) {
+    font-size: 1.5rem !important;
+  }
+
+  @media (max-width: 575px) {
+    font-size: 1.25rem !important;
+  }
+}
+
+.accordion div div {
+  gap: 100px;
+
+  @media (max-width: 800px) {
+    gap: 50px;
+  }
+
+  @media (max-width: 575px) {
+    gap: 10px;
+  }
+}
+
+.accordion p {
+  font-size: 1.25rem !important;
+  font-weight: 500;
+  @media (max-width: 800px) {
+    font-size: 1rem !important;
+  }
+  @media (max-width: 575px) {
+    font-size: 0.875rem !important;
+  }
+}
+
+.accordion svg {
+  fill: variables.$tse-gold;
+  width: 38px;
+  height: 38px;
+
+  @media (max-width: 800px) {
+    width: 24px;
+    height: 24px;
+  }
+
+  @media (max-width: 575px) {
+    width: 18px;
+    height: 18px;
+  }
+}

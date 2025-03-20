@@ -14,7 +14,8 @@ export default function ProfileCardGroup({ title, profiles, width }: ProfileCard
   }
 
   const colSizes: Partial<ColProps> = {
-    xs: 6,
+    xs: 12,
+    sm: 6,
     md: 4,
   };
   if (width === 4) {
@@ -28,7 +29,7 @@ export default function ProfileCardGroup({ title, profiles, width }: ProfileCard
           {title}
         </h3>
       )}
-      <Row style={{ marginLeft: "-1.75rem", marginRight: "-1.75rem" }}>
+      <Row className="align-items-stretch" style={{ rowGap: 35 }}>
         {profiles.map((profile, index) => (
           <Col key={index} {...colSizes}>
             {profile}
