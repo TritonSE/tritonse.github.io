@@ -1,4 +1,5 @@
 import { MDXProps } from "mdx/types";
+import { JSX } from "react";
 
 import content4FLOT from "../projects/4flot-website-revamp.mdx";
 import contentALUM from "../projects/alum-mentorship-mobile-application.mdx";
