@@ -170,6 +170,42 @@ const constClients = [
     endYear: 2024,
     url: "https://ushs.org/",
   },
+  {
+    name: "HoMEwork",
+    startYear: 2024,
+    endYear: null,
+    url: "https://www.homework-sd.org/",
+  },
+  {
+    name: "Psyches of Color",
+    startYear: 2024,
+    endYear: null,
+    url: "https://psychesofcolor.org/",
+  },
+  {
+    name: "SpayLA",
+    startYear: 2024,
+    endYear: null,
+    url: "https://www.1888spay4la.org/",
+  },
+  {
+    name: "SPLAGen",
+    startYear: 2024,
+    endYear: null,
+    url: "https://www.splagen.org/en/",
+  },
+  {
+    name: "UCSD Health",
+    startYear: 2024,
+    endYear: null,
+    url: "https://health.ucsd.edu/",
+  },
+  {
+    name: "Veteran Sisters",
+    startYear: 2024,
+    endYear: null,
+    url: "https://veteransisters.org/",
+  },
 ] as const;
 export type ClientName = (typeof constClients)[number]["name"];
 

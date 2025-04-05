@@ -10,6 +10,7 @@ import contentDFM from "../projects/dfm-sideline-sidekick.mdx";
 import contentDynamics from "../projects/dynamics-website.mdx";
 import contentFIX from "../projects/fix-landing-page.mdx";
 import contentFSD from "../projects/fsd-distribution-web-app.mdx";
+import contentHW from "../projects/hw-website-revamp.mdx";
 import contentIHCEMR from "../projects/ihc-emr.mdx";
 import contentIHCWellness from "../projects/ihc-wellness-app.mdx";
 import contentKCLinking from "../projects/kc-linking.mdx";
@@ -20,15 +21,20 @@ import contentMAW from "../projects/maw-volunteer-hub.mdx";
 import contentOIC from "../projects/oic-web-innovation-portal.mdx";
 import contentPAP from "../projects/pap-application-form.mdx";
 import contentPIA from "../projects/pia-program-manager.mdx";
+import contentPOC from "../projects/poc-mobile-app.mdx";
 import contentSDCTA from "../projects/sdcta-data-visualization-website.mdx";
 import contentSI from "../projects/si-website-revamp.mdx";
+import contentSpayLA from "../projects/spayla-executive-proposal-website.mdx";
+import contentSPLAGen from "../projects/splagen-database-website.mdx";
 import contentSSA from "../projects/ssa-website.mdx";
 import contentTAP from "../projects/tap-dog-matching.mdx";
 import contentMoneta from "../projects/tse-moneta.mdx";
 import contentOktavian from "../projects/tse-oktavian.mdx";
 import contentTSE from "../projects/tse-website-revamp.mdx";
+import contentUCSDHealth from "../projects/ucsd-health-gamified-learning-website.mdx";
 import contentUSHS from "../projects/ushs-housing-portal.mdx";
 import contentUWEAST from "../projects/uweast-community-kitchen.mdx";
+import contentVeteranSisters from "../projects/veteran-sisters-support-portal.mdx";
 import contentWA from "../projects/wa-family-literacy.mdx";
 import contentYCW from "../projects/ycw-greenpoint-rated-app.mdx";
 import contentYSC from "../projects/ysc-mobile-app.mdx";
@@ -39,6 +45,12 @@ import { allProjects, ProjectWithoutContent } from "./projects";
 type MDXPage = (props: MDXProps) => JSX.Element;
 
 export const projectSlugsToContent = {
+  [makeSlug("HW Website Revamp", "-")]: contentHW,
+  [makeSlug("POC Mobile App", "-")]: contentPOC,
+  [makeSlug("SpayLA Executive Proposal Website", "-")]: contentSpayLA,
+  [makeSlug("SPLAGen Database Website", "-")]: contentSPLAGen,
+  [makeSlug("UCSD Health Gamified Learning Website", "-")]: contentUCSDHealth,
+  [makeSlug("Veteran Sisters Support Portal", "-")]: contentVeteranSisters,
   [makeSlug("4FLOT Website Revamp", "-")]: content4FLOT,
   [makeSlug("CCIDC Application Form", "-")]: contentCCIDC,
   [makeSlug("DFM Sideline Sidekick", "-")]: contentDFM,

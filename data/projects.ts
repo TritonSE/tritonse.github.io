@@ -23,33 +23,205 @@ interface ProjectWithoutContent extends RawProject {
 // to oldest, since the dates are not stored for each project.
 const constProjects = [
   {
-    name: "4FLOT Website Revamp",
-    description: "Website highlighting the impact of 4FLOT in the community.",
-    thumbnail: "projects/4flot_website_revamp/home-page",
+    name: "HW Website Revamp",
+    description:
+      "Website highlighting HoMEwork's available resources, including events, contact information, donating, and news",
+    thumbnail: "projects/hw_website_revamp/home-page",
     team: [
       {
         role: "Engineering Manager",
-        personIds: ["Jenny Mar 0"],
+        personIds: ["Michael Sullivan 0"],
       },
       {
         role: "Product Manager",
-        personIds: ["Jennifer Tanurdjaja 0"],
+        personIds: ["Vinayak Sharma 0"],
       },
       {
         role: "Designer",
-        personIds: ["Emily Yu 0", "Alice Lam 0", "Shana Chen 0"],
+        personIds: ["Nandini Desai 0", "Alice Guo 0", "Ivan Rim 0"],
       },
       {
         role: "Developer",
         personIds: [
-          "Arnav Modi 0",
-          "Arohan Mittal 0",
-          "Christen Xie 0",
-          "Jacob Hansen 0",
-          "Katelyn Nguyen 0",
+          "Edward Lin 0",
+          "Karen Yan 0",
           "Kevin Do 0",
-          "Rachel Wei 0",
-          "Sophia Zhu 0",
+          "Kile Hsu 0",
+          "Numaan Formoli 0",
+          "Saaz Mahadkar 0",
+          "Weston Zong 0",
+          "Yunshan Li 0",
+        ],
+      },
+    ],
+  },
+  {
+    name: "POC Mobile App",
+    description:
+      "Mobile application for Psyches of Color, to raise mental health awareness and provide support for Black and Latinx communities",
+    thumbnail: "projects/poc_mobile_app/splashscreen",
+    team: [
+      {
+        role: "Engineering Manager",
+        personIds: ["Harsh Gurnani 0"],
+      },
+      {
+        role: "Product Manager",
+        personIds: ["Samvrit Srinath 0"],
+      },
+      {
+        role: "Designer",
+        personIds: ["Joanne Tsai 0", "Alice Lam 0", "Renato Pimentel 0"],
+      },
+      {
+        role: "Developer",
+        personIds: [
+          "Alexis Vega 0",
+          "Jared Rosas 0",
+          "Jordan Junaidi 0",
+          "Rudraksh Bhandari 0",
+          "Verania Salcido 0",
+          "William Wu 1",
+          "Yixuan Li 0",
+          "Yoto Kim 0",
+        ],
+      },
+    ],
+  },
+  {
+    name: "SpayLA Executive Proposal Website",
+    description:
+      "Website version of executive proposal to raise awareness about spay/neuter clinic needs in LA County",
+    thumbnail: "projects/spayla_executive_proposal_website/home-page",
+    team: [
+      {
+        role: "Engineering Manager",
+        personIds: ["Pranav Soma 0"],
+      },
+      {
+        role: "Product Manager",
+        personIds: ["Sidhant Rohatgi 0"],
+      },
+      {
+        role: "Designer",
+        personIds: ["Madison Plotkin 0", "Irene Joo 0", "Liam Lai 0"],
+      },
+      {
+        role: "Developer",
+        personIds: [
+          "Anirudh Annabathula 0",
+          "Annabelle Guiditta 0",
+          "Brandon Jonathan 0",
+          "Luis Marquez 0",
+          "Madhav Bansal 0",
+          "Philip Chen 0",
+          "Sophia Yu 0",
+          "Sur Shah 0",
+        ],
+      },
+    ],
+  },
+  {
+    name: "SPLAGen Database Website",
+    description:
+      "Portal for counselors to streamline communication, promoting education and access to patient care",
+    thumbnail: "projects/splagen_database_website/home-page",
+    team: [
+      {
+        role: "Engineering Manager",
+        personIds: ["Helen Lin 0"],
+      },
+      {
+        role: "Product Manager",
+        personIds: ["Kathy Chen 0"],
+      },
+      {
+        role: "Designer",
+        personIds: ["Nicole Zhi 0", "Marilyn Hoang 0", "Vivian Liu 1"],
+      },
+      {
+        role: "Developer",
+        personIds: [
+          "Adam Rolander 0",
+          "Andrew Pu 0",
+          "Jesus Azpitarte 0",
+          "Kiruthika Marikumaran 0",
+          "Pratyush Chand 0",
+          "Raymond Wu 0",
+          "Rohan Sachdeva 0",
+          "Unnati Goyal 0",
+        ],
+      },
+    ],
+  },
+  {
+    name: "UCSD Health Gamified Learning Website",
+    description:
+      "A gamified learning website that teaches high school students road and E-bike safety practices",
+    thumbnail: "projects/ucsd_health_gamified_learning_website/home-page",
+    team: [
+      {
+        role: "Engineering Manager",
+        personIds: ["Eshaan Sharma 0"],
+      },
+      {
+        role: "Product Manager",
+        personIds: ["Steven Shi 0"],
+      },
+      {
+        role: "Designer",
+        personIds: [
+          "Rain Dong 0",
+          "Justin Kim 0",
+          "Allison Huang 0",
+          "Kristen Lee 0",
+          "Nancy Liu 0",
+        ],
+      },
+      {
+        role: "Developer",
+        personIds: [
+          "Aaron Chan 0",
+          "Christen Xie 0",
+          "Isabel Ku 0",
+          "Ketan Mittal 0",
+          "Kevin Wu 0",
+          "Shashwat Bhandari 0",
+          "Sweekrit Bhatnagar 0",
+          "Yifei Xue 0",
+        ],
+      },
+    ],
+  },
+  {
+    name: "Veteran Sisters Support Portal",
+    description:
+      "Role-based, secure portal and management system for female veterans, military sexual trauma (MST) survivors, volunteers, staff, and donors",
+    thumbnail: "projects/veteran_sisters_support_portal/home-page",
+    team: [
+      {
+        role: "Engineering Manager",
+        personIds: ["Anthony Pertsel 0"],
+      },
+      {
+        role: "Product Manager",
+        personIds: ["Rachel Wei 0"],
+      },
+      {
+        role: "Designer",
+        personIds: ["Thoa Nguyen 0", "Akira Wolfe 0", "Aska Kunita Demirci 0"],
+      },
+      {
+        role: "Developer",
+        personIds: [
+          "Andrew Zhou 0",
+          "Aniruddh Krovvidi 0",
+          "Emma Zhu 0",
+          "Jeffrey Liu 0",
+          "Katelyn Nguyen 0",
+          "Leo Friedman 0",
+          "Navyaa Gupta 0",
+          "Srikar Eranky 0",
         ],
       },
     ],
@@ -83,6 +255,70 @@ const constProjects = [
           "Madhav Bansal 0",
           "Mohak Vaswani 0",
           "Sidhant Rohatgi 0",
+        ],
+      },
+    ],
+  },
+  {
+    name: "PIA Program Manager",
+    description:
+      "A database to track students, programs the students are part of, and any relevant information.",
+    thumbnail: "projects/pia_program_manager/home-page",
+    team: [
+      {
+        role: "Engineering Manager",
+        personIds: ["Adhithya Ananthan-Regina 0"],
+      },
+      {
+        role: "Product Manager",
+        personIds: ["Jennifer Tanurdjaja 0"],
+      },
+      {
+        role: "Designer",
+        personIds: ["Mandy Lai 0", "Justin Kim 0", "Rain Dong 0"],
+      },
+      {
+        role: "Developer",
+        personIds: [
+          "Aammya Sapra 0",
+          "Aaron Chan 0",
+          "Andrew Pu 0",
+          "Lisa Liu 0",
+          "Michael Sullivan 0",
+          "Parth Patel 0",
+          "Victor Siu 0",
+        ],
+      },
+    ],
+  },
+  {
+    name: "4FLOT Website Revamp",
+    description: "Website highlighting the impact of 4FLOT in the community.",
+    thumbnail: "projects/4flot_website_revamp/home-page",
+    team: [
+      {
+        role: "Engineering Manager",
+        personIds: ["Jenny Mar 0"],
+      },
+      {
+        role: "Product Manager",
+        personIds: ["Jennifer Tanurdjaja 0"],
+      },
+      {
+        role: "Designer",
+        personIds: ["Emily Yu 0", "Alice Lam 0", "Shana Chen 0"],
+      },
+      {
+        role: "Developer",
+        personIds: [
+          "Arnav Modi 0",
+          "Arohan Mittal 0",
+          "Christen Xie 0",
+          "Jacob Hansen 0",
+          "Katelyn Nguyen 0",
+          "Kevin Do 0",
+          "Rachel Wei 0",
+          "Sophia Zhu 0",
         ],
       },
     ],
@@ -147,38 +383,6 @@ const constProjects = [
           "Steven Shi 0",
           "Sydney Zhang 0",
           "Yoto Kim 0",
-        ],
-      },
-    ],
-  },
-  {
-    name: "PIA Program Manager",
-    description:
-      "A database to track students, programs the students are part of, and any relevant information.",
-    thumbnail: "projects/pia_program_manager/home-page",
-    team: [
-      {
-        role: "Engineering Manager",
-        personIds: ["Adhithya Ananthan-Regina 0"],
-      },
-      {
-        role: "Product Manager",
-        personIds: ["Jennifer Tanurdjaja 0"],
-      },
-      {
-        role: "Designer",
-        personIds: ["Mandy Lai 0", "Justin Kim 0", "Rain Dong 0"],
-      },
-      {
-        role: "Developer",
-        personIds: [
-          "Aammya Sapra 0",
-          "Aaron Chan 0",
-          "Andrew Pu 0",
-          "Lisa Liu 0",
-          "Michael Sullivan 0",
-          "Parth Patel 0",
-          "Victor Siu 0",
         ],
       },
     ],
