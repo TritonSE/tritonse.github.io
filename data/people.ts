@@ -27,7 +27,7 @@ const allRoles = [
   "TEST Designer",
   "TEST Developer",
 ] as const satisfies readonly string[];
-type Role = typeof allRoles[number];
+type Role = (typeof allRoles)[number];
 
 interface Member {
   readonly id: string;
@@ -1255,7 +1255,7 @@ const rawPeople = [
   },
 ] as const satisfies readonly RawPerson[];
 
-type PersonId = typeof rawPeople[number]["id"];
+type PersonId = (typeof rawPeople)[number]["id"];
 
 // Sort and validate data.
 const mutablePeople: Member[] = rawPeople.map((p) => {

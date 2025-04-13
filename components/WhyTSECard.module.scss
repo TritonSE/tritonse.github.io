@@ -1,0 +1,54 @@
+@use "../styles/variables.scss";
+
+.card {
+  border-radius: 30px !important;
+  border: 3px solid white !important;
+  background-color: #263238 !important;
+  padding: 50px 30px 75px !important;
+  justify-content: end !important;
+  align-items: center !important;
+  height: 100% !important;
+
+  @media (max-width: 800px) {
+    padding: 26px 16px 36px !important;
+  }
+
+  @media (max-width: 575px) {
+    padding: 20px 10px 20px !important;
+  }
+}
+
+.cardImage {
+  margin: auto;
+}
+
+.cardTitle {
+  color: variables.$tse-gold !important;
+  font-size: 2rem !important;
+  font-weight: 700 !important;
+  margin-bottom: 36px !important;
+  text-align: center !important;
+
+  @media (max-width: 800px) {
+    font-size: 1.375rem !important;
+    margin-bottom: 16px !important;
+  }
+
+  @media (max-width: 575px) {
+    font-size: 1.125rem !important;
+    margin-bottom: 10px !important;
+  }
+}
+
+.cardDescription {
+  text-align: center !important;
+  font-size: 1.5rem !important;
+
+  @media (max-width: 800px) {
+    font-size: 1rem !important;
+  }
+
+  @media (max-width: 575px) {
+    font-size: 0.875rem !important;
+  }
+}

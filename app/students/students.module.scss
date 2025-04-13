@@ -1,0 +1,179 @@
+@use "../../styles/variables.scss";
+
+.topRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 84px;
+
+  @media (max-width: 800px) {
+    flex-direction: column;
+    gap: 29px;
+  }
+
+  @media (max-width: 575px) {
+    gap: 25px;
+  }
+}
+
+.imagesContainer {
+  display: flex;
+  position: relative;
+  min-width: 475px;
+  min-height: 625px;
+
+  @media (max-width: 900px) {
+    min-width: 375px;
+  }
+
+  @media (max-width: 800px) {
+    min-height: 460px;
+  }
+
+  @media (max-width: 575px) {
+    min-width: 190px;
+    min-height: 250px;
+  }
+}
+
+.image1 {
+  flex-shrink: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.image2 {
+  flex-shrink: 0;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.topTextContainer {
+  @media (max-width: 800px) {
+    text-align: center;
+  }
+}
+
+.boldText {
+  font-weight: 600;
+}
+
+.goldText {
+  color: variables.$tse-gold;
+}
+
+.devsDesignersRow {
+  display: flex;
+  flex-direction: row;
+  gap: 75px;
+  margin-bottom: 120px;
+
+  @media (max-width: 800px) {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 110px;
+  }
+
+  @media (max-width: 575px) {
+    gap: 25px;
+    margin-bottom: 24px;
+  }
+}
+
+.roleColumn {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  @media (max-width: 800px) {
+    align-items: center;
+  }
+}
+
+.roundedImage img {
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.faqSectionTitle {
+  text-align: center;
+  color: variables.$tse-gold;
+}
+
+.accordion {
+  margin-bottom: 120px;
+
+  @media (max-width: 800px) {
+    margin-bottom: 50px;
+  }
+}
+
+.accordion * {
+  align-items: center !important;
+  font-size: 2rem !important;
+  font-weight: 600;
+
+  @media (max-width: 800px) {
+    font-size: 1.5rem !important;
+  }
+
+  @media (max-width: 575px) {
+    font-size: 1.25rem !important;
+  }
+}
+
+.accordion div div {
+  gap: 100px;
+
+  @media (max-width: 800px) {
+    gap: 50px;
+  }
+
+  @media (max-width: 575px) {
+    gap: 10px;
+  }
+}
+
+.accordion h4 {
+  font-size: 1.75rem !important;
+  font-weight: 500;
+  @media (max-width: 800px) {
+    font-size: 1.375rem !important;
+  }
+  @media (max-width: 575px) {
+    font-size: 1.125rem !important;
+  }
+}
+
+.accordion p,
+.accordion a,
+.accordion ul,
+.accordion li {
+  font-size: 1.25rem !important;
+  font-weight: 500;
+  @media (max-width: 800px) {
+    font-size: 1rem !important;
+  }
+  @media (max-width: 575px) {
+    font-size: 0.875rem !important;
+  }
+}
+
+.accordion svg {
+  fill: variables.$tse-gold;
+  width: 38px;
+  height: 38px;
+
+  @media (max-width: 800px) {
+    width: 24px;
+    height: 24px;
+  }
+
+  @media (max-width: 575px) {
+    width: 18px;
+    height: 18px;
+  }
+}

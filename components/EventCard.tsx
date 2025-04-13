@@ -30,7 +30,7 @@ export default function EventCard({
   event: { title, description, location, startTime, url },
 }: EventCardProps) {
   return (
-    <Card className="mb-3 text-dark shadow">
+    <Card className="mb-3 text-dark shadow" style={{ backgroundColor: "white" }}>
       <Card.Body>
         <Card.Title className="mb-4" style={{ fontWeight: 600 }}>
           {title}

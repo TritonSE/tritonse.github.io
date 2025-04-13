@@ -1,0 +1,61 @@
+// Make the entire card a link, but no color change or underline effects.
+.outerLink {
+  color: unset !important;
+  text-decoration: none !important;
+  cursor: unset;
+}
+
+.card {
+  height: 100% !important;
+  background-color: #263238 !important;
+  padding: 16px 16px 30px 16px !important;
+  border-radius: 8px !important;
+
+  @media (max-width: 800px) {
+    padding: 12px 12px 16px 12px !important;
+  }
+
+  @media (max-width: 575px) {
+    padding: 0 !important;
+    overflow: hidden !important;
+    cursor: pointer !important;
+  }
+}
+
+.cardTitle {
+  font-size: 1.125rem !important;
+  font-weight: 700 !important;
+
+  @media (max-width: 800px) {
+    font-size: 0.875rem !important;
+  }
+
+  @media (max-width: 575px) {
+    padding: 0 12px !important;
+  }
+}
+
+.cardDescription {
+  margin: 0 !important;
+  font-size: 0.875rem !important;
+  font-weight: 400 !important;
+  line-height: 17px !important;
+  margin-bottom: auto !important;
+  padding-bottom: 20px !important;
+
+  @media (max-width: 800px) {
+    padding-bottom: 12px !important;
+  }
+
+  @media (max-width: 575px) {
+    display: none !important;
+  }
+}
+
+.button {
+  margin-top: auto;
+
+  @media (max-width: 575px) {
+    display: none;
+  }
+}

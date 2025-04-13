@@ -1,0 +1,29 @@
+.button {
+  border-radius: 40px;
+  padding: 20px 76px;
+
+  @media (max-width: 800px) {
+    border-radius: 32px;
+    padding: 16px 60px;
+  }
+
+  @media (max-width: 575px) {
+    border-radius: 20px;
+    padding: 10px 32px;
+  }
+}
+.button p {
+  color: black;
+  font-size: 2rem !important;
+  line-height: 2rem;
+
+  @media (max-width: 800px) {
+    font-size: 1.5rem !important;
+    line-height: 1.5rem;
+  }
+
+  @media (max-width: 575px) {
+    font-size: 1.25rem !important;
+    line-height: 1.25rem;
+  }
+}

@@ -1,9 +1,12 @@
+"use client";
+
 import React from "react";
 
 import MemberProfileCard from "../components/MemberProfileCard";
 import ProfileCardGroup from "../components/ProfileCardGroup";
 import { allPeople } from "../data/people";
-import { Project, ProjectTeam } from "../data/projects";
+import { ProjectTeam } from "../data/projects";
+import { Project } from "../data/projects-content";
 import { findOne } from "../util";
 
 import PlainLayout from "./PlainLayout";

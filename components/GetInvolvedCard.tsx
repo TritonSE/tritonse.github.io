@@ -14,7 +14,7 @@ export default function GetInvolvedCard({
   ...props
 }: GetInvolvedCardProps) {
   return (
-    <BigCard href={href} colorHover {...props}>
+    <BigCard href={href} {...props}>
       {children}
       <ArrowLink dark href={href}>
         {linkText}

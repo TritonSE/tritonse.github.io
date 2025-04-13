@@ -1,0 +1,131 @@
+@use "../../styles/variables.scss";
+
+.stepsContainer {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: row;
+  gap: 4rem;
+
+  @media (max-width: 800px) {
+    margin-top: 2.5rem;
+  }
+  @media (max-width: 575px) {
+    margin-top: 1.25rem;
+  }
+}
+
+.lineContainer {
+  position: relative;
+  width: 34px;
+  @media (max-width: 800px) {
+    width: 18px;
+  }
+
+  // Hide on mobile
+  @media (max-width: 575px) {
+    display: none;
+  }
+}
+
+.solidLine {
+  position: absolute;
+  top: 0;
+  left: 17px;
+  transform: translateX(-50%);
+  width: 6px;
+  height: 45%;
+  background-color: variables.$tse-gold;
+  @media (max-width: 800px) {
+    left: 9px;
+    width: 3px;
+  }
+}
+
+.triangleUp {
+  position: absolute;
+  top: 46%;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 17px solid transparent;
+  border-right: 17px solid transparent;
+  border-top: 34px solid variables.$tse-gold;
+  @media (max-width: 800px) {
+    top: 45%;
+    border-left: 9px solid transparent;
+    border-right: 9px solid transparent;
+    border-top: 18px solid variables.$tse-gold;
+  }
+}
+
+.dashedLine {
+  position: absolute;
+  top: 45%;
+  left: 17px;
+  transform: translateX(-50%);
+  width: 0;
+  border-right: 6px dashed variables.$tse-gold;
+  height: 32%;
+  @media (max-width: 800px) {
+    left: 9px;
+    border-right: 3px dashed variables.$tse-gold;
+  }
+}
+
+.triangleDown {
+  position: absolute;
+  top: 74%;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 17px solid transparent;
+  border-right: 17px solid transparent;
+  border-bottom: 34px solid variables.$tse-gold;
+  @media (max-width: 800px) {
+    top: 76%;
+    border-left: 9px solid transparent;
+    border-right: 9px solid transparent;
+    border-bottom: 18px solid variables.$tse-gold;
+  }
+}
+
+.stepsColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.bottomContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 100px;
+  margin-top: 2.5rem;
+  @media (max-width: 800px) {
+    flex-direction: column;
+    gap: 18px;
+    margin-top: 1rem;
+  }
+  @media (max-width: 575px) {
+    gap: 24px;
+  }
+}
+
+.bottomContainer h3 {
+  margin: 0;
+}
+
+.buttonsContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 36px;
+  @media (max-width: 575px) {
+    flex-direction: column;
+    gap: 24px;
+  }
+}
+
+.button {
+  min-width: 146px;
+}

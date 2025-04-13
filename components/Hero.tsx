@@ -18,10 +18,14 @@ export default function Hero({ imageKey, children }: HeroProps) {
         minHeight: "60vh",
         display: "flex",
         flexDirection: "column",
-        justifyContent: "center",
+        justifyContent: "start",
       }}
     >
-      {children && <Container className="py-5 fw-bold">{children}</Container>}
+      {children && (
+        <Container className="py-3 fw-bold" style={{ zIndex: 2 }}>
+          {children}
+        </Container>
+      )}
       <div
         style={{
           position: "absolute",
@@ -29,7 +33,7 @@ export default function Hero({ imageKey, children }: HeroProps) {
           left: 0,
           width: "100%",
           height: "100%",
-          zIndex: -100,
+          zIndex: 1,
           filter: children ? "brightness(0.7)" : undefined,
         }}
       >
