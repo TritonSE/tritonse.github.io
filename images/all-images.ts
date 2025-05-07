@@ -22,7 +22,7 @@ const allImages = {
   "clients/psyches_of_color": { width: 574, height: 231, maxSize: 640, extension: ".jpg" },
   "clients/sakyadhita": { width: 288, height: 288, maxSize: 384, extension: ".png" },
   "clients/san_diego_county_taxpayers_association": { width: 892, height: 267, maxSize: 1080, extension: ".jpg" },
-  "clients/spayla": { width: 500, height: 255, maxSize: 640, extension: ".jpg" },
+  "clients/spayla": { width: 1636, height: 560, maxSize: 1920, extension: ".png" },
   "clients/splagen": { width: 495, height: 495, maxSize: 640, extension: ".png" },
   "clients/symphonic_student_association": { width: 726, height: 726, maxSize: 750, extension: ".jpg" },
   "clients/the_animal_pad": { width: 245, height: 217, maxSize: 256, extension: ".png" },
