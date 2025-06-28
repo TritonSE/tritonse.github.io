@@ -48,7 +48,6 @@ const constProjects = [
           "Kevin Do 0",
           "Kile Hsu 0",
           "Numaan Formoli 0",
-          "Saaz Mahadkar 0",
           "Weston Zong 0",
           "Yunshan Li 0",
         ],
@@ -215,7 +214,6 @@ const constProjects = [
         role: "Developer",
         personIds: [
           "Andrew Zhou 0",
-          "Aniruddh Krovvidi 0",
           "Emma Zhu 0",
           "Jeffrey Liu 0",
           "Katelyn Nguyen 0",

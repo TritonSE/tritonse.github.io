@@ -2,12 +2,11 @@ import { Metadata } from "next";
 import React from "react";
 import { Alert } from "react-bootstrap";
 
-import ThemeContainer from "../components/ThemeContainer";
-
 import "../styles/common.scss";
 
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
+import ThemeContainer from "../components/ThemeContainer";
 import recruitment from "../data/recruitment";
 
 import styles from "./layout.module.scss";
