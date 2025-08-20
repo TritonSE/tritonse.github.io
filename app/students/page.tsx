@@ -391,8 +391,7 @@ We are no longer accepting applications for this school year. If you are interes
                 <br />
                 <br />
                 You may apply to either TSE or the TEST program, not both. If you are unsure about
-                which is right for you, please email [${recruitment.presidentEmail}](mailto:$
-                {recruitment.presidentEmail}).
+                which is right for you, please email <a href='mailto:tse@ucsd.edu'>tse@ucsd.edu</a>.
               </p>
             ),
           },
