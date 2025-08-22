@@ -15,7 +15,7 @@ jobs:
         run: |
           npm ci
           npm run lint-check
-          npm run build   
+          npm run build
   test_links:
     name: Test website links
     runs-on: ubuntu-latest
