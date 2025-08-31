@@ -8,9 +8,10 @@ import CustomImage from "./CustomImage";
 export interface HeroProps {
   imageKey: ImageKey;
   children?: React.ReactNode;
+  imageIsPriority?: boolean;
 }
 
-export default function Hero({ imageKey, children }: HeroProps) {
+export default function Hero({ imageKey, children, imageIsPriority }: HeroProps) {
   return (
     <div
       style={{
@@ -37,10 +38,15 @@ export default function Hero({ imageKey, children }: HeroProps) {
           filter: children ? "brightness(0.7)" : undefined,
         }}
       >
-        <CustomImage imageKey={imageKey} layout="fill" objectFit="cover" />
+        <CustomImage
+          imageKey={imageKey}
+          layout="fill"
+          objectFit="cover"
+          priority={imageIsPriority}
+        />
       </div>
     </div>
   );
 }
 
-Hero.defaultProps = { children: undefined };
+Hero.defaultProps = { children: undefined, imageIsPriority: undefined };

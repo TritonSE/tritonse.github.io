@@ -12,6 +12,7 @@ import Logos from "../components/Logos";
 import PaddedBox from "../components/PaddedBox";
 import ProjectCarousel from "../components/ProjectCarousel";
 import { allClients } from "../data/clients";
+import { allEmployers } from "../data/employers";
 import { allEvents } from "../data/events";
 import type { Event } from "../data/events";
 import recruitment from "../data/recruitment";
@@ -33,7 +34,7 @@ export default function Home() {
 
   return (
     <>
-      <Hero imageKey="content/beach-photoshoot-everyone">
+      <Hero imageKey="content/beach-photoshoot-everyone" imageIsPriority>
         <div className="text-center">
           {markdown`
 # Triton Software Engineering
@@ -98,6 +99,14 @@ As a powerhouse of 96 members, including our board, 49 developers, 19 UI/UX desi
           logos={allSponsors.map((sponsor) => ({
             imageKey: firstValidImageKey(`sponsors/${makeSlug(sponsor.name)}`),
             url: sponsor.url,
+          }))}
+        />
+      </PaddedBox>
+      <PaddedBox backgroundColor="#FFFFFF" className="text-black" heading="Where We've Worked">
+        <Logos
+          logos={allEmployers.map((employer) => ({
+            imageKey: firstValidImageKey(`employers/${makeSlug(employer.name)}`),
+            url: employer.url,
           }))}
         />
       </PaddedBox>

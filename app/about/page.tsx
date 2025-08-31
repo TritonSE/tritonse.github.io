@@ -22,10 +22,12 @@ TSE's mission is to craft digital solutions for nonprofit organizations in our c
               imageKey: "content/beach-photoshoot-veteran-sisters",
               width: (9 / 26) * 100,
               aspectRatio: [1, 1],
+              priority: true,
             },
             {
               imageKey: "content/wi25-all-hands-2",
               width: (16 / 26) * 100,
+              priority: true,
             },
           ]}
         />

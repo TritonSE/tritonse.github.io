@@ -14,6 +14,7 @@ export interface LayoutSpec {
   imageKey?: ImageKey;
   width?: number;
   aspectRatio?: [number, number];
+  priority?: boolean;
 }
 /* eslint-enable react/require-default-props */
 /* eslint-enable react/no-unused-prop-types */
@@ -31,14 +32,14 @@ export default function Gallery({
   layout,
   reverseOnSmallScreens,
 }: GalleryProps) {
-  function getElement({ imageKey, aspectRatio }: LayoutSpec) {
+  function getElement({ imageKey, aspectRatio, priority }: LayoutSpec) {
     if (imageKey === undefined) {
       return children;
     }
     if (aspectRatio === undefined) {
-      return <CustomImage imageKey={imageKey} layout="responsive" />;
+      return <CustomImage imageKey={imageKey} layout="responsive" priority={priority} />;
     }
-    return <RatioImage aspectRatio={aspectRatio} imageKey={imageKey} />;
+    return <RatioImage aspectRatio={aspectRatio} imageKey={imageKey} priority={priority} />;
   }
 
   const wideItems = layout.map((spec) => ({

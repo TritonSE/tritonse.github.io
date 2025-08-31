@@ -34,6 +34,7 @@ export default function Nonprofits() {
             }}
             rotationAngleDegrees={-5.04}
             className={styles.image1}
+            priority
           />
           <ImageCard
             imageKey="content/beach-photoshoot-spayla"
@@ -53,6 +54,7 @@ export default function Nonprofits() {
             }}
             rotationAngleDegrees={3.95}
             className={styles.image2}
+            priority
           />
         </div>
 
