@@ -25,4 +25,5 @@ jobs:
       - working-directory: .
         run: |
           npm ci
+          npm run build
           npm run link-test
