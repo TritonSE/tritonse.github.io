@@ -21,12 +21,18 @@ interface ResponsiveImageProps {
   imageKey: ImageKey;
   sizes: ResponsiveImageSizes;
   className?: string;
+  priority?: boolean;
 }
 
 /**
  * A component to display an image with different width/heights depending on the screen size.
  */
-export default function ResponsiveImage({ imageKey, sizes, className }: ResponsiveImageProps) {
+export default function ResponsiveImage({
+  imageKey,
+  sizes,
+  className,
+  priority,
+}: ResponsiveImageProps) {
   return (
     <>
       <div className={classNames(styles.desktop, className)}>
@@ -35,6 +41,7 @@ export default function ResponsiveImage({ imageKey, sizes, className }: Responsi
           alt="Logo"
           width={sizes.desktop.width}
           height={sizes.desktop.height}
+          priority={priority}
         />
       </div>
       <div className={classNames(styles.tablet, className)}>
@@ -43,6 +50,7 @@ export default function ResponsiveImage({ imageKey, sizes, className }: Responsi
           alt="Logo"
           width={sizes.tablet.width}
           height={sizes.tablet.height}
+          priority={priority}
         />
       </div>
       <div className={classNames(styles.mobile, className)}>
@@ -51,6 +59,7 @@ export default function ResponsiveImage({ imageKey, sizes, className }: Responsi
           alt="Logo"
           width={sizes.mobile.width}
           height={sizes.mobile.height}
+          priority={priority}
         />
       </div>
     </>
@@ -59,4 +68,5 @@ export default function ResponsiveImage({ imageKey, sizes, className }: Responsi
 
 ResponsiveImage.defaultProps = {
   className: undefined,
+  priority: undefined,
 };

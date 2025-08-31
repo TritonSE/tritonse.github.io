@@ -36,6 +36,7 @@ export default function Students() {
             }}
             rotationAngleDegrees={-3.11}
             className={styles.image1}
+            priority
           />
           <ImageCard
             imageKey="content/beach-photoshoot-psyches-of-color"
@@ -55,6 +56,7 @@ export default function Students() {
             }}
             rotationAngleDegrees={7.46}
             className={styles.image2}
+            priority
           />
         </div>
 

@@ -11,6 +11,7 @@ interface ImageCardProps {
   sizes: ResponsiveImageSizes;
   rotationAngleDegrees: number;
   className?: string;
+  priority?: boolean;
 }
 
 /**
@@ -21,6 +22,7 @@ export default function ImageCard({
   sizes,
   rotationAngleDegrees,
   className,
+  priority,
 }: ImageCardProps) {
   return (
     <div
@@ -29,11 +31,12 @@ export default function ImageCard({
         transform: `rotate(${rotationAngleDegrees}deg)`,
       }}
     >
-      <ResponsiveImage imageKey={imageKey} sizes={sizes} />
+      <ResponsiveImage imageKey={imageKey} sizes={sizes} priority={priority} />
     </div>
   );
 }
 
 ImageCard.defaultProps = {
   className: undefined,
+  priority: undefined,
 };
