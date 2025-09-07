@@ -149,13 +149,13 @@ We are no longer accepting applications for this school year. If you are interes
       )}
 
       {markdown`
-## 2024 Fall Recruitment Timeline
+## 2025 Fall Recruitment Timeline
 
-- Application opens - Week 0 Thursday 9/26 12:01am
-- Application closes - Week 2 Sunday 10/13 11:59pm
-- Phone screen invitation emails sent - Week 3 Friday 10/18
-- Technical interview invitation emails sent - Week 5 Saturday 11/2
-- Acceptance/rejection emails sent - Week 8 Tuesday 11/19
+- Application opens - Week 0 Thursday 9/25 12:01am
+- Application closes - Week 2 Sunday 10/12 11:59pm
+- Phone screen invitation emails sent - Week 3 Friday 10/17
+- Technical interview invitation emails sent - Week 5 Monday 10/27
+- Acceptance/rejection emails sent - Week 6 Friday 11/7
       `}
 
       <h2>Frequently Asked Questions</h2>
