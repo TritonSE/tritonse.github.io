@@ -219,7 +219,7 @@ We are no longer accepting applications for this school year. If you are interes
               <p>
                 We host both internal and public events. To find our public events, follow us on{" "}
                 <a href="https://www.facebook.com/TritonSE">Facebook</a> and{" "}
-                <a href="https://www.instagram.com/ucsd_tse/">Instagram</a>. You can also find a
+                <a href="https://www.instagram.com/tse.atucsd/">Instagram</a>. You can also find a
                 list of our past and upcoming events <Link href="/events">here</Link>.
               </p>
             ),
