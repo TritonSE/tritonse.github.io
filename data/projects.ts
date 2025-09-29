@@ -66,6 +66,10 @@ const constProjects = [
       },
       {
         role: "Product Manager",
+        personIds: ["Hrithik Pai 0"],
+      },
+      {
+        role: "Product Manager",
         personIds: ["Samvrit Srinath 0"],
       },
       {
