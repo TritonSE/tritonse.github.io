@@ -966,6 +966,7 @@ const rawPeople = [
   {
     id: "Katelyn Nguyen 0",
     roles: ["Developer"],
+    graduation: 2025,
   },
   {
     id: "Kathy Chen 0",
@@ -1086,6 +1087,7 @@ const rawPeople = [
   {
     id: "Verania Salcido 0",
     roles: ["TEST Developer", "Developer", "Socials Lead"],
+    graduation: 2025,
   },
   {
     id: "Zoe Kothari 0",
@@ -1139,6 +1141,7 @@ const rawPeople = [
   {
     id: "Kevin Wu 0",
     roles: ["Developer"],
+    graduation: 2025,
   },
   {
     id: "Kile Hsu 0",
