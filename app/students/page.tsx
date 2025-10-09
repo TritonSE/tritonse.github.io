@@ -148,7 +148,10 @@ We are no longer accepting applications for this school year. If you are interes
         `
       )}
 
-      <p>Our info session slides can be found at {recruitment.infoSessionSlidesLink}</p>
+      <p>
+        Our info session slides can be accessed <a href={recruitment.infoSessionSlidesLink}>here</a>
+        .
+      </p>
 
       {markdown`
 ## 2025 Fall Recruitment Timeline
