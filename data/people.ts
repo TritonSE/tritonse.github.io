@@ -1278,6 +1278,7 @@ const rawPeople = [
   {
     id: "Angelica Facundo Arguilla 0",
     roles: ["TEST Designer", "Designer"],
+    graduation: 2025,
   },
   {
     id: "Hillary Co 0",
