@@ -397,6 +397,12 @@ We are no longer accepting applications for this school year. If you are interes
                 period TEST members can potentially become TSE developers and designers.
                 <br />
                 <br />
+                Students who are graduating this school year (i.e. before Fall quarter of next
+                school year) may not apply to the TEST program because the goal of the TEST program
+                is for participants to join TSE as general members the following year and apply what
+                they learned in TEST to contribute to TSE projects!
+                <br />
+                <br />
                 You may apply to either TSE or the TEST program, not both. If you are unsure about
                 which is right for you, please email <a href="mailto:tse@ucsd.edu">tse@ucsd.edu</a>.
               </p>
