@@ -2,12 +2,12 @@ import Link from "next/link";
 import React from "react";
 import Card from "react-bootstrap/Card";
 
-interface ProfileCardProps {
+type ProfileCardProps = {
   name: string;
   subtitles: string[];
   href?: string;
   children?: React.ReactNode;
-}
+};
 
 export default function ProfileCard({ name, subtitles, href, children }: ProfileCardProps) {
   return (

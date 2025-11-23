@@ -5,15 +5,16 @@ import Container from "react-bootstrap/Container";
 
 import EventCardGroup from "../../components/EventCardGroup";
 import { allEvents } from "../../data/events";
-import type { Event } from "../../data/events";
 import { groupBy } from "../../util";
+
+import type { Event } from "../../data/events";
 
 function getSchoolYear(event: Event): number {
   return event.startTime.minus({ months: 8 }).year;
 }
 
 function formatSchoolYear(year: number): string {
-  return year + "–" + (year + 1).toString().slice(2);
+  return `${year}–${(year + 1).toString().slice(2)}`;
 }
 
 export default function Events() {

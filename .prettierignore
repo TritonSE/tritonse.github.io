@@ -1,3 +1,7 @@
-.next
-out
+# Do not run Prettier on these paths. Customize as needed.
+.next/
+build/
+dist/
+out/
+public/
 images/all-images.ts

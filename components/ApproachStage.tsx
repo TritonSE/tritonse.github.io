@@ -1,29 +1,29 @@
 import React from "react";
 
-import { ImageKey } from "../images";
-
 import styles from "./ApproachStage.module.scss";
 import ResponsiveImage from "./ResponsiveImage";
 
-interface IconSize {
+import type { ImageKey } from "../images";
+
+type IconSize = {
   width: number;
   height: number;
-}
+};
 
-interface ApproachStageIconSizes {
+type ApproachStageIconSizes = {
   desktop: IconSize;
   tablet: IconSize;
   mobile: IconSize;
-}
+};
 
-interface ApproachStageProps {
+type ApproachStageProps = {
   stageNum: number;
   iconImageKey: ImageKey;
   iconSizes: ApproachStageIconSizes;
   title: string;
   dates: string;
   description: string;
-}
+};
 
 /**
  * One of the stages on the "Our Approach" page.

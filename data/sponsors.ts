@@ -1,9 +1,9 @@
 import { makeComparator } from "../util";
 
-export interface Sponsor {
+export type Sponsor = {
   readonly name: string;
   readonly url: string;
-}
+};
 
 const constSponsors = [
   {

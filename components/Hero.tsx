@@ -1,15 +1,15 @@
 import React from "react";
 import Container from "react-bootstrap/Container";
 
-import { ImageKey } from "../images";
-
 import CustomImage from "./CustomImage";
 
-export interface HeroProps {
+import type { ImageKey } from "../images";
+
+export type HeroProps = {
   imageKey: ImageKey;
   children?: React.ReactNode;
   imageIsPriority?: boolean;
-}
+};
 
 export default function Hero({ imageKey, children, imageIsPriority }: HeroProps) {
   return (

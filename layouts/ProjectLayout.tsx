@@ -5,11 +5,12 @@ import React from "react";
 import MemberProfileCard from "../components/MemberProfileCard";
 import ProfileCardGroup from "../components/ProfileCardGroup";
 import { allPeople } from "../data/people";
-import { ProjectTeam } from "../data/projects";
-import { Project } from "../data/projects-content";
 import { findOne } from "../util";
 
 import PlainLayout from "./PlainLayout";
+
+import type { ProjectTeam } from "../data/projects";
+import type { Project } from "../data/projects-content";
 
 function TeamProfiles({ team }: { team: ProjectTeam }) {
   return (
@@ -28,10 +29,10 @@ function TeamProfiles({ team }: { team: ProjectTeam }) {
   );
 }
 
-interface ProjectLayoutProps {
+type ProjectLayoutProps = {
   project: Project;
   children: React.ReactNode;
-}
+};
 
 export default function ProjectLayout({ project, children }: ProjectLayoutProps) {
   return (

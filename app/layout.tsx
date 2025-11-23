@@ -1,9 +1,7 @@
-import { Metadata } from "next";
 import React from "react";
 import { Alert } from "react-bootstrap";
 
 import "../styles/common.scss";
-
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import ThemeContainer from "../components/ThemeContainer";
@@ -11,12 +9,15 @@ import recruitment from "../data/recruitment";
 
 import styles from "./layout.module.scss";
 
+import type { Metadata } from "next";
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        {/* eslint-disable-next-line next/no-page-custom-font */}
         <link
           href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
           rel="stylesheet"

@@ -1,18 +1,19 @@
 import classNames from "classnames";
 import React from "react";
 
-import { ImageKey } from "../images";
-
 import styles from "./ImageCard.module.scss";
-import ResponsiveImage, { ResponsiveImageSizes } from "./ResponsiveImage";
+import ResponsiveImage from "./ResponsiveImage";
 
-interface ImageCardProps {
+import type { ImageKey } from "../images";
+import type { ResponsiveImageSizes } from "./ResponsiveImage";
+
+type ImageCardProps = {
   imageKey: ImageKey;
   sizes: ResponsiveImageSizes;
   rotationAngleDegrees: number;
   className?: string;
   priority?: boolean;
-}
+};
 
 /**
  * A component to display a rotated image on a white background

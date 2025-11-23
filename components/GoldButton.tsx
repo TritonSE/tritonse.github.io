@@ -4,14 +4,14 @@ import React from "react";
 
 import styles from "./GoldButton.module.scss";
 
-interface GoldButtonProps {
+type GoldButtonProps = {
   children: React.ReactNode;
   href: string;
   openInNewTab: boolean;
   className?: string;
   disableHoverEffect?: boolean;
   isSmall?: boolean;
-}
+};
 
 export default function GoldButton({
   children,
@@ -28,7 +28,7 @@ export default function GoldButton({
         styles.button,
         disableHoverEffect ? "" : styles.buttonWithHover,
         isSmall ? styles.buttonSmall : "",
-        className
+        className,
       )}
     >
       <p className={classNames(styles.text, isSmall ? styles.textSmall : "")}>{children}</p>

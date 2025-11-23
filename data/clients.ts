@@ -1,11 +1,11 @@
 import { makeComparator } from "../util";
 
-export interface Client {
+export type Client = {
   readonly name: string;
   readonly startYear: number;
   readonly endYear: number | null;
   readonly url: string | null;
-}
+};
 
 const constClients = [
   {

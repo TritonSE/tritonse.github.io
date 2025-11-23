@@ -1,23 +1,25 @@
-import { ImageKey } from "../images";
 import { assertUniqueKey, makeComparator, makeSlug } from "../util";
 
-import { PersonId, Role, allRoles } from "./people";
+import { allRoles } from "./people";
+
+import type { ImageKey } from "../images";
+import type { PersonId, Role } from "./people";
 
 type ProjectTeam = readonly {
   readonly role: Role;
   readonly personIds: readonly PersonId[];
 }[];
 
-interface RawProject {
+type RawProject = {
   readonly name: string;
   readonly description: string;
   readonly thumbnail: ImageKey | null;
   readonly team: ProjectTeam;
-}
+};
 
-interface ProjectWithoutContent extends RawProject {
+type ProjectWithoutContent = {
   readonly slug: string;
-}
+} & RawProject;
 
 // Metadata for each project. Projects should be manually ordered from newest
 // to oldest, since the dates are not stored for each project.
@@ -1150,4 +1152,4 @@ assertUniqueKey(allProjects, "name");
 assertUniqueKey(allProjects, "slug");
 
 export { allProjects };
-export type { ProjectWithoutContent, ProjectTeam };
+export type { ProjectTeam, ProjectWithoutContent };

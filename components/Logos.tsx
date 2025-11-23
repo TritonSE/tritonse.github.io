@@ -1,15 +1,15 @@
 import React from "react";
 
-import { ImageKey } from "../images";
-
 import CustomImage from "./CustomImage";
 
-export interface LogosProps {
+import type { ImageKey } from "../images";
+
+export type LogosProps = {
   logos: {
     imageKey: ImageKey;
     url: string | null;
   }[];
-}
+};
 
 export default function Logos({ logos }: LogosProps) {
   return (

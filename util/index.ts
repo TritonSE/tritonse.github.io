@@ -3,7 +3,7 @@
  * @param keyFunc Map each object to an array of values to sort by.
  */
 export function makeComparator<T, K extends (number | string)[]>(
-  keyFunc: (v: T) => K
+  keyFunc: (v: T) => K,
 ): (v1: T, v2: T) => number {
   return (value1, value2) => {
     const key1 = keyFunc(value1);
@@ -21,7 +21,7 @@ export function makeComparator<T, K extends (number | string)[]>(
  */
 export function groupBy<T, K extends number | string>(
   objects: readonly T[],
-  keyFunc: (obj: T) => K
+  keyFunc: (obj: T) => K,
 ): [K, T[]][] {
   const groups: {
     [key: string]: {
@@ -50,7 +50,7 @@ export function groupBy<T, K extends number | string>(
 export function findOne<T>(arr: readonly T[], query: Partial<T>): T {
   const found = arr.find((obj) => {
     for (const [key, value] of Object.entries(query)) {
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      // eslint-disable-next-line ts/no-unsafe-member-access
       if ((obj as any)[key] !== value) return false;
     }
     return true;
@@ -69,7 +69,7 @@ export function assertUniqueKey<T, K extends keyof T>(arr: readonly T[], key: K)
   for (const element of arr) {
     const value = element[key];
     if (seen.has(value)) {
-      throw new Error(`Duplicate value for key '${key.toString()}': ${value}`);
+      throw new Error(`Duplicate value for key '${String(key)}': ${String(value)}`);
     }
     seen.add(value);
   }
@@ -79,5 +79,5 @@ export function assertUniqueKey<T, K extends keyof T>(arr: readonly T[], key: K)
  * Convert a string to lowercase and replace non-alphanumeric characters.
  */
 export function makeSlug(s: string, replaceChar = "_") {
-  return s.replace(/[^A-Za-z0-9]/g, replaceChar).toLowerCase();
+  return s.replace(/[^A-Z0-9]/gi, replaceChar).toLowerCase();
 }

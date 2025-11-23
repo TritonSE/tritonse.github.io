@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 
-import fs from "fs";
-import path from "path";
+import fs from "node:fs";
+import path from "node:path";
 
 import sharp from "sharp";
 
@@ -71,10 +71,10 @@ async function findImages() {
     if (!config.extensions.includes(extension)) {
       throw new Error(
         `${JSON.stringify(
-          absPath
+          absPath,
         )} does not have one of the supported image file extensions: ${JSON.stringify(
-          config.extensions
-        )}. Use jpg instead of jpeg, and make sure the capitalization matches too.`
+          config.extensions,
+        )}. Use jpg instead of jpeg, and make sure the capitalization matches too.`,
       );
     }
     const [width, height] = await imageDimensions(absPath);
@@ -98,14 +98,14 @@ function generateCode(images: Images) {
         ([key, { relPath, width, height, sizes }]) =>
           `  ${JSON.stringify(key)}: { width: ${width}, height: ${height}, maxSize: ${
             sizes[sizes.length - 1]
-          }, extension: ${JSON.stringify(path.extname(relPath))} },`
+          }, extension: ${JSON.stringify(path.extname(relPath))} },`,
       )
       .sort(),
     "} as const;",
     "export default allImages;",
   ];
 
-  fs.writeFileSync(codegenFile, lines.map((line) => line + "\n").join(""));
+  fs.writeFileSync(codegenFile, lines.map((line) => `${line}\n`).join(""));
   console.log(`Generated: ${codegenFile}`);
 }
 
@@ -127,7 +127,7 @@ async function optimizeImages(images: Images) {
               // File is up to date.
               return;
             }
-          } catch (e) {
+          } catch (_) {
             // File does not exist. Do nothing.
           }
 
@@ -137,9 +137,9 @@ async function optimizeImages(images: Images) {
             .jpeg({ mozjpeg: true, force: false })
             .toFile(outputFile);
           console.log(`Optimized: ${outputFile}`);
-        })
+        }),
       );
-    })
+    }),
   );
 
   // Delete extraneous files.
@@ -153,9 +153,9 @@ async function optimizeImages(images: Images) {
 
 async function main() {
   const images = await findImages();
-  await generateCode(images);
+  generateCode(images);
   await optimizeImages(images);
   console.log("Finished code generation and image optimization.");
 }
 
-main();
+void main();
