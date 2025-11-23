@@ -3,7 +3,7 @@ import Nav from "react-bootstrap/Nav";
 import Tab from "react-bootstrap/Tab";
 
 import { allClients } from "../data/clients";
-import { allMembers, allAlumni } from "../data/people";
+import { allAlumni, allMembers } from "../data/people";
 import { groupBy } from "../util";
 
 import AboutTabItem from "./AboutTabItem";
@@ -40,7 +40,7 @@ function Alumni() {
 
 function Clients() {
   const statusesAndClients = groupBy(allClients, (client) =>
-    client.endYear === null ? "Current" : "Past"
+    client.endYear === null ? "Current" : "Past",
   );
   return (
     <>

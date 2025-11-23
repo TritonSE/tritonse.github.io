@@ -2,9 +2,9 @@ import React from "react";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 
-import type { Event } from "../data/events";
-
 import EventCard from "./EventCard";
+
+import type { Event } from "../data/events";
 
 export default function EventCardGroup({ events }: { events: Event[] }) {
   if (events.length === 0) {

@@ -2,11 +2,12 @@
 
 import classNames from "classnames";
 import React from "react";
-import type { IconType } from "react-icons";
-import { FaEnvelope, FaFacebook, FaLinkedin, FaGithub, FaInstagram } from "react-icons/fa";
+import { FaEnvelope, FaFacebook, FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 import styles from "./Footer.module.scss";
 import ResponsiveImage from "./ResponsiveImage";
+
+import type { IconType } from "react-icons";
 
 function FooterIcon({ icon, href }: { icon: IconType; href: string }) {
   const IconClass = icon;

@@ -3,20 +3,21 @@ import React from "react";
 import Container from "react-bootstrap/Container";
 
 import Hero from "../components/Hero";
-import { ImageKey } from "../images";
 
 import styles from "./PlainLayout.module.scss";
 
-export interface PlainMetadata {
+import type { ImageKey } from "../images";
+
+export type PlainMetadata = {
   title: string;
   subtitle?: string;
   heroImage?: ImageKey;
-}
+};
 
-export interface PlainLayoutProps {
+export type PlainLayoutProps = {
   metadata: PlainMetadata;
   children: React.ReactNode;
-}
+};
 
 export default function PlainLayout({
   metadata: { title, subtitle, heroImage },

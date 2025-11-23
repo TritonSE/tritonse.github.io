@@ -1,30 +1,26 @@
 import classNames from "classnames";
 import React from "react";
 
-import { ImageKey } from "../images";
-
 import CustomImage from "./CustomImage";
 import RatioImage from "./RatioImage";
 
+import type { ImageKey } from "../images";
+
 // Incorrectly detected as prop types, but these are actually array elements, so
 // it doesn't make sense to give default values.
-/* eslint-disable react/require-default-props */
-/* eslint-disable react/no-unused-prop-types */
-export interface LayoutSpec {
+export type LayoutSpec = {
   imageKey?: ImageKey;
   width?: number;
   aspectRatio?: [number, number];
   priority?: boolean;
-}
-/* eslint-enable react/require-default-props */
-/* eslint-enable react/no-unused-prop-types */
+};
 
-export interface GalleryProps {
+export type GalleryProps = {
   children?: React.ReactNode;
   className?: string;
   layout: LayoutSpec[];
   reverseOnSmallScreens?: boolean;
-}
+};
 
 export default function Gallery({
   children,
@@ -32,7 +28,7 @@ export default function Gallery({
   layout,
   reverseOnSmallScreens,
 }: GalleryProps) {
-  function getElement({ imageKey, aspectRatio, priority }: LayoutSpec) {
+  async function getElement({ imageKey, aspectRatio, priority }: LayoutSpec) {
     if (imageKey === undefined) {
       return children;
     }
@@ -57,7 +53,7 @@ export default function Gallery({
       <div
         className={classNames(
           "d-none d-md-flex justify-content-between align-items-center mb-3",
-          className
+          className,
         )}
       >
         {wideItems.map(({ element, width }, index) => (

@@ -1,6 +1,3 @@
-import { MDXProps } from "mdx/types";
-import { JSX } from "react";
-
 import content4FLOT from "../projects/4flot-website-revamp.mdx";
 import contentALUM from "../projects/alum-mentorship-mobile-application.mdx";
 import contentCBL from "../projects/cbl-crisis-line-mobile-application.mdx";
@@ -40,7 +37,11 @@ import contentYCW from "../projects/ycw-greenpoint-rated-app.mdx";
 import contentYSC from "../projects/ysc-mobile-app.mdx";
 import { makeSlug } from "../util";
 
-import { allProjects, ProjectWithoutContent } from "./projects";
+import { allProjects } from "./projects";
+
+import type { ProjectWithoutContent } from "./projects";
+import type { MDXProps } from "mdx/types";
+import type { JSX } from "react";
 
 type MDXPage = (props: MDXProps) => JSX.Element;
 

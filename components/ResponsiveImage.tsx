@@ -1,28 +1,28 @@
 import classNames from "classnames";
 import React from "react";
 
-import { ImageKey } from "../images";
-
 import CustomImage from "./CustomImage";
 import styles from "./ResponsiveImage.module.scss";
 
-export interface ImageSize {
+import type { ImageKey } from "../images";
+
+export type ImageSize = {
   width: number;
   height: number;
-}
+};
 
-export interface ResponsiveImageSizes {
+export type ResponsiveImageSizes = {
   desktop: ImageSize;
   tablet: ImageSize;
   mobile: ImageSize;
-}
+};
 
-interface ResponsiveImageProps {
+type ResponsiveImageProps = {
   imageKey: ImageKey;
   sizes: ResponsiveImageSizes;
   className?: string;
   priority?: boolean;
-}
+};
 
 /**
  * A component to display an image with different width/heights depending on the screen size.

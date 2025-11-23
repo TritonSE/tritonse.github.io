@@ -1,7 +1,7 @@
-export interface Employer {
+export type Employer = {
   readonly name: string;
   readonly url: string;
-}
+};
 
 const constEmployers = [
   {

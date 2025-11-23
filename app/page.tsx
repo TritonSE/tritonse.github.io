@@ -14,12 +14,13 @@ import ProjectCarousel from "../components/ProjectCarousel";
 import { allClients } from "../data/clients";
 import { allEmployers } from "../data/employers";
 import { allEvents } from "../data/events";
-import type { Event } from "../data/events";
 import recruitment from "../data/recruitment";
 import { allSponsors } from "../data/sponsors";
 import { firstValidImageKey } from "../images";
 import { makeSlug } from "../util";
 import markdown from "../util/markdown";
+
+import type { Event } from "../data/events";
 
 export default function Home() {
   // If the events are statically rendered, the event data could become outdated
@@ -28,7 +29,7 @@ export default function Home() {
   const [upcomingEvents, setUpcomingEvents] = useState([] as Event[]);
   useEffect(() => {
     setUpcomingEvents(
-      allEvents.filter((event) => event.startTime.toMillis() >= Date.now()).slice(0, 4)
+      allEvents.filter((event) => event.startTime.toMillis() >= Date.now()).slice(0, 4),
     );
   }, []);
 

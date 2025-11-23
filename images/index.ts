@@ -1,17 +1,17 @@
-import path from "path";
-
-import { ImageLoader } from "next/image";
+import path from "node:path";
 
 import allImages from "./all-images";
 import config from "./config";
 import { getOptimizedImagePath } from "./util";
 
-export interface ImageWrapper {
+import type { ImageLoader } from "next/image";
+
+export type ImageWrapper = {
   width: number;
   height: number;
   maxSize: number;
   extension: string;
-}
+};
 
 export type ImageKey = keyof typeof allImages;
 
@@ -37,8 +37,8 @@ const staticLoader: ImageLoader = ({ src, width }) => {
   return path.join(
     "/",
     config.staticPrefix,
-    getOptimizedImagePath(src + image.extension, Math.min(width, image.maxSize))
+    getOptimizedImagePath(src + image.extension, Math.min(width, image.maxSize)),
   );
 };
 
-export { isImageKey, getImage, firstValidImageKey, staticLoader };
+export { firstValidImageKey, getImage, isImageKey, staticLoader };

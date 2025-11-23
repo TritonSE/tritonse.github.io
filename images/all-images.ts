@@ -71,7 +71,7 @@ const allImages = {
   "employers/roblox": { width: 266, height: 190, maxSize: 384, extension: ".png" },
   "employers/s_p_global": { width: 1200, height: 261, maxSize: 1200, extension: ".png" },
   "employers/salesforce": { width: 3840, height: 2160, maxSize: 3840, extension: ".png" },
-  "employers/sap": { width: 358, height: 141, maxSize: 384, extension: ".jpg" },
+  "employers/sap": { width: 1200, height: 594, maxSize: 1200, extension: ".png" },
   "employers/servicenow": { width: 1024, height: 1024, maxSize: 1080, extension: ".png" },
   "employers/snap": { width: 2400, height: 2402, maxSize: 3840, extension: ".png" },
   "employers/stripe": { width: 1280, height: 533, maxSize: 1920, extension: ".png" },

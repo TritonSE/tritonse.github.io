@@ -1,7 +1,10 @@
-import Image, { ImageProps } from "next/legacy/image";
+import Image from "next/legacy/image";
 import React from "react";
 
-import { getImage, ImageKey, staticLoader } from "../images";
+import { getImage, staticLoader } from "../images";
+
+import type { ImageKey } from "../images";
+import type { ImageProps } from "next/legacy/image";
 
 export type CustomImageProps = {
   imageKey: ImageKey;

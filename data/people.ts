@@ -29,17 +29,17 @@ const allRoles = [
 ] as const satisfies readonly string[];
 type Role = (typeof allRoles)[number];
 
-interface Member {
+type Member = {
   readonly id: string;
   readonly name: string;
   readonly roles: readonly Role[];
   readonly hidden?: boolean;
   readonly graduation?: number;
-}
+};
 
-interface Alumnus extends Member {
+type Alumnus = {
   readonly graduation: number;
-}
+} & Member;
 
 type RawPerson = Omit<Member, "name">;
 
@@ -1311,7 +1311,7 @@ mutablePeople.sort(
     person.graduation ?? 9999,
     allRoles.indexOf(roles[roles.length - 1]),
     id,
-  ])
+  ]),
 );
 assertUniqueKey(mutablePeople, "id");
 
@@ -1325,5 +1325,5 @@ function isAlumnus(member: Member): member is Alumnus {
 const allAlumni: readonly Alumnus[] = visiblePeople.filter(isAlumnus);
 const allMembers: readonly Member[] = visiblePeople.filter((person) => !isAlumnus(person));
 
-export { allRoles, allAlumni, allMembers, allPeople };
+export { allAlumni, allMembers, allPeople, allRoles };
 export type { Alumnus, Member, PersonId, Role };

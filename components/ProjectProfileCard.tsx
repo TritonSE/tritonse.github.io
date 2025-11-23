@@ -3,16 +3,17 @@ import Link from "next/link";
 import React from "react";
 import Card from "react-bootstrap/Card";
 
-import type { Project } from "../data/projects-content";
 import { firstValidImageKey } from "../images";
 
 import CustomImage from "./CustomImage";
 import GoldButton from "./GoldButton";
 import styles from "./ProjectProfileCard.module.scss";
 
-interface ProjectProfileCardProps {
+import type { Project } from "../data/projects-content";
+
+type ProjectProfileCardProps = {
   project: Project;
-}
+};
 
 export default function ProjectProfileCard({
   project: { name, description, thumbnail, slug },
