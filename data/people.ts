@@ -945,6 +945,7 @@ const rawPeople = [
   {
     id: "Andrew Pu 0",
     roles: ["Developer"],
+    graduation: 2025,
   },
   {
     id: "Andrew Zhou 0",
@@ -1110,6 +1111,7 @@ const rawPeople = [
   {
     id: "Adam Rolander 0",
     roles: ["Developer"],
+    graduation: 2025,
   },
   {
     id: "Anirudh Annabathula 0",
@@ -1170,6 +1172,7 @@ const rawPeople = [
   {
     id: "Raymond Wu 0",
     roles: ["Developer"],
+    graduation: 2025,
   },
   {
     id: "Rudraksh Bhandari 0",
@@ -1194,6 +1197,7 @@ const rawPeople = [
   {
     id: "Unnati Goyal 0",
     roles: ["Developer"],
+    graduation: 2025,
   },
   {
     id: "Weston Zong 0",
@@ -1291,6 +1295,228 @@ const rawPeople = [
   {
     id: "Sylvie Tran 0",
     roles: ["TEST Designer", "Designer"],
+  },
+
+  // New members for 2025-2026
+  {
+    id: "Alice Lan 0",
+    roles: ["Designer"],
+  },
+  {
+    id: "Andrea Labbaika 0",
+    roles: ["Designer"],
+  },
+  {
+    id: "Annabelle Zhou 0",
+    roles: ["Designer"],
+  },
+  {
+    id: "Caleb Kim 0",
+    roles: ["Designer"],
+  },
+  {
+    id: "Evan Chen 0",
+    roles: ["Designer"],
+  },
+  {
+    id: "Jamie Han 0",
+    roles: ["Designer"],
+  },
+  {
+    id: "Jeffrey Antony 0",
+    roles: ["Designer"],
+  },
+  {
+    id: "Joyce Ren 0",
+    roles: ["Designer"],
+  },
+  {
+    id: "Aaryan Patel 0",
+    roles: ["Developer"],
+  },
+  {
+    id: "Aniket Warty 0",
+    roles: ["Developer"],
+  },
+  {
+    id: "Darshika Mishra 0",
+    roles: ["Developer"],
+  },
+  {
+    id: "Edward Yao 0",
+    roles: ["Developer"],
+  },
+  {
+    id: "Himir Desai 0",
+    roles: ["Developer"],
+  },
+  {
+    id: "Anh Pham 0",
+    roles: ["Developer"],
+  },
+  {
+    id: "Huize Mao 0",
+    roles: ["Developer"],
+  },
+  {
+    id: "Ishayu Ghosh 0",
+    roles: ["Developer"],
+  },
+  {
+    id: "Jaden Huang 0",
+    roles: ["Developer"],
+  },
+  {
+    id: "James Escobedo 0",
+    roles: ["Developer"],
+  },
+  {
+    id: "Jeff Umanzor 0",
+    roles: ["Developer"],
+  },
+  {
+    id: "Jennifer Zhu 0",
+    roles: ["Developer"],
+  },
+  {
+    id: "Jeremy Lim 0",
+    roles: ["Developer"],
+  },
+  {
+    id: "Jerry Zhang 0",
+    roles: ["Developer"],
+  },
+  {
+    id: "JP Davalos 0",
+    roles: ["Developer"],
+  },
+  {
+    id: "Kalyssa Choy 0",
+    roles: ["Developer", "Socials Lead"],
+  },
+  {
+    id: "Katelyn Li 0",
+    roles: ["Developer"],
+  },
+  {
+    id: "Koji Nakazawa 0",
+    roles: ["Developer"],
+  },
+  {
+    id: "Lucas Yan 0",
+    roles: ["Developer"],
+  },
+  {
+    id: "Lulu Shao 0",
+    roles: ["Developer"],
+  },
+  {
+    id: "Michael Wang 0",
+    roles: ["Developer"],
+  },
+  {
+    id: "Ming Lu 0",
+    roles: ["Developer"],
+  },
+  {
+    id: "Munachi Okoro 0",
+    roles: ["Developer"],
+  },
+  {
+    id: "Nate Murphy 0",
+    roles: ["Developer"],
+  },
+  {
+    id: "Nico Docena 0",
+    roles: ["Developer"],
+  },
+  {
+    id: "Noah Golder 0",
+    roles: ["Developer"],
+  },
+  {
+    id: "Pranav Puttagunta 0",
+    roles: ["Developer"],
+  },
+  {
+    id: "Raghav Sreekumar 0",
+    roles: ["Developer"],
+  },
+  {
+    id: "Rohaan Sandhu 0",
+    roles: ["Developer"],
+  },
+  {
+    id: "Rushil Gupta 0",
+    roles: ["Developer"],
+  },
+  {
+    id: "Siddharth Maddikayala 0",
+    roles: ["Developer"],
+  },
+  {
+    id: "Suhaan Khurana 0",
+    roles: ["Developer"],
+  },
+  {
+    id: "Sungwoo Cho 0",
+    roles: ["Developer"],
+  },
+  {
+    id: "Thomas Rocha 0",
+    roles: ["Developer"],
+  },
+  {
+    id: "Yasmin Kabir 0",
+    roles: ["Developer"],
+  },
+  {
+    id: "Yuzuki Tomioka 0",
+    roles: ["Developer"],
+  },
+  {
+    id: "David Nguyen 0",
+    roles: ["TEST Designer"],
+  },
+  {
+    id: "Juee Deshmukh 0",
+    roles: ["TEST Designer"],
+  },
+  {
+    id: "Sakura Nishikawa 0",
+    roles: ["TEST Designer"],
+  },
+  {
+    id: "Yang Zheng 0",
+    roles: ["TEST Designer"],
+  },
+  {
+    id: "Alice Park 0",
+    roles: ["TEST Developer"],
+  },
+  {
+    id: "Angeleen Duong 0",
+    roles: ["TEST Developer"],
+  },
+  {
+    id: "Isaac Montanez 0",
+    roles: ["TEST Developer"],
+  },
+  {
+    id: "Sofia Heim 0",
+    roles: ["TEST Developer"],
+  },
+  {
+    id: "Thy Doan 0",
+    roles: ["TEST Developer"],
+  },
+  {
+    id: "Tony Wang 0",
+    roles: ["TEST Developer"],
+  },
+  {
+    id: "Waleed Siddiqui 0",
+    roles: ["TEST Developer"],
   },
 ] as const satisfies readonly RawPerson[];
 
