@@ -1,7 +1,5 @@
 "use client";
 
-import React from "react";
-
 import AboutTabs from "../../components/AboutTabs";
 import ArrowLink from "../../components/ArrowLink";
 import Gallery from "../../components/Gallery";
@@ -25,7 +23,7 @@ TSE's mission is to craft digital solutions for nonprofit organizations in our c
               priority: true,
             },
             {
-              imageKey: "content/wi25-all-hands-2",
+              imageKey: "content/fa25-all-hands-2",
               width: (16 / 26) * 100,
               priority: true,
             },
