@@ -182,7 +182,7 @@ const allImages = {
   "members/holly_ham_0": { width: 2078, height: 2043, maxSize: 1080, extension: ".jpg" },
   "members/hrithik_pai_0": { width: 2040, height: 2040, maxSize: 1080, extension: ".jpg" },
   "members/huize_mao_0": { width: 959, height: 984, maxSize: 1080, extension: ".jpg" },
-  "members/irene_joo_0": { width: 1284, height: 1284, maxSize: 1080, extension: ".png" },
+  "members/irene_joo_0": { width: 3523, height: 3534, maxSize: 1080, extension: ".jpg" },
   "members/isaac_montanez_0": { width: 2316, height: 3088, maxSize: 1080, extension: ".jpg" },
   "members/isabel_ku_0": { width: 1142, height: 1142, maxSize: 1080, extension: ".jpg" },
   "members/ishayu_ghosh_0": { width: 1854, height: 1844, maxSize: 1080, extension: ".png" },
