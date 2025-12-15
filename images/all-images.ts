@@ -145,6 +145,7 @@ const allImages = {
   "members/brandon_jonathan_0": { width: 520, height: 520, maxSize: 640, extension: ".jpg" },
   "members/brenton_dunn_0": { width: 3215, height: 3215, maxSize: 1080, extension: ".jpg" },
   "members/bryant_liu_0": { width: 846, height: 812, maxSize: 1080, extension: ".jpg" },
+  "members/caleb_kim_0": { width: 2799, height: 2799, maxSize: 1080, extension: ".jpg" },
   "members/charlie_suarez_robles_0": { width: 2736, height: 2736, maxSize: 1080, extension: ".png" },
   "members/christen_xie_0": { width: 1090, height: 1090, maxSize: 1080, extension: ".jpg" },
   "members/dan_huang_0": { width: 3024, height: 3024, maxSize: 1080, extension: ".jpg" },
