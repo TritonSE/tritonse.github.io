@@ -311,7 +311,6 @@ const allImages = {
   "members/shravan_konduru_0": { width: 1505, height: 1505, maxSize: 1080, extension: ".jpg" },
   "members/shreekar_pandey_0": { width: 1014, height: 1000, maxSize: 1080, extension: ".jpg" },
   "members/shreya_gupta_0": { width: 938, height: 930, maxSize: 1080, extension: ".jpg" },
-  "members/siddharth_maddikayala_0": { width: 3744, height: 5616, maxSize: 1080, extension: ".jpg" },
   "members/sidhant_rohatgi_0": { width: 1748, height: 1748, maxSize: 1080, extension: ".jpg" },
   "members/sofia_heim_0": { width: 1024, height: 1024, maxSize: 1080, extension: ".png" },
   "members/sophia_yu_0": { width: 1462, height: 1462, maxSize: 1080, extension: ".jpg" },

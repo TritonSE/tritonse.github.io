@@ -1451,10 +1451,6 @@ const rawPeople = [
     roles: ["Developer"],
   },
   {
-    id: "Siddharth Maddikayala 0",
-    roles: ["Developer"],
-  },
-  {
     id: "Suhaan Khurana 0",
     roles: ["Developer"],
   },
