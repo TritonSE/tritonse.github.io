@@ -19,18 +19,18 @@ export default function Students() {
       <div className={styles.topRow}>
         <div className={styles.imagesContainer}>
           <ImageCard
-            imageKey="content/beach-photoshoot-homework"
+            imageKey="content/beach-photoshoot-meemli"
             sizes={{
               mobile: {
-                width: 140,
+                width: 198,
                 height: 111,
               },
               tablet: {
-                width: 263,
+                width: 374,
                 height: 210,
               },
               desktop: {
-                width: 356,
+                width: 506,
                 height: 284,
               },
             }}
@@ -39,18 +39,18 @@ export default function Students() {
             priority
           />
           <ImageCard
-            imageKey="content/beach-photoshoot-psyches-of-color"
+            imageKey="content/beach-photoshoot-dbc"
             sizes={{
               mobile: {
-                width: 135,
+                width: 86,
                 height: 108,
               },
               tablet: {
-                width: 254,
+                width: 160,
                 height: 202,
               },
               desktop: {
-                width: 344,
+                width: 217,
                 height: 274,
               },
             }}
@@ -88,15 +88,15 @@ export default function Students() {
             imageKey="content/beach-photoshoot-devs"
             sizes={{
               mobile: {
-                width: 256,
-                height: 167,
+                width: 308,
+                height: 173,
               },
               tablet: {
-                width: 400,
-                height: 261,
+                width: 484,
+                height: 272,
               },
               desktop: {
-                width: 567,
+                width: 659,
                 height: 370,
               },
             }}
@@ -113,15 +113,15 @@ export default function Students() {
             imageKey="content/beach-photoshoot-designers"
             sizes={{
               mobile: {
-                width: 254,
+                width: 271,
                 height: 173,
               },
               tablet: {
-                width: 400,
+                width: 426,
                 height: 272,
               },
               desktop: {
-                width: 542,
+                width: 580,
                 height: 370,
               },
             }}

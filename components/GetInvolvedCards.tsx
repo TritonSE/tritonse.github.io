@@ -16,7 +16,7 @@ export default function GetInvolvedCards() {
       <Col {...colSizes}>
         <GetInvolvedCard
           title="Students"
-          imageKey="content/beach-photoshoot-splagen"
+          imageKey="content/beach-photoshoot-cred"
           href="/students"
           linkText="Learn how to join!"
         >
@@ -28,7 +28,7 @@ We recruit developers and designers every academic year during the fall.
       <Col {...colSizes}>
         <GetInvolvedCard
           title="Nonprofits"
-          imageKey="content/beach-photoshoot-ucsd-health"
+          imageKey="content/beach-photoshoot-f3"
           href="/nonprofits"
           linkText="Learn how to partner with us!"
         >
