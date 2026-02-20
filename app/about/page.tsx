@@ -17,9 +17,9 @@ TSE's mission is to craft digital solutions for nonprofit organizations in our c
         <Gallery
           layout={[
             {
-              imageKey: "content/beach-photoshoot-veteran-sisters",
+              imageKey: "content/beach-photoshoot-test",
               width: (9 / 26) * 100,
-              aspectRatio: [1, 1],
+              aspectRatio: [143, 115],
               priority: true,
             },
             {
@@ -31,7 +31,9 @@ TSE's mission is to craft digital solutions for nonprofit organizations in our c
         />
       </PaddedBox>
       <PaddedBox>
-        <Gallery layout={[{}, { imageKey: "content/beach-photoshoot-pvp", aspectRatio: [4, 3] }]}>
+        <Gallery
+          layout={[{}, { imageKey: "content/beach-photoshoot-exec", aspectRatio: [2048, 1150] }]}
+        >
           {markdown`
 In Spring of 2017, a group of passionate students saw a huge problem: many nonprofit organizations had little to no resources to procure professional web and technical development services.
 
@@ -47,7 +49,7 @@ In response, they banded together to create Triton Software Engineering. By prov
           <li>Service</li>
         </ol>
       </PaddedBox>
-      <Hero imageKey="content/exec-dinner-2024" />
+      <Hero imageKey="content/regents-pizza-2026" />
       <PaddedBox heading="More than a team.">
         {markdown`
 When not heads-down designing and developing, we set time aside to create opportunities to bond through games and mentorship. We care about celebrating each other's successes as well! As a member in TSE, you gain valuable skills and a network of talented peers who share a drive to do good for the community.

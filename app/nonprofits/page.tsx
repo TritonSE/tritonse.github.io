@@ -17,18 +17,18 @@ export default function Nonprofits() {
       <div className={styles.topRow}>
         <div className={styles.imagesContainer}>
           <ImageCard
-            imageKey="content/beach-photoshoot-women-in-tse"
+            imageKey="content/beach-photoshoot-fulcrum"
             sizes={{
               mobile: {
-                width: 121,
+                width: 173,
                 height: 97,
               },
               tablet: {
-                width: 215,
+                width: 305,
                 height: 171,
               },
               desktop: {
-                width: 345,
+                width: 488,
                 height: 274,
               },
             }}
@@ -37,18 +37,18 @@ export default function Nonprofits() {
             priority
           />
           <ImageCard
-            imageKey="content/beach-photoshoot-spayla"
+            imageKey="content/beach-photoshoot-pvp"
             sizes={{
               mobile: {
-                width: 126,
+                width: 176,
                 height: 99,
               },
               tablet: {
-                width: 224,
+                width: 312,
                 height: 175,
               },
               desktop: {
-                width: 359,
+                width: 499,
                 height: 280,
               },
             }}

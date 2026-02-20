@@ -37,11 +37,8 @@ export default function Home() {
     <>
       <Hero imageKey="content/beach-photoshoot-everyone" imageIsPriority>
         <div className="text-center">
-          {markdown`
-# Triton Software Engineering
-
-Crafting digital solutions for nonprofit organizations in our community.
-          `}
+          <h1 style={{ marginTop: "2.5rem" }}>Triton Software Engineering</h1>
+          <p>Crafting digital solutions for nonprofit organizations in our community.</p>
         </div>
       </Hero>
       {recruitment.acceptingApplications && (
