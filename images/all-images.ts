@@ -314,7 +314,7 @@ const allImages = {
   "members/shreekar_pandey_0": { width: 1014, height: 1000, maxSize: 1080, extension: ".jpg" },
   "members/shreya_gupta_0": { width: 938, height: 930, maxSize: 1080, extension: ".jpg" },
   "members/sidhant_rohatgi_0": { width: 1748, height: 1748, maxSize: 1080, extension: ".jpg" },
-  "members/sofia_heim_0": { width: 1024, height: 1024, maxSize: 1080, extension: ".png" },
+  "members/sofia_heim_0": { width: 2048, height: 1150, maxSize: 1080, extension: ".jpg" },
   "members/sophia_yu_0": { width: 1462, height: 1462, maxSize: 1080, extension: ".jpg" },
   "members/sophia_zhu_0": { width: 1896, height: 1896, maxSize: 1080, extension: ".jpg" },
   "members/srikar_eranky_0": { width: 3595, height: 5392, maxSize: 1080, extension: ".jpg" },
