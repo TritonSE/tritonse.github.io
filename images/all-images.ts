@@ -300,7 +300,7 @@ const allImages = {
   "members/rohan_sachdeva_0": { width: 2318, height: 3000, maxSize: 1080, extension: ".jpg" },
   "members/rohith_kasar_0": { width: 512, height: 512, maxSize: 640, extension: ".png" },
   "members/rosario_ortiz_0": { width: 2870, height: 2870, maxSize: 1080, extension: ".jpg" },
-  "members/rudraksh_bhandari_0": { width: 1150, height: 2048, maxSize: 1080, extension: ".jpg" },
+  "members/rudraksh_bhandari_0": { width: 2048, height: 1150, maxSize: 1080, extension: ".jpg" },
   "members/rushil_gupta_0": { width: 1755, height: 2769, maxSize: 1080, extension: ".jpg" },
   "members/ryan_bui_0": { width: 2000, height: 2000, maxSize: 1080, extension: ".jpg" },
   "members/saaz_mahadkar_0": { width: 3024, height: 3024, maxSize: 1080, extension: ".jpg" },
