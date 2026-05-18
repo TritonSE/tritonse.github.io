@@ -42,7 +42,7 @@ export default function Footer() {
       <div className={styles.column}>
         <p className={styles.goldText}>Triton Software Engineering</p>
         <div className={styles.iconsRow}>
-          <FooterIcon icon={FaEnvelope} href="mailto:tse@ucsd.edu" />
+          <FooterIcon icon={FaEnvelope} href="mailto:triton.software.engineering@gmail.com" />
           <FooterIcon
             icon={FaLinkedin}
             href="https://www.linkedin.com/company/tritonsoftwareengineering"
@@ -55,7 +55,10 @@ export default function Footer() {
       <div className={classNames(styles.column, styles.rightColumn)}>
         <p className={styles.goldText}>Contact Us</p>
         <p className={styles.whiteText}>
-          For all inquiries, please contact us at <a href="mailto:tse@ucsd.edu">tse@ucsd.edu</a>
+          For all inquiries, please contact us at{" "}
+          <a href="mailto:triton.software.engineering@gmail.com">
+            triton.software.engineering@gmail.com
+          </a>
         </p>
       </div>
     </div>

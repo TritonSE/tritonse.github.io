@@ -69,7 +69,7 @@ export default function Nonprofits() {
 
           <GoldButton
             className={styles.contactButton}
-            href="mailto:tse@ucsd.edu"
+            href="mailto:triton.software.engineering@gmail.com"
             openInNewTab={false}
           >
             Contact Us
@@ -210,7 +210,11 @@ export default function Nonprofits() {
 
       <h2>Interested in working with us?</h2>
       <p>
-        Get in touch with us by emailing <a href="mailto:tse@ucsd.edu">tse@ucsd.edu</a>.
+        Get in touch with us by emailing{" "}
+        <a href="mailto:triton.software.engineering@gmail.com">
+          triton.software.engineering@gmail.com
+        </a>
+        .
         <br /> <br />
         We will work with you to deliver a solution that satisfies your needs.
       </p>

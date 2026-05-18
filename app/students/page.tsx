@@ -404,7 +404,11 @@ We are no longer accepting applications for this school year. If you are interes
                 <br />
                 <br />
                 You may apply to either TSE or the TEST program, not both. If you are unsure about
-                which is right for you, please email <a href="mailto:tse@ucsd.edu">tse@ucsd.edu</a>.
+                which is right for you, please email{" "}
+                <a href="mailto:triton.software.engineering@gmail.com">
+                  triton.software.engineering@gmail.com
+                </a>
+                .
               </p>
             ),
           },
@@ -457,7 +461,7 @@ We are no longer accepting applications for this school year. If you are interes
       {markdown`
 ## Still have questions?
 
-If you still have any questions regarding how to get involved with us, please feel free to contact us at [tse@ucsd.edu](mailto:tse@ucsd.edu) and we will get in touch with you as soon as possible.
+If you still have any questions regarding how to get involved with us, please feel free to contact us at [triton.software.engineering@gmail.com](mailto:triton.software.engineering@gmail.com) and we will get in touch with you as soon as possible.
       `}
     </PageContainer>
   );
