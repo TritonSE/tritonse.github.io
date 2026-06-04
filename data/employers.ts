@@ -29,6 +29,10 @@ const constEmployers = [
     url: "https://linkedin.com",
   },
   {
+    name: "Koah Labs",
+    url: "https://koahlabs.com",
+  },
+  {
     name: "Roblox",
     url: "https://roblox.com",
   },

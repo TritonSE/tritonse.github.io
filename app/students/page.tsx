@@ -8,6 +8,7 @@ import ApplicationButton from "../../components/ApplicationButton";
 import ImageCard from "../../components/ImageCard";
 import PageContainer from "../../components/PageContainer";
 import ResponsiveImage from "../../components/ResponsiveImage";
+import { ORG_EMAIL } from "../../data/contact";
 import recruitment from "../../data/recruitment";
 import markdown from "../../util/markdown";
 
@@ -404,10 +405,7 @@ We are no longer accepting applications for this school year. If you are interes
                 <br />
                 <br />
                 You may apply to either TSE or the TEST program, not both. If you are unsure about
-                which is right for you, please email{" "}
-                <a href="mailto:triton.software.engineering@gmail.com">
-                  triton.software.engineering@gmail.com
-                </a>
+                which is right for you, please email <a href={`mailto:${ORG_EMAIL}`}>{ORG_EMAIL}</a>
                 .
               </p>
             ),
@@ -461,7 +459,7 @@ We are no longer accepting applications for this school year. If you are interes
       {markdown`
 ## Still have questions?
 
-If you still have any questions regarding how to get involved with us, please feel free to contact us at [triton.software.engineering@gmail.com](mailto:triton.software.engineering@gmail.com) and we will get in touch with you as soon as possible.
+If you still have any questions regarding how to get involved with us, please feel free to contact us at [${ORG_EMAIL}](mailto:${ORG_EMAIL}) and we will get in touch with you as soon as possible.
       `}
     </PageContainer>
   );

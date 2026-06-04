@@ -69,6 +69,9 @@ export default function Navbar() {
           <NavbarItem href="/nonprofits" isBold={false}>
             Nonprofits
           </NavbarItem>
+          <NavbarItem href="/sponsorship" isBold={false}>
+            Sponsor/Donate
+          </NavbarItem>
         </Nav>
       </BsNavbar.Collapse>
       {/* </Container> */}

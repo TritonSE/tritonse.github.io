@@ -8,6 +8,7 @@ import ImageCard from "../../components/ImageCard";
 import PageContainer from "../../components/PageContainer";
 import ProfileCardGroup from "../../components/ProfileCardGroup";
 import WhyTSECard from "../../components/WhyTSECard";
+import { ORG_EMAIL } from "../../data/contact";
 
 import styles from "./nonprofits.module.scss";
 
@@ -69,7 +70,7 @@ export default function Nonprofits() {
 
           <GoldButton
             className={styles.contactButton}
-            href="mailto:triton.software.engineering@gmail.com"
+            href={`mailto:${ORG_EMAIL}`}
             openInNewTab={false}
           >
             Contact Us
@@ -210,11 +211,7 @@ export default function Nonprofits() {
 
       <h2>Interested in working with us?</h2>
       <p>
-        Get in touch with us by emailing{" "}
-        <a href="mailto:triton.software.engineering@gmail.com">
-          triton.software.engineering@gmail.com
-        </a>
-        .
+        Get in touch with us by emailing <a href={`mailto:${ORG_EMAIL}`}>{ORG_EMAIL}</a>.
         <br /> <br />
         We will work with you to deliver a solution that satisfies your needs.
       </p>
