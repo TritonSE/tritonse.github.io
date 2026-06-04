@@ -60,6 +60,7 @@ const allImages = {
   "employers/ibm": { width: 960, height: 359, maxSize: 1080, extension: ".png" },
   "employers/intuit": { width: 1200, height: 358, maxSize: 1200, extension: ".png" },
   "employers/jane_street": { width: 1280, height: 505, maxSize: 1920, extension: ".png" },
+  "employers/koah_labs": { width: 600, height: 315, maxSize: 640, extension: ".png" },
   "employers/linkedin": { width: 3840, height: 2160, maxSize: 3840, extension: ".png" },
   "employers/meta": { width: 1200, height: 675, maxSize: 1200, extension: ".png" },
   "employers/microsoft": { width: 1024, height: 376, maxSize: 1080, extension: ".jpg" },

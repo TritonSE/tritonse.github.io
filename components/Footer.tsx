@@ -4,6 +4,8 @@ import classNames from "classnames";
 import React from "react";
 import { FaEnvelope, FaFacebook, FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 
+import { ORG_EMAIL } from "../data/contact";
+
 import styles from "./Footer.module.scss";
 import ResponsiveImage from "./ResponsiveImage";
 
@@ -42,7 +44,7 @@ export default function Footer() {
       <div className={styles.column}>
         <p className={styles.goldText}>Triton Software Engineering</p>
         <div className={styles.iconsRow}>
-          <FooterIcon icon={FaEnvelope} href="mailto:triton.software.engineering@gmail.com" />
+          <FooterIcon icon={FaEnvelope} href={`mailto:${ORG_EMAIL}`} />
           <FooterIcon
             icon={FaLinkedin}
             href="https://www.linkedin.com/company/tritonsoftwareengineering"
@@ -55,10 +57,7 @@ export default function Footer() {
       <div className={classNames(styles.column, styles.rightColumn)}>
         <p className={styles.goldText}>Contact Us</p>
         <p className={styles.whiteText}>
-          For all inquiries, please contact us at{" "}
-          <a href="mailto:triton.software.engineering@gmail.com">
-            triton.software.engineering@gmail.com
-          </a>
+          For all inquiries, please contact us at <a href={`mailto:${ORG_EMAIL}`}>{ORG_EMAIL}</a>
         </p>
       </div>
     </div>

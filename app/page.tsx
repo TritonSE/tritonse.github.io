@@ -15,7 +15,6 @@ import { allClients } from "../data/clients";
 import { allEmployers } from "../data/employers";
 import { allEvents } from "../data/events";
 import recruitment from "../data/recruitment";
-import { allSponsors } from "../data/sponsors";
 import { firstValidImageKey } from "../images";
 import { makeSlug } from "../util";
 import markdown from "../util/markdown";
@@ -89,14 +88,6 @@ As a powerhouse of 96 members, including our board, 49 developers, 19 UI/UX desi
           logos={allClients.map((client) => ({
             imageKey: firstValidImageKey(`clients/${makeSlug(client.name)}`),
             url: client.url,
-          }))}
-        />
-      </PaddedBox>
-      <PaddedBox backgroundColor="#FFFFFF" className="text-black" heading="Our Sponsors">
-        <Logos
-          logos={allSponsors.map((sponsor) => ({
-            imageKey: firstValidImageKey(`sponsors/${makeSlug(sponsor.name)}`),
-            url: sponsor.url,
           }))}
         />
       </PaddedBox>
