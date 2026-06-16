@@ -143,7 +143,7 @@ const constClients = [
   {
     name: "California Council For Interior Design Certification",
     startYear: 2023,
-    endYear: null,
+    endYear: 2025,
     url: "https://ccidc.org/",
   },
   {
@@ -161,7 +161,7 @@ const constClients = [
   {
     name: "Plant It Again",
     startYear: 2023,
-    endYear: null,
+    endYear: 2025,
     url: "https://www.plantitagain.org/",
   },
   {
@@ -173,38 +173,74 @@ const constClients = [
   {
     name: "HoMEwork",
     startYear: 2024,
-    endYear: null,
+    endYear: 2025,
     url: "https://www.homework-sd.org/",
   },
   {
     name: "Psyches of Color",
     startYear: 2024,
-    endYear: null,
+    endYear: 2025,
     url: "https://psychesofcolor.org/",
   },
   {
     name: "SpayLA",
     startYear: 2024,
-    endYear: null,
+    endYear: 2025,
     url: "https://www.1888spay4la.org/",
   },
   {
     name: "SPLAGen",
     startYear: 2024,
-    endYear: null,
+    endYear: 2025,
     url: "https://www.splagen.org/en/",
   },
   {
     name: "UCSD Health",
     startYear: 2024,
-    endYear: null,
+    endYear: 2025,
     url: "https://health.ucsd.edu/",
   },
   {
     name: "Veteran Sisters",
     startYear: 2024,
-    endYear: null,
+    endYear: 2025,
     url: "https://veteransisters.org/",
+  },
+  {
+    name: "F3 Global",
+    startYear: 2025,
+    endYear: 2026,
+    url: "https://f3-global.org/",
+  },
+  {
+    name: "Home Start",
+    startYear: 2025,
+    endYear: 2026,
+    url: null,
+  },
+  {
+    name: "Meemli",
+    startYear: 2025,
+    endYear: 2026,
+    url: "https://meemli-dev.web.app/",
+  },
+  {
+    name: "David Brower Center",
+    startYear: 2025,
+    endYear: 2026,
+    url: null,
+  },
+  {
+    name: "Community Reintegration Economic Development",
+    startYear: 2025,
+    endYear: 2026,
+    url: "https://cred-opal.vercel.app/",
+  },
+  {
+    name: "Fulcrum",
+    startYear: 2025,
+    endYear: 2026,
+    url: "https://fulcrum-admin-nine.vercel.app/",
   },
 ] as const;
 export type ClientName = (typeof constClients)[number]["name"];
