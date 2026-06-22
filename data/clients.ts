@@ -12,7 +12,7 @@ const constClients = [
     name: "International Health Collective",
     startYear: 2018,
     endYear: 2020,
-    url: "https://www.internationalhealthcollective.org/",
+    url: "https://internationalhealthcollective.org/",
   },
   {
     name: "Center for Community Health",
