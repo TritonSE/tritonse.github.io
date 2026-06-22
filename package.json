@@ -10,7 +10,7 @@
     "format": "prettier --write .",
     "lint-fix": "(eslint --fix --cache --report-unused-disable-directives . || true) && prettier --write .",
     "lint-check": "tsc && eslint --cache --report-unused-disable-directives . && prettier --check .",
-    "link-test": "linkinator out/ --skip 'dynamicsperformanceteam.com|linkedin.com|ssa.ucsd.edu|jointheleague.org|sdcta.org|laktaa.medium.com'",
+    "link-test": "linkinator out/ --skip 'dynamicsperformanceteam.com|linkedin.com|ssa.ucsd.edu|jointheleague.org|sdcta.org|laktaa.medium.com|tesla.com|sap.com|meta.com|instagram.com|amazon.com|citadel.com|coinbase.com|intuit.com|oracle.com|servicenow.com|spglobal.com|uber.com'",
     "prepare": "husky install .husky"
   },
   "dependencies": {
