@@ -174,7 +174,7 @@ const constClients = [
     name: "HoMEwork",
     startYear: 2024,
     endYear: 2025,
-    url: "https://www.homework-sd.org/",
+    url: "https://homework-sd.org/",
   },
   {
     name: "Psyches of Color",
