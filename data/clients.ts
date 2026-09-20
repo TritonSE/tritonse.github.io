@@ -12,7 +12,7 @@ const constClients = [
     name: "International Health Collective",
     startYear: 2018,
     endYear: 2020,
-    url: "https://www.internationalhealthcollective.org/",
+    url: "https://internationalhealthcollective.org/",
   },
   {
     name: "Center for Community Health",
@@ -143,7 +143,7 @@ const constClients = [
   {
     name: "California Council For Interior Design Certification",
     startYear: 2023,
-    endYear: null,
+    endYear: 2024,
     url: "https://ccidc.org/",
   },
   {
@@ -161,7 +161,7 @@ const constClients = [
   {
     name: "Plant It Again",
     startYear: 2023,
-    endYear: null,
+    endYear: 2024,
     url: "https://www.plantitagain.org/",
   },
   {
@@ -173,38 +173,80 @@ const constClients = [
   {
     name: "HoMEwork",
     startYear: 2024,
-    endYear: null,
+    endYear: 2026,
     url: "https://www.homework-sd.org/",
   },
   {
     name: "Psyches of Color",
     startYear: 2024,
-    endYear: null,
+    endYear: 2026,
     url: "https://psychesofcolor.org/",
   },
   {
     name: "SpayLA",
     startYear: 2024,
-    endYear: null,
+    endYear: 2025,
     url: "https://www.1888spay4la.org/",
   },
   {
     name: "SPLAGen",
     startYear: 2024,
-    endYear: null,
+    endYear: 2026,
     url: "https://www.splagen.org/en/",
   },
   {
     name: "UCSD Health",
     startYear: 2024,
-    endYear: null,
+    endYear: 2026,
     url: "https://health.ucsd.edu/",
   },
   {
     name: "Veteran Sisters",
     startYear: 2024,
-    endYear: null,
+    endYear: 2026,
     url: "https://veteransisters.org/",
+  },
+  {
+    name: "Rady Children's Health",
+    startYear: 2024,
+    endYear: 2025,
+    url: "https://www.rchsd.org/",
+  },
+  {
+    name: "F3 Global",
+    startYear: 2025,
+    endYear: null,
+    url: "https://f3-global.org/",
+  },
+  {
+    name: "Home Start",
+    startYear: 2025,
+    endYear: null,
+    url: "https://home-start-ten.vercel.app/",
+  },
+  {
+    name: "Meemli",
+    startYear: 2025,
+    endYear: null,
+    url: "https://meemli-dev.web.app/",
+  },
+  {
+    name: "David Brower Center",
+    startYear: 2025,
+    endYear: null,
+    url: "https://david-brower-center.vercel.app/",
+  },
+  {
+    name: "Community Reintegration Economic Development",
+    startYear: 2025,
+    endYear: null,
+    url: "https://cred-opal.vercel.app/",
+  },
+  {
+    name: "Fulcrum",
+    startYear: 2025,
+    endYear: null,
+    url: "https://fulcrum-admin-nine.vercel.app/",
   },
 ] as const;
 export type ClientName = (typeof constClients)[number]["name"];

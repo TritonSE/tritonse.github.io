@@ -11,16 +11,22 @@ const allRoles = [
   "VP Products",
   "VP Projects",
   "VP Technology",
+  "VP Finance",
   // Leads
   "Marketing Lead",
+  "Design Lead, Marketing Lead",
   "Outreach Lead",
   "Socials Lead",
+  "Design Lead, Socials Lead",
   "TEST Design Lead",
+  "Design Lead, TEST Design Lead",
   "TEST Developer Lead",
   // Managers
   "Engineering Manager",
   "Product Manager",
+  "Design Lead, Product Manager",
   "Project Manager",
+  "Design Lead",
   // Members
   "Designer",
   "Developer",
@@ -737,6 +743,7 @@ const rawPeople = [
   {
     id: "Benjamin Johnson 0",
     roles: ["Developer", "Engineering Manager", "VP Technology", "President"],
+    graduation: 2026,
   },
   {
     id: "Brenton Dunn 0",
@@ -941,6 +948,7 @@ const rawPeople = [
   {
     id: "Yoto Kim 0",
     roles: ["TEST Developer", "Developer", "Product Manager"],
+    graduation: 2026,
   },
   {
     id: "Andrew Pu 0",
@@ -954,7 +962,7 @@ const rawPeople = [
   },
   {
     id: "Eshaan Sharma 0",
-    roles: ["Developer", "Engineering Manager", "VP Engineering"],
+    roles: ["Developer", "Engineering Manager", "VP Engineering", "President"],
   },
   {
     id: "Jacob Hansen 0",
@@ -963,7 +971,7 @@ const rawPeople = [
   },
   {
     id: "Karen Yan 0",
-    roles: ["Developer", "Product Manager"],
+    roles: ["Developer", "Product Manager", "VP Products"],
   },
   {
     id: "Katelyn Nguyen 0",
@@ -987,7 +995,7 @@ const rawPeople = [
   },
   {
     id: "Michael Sullivan 0",
-    roles: ["Developer", "Engineering Manager"],
+    roles: ["Developer", "Engineering Manager", "VP Technology"],
   },
   {
     id: "Pranav Soma 0",
@@ -1042,6 +1050,7 @@ const rawPeople = [
   {
     id: "Nandini Desai 0",
     roles: ["Designer", "VP Products"],
+    graduation: 2026,
   },
   {
     id: "Nicole Zhi 0",
@@ -1071,6 +1080,7 @@ const rawPeople = [
   {
     id: "Alexis Vega 0",
     roles: ["TEST Developer", "Developer", "TEST Developer Lead"],
+    graduation: 2026,
   },
   {
     id: "Kaitlin Calimbahin 0",
@@ -1080,6 +1090,7 @@ const rawPeople = [
   {
     id: "Luis Marquez 0",
     roles: ["TEST Developer", "Developer", "Product Manager"],
+    graduation: 2026,
   },
   {
     id: "Nola Seyoum 0",
@@ -1099,10 +1110,12 @@ const rawPeople = [
   {
     id: "Jesus Azpitarte 0",
     roles: ["TEST Designer", "Developer"],
+    graduation: 2026,
   },
   {
     id: "Nancy Liu 0",
     roles: ["TEST Designer", "Designer", "VP Design"],
+    graduation: 2026,
   },
   {
     id: "Vivian Liu 1",
@@ -1124,6 +1137,7 @@ const rawPeople = [
   {
     id: "Brandon Jonathan 0",
     roles: ["Developer", "Product Manager"],
+    graduation: 2026,
   },
   {
     id: "Isabel Ku 0",
@@ -1132,6 +1146,7 @@ const rawPeople = [
   {
     id: "Jeffrey Liu 0",
     roles: ["Developer"],
+    graduation: 2026,
   },
   {
     id: "Jordan Junaidi 0",
@@ -1159,6 +1174,7 @@ const rawPeople = [
   {
     id: "Navyaa Gupta 0",
     roles: ["Developer", "Engineering Manager"],
+    graduation: 2026,
   },
   {
     id: "Numaan Formoli 0",
@@ -1185,6 +1201,7 @@ const rawPeople = [
   {
     id: "Srikar Eranky 0",
     roles: ["Developer", "Product Manager"],
+    graduation: 2026,
   },
   {
     id: "Sur Shah 0",
@@ -1201,7 +1218,7 @@ const rawPeople = [
   },
   {
     id: "Weston Zong 0",
-    roles: ["Developer", "Engineering Manager"],
+    roles: ["Developer", "Engineering Manager", "VP Engineering"],
   },
   {
     id: "William Wu 1",
@@ -1214,6 +1231,7 @@ const rawPeople = [
   {
     id: "Yixuan Li 0",
     roles: ["Developer", "VP Technology"],
+    graduation: 2026,
   },
   {
     id: "Yunshan Li 0",
@@ -1227,19 +1245,22 @@ const rawPeople = [
   },
   {
     id: "Alice Guo 0",
-    roles: ["Designer", "TEST Design Lead"],
+    roles: ["Designer", "TEST Design Lead", "VP Design"],
   },
   {
     id: "Allison Huang 0",
     roles: ["Designer"],
+    graduation: 2026,
   },
   {
     id: "Irene Joo 0",
     roles: ["Designer"],
+    graduation: 2026,
   },
   {
     id: "Ivan Rim 0",
     roles: ["Designer"],
+    graduation: 2026,
   },
   {
     id: "Kristen Lee 0",
@@ -1257,6 +1278,7 @@ const rawPeople = [
   {
     id: "Renato Pimentel 0",
     roles: ["Designer"],
+    graduation: 2026,
   },
   {
     id: "Alyssia Almanza 0",
@@ -1264,7 +1286,7 @@ const rawPeople = [
   },
   {
     id: "Charlie Suarez Robles 0",
-    roles: ["TEST Developer", "Developer"],
+    roles: ["TEST Developer", "Developer", "TEST Developer Lead"],
   },
   {
     id: "Edward Millan 0",
@@ -1277,7 +1299,7 @@ const rawPeople = [
   },
   {
     id: "Kate Songpetchmongkol 0",
-    roles: ["TEST Developer", "Designer"],
+    roles: ["TEST Developer", "Designer", "Design Lead"],
   },
   {
     id: "Angelica Facundo Arguilla 0",
@@ -1287,6 +1309,7 @@ const rawPeople = [
   {
     id: "Hillary Co 0",
     roles: ["TEST Designer", "Designer", "Marketing Lead"],
+    graduation: 2026,
   },
   {
     id: "Johnny Tiangco 0",
@@ -1295,40 +1318,43 @@ const rawPeople = [
   {
     id: "Sylvie Tran 0",
     roles: ["TEST Designer", "Designer"],
+    graduation: 2026,
   },
 
   // New members for 2025-2026
   {
     id: "Alice Lan 0",
-    roles: ["Designer"],
+    roles: ["Designer", "Design Lead, Product Manager"],
   },
   {
     id: "Andrea Labbaika 0",
     roles: ["Designer"],
+    graduation: 2026,
   },
   {
     id: "Annabelle Zhou 0",
-    roles: ["Designer"],
+    roles: ["Designer", "Design Lead"],
   },
   {
     id: "Caleb Kim 0",
     roles: ["Designer"],
+    graduation: 2026,
   },
   {
     id: "Evan Chen 0",
-    roles: ["Designer"],
+    roles: ["Designer", "Design Lead"],
   },
   {
     id: "Jamie Han 0",
-    roles: ["Designer"],
+    roles: ["Designer", "Design Lead, Marketing Lead"],
   },
   {
     id: "Jeffrey Antony 0",
-    roles: ["Designer"],
+    roles: ["Designer", "Design Lead, Socials Lead"],
   },
   {
     id: "Joyce Ren 0",
-    roles: ["Designer"],
+    roles: ["Designer", "Design Lead, TEST Design Lead"],
   },
   {
     id: "Aaryan Patel 0",
@@ -1357,6 +1383,7 @@ const rawPeople = [
   {
     id: "Huize Mao 0",
     roles: ["Developer"],
+    graduation: 2026,
   },
   {
     id: "Ishayu Ghosh 0",
@@ -1364,11 +1391,11 @@ const rawPeople = [
   },
   {
     id: "Jaden Huang 0",
-    roles: ["Developer"],
+    roles: ["Developer", "Product Manager"],
   },
   {
     id: "James Escobedo 0",
-    roles: ["Developer"],
+    roles: ["Developer", "VP Finance"],
   },
   {
     id: "Jeff Umanzor 0",
@@ -1392,11 +1419,11 @@ const rawPeople = [
   },
   {
     id: "Kalyssa Choy 0",
-    roles: ["Developer", "Socials Lead"],
+    roles: ["Socials Lead", "Developer"],
   },
   {
     id: "Katelyn Li 0",
-    roles: ["Developer"],
+    roles: ["Developer", "Engineering Manager"],
   },
   {
     id: "Koji Nakazawa 0",
@@ -1408,7 +1435,7 @@ const rawPeople = [
   },
   {
     id: "Lulu Shao 0",
-    roles: ["Developer"],
+    roles: ["Developer", "Engineering Manager"],
   },
   {
     id: "Michael Wang 0",
@@ -1433,6 +1460,7 @@ const rawPeople = [
   {
     id: "Noah Golder 0",
     roles: ["Developer"],
+    graduation: 2026,
   },
   {
     id: "Pranav Puttagunta 0",
@@ -1440,11 +1468,11 @@ const rawPeople = [
   },
   {
     id: "Raghav Sreekumar 0",
-    roles: ["Developer"],
+    roles: ["Developer", "Product Manager"],
   },
   {
     id: "Rohaan Sandhu 0",
-    roles: ["Developer"],
+    roles: ["Developer", "Engineering Manager"],
   },
   {
     id: "Rushil Gupta 0",
@@ -1472,47 +1500,48 @@ const rawPeople = [
   },
   {
     id: "David Nguyen 0",
-    roles: ["TEST Designer"],
+    roles: ["TEST Designer", "Designer"],
   },
   {
     id: "Juee Deshmukh 0",
-    roles: ["TEST Designer"],
+    roles: ["TEST Designer", "Product Manager"],
   },
   {
     id: "Sakura Nishikawa 0",
-    roles: ["TEST Designer"],
+    roles: ["TEST Designer", "Designer"],
   },
   {
     id: "Yang Zheng 0",
-    roles: ["TEST Designer"],
+    roles: ["TEST Designer", "Designer"],
   },
   {
     id: "Alice Park 0",
-    roles: ["TEST Developer"],
+    roles: ["TEST Developer", "Product Manager"],
   },
   {
     id: "Angeleen Duong 0",
     roles: ["TEST Developer"],
+    graduation: 2026,
   },
   {
     id: "Isaac Montanez 0",
-    roles: ["TEST Developer"],
+    roles: ["TEST Developer", "Developer"],
   },
   {
     id: "Sofia Heim 0",
-    roles: ["TEST Developer"],
+    roles: ["TEST Developer", "Developer"],
   },
   {
     id: "Thy Doan 0",
-    roles: ["TEST Developer"],
+    roles: ["TEST Developer", "Developer"],
   },
   {
     id: "Tony Wang 0",
-    roles: ["TEST Developer"],
+    roles: ["TEST Developer", "Developer"],
   },
   {
     id: "Waleed Siddiqui 0",
-    roles: ["TEST Developer"],
+    roles: ["TEST Developer", "Developer"],
   },
 ] as const satisfies readonly RawPerson[];
 
