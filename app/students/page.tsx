@@ -1,7 +1,6 @@
 "use client";
 
 import { Accordion } from "@tritonse/tse-constellation";
-import Link from "next/link";
 import React from "react";
 
 import ApplicationButton from "../../components/ApplicationButton";
@@ -175,8 +174,8 @@ We are no longer accepting applications for this school year. If you are interes
               <p>
                 Triton Software Engineering (TSE) is a multidisciplinary student organization at UC
                 San Diego. We partner with nonprofits to design and develop software, websites, and
-                mobile applications pro-bono for social good, while giving our developers practical,
-                real world experience.
+                mobile applications pro-bono for social good, while giving our members practical,
+                real-world experience.
               </p>
             ),
           },
@@ -184,10 +183,11 @@ We are no longer accepting applications for this school year. If you are interes
             header: "Why should I join TSE?",
             content: (
               <p>
-                If you are passionate about helping others using the skills you learn in college,
-                then TSE is the perfect place for you! We are all about social good, and we hope you
-                share our passion. TSE offers a close network of like-minded students, and we can
-                help you build skills that allow you to advance your career.
+                If you are passionate about design or development and about helping others using the
+                skills you learn in college, then TSE is the perfect place for you! We are all about
+                social good, and we hope you share our passion. TSE offers a close network of
+                like-minded students, and we can help you build skills that allow you to advance
+                your career.
               </p>
             ),
           },
@@ -195,14 +195,13 @@ We are no longer accepting applications for this school year. If you are interes
             header: "What is the recruitment process like?",
             content: (
               <p>
-                TSE recruits new members at the beginning of every Fall quarter. In 2024, we
-                accepted a total of 49 members from 486 applicants.
+                TSE recruits new members at the beginning of every Fall quarter.
                 <br />
                 <br />
                 There are three application stages for both designers and developers. We start with
                 a resume screen, then a behavioral interview (with a few technical questions for
-                aspiring TSE developers), followed by a technical interview. For TEST, we have a
-                resume screen, followed by a combined behavioral and technical interview.
+                aspiring TSE developers), followed by a final technical interview. For TEST, we have
+                a resume screen, followed by a combined behavioral and technical interview.
               </p>
             ),
           },
@@ -211,11 +210,11 @@ We are no longer accepting applications for this school year. If you are interes
             content: (
               <p>
                 The number of project teams in TSE depends on the number of nonprofits we are able
-                to secure collaborations with every year. We usually have around 6 project teams,
-                along with the TEST team. Each project team consists of an engineering manager, a
-                product manager, 7-8 developers, and 2-3 designers. Teams work independently of one
-                another to create software for the nonprofit organization that they have been
-                assigned to.
+                to secure collaborations with every year. We usually have around 6 project teams, in
+                addition to the TEST team. Each project team consists of an Engineering Manager, a
+                Product Manager, a Design Lead, 7-9 developers, and 2-3 designers. Teams work
+                independently of one another to create software for the nonprofit organization that
+                they have been assigned to.
               </p>
             ),
           },
@@ -223,10 +222,21 @@ We are no longer accepting applications for this school year. If you are interes
             header: "How can I stay up-to-date with events?",
             content: (
               <p>
-                We host both internal and public events. To find our public events, follow us on{" "}
-                <a href="https://www.facebook.com/TritonSE">Facebook</a> and{" "}
-                <a href="https://www.instagram.com/tse.atucsd/">Instagram</a>. You can also find a
-                list of our past and upcoming events <Link href="/events">here</Link>.
+                We host both internal and public events. Public events may include recruitment
+                tabling, info sessions, intern panels, and more. To keep up to date with when these
+                take place, follow us on{" "}
+                <a href="https://www.instagram.com/tse.atucsd/">Instagram</a>.
+              </p>
+            ),
+          },
+          {
+            header: "What do the growth opportunities look like after joining?",
+            content: (
+              <p>
+                After being a member for a year, you are invited to apply to our executive board
+                positions through internal application processes. These opportunities include PVP
+                (President and Vice Presidents), Engineering Managers, Product Managers, Design
+                Leads, and more.
               </p>
             ),
           },
@@ -297,9 +307,10 @@ We are no longer accepting applications for this school year. If you are interes
                   <li>
                     Brush up on a high-level programming language. Due to the nature of the
                     interview tasks, some languages may be more difficult to use than others.
-                    Python, Java, or JavaScript is preferred. You will not be able to compile or run
-                    your code, so exact syntax/APIs are not that important, but we expect you to
-                    demonstrate familiarity with the language you choose.
+                    <span className={styles.inlineBold}> Python or Java is preferred.</span> You
+                    will not be able to compile or run your code, so exact syntax/APIs are not that
+                    important, but we expect you to demonstrate familiarity with the language you
+                    choose.
                   </li>
                   <li>
                     Expect to solve one or more programming tasks, which may have multiple parts. Be
@@ -342,6 +353,31 @@ We are no longer accepting applications for this school year. If you are interes
       <Accordion
         items={[
           {
+            header: "What design knowledge is expected for designer applicants?",
+            content: (
+              <p>
+                While there is no set amount of experience or coursework we look for, we expect more
+                familiarity with product design from juniors and seniors than freshmen and
+                sophomores.
+                <br />
+                <br />
+                If you’re a first- or second-year, we look for applications that demonstrate
+                evidence of creative problem-solving and collaboration in your past projects, as
+                well as genuine curiosity about the field. Coursework like DSGN 1 is an example of
+                the kind of content that's useful to know, but having taken the course is not a
+                requirement in any way.
+                <br />
+                <br />
+                If you’re a third- or fourth-year, we're looking for a stronger sense of how you
+                approach design work. A portfolio demonstrating your end-to-end design process is a
+                great way to show us, though not a strict requirement. Courses like COGS 120, 125,
+                or 127 are examples of content to know, but again, we do not screen for specific
+                courses.
+              </p>
+            ),
+          },
+
+          {
             header: "How can I prepare for the designer technical interview?",
             content: (
               <p>
@@ -351,13 +387,11 @@ We are no longer accepting applications for this school year. If you are interes
                 presentation.
                 <br />
                 <br />
-                Be prepared to solve a design challenge. You will be given a prompt similar to an
-                actual TSE project and will have 30 minutes to demonstrate your ability to think
-                through and solve this problem. You should be prepared to both talk through your
-                thought process as well as create some very low fidelity visuals to convey your
-                ideas. We really want to understand what you are thinking the whole time, so please
-                think out loud! If you get stuck at any point, the interviewer(s) will be there to
-                help guide you.
+                In addition, be prepared to solve a design challenge. You will be given a prompt
+                similar to an actual TSE project and will have 30 minutes to demonstrate your
+                ability to think through and solve this problem. You should be prepared to both talk
+                through your thought process as well as convey your ideas through whiteboarding. We
+                want to understand your thinking, so please feel free to talk out loud!
               </p>
             ),
           },
@@ -365,14 +399,13 @@ We are no longer accepting applications for this school year. If you are interes
             header: "What does being a TSE designer look like?",
             content: (
               <p>
-                Designers collaborate closely with their non-profit client, carefully listening to
-                the client&apos;s needs to create tailored solutions. Using design tools like Figma,
-                they guide projects through the entire design process, including research, ideation,
-                wireframing, prototyping, etc. Along the way, designers hand off their designs to
-                developers, while remaining available to address any feasibility concerns. Projects
-                vary in scope, from website rebranding to internal software tools, providing a
-                dynamic range of challenges. On average, designers dedicate 5-7 hours per week to
-                TSE activities.
+                Designers work in teams of 3-4, collaborating closely with developers, team leads,
+                and the nonprofit client to understand what the nonprofit needs and identify a
+                tailored solution. From there, you'll move through research, ideation, wireframing,
+                and prototyping in Figma, handing off to developers along the way and staying
+                available as feasibility questions come up. Projects vary in scope, from website
+                rebranding to internal software tools, providing a dynamic range of challenges. On
+                average, designers dedicate 5-7 hours per week to TSE activities.
               </p>
             ),
           },
@@ -390,23 +423,25 @@ We are no longer accepting applications for this school year. If you are interes
             header: "What is the TEST program?",
             content: (
               <p>
-                The TSE Early Start Training (TEST) program provides students from underprivileged
-                backgrounds who have absolutely no technical development/design experience with a
-                first step into exploring software engineering or UI/UX design. TEST developers and
-                designers will learn the fundamentals of their domain while working on
-                beginner-level projects. The program lasts for the school year, then after this
-                period TEST members can potentially become TSE developers and designers.
+                The TSE Early Start Training (TEST) program provides students a first step into
+                exploring software engineering or UI/UX design. We look for students with limited to
+                no prior experience and limited access to the resources that build exposure to these
+                fields, alongside curiosity, genuine interest, and initiative. The program was
+                founded to reach students who might not otherwise find a way into tech, and we
+                especially encourage those from underprivileged backgrounds to apply.
                 <br />
                 <br />
-                Students who are graduating this school year (i.e. before Fall quarter of next
-                school year) may not apply to the TEST program because the goal of the TEST program
-                is for participants to join TSE as general members the following year and apply what
-                they learned in TEST to contribute to TSE projects!
+                TEST developers and designers will learn the fundamentals of their domain while
+                working on beginner-level projects. The program lasts for the school year from late
+                Fall through Spring. Afterwards, TEST members apply internally to become TSE
+                developers and designers.
                 <br />
                 <br />
-                You may apply to either TSE or the TEST program, not both. If you are unsure about
-                which is right for you, please email <a href={`mailto:${ORG_EMAIL}`}>{ORG_EMAIL}</a>
-                .
+                Because the goal is for TEST members to carry what they learn into TSE projects the
+                following year, students graduating before Fall quarter of the next school year
+                aren't eligible. You may apply to either TSE or the TEST program, not both. If you
+                are unsure about which is right for you, please email{" "}
+                <a href={`mailto:${ORG_EMAIL}`}>{ORG_EMAIL}</a>.
               </p>
             ),
           },
@@ -414,10 +449,12 @@ We are no longer accepting applications for this school year. If you are interes
             header: "What sort of projects will I be working on in the TEST program?",
             content: (
               <p>
-                The projects TEST developers and designers work on varies year-to-year based on
-                member preferences and TEST Lead input. In the past, we&apos;ve had both
-                collaborative projects and individual ones. These projects combine all of the skills
-                you learn throughout the year into something you can be proud of and show off.
+                The projects that TEST developers and designers work on vary every year. The topics
+                adapt to each TEST cohort’s preferences as well as input from the TEST Design and
+                Developer Lead. Past cohorts, for example, have designed and built Fulcrum which is
+                the dashboard that still helps us manage recruitment today. The goal is that these
+                projects will combine all the skills you learn throughout the year into something
+                you can be proud of and add to your portfolio.
               </p>
             ),
           },
@@ -425,13 +462,14 @@ We are no longer accepting applications for this school year. If you are interes
             header: "Can I join TSE as a developer or designer after I complete the TEST program?",
             content: (
               <p>
-                Yes! We have a process internally to transition TEST members to TSE members. Our
-                goal is to maximize the conversion rate between the two. This is not to say TEST
-                members aren&apos;t part of TSE. Everything TSE related applies to both TEST and TSE
-                members, the only difference between the two are the projects that you work on and
-                the additional evaluation TEST members can choose to undergo to become TSE members.
-                This &quot;evaluation&quot; is just to determine whether or not TEST members are
-                equipped to take on the more advanced work associated with TSE projects.
+                Yes! We have an internal process for transitioning TEST members into TSE roles, and
+                our goal is for as many TEST members as possible to make that conversion. To be
+                clear, TEST members are already part of TSE. You’re a member from day one with
+                access to all that the club offers. The difference is the projects you work on,
+                additional guidance you receive, and an additional evaluation TEST members can
+                choose to undergo at the end of Spring quarter to take on TSE project work. This
+                evaluation is just a check that you're ready for more advanced work, not a second
+                application to join TSE.
               </p>
             ),
           },
@@ -439,13 +477,13 @@ We are no longer accepting applications for this school year. If you are interes
             header: "What does being a TEST member look like at TSE?",
             content: (
               <p>
-                As a TEST member, you will be spending the first portion of the year learning all
-                about your chosen discipline. These lessons will be taught by our TEST Leads who
-                have created customized curriculum to help you on your journey. You&apos;ll be
-                collaborating with other TEST members during this entire process. After this first
-                &quot;bootcamp&quot; period, you&apos;ll move onto the project portion of the year
-                where you&apos;ll create something awesome using all of skills you picked up.
-                Typically, TEST members spend 4-6 hours a week on TSE activities.
+                As a TEST member, you will be spending the first portion of the year learning
+                content through workshop sessions taught by our TEST Leads who have created
+                customized curriculum to help you on your journey. You'll be collaborating with
+                other TEST members during this entire process. After this first "bootcamp" period,
+                you'll move onto the project portion of the year where you'll create something
+                awesome using all of skills you picked up. Typically, TEST members spend 4-6 hours a
+                week on TSE activities.
               </p>
             ),
           },

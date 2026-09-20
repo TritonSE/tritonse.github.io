@@ -162,6 +162,11 @@
   }
 }
 
+.accordion .inlineBold {
+  font-size: inherit !important;
+  font-weight: 700;
+}
+
 .accordion svg {
   fill: variables.$tse-gold;
   width: 38px;
