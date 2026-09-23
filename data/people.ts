@@ -17,6 +17,8 @@ const allRoles = [
   "Design Lead, Marketing Lead",
   "Outreach Lead",
   "Socials Lead",
+  "Culture Lead",
+  "Design Lead, Culture Lead",
   "Design Lead, Socials Lead",
   "TEST Design Lead",
   "Design Lead, TEST Design Lead",
@@ -1350,7 +1352,7 @@ const rawPeople = [
   },
   {
     id: "Jeffrey Antony 0",
-    roles: ["Designer", "Design Lead, Socials Lead"],
+    roles: ["Designer", "Design Lead, Culture Lead"],
   },
   {
     id: "Joyce Ren 0",
