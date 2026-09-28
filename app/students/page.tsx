@@ -149,6 +149,13 @@ We are no longer accepting applications for this school year. If you are interes
       )}
 
       <p>
+        TSE applicants must be graduating Spring 2027 or after (meaning that you will be enrolled as
+        an undergraduate at UCSD during winter and spring 2027).
+        <br></br>
+        Because the goal for TEST applicants is to continue at TSE members next year, TEST
+        applicants must be graduating Spring 2028 or after.
+        <br></br>
+        <br></br>
         Our info session slides can be accessed <a href={recruitment.infoSessionSlidesLink}>here</a>
         .
       </p>
