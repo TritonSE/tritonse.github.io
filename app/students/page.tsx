@@ -445,7 +445,7 @@ We are no longer accepting applications for this school year. If you are interes
                 <br />
                 <br />
                 Because the goal is for TEST members to carry what they learn into TSE projects the
-                following year, students graduating before Fall quarter of the next school year
+                following year, students graduating before Spring quarter of the next school year
                 aren't eligible. You may apply to either TSE or the TEST program, not both. If you
                 are unsure about which is right for you, please email{" "}
                 <a href={`mailto:${ORG_EMAIL}`}>{ORG_EMAIL}</a>.
