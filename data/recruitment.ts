@@ -1,5 +1,5 @@
 const recruitment = {
-  acceptingApplications: true,
+  acceptingApplications: false,
   applicationUrl:
     "https://tse-fulcrum-web-dfg7d9gccygmepgp.westcentralus-01.azurewebsites.net/apply",
   deadline: "Sunday, October 11th at 11:59PM PDT",
