@@ -1212,6 +1212,7 @@ const rawPeople = [
   {
     id: "Sweekrit Bhatnagar 0",
     roles: ["Developer"],
+    graduation: 2026,
   },
   {
     id: "Unnati Goyal 0",
@@ -1267,10 +1268,12 @@ const rawPeople = [
   {
     id: "Kristen Lee 0",
     roles: ["Designer"],
+    graduation: 2026,
   },
   {
     id: "Liam Lai 0",
     roles: ["Designer"],
+    graduation: 2026,
   },
   {
     id: "Marilyn Hoang 0",
@@ -1316,6 +1319,7 @@ const rawPeople = [
   {
     id: "Johnny Tiangco 0",
     roles: ["TEST Designer", "Designer"],
+    graduation: 2026,
   },
   {
     id: "Sylvie Tran 0",
