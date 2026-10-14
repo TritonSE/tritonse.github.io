@@ -1195,6 +1195,7 @@ const rawPeople = [
   {
     id: "Rudraksh Bhandari 0",
     roles: ["Developer"],
+    graduation: 2026,
   },
   {
     id: "Shashwat Bhandari 0",
@@ -1434,6 +1435,7 @@ const rawPeople = [
   {
     id: "Koji Nakazawa 0",
     roles: ["Developer"],
+    graduation: 2026,
   },
   {
     id: "Lucas Yan 0",
