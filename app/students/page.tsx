@@ -291,9 +291,9 @@ We are no longer accepting applications for this school year. If you are interes
                   <li>Recursion</li>
                   <li>
                     Data structures: multidimensional arrays/lists, dynamic arrays, stacks, queues,
-                    hash tables (also known as hash maps, dictionaries)
+                    hash tables (also known as hash maps, dictionaries), trees, graphs
                   </li>
-                  <li>Algorithms: sorting, binary search</li>
+                  <li>Algorithms: sorting, binary search, graph traversal</li>
                 </ul>
               </>
             ),
